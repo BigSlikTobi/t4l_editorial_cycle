@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "t4l-editorial-cycle"
+version = "0.1.0"
+description = "Hourly NFL editorial cycle agent — cluster, rank, write, publish"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx>=0.28.1,<1.0.0",
+  "openai-agents>=0.2.8",
+  "PyYAML>=6.0.2,<7.0.0",
+  "pydantic-settings>=2.7.1,<3.0.0",
+  "tenacity>=9.0.0,<10.0.0",
+  "typer>=0.15.1,<1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.4,<9.0.0",
+  "pytest-asyncio>=0.25.3,<1.0.0",
+]
+
+[project.scripts]
+editorial-cycle = "app.cli:app"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.setuptools.package-data]
+"app.editorial" = ["prompts.yml"]
+"app.writer" = ["prompts.yml"]
