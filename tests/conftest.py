@@ -77,5 +77,6 @@ def sample_published_state() -> list[PublishedStoryRecord]:
             supabase_article_id=100,
             cycle_id="cycle-old",
             cluster_headline="Old story",
+            source_urls=["https://espn.com/nfl/old-story"],
         ),
     ]

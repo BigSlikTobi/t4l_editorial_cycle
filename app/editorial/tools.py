@@ -9,7 +9,7 @@ from agents.tool import FunctionTool
 from agents.tool_context import ToolContext
 
 from app.adapters import ArticleLookupAdapter
-from app.editorial.helpers import coerce_output
+from app.editorial.helpers import coerce_output, recompute_cluster_fingerprint
 from app.schemas import (
     ArticleContentLookupToolResponse,
     ArticleDigestAgentResult,
@@ -118,12 +118,28 @@ def build_story_cluster_tool(agent: Agent) -> FunctionTool:
             },
             separators=(",", ":"),
         )
-        return await _run_nested_agent(
+        raw_dict = await _run_nested_agent(
             tool_context,
             agent=agent,
             agent_input=input_json,
             output_schema=StoryClusterResult,
             max_turns=16,
         )
+
+        # Post-process: overwrite LLM-generated slug with deterministic hash
+        cluster = StoryClusterResult.model_validate(raw_dict)
+        real_fp = recompute_cluster_fingerprint(cluster)
+        cluster = cluster.model_copy(update={
+            "story_fingerprint": real_fp,
+            "is_new": real_fp not in published_fingerprints,
+        })
+        logger.info(
+            "Cluster %s: LLM fp=%s -> deterministic fp=%s, is_new=%s",
+            cluster_label,
+            raw_dict.get("story_fingerprint", "?"),
+            real_fp,
+            cluster.is_new,
+        )
+        return cluster.model_dump(mode="json")
 
     return analyze_story_cluster

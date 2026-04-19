@@ -38,6 +38,20 @@ orchestration.py  (4 lines of logic — glues phases together)
 
 Modules share only `schemas.py` and `adapters.py`. No cross-module imports of internals.
 
+### Image Cascade (`writer/image_selector.py`)
+
+Four-tier fallback, evaluated in order for each article:
+
+| Tier | Source | Notes |
+|------|--------|-------|
+| 1a | Google CC Search (`image_clients.GoogleCCSearchClient`) | Skipped when a dominant player is present (headshot preferred) |
+| 1b | Wikimedia Commons (`image_clients.WikimediaCommonsClient`) | Public MediaWiki API, no key. Query: player name or team code + "NFL football". `upload.wikimedia.org` requires `User-Agent` on downloads or returns 403 |
+| 2 | Supabase headshot table | Single-player stories only; subject to per-cycle budget cap |
+| 3 | OpenAI image generation | Prompt: wire-service photojournalism, in-game action, team full name + uniform colors injected |
+| 4 | Logo reference string | Always succeeds; downstream renders team logo |
+
+`image_validator.does_image_match` accepts `expected_team_code` + `expected_team_name` and rejects: different-team-wordmark contradictions, portraits/mugshots, dated archival photos, low-quality. Ambiguity = accept; only positive contradiction = reject. OCR check (`image_contains_text`) accepts jersey/yard-line numbers but rejects words/wordmarks/scoreboards.
+
 ### Agent Chain (nested agent-tools via OpenAI Agents SDK)
 
 ```
@@ -80,7 +94,11 @@ Two schemas, two auth patterns:
 
 `SUPABASE_FUNCTION_AUTH_TOKEN` is optional — falls back to `SUPABASE_SERVICE_ROLE_KEY` via `Settings.resolved_function_auth_token()`. But edge functions typically need the anon key (JWT with `role=anon`), not the service role key.
 
-Migration `supabase/migrations/001_editorial_state.sql` was applied manually via SQL Editor (not `supabase db push`).
+All migrations applied manually via SQL Editor (not `supabase db push`):
+- `001_editorial_state.sql` — applied
+- `002_add_source_urls.sql` — **pending**
+- `003_add_author.sql` — **pending**
+- `004_add_mentioned_players.sql` — **pending**
 
 ## Prompts
 
@@ -91,3 +109,10 @@ All prompt text lives in YAML files (`editorial/prompts.yml`, `writer/prompts.ym
 `app/config.py` uses pydantic-settings `BaseSettings` with `.env` file. Per-agent model names are configurable via env vars (`OPENAI_MODEL_ARTICLE_DATA_AGENT`, etc.). `agent_model(name)` resolves agent name to model string.
 
 Tests must use `Settings(_env_file=None)` and explicitly `monkeypatch.delenv` model override vars to avoid real `.env` bleeding into test fixtures.
+
+## Team Codes (`app/team_codes.py`)
+
+Central map of all 32 NFL teams. Provides:
+- `canonicalize_team_codes(raw: list[str]) -> list[str]` — normalizes abbreviations and common nicknames, drops unknowns, deduplicates preserving order
+- `team_full_name(code: str) -> str` — e.g. `"KC"` → `"Kansas City Chiefs"` (used by image validator)
+- `team_colors(code: str) -> str` — e.g. `"KC"` → `"red and gold"` (injected into AI image generation prompts)

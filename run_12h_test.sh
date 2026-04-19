@@ -4,7 +4,8 @@
 #
 # Usage: nohup ./run_12h_test.sh &
 
-set -euo pipefail
+set -uo pipefail
+# Note: no -e — individual cycle failures should not kill the loop
 cd "$(dirname "$0")"
 
 LOG_DIR="var/test_runs"

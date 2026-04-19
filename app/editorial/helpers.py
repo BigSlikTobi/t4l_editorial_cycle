@@ -7,7 +7,14 @@ from typing import Any, TypeVar
 
 from pydantic import BaseModel, ValidationError
 
-from app.schemas import CyclePublishPlan, PublishedStoryRecord, RawArticle, StoryEntry
+from app.schemas import (
+    CyclePublishPlan,
+    PlayerMention,
+    PublishedStoryRecord,
+    RawArticle,
+    StoryClusterResult,
+    StoryEntry,
+)
 
 T = TypeVar("T")
 
@@ -120,6 +127,120 @@ def fingerprint(key_facts: list[str]) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
 
 
+def recompute_cluster_fingerprint(cluster: StoryClusterResult) -> str:
+    """Compute deterministic fingerprint from all key_facts across source_digests."""
+    all_facts: list[str] = []
+    for digest in cluster.source_digests:
+        all_facts.extend(digest.key_facts)
+    return fingerprint(all_facts)
+
+
+def collect_source_urls(cluster: StoryClusterResult) -> list[str]:
+    """Extract all source URLs from a cluster's digests."""
+    return [d.url for d in cluster.source_digests]
+
+
+_URL_OVERLAP_THRESHOLD = 0.5
+
+
+def url_overlap_ratio(
+    candidate_urls: list[str],
+    published_state: list[PublishedStoryRecord],
+) -> tuple[float, PublishedStoryRecord | None]:
+    """Return (overlap_ratio, best_matching_record) for the published story with highest URL overlap."""
+    if not candidate_urls:
+        return 0.0, None
+
+    candidate_set = set(candidate_urls)
+    best_ratio = 0.0
+    best_record: PublishedStoryRecord | None = None
+
+    for record in published_state:
+        published_set = set(record.source_urls)
+        if not published_set:
+            continue
+        overlap = len(candidate_set & published_set)
+        ratio = overlap / len(candidate_set)
+        if ratio > best_ratio:
+            best_ratio = ratio
+            best_record = record
+
+    return best_ratio, best_record
+
+
+def recompute_plan_fingerprints(plan: CyclePublishPlan) -> CyclePublishPlan:
+    """Recompute deterministic fingerprints for all stories in the plan.
+
+    Multi-source stories already have deterministic fingerprints (set in
+    tools.py after the cluster agent).  Single-source stories get LLM-
+    generated slugs from the orchestrator — this function replaces those
+    with deterministic hashes when key_facts are available.  Falls back to
+    hashing the cluster_headline for stories without source_digests.
+    """
+    def _recompute(story: StoryEntry) -> StoryEntry:
+        all_facts: list[str] = []
+        for d in story.source_digests:
+            all_facts.extend(d.key_facts)
+        if all_facts:
+            real_fp = fingerprint(all_facts)
+        else:
+            # No digests (single-source evaluated by orchestrator) — hash the headline
+            real_fp = fingerprint([story.cluster_headline])
+        if real_fp != story.story_fingerprint:
+            return story.model_copy(update={"story_fingerprint": real_fp})
+        return story
+
+    return plan.model_copy(update={
+        "stories": [_recompute(s) for s in plan.stories],
+        "skipped_stories": [_recompute(s) for s in plan.skipped_stories],
+    })
+
+
+def resolve_existing_article_ids(
+    plan: CyclePublishPlan,
+    published_state: list[PublishedStoryRecord],
+) -> CyclePublishPlan:
+    """Deterministically resolve existing_article_id for update stories.
+
+    For each story with action="update":
+    1. Match by fingerprint against published_state
+    2. If no fingerprint match, check URL overlap > 50%
+    3. Populate existing_article_id from the matching PublishedStoryRecord
+    4. If no match found, downgrade action to "publish"
+    """
+    fp_index: dict[str, PublishedStoryRecord] = {
+        r.story_fingerprint: r for r in published_state
+    }
+
+    updated_stories: list[StoryEntry] = []
+    for story in plan.stories:
+        if story.action != "update":
+            updated_stories.append(story)
+            continue
+
+        # Try fingerprint match first
+        record = fp_index.get(story.story_fingerprint)
+
+        # Fallback: URL overlap
+        if record is None:
+            candidate_urls = [d.url for d in story.source_digests]
+            ratio, url_record = url_overlap_ratio(candidate_urls, published_state)
+            if ratio >= _URL_OVERLAP_THRESHOLD:
+                record = url_record
+
+        if record is not None:
+            updated_stories.append(
+                story.model_copy(update={"existing_article_id": record.supabase_article_id})
+            )
+        else:
+            # No match: downgrade to publish
+            updated_stories.append(
+                story.model_copy(update={"action": "publish", "existing_article_id": None})
+            )
+
+    return plan.model_copy(update={"stories": updated_stories})
+
+
 def count_prevented_duplicates(
     plan_fingerprints: list[str],
     published_state: list[PublishedStoryRecord],
@@ -160,6 +281,51 @@ def coerce_output(payload: Any, schema: type[T]) -> T:
         except ValidationError as exc:
             raise ValueError(f"Agent returned invalid payload for {schema.__name__}: {exc}") from exc
     raise ValueError(f"Agent returned unsupported payload type for {schema.__name__}: {type(payload)!r}")
+
+
+def enrich_plan_with_players(
+    plan: CyclePublishPlan,
+    raw_articles: list[RawArticle],
+) -> CyclePublishPlan:
+    """Populate StoryEntry.player_mentions from the raw articles' feed entities.
+
+    The feed tags each article with player entities (entity_type=="player",
+    entity_id is the GSIS player_id that matches public.players.player_id).
+    That information is stripped when we send compact article dicts to the
+    orchestrator, so we re-join it here using story_id → RawArticle.
+
+    Players are deduped by id and preserved in first-seen order.
+    """
+    article_by_id: dict[str, RawArticle] = {a.id: a for a in raw_articles}
+
+    def _players_for_story(story: StoryEntry) -> list[PlayerMention]:
+        seen: set[str] = set()
+        mentions: list[PlayerMention] = []
+        for digest in story.source_digests:
+            article = article_by_id.get(digest.story_id)
+            if article is None:
+                continue
+            for entity in article.entities:
+                if entity.entity_type != "player":
+                    continue
+                if not entity.entity_id or entity.entity_id in seen:
+                    continue
+                seen.add(entity.entity_id)
+                mentions.append(
+                    PlayerMention(id=entity.entity_id, name=entity.matched_name)
+                )
+        return mentions
+
+    def _enrich(story: StoryEntry) -> StoryEntry:
+        mentions = _players_for_story(story)
+        if not mentions:
+            return story
+        return story.model_copy(update={"player_mentions": mentions})
+
+    return plan.model_copy(update={
+        "stories": [_enrich(s) for s in plan.stories],
+        "skipped_stories": [_enrich(s) for s in plan.skipped_stories],
+    })
 
 
 def deduplicate_plan(plan: CyclePublishPlan) -> CyclePublishPlan:

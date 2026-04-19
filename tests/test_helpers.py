@@ -9,12 +9,16 @@ from app.editorial.helpers import (
     deduplicate_plan,
     fingerprint,
     group_by_entity,
+    recompute_cluster_fingerprint,
+    resolve_existing_article_ids,
+    url_overlap_ratio,
     truncate_article_content,
 )
 from app.schemas import (
     ArticleDigest,
     CyclePublishPlan,
     EntityMatch,
+    StoryClusterResult,
     StoryEntry,
     PublishedStoryRecord,
     RawArticle,
@@ -222,3 +226,103 @@ class TestDeduplicatePlan:
         result = deduplicate_plan(plan)
         assert len(result.stories) == 2
         assert result.prevented_duplicates == 0
+
+
+def _make_digest(url: str, key_facts: list[str] | None = None) -> ArticleDigest:
+    return ArticleDigest(
+        story_id="s1", url=url, title="t", source_name="s",
+        summary="sum", confidence=0.9,
+        key_facts=key_facts or ["fact A"],
+    )
+
+
+class TestRecomputeClusterFingerprint:
+    def test_replaces_llm_slug(self) -> None:
+        cluster = StoryClusterResult(
+            cluster_headline="h", synthesis="s", news_value_score=0.8,
+            is_new=True, story_fingerprint="llm-garbage-slug",
+            source_digests=[_make_digest("http://a.com", ["Bills traded pick"])],
+        )
+        result = recompute_cluster_fingerprint(cluster)
+        assert result != "llm-garbage-slug"
+        assert result == fingerprint(["Bills traded pick"])
+
+    def test_combines_facts_across_digests(self) -> None:
+        d1 = _make_digest("http://a.com", ["Fact A"])
+        d2 = _make_digest("http://b.com", ["Fact B"])
+        cluster = StoryClusterResult(
+            cluster_headline="h", synthesis="s", news_value_score=0.8,
+            is_new=True, story_fingerprint="x", source_digests=[d1, d2],
+        )
+        result = recompute_cluster_fingerprint(cluster)
+        assert result == fingerprint(["Fact A", "Fact B"])
+
+    def test_deterministic(self) -> None:
+        d = _make_digest("http://a.com", ["X", "Y"])
+        c1 = StoryClusterResult(
+            cluster_headline="h", synthesis="s", news_value_score=0.8,
+            is_new=True, story_fingerprint="a", source_digests=[d],
+        )
+        c2 = StoryClusterResult(
+            cluster_headline="different", synthesis="different", news_value_score=0.5,
+            is_new=False, story_fingerprint="b", source_digests=[d],
+        )
+        assert recompute_cluster_fingerprint(c1) == recompute_cluster_fingerprint(c2)
+
+
+class TestUrlOverlapRatio:
+    def test_full_overlap(self, sample_published_state) -> None:
+        sample_published_state[0].source_urls = ["http://a.com", "http://b.com"]
+        ratio, record = url_overlap_ratio(["http://a.com", "http://b.com"], sample_published_state)
+        assert ratio == 1.0
+        assert record is not None
+
+    def test_no_overlap(self, sample_published_state) -> None:
+        sample_published_state[0].source_urls = ["http://x.com"]
+        ratio, record = url_overlap_ratio(["http://a.com"], sample_published_state)
+        assert ratio == 0.0
+
+    def test_partial_overlap(self, sample_published_state) -> None:
+        sample_published_state[0].source_urls = ["http://a.com", "http://b.com"]
+        ratio, record = url_overlap_ratio(
+            ["http://a.com", "http://b.com", "http://c.com"],
+            sample_published_state,
+        )
+        assert abs(ratio - 2 / 3) < 0.01
+
+    def test_empty_candidate_urls(self) -> None:
+        ratio, record = url_overlap_ratio([], [])
+        assert ratio == 0.0
+        assert record is None
+
+
+class TestResolveExistingArticleIds:
+    def test_matches_by_fingerprint(self, sample_published_state) -> None:
+        story = _make_story(1, sample_published_state[0].story_fingerprint, action="update")
+        plan = CyclePublishPlan(stories=[story], reasoning="test")
+        result = resolve_existing_article_ids(plan, sample_published_state)
+        assert result.stories[0].existing_article_id == 100
+
+    def test_matches_by_url_overlap(self, sample_published_state) -> None:
+        sample_published_state[0].source_urls = ["http://a.com", "http://b.com"]
+        story = _make_story(1, "unknown-fp", action="update")
+        story = story.model_copy(update={
+            "source_digests": [_make_digest("http://a.com"), _make_digest("http://b.com")],
+        })
+        plan = CyclePublishPlan(stories=[story], reasoning="test")
+        result = resolve_existing_article_ids(plan, sample_published_state)
+        assert result.stories[0].existing_article_id == 100
+
+    def test_no_match_downgrades_to_publish(self) -> None:
+        story = _make_story(1, "nonexistent-fp", action="update")
+        plan = CyclePublishPlan(stories=[story], reasoning="test")
+        result = resolve_existing_article_ids(plan, [])
+        assert result.stories[0].action == "publish"
+        assert result.stories[0].existing_article_id is None
+
+    def test_publish_stories_pass_through(self, sample_published_state) -> None:
+        story = _make_story(1, "whatever", action="publish")
+        plan = CyclePublishPlan(stories=[story], reasoning="test")
+        result = resolve_existing_article_ids(plan, sample_published_state)
+        assert result.stories[0].action == "publish"
+        assert result.stories[0].existing_article_id is None

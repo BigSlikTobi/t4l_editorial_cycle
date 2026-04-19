@@ -14,7 +14,15 @@ from app.editorial.agents import (
     build_story_cluster_agent,
 )
 from app.editorial.context import CycleRunContext
-from app.editorial.helpers import coerce_output, deduplicate, deduplicate_plan, group_by_entity
+from app.editorial.helpers import (
+    coerce_output,
+    deduplicate,
+    deduplicate_plan,
+    enrich_plan_with_players,
+    group_by_entity,
+    recompute_plan_fingerprints,
+    resolve_existing_article_ids,
+)
 from app.editorial.tools import (
     build_article_digest_tool,
     build_article_lookup_tool,
@@ -88,6 +96,15 @@ class EditorialWorkflow:
         # Multi-source clusters → the orchestrator calls analyze_story_cluster for each
         # Single-source articles → passed directly as lightweight candidates (no cluster agent)
         published_fingerprints = [r.story_fingerprint for r in context.published_state]
+        published_stories = [
+            {
+                "story_fingerprint": r.story_fingerprint,
+                "cluster_headline": r.cluster_headline,
+                "supabase_article_id": r.supabase_article_id,
+                "source_urls": r.source_urls,
+            }
+            for r in context.published_state
+        ]
 
         def _compact(a: RawArticle) -> dict:
             return {
@@ -106,6 +123,7 @@ class EditorialWorkflow:
                 },
                 "single_source_articles": [_compact(a) for a in grouped.single_source],
                 "published_fingerprints": published_fingerprints,
+                "published_stories": published_stories,
                 "top_n": context.top_n,
             },
             separators=(",", ":"),
@@ -123,8 +141,11 @@ class EditorialWorkflow:
         )
         raw_plan = coerce_output(result.final_output, CyclePublishPlan)
 
-        # Deterministic post-processing: remove cross-cluster duplicates by fingerprint
-        plan = deduplicate_plan(raw_plan)
+        # Deterministic post-processing
+        plan = recompute_plan_fingerprints(raw_plan)
+        plan = deduplicate_plan(plan)
+        plan = resolve_existing_article_ids(plan, context.published_state)
+        plan = enrich_plan_with_players(plan, context.raw_articles)
         context.prevented_duplicates = plan.prevented_duplicates
 
         publishable = [s for s in plan.stories if s.action != "skip"]

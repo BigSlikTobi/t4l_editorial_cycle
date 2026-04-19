@@ -83,6 +83,12 @@ class StoryClusterResult(BaseModel):
 # --- Editorial Cycle Orchestrator output ---
 
 
+class PlayerMention(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    id: str  # maps to public.players.player_id (GSIS format, e.g. "00-0026158")
+    name: str
+
+
 class StoryEntry(BaseModel):
     model_config = ConfigDict(extra="forbid")
     rank: int = Field(ge=1)
@@ -93,6 +99,7 @@ class StoryEntry(BaseModel):
     reasoning: str
     source_digests: list[ArticleDigest] = Field(default_factory=list)
     team_codes: list[str] = Field(default_factory=list)
+    player_mentions: list[PlayerMention] = Field(default_factory=list)
     existing_article_id: int | None = None
 
 
@@ -118,8 +125,16 @@ class PublishableArticle(BaseModel):
     x_post: str
     bullet_points: str
     story_fingerprint: str
+    author: str | None = None
+    mentioned_players: list[str] = Field(default_factory=list)
     image: str | None = None
     tts_file: str | None = None
+
+
+class PersonaSelection(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    persona_id: Literal["analyst", "insider", "columnist"]
+    reasoning: str
 
 
 # --- Editorial state (cross-cycle memory) ---
@@ -133,6 +148,7 @@ class PublishedStoryRecord(BaseModel):
     supabase_article_id: int
     cycle_id: str
     cluster_headline: str = ""
+    source_urls: list[str] = Field(default_factory=list)
 
 
 # --- Cycle result ---

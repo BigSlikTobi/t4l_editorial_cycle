@@ -6,7 +6,7 @@ from pathlib import Path
 import yaml
 
 PROMPTS_PATH = Path(__file__).with_name("prompts.yml")
-REQUIRED_PROMPTS = {"article_writer_agent"}
+REQUIRED_PROMPTS = {"article_writer_agent", "persona_selector_agent"}
 
 
 @lru_cache(maxsize=1)

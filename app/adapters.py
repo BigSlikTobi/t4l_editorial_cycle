@@ -170,10 +170,12 @@ class EditorialStateStore:
         cycle_id: str,
         fingerprint_to_article_id: dict[str, int],
         fingerprint_to_headline: dict[str, str],
+        fingerprint_to_source_urls: dict[str, list[str]] | None = None,
     ) -> None:
         if not fingerprint_to_article_id:
             return
 
+        source_urls_map = fingerprint_to_source_urls or {}
         rows = [
             {
                 "story_fingerprint": fp,
@@ -181,6 +183,7 @@ class EditorialStateStore:
                 "cycle_id": cycle_id,
                 "cluster_headline": fingerprint_to_headline.get(fp, ""),
                 "last_updated_at": datetime.now(UTC).isoformat(),
+                "source_urls": source_urls_map.get(fp, []),
             }
             for fp, article_id in fingerprint_to_article_id.items()
         ]
@@ -233,12 +236,27 @@ class ArticleWriter:
             "bullet_points": article.bullet_points,
             "image": article.image,
             "tts_file": article.tts_file,
+            "author": article.author,
+            "mentioned_players": article.mentioned_players,
         }
+
+    async def _post_article(self, payload: dict) -> httpx.Response:
+        return await self._client.post("/rest/v1/team_article", json=payload)
 
     @_default_retry()
     async def write_article(self, article: PublishableArticle) -> int:
         payload = self._article_payload(article)
-        response = await self._client.post("/rest/v1/team_article", json=payload)
+        response = await self._post_article(payload)
+
+        # FK violation on team → retry with team=NULL
+        if response.status_code == 409 and "team_article_team_fkey" in response.text:
+            logger.warning(
+                "Invalid team %r for %s — retrying with team=NULL",
+                payload["team"],
+                article.headline[:60],
+            )
+            payload["team"] = None
+            response = await self._post_article(payload)
 
         _check_transient(response)
         if response.status_code >= 400:
@@ -266,3 +284,108 @@ class ArticleWriter:
             )
 
         logger.info("Updated article %d: %s", article_id, article.headline[:60])
+
+    @_default_retry()
+    async def fetch_article_content(self, article_id: int) -> dict | None:
+        """Fetch existing article content by ID for update comparison."""
+        response = await self._client.get(
+            f"/rest/v1/team_article?id=eq.{article_id}"
+            "&select=headline,sub_headline,introduction,content,bullet_points,author",
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            logger.warning("Failed to fetch article %d: %s", article_id, response.text[:200])
+            return None
+        rows = response.json()
+        return rows[0] if rows else None
+
+
+# --- Image storage + metadata (Supabase Storage + content.article_images) ---
+
+
+class ImageUploader:
+    """Uploads image bytes to a Supabase Storage bucket and records provenance
+    metadata in `content.article_images`. Shared by image selector tiers 1 (web
+    search) and 3 (AI-generated).
+    """
+
+    def __init__(
+        self,
+        base_url: str,
+        service_role_key: str,
+        *,
+        bucket: str = "images",
+        timeout_seconds: float = 30.0,
+    ) -> None:
+        self._base = base_url.rstrip("/")
+        self._key = service_role_key
+        self._bucket = bucket
+        self._client = httpx.AsyncClient(
+            base_url=self._base,
+            timeout=timeout_seconds,
+            headers={
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
+            },
+        )
+
+    async def close(self) -> None:
+        await self._client.aclose()
+
+    def public_url(self, path: str) -> str:
+        return f"{self._base}/storage/v1/object/public/{self._bucket}/{path}"
+
+    @_default_retry()
+    async def upload(self, data: bytes, content_type: str, path: str) -> str:
+        """Upload bytes to bucket at path and return the public URL.
+
+        Uses upsert semantics so reruns on the same fingerprint don't fail.
+        """
+        response = await self._client.post(
+            f"/storage/v1/object/{self._bucket}/{path}",
+            content=data,
+            headers={
+                "Content-Type": content_type,
+                "x-upsert": "true",
+            },
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"Image upload failed ({response.status_code}): {response.text[:200]}"
+            )
+        return self.public_url(path)
+
+    @_default_retry()
+    async def record_metadata(
+        self,
+        *,
+        image_url: str,
+        original_url: str,
+        source: str,
+        author: str = "",
+    ) -> int | None:
+        """Insert one row into content.article_images. Returns the new id on success."""
+        response = await self._client.post(
+            "/rest/v1/article_images",
+            json={
+                "image_url": image_url,
+                "original_url": original_url,
+                "source": source,
+                "author": author,
+            },
+            headers={
+                "Content-Type": "application/json",
+                "Content-Profile": "content",
+                "Accept-Profile": "content",
+                # Upsert on unique original_url so reruns don't 409.
+                "Prefer": "return=representation,resolution=merge-duplicates",
+            },
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"article_images insert failed ({response.status_code}): {response.text[:200]}"
+            )
+        rows = response.json()
+        return rows[0]["id"] if rows else None

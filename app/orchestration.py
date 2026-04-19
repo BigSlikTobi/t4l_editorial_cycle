@@ -8,12 +8,21 @@ from app.adapters import (
     ArticleLookupAdapter,
     ArticleWriter,
     EditorialStateStore,
+    ExternalServiceError,
+    ImageUploader,
     RawFeedReader,
 )
 from app.config import Settings, get_settings
 from app.editorial.context import CycleRunContext
 from app.editorial.workflow import EditorialWorkflow
 from app.schemas import CycleResult
+from app.writer.image_clients import (
+    GeminiImageClient,
+    ImageSelectionClient,
+    WikimediaCommonsClient,
+)
+from app.writer.image_selector import ImageSelector
+from app.writer.image_validator import ImageValidator
 from app.writer.workflow import WriterWorkflow
 
 logger = logging.getLogger(__name__)
@@ -62,6 +71,7 @@ class CycleOrchestrator:
         # Phase 3: Persist to Supabase
         fingerprint_to_article_id: dict[str, int] = {}
         fingerprint_to_headline: dict[str, str] = {}
+        fingerprint_to_source_urls: dict[str, list[str]] = {}
         articles_written = 0
         articles_updated = 0
 
@@ -70,28 +80,40 @@ class CycleOrchestrator:
                 (s for s in plan.stories if s.story_fingerprint == article.story_fingerprint),
                 None,
             )
-            if (
-                matching_story
-                and matching_story.action == "update"
-                and matching_story.existing_article_id
-            ):
-                await self._article_writer.update_article(
-                    matching_story.existing_article_id, article
-                )
-                fingerprint_to_article_id[article.story_fingerprint] = (
-                    matching_story.existing_article_id
-                )
-                articles_updated += 1
-            else:
-                new_id = await self._article_writer.write_article(article)
-                fingerprint_to_article_id[article.story_fingerprint] = new_id
-                articles_written += 1
+            try:
+                if (
+                    matching_story
+                    and matching_story.action == "update"
+                    and matching_story.existing_article_id
+                ):
+                    await self._article_writer.update_article(
+                        matching_story.existing_article_id, article
+                    )
+                    fingerprint_to_article_id[article.story_fingerprint] = (
+                        matching_story.existing_article_id
+                    )
+                    articles_updated += 1
+                else:
+                    new_id = await self._article_writer.write_article(article)
+                    fingerprint_to_article_id[article.story_fingerprint] = new_id
+                    articles_written += 1
+            except ExternalServiceError as exc:
+                logger.error("Failed to persist article %s: %s", article.headline[:60], exc)
+                context.warnings.append(f"Write failed for {article.headline}: {exc}")
+                continue
 
             fingerprint_to_headline[article.story_fingerprint] = article.headline
+            if matching_story:
+                fingerprint_to_source_urls[article.story_fingerprint] = [
+                    d.url for d in matching_story.source_digests
+                ]
 
         # Phase 4: Persist editorial state
         await self._state_store.persist_cycle_results(
-            cycle_id, fingerprint_to_article_id, fingerprint_to_headline
+            cycle_id,
+            fingerprint_to_article_id,
+            fingerprint_to_headline,
+            fingerprint_to_source_urls,
         )
 
         # Log the delighter
@@ -135,13 +157,70 @@ def build_default_orchestrator(settings: Settings) -> CycleOrchestrator:
     )
     adapters = [news_feed, article_lookup, state_store, article_writer_adapter]
 
+    # Optional image cascade — only constructed when the cloud-function URL
+    # or Gemini key is configured. Each tier is independently optional.
+    image_selector: ImageSelector | None = None
+    image_client: ImageSelectionClient | None = None
+    gemini_client: GeminiImageClient | None = None
+    if settings.image_selection_url is not None:
+        image_client = ImageSelectionClient(
+            base_url=str(settings.image_selection_url),
+            google_custom_search_key=(
+                settings.google_custom_search_key.get_secret_value()
+                if settings.google_custom_search_key
+                else None
+            ),
+            google_custom_search_engine_id=settings.google_custom_search_engine_id,
+            llm_api_key=settings.openai_api_key.get_secret_value(),
+            llm_model=settings.openai_model_vision_validator,
+            llm_provider="openai",
+            timeout_seconds=settings.image_selection_timeout_seconds,
+        )
+        adapters.append(image_client)
+    if settings.gemini_api_key is not None:
+        gemini_client = GeminiImageClient(
+            api_key=settings.gemini_api_key.get_secret_value(),
+            model=settings.gemini_image_model,
+            timeout_seconds=settings.image_selection_timeout_seconds * 2,
+        )
+        adapters.append(gemini_client)
+    # Wikimedia Commons is always available (public API, no key).
+    wikimedia_client = WikimediaCommonsClient()
+    adapters.append(wikimedia_client)
+
+    if image_client is not None or gemini_client is not None:
+        validator = ImageValidator(
+            api_key=settings.openai_api_key.get_secret_value(),
+            model=settings.openai_model_vision_validator,
+        )
+        uploader = ImageUploader(
+            base_url=str(settings.supabase_url),
+            service_role_key=settings.supabase_service_role_key.get_secret_value(),
+        )
+        adapters.append(uploader)
+        image_selector = ImageSelector(
+            supabase_url=str(settings.supabase_url),
+            supabase_service_role_key=settings.supabase_service_role_key.get_secret_value(),
+            image_client=image_client,
+            gemini_client=gemini_client,
+            validator=validator,
+            uploader=uploader,
+            wikimedia_client=wikimedia_client,
+            gemini_model_name=settings.gemini_image_model,
+        )
+        adapters.append(image_selector)
+
     editorial = EditorialWorkflow(
         settings=settings,
         news_feed=news_feed,
         article_lookup=article_lookup,
         state_store=state_store,
     )
-    writer = WriterWorkflow(settings=settings)
+    writer = WriterWorkflow(
+        settings=settings,
+        article_writer_adapter=article_writer_adapter,
+        image_selector=image_selector,
+    )
 
     return CycleOrchestrator(
         settings=settings,
