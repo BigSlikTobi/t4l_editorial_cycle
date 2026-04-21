@@ -342,7 +342,7 @@ class ArticleWriter:
                 "find_article_id failed (%s, %s): %s",
                 story_fingerprint, language, response.text[:200],
             )
-            return None
+            response.raise_for_status()
         rows = response.json()
         return rows[0]["id"] if rows else None
 
