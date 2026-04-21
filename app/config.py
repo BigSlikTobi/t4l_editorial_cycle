@@ -24,11 +24,11 @@ class Settings(BaseSettings):
     lookback_hours: int = 2
     news_timeout_seconds: float = 15.0
 
-    openai_model_article_data_agent: str = "gpt-5-nano-2025-08-07"
-    openai_model_story_cluster_agent: str = "gpt-5-mini-2025-08-07"
-    openai_model_editorial_orchestrator_agent: str = "gpt-5.2-2025-12-11"
-    openai_model_article_writer_agent: str = "gpt-5-mini-2025-08-07"
-    openai_model_persona_selector_agent: str = "gpt-5-nano-2025-08-07"
+    openai_model_article_data_agent: str = "gpt-5.4-nano"
+    openai_model_story_cluster_agent: str = "gpt-5.4-mini"
+    openai_model_editorial_orchestrator_agent: str = "gpt-5.4"
+    openai_model_article_writer_agent: str = "gpt-5.4-mini"
+    openai_model_persona_selector_agent: str = "gpt-5.4-mini"
 
     openai_temperature: float | None = None
     openai_max_tokens: int | None = None
