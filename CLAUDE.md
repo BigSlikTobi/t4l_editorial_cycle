@@ -18,6 +18,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Run one editorial cycle (writes articles to Supabase)
 ./venv/bin/editorial-cycle run --output-json var/output.json
 
+# Build HTML cycle report (run analysis + full articles, reads var/output.json)
+./venv/bin/python scripts/build_cycle_report.py
+
 # Multi-hour integration test (12 cycles, 1/hour, logs to var/test_runs/)
 nohup ./run_12h_test.sh &
 ```
@@ -113,11 +116,23 @@ All migrations applied manually via SQL Editor (not `supabase db push`):
 
 All prompt text lives in YAML files (`editorial/prompts.yml`, `writer/prompts.yml`), loaded once via `@lru_cache`. Each module validates required prompt keys at load time. Prompt iteration does not require changing Python code.
 
+Both EN and DE `article_writer_agent` prompts include a "Beat-reporter texture" block (capped at ~15% of prose): active/specific verbs, scene/stakes language tied to source facts, sentence-length variety, and concrete nouns. The guardrail is explicit: texture rides on facts, never replaces them.
+
 ## Config
 
 `app/config.py` uses pydantic-settings `BaseSettings` with `.env` file. Per-agent model names are configurable via env vars (`OPENAI_MODEL_ARTICLE_DATA_AGENT`, etc.). `agent_model(name)` resolves agent name to model string.
 
 Tests must use `Settings(_env_file=None)` and explicitly `monkeypatch.delenv` model override vars to avoid real `.env` bleeding into test fixtures.
+
+## CI / GitHub Actions
+
+`.github/workflows/editorial-cycle.yml` runs the full cycle on a `0 */2 * * *` schedule (every 2 hours) and supports `workflow_dispatch` with `top_n` / `lookback_hours` overrides. Concurrency group `editorial-cycle` with `cancel-in-progress: false` prevents overlapping runs. Timeout: 30 minutes. `var/output.json` is uploaded as an artifact (14d retention).
+
+Required secrets: `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_NEWS_FEED_URL`, `SUPABASE_ARTICLE_LOOKUP_URL`, `SUPABASE_FUNCTION_AUTH_TOKEN`. Optional: `IMAGE_SELECTION_URL`, `GOOGLE_CUSTOM_SEARCH_KEY`, `GOOGLE_CUSTOM_SEARCH_ENGINE_ID`. Model overrides via repo vars (`OPENAI_MODEL_*`).
+
+## Cycle Report Script (`scripts/build_cycle_report.py`)
+
+Reads `var/output.json` + fetches matching `content.team_article` rows by fingerprint. Writes `var/cycle_report.html` and prints the `file://` URL. Per-story card: rank/score/action/reasoning/team codes/player mentions/source digests on the left; EN+DE articles with cover image, tier badge, language badge, full content, and collapsible extras (bullets/X post/mentioned players with headshots) on the right. Header KPIs: stories/written/updated/prevented/language split/image tier mix.
 
 ## Team Codes (`app/team_codes.py`)
 

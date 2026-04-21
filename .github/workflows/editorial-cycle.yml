@@ -1,0 +1,77 @@
+name: editorial-cycle
+
+# Runs the full editorial cycle every 2 hours.
+# LOOKBACK_HOURS is set to 2 to match the cadence so the feed window doesn't
+# either miss items (too short) or over-fetch and rely on dedup (too long).
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+    inputs:
+      top_n:
+        description: "Max stories to publish this cycle"
+        required: false
+        default: "5"
+      lookback_hours:
+        description: "Feed lookback window (hours)"
+        required: false
+        default: "2"
+
+concurrency:
+  group: editorial-cycle
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Run cycle
+        env:
+          # Core
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_NEWS_FEED_URL: ${{ secrets.SUPABASE_NEWS_FEED_URL }}
+          SUPABASE_ARTICLE_LOOKUP_URL: ${{ secrets.SUPABASE_ARTICLE_LOOKUP_URL }}
+          SUPABASE_FUNCTION_AUTH_TOKEN: ${{ secrets.SUPABASE_FUNCTION_AUTH_TOKEN }}
+
+          # Image cascade (optional — curated pool + headshot + logo work without these)
+          IMAGE_SELECTION_URL: ${{ secrets.IMAGE_SELECTION_URL }}
+          GOOGLE_CUSTOM_SEARCH_KEY: ${{ secrets.GOOGLE_CUSTOM_SEARCH_KEY }}
+          GOOGLE_CUSTOM_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CUSTOM_SEARCH_ENGINE_ID }}
+
+          # Cadence
+          TOP_N: ${{ github.event.inputs.top_n || '5' }}
+          LOOKBACK_HOURS: ${{ github.event.inputs.lookback_hours || '2' }}
+
+          # Model overrides (optional; fall back to defaults in app/config.py)
+          OPENAI_MODEL_ARTICLE_DATA_AGENT: ${{ vars.OPENAI_MODEL_ARTICLE_DATA_AGENT }}
+          OPENAI_MODEL_STORY_CLUSTER_AGENT: ${{ vars.OPENAI_MODEL_STORY_CLUSTER_AGENT }}
+          OPENAI_MODEL_EDITORIAL_ORCHESTRATOR_AGENT: ${{ vars.OPENAI_MODEL_EDITORIAL_ORCHESTRATOR_AGENT }}
+          OPENAI_MODEL_ARTICLE_WRITER_AGENT: ${{ vars.OPENAI_MODEL_ARTICLE_WRITER_AGENT }}
+          OPENAI_MODEL_PERSONA_SELECTOR_AGENT: ${{ vars.OPENAI_MODEL_PERSONA_SELECTOR_AGENT }}
+          OPENAI_MODEL_VISION_VALIDATOR: ${{ vars.OPENAI_MODEL_VISION_VALIDATOR }}
+        run: |
+          mkdir -p var
+          editorial-cycle run --output-json var/output.json
+
+      - name: Upload cycle artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cycle-${{ github.run_id }}
+          path: var/output.json
+          if-no-files-found: ignore
+          retention-days: 14
