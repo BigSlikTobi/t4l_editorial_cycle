@@ -11,8 +11,8 @@ cd "$(dirname "$0")"
 LOG_DIR="var/test_runs"
 mkdir -p "$LOG_DIR"
 
-MAX_RUNS=12
-INTERVAL_SECONDS=3600
+MAX_RUNS=${MAX_RUNS:-12}
+INTERVAL_SECONDS=${INTERVAL_SECONDS:-3600}
 
 echo "Starting 12-hour editorial cycle test at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "Logs: $LOG_DIR/"

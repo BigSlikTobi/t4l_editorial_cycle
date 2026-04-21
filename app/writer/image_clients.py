@@ -6,7 +6,6 @@ without spinning up real HTTP mocks.
 
 from __future__ import annotations
 
-import base64
 import logging
 import re
 from dataclasses import dataclass
@@ -195,61 +194,3 @@ class WikimediaCommonsClient:
         return None
 
 
-class GeminiImageClient:
-    """Minimal client for the Gemini REST API image generation endpoint.
-
-    Uses the :generateContent endpoint with an image-capable model.
-    Returns the first generated image as a base64 data URL so the rest of the
-    pipeline can treat it uniformly with URLs from other tiers.
-    """
-
-    def __init__(
-        self,
-        api_key: str,
-        *,
-        model: str = "gemini-3.1-flash-image-preview",
-        timeout_seconds: float = 60.0,
-    ) -> None:
-        self._api_key = api_key
-        self._model = model
-        self._client = httpx.AsyncClient(timeout=timeout_seconds)
-
-    async def close(self) -> None:
-        await self._client.aclose()
-
-    @_default_retry()
-    async def generate_image(self, prompt: str) -> str | None:
-        """Generate one image from a text prompt. Returns a data: URL, or None."""
-        url = (
-            f"https://generativelanguage.googleapis.com/v1beta/models/"
-            f"{self._model}:generateContent"
-        )
-        payload = {
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"responseModalities": ["IMAGE"]},
-        }
-        response = await self._client.post(
-            url,
-            params={"key": self._api_key},
-            json=payload,
-        )
-        if response.status_code >= 400:
-            raise ExternalServiceError(
-                f"gemini image gen returned {response.status_code}: {response.text[:200]}"
-            )
-
-        data = response.json()
-        for cand in data.get("candidates", []):
-            for part in cand.get("content", {}).get("parts", []):
-                inline = part.get("inlineData") or part.get("inline_data")
-                if inline and inline.get("data"):
-                    mime = inline.get("mimeType") or inline.get("mime_type") or "image/png"
-                    # Validate base64 decodes cleanly; keep as data URL.
-                    b64 = inline["data"]
-                    try:
-                        base64.b64decode(b64, validate=True)
-                    except Exception as exc:
-                        logger.warning("Gemini returned invalid base64: %s", exc)
-                        return None
-                    return f"data:{mime};base64,{b64}"
-        return None

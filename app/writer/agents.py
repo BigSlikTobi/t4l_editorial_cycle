@@ -17,3 +17,17 @@ def build_article_writer_agent(settings: Settings) -> Agent:
         tools=[],
         output_type=PublishableArticle,
     )
+
+
+def build_article_writer_agent_de(settings: Settings) -> Agent:
+    """German-native writer. Same output schema, same model config, different
+    prompt. Reuses the English agent's model setting so both languages follow
+    the same cost/speed profile."""
+    return Agent(
+        name="Article Writer Agent (DE)",
+        instructions=get_prompt("article_writer_agent_de"),
+        model=settings.agent_model("article_writer_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+        output_type=PublishableArticle,
+    )

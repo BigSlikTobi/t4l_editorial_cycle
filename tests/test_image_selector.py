@@ -53,17 +53,6 @@ class FakeImageClient:
         )
 
 
-class FakeGeminiClient:
-    def __init__(self, urls: list[str] | None = None):
-        # one entry consumed per generate_image call
-        self.urls = list(urls or [])
-        self.prompts: list[str] = []
-
-    async def generate_image(self, prompt: str) -> str | None:
-        self.prompts.append(prompt)
-        return self.urls.pop(0) if self.urls else None
-
-
 class FakeValidator:
     def __init__(
         self,
@@ -101,15 +90,29 @@ class FakeHTTPResponse:
 
 
 class FakeHTTPClient:
-    def __init__(self, response: FakeHTTPResponse | Exception):
+    """Dispatches by URL — separate responses for the player table and
+    the curated_images table so tests can isolate each tier."""
+
+    def __init__(
+        self,
+        response: FakeHTTPResponse | Exception,
+        *,
+        curated_response: FakeHTTPResponse | None = None,
+    ):
+        # `response` drives the player headshot lookup and any fallthrough
+        # (download) request. `curated_response` defaults to an empty list
+        # (no curated match), so tests targeting other tiers don't need to
+        # care about the curated pool.
         self.response = response
+        self.curated_response = curated_response or FakeHTTPResponse(200, [])
         self.calls: list[tuple[str, dict]] = []
 
     async def get(self, url: str, params: dict | None = None, **kwargs: Any):
         self.calls.append((url, params or {}))
+        if "curated_images" in url:
+            return self.curated_response
         if isinstance(self.response, Exception):
             raise self.response
-        # Attach minimal fields needed for image download path too
         resp = self.response
         if not hasattr(resp, "headers"):
             resp.headers = {"content-type": "image/jpeg"}
@@ -180,23 +183,20 @@ def _article(headline: str = "Chiefs trade for WR") -> PublishableArticle:
 def _make_selector(
     *,
     image_client=None,
-    gemini_client=None,
     wikimedia_client=None,
     validator=None,
     http_response=FakeHTTPResponse(200, []),
+    curated_response: FakeHTTPResponse | None = None,
     uploader: FakeUploader | None = None,
-    gemini_model_name: str = "gemini-test",
 ) -> ImageSelector:
     selector = ImageSelector.__new__(ImageSelector)
     selector._supabase_base = "http://supabase.test"
     selector._supabase_key = "key"
     selector._image_client = image_client
-    selector._gemini_client = gemini_client
     selector._wikimedia_client = wikimedia_client
     selector._validator = validator or FakeValidator()
     selector._uploader = uploader
-    selector._gemini_model_name = gemini_model_name
-    selector._http = FakeHTTPClient(http_response)
+    selector._http = FakeHTTPClient(http_response, curated_response=curated_response)
     return selector
 
 
@@ -450,81 +450,81 @@ async def test_tier2_skipped_when_no_headshot_in_table():
     assert result.tier == "team_logo"
 
 
-# --- Tier 3 -------------------------------------------------------------
+# --- Tier 2 (curated pool) ---------------------------------------------
 
 
 @pytest.mark.asyncio
-async def test_tier3_accepts_and_uploads_bytes():
-    uploader = FakeUploader()
+async def test_curated_wins_when_pool_has_matching_row():
+    curated = FakeHTTPResponse(
+        200,
+        [{"slug": "KC_offense_action", "image_url": "https://cdn/kc_offense.png",
+          "team_code": "KC", "scene": "offense_action"}],
+    )
     selector = _make_selector(
         image_client=FakeImageClient(url=None),
-        gemini_client=FakeGeminiClient(urls=["data:image/png;base64,AAAA"]),
-        validator=FakeValidator(
-            text_results=[(False, "clean")],
-            match_results=[(True, "stadium shot")],
-        ),
-        uploader=uploader,
-        gemini_model_name="gemini-3.1-flash-image-preview",
         http_response=FakeHTTPResponse(200, []),
+        curated_response=curated,
     )
     result = await selector.select(
-        _article(), _story(team_codes=["KC"]), cycle_id="cyc-2"
+        _article(headline="Chiefs pass game dominates"),
+        _story(team_codes=["KC"]),
+        cycle_id="cyc-curated",
     )
-    assert result.tier == "ai_generated"
-    assert result.url.startswith("https://supabase.test/storage/v1/object/public/images/")
-    assert "ai_generated" in result.url
-    # Uploaded decoded bytes (AAAA decodes to 3 bytes)
-    assert len(uploader.uploads) == 1
-    data, content_type, path = uploader.uploads[0]
-    assert content_type == "image/png"
-    assert data == b"\x00\x00\x00"
-    assert path.endswith(".png")
-    # Provenance
-    assert uploader.metadata[0]["source"] == "gemini"
-    assert uploader.metadata[0]["author"] == "gemini-3.1-flash-image-preview"
-    # original_url is now unique per image — includes the storage path suffix
-    assert uploader.metadata[0]["original_url"].startswith(
-        "gemini://gemini-3.1-flash-image-preview/"
-    )
-    assert uploader.metadata[0]["original_url"].endswith(".png")
+    assert result.tier == "curated_pool"
+    assert result.url == "https://cdn/kc_offense.png"
+    assert "KC_offense_action" in result.notes
 
 
 @pytest.mark.asyncio
-async def test_tier3_regenerates_once_on_text_then_accepts():
-    uploader = FakeUploader()
+async def test_curated_skipped_when_budget_zero():
+    budget = HeadshotBudget(capacity=0)
+    curated = FakeHTTPResponse(
+        200, [{"slug": "KC_sideline", "image_url": "https://x",
+               "team_code": "KC", "scene": "sideline"}],
+    )
     selector = _make_selector(
         image_client=FakeImageClient(url=None),
-        gemini_client=FakeGeminiClient(
-            urls=["data:image/png;base64,AAAA", "data:image/png;base64,BBBB"]
-        ),
-        validator=FakeValidator(
-            text_results=[(True, "has 'KC' text"), (False, "clean")],
-            match_results=[(True, "ok")],
-        ),
-        uploader=uploader,
         http_response=FakeHTTPResponse(200, []),
+        curated_response=curated,
     )
     result = await selector.select(
-        _article(), _story(team_codes=["KC"]), cycle_id="cyc-3"
+        _article(), _story(team_codes=["KC"]),
+        cycle_id="c", curated_budget=budget,
     )
-    assert result.tier == "ai_generated"
-    # The SECOND generation (bytes from "BBBB") is the one uploaded
-    assert len(uploader.uploads) == 1
-    assert uploader.uploads[0][0] == b"\x04\x10\x41"  # base64("BBBB")
+    # Zero budget → curated disabled → falls to logo
+    assert result.tier == "team_logo"
+    assert budget.used == 0
 
 
 @pytest.mark.asyncio
-async def test_tier3_rejects_when_text_after_retry():
+async def test_curated_consumes_budget_on_hit():
+    budget = HeadshotBudget(capacity=1)
+    curated = FakeHTTPResponse(
+        200, [{"slug": "KC_sideline", "image_url": "https://hit",
+               "team_code": "KC", "scene": "sideline"}],
+    )
     selector = _make_selector(
         image_client=FakeImageClient(url=None),
-        gemini_client=FakeGeminiClient(urls=["data:a", "data:b"]),
-        validator=FakeValidator(
-            text_results=[(True, "text"), (True, "still text")],
-        ),
         http_response=FakeHTTPResponse(200, []),
+        curated_response=curated,
+    )
+    result = await selector.select(
+        _article(), _story(team_codes=["KC"]),
+        cycle_id="c", curated_budget=budget,
+    )
+    assert result.tier == "curated_pool"
+    assert budget.used == 1
+
+
+@pytest.mark.asyncio
+async def test_curated_falls_through_when_pool_empty():
+    selector = _make_selector(
+        image_client=FakeImageClient(url=None),
+        http_response=FakeHTTPResponse(200, []),
+        # curated default: empty list → no rows
     )
     result = await selector.select(_article(), _story(team_codes=["KC"]))
-    assert result.tier == "team_logo"  # fell through to logo
+    assert result.tier == "team_logo"
 
 
 # --- Tier 4 / 5 ---------------------------------------------------------
@@ -584,7 +584,6 @@ async def test_tier2_falls_through_when_budget_exhausted():
     budget = HeadshotBudget(capacity=0)  # no headshots allowed this cycle
     selector = _make_selector(
         image_client=FakeImageClient(url=None),
-        gemini_client=None,
         uploader=uploader,
         http_response=FakeHTTPResponse(
             200, [{"headshot": "http://hs.jpg", "display_name": "A"}]

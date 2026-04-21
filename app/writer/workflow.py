@@ -7,14 +7,14 @@ import logging
 import os
 from typing import TYPE_CHECKING
 
-from agents import Runner
+from agents import Agent, Runner
 
 from app.config import Settings
 from app.editorial.helpers import coerce_output
 from app.editorial.tracing import build_run_config
-from app.schemas import CyclePublishPlan, PublishableArticle, StoryEntry
+from app.schemas import ArticleSource, CyclePublishPlan, PublishableArticle, StoryEntry
 from app.team_codes import normalize_team_codes
-from app.writer.agents import build_article_writer_agent
+from app.writer.agents import build_article_writer_agent, build_article_writer_agent_de
 from app.writer.image_selector import HeadshotBudget, ImageSelector
 from app.writer.persona_selector import build_persona_selector_agent, select_persona
 from app.writer.personas import Persona, byline_to_persona_id, get_persona
@@ -23,6 +23,26 @@ if TYPE_CHECKING:
     from app.adapters import ArticleWriter
 
 logger = logging.getLogger(__name__)
+
+LANGUAGES: tuple[str, ...] = ("en-US", "de-DE")
+
+
+def _dedupe_sources(story: StoryEntry) -> list[ArticleSource]:
+    """Collapse story.source_digests into reader-visible attribution.
+
+    Deduped by URL (preserves first-seen order). Source name falls back to
+    the URL itself if the digest doesn't carry a human name.
+    """
+    seen: set[str] = set()
+    out: list[ArticleSource] = []
+    for digest in story.source_digests:
+        url = (digest.url or "").strip()
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        name = (digest.source_name or "").strip() or url
+        out.append(ArticleSource(name=name, url=url))
+    return out
 
 
 class WriterWorkflow:
@@ -34,19 +54,28 @@ class WriterWorkflow:
         image_selector: ImageSelector | None = None,
     ) -> None:
         os.environ.setdefault("OPENAI_API_KEY", settings.openai_api_key.get_secret_value())
-        self._writer_agent = build_article_writer_agent(settings)
+        self._writer_agent_en = build_article_writer_agent(settings)
+        self._writer_agent_de = build_article_writer_agent_de(settings)
         self._persona_selector_agent = build_persona_selector_agent(settings)
         self._article_writer = article_writer_adapter
         self._image_selector = image_selector
 
-    async def _write_single(
+    async def _write_in_language(
         self,
         story: StoryEntry,
         cycle_id: str,
+        *,
+        agent: Agent,
         persona: Persona,
-        existing_content: dict | None = None,
-        headshot_budget: HeadshotBudget | None = None,
+        language: str,
+        existing_content: dict | None,
     ) -> PublishableArticle:
+        """Pure writer call for one language — NO image cascade here.
+
+        Deterministic overrides applied: language, author, mentioned_players,
+        sources. Image selection is a separate step (runs once for EN, the
+        result is reused for DE by the caller).
+        """
         writer_payload: dict = {
             "cluster_headline": story.cluster_headline,
             "story_fingerprint": story.story_fingerprint,
@@ -64,74 +93,146 @@ class WriterWorkflow:
 
         run_config = build_run_config(
             cycle_id,
-            stage="write_article",
+            stage=f"write_article_{language}",
             metadata={
                 "fingerprint": story.story_fingerprint,
                 "persona_id": persona.id,
+                "language": language,
             },
         )
         result = await Runner.run(
-            self._writer_agent,
+            agent,
             writer_input,
             run_config=run_config,
             max_turns=4,
             auto_previous_response_id=True,
         )
         article = coerce_output(result.final_output, PublishableArticle)
-        # Deterministic overrides: byline is set from persona, mentioned_players
-        # is set from the story (feed-sourced GSIS IDs) — never trust the LLM
-        # to emit FK-grade IDs.
+
         deterministic_player_ids = [pm.id for pm in story.player_mentions]
-        overrides: dict = {}
+        deterministic_sources = _dedupe_sources(story)
+        overrides: dict = {"language": language}
         if article.author != persona.byline:
             overrides["author"] = persona.byline
         if article.mentioned_players != deterministic_player_ids:
             overrides["mentioned_players"] = deterministic_player_ids
-        if overrides:
-            article = article.model_copy(update=overrides)
+        if article.sources != deterministic_sources:
+            overrides["sources"] = deterministic_sources
+        return article.model_copy(update=overrides)
 
-        # Image cascade (non-fatal): pick an image post-write so we have the
-        # final headline/intro to validate against.
-        if self._image_selector is not None:
-            try:
-                image_result = await self._image_selector.select(
-                    article, story,
-                    cycle_id=cycle_id,
-                    headshot_budget=headshot_budget,
-                )
-                logger.info(
-                    "Image tier=%s for %s: %s",
-                    image_result.tier,
-                    article.headline[:60],
-                    image_result.notes,
-                )
-                if image_result.url and article.image != image_result.url:
-                    article = article.model_copy(update={"image": image_result.url})
-            except Exception as exc:
-                logger.warning("Image selection failed for %s: %s", article.headline[:60], exc)
+    async def _select_image_for_story(
+        self,
+        en_article: PublishableArticle,
+        story: StoryEntry,
+        cycle_id: str,
+        headshot_budget: HeadshotBudget | None,
+        curated_budget: HeadshotBudget | None,
+    ) -> str | None:
+        """Run the image cascade once per story. Returns the URL (or None).
 
-        return article
+        Called with the EN article so the cascade validators see English
+        headline/intro — they're calibrated on English text. The same URL
+        is then reused for the DE article by the caller.
+        """
+        if self._image_selector is None:
+            return None
+        try:
+            image_result = await self._image_selector.select(
+                en_article, story,
+                cycle_id=cycle_id,
+                headshot_budget=headshot_budget,
+                curated_budget=curated_budget,
+            )
+            logger.info(
+                "Image tier=%s for %s: %s",
+                image_result.tier,
+                en_article.headline[:60],
+                image_result.notes,
+            )
+            return image_result.url
+        except Exception as exc:
+            logger.warning(
+                "Image selection failed for %s: %s",
+                en_article.headline[:60], exc,
+            )
+            return None
 
-    async def _resolve_persona(
+    async def _write_pair(
         self,
         story: StoryEntry,
         cycle_id: str,
-        existing_content: dict | None,
-    ) -> Persona:
-        """For updates: keep the original author's persona if we can recognize it.
-        For publishes (or unrecognized existing bylines): ask the selector.
+        persona_id: str,
+        existing_en_content: dict | None,
+        existing_de_content: dict | None,
+        headshot_budget: HeadshotBudget | None,
+        curated_budget: HeadshotBudget | None,
+    ) -> list[PublishableArticle]:
+        """Produce both en-US and de-DE articles for one story.
+
+        Flow per story (serial):
+          1. Write EN (persona in EN voice, existing EN content on updates).
+          2. Run image cascade ONCE using the EN article — reused for DE.
+          3. Write DE (persona in DE voice, existing DE content on updates).
+
+        Returns [en_article, de_article] with image URL applied to both.
         """
-        if story.action == "update" and existing_content:
-            existing_byline = existing_content.get("author")
-            preserved_id = byline_to_persona_id(existing_byline)
-            if preserved_id is not None:
-                logger.info(
-                    "Preserving original persona %s for update: %s",
-                    preserved_id,
-                    story.cluster_headline[:60],
-                )
-                return get_persona(preserved_id)
-        return await select_persona(self._persona_selector_agent, story, cycle_id)
+        persona_en = get_persona(persona_id, "en-US")
+        persona_de = get_persona(persona_id, "de-DE")
+
+        # 1. English
+        en_article = await self._write_in_language(
+            story, cycle_id,
+            agent=self._writer_agent_en,
+            persona=persona_en,
+            language="en-US",
+            existing_content=existing_en_content,
+        )
+
+        # 2. Image cascade (once per story)
+        image_url = await self._select_image_for_story(
+            en_article, story, cycle_id, headshot_budget, curated_budget
+        )
+        if image_url and en_article.image != image_url:
+            en_article = en_article.model_copy(update={"image": image_url})
+
+        # 3. German
+        de_article = await self._write_in_language(
+            story, cycle_id,
+            agent=self._writer_agent_de,
+            persona=persona_de,
+            language="de-DE",
+            existing_content=existing_de_content,
+        )
+        if image_url:
+            de_article = de_article.model_copy(update={"image": image_url})
+
+        return [en_article, de_article]
+
+    async def _resolve_persona_id(
+        self,
+        story: StoryEntry,
+        cycle_id: str,
+        existing_en_content: dict | None,
+        existing_de_content: dict | None,
+    ) -> str:
+        """Return the persona archetype id (same for EN + DE).
+
+        For updates: preserve the original author's archetype if we can
+        recognize the byline (English OR German). Otherwise run the selector.
+        """
+        for existing in (existing_en_content, existing_de_content):
+            if existing:
+                preserved = byline_to_persona_id(existing.get("author"))
+                if preserved is not None:
+                    logger.info(
+                        "Preserving original persona %s for update: %s",
+                        preserved, story.cluster_headline[:60],
+                    )
+                    return preserved
+        selection = await select_persona(
+            self._persona_selector_agent, story, cycle_id
+        )
+        return selection.id if hasattr(selection, "id") else selection.persona_id  # type: ignore[attr-defined]
 
     async def run_write_phase(
         self, plan: CyclePublishPlan, cycle_id: str
@@ -141,52 +242,62 @@ class WriterWorkflow:
             logger.info("No stories to write")
             return []
 
-        # Fetch existing content for updates (now also includes `author`)
-        existing_content_map: dict[str, dict] = {}
+        # Fetch existing EN content for updates (English row lookup by editorial_state id).
+        # Fetch existing DE content for updates (German row lookup by fingerprint+language).
+        existing_en_by_fp: dict[str, dict] = {}
+        existing_de_by_fp: dict[str, dict] = {}
         if self._article_writer:
             for story in publishable:
-                if story.action == "update" and story.existing_article_id:
-                    content = await self._article_writer.fetch_article_content(
+                if story.action != "update":
+                    continue
+                if story.existing_article_id:
+                    en_content = await self._article_writer.fetch_article_content(
                         story.existing_article_id
                     )
-                    if content:
-                        existing_content_map[story.story_fingerprint] = content
-                        logger.info(
-                            "Fetched existing content for update: %s",
-                            story.cluster_headline[:60],
-                        )
+                    if en_content:
+                        existing_en_by_fp[story.story_fingerprint] = en_content
+                de_content = await self._article_writer.fetch_article_by_fingerprint(
+                    story.story_fingerprint, "de-DE"
+                )
+                if de_content:
+                    existing_de_by_fp[story.story_fingerprint] = de_content
 
-        # Resolve persona per story (in parallel with each other, not with writers)
-        personas = await asyncio.gather(
+        # Persona archetype per story — one LLM call shared across EN+DE.
+        persona_ids = await asyncio.gather(
             *(
-                self._resolve_persona(
-                    story,
-                    cycle_id,
-                    existing_content_map.get(story.story_fingerprint),
+                self._resolve_persona_id(
+                    story, cycle_id,
+                    existing_en_by_fp.get(story.story_fingerprint),
+                    existing_de_by_fp.get(story.story_fingerprint),
                 )
                 for story in publishable
             )
         )
 
-        # Shared per-cycle budget: at most 50% of articles may use the
-        # player_headshot tier. Surplus falls through to AI generation / team logo
-        # so the feed doesn't look like a wall of mugshots.
-        headshot_budget = HeadshotBudget.for_cycle(len(publishable), ratio=0.5)
+        # Headshot tier is capped at 40% of stories (rounded up, so small
+        # cycles still get at least one). Curated tier is uncapped — it
+        # fills in everything that didn't win a web search or headshot.
+        headshot_budget = HeadshotBudget.for_cycle(
+            len(publishable), ratio=0.4, round_up=True,
+        )
+        curated_budget = None
         logger.info(
-            "Headshot budget this cycle: %d/%d",
+            "Headshot budget this cycle: %d/%d (curated uncapped)",
             headshot_budget.capacity, len(publishable),
         )
 
-        logger.info("Writing %d articles in parallel", len(publishable))
+        logger.info("Writing %d stories × 2 languages in parallel", len(publishable))
         tasks = [
-            self._write_single(
+            self._write_pair(
                 story,
                 cycle_id,
-                persona=persona,
-                existing_content=existing_content_map.get(story.story_fingerprint),
+                persona_id=persona_id,
+                existing_en_content=existing_en_by_fp.get(story.story_fingerprint),
+                existing_de_content=existing_de_by_fp.get(story.story_fingerprint),
                 headshot_budget=headshot_budget,
+                curated_budget=curated_budget,
             )
-            for story, persona in zip(publishable, personas, strict=True)
+            for story, persona_id in zip(publishable, persona_ids, strict=True)
         ]
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
@@ -194,12 +305,14 @@ class WriterWorkflow:
         for i, result in enumerate(results):
             if isinstance(result, Exception):
                 logger.error(
-                    "Failed to write article for %s: %s",
-                    publishable[i].story_fingerprint,
-                    result,
+                    "Failed to write article pair for %s: %s",
+                    publishable[i].story_fingerprint, result,
                 )
             else:
-                articles.append(result)
+                articles.extend(result)
 
-        logger.info("Successfully wrote %d/%d articles", len(articles), len(publishable))
+        logger.info(
+            "Successfully wrote %d articles across %d stories (EN+DE)",
+            len(articles), len(publishable),
+        )
         return articles

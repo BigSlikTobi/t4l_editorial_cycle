@@ -238,6 +238,8 @@ class ArticleWriter:
             "tts_file": article.tts_file,
             "author": article.author,
             "mentioned_players": article.mentioned_players,
+            "sources": [s.model_dump() for s in article.sources],
+            "story_fingerprint": article.story_fingerprint,
         }
 
     async def _post_article(self, payload: dict) -> httpx.Response:
@@ -284,6 +286,65 @@ class ArticleWriter:
             )
 
         logger.info("Updated article %d: %s", article_id, article.headline[:60])
+
+    @_default_retry()
+    async def fetch_article_by_fingerprint(
+        self, story_fingerprint: str, language: str
+    ) -> dict | None:
+        """Find an existing article by (story_fingerprint, language).
+
+        Used by the multi-language write path: the German article's existing
+        row isn't tracked in editorial_state (which is keyed on fingerprint
+        only), so we look it up directly in team_article at write time.
+        Returns the article row (including `id`) or None if not found.
+        """
+        response = await self._client.get(
+            "/rest/v1/team_article",
+            params={
+                "story_fingerprint": f"eq.{story_fingerprint}",
+                "language": f"eq.{language}",
+                "select": "id,headline,sub_headline,introduction,content,bullet_points,author",
+                "limit": "1",
+            },
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            logger.warning(
+                "fetch_article_by_fingerprint failed (%s, %s): %s",
+                story_fingerprint, language, response.text[:200],
+            )
+            return None
+        rows = response.json()
+        return rows[0] if rows else None
+
+    @_default_retry()
+    async def find_article_id(
+        self, story_fingerprint: str, language: str
+    ) -> int | None:
+        """Return the team_article id for (fingerprint, language), or None.
+
+        Lightweight companion to fetch_article_by_fingerprint — used by the
+        orchestrator at persistence time to pick INSERT vs PATCH without
+        pulling full article content.
+        """
+        response = await self._client.get(
+            "/rest/v1/team_article",
+            params={
+                "story_fingerprint": f"eq.{story_fingerprint}",
+                "language": f"eq.{language}",
+                "select": "id",
+                "limit": "1",
+            },
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            logger.warning(
+                "find_article_id failed (%s, %s): %s",
+                story_fingerprint, language, response.text[:200],
+            )
+            return None
+        rows = response.json()
+        return rows[0]["id"] if rows else None
 
     @_default_retry()
     async def fetch_article_content(self, article_id: int) -> dict | None:

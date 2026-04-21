@@ -38,6 +38,8 @@ orchestration.py  (4 lines of logic — glues phases together)
 
 Modules share only `schemas.py` and `adapters.py`. No cross-module imports of internals.
 
+Each story produces **two** `PublishableArticle` records (`en-US` + `de-DE`). The image cascade runs once for EN and the result is shared with the DE article. `orchestration.py` routes each language to INSERT or PATCH independently via `ArticleWriter.find_article_id(fingerprint, language)`. `editorial_state` tracks only the EN article id as the canonical reference.
+
 ### Image Cascade (`writer/image_selector.py`)
 
 Four-tier fallback, evaluated in order for each article:
@@ -46,9 +48,13 @@ Four-tier fallback, evaluated in order for each article:
 |------|--------|-------|
 | 1a | Google CC Search (`image_clients.GoogleCCSearchClient`) | Skipped when a dominant player is present (headshot preferred) |
 | 1b | Wikimedia Commons (`image_clients.WikimediaCommonsClient`) | Public MediaWiki API, no key. Query: player name or team code + "NFL football". `upload.wikimedia.org` requires `User-Agent` on downloads or returns 403 |
-| 2 | Supabase headshot table | Single-player stories only; subject to per-cycle budget cap |
-| 3 | OpenAI image generation | Prompt: wire-service photojournalism, in-game action, team full name + uniform colors injected |
-| 4 | Logo reference string | Always succeeds; downstream renders team logo |
+| 2 | Player headshot from `public.players` | Dominant single-player stories only; subject to 40%-ceil per-cycle budget cap |
+| 3 | Curated pool (`content.curated_images`) | Pre-generated + manually reviewed PNGs; scene chosen via `_scene_candidates()` + `_SCENE_RULES` (keyword-matched, then fingerprint-deterministic rotation); uncapped |
+| 4 | Team logo reference string | Always succeeds; downstream renders team logo |
+
+Gemini AI generation was removed. Tiers 1–3 produce real image URLs; tier 4 is a Flutter asset reference (`asset://team_logo/{TEAM_CODE}`). A `generic_nfl` fallback (`asset://generic/nfl`) fires when there is no `team_code`.
+
+Image is selected once (for EN) and reused by the DE article for the same story.
 
 `image_validator.does_image_match` accepts `expected_team_code` + `expected_team_name` and rejects: different-team-wordmark contradictions, portraits/mugshots, dated archival photos, low-quality. Ambiguity = accept; only positive contradiction = reject. OCR check (`image_contains_text`) accepts jersey/yard-line numbers but rejects words/wordmarks/scoreboards.
 
@@ -96,9 +102,12 @@ Two schemas, two auth patterns:
 
 All migrations applied manually via SQL Editor (not `supabase db push`):
 - `001_editorial_state.sql` — applied
-- `002_add_source_urls.sql` — **pending**
-- `003_add_author.sql` — **pending**
-- `004_add_mentioned_players.sql` — **pending**
+- `002_add_source_urls.sql` — applied
+- `003_add_author.sql` — applied
+- `004_add_mentioned_players.sql` — applied
+- `005_curated_images.sql` — applied (`content.curated_images` table + storage GRANTs)
+- `006_add_sources.sql` — applied (`sources jsonb` on `content.team_article`)
+- `007_add_story_fingerprint.sql` — **pending** (`story_fingerprint text` on `content.team_article`)
 
 ## Prompts
 
@@ -115,4 +124,4 @@ Tests must use `Settings(_env_file=None)` and explicitly `monkeypatch.delenv` mo
 Central map of all 32 NFL teams. Provides:
 - `canonicalize_team_codes(raw: list[str]) -> list[str]` — normalizes abbreviations and common nicknames, drops unknowns, deduplicates preserving order
 - `team_full_name(code: str) -> str` — e.g. `"KC"` → `"Kansas City Chiefs"` (used by image validator)
-- `team_colors(code: str) -> str` — e.g. `"KC"` → `"red and gold"` (injected into AI image generation prompts)
+- `team_colors(code: str) -> str` — e.g. `"KC"` → `"red and gold"` (available for prompt injection; was used by the now-removed Gemini AI generation tier)

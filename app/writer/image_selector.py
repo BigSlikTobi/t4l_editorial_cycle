@@ -1,35 +1,37 @@
 """Image selection cascade for writer output.
 
 Tier order (agreed with product):
-  1. image_selection cloud function + vision validator
-  2. Player headshot from public.players (dominant player only)
-  3. Gemini AI generation (stadium / tactical, no text) + validator + OCR check
+  1. image_selection cloud function + vision validator (Google CC)
+  1b. Wikimedia Commons + vision validator (same tier, tried after Google)
+  2. Curated pool lookup (content.curated_images) — pre-generated & reviewed
+  3. Player headshot from public.players (dominant player only)
   4. Team logo (Flutter asset reference: asset://team_logo/{TEAM_CODE})
   5. None
 
-Principle: wrong image > bad quality > no image. Every interesting-but-
-unverified source (tiers 1 and 3) is gated by the vision validator. Boring-
-but-safe sources (tiers 2 and 4) skip validation because they cannot be
-"wrong" — they are always the named player or the named team.
+Principle: wrong image > bad quality > no image. Web sources (tier 1) go
+through the vision validator. Curated pool, headshots, and logos are all
+safe-by-construction (vetted or deterministic) and skip validation.
+
+The curated tier and the headshot tier each have per-cycle budgets (default
+50% each) so the feed doesn't look monotonous.
 """
 
 from __future__ import annotations
 
 import asyncio
-import base64
+import hashlib
 import logging
 import math
 from dataclasses import dataclass
-from typing import Any, Literal
+from typing import Literal
 from urllib.parse import urlparse
 
 import httpx
 
 from app.adapters import ImageUploader
 from app.schemas import PlayerMention, PublishableArticle, StoryEntry
-from app.team_codes import normalize_team_codes, team_colors, team_full_name
+from app.team_codes import normalize_team_codes, team_full_name
 from app.writer.image_clients import (
-    GeminiImageClient,
     ImageCandidate,
     ImageSelectionClient,
     WikimediaCommonsClient,
@@ -38,7 +40,10 @@ from app.writer.image_validator import ImageValidator
 
 logger = logging.getLogger(__name__)
 
-Tier = Literal["image_search", "player_headshot", "ai_generated", "team_logo", "generic_nfl", "none"]
+Tier = Literal[
+    "image_search", "curated_pool", "player_headshot",
+    "team_logo", "generic_nfl", "none",
+]
 
 _LOGO_SCHEME = "asset://team_logo/"
 _GENERIC_NFL_ASSET = "asset://generic/nfl"
@@ -56,11 +61,12 @@ def team_logo_ref(team_code: str) -> str:
 
 
 class HeadshotBudget:
-    """Per-cycle cap on how many articles may use tier 2 (player headshot).
+    """Per-cycle cap on how many articles may use a given bounded tier.
 
-    Stops repetitive "another mugshot" feeds by forcing surplus articles to
-    fall through to tier 3 (AI-generated) or tier 4 (team logo) instead.
-    Async-safe — selectors run in parallel and share one budget instance.
+    Used by both the curated-pool tier and the player-headshot tier. Capping
+    prevents a monotonous feed (all mugshots, or all stock scenes) and forces
+    surplus articles to fall through to the next tier. Async-safe — selectors
+    run in parallel and share one budget instance.
     """
 
     def __init__(self, capacity: int) -> None:
@@ -69,15 +75,24 @@ class HeadshotBudget:
         self._lock = asyncio.Lock()
 
     @classmethod
-    def for_cycle(cls, publishable_count: int, ratio: float = 0.5) -> "HeadshotBudget":
-        """Round DOWN so the cap never exceeds the stated ratio.
-
-        Edge case: for publishable_count == 1, floor(0.5) == 0 would mean
-        a single-article cycle could never use a headshot. Guarantee at
-        least 1 slot when there's any article at all.
+    def for_cycle(
+        cls,
+        publishable_count: int,
+        ratio: float = 0.5,
+        *,
+        round_up: bool = False,
+    ) -> "HeadshotBudget":
+        """`round_up=False` (default) floors so the cap never exceeds the
+        ratio. `round_up=True` ceils so the cap never falls below it —
+        useful for the headshot tier where we'd rather cover one extra
+        dominant-player story than cover none. Either way, any positive
+        publishable_count guarantees at least 1 slot.
         """
-        cap = max(1, math.floor(publishable_count * ratio)) if publishable_count else 0
-        return cls(cap)
+        if not publishable_count:
+            return cls(0)
+        raw = publishable_count * ratio
+        cap = math.ceil(raw) if round_up else math.floor(raw)
+        return cls(max(1, cap))
 
     async def try_consume(self) -> bool:
         async with self._lock:
@@ -95,6 +110,93 @@ class HeadshotBudget:
         return self._capacity
 
 
+# Scene classification — map an article/story to ordered (team, scene)
+# probes against the curated pool. First hit wins.
+#
+# Team scenes (per team, in content.curated_images with team_code set):
+#   offense_action, defense_action, sideline, celebration,
+#   pregame_tunnel, locker_room, stadium_wide
+#
+# Generic scenes (team_code IS NULL):
+#   press_conference, front_office, draft_room, medical_training,
+#   coach_player_convo, referee, media_scrum, empty_field_dusk,
+#   stadium_exterior, practice_generic, combine
+
+_TEAM_SCENES_DEFAULT_ORDER: tuple[str, ...] = (
+    "offense_action", "defense_action", "sideline",
+    "stadium_wide", "pregame_tunnel", "locker_room", "celebration",
+)
+
+# Keyword → (team scene bias, generic scene bias). Both optional — team wins
+# when we have a team_code and a team scene fits; generic fills in otherwise.
+_SCENE_RULES: tuple[tuple[tuple[str, ...], str | None, str | None], ...] = (
+    # (keywords, team_scene, generic_scene)
+    (("touchdown", "td ", "win ", "victory", "celebrat", "walk-off"),
+     "celebration", None),
+    (("sack", "interception", "int ", "tackle", "defense ", "defensive",
+      "linebacker", " safety ", "cornerback", "turnover"),
+     "defense_action", None),
+    (("pass ", "passing", "quarterback", " qb ", "receiver", "catch",
+      "throw", "offense ", "offensive", "rushing", "touchdown pass"),
+     "offense_action", None),
+    (("head coach", "coordinator", "staff ", "fired", "hired"),
+     "sideline", "press_conference"),
+    (("draft", "prospect", "combine", "mock"),
+     None, "draft_room"),
+    (("injur", "concussion", " knee ", " ir ", "hamstring", "ankle",
+      "shoulder", "rehab", "surgery"),
+     None, "medical_training"),
+    (("trade", "sign ", "signing", "contract", "extension", "agree",
+      "release", "waive", "cut ", "deal ", "free agent"),
+     None, "press_conference"),
+    (("referee", "penalty", "flag", "overturn", "replay", "ruling"),
+     None, "referee"),
+    (("practice", "ota", "minicamp", "training camp"),
+     None, "practice_generic"),
+    (("locker room", "post-game", "postgame"),
+     "locker_room", None),
+)
+
+
+def _scene_candidates(
+    article: PublishableArticle, story: StoryEntry, team: str | None
+) -> list[tuple[str | None, str]]:
+    """Return ordered (team_code, scene) probes against the curated pool."""
+    text = f"{article.headline} {article.introduction}".lower()
+    team_hits: list[tuple[str | None, str]] = []
+    generic_hits: list[tuple[str | None, str]] = []
+    seen: set[tuple[str | None, str]] = set()
+
+    def _add(lst: list, item: tuple[str | None, str]) -> None:
+        if item not in seen:
+            seen.add(item)
+            lst.append(item)
+
+    for keywords, team_scene, generic_scene in _SCENE_RULES:
+        if any(kw in text for kw in keywords):
+            if team and team_scene:
+                _add(team_hits, (team, team_scene))
+            if generic_scene:
+                _add(generic_hits, (None, generic_scene))
+
+    # Team default rotation for variety across stories (deterministic per
+    # fingerprint so re-runs pick the same scene).
+    if team:
+        idx = int(hashlib.md5(story.story_fingerprint.encode()).hexdigest(), 16)
+        rotated = (
+            _TEAM_SCENES_DEFAULT_ORDER[idx % len(_TEAM_SCENES_DEFAULT_ORDER):]
+            + _TEAM_SCENES_DEFAULT_ORDER[:idx % len(_TEAM_SCENES_DEFAULT_ORDER)]
+        )
+        for scene in rotated:
+            _add(team_hits, (team, scene))
+
+    # Generic last-resort
+    for scene in ("empty_field_dusk", "stadium_exterior"):
+        _add(generic_hits, (None, scene))
+
+    return team_hits + generic_hits
+
+
 class ImageSelector:
     def __init__(
         self,
@@ -102,21 +204,17 @@ class ImageSelector:
         supabase_url: str,
         supabase_service_role_key: str,
         image_client: ImageSelectionClient | None,
-        gemini_client: GeminiImageClient | None,
         validator: ImageValidator,
         uploader: ImageUploader | None = None,
         wikimedia_client: WikimediaCommonsClient | None = None,
-        gemini_model_name: str = "gemini",
         timeout_seconds: float = 15.0,
     ) -> None:
         self._supabase_base = supabase_url.rstrip("/")
         self._supabase_key = supabase_service_role_key
         self._image_client = image_client
-        self._gemini_client = gemini_client
         self._wikimedia_client = wikimedia_client
         self._validator = validator
         self._uploader = uploader
-        self._gemini_model_name = gemini_model_name
         # User-Agent is required by Wikimedia's upload.wikimedia.org CDN
         # (403 without it) and is good etiquette for any external download.
         self._http = httpx.AsyncClient(
@@ -142,21 +240,30 @@ class ImageSelector:
         *,
         cycle_id: str | None = None,
         headshot_budget: "HeadshotBudget | None" = None,
+        curated_budget: "HeadshotBudget | None" = None,
     ) -> ImageResult:
         """Run the cascade. Each tier's failure is logged; never raises."""
         normalized_teams = normalize_team_codes(story.team_codes)
-        primary_team = normalized_teams[0] if normalized_teams else None
+        # Prefer the writer-chosen team — for multi-team clusters (e.g. a
+        # league-wide roundup), `team_codes[0]` is just alphabetical and
+        # often doesn't match the article's actual subject. The writer
+        # sets `article.team` based on what the piece is really about.
+        primary_team = None
+        if article.team and article.team in normalized_teams:
+            primary_team = article.team
+        elif normalized_teams:
+            primary_team = normalized_teams[0]
         dominant_player = self._pick_dominant_player(article, story)
 
-        # Tier 1 pre-check: if we have a dominant player AND the budget still
-        # has room, a headshot is likely going to win anyway — skip the
-        # expensive image_search round-trip.
+        # Tier 1 pre-check: if a dominant player exists AND the headshot
+        # tier still has budget, skip the web search — a safe mugshot
+        # is coming next and will win.
         skip_tier1 = (
             dominant_player is not None
             and (headshot_budget is None or headshot_budget.capacity > headshot_budget.used)
         )
 
-        # Tier 1: image_selection + validator → upload to bucket
+        # Tier 1: web search (Google CC + Wikimedia, each validator-gated)
         if not skip_tier1:
             result = await self._try_image_search(
                 article, story, cycle_id=cycle_id, primary_team=primary_team
@@ -165,20 +272,21 @@ class ImageSelector:
                 return result
         else:
             logger.info(
-                "Skipping tier 1 for %s (dominant player %s likely wins tier 2)",
+                "Skipping tier 1 for %s (dominant player %s → headshot likely wins)",
                 article.headline[:60], dominant_player.id if dominant_player else "?",
             )
 
-        # Tier 2: player headshot — gated by per-cycle budget
+        # Tier 2: player headshot — gated by per-cycle budget (default 40%)
         result = await self._try_player_headshot(
             article, story, dominant_player=dominant_player, budget=headshot_budget
         )
         if result.url:
             return result
 
-        # Tier 3: AI generation (no text, validator + OCR) → upload to bucket
-        result = await self._try_ai_generation(
-            article, primary_team, cycle_id=cycle_id, story=story
+        # Tier 3: curated pool (uncapped by default — team scene coverage
+        # is complete, so this is the safe fallback for everything else)
+        result = await self._try_curated(
+            article, story, primary_team=primary_team, budget=curated_budget
         )
         if result.url:
             return result
@@ -430,77 +538,81 @@ class ImageSelector:
         return False
 
     # ------------------------------------------------------------------
-    # Tier 3 — AI generation
+    # Tier 2 — curated pool (content.curated_images)
     # ------------------------------------------------------------------
 
-    async def _try_ai_generation(
+    async def _try_curated(
         self,
         article: PublishableArticle,
-        primary_team: str | None,
-        *,
-        cycle_id: str | None,
         story: StoryEntry,
+        *,
+        primary_team: str | None,
+        budget: "HeadshotBudget | None",
     ) -> ImageResult:
-        if self._gemini_client is None:
-            return ImageResult(None, "ai_generated", "client not configured")
+        """Probe the curated pool in scene-priority order. First active row
+        matching (team_code, scene) wins; budget is consumed only on success."""
+        if budget is not None and budget.capacity == 0:
+            return ImageResult(None, "curated_pool", "budget disabled")
 
-        prompt = self._build_generation_prompt(article, primary_team)
-
-        for attempt in (1, 2):
-            try:
-                data_url = await self._gemini_client.generate_image(prompt)
-            except Exception as exc:
-                return ImageResult(None, "ai_generated", f"gemini error: {exc}")
-
-            if not data_url:
-                return ImageResult(None, "ai_generated", "gemini returned no image")
-
-            # Must be text-free
-            has_text, text_notes = await self._validator.image_contains_text(data_url)
-            if has_text:
-                if attempt == 1:
-                    logger.info("AI image contained text (%s) — regenerating once", text_notes)
-                    prompt = prompt + "\n\nREMINDER: absolutely no letters, numbers, watermarks, or any text of any kind."
-                    continue
-                logger.info("AI image still contained text after retry: %s", text_notes)
-                return ImageResult(None, "ai_generated", f"contained text after retry: {text_notes}")
-
-            # Must match the article topically
-            matches, reason = await self._validator.does_image_match(
-                data_url, article.headline, article.introduction,
-                expected_team_code=primary_team,
-                expected_team_name=team_full_name(primary_team),
-            )
-            if not matches:
-                logger.info(
-                    "AI image match-validator rejected: %s", reason
+        candidates = _scene_candidates(article, story, primary_team)
+        tried: list[str] = []
+        for team_code, scene in candidates:
+            label = f"{team_code or 'generic'}/{scene}"
+            row = await self._lookup_curated(team_code, scene, story.story_fingerprint)
+            if row is None:
+                tried.append(label)
+                continue
+            if budget is not None and not await budget.try_consume():
+                return ImageResult(
+                    None, "curated_pool",
+                    f"budget exhausted ({budget.capacity} used); "
+                    f"would have used {label}",
                 )
-                return ImageResult(None, "ai_generated", f"validator rejected: {reason}")
-
-            # Decode + upload
-            decoded = self._decode_data_url(data_url)
-            if decoded is None:
-                return ImageResult(None, "ai_generated", "malformed data URL")
-            content_type, data_bytes = decoded
-            ext = content_type.split("/")[-1] if "/" in content_type else "png"
-            path = self._storage_path(
-                cycle_id, story, tier="ai_generated", ext_hint=f".{ext}"
+            return ImageResult(
+                url=row["image_url"], tier="curated_pool",
+                notes=f"{label} (slug={row['slug']})",
             )
-            hosted_url = await self._host_bytes(
-                data_bytes,
-                content_type=content_type,
-                path=path,
-                provenance_source="gemini",
-                # Unique per image — the storage path is deterministic per
-                # (cycle, story fingerprint, tier) so reruns upsert correctly.
-                provenance_original_url=f"gemini://{self._gemini_model_name}/{path}",
-                provenance_author=self._gemini_model_name,
-            )
-            if hosted_url is None:
-                return ImageResult(None, "ai_generated", "upload failed")
-            return ImageResult(url=hosted_url, tier="ai_generated", notes=reason)
 
-        return ImageResult(None, "ai_generated", "exhausted retries")
+        return ImageResult(None, "curated_pool", f"no match (tried {len(tried)} probes)")
+
+    async def _lookup_curated(
+        self, team_code: str | None, scene: str, fingerprint: str,
+    ) -> dict | None:
+        """Query content.curated_images for the first active row matching
+        (team_code, scene). When multiple variants exist (generic scenes
+        often have 2–3), pick deterministically by fingerprint so the same
+        story gets the same image on re-runs."""
+        params: dict[str, str] = {
+            "active": "eq.true",
+            "scene": f"eq.{scene}",
+            "select": "slug,image_url,team_code,scene",
+            "order": "slug.asc",
+        }
+        if team_code is None:
+            params["team_code"] = "is.null"
+        else:
+            params["team_code"] = f"eq.{team_code}"
+
+        try:
+            resp = await self._http.get(
+                f"{self._supabase_base}/rest/v1/curated_images",
+                params=params,
+                headers={"Accept-Profile": "content"},
+            )
+        except Exception as exc:
+            logger.warning("curated lookup error (%s/%s): %s", team_code, scene, exc)
+            return None
+        if resp.status_code >= 400:
+            logger.warning(
+                "curated lookup HTTP %s (%s/%s): %s",
+                resp.status_code, team_code, scene, resp.text[:120],
+            )
+            return None
+        rows = resp.json() or []
+        if not rows:
+            return None
+        idx = int(hashlib.md5(fingerprint.encode()).hexdigest(), 16) % len(rows)
+        return rows[idx]
 
     # ------------------------------------------------------------------
     # Upload helpers (shared by tiers 1 & 3)
@@ -597,78 +709,3 @@ class ImageSelector:
         except Exception:
             return ""
 
-    @staticmethod
-    def _decode_data_url(data_url: str) -> tuple[str, bytes] | None:
-        if not data_url.startswith("data:"):
-            return None
-        try:
-            header, b64 = data_url.split(",", 1)
-            # header format: data:<mime>;base64
-            mime = header[5:].split(";", 1)[0] or "image/png"
-            return mime, base64.b64decode(b64)
-        except Exception:
-            return None
-
-    @staticmethod
-    def _build_generation_prompt(
-        article: PublishableArticle,
-        primary_team: str | None,
-    ) -> str:
-        """Generate a journalistic, story-specific image prompt.
-
-        Goal is a news-wire photograph that a picture editor would actually
-        run next to this article — NOT a mood piece. Gemini is asked to depict
-        the real subject of the story (the moment, the setting, the activity),
-        in a plain documentary style, with only text and logo rendering
-        disallowed (those are hard technical failures, not stylistic).
-        """
-        # Inject the actual team name + uniform color palette. "KC" or even
-        # "NE" is opaque to Gemini; "New England Patriots, navy blue, silver,
-        # and red" actually steers the palette of the generated scene.
-        if primary_team:
-            full = team_full_name(primary_team) or primary_team
-            colors = team_colors(primary_team)
-            color_clause = (
-                f" Uniform palette: {colors}. Depict the players in these "
-                f"colors — this is the central visual cue for team identity "
-                f"(since wordmarks and helmet logos are forbidden below)."
-                if colors else ""
-            )
-            team_phrase = (
-                f"The story is about the {full}.{color_clause} "
-            )
-        else:
-            team_phrase = "The story is NFL/football-related (no specific team). "
-        return f"""You are generating a wire-service NFL game-action news photograph to run alongside the following article. Think AP / Getty / Reuters sports desk — a live-game or practice photograph a picture editor would file. NOT a movie still, NOT a mood piece, NOT an empty stadium.
-
-HEADLINE: {article.headline}
-INTRO: {article.introduction}
-
-{team_phrase}
-
-STRONG BIAS TOWARD IN-GAME ACTION. Default to showing players actively PLAYING football:
-- A ball-carrier running, stiff-arming, or being tackled.
-- A wide receiver catching or contesting a pass in mid-air.
-- A quarterback in the pocket releasing a throw, or being sacked.
-- Linemen in a trench battle, hands engaged, pads colliding.
-- A defender wrapping up a runner in open field.
-- Special teams: a punt returner cutting upfield, a kicker in follow-through.
-- Pregame / sideline alternative (use only when game action doesn't fit the story): coach mid-play-call on the sideline, team huddle, player in helmet on the bench in focus.
-
-Choose the scene that best fits THIS story. If it's a trade/transaction/injury/contract piece where on-field action is still appropriate (most are — show the player doing what they're known for), use action. If it's strictly front-office or legal, a sideline/huddle/locker-room scene is fine.
-
-GUIDELINES (photojournalism, not cinema):
-- Natural stadium/daylight/field lighting. NO cinematic color grading, NO teal-and-orange, NO moody silhouettes, NO golden-hour worship, NO heavy bokeh for drama.
-- Sideline or end-zone photographer perspective — eye-level with the action. Motion blur on a moving limb or the ball is good; it reads as real. Composition can be slightly imperfect.
-- Real-looking people in real contact or real motion. Multiple players in frame is encouraged (offense vs defense, receiver vs DB). Faces are fine, including in focus.
-- VARIETY IS CRITICAL. Do NOT default to an empty stadium, a person standing alone with their back turned, a silhouette at dusk, or a moody locker room. Those are AI-slop fingerprints we are explicitly rejecting. Show actual football being played.
-
-HARD CONSTRAINTS (rejection triggers):
-- NO readable WORDS, letters, team names, player names on jerseys, captions, signage wordmarks, sponsor logos, press-backdrop wordmarks, or watermarks. Treat any would-be word area (sponsor patches, nameplate above a jersey number, end-zone team name) as if it must be plain / unlabeled / occluded.
-- NUMBERS ARE ALLOWED in their natural sports-photo places: jersey numbers on players, yard-line numbers on the field, down markers. These are expected and do not count as "text."
-- NO team logos, helmet wordmarks, or nickname-logos — team identity only through uniform color. (The league's shield logo and generic stripe patterns are fine.)
-- NO visible scoreboard face (the boxes with team abbreviations and scores are text-heavy — avoid or keep out of frame).
-- NO cartoon, illustration, meme, clip-art, 3D render, or stock-photo aesthetic. Must look like an unretouched photograph.
-- NO faces of SPECIFIC named real athletes in recognizable close-up. Generic players are fine; don't render a real celebrity-athlete portrait.
-
-Deliver a live-action NFL football photograph that fits THIS story."""

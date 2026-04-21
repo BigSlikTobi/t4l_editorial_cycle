@@ -69,18 +69,84 @@ PERSONAS: dict[str, Persona] = {
 PERSONA_IDS: tuple[str, ...] = tuple(PERSONAS.keys())
 
 
-def get_persona(persona_id: str) -> Persona:
+# German personas — same archetype IDs as English so persona selection runs
+# once and then maps to the German voice when generating the de-DE article.
+# Style guides are written in German and describe the German-native voice
+# (not "translate the English version").
+PERSONAS_DE: dict[str, Persona] = {
+    "analyst": Persona(
+        id="analyst",
+        byline="Marc Richter",
+        role="Cap- und Schemes-Analyst",
+        style_guide=(
+            "Stimme: nüchtern, analytisch, zahlenfokussiert. Du bist Tape- und "
+            "Cap-Analyst, kein Fan. Beginne mit dem tragenden Fakt (Vertragszahlen, "
+            "Kaderimplikationen, Scheme-Passung). Konkrete Nomen und konkrete Zahlen "
+            "vor Adjektiven. Kurze, deklarative Sätze. Keine Ausrufezeichen. Keine "
+            "rhetorischen Fragen. Keine „Was wäre wenn“-Spekulation. Benenne bei "
+            "jedem Move explizit den Trade-off oder Sekundäreffekt, den die Quelle "
+            "stützt. Absätze eng halten – 2–3 Sätze."
+        ),
+    ),
+    "insider": Persona(
+        id="insider",
+        byline="Jana Hoffmann",
+        role="Breaking-News-Reporterin",
+        style_guide=(
+            "Stimme: drängend, Agentur-Taktung. Der erste Satz nennt die Entwicklung "
+            "in einem Hauptsatz – Wer, Was, Wann. Dann ein Satz unmittelbarer "
+            "Einordnung, danach die belegenden Fakten. Aktiv und Präsens, wo "
+            "sinnvoll. Kurze Absätze (1–2 Sätze). Rahme das Stück um „Was ist "
+            "passiert“ und „Was folgt“ – keine Analyse, keine Farbe. Keine "
+            "wertenden Adjektive („unglaublich“, „schockierend“). Keine Ausrufezeichen. "
+            "Wenn die Quelle abschwächt (angeblich, dem Vernehmen nach), übernimm "
+            "die Einschränkung."
+        ),
+    ),
+    "columnist": Persona(
+        id="columnist",
+        byline="Lena Weber",
+        role="Feature-Autorin",
+        style_guide=(
+            "Stimme: locker, menschlich, leicht pointiert – aber nie auf Kosten "
+            "der Fakten. Schreibe so, wie es dir ein spielverliebter Freund am "
+            "Küchentisch erzählen würde. Szenische Einstiege sind erlaubt, wenn "
+            "die Quelle sie trägt (Zitat, Beschreibung, Setting). Variiere die "
+            "Satzlänge. Trockener Humor gelegentlich, Sarkasmus und Spott nicht. "
+            "Keine Meta-Zwinker an die Leserin. Keine Anreden in der zweiten "
+            "Person („du“, „Sie“). Nach wie vor closed-world – erfinde keine "
+            "Farbe, die die Quelle nicht hergibt."
+        ),
+    ),
+}
+
+
+def get_persona(persona_id: str, language: str = "en-US") -> Persona:
+    """Return the persona for the given archetype + language.
+
+    `language` defaults to 'en-US' to keep existing callers unchanged.
+    'de-DE' returns the German variant with the same archetype id.
+    Unknown languages fall back to English.
+    """
+    registry = PERSONAS_DE if language == "de-DE" else PERSONAS
     try:
-        return PERSONAS[persona_id]
+        return registry[persona_id]
     except KeyError as exc:
-        raise KeyError(f"Unknown persona id: {persona_id!r}") from exc
+        raise KeyError(
+            f"Unknown persona id {persona_id!r} for language {language!r}"
+        ) from exc
 
 
 def byline_to_persona_id(byline: str | None) -> str | None:
-    """Reverse-lookup for update flow: given a stored author byline, find the persona id."""
+    """Reverse-lookup for update flow: given a stored author byline, find the persona id.
+
+    Recognizes both English and German bylines so an update can preserve the
+    original author regardless of which language's article we're handling.
+    """
     if not byline:
         return None
-    for p in PERSONAS.values():
-        if p.byline == byline:
-            return p.id
+    for registry in (PERSONAS, PERSONAS_DE):
+        for p in registry.values():
+            if p.byline == byline:
+                return p.id
     return None

@@ -17,7 +17,6 @@ from app.editorial.context import CycleRunContext
 from app.editorial.workflow import EditorialWorkflow
 from app.schemas import CycleResult
 from app.writer.image_clients import (
-    GeminiImageClient,
     ImageSelectionClient,
     WikimediaCommonsClient,
 )
@@ -68,7 +67,13 @@ class CycleOrchestrator:
         # Phase 2: Write articles in parallel
         articles = await self._writer.run_write_phase(plan, cycle_id)
 
-        # Phase 3: Persist to Supabase
+        # Phase 3: Persist to Supabase.
+        # Each story now produces two articles (en-US + de-DE). We route each
+        # article to INSERT or PATCH independently by looking up its row by
+        # (story_fingerprint, language) — so the German row follows the same
+        # upsert semantics as the English one without duplicating state.
+        # editorial_state stays keyed on fingerprint and records the English
+        # article id as the canonical reference.
         fingerprint_to_article_id: dict[str, int] = {}
         fingerprint_to_headline: dict[str, str] = {}
         fingerprint_to_source_urls: dict[str, list[str]] = {}
@@ -81,32 +86,30 @@ class CycleOrchestrator:
                 None,
             )
             try:
-                if (
-                    matching_story
-                    and matching_story.action == "update"
-                    and matching_story.existing_article_id
-                ):
-                    await self._article_writer.update_article(
-                        matching_story.existing_article_id, article
-                    )
-                    fingerprint_to_article_id[article.story_fingerprint] = (
-                        matching_story.existing_article_id
-                    )
+                existing_id = await self._article_writer.find_article_id(
+                    article.story_fingerprint, article.language
+                )
+                if existing_id is not None:
+                    await self._article_writer.update_article(existing_id, article)
+                    persisted_id = existing_id
                     articles_updated += 1
                 else:
-                    new_id = await self._article_writer.write_article(article)
-                    fingerprint_to_article_id[article.story_fingerprint] = new_id
+                    persisted_id = await self._article_writer.write_article(article)
                     articles_written += 1
             except ExternalServiceError as exc:
                 logger.error("Failed to persist article %s: %s", article.headline[:60], exc)
                 context.warnings.append(f"Write failed for {article.headline}: {exc}")
                 continue
 
-            fingerprint_to_headline[article.story_fingerprint] = article.headline
-            if matching_story:
-                fingerprint_to_source_urls[article.story_fingerprint] = [
-                    d.url for d in matching_story.source_digests
-                ]
+            # editorial_state tracks the English row only — the DE row is
+            # reachable via team_article lookup by (fingerprint, 'de-DE').
+            if article.language == "en-US":
+                fingerprint_to_article_id[article.story_fingerprint] = persisted_id
+                fingerprint_to_headline[article.story_fingerprint] = article.headline
+                if matching_story:
+                    fingerprint_to_source_urls[article.story_fingerprint] = [
+                        d.url for d in matching_story.source_digests
+                    ]
 
         # Phase 4: Persist editorial state
         await self._state_store.persist_cycle_results(
@@ -157,11 +160,10 @@ def build_default_orchestrator(settings: Settings) -> CycleOrchestrator:
     )
     adapters = [news_feed, article_lookup, state_store, article_writer_adapter]
 
-    # Optional image cascade — only constructed when the cloud-function URL
-    # or Gemini key is configured. Each tier is independently optional.
-    image_selector: ImageSelector | None = None
+    # Image cascade: web search (Google CC + Wikimedia) → curated pool →
+    # player headshot → logo. Always constructed — curated pool + headshot +
+    # logo all work without any external API keys.
     image_client: ImageSelectionClient | None = None
-    gemini_client: GeminiImageClient | None = None
     if settings.image_selection_url is not None:
         image_client = ImageSelectionClient(
             base_url=str(settings.image_selection_url),
@@ -177,38 +179,27 @@ def build_default_orchestrator(settings: Settings) -> CycleOrchestrator:
             timeout_seconds=settings.image_selection_timeout_seconds,
         )
         adapters.append(image_client)
-    if settings.gemini_api_key is not None:
-        gemini_client = GeminiImageClient(
-            api_key=settings.gemini_api_key.get_secret_value(),
-            model=settings.gemini_image_model,
-            timeout_seconds=settings.image_selection_timeout_seconds * 2,
-        )
-        adapters.append(gemini_client)
-    # Wikimedia Commons is always available (public API, no key).
     wikimedia_client = WikimediaCommonsClient()
     adapters.append(wikimedia_client)
 
-    if image_client is not None or gemini_client is not None:
-        validator = ImageValidator(
-            api_key=settings.openai_api_key.get_secret_value(),
-            model=settings.openai_model_vision_validator,
-        )
-        uploader = ImageUploader(
-            base_url=str(settings.supabase_url),
-            service_role_key=settings.supabase_service_role_key.get_secret_value(),
-        )
-        adapters.append(uploader)
-        image_selector = ImageSelector(
-            supabase_url=str(settings.supabase_url),
-            supabase_service_role_key=settings.supabase_service_role_key.get_secret_value(),
-            image_client=image_client,
-            gemini_client=gemini_client,
-            validator=validator,
-            uploader=uploader,
-            wikimedia_client=wikimedia_client,
-            gemini_model_name=settings.gemini_image_model,
-        )
-        adapters.append(image_selector)
+    validator = ImageValidator(
+        api_key=settings.openai_api_key.get_secret_value(),
+        model=settings.openai_model_vision_validator,
+    )
+    uploader = ImageUploader(
+        base_url=str(settings.supabase_url),
+        service_role_key=settings.supabase_service_role_key.get_secret_value(),
+    )
+    adapters.append(uploader)
+    image_selector: ImageSelector | None = ImageSelector(
+        supabase_url=str(settings.supabase_url),
+        supabase_service_role_key=settings.supabase_service_role_key.get_secret_value(),
+        image_client=image_client,
+        validator=validator,
+        uploader=uploader,
+        wikimedia_client=wikimedia_client,
+    )
+    adapters.append(image_selector)
 
     editorial = EditorialWorkflow(
         settings=settings,
