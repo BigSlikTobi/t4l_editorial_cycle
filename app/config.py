@@ -28,9 +28,19 @@ class Settings(BaseSettings):
     openai_model_story_cluster_agent: str = "gpt-5-mini-2025-08-07"
     openai_model_editorial_orchestrator_agent: str = "gpt-5.2-2025-12-11"
     openai_model_article_writer_agent: str = "gpt-5-mini-2025-08-07"
+    openai_model_persona_selector_agent: str = "gpt-5-nano-2025-08-07"
 
     openai_temperature: float | None = None
     openai_max_tokens: int | None = None
+
+    # Image selection cascade
+    image_selection_url: AnyHttpUrl | None = None
+    google_custom_search_key: SecretStr | None = None
+    google_custom_search_engine_id: str | None = None
+    gemini_api_key: SecretStr | None = None
+    gemini_image_model: str = "gemini-3.1-flash-image-preview"
+    openai_model_vision_validator: str = "gpt-5.4-mini"
+    image_selection_timeout_seconds: float = 30.0
 
     @model_validator(mode="after")
     def validate_supabase_urls(self) -> "Settings":
@@ -50,6 +60,7 @@ class Settings(BaseSettings):
             "story_cluster_agent": self.openai_model_story_cluster_agent,
             "editorial_orchestrator_agent": self.openai_model_editorial_orchestrator_agent,
             "article_writer_agent": self.openai_model_article_writer_agent,
+            "persona_selector_agent": self.openai_model_persona_selector_agent,
         }
 
     def agent_model(self, agent_name: str) -> str:

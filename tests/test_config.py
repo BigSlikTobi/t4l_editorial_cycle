@@ -44,6 +44,7 @@ class TestSettings:
             "story_cluster_agent",
             "editorial_orchestrator_agent",
             "article_writer_agent",
+            "persona_selector_agent",
         }
 
     def test_validates_url_mismatch(self, monkeypatch: pytest.MonkeyPatch) -> None:
