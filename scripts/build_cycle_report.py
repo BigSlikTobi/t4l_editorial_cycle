@@ -268,7 +268,9 @@ def _render_story(
 
 def build_html(output_data: dict, articles: list[dict], pmap: dict[str, dict]) -> str:
     plan = output_data.get("plan", {})
-    stories = plan.get("stories", [])
+    published_stories = plan.get("stories") or []
+    skipped_stories = plan.get("skipped_stories") or []
+    stories = [*published_stories, *skipped_stories]
     articles_by_fp: dict[str, list[dict]] = {}
     for a in articles:
         articles_by_fp.setdefault(a.get("story_fingerprint") or "", []).append(a)
@@ -472,7 +474,8 @@ a:hover {{ text-decoration: underline; }}
   </div>
 
   <div class='kpis'>
-    <div class='kpi'><div class='kpi-val'>{len(stories)}</div><div class='kpi-label'>Stories</div></div>
+    <div class='kpi'><div class='kpi-val'>{len(published_stories)}</div><div class='kpi-label'>Published</div></div>
+    <div class='kpi'><div class='kpi-val'>{len(skipped_stories)}</div><div class='kpi-label'>Skipped</div></div>
     <div class='kpi written'><div class='kpi-val'>{written}</div><div class='kpi-label'>Written</div></div>
     <div class='kpi updated'><div class='kpi-val'>{updated}</div><div class='kpi-label'>Updated</div></div>
     <div class='kpi prevented'><div class='kpi-val'>{prevented}</div><div class='kpi-label'>Duplicates prevented</div></div>
