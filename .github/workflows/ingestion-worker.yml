@@ -1,0 +1,64 @@
+name: ingestion-worker
+
+# Populates public.raw_articles / article_entities / article_topics by
+# chaining the three Google Cloud Functions:
+#   news_extraction → url_content_extraction → article_knowledge_extraction
+#
+# The editorial cycle reads from these tables, so this workflow must stay
+# ahead of it. Cadence: every 30 minutes. `since` per run is derived from
+# public.ingestion_watermarks (per-source, 15-min rewind); no lookback-hour
+# env knob.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: "Cap per run (news_extraction)"
+        required: false
+        default: "200"
+
+concurrency:
+  group: ingestion-worker
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Run ingestion
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          NEWS_EXTRACTION_SUBMIT_URL: ${{ secrets.NEWS_EXTRACTION_SUBMIT_URL }}
+          NEWS_EXTRACTION_POLL_URL: ${{ secrets.NEWS_EXTRACTION_POLL_URL }}
+          URL_CONTENT_EXTRACTION_SUBMIT_URL: ${{ secrets.URL_CONTENT_EXTRACTION_SUBMIT_URL }}
+          URL_CONTENT_EXTRACTION_POLL_URL: ${{ secrets.URL_CONTENT_EXTRACTION_POLL_URL }}
+          KNOWLEDGE_EXTRACTION_SUBMIT_URL: ${{ secrets.KNOWLEDGE_EXTRACTION_SUBMIT_URL }}
+          KNOWLEDGE_EXTRACTION_POLL_URL: ${{ secrets.KNOWLEDGE_EXTRACTION_POLL_URL }}
+          EXTRACTION_TIMEOUT_SECONDS: "600"
+          INGESTION_MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '200' }}
+        run: |
+          # Only export model-override env vars when the repo variable is set
+          # and non-empty — otherwise pydantic-settings would coerce "" into
+          # an empty model name. The knowledge CF uses
+          # OPENAI_MODEL_ARTICLE_DATA_AGENT for its LLM call.
+          set -euo pipefail
+          if [ -n "${{ vars.OPENAI_MODEL_ARTICLE_DATA_AGENT }}" ]; then
+            export OPENAI_MODEL_ARTICLE_DATA_AGENT="${{ vars.OPENAI_MODEL_ARTICLE_DATA_AGENT }}"
+          fi
+          ingestion-worker

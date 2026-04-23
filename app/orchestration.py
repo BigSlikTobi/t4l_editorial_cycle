@@ -5,12 +5,12 @@ from datetime import UTC, datetime
 from uuid import uuid4
 
 from app.adapters import (
-    ArticleLookupAdapter,
+    ArticleLookupFromDb,
     ArticleWriter,
     EditorialStateStore,
     ExternalServiceError,
     ImageUploader,
-    RawFeedReader,
+    RawArticleDbReader,
 )
 from app.config import Settings, get_settings
 from app.editorial.context import CycleRunContext
@@ -140,14 +140,14 @@ class CycleOrchestrator:
 
 
 def build_default_orchestrator(settings: Settings) -> CycleOrchestrator:
-    news_feed = RawFeedReader(
-        base_url=str(settings.supabase_news_feed_url),
-        auth_token=settings.resolved_function_auth_token(),
+    news_feed = RawArticleDbReader(
+        base_url=str(settings.supabase_url),
+        service_role_key=settings.supabase_service_role_key.get_secret_value(),
         timeout_seconds=settings.news_timeout_seconds,
     )
-    article_lookup = ArticleLookupAdapter(
-        base_url=str(settings.supabase_article_lookup_url),
-        auth_token=settings.resolved_function_auth_token(),
+    article_lookup = ArticleLookupFromDb(
+        base_url=str(settings.supabase_url),
+        service_role_key=settings.supabase_service_role_key.get_secret_value(),
         timeout_seconds=settings.news_timeout_seconds,
     )
     state_store = EditorialStateStore(

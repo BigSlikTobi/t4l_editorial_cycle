@@ -1,0 +1,20 @@
+-- Reference data (players, teams, games, player_weekly_stats, …) is managed
+-- by the `data_loading` cloud function from the tackle_4_loss_intelligence
+-- repo. Its CLI scripts (scripts/players_cli.py, scripts/games_cli.py, …)
+-- create and populate these tables in public schema using nflreadpy as the
+-- source.
+--
+-- We do NOT recreate those DDLs here — the loader owns them and they must
+-- match its transformer output. Run the loader once against this project
+-- before the first editorial cycle:
+--
+--   SUPABASE_URL=... SUPABASE_KEY=... python scripts/players_cli.py
+--   SUPABASE_URL=... SUPABASE_KEY=... python scripts/games_cli.py --season 2026
+--
+-- The editorial cycle's image selector reads `public.players.headshot` and
+-- `public.players.display_name` (see app/writer/image_selector.py tier 2).
+-- Downstream consumers may also read `public.teams` and `public.games`.
+--
+-- This file exists as a placeholder so the migration history reflects the
+-- dependency.
+SELECT 1;

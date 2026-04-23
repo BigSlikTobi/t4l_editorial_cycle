@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-from pydantic import AnyHttpUrl, SecretStr, model_validator
+from pydantic import AnyHttpUrl, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -16,9 +16,21 @@ class Settings(BaseSettings):
     openai_api_key: SecretStr
     supabase_url: AnyHttpUrl
     supabase_service_role_key: SecretStr
-    supabase_news_feed_url: AnyHttpUrl
-    supabase_article_lookup_url: AnyHttpUrl
-    supabase_function_auth_token: SecretStr | None = None
+
+    # Extraction cloud functions (Google Cloud Functions from
+    # tackle_4_loss_intelligence). Each service deploys submit + poll as
+    # separate HTTP functions, so we configure both URLs per service.
+    # Required to run the ingestion worker.
+    news_extraction_submit_url: AnyHttpUrl | None = None
+    news_extraction_poll_url: AnyHttpUrl | None = None
+    url_content_extraction_submit_url: AnyHttpUrl | None = None
+    url_content_extraction_poll_url: AnyHttpUrl | None = None
+    knowledge_extraction_submit_url: AnyHttpUrl | None = None
+    knowledge_extraction_poll_url: AnyHttpUrl | None = None
+    extraction_jobs_table: str = "extraction_jobs"
+    extraction_poll_interval_seconds: float = 2.0
+    extraction_timeout_seconds: float = 300.0
+    ingestion_max_articles_per_run: int = 200
 
     top_n: int = 5
     lookback_hours: int = 2
@@ -41,18 +53,6 @@ class Settings(BaseSettings):
     gemini_image_model: str = "gemini-3.1-flash-image-preview"
     openai_model_vision_validator: str = "gpt-5.4-mini"
     image_selection_timeout_seconds: float = 30.0
-
-    @model_validator(mode="after")
-    def validate_supabase_urls(self) -> "Settings":
-        if str(self.supabase_article_lookup_url) == str(self.supabase_news_feed_url):
-            raise ValueError("SUPABASE_ARTICLE_LOOKUP_URL must differ from SUPABASE_NEWS_FEED_URL")
-        return self
-
-    def resolved_function_auth_token(self) -> str:
-        """Return the edge-function auth token, falling back to the service role key."""
-        if self.supabase_function_auth_token is not None:
-            return self.supabase_function_auth_token.get_secret_value()
-        return self.supabase_service_role_key.get_secret_value()
 
     def agent_models(self) -> dict[str, str]:
         return {
