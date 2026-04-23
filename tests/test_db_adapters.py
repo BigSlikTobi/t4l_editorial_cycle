@@ -89,10 +89,11 @@ class TestRawArticleDbReader:
         assert a2.entities == []
         assert a2.facts_count == 0
 
-        # First call filters on status + cutoff
+        # First call filters on status + cutoff keyed on completion time.
         articles_params = calls[0][1]
         assert articles_params["status"] == "eq.knowledge_ok"
-        assert articles_params["fetched_at"].startswith("gte.")
+        assert articles_params["knowledge_extracted_at"].startswith("gte.")
+        assert articles_params["order"].startswith("knowledge_extracted_at.")
         # Second call scopes to collected article ids
         ent_params = calls[1][1]
         assert "a1" in ent_params["article_id"]

@@ -99,6 +99,11 @@ class RawArticleDbReader:
         # One round trip for articles + one for their entities. The number of
         # knowledge_ok rows within a typical 2–6 hour window is small (tens),
         # so we don't bother with a JOIN or RPC.
+        # Filter on knowledge_extracted_at, not fetched_at: a row's fetched_at
+        # is set at discovery, but editorial can only consume it once it
+        # reaches knowledge_ok. If content/knowledge extraction is slow or
+        # retries, the row's fetched_at can age past the editorial lookback
+        # window before it's ever eligible — silently dropping the story.
         articles_resp = await self._client.get(
             "/rest/v1/raw_articles",
             params={
@@ -106,8 +111,8 @@ class RawArticleDbReader:
                     "id,url,title,source_name,category,fetched_at,publication_date"
                 ),
                 "status": "eq.knowledge_ok",
-                "fetched_at": f"gte.{cutoff}",
-                "order": "fetched_at.desc",
+                "knowledge_extracted_at": f"gte.{cutoff}",
+                "order": "knowledge_extracted_at.desc",
             },
         )
         _check_transient(articles_resp)

@@ -75,13 +75,18 @@ class RawArticleStore:
     async def list_pending(
         self, *, status: str, limit: int = 100
     ) -> list[PendingArticle]:
-        """Return rows at a given stage waiting for the next transition."""
+        """Return rows at a given stage waiting for the next transition.
+
+        FIFO by fetched_at — each run processes a bounded batch, so
+        descending order would starve older pending rows if the ingestion
+        rate ever exceeds the batch size. Always drain the oldest first.
+        """
         response = await self._client.get(
             "/rest/v1/raw_articles",
             params={
                 "select": "id,url,title,content",
                 "status": f"eq.{status}",
-                "order": "fetched_at.desc",
+                "order": "fetched_at.asc",
                 "limit": str(limit),
             },
         )
