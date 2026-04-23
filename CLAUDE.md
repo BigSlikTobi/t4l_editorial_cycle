@@ -15,6 +15,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ./venv/bin/pytest tests/test_helpers.py::TestGroupByEntity
 ./venv/bin/pytest tests/test_helpers.py::TestGroupByEntity::test_player_entity_clusters_across_teams
 
+# Run the ingestion worker (populates raw_articles / entities / topics)
+./venv/bin/ingestion-worker   # prints JSON summary to stdout
+
 # Run one editorial cycle (writes articles to Supabase)
 ./venv/bin/editorial-cycle run --output-json var/output.json
 
@@ -27,13 +30,25 @@ nohup ./run_12h_test.sh &
 
 ## Architecture
 
-Hourly editorial cycle that fetches NFL news, clusters by story, ranks by news value, and writes top-N articles to Supabase. Two modules with a clean phase boundary:
+Two independent processes run on separate crons and share a Supabase DB:
 
+**Ingestion worker** (`*/30 * * * *`) chains three Google Cloud Functions to fill `public.raw_articles`:
 ```
-orchestration.py  (4 lines of logic — glues phases together)
+ingestion/worker.py  →  IngestionSummary
+  │
+  ├── NewsExtractionClient     →  insert raw_articles (status: discovered)
+  ├── UrlContentClient         →  fill content        (status: content_ok)
+  └── KnowledgeExtractionClient → fill entities/topics (status: knowledge_ok)
+
+public.ingestion_watermarks tracks per-source `last_fetched_at` (15-min rewind on `since`)
+```
+
+**Editorial cycle** (`0 */2 * * *`) reads from those tables and publishes articles:
+```
+orchestration.py  (glues phases together)
   │
   ├── editorial/workflow.py  →  CyclePublishPlan
-  │     Feed fetch → URL dedup → entity clustering → Orchestrator Agent
+  │     Feed fetch (from raw_articles) → URL dedup → entity clustering → Orchestrator Agent
   │
   └── writer/workflow.py     →  list[PublishableArticle]
         Parallel article generation from plan, then Supabase write + state persist
@@ -76,6 +91,20 @@ Article Writer Agent  (separate phase, no tools, output: PublishableArticle)
 
 Nested calls use `_run_nested_agent()` in `editorial/tools.py` which passes `tool_context.context` and `tool_context.run_config` through to `Runner.run()` for trace continuity.
 
+Note: the `lookup_article_content` tool now queries `public.raw_articles` + `public.article_entities` directly via PostgREST instead of calling a Supabase edge function.
+
+### Ingestion Clients (`app/clients/`)
+
+Each of the three cloud functions uses a submit→poll async pattern implemented by `AsyncCloudFunctionClient` in `base.py`:
+1. POST to `submit_url` with a job payload → returns `job_id`
+2. Poll `poll_url?job_id=...` at `extraction_poll_interval_seconds` (default 2s) until `status` is `completed` or `failed`, or `extraction_timeout_seconds` (default 300s) elapses
+
+`SupabaseJobsConfig` carries the base URL + service role key and is constructed from `Settings` in the worker. `JobFailedError` and `JobTimeoutError` are the two terminal error types.
+
+The three concrete clients (`NewsExtractionClient`, `UrlContentClient`, `KnowledgeExtractionClient`) each define their own payload and result dataclasses (`NewsItem`, `ContentResult`, `KnowledgeResult`).
+
+The worker (`ingestion/worker.py`) drives the pipeline stage-by-stage and persists results to `public.raw_articles` via `RawArticleStore`. It is fully idempotent: re-runs pick up rows at their current status. `public.ingestion_watermarks` records `last_fetched_at` per source so the `since` parameter advances correctly across runs (with a 15-minute rewind for safety).
+
 ### Entity Clustering (`editorial/helpers.py`)
 
 Articles are assigned to their **most specific** entity with priority: `player > game > team`. Two-pass grouping:
@@ -93,24 +122,34 @@ This prevents the same story (e.g., a player trade) from appearing as both a clu
 
 ## Supabase
 
-Two schemas, two auth patterns:
+**Active project: `aiknjzinyxzhoseyxqev`** (clean v2 project; legacy project retired)
 
-| Table | Schema | Auth | Adapter |
-|-------|--------|------|---------|
-| `editorial_state` | `public` | Service role key (PostgREST) | `EditorialStateStore` |
-| `team_article` | `content` | Service role key + `Content-Profile: content` header | `ArticleWriter` |
-| Edge functions (feed, lookup) | n/a | Anon key (`SUPABASE_FUNCTION_AUTH_TOKEN`) | `RawFeedReader`, `ArticleLookupAdapter` |
+Single schema (`public`), single auth pattern:
 
-`SUPABASE_FUNCTION_AUTH_TOKEN` is optional — falls back to `SUPABASE_SERVICE_ROLE_KEY` via `Settings.resolved_function_auth_token()`. But edge functions typically need the anon key (JWT with `role=anon`), not the service role key.
+| Table | Auth | Adapter |
+|-------|------|---------|
+| `raw_articles`, `article_entities`, `article_topics` | Service role key (PostgREST) | `RawArticleStore` (ingestion), `RawFeedReader` / `ArticleLookupAdapter` (editorial) |
+| `ingestion_watermarks` | Service role key (PostgREST) | `RawArticleStore` |
+| `editorial_state` | Service role key (PostgREST) | `EditorialStateStore` |
+| `team_article` | Service role key (PostgREST) | `ArticleWriter` |
+| `curated_images` | Service role key (PostgREST) | `CuratedImageStore` |
 
-All migrations applied manually via SQL Editor (not `supabase db push`):
-- `001_editorial_state.sql` — applied
-- `002_add_source_urls.sql` — applied
-- `003_add_author.sql` — applied
-- `004_add_mentioned_players.sql` — applied
-- `005_curated_images.sql` — applied (`content.curated_images` table + storage GRANTs)
-- `006_add_sources.sql` — applied (`sources jsonb` on `content.team_article`)
-- `007_add_story_fingerprint.sql` — **pending** (`story_fingerprint text` on `content.team_article`)
+Edge functions are no longer used. `SUPABASE_FUNCTION_AUTH_TOKEN` is removed from CI.
+
+All migrations applied manually via SQL Editor (not `supabase db push`). v2 migrations in `supabase/migrations/v2/`:
+- `001_extraction_jobs.sql` — applied
+- `002_reference_data.sql` — applied (placeholder; reference data loaded separately)
+- `003_raw_articles.sql` — applied
+- `004_article_entities.sql` — applied
+- `005_article_topics.sql` — applied
+- `006_editorial_state.sql` — applied
+- `007_team_article.sql` — applied
+- `008_curated_images.sql` — applied (214 images migrated)
+- `009_article_images.sql` — applied
+- `010_ingestion_watermarks.sql` — applied
+- `011_raw_articles_knowledge_extracted_at_idx.sql` — applied
+
+Reference data (`public.players`, `public.teams`, `public.games`) must be loaded once via `tackle_4_loss_intelligence/src/functions/data_loading` scripts before image tier 2 (player headshots) will function.
 
 ## Prompts
 
@@ -126,9 +165,20 @@ Tests must use `Settings(_env_file=None)` and explicitly `monkeypatch.delenv` mo
 
 ## CI / GitHub Actions
 
-`.github/workflows/editorial-cycle.yml` runs the full cycle on a `0 */2 * * *` schedule (every 2 hours) and supports `workflow_dispatch` with `top_n` / `lookback_hours` overrides. Concurrency group `editorial-cycle` with `cancel-in-progress: false` prevents overlapping runs. Timeout: 30 minutes. `var/output.json` is uploaded as an artifact (14d retention).
+Two workflows:
 
-Required secrets: `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_NEWS_FEED_URL`, `SUPABASE_ARTICLE_LOOKUP_URL`, `SUPABASE_FUNCTION_AUTH_TOKEN`. Optional: `IMAGE_SELECTION_URL`, `GOOGLE_CUSTOM_SEARCH_KEY`, `GOOGLE_CUSTOM_SEARCH_ENGINE_ID`. Model overrides via repo vars (`OPENAI_MODEL_*`).
+**`editorial-cycle.yml`** — runs the full cycle on `0 */2 * * *` (every 2 hours), `workflow_dispatch` with `top_n` / `lookback_hours`. Concurrency group `editorial-cycle`, `cancel-in-progress: false`. Timeout: 30 minutes. `var/output.json` artifact (14d).
+
+**`ingestion-worker.yml`** — populates `raw_articles` on `*/30 * * * *` (every 30 min), `workflow_dispatch` with `max_articles`. Concurrency group `ingestion-worker`, `cancel-in-progress: false`. Timeout: 20 minutes.
+
+Required secrets (both workflows share the first three):
+- `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`
+- Ingestion only: `URL_CONTENT_EXTRACTION_SUBMIT_URL`, `URL_CONTENT_EXTRACTION_POLL_URL`, `KNOWLEDGE_EXTRACTION_SUBMIT_URL`, `KNOWLEDGE_EXTRACTION_POLL_URL`
+- Ingestion only (**not yet set**): `NEWS_EXTRACTION_SUBMIT_URL`, `NEWS_EXTRACTION_POLL_URL`
+
+Optional: `IMAGE_SELECTION_URL`, `GOOGLE_CUSTOM_SEARCH_KEY`, `GOOGLE_CUSTOM_SEARCH_ENGINE_ID`. Model overrides via repo vars (`OPENAI_MODEL_*`).
+
+Removed (no longer used): `SUPABASE_NEWS_FEED_URL`, `SUPABASE_ARTICLE_LOOKUP_URL`, `SUPABASE_FUNCTION_AUTH_TOKEN`.
 
 ## Cycle Report Script (`scripts/build_cycle_report.py`)
 
