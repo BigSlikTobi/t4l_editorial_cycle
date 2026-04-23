@@ -597,7 +597,6 @@ class ImageSelector:
             resp = await self._http.get(
                 f"{self._supabase_base}/rest/v1/curated_images",
                 params=params,
-                headers={"Accept-Profile": "content"},
             )
         except Exception as exc:
             logger.warning("curated lookup error (%s/%s): %s", team_code, scene, exc)

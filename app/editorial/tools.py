@@ -8,7 +8,7 @@ from agents import Agent, Runner, function_tool
 from agents.tool import FunctionTool
 from agents.tool_context import ToolContext
 
-from app.adapters import ArticleLookupAdapter
+from app.adapters import ArticleLookupFromDb
 from app.editorial.helpers import coerce_output, recompute_cluster_fingerprint
 from app.schemas import (
     ArticleContentLookupToolResponse,
@@ -42,7 +42,7 @@ async def _run_nested_agent(
     return output.model_dump(mode="json")
 
 
-def build_article_lookup_tool(adapter: ArticleLookupAdapter) -> FunctionTool:
+def build_article_lookup_tool(adapter: ArticleLookupFromDb) -> FunctionTool:
     @function_tool(
         name_override="lookup_article_content",
         description_override=(

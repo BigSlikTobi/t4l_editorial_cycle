@@ -44,9 +44,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SUPABASE_NEWS_FEED_URL: ${{ secrets.SUPABASE_NEWS_FEED_URL }}
-          SUPABASE_ARTICLE_LOOKUP_URL: ${{ secrets.SUPABASE_ARTICLE_LOOKUP_URL }}
-          SUPABASE_FUNCTION_AUTH_TOKEN: ${{ secrets.SUPABASE_FUNCTION_AUTH_TOKEN }}
 
           # Image cascade (optional — curated pool + headshot + logo work without these)
           IMAGE_SELECTION_URL: ${{ secrets.IMAGE_SELECTION_URL }}

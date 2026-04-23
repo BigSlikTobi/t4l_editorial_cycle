@@ -24,6 +24,7 @@ dev = [
 
 [project.scripts]
 editorial-cycle = "app.cli:app"
+ingestion-worker = "app.ingestion.cli:main"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

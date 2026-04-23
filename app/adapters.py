@@ -14,9 +14,11 @@ from tenacity import (
 
 from app.schemas import (
     ArticleContentLookupToolResponse,
+    EntityMatch,
     PublishableArticle,
     PublishedStoryRecord,
     RawArticle,
+    StoredArticleRecord,
 )
 
 logger = logging.getLogger(__name__)
@@ -61,17 +63,25 @@ def _check_transient(response: httpx.Response) -> None:
         )
 
 
-# --- Feed reader (edge function) ---
+# --- DB-backed feed reader ---
 
 
-class RawFeedReader:
-    def __init__(self, base_url: str, auth_token: str, timeout_seconds: float = 15.0) -> None:
+class RawArticleDbReader:
+    """Reads articles the ingestion worker has fully processed
+    (status='knowledge_ok') out of public.raw_articles + article_entities,
+    and hydrates them into the existing RawArticle / EntityMatch shape so
+    the editorial workflow downstream is unchanged.
+    """
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
         self._client = httpx.AsyncClient(
             base_url=base_url,
             timeout=timeout_seconds,
             headers={
-                "Authorization": f"Bearer {auth_token}",
-                "apikey": auth_token,
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
             },
         )
 
@@ -80,33 +90,108 @@ class RawFeedReader:
 
     @_default_retry()
     async def fetch_raw_articles(self, lookback_hours: int) -> list[RawArticle]:
-        logger.info("Fetching news feed", extra={"lookback_hours": lookback_hours})
-        response = await self._client.post("/", json={"lookback_hours": lookback_hours})
+        cutoff = (datetime.now(UTC) - timedelta(hours=lookback_hours)).isoformat()
+        logger.info(
+            "Fetching raw articles from DB",
+            extra={"lookback_hours": lookback_hours, "cutoff": cutoff},
+        )
 
-        _check_transient(response)
-        if response.status_code >= 400:
+        # One round trip for articles + one for their entities. The number of
+        # knowledge_ok rows within a typical 2–6 hour window is small (tens),
+        # so we don't bother with a JOIN or RPC.
+        articles_resp = await self._client.get(
+            "/rest/v1/raw_articles",
+            params={
+                "select": (
+                    "id,url,title,source_name,category,fetched_at,publication_date"
+                ),
+                "status": "eq.knowledge_ok",
+                "fetched_at": f"gte.{cutoff}",
+                "order": "fetched_at.desc",
+            },
+        )
+        _check_transient(articles_resp)
+        if articles_resp.status_code >= 400:
             raise ExternalServiceError(
-                f"News feed request failed with status {response.status_code}: {response.text}"
+                f"raw_articles query failed ({articles_resp.status_code}): "
+                f"{articles_resp.text[:200]}"
             )
 
-        payload = response.json()
-        stories = payload.get("stories", [])
-        result = [RawArticle.model_validate(story) for story in stories]
+        articles = articles_resp.json()
+        if not articles:
+            logger.info("Fetched 0 raw articles")
+            return []
+
+        article_ids = [row["id"] for row in articles]
+        entities_by_article = await self._fetch_entities(article_ids)
+
+        result: list[RawArticle] = []
+        for row in articles:
+            entities = entities_by_article.get(row["id"], [])
+            result.append(
+                RawArticle(
+                    id=row["id"],
+                    url=row["url"],
+                    title=row.get("title") or "",
+                    source_name=row.get("source_name") or "",
+                    category=row.get("category"),
+                    facts_count=len(entities),
+                    entities=entities,
+                )
+            )
         logger.info("Fetched %d raw articles", len(result))
         return result
 
+    async def _fetch_entities(
+        self, article_ids: list[str]
+    ) -> dict[str, list[EntityMatch]]:
+        # PostgREST `in.()` is URL-encoded by httpx; quote strings to handle
+        # commas in ids (uuids are safe but be defensive).
+        quoted = ",".join(f'"{aid}"' for aid in article_ids)
+        response = await self._client.get(
+            "/rest/v1/article_entities",
+            params={
+                "select": "article_id,entity_type,entity_id,matched_name",
+                "article_id": f"in.({quoted})",
+            },
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"article_entities query failed ({response.status_code}): "
+                f"{response.text[:200]}"
+            )
 
-# --- Article content lookup (edge function) ---
+        grouped: dict[str, list[EntityMatch]] = {}
+        for row in response.json():
+            grouped.setdefault(row["article_id"], []).append(
+                EntityMatch(
+                    entity_type=row.get("entity_type") or "",
+                    entity_id=str(row.get("entity_id") or ""),
+                    matched_name=row.get("matched_name") or "",
+                )
+            )
+        return grouped
 
 
-class ArticleLookupAdapter:
-    def __init__(self, base_url: str, auth_token: str, timeout_seconds: float = 15.0) -> None:
+# --- DB-backed article lookup ---
+
+
+class ArticleLookupFromDb:
+    """Serves article content out of public.raw_articles.content instead of
+    a Supabase edge function. Matches the `lookup_article(url)` contract so
+    the article-data agent's tool wiring is unchanged.
+    """
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
         self._client = httpx.AsyncClient(
             base_url=base_url,
             timeout=timeout_seconds,
             headers={
-                "Authorization": f"Bearer {auth_token}",
-                "apikey": auth_token,
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
             },
         )
 
@@ -115,18 +200,43 @@ class ArticleLookupAdapter:
 
     @_default_retry()
     async def lookup_article(self, url: str) -> ArticleContentLookupToolResponse:
-        logger.debug("Looking up article", extra={"url": url})
-        response = await self._client.post("/", json={"url": url})
-
-        if response.status_code == 404:
-            return ArticleContentLookupToolResponse(requested_url=url, found=False, article=None)
+        logger.debug("Looking up article in DB", extra={"url": url})
+        response = await self._client.get(
+            "/rest/v1/raw_articles",
+            params={
+                "select": "url,title,content",
+                "url": f"eq.{url}",
+                "limit": "1",
+            },
+        )
         _check_transient(response)
         if response.status_code >= 400:
             raise ExternalServiceError(
-                f"Article lookup failed with status {response.status_code}: {response.text}"
+                f"raw_articles lookup failed ({response.status_code}): "
+                f"{response.text[:200]}"
             )
-
-        return ArticleContentLookupToolResponse.model_validate(response.json())
+        rows = response.json()
+        if not rows:
+            return ArticleContentLookupToolResponse(
+                requested_url=url, found=False, article=None
+            )
+        row = rows[0]
+        content = row.get("content") or ""
+        if not content:
+            return ArticleContentLookupToolResponse(
+                requested_url=url, found=False, article=None
+            )
+        return ArticleContentLookupToolResponse(
+            requested_url=url,
+            found=True,
+            article=StoredArticleRecord(
+                url=row.get("url") or url,
+                header=row.get("title"),
+                content=content,
+                description=None,
+                quotes=[],
+            ),
+        )
 
 
 # --- Editorial state (PostgREST direct table access) ---
@@ -215,8 +325,6 @@ class ArticleWriter:
                 "Authorization": f"Bearer {service_role_key}",
                 "apikey": service_role_key,
                 "Content-Type": "application/json",
-                "Content-Profile": "content",
-                "Accept-Profile": "content",
                 "Prefer": "return=representation",
             },
         )
@@ -428,7 +536,7 @@ class ImageUploader:
     ) -> int | None:
         """Insert one row into content.article_images. Returns the new id on success."""
         response = await self._client.post(
-            "/rest/v1/article_images",
+            "/rest/v1/article_images?on_conflict=original_url",
             json={
                 "image_url": image_url,
                 "original_url": original_url,
@@ -437,8 +545,6 @@ class ImageUploader:
             },
             headers={
                 "Content-Type": "application/json",
-                "Content-Profile": "content",
-                "Accept-Profile": "content",
                 # Upsert on unique original_url so reruns don't 409.
                 "Prefer": "return=representation,resolution=merge-duplicates",
             },

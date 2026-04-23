@@ -6,7 +6,7 @@ import os
 
 from agents import Runner
 
-from app.adapters import ArticleLookupAdapter, EditorialStateStore, RawFeedReader
+from app.adapters import ArticleLookupFromDb, EditorialStateStore, RawArticleDbReader
 from app.config import Settings
 from app.editorial.agents import (
     build_article_data_agent,
@@ -39,8 +39,8 @@ class EditorialWorkflow:
         self,
         *,
         settings: Settings,
-        news_feed: RawFeedReader,
-        article_lookup: ArticleLookupAdapter,
+        news_feed: RawArticleDbReader,
+        article_lookup: ArticleLookupFromDb,
         state_store: EditorialStateStore,
     ) -> None:
         self._news_feed = news_feed
