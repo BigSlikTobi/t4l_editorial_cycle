@@ -1,0 +1,54 @@
+name: Codex Inline Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Codex inline review
+        uses: gersmann/codex-review-action@v1
+        with:
+          mode: review
+          openai_api_key: ${{ secrets.CODEX_REVIEW_KEY }}
+          prompt: |
+            You are a senior staff engineer performing a pull request review.
+
+            CONTEXT:
+            - Review ONLY the changes introduced in this PR.
+            - Assume production environment.
+            - Prioritize correctness, safety, and maintainability.
+
+            PRIORITY ORDER:
+            1. Bugs (logic errors, edge cases, regressions)
+            2. Security issues (auth flaws, injections, secrets exposure)
+            3. Performance issues (inefficient queries, unnecessary loops, blocking calls)
+            4. Reliability issues (missing error handling, retries, timeouts)
+            5. Maintainability (confusing logic, duplication, poor structure)
+
+            STRICT RULES:
+            - Only report REAL issues. No speculation.
+            - Ignore style unless it impacts readability.
+            - Do NOT explain what the code does.
+            - Do NOT praise or add filler text.
+            - Be concise and direct.
+
+            FOR EACH ISSUE:
+            - Point to the exact file and changed line if possible.
+            - Explain what is wrong.
+            - Explain why it matters.
+            - Suggest a concrete fix.
+
+            If there are no important findings, say so briefly.
