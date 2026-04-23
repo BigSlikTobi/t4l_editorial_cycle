@@ -2,8 +2,26 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-from pydantic import AnyHttpUrl, SecretStr
+from pydantic import AnyHttpUrl, SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+# Env vars are always strings; referencing a missing GitHub secret resolves
+# to "" rather than being absent. Treat empty / whitespace-only values as
+# "not set" so optional fields stay None instead of failing URL parsing.
+_EMPTY_TO_NONE_URL_FIELDS = (
+    "news_extraction_submit_url",
+    "news_extraction_poll_url",
+    "url_content_extraction_submit_url",
+    "url_content_extraction_poll_url",
+    "knowledge_extraction_submit_url",
+    "knowledge_extraction_poll_url",
+    "image_selection_url",
+)
+_EMPTY_TO_NONE_SECRET_FIELDS = (
+    "google_custom_search_key",
+    "gemini_api_key",
+)
 
 
 class Settings(BaseSettings):
@@ -53,6 +71,20 @@ class Settings(BaseSettings):
     gemini_image_model: str = "gemini-3.1-flash-image-preview"
     openai_model_vision_validator: str = "gpt-5.4-mini"
     image_selection_timeout_seconds: float = 30.0
+
+    @field_validator(*_EMPTY_TO_NONE_URL_FIELDS, mode="before")
+    @classmethod
+    def _blank_url_to_none(cls, value):
+        if isinstance(value, str) and not value.strip():
+            return None
+        return value
+
+    @field_validator(*_EMPTY_TO_NONE_SECRET_FIELDS, mode="before")
+    @classmethod
+    def _blank_secret_to_none(cls, value):
+        if isinstance(value, str) and not value.strip():
+            return None
+        return value
 
     def agent_models(self) -> dict[str, str]:
         return {
