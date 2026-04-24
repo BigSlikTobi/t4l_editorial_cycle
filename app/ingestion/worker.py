@@ -57,9 +57,9 @@ async def run_ingestion_cycle(settings: Settings) -> IngestionSummary:
 
     supabase_jobs = SupabaseJobsConfig(
         url=str(settings.supabase_url).rstrip("/"),
-        key=settings.supabase_service_role_key.get_secret_value(),
         jobs_table=settings.extraction_jobs_table,
     )
+    auth_token = settings.extraction_function_auth_token.get_secret_value()
 
     store = RawArticleStore(
         base_url=str(settings.supabase_url),
@@ -69,6 +69,7 @@ async def run_ingestion_cycle(settings: Settings) -> IngestionSummary:
         submit_url=str(settings.news_extraction_submit_url),
         poll_url=str(settings.news_extraction_poll_url),
         supabase=supabase_jobs,
+        auth_token=auth_token,
         poll_interval_seconds=settings.extraction_poll_interval_seconds,
         timeout_seconds=settings.extraction_timeout_seconds,
     )
@@ -76,6 +77,7 @@ async def run_ingestion_cycle(settings: Settings) -> IngestionSummary:
         submit_url=str(settings.url_content_extraction_submit_url),
         poll_url=str(settings.url_content_extraction_poll_url),
         supabase=supabase_jobs,
+        auth_token=auth_token,
         poll_interval_seconds=settings.extraction_poll_interval_seconds,
         timeout_seconds=settings.extraction_timeout_seconds,
     )
@@ -83,7 +85,7 @@ async def run_ingestion_cycle(settings: Settings) -> IngestionSummary:
         submit_url=str(settings.knowledge_extraction_submit_url),
         poll_url=str(settings.knowledge_extraction_poll_url),
         supabase=supabase_jobs,
-        openai_api_key=settings.openai_api_key.get_secret_value(),
+        auth_token=auth_token,
         openai_model=settings.openai_model_article_data_agent,
         poll_interval_seconds=settings.extraction_poll_interval_seconds,
         timeout_seconds=settings.extraction_timeout_seconds,
@@ -261,6 +263,7 @@ def _require_extraction_config(settings: Settings) -> None:
             "URL_CONTENT_EXTRACTION_POLL_URL": settings.url_content_extraction_poll_url,
             "KNOWLEDGE_EXTRACTION_SUBMIT_URL": settings.knowledge_extraction_submit_url,
             "KNOWLEDGE_EXTRACTION_POLL_URL": settings.knowledge_extraction_poll_url,
+            "EXTRACTION_FUNCTION_AUTH_TOKEN": settings.extraction_function_auth_token,
         }.items()
         if value is None
     ]

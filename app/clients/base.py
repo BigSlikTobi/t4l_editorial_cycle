@@ -3,13 +3,17 @@
 All three services (news_extraction_service, url_content_extraction_service,
 article_knowledge_extraction) share the same job lifecycle:
 
-  POST {submit_url}  body: {...payload, supabase: {url, key, jobs_table}}
+  POST {submit_url}  body: {...payload, supabase: {url, jobs_table}}
     → 202 {status: "queued", job_id, expires_at}
 
   POST {poll_url}    body: {job_id, supabase: {...}}
     → 200 {status: "queued"|"running", job_id}
     → 200 {status: "succeeded", job_id, result: {...}}  (atomic consume)
     → 200 {status: "failed",    job_id, error:  {...}}
+
+Cloud functions read their Supabase service credential from their own
+runtime environment — we never ship long-lived secrets in request bodies,
+which are more likely to be logged or retained than env vars.
 
 `AsyncJobClient.run(payload)` submits, polls at the configured interval,
 raises `JobFailedError` / `JobTimeoutError` on terminal failure, and
@@ -42,18 +46,20 @@ class JobTimeoutError(RuntimeError):
 
 @dataclass(frozen=True)
 class SupabaseJobsConfig:
-    """Supabase coordinates the cloud functions use to read/write jobs state.
+    """Non-secret Supabase coordinates for the cloud-function job table.
 
     Every submit and poll body carries this block so the function can talk
-    to our `public.extraction_jobs` table.
+    to our `public.extraction_jobs` table. The service-role key is NOT
+    included here — cloud functions read it from their own runtime env
+    (e.g. `SUPABASE_SERVICE_ROLE_KEY`) to keep long-lived secrets out of
+    request bodies.
     """
 
     url: str
-    key: str
     jobs_table: str = "extraction_jobs"
 
     def as_dict(self) -> dict[str, str]:
-        return {"url": self.url, "key": self.key, "jobs_table": self.jobs_table}
+        return {"url": self.url, "jobs_table": self.jobs_table}
 
 
 class AsyncJobClient:
@@ -65,6 +71,7 @@ class AsyncJobClient:
         submit_url: str,
         poll_url: str,
         supabase: SupabaseJobsConfig,
+        auth_token: str | None = None,
         poll_interval_seconds: float = 2.0,
         timeout_seconds: float = 300.0,
         http_timeout_seconds: float = 30.0,
@@ -72,9 +79,15 @@ class AsyncJobClient:
         self._submit_url = submit_url
         self._poll_url = poll_url
         self._supabase = supabase
+        self._auth_token = auth_token
         self._poll_interval = poll_interval_seconds
         self._timeout = timeout_seconds
         self._client = httpx.AsyncClient(timeout=http_timeout_seconds)
+
+    def _auth_headers(self) -> dict[str, str]:
+        if not self._auth_token:
+            return {}
+        return {"Authorization": f"Bearer {self._auth_token}"}
 
     async def close(self) -> None:
         await self._client.aclose()
@@ -87,7 +100,9 @@ class AsyncJobClient:
 
     async def submit(self, payload: dict[str, Any]) -> str:
         body = {**payload, "supabase": self._supabase.as_dict()}
-        response = await self._client.post(self._submit_url, json=body)
+        response = await self._client.post(
+            self._submit_url, json=body, headers=self._auth_headers()
+        )
         if response.status_code >= 400:
             raise JobFailedError(
                 f"Submit failed ({response.status_code}): {response.text[:300]}"
@@ -101,7 +116,9 @@ class AsyncJobClient:
 
     async def poll_once(self, job_id: str) -> dict[str, Any]:
         body = {"job_id": job_id, "supabase": self._supabase.as_dict()}
-        response = await self._client.post(self._poll_url, json=body)
+        response = await self._client.post(
+            self._poll_url, json=body, headers=self._auth_headers()
+        )
         if response.status_code == 404:
             raise JobFailedError(f"Job {job_id} not found or already consumed")
         if response.status_code >= 400:

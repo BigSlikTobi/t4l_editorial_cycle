@@ -15,7 +15,8 @@ def _client_with_transport(transport: httpx.MockTransport, **kwargs) -> AsyncJob
     c = AsyncJobClient(
         submit_url="https://svc/submit",
         poll_url="https://svc/poll",
-        supabase=SupabaseJobsConfig(url="https://db", key="k"),
+        supabase=SupabaseJobsConfig(url="https://db"),
+        auth_token=kwargs.pop("auth_token", None),
         poll_interval_seconds=kwargs.pop("poll_interval_seconds", 0.0),
         timeout_seconds=kwargs.pop("timeout_seconds", 5.0),
     )
@@ -33,6 +34,7 @@ class TestAsyncJobClient:
                 calls["submit"] += 1
                 assert '"url":"https://db"' in body
                 assert '"jobs_table":"extraction_jobs"' in body
+                assert '"key"' not in body
                 return httpx.Response(202, json={"status": "queued", "job_id": "abc"})
             calls["poll"] += 1
             if calls["poll"] == 1:
@@ -66,9 +68,71 @@ class TestAsyncJobClient:
         body = _json.loads(captured["body"])
         assert body["supabase"] == {
             "url": "https://db",
-            "key": "k",
             "jobs_table": "extraction_jobs",
         }
+        assert "key" not in body["supabase"]
+
+    async def test_poll_body_omits_service_key(self) -> None:
+        """Poll requests must not carry the Supabase service-role key either."""
+        poll_bodies: list[bytes] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            if request.url.path.endswith("/submit"):
+                return httpx.Response(202, json={"job_id": "j1"})
+            poll_bodies.append(request.read())
+            return httpx.Response(
+                200, json={"status": "succeeded", "job_id": "j1", "result": {}}
+            )
+
+        async with _client_with_transport(httpx.MockTransport(handler)) as client:
+            await client.run({"options": {}})
+
+        import json as _json
+
+        assert poll_bodies, "expected at least one poll call"
+        for raw in poll_bodies:
+            body = _json.loads(raw)
+            assert body["supabase"] == {
+                "url": "https://db",
+                "jobs_table": "extraction_jobs",
+            }
+            assert "key" not in body["supabase"]
+
+    async def test_auth_token_sent_as_bearer_on_submit_and_poll(self) -> None:
+        """Shared-secret bearer token must be attached to every submit+poll call."""
+        seen_auth: list[str | None] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            seen_auth.append(request.headers.get("authorization"))
+            if request.url.path.endswith("/submit"):
+                return httpx.Response(202, json={"job_id": "j"})
+            return httpx.Response(
+                200, json={"status": "succeeded", "job_id": "j", "result": {}}
+            )
+
+        async with _client_with_transport(
+            httpx.MockTransport(handler), auth_token="shh-secret"
+        ) as client:
+            await client.run({"options": {}})
+
+        assert seen_auth, "expected at least one request"
+        assert all(h == "Bearer shh-secret" for h in seen_auth)
+
+    async def test_no_auth_header_when_token_unset(self) -> None:
+        seen_auth: list[str | None] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            seen_auth.append(request.headers.get("authorization"))
+            if request.url.path.endswith("/submit"):
+                return httpx.Response(202, json={"job_id": "j"})
+            return httpx.Response(
+                200, json={"status": "succeeded", "job_id": "j", "result": {}}
+            )
+
+        async with _client_with_transport(httpx.MockTransport(handler)) as client:
+            await client.run({"options": {}})
+
+        assert all(h is None for h in seen_auth)
 
     async def test_run_raises_on_failed_status(self) -> None:
         def handler(request: httpx.Request) -> httpx.Response:

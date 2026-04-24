@@ -13,7 +13,7 @@ def _make_client(handler) -> NewsExtractionClient:
     client = NewsExtractionClient(
         submit_url="https://svc/submit",
         poll_url="https://svc/poll",
-        supabase=SupabaseJobsConfig(url="https://db", key="k"),
+        supabase=SupabaseJobsConfig(url="https://db"),
         poll_interval_seconds=0.0,
         timeout_seconds=5.0,
     )

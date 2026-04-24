@@ -47,6 +47,7 @@ class UrlContentClient:
         submit_url: str,
         poll_url: str,
         supabase: SupabaseJobsConfig,
+        auth_token: str | None = None,
         poll_interval_seconds: float = 2.0,
         timeout_seconds: float = 300.0,
     ) -> None:
@@ -54,6 +55,7 @@ class UrlContentClient:
             submit_url=submit_url,
             poll_url=poll_url,
             supabase=supabase,
+            auth_token=auth_token,
             poll_interval_seconds=poll_interval_seconds,
             timeout_seconds=timeout_seconds,
         )

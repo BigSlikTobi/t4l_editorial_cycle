@@ -30,6 +30,10 @@ class Settings(BaseSettings):
     extraction_jobs_table: str = "extraction_jobs"
     extraction_poll_interval_seconds: float = 2.0
     extraction_timeout_seconds: float = 300.0
+    # Shared bearer token that authenticates submit+poll calls against the
+    # extraction cloud functions. The token must match what each function
+    # verifies in its own runtime env — not a Supabase/OpenAI credential.
+    extraction_function_auth_token: SecretStr | None = None
     ingestion_max_articles_per_run: int = 200
 
     top_n: int = 5

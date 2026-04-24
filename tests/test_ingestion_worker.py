@@ -35,6 +35,7 @@ def settings(monkeypatch: pytest.MonkeyPatch) -> Settings:
         "KNOWLEDGE_EXTRACTION_SUBMIT_URL", "https://cf/kn-submit"
     )
     monkeypatch.setenv("KNOWLEDGE_EXTRACTION_POLL_URL", "https://cf/kn-poll")
+    monkeypatch.setenv("EXTRACTION_FUNCTION_AUTH_TOKEN", "test-fn-token")
     for key in (
         "OPENAI_MODEL_ARTICLE_DATA_AGENT",
         "OPENAI_MODEL_STORY_CLUSTER_AGENT",
@@ -379,6 +380,7 @@ class TestRunIngestionCycle:
             "URL_CONTENT_EXTRACTION_POLL_URL",
             "KNOWLEDGE_EXTRACTION_SUBMIT_URL",
             "KNOWLEDGE_EXTRACTION_POLL_URL",
+            "EXTRACTION_FUNCTION_AUTH_TOKEN",
             "OPENAI_MODEL_ARTICLE_DATA_AGENT",
             "OPENAI_MODEL_STORY_CLUSTER_AGENT",
             "OPENAI_MODEL_EDITORIAL_ORCHESTRATOR_AGENT",
