@@ -150,6 +150,54 @@ class TestRawArticleStore:
         assert any("article_topics" in p for p in paths)
         assert methods.count("PATCH") == 1
 
+    async def test_update_knowledge_dedupes_entities_and_topics(self) -> None:
+        captured: dict[str, list] = {}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            if "article_entities" in request.url.path:
+                captured["entities"] = _json.loads(request.read())
+            elif "article_topics" in request.url.path:
+                captured["topics"] = _json.loads(request.read())
+            return httpx.Response(204 if request.method == "PATCH" else 201, json=[])
+
+        store = _store_with_handler(handler)
+        await store.update_knowledge(
+            "article-1",
+            KnowledgeResult(
+                topics=[
+                    Topic(topic="trade", confidence=0.7, rank=2),
+                    Topic(topic="trade", confidence=0.9, rank=1),
+                ],
+                entities=[
+                    ResolvedEntity(
+                        entity_type="player",
+                        entity_id="00-0026158",
+                        mention_text="Josh",
+                        matched_name="Josh Allen",
+                        confidence=0.6,
+                        team_abbr="BUF",
+                        position="QB",
+                    ),
+                    ResolvedEntity(
+                        entity_type="player",
+                        entity_id="00-0026158",
+                        mention_text="Josh Allen",
+                        matched_name="Josh Allen",
+                        confidence=0.95,
+                        team_abbr="BUF",
+                        position="QB",
+                    ),
+                ],
+                unresolved_entities=[],
+            ),
+        )
+        await store.close()
+
+        assert len(captured["entities"]) == 1
+        assert captured["entities"][0]["confidence"] == 0.95
+        assert len(captured["topics"]) == 1
+        assert captured["topics"][0]["confidence"] == 0.9
+
     async def test_update_knowledge_skips_empty_buckets(self) -> None:
         calls: list[tuple[str, str]] = []
 
