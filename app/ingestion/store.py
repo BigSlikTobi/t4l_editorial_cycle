@@ -163,8 +163,11 @@ class RawArticleStore:
     ) -> None:
         """Write entities + topics, flip status to knowledge_ok."""
         if result.entities:
-            entity_rows = [
-                {
+            entity_rows_by_key: dict[tuple[str, str, str], dict] = {}
+            for e in result.entities:
+                if not (e.entity_type and e.entity_id):
+                    continue
+                row = {
                     "article_id": article_id,
                     "entity_type": e.entity_type,
                     "entity_id": e.entity_id,
@@ -174,9 +177,11 @@ class RawArticleStore:
                     "team_abbr": e.team_abbr,
                     "position": e.position,
                 }
-                for e in result.entities
-                if e.entity_type and e.entity_id
-            ]
+                key = (article_id, e.entity_type, e.entity_id)
+                prev = entity_rows_by_key.get(key)
+                if prev is None or (row["confidence"] or 0) > (prev["confidence"] or 0):
+                    entity_rows_by_key[key] = row
+            entity_rows = list(entity_rows_by_key.values())
             if entity_rows:
                 response = await self._client.post(
                     "/rest/v1/article_entities",
@@ -193,16 +198,21 @@ class RawArticleStore:
                     )
 
         if result.topics:
-            topic_rows = [
-                {
+            topic_rows_by_key: dict[tuple[str, str], dict] = {}
+            for t in result.topics:
+                if not t.topic:
+                    continue
+                row = {
                     "article_id": article_id,
                     "topic": t.topic,
                     "confidence": t.confidence,
                     "rank": t.rank,
                 }
-                for t in result.topics
-                if t.topic
-            ]
+                key = (article_id, t.topic)
+                prev = topic_rows_by_key.get(key)
+                if prev is None or (row["confidence"] or 0) > (prev["confidence"] or 0):
+                    topic_rows_by_key[key] = row
+            topic_rows = list(topic_rows_by_key.values())
             if topic_rows:
                 response = await self._client.post(
                     "/rest/v1/article_topics",
