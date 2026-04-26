@@ -108,6 +108,21 @@ Two schemas, two auth patterns:
 
 `SUPABASE_FUNCTION_AUTH_TOKEN` is optional — falls back to `SUPABASE_SERVICE_ROLE_KEY` via `Settings.resolved_function_auth_token()`. But edge functions typically need the anon key (JWT with `role=anon`), not the service role key.
 
+### Frontend Edge Functions (`supabase/functions/`)
+
+Two Deno edge functions expose `content.team_article` to the Flutter frontend. Both require `verify_jwt = true` — callers must pass a valid Supabase anon JWT as `Authorization: Bearer <token>`.
+
+| Function | Method | Purpose |
+|----------|--------|---------|
+| `get-articles` | POST | Cursor-paginated list of articles. Body: `{ language?, limit?, cursor? }`. Returns `{ items, next_cursor }`. Cursor on `(created_at DESC, id DESC)`. List columns only (no body/bullets). |
+| `get-article-detail` | POST | Full article + enriched player data. Body: `{ id }`. Replaces raw `mentioned_players` ID array with `{ player_id, display_name, headshot }` objects via `public.players` join. |
+
+Shared helpers live in `supabase/functions/_shared/`:
+- `cors.ts` — CORS headers, `jsonResponse()`, `preflight()` (handles OPTIONS).
+- `supabase.ts` — `clientFromRequest(req)` factory: reads `SUPABASE_URL` + `SUPABASE_ANON_KEY` from env, forwards caller's `Authorization` header, `persistSession: false`.
+
+> **RLS note:** `content.team_article` currently has no SELECT grant for the `anon` role. Both functions return 200 with empty results until `GRANT SELECT ON content.team_article TO anon;` (or an equivalent RLS policy) is applied in Supabase SQL Editor.
+
 All migrations applied manually via SQL Editor (not `supabase db push`):
 - `001_editorial_state.sql` — applied
 - `002_add_source_urls.sql` — applied
