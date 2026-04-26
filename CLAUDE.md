@@ -128,7 +128,9 @@ Tests must use `Settings(_env_file=None)` and explicitly `monkeypatch.delenv` mo
 
 `.github/workflows/editorial-cycle.yml` runs the full cycle on a `0 */2 * * *` schedule (every 2 hours) and supports `workflow_dispatch` with `top_n` / `lookback_hours` overrides. Concurrency group `editorial-cycle` with `cancel-in-progress: false` prevents overlapping runs. Timeout: 30 minutes. `var/output.json` is uploaded as an artifact (14d retention).
 
-Required secrets: `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_NEWS_FEED_URL`, `SUPABASE_ARTICLE_LOOKUP_URL`, `SUPABASE_FUNCTION_AUTH_TOKEN`. Optional: `IMAGE_SELECTION_URL`, `GOOGLE_CUSTOM_SEARCH_KEY`, `GOOGLE_CUSTOM_SEARCH_ENGINE_ID`. Model overrides via repo vars (`OPENAI_MODEL_*`).
+Required secrets: `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_NEWS_FEED_URL`, `SUPABASE_ARTICLE_LOOKUP_URL`, `SUPABASE_FUNCTION_AUTH_TOKEN`, `EXTRACTION_FUNCTION_AUTH_TOKEN`. Optional: `IMAGE_SELECTION_URL`, `GOOGLE_CUSTOM_SEARCH_KEY`, `GOOGLE_CUSTOM_SEARCH_ENGINE_ID`. Model overrides via repo vars (`OPENAI_MODEL_*`).
+
+`EXTRACTION_FUNCTION_AUTH_TOKEN` authenticates calls to the knowledge-extraction Cloud Run functions (`AsyncJobClient` sends it as `Authorization: Bearer <token>`). The ingestion worker fails fast at startup if this secret is unset. Rotation procedure: `docs/rotating-extraction-function-auth-token.md`.
 
 ## Cycle Report Script (`scripts/build_cycle_report.py`)
 
