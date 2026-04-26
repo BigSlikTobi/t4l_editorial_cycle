@@ -21,6 +21,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Build HTML cycle report (run analysis + full articles, reads var/output.json)
 ./venv/bin/python scripts/build_cycle_report.py
 
+# Build pre-publish overview (all team_articles paired EN/DE, with trace + state, writes var/overview_report.html)
+./venv/bin/python scripts/build_overview_report.py [--limit N]
+
 # Multi-hour integration test (12 cycles, 1/hour, logs to var/test_runs/)
 nohup ./run_12h_test.sh &
 ```
@@ -99,6 +102,8 @@ Two schemas, two auth patterns:
 |-------|--------|------|---------|
 | `editorial_state` | `public` | Service role key (PostgREST) | `EditorialStateStore` |
 | `team_article` | `content` | Service role key + `Content-Profile: content` header | `ArticleWriter` |
+
+> **PostgREST routing note:** `team_article` is no longer exposed under the `content` schema via PostgREST direct queries. Read scripts (e.g. `build_overview_report.py`, `build_cycle_report.py`) reach it as `/rest/v1/team_article` with **no** `Accept-Profile` header — the public schema routing works. `ArticleWriter` (the write path) still uses the `content` schema profile header for INSERTs/PATCHes via the Supabase client library. Do not add a profile header to read-only PostgREST calls or you will get a 406.
 | Edge functions (feed, lookup) | n/a | Anon key (`SUPABASE_FUNCTION_AUTH_TOKEN`) | `RawFeedReader`, `ArticleLookupAdapter` |
 
 `SUPABASE_FUNCTION_AUTH_TOKEN` is optional — falls back to `SUPABASE_SERVICE_ROLE_KEY` via `Settings.resolved_function_auth_token()`. But edge functions typically need the anon key (JWT with `role=anon`), not the service role key.
@@ -117,6 +122,10 @@ All migrations applied manually via SQL Editor (not `supabase db push`):
 All prompt text lives in YAML files (`editorial/prompts.yml`, `writer/prompts.yml`), loaded once via `@lru_cache`. Each module validates required prompt keys at load time. Prompt iteration does not require changing Python code.
 
 Both EN and DE `article_writer_agent` prompts include a "Beat-reporter texture" block (capped at ~15% of prose): active/specific verbs, scene/stakes language tied to source facts, sentence-length variety, and concrete nouns. The guardrail is explicit: texture rides on facts, never replaces them.
+
+Both `article_writer_agent` prompts (EN + DE) also include a "Source-as-story anti-pattern" block: the publication of a source article is never the story. For roundups, rankings, and grade columns the writer must focus on THIS team's specific row (grade, rank, pick, named player), and is forbidden from sentences whose subject is the source publication or the act of publishing. A per-paragraph self-check is mandated: "what new football fact did this give the reader?"
+
+The `article_data_agent` prompt includes a "Roundup / ranking / grade extraction rule": for multi-team source pieces it must extract row-level verdicts as `key_facts`, not column-level meta. If only column-level meta is available, `content_status="thin"` + `confidence <= 0.3` is required, routing downstream to the writer's "thin → write shorter" path. The two prompts interlock.
 
 ## Config
 
