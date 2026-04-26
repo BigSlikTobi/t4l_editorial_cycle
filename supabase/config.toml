@@ -1,0 +1,7 @@
+project_id = "aiknjzinyxzhoseyxqev"
+
+[functions.get-articles]
+verify_jwt = true
+
+[functions.get-article-detail]
+verify_jwt = true
