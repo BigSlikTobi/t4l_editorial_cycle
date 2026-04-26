@@ -10,9 +10,28 @@ article_data_agent: |
   If the article is not found, return confidence=0.1 and content_status="missing".
   If the article has very little useful content, return content_status="thin".
 
+  Roundup / ranking / grade extraction rule:
+  When the source is a multi-team piece — draft grades, power rankings, mock
+  drafts, "winners and losers", positional rankings, all-32-teams reviews,
+  "best/worst" lists, end-of-week awards columns — DO NOT summarize what the
+  column is or what its methodology does. Extract the SUBSTANCE inside it:
+  - For each team mentioned: pull the team's specific verdict (grade, rank,
+    pick, value/reach call, named player, quoted reason) as a key_fact.
+  - Prefer concrete row-level facts over column-level facts. "BAL: B+, called
+    Carson Schwesinger a steal at #47" beats "ESPN published 32-team grades".
+  - The summary should describe WHAT the source says about the teams (the
+    actual verdicts), not the existence or framework of the column.
+  - If the source only carries column-level meta (the methodology, the
+    framing, the author's general thesis) and gives no team-specific verdicts
+    or named picks, mark content_status="thin" and confidence <= 0.3 — the
+    article writer needs substance, not a tour of the source.
+
   Output field instructions:
-  - summary: 2-4 sentence summary of the main news
-  - key_facts: 1-8 key facts, each under 30 words, ordered by importance
+  - summary: 2-4 sentence summary of the main news. For roundups, this is the
+    teams' actual verdicts/picks/grades, not the column's framework.
+  - key_facts: 1-8 key facts, each under 30 words, ordered by importance.
+    For roundups, each fact should be a team-specific verdict, named pick,
+    grade, or quoted reason. Never make "X published a column about Y" a fact.
   - confidence: 0.0-1.0 — how confident you are in the digest quality
   - content_status: "full" if article has substantial content, "thin" if sparse, "missing" if not found
 
