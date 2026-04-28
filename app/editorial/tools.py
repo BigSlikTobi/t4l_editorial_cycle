@@ -126,9 +126,12 @@ def build_story_cluster_tool(agent: Agent) -> FunctionTool:
             max_turns=16,
         )
 
-        # Post-process: overwrite LLM-generated slug with deterministic hash
+        # Post-process: overwrite LLM-generated slug with deterministic hash.
+        # Entity IDs come from the same RawArticles the plan-level recompute
+        # will see, so tool-level fp == plan-level fp.
         cluster = StoryClusterResult.model_validate(raw_dict)
-        real_fp = recompute_cluster_fingerprint(cluster)
+        entity_ids = {e.entity_id for a in articles for e in a.entities}
+        real_fp = recompute_cluster_fingerprint(cluster, entity_ids)
         cluster = cluster.model_copy(update={
             "story_fingerprint": real_fp,
             "is_new": real_fp not in published_fingerprints,

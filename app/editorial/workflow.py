@@ -22,6 +22,7 @@ from app.editorial.helpers import (
     group_by_entity,
     recompute_plan_fingerprints,
     resolve_existing_article_ids,
+    synthesize_missing_digests,
 )
 from app.editorial.tools import (
     build_article_digest_tool,
@@ -142,7 +143,8 @@ class EditorialWorkflow:
         raw_plan = coerce_output(result.final_output, CyclePublishPlan)
 
         # Deterministic post-processing
-        plan = recompute_plan_fingerprints(raw_plan)
+        plan = synthesize_missing_digests(raw_plan, context.raw_articles)
+        plan = recompute_plan_fingerprints(plan, context.raw_articles)
         plan = deduplicate_plan(plan)
         plan = resolve_existing_article_ids(plan, context.published_state)
         plan = enrich_plan_with_players(plan, context.raw_articles)
