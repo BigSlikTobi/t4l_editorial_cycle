@@ -13,6 +13,7 @@ and crash-safe: reruns pick up wherever the previous run left off.
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
@@ -100,7 +101,9 @@ async def run_ingestion_cycle(settings: Settings) -> IngestionSummary:
             store=store, content_client=content_client
         )
         summary.knowledge_updated, summary.knowledge_failed = await _extract_knowledge(
-            store=store, knowledge_client=knowledge_client
+            store=store,
+            knowledge_client=knowledge_client,
+            max_concurrency=settings.ingestion_knowledge_max_concurrency,
         )
     finally:
         await store.close()
@@ -216,6 +219,7 @@ async def _extract_knowledge(
     *,
     store: RawArticleStore,
     knowledge_client: KnowledgeExtractionClient,
+    max_concurrency: int,
 ) -> tuple[int, int]:
     pending: list[PendingArticle] = await store.list_pending(
         status="content_ok", limit=_CONTENT_BATCH_SIZE
@@ -223,30 +227,53 @@ async def _extract_knowledge(
     if not pending:
         return 0, 0
 
-    ok, failed = 0, 0
-    for p in pending:
-        if not p.content:
-            await store.mark_failed(
-                p.id, {"stage": "knowledge", "error": "content_ok row has no content"}
+    semaphore = asyncio.Semaphore(max(1, max_concurrency))
+
+    async def _process_one(p: PendingArticle) -> bool:
+        async with semaphore:
+            if not p.content:
+                await store.mark_failed(
+                    p.id,
+                    {"stage": "knowledge", "error": "content_ok row has no content"},
+                )
+                return False
+            try:
+                result = await knowledge_client.extract(
+                    article_id=p.id,
+                    text=p.content,
+                    title=p.title,
+                    url=p.url,
+                )
+            except (JobFailedError, JobTimeoutError) as exc:
+                logger.warning("knowledge extraction failed for %s: %s", p.id, exc)
+                await store.mark_failed(
+                    p.id, {"stage": "knowledge", "error": str(exc)}
+                )
+                return False
+            await store.update_knowledge(p.id, result)
+            return True
+
+    # return_exceptions=True ensures one task crashing (e.g., an unexpected
+    # error type not in the JobFailed/JobTimeout pair) does not cancel the
+    # rest. Such crashes are logged and counted as failed for that row,
+    # without an attempt to mark_failed (we don't know if mark_failed itself
+    # was the failure).
+    results = await asyncio.gather(
+        *(_process_one(p) for p in pending),
+        return_exceptions=True,
+    )
+    ok = 0
+    failed = 0
+    for p, r in zip(pending, results, strict=True):
+        if isinstance(r, BaseException):
+            logger.exception(
+                "Unexpected error processing knowledge for %s", p.id, exc_info=r
             )
             failed += 1
-            continue
-        try:
-            result = await knowledge_client.extract(
-                article_id=p.id,
-                text=p.content,
-                title=p.title,
-                url=p.url,
-            )
-        except (JobFailedError, JobTimeoutError) as exc:
-            logger.warning("knowledge extraction failed for %s: %s", p.id, exc)
-            await store.mark_failed(
-                p.id, {"stage": "knowledge", "error": str(exc)}
-            )
+        elif r:
+            ok += 1
+        else:
             failed += 1
-            continue
-        await store.update_knowledge(p.id, result)
-        ok += 1
     return ok, failed
 
 
