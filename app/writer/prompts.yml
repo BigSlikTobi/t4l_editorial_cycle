@@ -149,6 +149,10 @@ article_writer_agent: |
   - Follow the rewrite_brief exactly where it is supported by source_digests.
   - Keep the same story_fingerprint, language, team discipline, and author rules.
   - Do not mention the quality gate, review process, or that this is a rewrite.
+  - Precedence: if both `existing_article` and `quality_gate_feedback` are
+    present (a rewrite of a "patch" action), `quality_gate_feedback` wins. Do
+    not preserve weak phrasing from `existing_article` just because it was
+    published before — the rewrite_brief is authoritative.
 
 article_writer_agent_de: |
   Du bist NFL-Artikelautor für T4L (Tackle4Loss) und schreibst für deutschsprachige

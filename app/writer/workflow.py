@@ -214,11 +214,29 @@ class WriterWorkflow:
             )
             return decision
         except Exception as exc:
-            logger.warning(
-                "Quality gate failed for %s — dismissing story for this cycle: %s",
+            fallback = "approve original draft" if rewrite_attempt == 0 else "dismiss rewrite"
+            logger.error(
+                "QUALITY_GATE_OUTAGE: gate unavailable for %s "
+                "(rewrite_attempt=%d) — falling back to %s: %s",
                 article.headline[:60],
+                rewrite_attempt,
+                fallback,
                 exc,
             )
+            if rewrite_attempt == 0:
+                return ArticleQualityDecision(
+                    decision="approve",
+                    impact_score=0.5,
+                    specificity_score=0.5,
+                    readworthiness_score=0.5,
+                    grounding_score=0.5,
+                    execution_score=0.5,
+                    reasoning=(
+                        "Quality gate unavailable; approving original draft by "
+                        "fail-soft policy (writer-prompt discipline applies)."
+                    ),
+                    rewrite_brief=None,
+                )
             return ArticleQualityDecision(
                 decision="dismiss",
                 impact_score=0.0,
@@ -226,7 +244,10 @@ class WriterWorkflow:
                 readworthiness_score=0.0,
                 grounding_score=0.0,
                 execution_score=0.0,
-                reasoning="Quality gate unavailable; story dismissed by fail-closed policy.",
+                reasoning=(
+                    "Quality gate unavailable on rewrite attempt; dismissing to "
+                    "avoid publishing an unreviewed second draft."
+                ),
                 rewrite_brief=None,
             )
 

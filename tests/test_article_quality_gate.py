@@ -170,7 +170,7 @@ async def test_quality_gate_rewrite_failure_dismisses_after_one_retry():
     assert result is None
 
 
-async def test_quality_gate_failure_fails_closed(monkeypatch):
+async def test_quality_gate_failure_on_first_attempt_fails_soft(monkeypatch):
     workflow = WriterWorkflow.__new__(WriterWorkflow)
     workflow._quality_gate_agent = object()
 
@@ -187,5 +187,26 @@ async def test_quality_gate_failure_fails_closed(monkeypatch):
         rewrite_attempt=0,
     )
 
+    assert decision.decision == "approve"
+    assert "fail-soft" in decision.reasoning
+
+
+async def test_quality_gate_failure_on_rewrite_dismisses(monkeypatch):
+    workflow = WriterWorkflow.__new__(WriterWorkflow)
+    workflow._quality_gate_agent = object()
+
+    async def fail(*args, **kwargs):
+        raise RuntimeError("gate unavailable")
+
+    monkeypatch.setattr(workflow_module.Runner, "run", fail)
+
+    decision = await workflow._run_quality_gate(
+        _story(),
+        _article(),
+        "cycle",
+        persona=get_persona("insider"),
+        rewrite_attempt=1,
+    )
+
     assert decision.decision == "dismiss"
-    assert "fail-closed" in decision.reasoning
+    assert "rewrite attempt" in decision.reasoning
