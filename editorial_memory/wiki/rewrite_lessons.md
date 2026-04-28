@@ -4,7 +4,7 @@
 - Lead with the concrete classification, quote, or fact the source actually provides; do not bury the only usable detail under generic commentary.
 - Avoid repeating the headline’s claim in new wording without adding evidence or a sharper angle. If the draft mostly paraphrases itself, it needs a narrower structure.
 - Be cautious with evaluative phrases like “upside,” “true contender,” or “work to do” unless the source explicitly supports that framing.
-- Do not invent roster-strength, scheme, betting, timing, protection, rhythm, or contender-path analysis from a sparse digest. Keep claims tethered to what the source actually says.
+- Do not invent roster-strength, scheme, betting, timing, protection, rhythm, contender-path, or eligibility-impact analysis from a sparse digest. Keep claims tethered to what the source actually says.
 - When a source groups teams or players into a tier, ranking, or odds frame, the rewrite should explain the classification, not pretend it proves deeper quality or significance.
 - If the source includes a blunt quote or direct critique, center the piece on that exact complaint and its concrete takeaway instead of stretching it into broader analysis.
 - Avoid naming multiple players, units, or roles as if the source supported detailed breakdowns when the digest only substantiates a general diagnosis.
