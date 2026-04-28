@@ -3,7 +3,9 @@ from __future__ import annotations
 import hashlib
 import json
 from collections import defaultdict
+from collections.abc import Iterable
 from typing import Any, TypeVar
+from urllib.parse import urlparse
 
 from pydantic import BaseModel, ValidationError
 
@@ -121,18 +123,45 @@ def group_by_entity(articles: list[RawArticle]) -> GroupedArticles:
     return GroupedArticles(multi_source=multi_source, single_source=single_source)
 
 
-def fingerprint(key_facts: list[str]) -> str:
+def _normalize_url(url: str) -> str:
+    """Lowercase scheme/host, strip query/fragment, strip trailing slash."""
+    parsed = urlparse(url.strip())
+    host = (parsed.hostname or "").lower()
+    path = parsed.path.rstrip("/")
+    scheme = parsed.scheme.lower()
+    return f"{scheme}://{host}{path}"
+
+
+def compute_story_fingerprint(
+    urls: Iterable[str],
+    entity_ids: Iterable[str] = (),
+) -> str:
+    """Canonical story identity: deterministic hash of normalized source URLs
+    plus optional entity IDs. LLM-derived text is intentionally excluded."""
+    norm_urls = sorted({_normalize_url(u) for u in urls if u and u.strip()})
+    norm_ents = sorted({e.strip() for e in entity_ids if e and e.strip()})
+    payload = json.dumps(
+        {"urls": norm_urls, "entities": norm_ents},
+        separators=(",", ":"),
+        sort_keys=True,
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+
+def _fingerprint_from_key_facts(key_facts: list[str]) -> str:
+    """Last-resort fallback when no URLs are available."""
     normalized = sorted(fact.strip().lower() for fact in key_facts if fact.strip())
     payload = json.dumps(normalized, separators=(",", ":"), sort_keys=True)
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
 
 
 def recompute_cluster_fingerprint(cluster: StoryClusterResult) -> str:
-    """Compute deterministic fingerprint from all key_facts across source_digests."""
-    all_facts: list[str] = []
-    for digest in cluster.source_digests:
-        all_facts.extend(digest.key_facts)
-    return fingerprint(all_facts)
+    """Compute deterministic fingerprint from normalized source URLs.
+    Falls back to the cluster headline when no URLs are present."""
+    urls = [d.url for d in cluster.source_digests]
+    if urls:
+        return compute_story_fingerprint(urls)
+    return _fingerprint_from_key_facts([cluster.cluster_headline])
 
 
 def collect_source_urls(cluster: StoryClusterResult) -> list[str]:
@@ -168,24 +197,33 @@ def url_overlap_ratio(
     return best_ratio, best_record
 
 
-def recompute_plan_fingerprints(plan: CyclePublishPlan) -> CyclePublishPlan:
+def recompute_plan_fingerprints(
+    plan: CyclePublishPlan,
+    raw_articles: list[RawArticle] | None = None,
+) -> CyclePublishPlan:
     """Recompute deterministic fingerprints for all stories in the plan.
 
-    Multi-source stories already have deterministic fingerprints (set in
-    tools.py after the cluster agent).  Single-source stories get LLM-
-    generated slugs from the orchestrator — this function replaces those
-    with deterministic hashes when key_facts are available.  Falls back to
-    hashing the cluster_headline for stories without source_digests.
+    Identity is the normalized source URL set, augmented (when raw_articles
+    are provided) with the union of entity IDs reachable via each digest's
+    story_id. Falls back to hashing the cluster_headline for stories without
+    source_digests (single-source stories the orchestrator surfaced without
+    populating digests).
     """
+    article_by_id: dict[str, RawArticle] = {a.id: a for a in (raw_articles or [])}
+
     def _recompute(story: StoryEntry) -> StoryEntry:
-        all_facts: list[str] = []
+        urls = [d.url for d in story.source_digests]
+        ent_ids: set[str] = set()
         for d in story.source_digests:
-            all_facts.extend(d.key_facts)
-        if all_facts:
-            real_fp = fingerprint(all_facts)
+            ra = article_by_id.get(d.story_id)
+            if ra is None:
+                continue
+            for entity in ra.entities:
+                ent_ids.add(entity.entity_id)
+        if urls:
+            real_fp = compute_story_fingerprint(urls, ent_ids)
         else:
-            # No digests (single-source evaluated by orchestrator) — hash the headline
-            real_fp = fingerprint([story.cluster_headline])
+            real_fp = _fingerprint_from_key_facts([story.cluster_headline])
         if real_fp != story.story_fingerprint:
             return story.model_copy(update={"story_fingerprint": real_fp})
         return story

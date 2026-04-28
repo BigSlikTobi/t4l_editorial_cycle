@@ -3,13 +3,16 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from app.editorial.helpers import (
+    _fingerprint_from_key_facts,
+    _normalize_url,
     coerce_output,
+    compute_story_fingerprint,
     count_prevented_duplicates,
     deduplicate,
     deduplicate_plan,
-    fingerprint,
     group_by_entity,
     recompute_cluster_fingerprint,
+    recompute_plan_fingerprints,
     resolve_existing_article_ids,
     url_overlap_ratio,
     truncate_article_content,
@@ -115,19 +118,66 @@ class TestGroupByEntity:
         assert grouped.total_clusters == 2  # 1 multi-source cluster + 1 single
 
 
-class TestFingerprint:
+class TestKeyFactsFallback:
     def test_deterministic(self) -> None:
         facts = ["Bills traded pick", "WR signed extension"]
-        assert fingerprint(facts) == fingerprint(facts)
+        assert _fingerprint_from_key_facts(facts) == _fingerprint_from_key_facts(facts)
 
     def test_order_independent(self) -> None:
-        assert fingerprint(["A", "B"]) == fingerprint(["B", "A"])
+        assert _fingerprint_from_key_facts(["A", "B"]) == _fingerprint_from_key_facts(["B", "A"])
 
     def test_different_facts_differ(self) -> None:
-        assert fingerprint(["A"]) != fingerprint(["B"])
+        assert _fingerprint_from_key_facts(["A"]) != _fingerprint_from_key_facts(["B"])
 
     def test_ignores_empty_facts(self) -> None:
-        assert fingerprint(["A", "", "  "]) == fingerprint(["A"])
+        assert _fingerprint_from_key_facts(["A", "", "  "]) == _fingerprint_from_key_facts(["A"])
+
+
+class TestComputeStoryFingerprint:
+    def test_stable_across_url_order(self) -> None:
+        a = compute_story_fingerprint(["http://a.com/x", "http://b.com/y"])
+        b = compute_story_fingerprint(["http://b.com/y", "http://a.com/x"])
+        assert a == b
+
+    def test_normalization_strips_query_fragment_and_trailing_slash(self) -> None:
+        canonical = compute_story_fingerprint(["https://espn.com/nfl/story"])
+        variants = [
+            "https://ESPN.com/nfl/story/",
+            "HTTPS://espn.com/nfl/story?utm_source=twitter",
+            "https://espn.com/nfl/story#section",
+            "  https://espn.com/nfl/story  ",
+        ]
+        for v in variants:
+            assert compute_story_fingerprint([v]) == canonical, v
+
+    def test_distinct_urls_differ(self) -> None:
+        a = compute_story_fingerprint(["https://espn.com/nfl/trade"])
+        b = compute_story_fingerprint(["https://espn.com/nfl/draft"])
+        assert a != b
+
+    def test_partial_url_overlap_yields_different_hash(self) -> None:
+        a = compute_story_fingerprint(["https://a.com/x", "https://b.com/y"])
+        b = compute_story_fingerprint(["https://a.com/x", "https://c.com/z"])
+        assert a != b
+
+    def test_entity_ids_disambiguate(self) -> None:
+        urls = ["https://nfl.com/news"]
+        a = compute_story_fingerprint(urls, ["player:00-0011111"])
+        b = compute_story_fingerprint(urls, ["player:00-0022222"])
+        assert a != b
+
+    def test_entity_ids_order_independent(self) -> None:
+        urls = ["https://nfl.com/news"]
+        a = compute_story_fingerprint(urls, ["e1", "e2"])
+        b = compute_story_fingerprint(urls, ["e2", "e1", "e1"])
+        assert a == b
+
+    def test_empty_urls_and_entities(self) -> None:
+        # Empty inputs still produce a stable hash (callers should fall back beforehand)
+        assert compute_story_fingerprint([], []) == compute_story_fingerprint([], [])
+
+    def test_normalize_url_helper(self) -> None:
+        assert _normalize_url("https://ESPN.com/nfl/x/?utm=1") == "https://espn.com/nfl/x"
 
 
 class TestCountPreventedDuplicates:
@@ -237,28 +287,51 @@ def _make_digest(url: str, key_facts: list[str] | None = None) -> ArticleDigest:
 
 
 class TestRecomputeClusterFingerprint:
-    def test_replaces_llm_slug(self) -> None:
+    def test_replaces_llm_slug_with_url_hash(self) -> None:
         cluster = StoryClusterResult(
             cluster_headline="h", synthesis="s", news_value_score=0.8,
             is_new=True, story_fingerprint="llm-garbage-slug",
-            source_digests=[_make_digest("http://a.com", ["Bills traded pick"])],
+            source_digests=[_make_digest("http://a.com/x", ["Bills traded pick"])],
         )
         result = recompute_cluster_fingerprint(cluster)
         assert result != "llm-garbage-slug"
-        assert result == fingerprint(["Bills traded pick"])
+        assert result == compute_story_fingerprint(["http://a.com/x"])
 
-    def test_combines_facts_across_digests(self) -> None:
-        d1 = _make_digest("http://a.com", ["Fact A"])
-        d2 = _make_digest("http://b.com", ["Fact B"])
+    def test_stable_when_key_facts_change_but_urls_match(self) -> None:
+        # The original failure mode issue #15 calls out: identical sources,
+        # different LLM phrasing must produce the same fingerprint.
+        d1 = _make_digest("http://a.com/story", ["Bills traded a 4th-round pick"])
+        d2 = _make_digest("http://a.com/story", ["Buffalo dealt a fourth-rounder"])
+        c1 = StoryClusterResult(
+            cluster_headline="h1", synthesis="s", news_value_score=0.8,
+            is_new=True, story_fingerprint="x", source_digests=[d1],
+        )
+        c2 = StoryClusterResult(
+            cluster_headline="h2", synthesis="s", news_value_score=0.8,
+            is_new=True, story_fingerprint="y", source_digests=[d2],
+        )
+        assert recompute_cluster_fingerprint(c1) == recompute_cluster_fingerprint(c2)
+
+    def test_combines_urls_across_digests(self) -> None:
+        d1 = _make_digest("http://a.com/x", ["Fact A"])
+        d2 = _make_digest("http://b.com/y", ["Fact B"])
         cluster = StoryClusterResult(
             cluster_headline="h", synthesis="s", news_value_score=0.8,
             is_new=True, story_fingerprint="x", source_digests=[d1, d2],
         )
         result = recompute_cluster_fingerprint(cluster)
-        assert result == fingerprint(["Fact A", "Fact B"])
+        assert result == compute_story_fingerprint(["http://a.com/x", "http://b.com/y"])
 
-    def test_deterministic(self) -> None:
-        d = _make_digest("http://a.com", ["X", "Y"])
+    def test_falls_back_to_headline_when_no_digests(self) -> None:
+        cluster = StoryClusterResult(
+            cluster_headline="Some headline", synthesis="s", news_value_score=0.5,
+            is_new=True, story_fingerprint="x", source_digests=[],
+        )
+        result = recompute_cluster_fingerprint(cluster)
+        assert result == _fingerprint_from_key_facts(["Some headline"])
+
+    def test_deterministic_across_unrelated_metadata(self) -> None:
+        d = _make_digest("http://a.com/x", ["X", "Y"])
         c1 = StoryClusterResult(
             cluster_headline="h", synthesis="s", news_value_score=0.8,
             is_new=True, story_fingerprint="a", source_digests=[d],
@@ -268,6 +341,99 @@ class TestRecomputeClusterFingerprint:
             is_new=False, story_fingerprint="b", source_digests=[d],
         )
         assert recompute_cluster_fingerprint(c1) == recompute_cluster_fingerprint(c2)
+
+
+def _make_raw_article(article_id: str, url: str, entity_ids: list[str]) -> RawArticle:
+    return RawArticle(
+        id=article_id,
+        url=url,
+        title="t",
+        source_name="s",
+        entities=[
+            EntityMatch(entity_type="player", entity_id=eid, matched_name=eid)
+            for eid in entity_ids
+        ],
+    )
+
+
+class TestRecomputePlanFingerprints:
+    def test_url_set_drives_identity_across_key_fact_drift(self) -> None:
+        d_a = ArticleDigest(
+            story_id="raw-1", url="http://a.com/x", title="t", source_name="s",
+            summary="sum", confidence=0.9, key_facts=["wording one"],
+        )
+        d_b = ArticleDigest(
+            story_id="raw-1", url="http://a.com/x", title="t", source_name="s",
+            summary="sum", confidence=0.9, key_facts=["completely different wording"],
+        )
+        s_a = StoryEntry(
+            rank=1, cluster_headline="H1", story_fingerprint="old",
+            action="publish", news_value_score=0.9, reasoning="r",
+            source_digests=[d_a],
+        )
+        s_b = StoryEntry(
+            rank=1, cluster_headline="H2", story_fingerprint="old",
+            action="publish", news_value_score=0.9, reasoning="r",
+            source_digests=[d_b],
+        )
+        plan_a = CyclePublishPlan(stories=[s_a], reasoning="t")
+        plan_b = CyclePublishPlan(stories=[s_b], reasoning="t")
+        out_a = recompute_plan_fingerprints(plan_a)
+        out_b = recompute_plan_fingerprints(plan_b)
+        assert out_a.stories[0].story_fingerprint == out_b.stories[0].story_fingerprint
+
+    def test_distinct_url_sets_differ_for_same_team(self) -> None:
+        d1 = ArticleDigest(
+            story_id="raw-1", url="http://espn.com/trade", title="t", source_name="s",
+            summary="sum", confidence=0.9, key_facts=["fact"],
+        )
+        d2 = ArticleDigest(
+            story_id="raw-2", url="http://espn.com/injury", title="t", source_name="s",
+            summary="sum", confidence=0.9, key_facts=["fact"],
+        )
+        s1 = StoryEntry(
+            rank=1, cluster_headline="Trade", story_fingerprint="x",
+            action="publish", news_value_score=0.9, reasoning="r",
+            source_digests=[d1],
+        )
+        s2 = StoryEntry(
+            rank=2, cluster_headline="Injury", story_fingerprint="x",
+            action="publish", news_value_score=0.9, reasoning="r",
+            source_digests=[d2],
+        )
+        plan = CyclePublishPlan(stories=[s1, s2], reasoning="t")
+        out = recompute_plan_fingerprints(plan)
+        assert out.stories[0].story_fingerprint != out.stories[1].story_fingerprint
+
+    def test_entity_ids_layered_in_when_raw_articles_provided(self) -> None:
+        digest = ArticleDigest(
+            story_id="raw-1", url="http://a.com/x", title="t", source_name="s",
+            summary="sum", confidence=0.9, key_facts=["fact"],
+        )
+        story = StoryEntry(
+            rank=1, cluster_headline="H", story_fingerprint="old",
+            action="publish", news_value_score=0.9, reasoning="r",
+            source_digests=[digest],
+        )
+        plan = CyclePublishPlan(stories=[story], reasoning="t")
+
+        without_raw = recompute_plan_fingerprints(plan).stories[0].story_fingerprint
+        with_raw = recompute_plan_fingerprints(
+            plan,
+            [_make_raw_article("raw-1", "http://a.com/x", ["player:001"])],
+        ).stories[0].story_fingerprint
+        assert without_raw != with_raw
+        assert with_raw == compute_story_fingerprint(["http://a.com/x"], ["player:001"])
+
+    def test_falls_back_to_headline_when_no_digests(self) -> None:
+        story = StoryEntry(
+            rank=1, cluster_headline="Some headline", story_fingerprint="old",
+            action="publish", news_value_score=0.9, reasoning="r",
+            source_digests=[],
+        )
+        plan = CyclePublishPlan(stories=[story], reasoning="t")
+        out = recompute_plan_fingerprints(plan)
+        assert out.stories[0].story_fingerprint == _fingerprint_from_key_facts(["Some headline"])
 
 
 class TestUrlOverlapRatio:
