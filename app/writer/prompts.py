@@ -9,6 +9,8 @@ PROMPTS_PATH = Path(__file__).with_name("prompts.yml")
 REQUIRED_PROMPTS = {
     "article_writer_agent",
     "article_writer_agent_de",
+    "article_quality_gate_agent",
+    "editorial_memory_agent",
     "persona_selector_agent",
 }
 

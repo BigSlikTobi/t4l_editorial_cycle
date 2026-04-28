@@ -7,8 +7,10 @@ from pydantic import ValidationError
 from app.schemas import (
     ArticleDigest,
     ArticleDigestAgentResult,
+    ArticleQualityDecision,
     CyclePublishPlan,
     CycleResult,
+    EditorialMemoryRevision,
     EntityMatch,
     PublishableArticle,
     PublishedStoryRecord,
@@ -106,6 +108,43 @@ class TestPublishableArticle:
                 team="BUF", headline="h", sub_headline="s", introduction="i",
                 content="c", x_post="x", bullet_points="b", story_fingerprint="fp",
                 bogus="bad",
+            )
+
+
+class TestArticleQualityDecision:
+    def test_forbids_extra(self) -> None:
+        with pytest.raises(ValidationError, match="extra"):
+            ArticleQualityDecision(
+                decision="approve",
+                impact_score=0.8,
+                specificity_score=0.8,
+                readworthiness_score=0.8,
+                grounding_score=0.9,
+                execution_score=0.8,
+                reasoning="Strong enough",
+                extra="bad",
+            )
+
+    def test_score_bounds(self) -> None:
+        with pytest.raises(ValidationError):
+            ArticleQualityDecision(
+                decision="approve",
+                impact_score=1.1,
+                specificity_score=0.8,
+                readworthiness_score=0.8,
+                grounding_score=0.9,
+                execution_score=0.8,
+                reasoning="Strong enough",
+            )
+
+
+class TestEditorialMemoryRevision:
+    def test_forbids_extra(self) -> None:
+        with pytest.raises(ValidationError, match="extra"):
+            EditorialMemoryRevision(
+                updated_markdown="# Lessons",
+                change_summary="Updated lessons",
+                extra="bad",
             )
 
 

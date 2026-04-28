@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import AnyHttpUrl, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -46,6 +47,9 @@ class Settings(BaseSettings):
     openai_model_editorial_orchestrator_agent: str = "gpt-5.4"
     openai_model_article_writer_agent: str = "gpt-5.4-mini"
     openai_model_persona_selector_agent: str = "gpt-5.4-mini"
+    openai_model_article_quality_gate_agent: str = "gpt-5.4-mini"
+    openai_model_editorial_memory_agent: str = "gpt-5.4-mini"
+    editorial_memory_dir: Path = Path("editorial_memory")
 
     openai_temperature: float | None = None
     openai_max_tokens: int | None = None
@@ -66,6 +70,8 @@ class Settings(BaseSettings):
             "editorial_orchestrator_agent": self.openai_model_editorial_orchestrator_agent,
             "article_writer_agent": self.openai_model_article_writer_agent,
             "persona_selector_agent": self.openai_model_persona_selector_agent,
+            "article_quality_gate_agent": self.openai_model_article_quality_gate_agent,
+            "editorial_memory_agent": self.openai_model_editorial_memory_agent,
         }
 
     def agent_model(self, agent_name: str) -> str:

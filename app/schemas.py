@@ -146,6 +146,24 @@ class PersonaSelection(BaseModel):
     reasoning: str
 
 
+class ArticleQualityDecision(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    decision: Literal["approve", "rewrite", "dismiss"]
+    impact_score: float = Field(ge=0.0, le=1.0)
+    specificity_score: float = Field(ge=0.0, le=1.0)
+    readworthiness_score: float = Field(ge=0.0, le=1.0)
+    grounding_score: float = Field(ge=0.0, le=1.0)
+    execution_score: float = Field(ge=0.0, le=1.0)
+    reasoning: str
+    rewrite_brief: str | None = None
+
+
+class EditorialMemoryRevision(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    updated_markdown: str
+    change_summary: str
+
+
 # --- Editorial state (cross-cycle memory) ---
 
 

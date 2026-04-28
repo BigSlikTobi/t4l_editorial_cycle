@@ -22,6 +22,9 @@ concurrency:
   group: editorial-cycle
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -73,11 +76,39 @@ jobs:
           if [ -n "${{ vars.OPENAI_MODEL_PERSONA_SELECTOR_AGENT }}" ]; then
             export OPENAI_MODEL_PERSONA_SELECTOR_AGENT="${{ vars.OPENAI_MODEL_PERSONA_SELECTOR_AGENT }}"
           fi
+          if [ -n "${{ vars.OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT }}" ]; then
+            export OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT="${{ vars.OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT }}"
+          fi
+          if [ -n "${{ vars.OPENAI_MODEL_EDITORIAL_MEMORY_AGENT }}" ]; then
+            export OPENAI_MODEL_EDITORIAL_MEMORY_AGENT="${{ vars.OPENAI_MODEL_EDITORIAL_MEMORY_AGENT }}"
+          fi
           if [ -n "${{ vars.OPENAI_MODEL_VISION_VALIDATOR }}" ]; then
             export OPENAI_MODEL_VISION_VALIDATOR="${{ vars.OPENAI_MODEL_VISION_VALIDATOR }}"
           fi
           mkdir -p var
           editorial-cycle run --output-json var/output.json
+
+      - name: Persist editorial memory
+        if: always()
+        run: |
+          set -euo pipefail
+          if ! git status --short -- editorial_memory | grep -q .; then
+            echo "No editorial memory changes to persist."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial_memory
+
+          if git diff --cached --quiet; then
+            echo "No staged editorial memory changes."
+            exit 0
+          fi
+
+          git commit -m "Update editorial memory from cycle ${{ github.run_id }}"
+          git pull --rebase --autostash
+          git push
 
       - name: Upload cycle artifacts
         if: always()
