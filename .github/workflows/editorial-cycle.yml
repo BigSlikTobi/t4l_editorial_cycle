@@ -22,12 +22,25 @@ concurrency:
   group: editorial-cycle
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+
+      - name: Sync editorial memory from data branch
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin editorial-memory >/dev/null 2>&1; then
+            git fetch origin editorial-memory --depth=1
+            git checkout origin/editorial-memory -- editorial_memory/ || true
+          else
+            echo "editorial-memory data branch does not exist yet; using checked-in seed."
+          fi
 
       - uses: actions/setup-python@v5
         with:
@@ -73,11 +86,61 @@ jobs:
           if [ -n "${{ vars.OPENAI_MODEL_PERSONA_SELECTOR_AGENT }}" ]; then
             export OPENAI_MODEL_PERSONA_SELECTOR_AGENT="${{ vars.OPENAI_MODEL_PERSONA_SELECTOR_AGENT }}"
           fi
+          if [ -n "${{ vars.OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT }}" ]; then
+            export OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT="${{ vars.OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT }}"
+          fi
+          if [ -n "${{ vars.OPENAI_MODEL_EDITORIAL_MEMORY_AGENT }}" ]; then
+            export OPENAI_MODEL_EDITORIAL_MEMORY_AGENT="${{ vars.OPENAI_MODEL_EDITORIAL_MEMORY_AGENT }}"
+          fi
           if [ -n "${{ vars.OPENAI_MODEL_VISION_VALIDATOR }}" ]; then
             export OPENAI_MODEL_VISION_VALIDATOR="${{ vars.OPENAI_MODEL_VISION_VALIDATOR }}"
           fi
           mkdir -p var
           editorial-cycle run --output-json var/output.json
+
+      - name: Persist editorial memory
+        if: always()
+        run: |
+          set -euo pipefail
+          if ! git status --short -- editorial_memory | grep -q .; then
+            echo "No editorial memory changes to persist."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Snapshot the updated memory outside the working tree so we can
+          # apply it onto the data branch without dragging code along.
+          SNAPSHOT=$(mktemp -d)
+          cp -r editorial_memory "$SNAPSHOT/"
+
+          # Reset working tree so the branch switch is clean.
+          git checkout -- editorial_memory || true
+          git clean -fd editorial_memory || true
+
+          # Switch to the data branch (create as orphan on first run).
+          if git ls-remote --exit-code --heads origin editorial-memory >/dev/null 2>&1; then
+            git fetch origin editorial-memory
+            git switch editorial-memory
+            git pull --ff-only origin editorial-memory || true
+          else
+            git switch --orphan editorial-memory
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          # Apply snapshot onto the data branch and commit.
+          rm -rf editorial_memory
+          cp -r "$SNAPSHOT/editorial_memory" editorial_memory
+          git add editorial_memory
+
+          if git diff --cached --quiet; then
+            echo "No staged editorial memory changes after sync."
+            exit 0
+          fi
+
+          git commit -m "Update editorial memory from cycle ${{ github.run_id }}"
+          git push origin editorial-memory
 
       - name: Upload cycle artifacts
         if: always()

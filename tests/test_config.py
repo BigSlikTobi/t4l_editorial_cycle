@@ -15,6 +15,9 @@ def fake_settings(monkeypatch: pytest.MonkeyPatch) -> Settings:
         "OPENAI_MODEL_STORY_CLUSTER_AGENT",
         "OPENAI_MODEL_EDITORIAL_ORCHESTRATOR_AGENT",
         "OPENAI_MODEL_ARTICLE_WRITER_AGENT",
+        "OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT",
+        "OPENAI_MODEL_PERSONA_SELECTOR_AGENT",
+        "OPENAI_MODEL_EDITORIAL_MEMORY_AGENT",
     ):
         monkeypatch.delenv(key, raising=False)
     return Settings(_env_file=None)
@@ -45,4 +48,6 @@ class TestSettings:
             "editorial_orchestrator_agent",
             "article_writer_agent",
             "persona_selector_agent",
+            "article_quality_gate_agent",
+            "editorial_memory_agent",
         }

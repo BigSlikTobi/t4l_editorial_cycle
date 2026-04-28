@@ -12,9 +12,29 @@ from agents import Agent, Runner
 from app.config import Settings
 from app.editorial.helpers import coerce_output
 from app.editorial.tracing import build_run_config
-from app.schemas import ArticleSource, CyclePublishPlan, PublishableArticle, StoryEntry
+from app.schemas import (
+    ArticleQualityDecision,
+    ArticleSource,
+    CyclePublishPlan,
+    EditorialMemoryRevision,
+    PublishableArticle,
+    StoryEntry,
+)
 from app.team_codes import normalize_team_codes
-from app.writer.agents import build_article_writer_agent, build_article_writer_agent_de
+from app.writer.agents import (
+    build_article_quality_gate_agent,
+    build_article_writer_agent,
+    build_article_writer_agent_de,
+    build_editorial_memory_agent,
+)
+from app.writer.editorial_memory import (
+    append_raw_feedback,
+    build_feedback_event_markdown,
+    build_memory_revision_payload,
+    load_editorial_memory,
+    read_rewrite_lessons,
+    write_rewrite_lessons,
+)
 from app.writer.image_selector import HeadshotBudget, ImageSelector
 from app.writer.persona_selector import build_persona_selector_agent, select_persona
 from app.writer.personas import Persona, byline_to_persona_id, get_persona
@@ -56,9 +76,13 @@ class WriterWorkflow:
         os.environ.setdefault("OPENAI_API_KEY", settings.openai_api_key.get_secret_value())
         self._writer_agent_en = build_article_writer_agent(settings)
         self._writer_agent_de = build_article_writer_agent_de(settings)
+        self._quality_gate_agent = build_article_quality_gate_agent(settings)
+        self._editorial_memory_agent = build_editorial_memory_agent(settings)
         self._persona_selector_agent = build_persona_selector_agent(settings)
         self._article_writer = article_writer_adapter
         self._image_selector = image_selector
+        self._editorial_memory_dir = settings.editorial_memory_dir
+        self._editorial_memory_lock = asyncio.Lock()
 
     async def _write_in_language(
         self,
@@ -69,6 +93,8 @@ class WriterWorkflow:
         persona: Persona,
         language: str,
         existing_content: dict | None,
+        quality_gate_feedback: ArticleQualityDecision | None = None,
+        previous_draft: PublishableArticle | None = None,
     ) -> PublishableArticle:
         """Pure writer call for one language — NO image cascade here.
 
@@ -86,8 +112,19 @@ class WriterWorkflow:
             "player_mentions": [pm.model_dump(mode="json") for pm in story.player_mentions],
             "persona": dataclasses.asdict(persona),
         }
+        if language == "en-US":
+            memory = load_editorial_memory(self._editorial_memory_dir, story)
+            if memory:
+                writer_payload["editorial_memory"] = memory
         if existing_content is not None:
             writer_payload["existing_article"] = existing_content
+        if quality_gate_feedback is not None:
+            writer_payload["quality_gate_feedback"] = quality_gate_feedback.model_dump(
+                mode="json"
+            )
+            writer_payload["previous_draft"] = (
+                previous_draft.model_dump(mode="json") if previous_draft else None
+            )
 
         writer_input = json.dumps(writer_payload, separators=(",", ":"))
 
@@ -119,6 +156,223 @@ class WriterWorkflow:
         if article.sources != deterministic_sources:
             overrides["sources"] = deterministic_sources
         return article.model_copy(update=overrides)
+
+    async def _run_quality_gate(
+        self,
+        story: StoryEntry,
+        article: PublishableArticle,
+        cycle_id: str,
+        *,
+        persona: Persona,
+        rewrite_attempt: int,
+    ) -> ArticleQualityDecision:
+        payload = {
+            "story": {
+                "cluster_headline": story.cluster_headline,
+                "story_fingerprint": story.story_fingerprint,
+                "action": story.action,
+                "news_value_score": story.news_value_score,
+                "team_codes": normalize_team_codes(story.team_codes),
+                "player_mentions": [
+                    pm.model_dump(mode="json") for pm in story.player_mentions
+                ],
+            },
+            "source_digests": [d.model_dump(mode="json") for d in story.source_digests],
+            "article": article.model_dump(mode="json"),
+            "persona": dataclasses.asdict(persona),
+            "rewrite_attempt": rewrite_attempt,
+        }
+        run_config = build_run_config(
+            cycle_id,
+            stage="article_quality_gate",
+            metadata={
+                "fingerprint": story.story_fingerprint,
+                "language": article.language,
+                "rewrite_attempt": rewrite_attempt,
+            },
+        )
+        try:
+            result = await Runner.run(
+                self._quality_gate_agent,
+                json.dumps(payload, separators=(",", ":")),
+                run_config=run_config,
+                max_turns=3,
+                auto_previous_response_id=True,
+            )
+            decision = coerce_output(result.final_output, ArticleQualityDecision)
+            logger.info(
+                "Quality gate %s for %s: impact=%.2f specificity=%.2f read=%.2f "
+                "grounding=%.2f execution=%.2f — %s",
+                decision.decision,
+                article.headline[:60],
+                decision.impact_score,
+                decision.specificity_score,
+                decision.readworthiness_score,
+                decision.grounding_score,
+                decision.execution_score,
+                decision.reasoning,
+            )
+            return decision
+        except Exception as exc:
+            fallback = "approve original draft" if rewrite_attempt == 0 else "dismiss rewrite"
+            logger.error(
+                "QUALITY_GATE_OUTAGE: gate unavailable for %s "
+                "(rewrite_attempt=%d) — falling back to %s: %s",
+                article.headline[:60],
+                rewrite_attempt,
+                fallback,
+                exc,
+            )
+            if rewrite_attempt == 0:
+                return ArticleQualityDecision(
+                    decision="approve",
+                    impact_score=0.5,
+                    specificity_score=0.5,
+                    readworthiness_score=0.5,
+                    grounding_score=0.5,
+                    execution_score=0.5,
+                    reasoning=(
+                        "Quality gate unavailable; approving original draft by "
+                        "fail-soft policy (writer-prompt discipline applies)."
+                    ),
+                    rewrite_brief=None,
+                )
+            return ArticleQualityDecision(
+                decision="dismiss",
+                impact_score=0.0,
+                specificity_score=0.0,
+                readworthiness_score=0.0,
+                grounding_score=0.0,
+                execution_score=0.0,
+                reasoning=(
+                    "Quality gate unavailable on rewrite attempt; dismissing to "
+                    "avoid publishing an unreviewed second draft."
+                ),
+                rewrite_brief=None,
+            )
+
+    async def _record_editorial_feedback(
+        self,
+        *,
+        cycle_id: str,
+        story: StoryEntry,
+        article: PublishableArticle,
+        persona: Persona,
+        decision: ArticleQualityDecision,
+        rewrite_attempt: int,
+    ) -> None:
+        if decision.decision == "approve" and rewrite_attempt == 0:
+            return
+
+        event_markdown = build_feedback_event_markdown(
+            cycle_id=cycle_id,
+            story=story,
+            article=article,
+            persona=persona,
+            decision=decision,
+            rewrite_attempt=rewrite_attempt,
+        )
+        async with self._editorial_memory_lock:
+            try:
+                append_raw_feedback(self._editorial_memory_dir, event_markdown)
+                existing_markdown = read_rewrite_lessons(self._editorial_memory_dir)
+                payload = build_memory_revision_payload(
+                    existing_markdown=existing_markdown,
+                    feedback_event_markdown=event_markdown,
+                )
+                run_config = build_run_config(
+                    cycle_id,
+                    stage="editorial_memory_update",
+                    metadata={
+                        "fingerprint": story.story_fingerprint,
+                        "decision": decision.decision,
+                        "rewrite_attempt": rewrite_attempt,
+                    },
+                )
+                result = await Runner.run(
+                    self._editorial_memory_agent,
+                    json.dumps(payload, separators=(",", ":")),
+                    run_config=run_config,
+                    max_turns=3,
+                    auto_previous_response_id=True,
+                )
+                revision = coerce_output(result.final_output, EditorialMemoryRevision)
+                write_rewrite_lessons(
+                    self._editorial_memory_dir,
+                    revision.updated_markdown,
+                )
+                logger.info(
+                    "Updated editorial memory for %s: %s",
+                    story.story_fingerprint,
+                    revision.change_summary,
+                )
+            except Exception as exc:
+                logger.warning(
+                    "Editorial memory update failed for %s: %s",
+                    story.story_fingerprint,
+                    exc,
+                )
+
+    async def _approve_or_rewrite_en_article(
+        self,
+        story: StoryEntry,
+        cycle_id: str,
+        *,
+        persona: Persona,
+        article: PublishableArticle,
+        existing_content: dict | None,
+    ) -> PublishableArticle | None:
+        decision = await self._run_quality_gate(
+            story, article, cycle_id, persona=persona, rewrite_attempt=0
+        )
+        await self._record_editorial_feedback(
+            cycle_id=cycle_id,
+            story=story,
+            article=article,
+            persona=persona,
+            decision=decision,
+            rewrite_attempt=0,
+        )
+        if decision.decision == "approve":
+            return article
+        if decision.decision == "dismiss":
+            logger.info(
+                "Quality gate dismissed story before DE/image: %s — %s",
+                story.cluster_headline[:60],
+                decision.reasoning,
+            )
+            return None
+
+        rewritten = await self._write_in_language(
+            story,
+            cycle_id,
+            agent=self._writer_agent_en,
+            persona=persona,
+            language="en-US",
+            existing_content=existing_content,
+            quality_gate_feedback=decision,
+            previous_draft=article,
+        )
+        second_decision = await self._run_quality_gate(
+            story, rewritten, cycle_id, persona=persona, rewrite_attempt=1
+        )
+        await self._record_editorial_feedback(
+            cycle_id=cycle_id,
+            story=story,
+            article=rewritten,
+            persona=persona,
+            decision=second_decision,
+            rewrite_attempt=1,
+        )
+        if second_decision.decision == "approve":
+            return rewritten
+
+        logger.info(
+            "Quality gate rejected story after rewrite (%s): %s",
+            second_decision.decision,
+            second_decision.reasoning,
+        )
+        return None
 
     async def _select_image_for_story(
         self,
@@ -187,6 +441,15 @@ class WriterWorkflow:
             language="en-US",
             existing_content=existing_en_content,
         )
+        en_article = await self._approve_or_rewrite_en_article(
+            story,
+            cycle_id,
+            persona=persona_en,
+            article=en_article,
+            existing_content=existing_en_content,
+        )
+        if en_article is None:
+            return []
 
         # 2. Image cascade (once per story)
         image_url = await self._select_image_for_story(
