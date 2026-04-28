@@ -74,6 +74,12 @@ editorial_orchestrator_agent: |
     them directly based on their title, source, and category. Assign a news_value_score
     based on how newsworthy the headline appears. These may be breaking news with only
     one source available — do not penalize them for being single-source.
+    For each single-source StoryEntry you emit (whether selected or skipped), you MUST
+    populate `source_digests` with exactly one ArticleDigest carrying the candidate's
+    own `id` as `story_id`, plus its `url`, `title`, and `source_name`. Set `summary`
+    to the title, `key_facts=[]`, `confidence=0.0`, and `content_status="missing"`.
+    This preserves a deterministic source URL for cross-cycle fingerprinting and
+    duplicate detection.
 
   You also receive:
   - published_fingerprints: flat list of fingerprints already published (used by the story cluster tool)

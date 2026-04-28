@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 from pydantic import BaseModel, ValidationError
 
 from app.schemas import (
+    ArticleDigest,
     CyclePublishPlan,
     PlayerMention,
     PublishedStoryRecord,
@@ -155,12 +156,19 @@ def _fingerprint_from_key_facts(key_facts: list[str]) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
 
 
-def recompute_cluster_fingerprint(cluster: StoryClusterResult) -> str:
-    """Compute deterministic fingerprint from normalized source URLs.
+def recompute_cluster_fingerprint(
+    cluster: StoryClusterResult,
+    entity_ids: Iterable[str] = (),
+) -> str:
+    """Compute deterministic fingerprint from normalized source URLs plus
+    entity IDs. The entity_ids argument MUST mirror what the plan-level
+    `recompute_plan_fingerprints` will compute for the same story, so the
+    tool-level identity matches the post-processed identity (otherwise the
+    orchestrator's `is_new` decision is made against a different hash).
     Falls back to the cluster headline when no URLs are present."""
     urls = [d.url for d in cluster.source_digests]
     if urls:
-        return compute_story_fingerprint(urls)
+        return compute_story_fingerprint(urls, entity_ids)
     return _fingerprint_from_key_facts([cluster.cluster_headline])
 
 
@@ -195,6 +203,50 @@ def url_overlap_ratio(
             best_record = record
 
     return best_ratio, best_record
+
+
+def synthesize_missing_digests(
+    plan: CyclePublishPlan,
+    raw_articles: list[RawArticle],
+) -> CyclePublishPlan:
+    """Safety net for single-source stories where the orchestrator omitted
+    `source_digests`. Without this, those stories fall through to a
+    headline-hash fingerprint (subject to LLM drift) and the persisted
+    `source_urls` would be empty, breaking the URL-overlap fallback in
+    future cycles.
+
+    Match strategy: exact normalized-title equality against raw_articles.
+    Ambiguous titles (multiple raw articles with the same title) are
+    skipped to avoid wrong matches; those stories keep the headline-hash
+    fallback path.
+    """
+    title_index: dict[str, RawArticle | None] = {}
+    for a in raw_articles:
+        key = a.title.strip().lower()
+        title_index[key] = None if key in title_index else a
+
+    def _try_fill(story: StoryEntry) -> StoryEntry:
+        if story.source_digests:
+            return story
+        match = title_index.get(story.cluster_headline.strip().lower())
+        if match is None:
+            return story
+        digest = ArticleDigest(
+            story_id=match.id,
+            url=match.url,
+            title=match.title,
+            source_name=match.source_name,
+            summary=match.title,
+            key_facts=[],
+            confidence=0.0,
+            content_status="missing",
+        )
+        return story.model_copy(update={"source_digests": [digest]})
+
+    return plan.model_copy(update={
+        "stories": [_try_fill(s) for s in plan.stories],
+        "skipped_stories": [_try_fill(s) for s in plan.skipped_stories],
+    })
 
 
 def recompute_plan_fingerprints(

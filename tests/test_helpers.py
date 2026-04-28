@@ -14,6 +14,7 @@ from app.editorial.helpers import (
     recompute_cluster_fingerprint,
     recompute_plan_fingerprints,
     resolve_existing_article_ids,
+    synthesize_missing_digests,
     url_overlap_ratio,
     truncate_article_content,
 )
@@ -342,6 +343,34 @@ class TestRecomputeClusterFingerprint:
         )
         assert recompute_cluster_fingerprint(c1) == recompute_cluster_fingerprint(c2)
 
+    def test_entity_ids_match_plan_recompute(self) -> None:
+        # Critical invariant: tool-side fp must equal plan-side fp for the
+        # same story so the orchestrator's `is_new` decision is made against
+        # the same identity that's stored in editorial_state.
+        digest = ArticleDigest(
+            story_id="raw-1", url="http://a.com/x", title="t", source_name="s",
+            summary="sum", confidence=0.9, key_facts=["fact"],
+        )
+        cluster = StoryClusterResult(
+            cluster_headline="h", synthesis="s", news_value_score=0.8,
+            is_new=True, story_fingerprint="x", source_digests=[digest],
+        )
+        raw = _make_raw_article("raw-1", "http://a.com/x", ["player:001", "team:KC"])
+
+        tool_fp = recompute_cluster_fingerprint(
+            cluster, [e.entity_id for e in raw.entities]
+        )
+
+        story = StoryEntry(
+            rank=1, cluster_headline="h", story_fingerprint="x",
+            action="publish", news_value_score=0.8, reasoning="r",
+            source_digests=[digest],
+        )
+        plan = CyclePublishPlan(stories=[story], reasoning="t")
+        plan_fp = recompute_plan_fingerprints(plan, [raw]).stories[0].story_fingerprint
+
+        assert tool_fp == plan_fp
+
 
 def _make_raw_article(article_id: str, url: str, entity_ids: list[str]) -> RawArticle:
     return RawArticle(
@@ -434,6 +463,89 @@ class TestRecomputePlanFingerprints:
         plan = CyclePublishPlan(stories=[story], reasoning="t")
         out = recompute_plan_fingerprints(plan)
         assert out.stories[0].story_fingerprint == _fingerprint_from_key_facts(["Some headline"])
+
+
+class TestSynthesizeMissingDigests:
+    def test_fills_digest_from_unique_title_match(self) -> None:
+        story = StoryEntry(
+            rank=1, cluster_headline="Breaking trade news",
+            story_fingerprint="x", action="publish",
+            news_value_score=0.9, reasoning="r", source_digests=[],
+        )
+        raw = _make_raw_article("raw-7", "https://espn.com/trade", [])
+        raw = raw.model_copy(update={"title": "Breaking trade news"})
+        plan = CyclePublishPlan(stories=[story], reasoning="t")
+
+        out = synthesize_missing_digests(plan, [raw])
+        assert len(out.stories[0].source_digests) == 1
+        d = out.stories[0].source_digests[0]
+        assert d.story_id == "raw-7"
+        assert d.url == "https://espn.com/trade"
+
+    def test_match_is_case_insensitive_and_trim(self) -> None:
+        story = StoryEntry(
+            rank=1, cluster_headline="  TRADE NEWS  ",
+            story_fingerprint="x", action="publish",
+            news_value_score=0.9, reasoning="r", source_digests=[],
+        )
+        raw = _make_raw_article("raw-1", "https://espn.com/x", [])
+        raw = raw.model_copy(update={"title": "Trade News"})
+        out = synthesize_missing_digests(
+            CyclePublishPlan(stories=[story], reasoning="t"), [raw]
+        )
+        assert out.stories[0].source_digests[0].story_id == "raw-1"
+
+    def test_ambiguous_titles_are_skipped(self) -> None:
+        story = StoryEntry(
+            rank=1, cluster_headline="Same title",
+            story_fingerprint="x", action="publish",
+            news_value_score=0.9, reasoning="r", source_digests=[],
+        )
+        a = _make_raw_article("raw-1", "https://a.com/x", [])
+        a = a.model_copy(update={"title": "Same title"})
+        b = _make_raw_article("raw-2", "https://b.com/y", [])
+        b = b.model_copy(update={"title": "Same title"})
+        out = synthesize_missing_digests(
+            CyclePublishPlan(stories=[story], reasoning="t"), [a, b]
+        )
+        assert out.stories[0].source_digests == []
+
+    def test_does_not_overwrite_existing_digests(self) -> None:
+        existing = ArticleDigest(
+            story_id="orig", url="http://orig.com/x", title="t",
+            source_name="s", summary="sum", confidence=0.9, key_facts=["f"],
+        )
+        story = StoryEntry(
+            rank=1, cluster_headline="match",
+            story_fingerprint="x", action="publish",
+            news_value_score=0.9, reasoning="r", source_digests=[existing],
+        )
+        raw = _make_raw_article("raw-1", "https://other.com/x", [])
+        raw = raw.model_copy(update={"title": "match"})
+        out = synthesize_missing_digests(
+            CyclePublishPlan(stories=[story], reasoning="t"), [raw]
+        )
+        assert out.stories[0].source_digests == [existing]
+
+    def test_synthesis_unlocks_url_based_fingerprint(self) -> None:
+        # End-to-end: empty digests + raw article match → URL-based fp.
+        story = StoryEntry(
+            rank=1, cluster_headline="LT in hospital",
+            story_fingerprint="old", action="publish",
+            news_value_score=0.5, reasoning="r", source_digests=[],
+        )
+        raw = _make_raw_article(
+            "raw-1", "https://espn.com/lt-hospital", ["player:001"]
+        )
+        raw = raw.model_copy(update={"title": "LT in hospital"})
+        plan = CyclePublishPlan(stories=[story], reasoning="t")
+
+        synthesized = synthesize_missing_digests(plan, [raw])
+        out = recompute_plan_fingerprints(synthesized, [raw])
+        assert (
+            out.stories[0].story_fingerprint
+            == compute_story_fingerprint(["https://espn.com/lt-hospital"], ["player:001"])
+        )
 
 
 class TestUrlOverlapRatio:
