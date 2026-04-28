@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
@@ -113,17 +114,32 @@ class _FakeContentClient:
 
 
 class _FakeKnowledgeClient:
-    def __init__(self, by_id: dict[str, KnowledgeResult | Exception]) -> None:
+    def __init__(
+        self,
+        by_id: dict[str, KnowledgeResult | Exception],
+        *,
+        delay_seconds: float = 0.0,
+    ) -> None:
         self._by_id = by_id
+        self._delay_seconds = delay_seconds
         self.closed = False
+        self.in_flight = 0
+        self.max_in_flight = 0
 
     async def extract(
         self, *, article_id: str, text: str, title: str | None, url: str | None
     ) -> KnowledgeResult:
-        value = self._by_id[article_id]
-        if isinstance(value, Exception):
-            raise value
-        return value
+        self.in_flight += 1
+        self.max_in_flight = max(self.max_in_flight, self.in_flight)
+        try:
+            if self._delay_seconds:
+                await asyncio.sleep(self._delay_seconds)
+            value = self._by_id[article_id]
+            if isinstance(value, Exception):
+                raise value
+            return value
+        finally:
+            self.in_flight -= 1
 
     async def close(self) -> None:
         self.closed = True
@@ -368,6 +384,146 @@ class TestRunIngestionCycle:
         summary = await worker_module.run_ingestion_cycle(settings)
         assert summary.knowledge_failed == 1
         assert store.failures[-1][1]["stage"] == "knowledge"
+
+    async def test_knowledge_concurrent_mixed_success_failure(
+        self, settings: Settings, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """Multiple pending rows process in parallel; per-row failures
+        don't cancel other rows; final counts are deterministic."""
+        store = _FakeStore()
+        store.pending_by_status["content_ok"] = [
+            PendingArticle(id=f"art-{i}", url=f"u{i}", title="t", content="body")
+            for i in range(6)
+        ]
+        knowledge_payload = KnowledgeResult(topics=[], entities=[])
+        by_id: dict[str, KnowledgeResult | Exception] = {
+            "art-0": knowledge_payload,
+            "art-1": JobFailedError("boom"),
+            "art-2": knowledge_payload,
+            "art-3": JobFailedError("nope"),
+            "art-4": knowledge_payload,
+            "art-5": knowledge_payload,
+        }
+        knowledge_client = _FakeKnowledgeClient(by_id, delay_seconds=0.02)
+
+        monkeypatch.setattr(worker_module, "RawArticleStore", lambda **_: store)
+        monkeypatch.setattr(
+            worker_module, "NewsExtractionClient", lambda **_: _FakeNewsClient([])
+        )
+        monkeypatch.setattr(
+            worker_module, "UrlContentClient", lambda **_: _FakeContentClient({})
+        )
+        monkeypatch.setattr(
+            worker_module, "KnowledgeExtractionClient", lambda **_: knowledge_client
+        )
+
+        summary = await worker_module.run_ingestion_cycle(settings)
+
+        assert summary.knowledge_updated == 4
+        assert summary.knowledge_failed == 2
+        updated_ids = {aid for aid, _ in store.knowledge_updates}
+        assert updated_ids == {"art-0", "art-2", "art-4", "art-5"}
+        failed_ids = {
+            aid for aid, err in store.failures if err.get("stage") == "knowledge"
+        }
+        assert failed_ids == {"art-1", "art-3"}
+
+    async def test_knowledge_respects_concurrency_cap(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """In-flight count never exceeds ingestion_knowledge_max_concurrency."""
+        cap = 3
+        n = 8
+        # Set required env then override the cap.
+        monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+        monkeypatch.setenv("SUPABASE_URL", "https://test.supabase.co")
+        monkeypatch.setenv("SUPABASE_SERVICE_ROLE_KEY", "test-key")
+        monkeypatch.setenv("NEWS_EXTRACTION_SUBMIT_URL", "https://cf/news-submit")
+        monkeypatch.setenv("NEWS_EXTRACTION_POLL_URL", "https://cf/news-poll")
+        monkeypatch.setenv(
+            "URL_CONTENT_EXTRACTION_SUBMIT_URL", "https://cf/url-submit"
+        )
+        monkeypatch.setenv("URL_CONTENT_EXTRACTION_POLL_URL", "https://cf/url-poll")
+        monkeypatch.setenv("KNOWLEDGE_EXTRACTION_SUBMIT_URL", "https://cf/kn-submit")
+        monkeypatch.setenv("KNOWLEDGE_EXTRACTION_POLL_URL", "https://cf/kn-poll")
+        monkeypatch.setenv("EXTRACTION_FUNCTION_AUTH_TOKEN", "test-fn-token")
+        monkeypatch.setenv("INGESTION_KNOWLEDGE_MAX_CONCURRENCY", str(cap))
+        for key in (
+            "OPENAI_MODEL_ARTICLE_DATA_AGENT",
+            "OPENAI_MODEL_STORY_CLUSTER_AGENT",
+            "OPENAI_MODEL_EDITORIAL_ORCHESTRATOR_AGENT",
+            "OPENAI_MODEL_ARTICLE_WRITER_AGENT",
+        ):
+            monkeypatch.delenv(key, raising=False)
+        s = Settings(_env_file=None)
+        assert s.ingestion_knowledge_max_concurrency == cap
+
+        store = _FakeStore()
+        store.pending_by_status["content_ok"] = [
+            PendingArticle(id=f"a{i}", url=f"u{i}", title="t", content="body")
+            for i in range(n)
+        ]
+        payload = KnowledgeResult(topics=[], entities=[])
+        knowledge_client = _FakeKnowledgeClient(
+            {f"a{i}": payload for i in range(n)},
+            delay_seconds=0.05,
+        )
+
+        monkeypatch.setattr(worker_module, "RawArticleStore", lambda **_: store)
+        monkeypatch.setattr(
+            worker_module, "NewsExtractionClient", lambda **_: _FakeNewsClient([])
+        )
+        monkeypatch.setattr(
+            worker_module, "UrlContentClient", lambda **_: _FakeContentClient({})
+        )
+        monkeypatch.setattr(
+            worker_module, "KnowledgeExtractionClient", lambda **_: knowledge_client
+        )
+
+        summary = await worker_module.run_ingestion_cycle(s)
+
+        assert summary.knowledge_updated == n
+        assert summary.knowledge_failed == 0
+        # Cap respected, AND we did go above 1 (proves parallelism).
+        assert knowledge_client.max_in_flight <= cap
+        assert knowledge_client.max_in_flight > 1
+
+    async def test_knowledge_unexpected_exception_does_not_cancel_siblings(
+        self, settings: Settings, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """An unexpected exception (not JobFailed/JobTimeout) for one row
+        must be counted as failed without breaking the others."""
+        store = _FakeStore()
+        store.pending_by_status["content_ok"] = [
+            PendingArticle(id="ok-1", url="u1", title="t", content="body"),
+            PendingArticle(id="boom", url="u2", title="t", content="body"),
+            PendingArticle(id="ok-2", url="u3", title="t", content="body"),
+        ]
+        payload = KnowledgeResult(topics=[], entities=[])
+        knowledge_client = _FakeKnowledgeClient(
+            {
+                "ok-1": payload,
+                "boom": RuntimeError("unexpected"),
+                "ok-2": payload,
+            }
+        )
+
+        monkeypatch.setattr(worker_module, "RawArticleStore", lambda **_: store)
+        monkeypatch.setattr(
+            worker_module, "NewsExtractionClient", lambda **_: _FakeNewsClient([])
+        )
+        monkeypatch.setattr(
+            worker_module, "UrlContentClient", lambda **_: _FakeContentClient({})
+        )
+        monkeypatch.setattr(
+            worker_module, "KnowledgeExtractionClient", lambda **_: knowledge_client
+        )
+
+        summary = await worker_module.run_ingestion_cycle(settings)
+        assert summary.knowledge_updated == 2
+        assert summary.knowledge_failed == 1
+        updated_ids = {aid for aid, _ in store.knowledge_updates}
+        assert updated_ids == {"ok-1", "ok-2"}
 
     async def test_missing_config_raises(self, monkeypatch: pytest.MonkeyPatch) -> None:
         monkeypatch.setenv("OPENAI_API_KEY", "sk-test")

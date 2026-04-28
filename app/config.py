@@ -35,6 +35,7 @@ class Settings(BaseSettings):
     # verifies in its own runtime env — not a Supabase/OpenAI credential.
     extraction_function_auth_token: SecretStr | None = None
     ingestion_max_articles_per_run: int = 200
+    ingestion_knowledge_max_concurrency: int = 4
 
     top_n: int = 5
     lookback_hours: int = 2
