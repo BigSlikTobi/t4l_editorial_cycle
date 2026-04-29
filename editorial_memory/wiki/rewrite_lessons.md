@@ -8,10 +8,12 @@
 - When a source groups teams or players into a tier, ranking, or odds frame, the rewrite should explain the classification, not pretend it proves deeper quality or significance.
 - If the source includes a blunt quote or direct critique, center the piece on that exact complaint and its concrete takeaway instead of stretching it into broader analysis.
 - Avoid naming multiple players, units, or roles as if the source supported detailed breakdowns when the digest only substantiates a general diagnosis.
-- Use dismiss only when the source material cannot support a worthwhile article at all; otherwise, rewrite into a smaller, more precise note.
 - Keep headlines concrete and descriptive in thin-source situations. Prefer the classification, quote, odds frame, or core criticism itself over marketing language.
 - Strip out filler that restates the same point in slightly different words; concise source-based notes read better than inflated analysis.
 - If the digest only supports one fact, build the piece around that fact and stop there.
 - Rewrite lessons should shrink the scope, not merely soften the prose; if the source is thin, precision beats breadth.
 - If a rewrite still relies on unsupported tactical inference after one pass, dismiss it rather than forcing a publishable angle.
 - If the digest is effectively empty, generic, or only repeats a source label without any team-specific substance, treat it as a dismissal, not a rescue rewrite.
+- Dismiss when the closed-world digest cannot verify even the basic names, claims, or update being made; a story that depends on outside information is not salvageable from that material.
+- Dismiss when the story’s premise is unsupported and the copy leans only on generic tone-setting about support, focus, or locker-room vibes; without a concrete development, quote, or consequence, there is no rewriteable core.
+- Unsupported “everyone is aligned / keeping noise out” narratives are not enough on their own; if the source does not supply a real news hook, treat the item as dead on arrival.
