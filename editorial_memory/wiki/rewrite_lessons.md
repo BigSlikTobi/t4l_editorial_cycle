@@ -12,6 +12,8 @@
 - Clean approves tend to reward stories that publish only what the digest actually establishes, with no extra inference.
 - [analyst] Keep the update anchored to the named team/player frame already in the source; a concrete priority or status can be enough even when the piece is light on extra detail.
 - [insider] Clean, aligned headline/introduction pairs work when they state the confirmed development plainly and stay inside the digest.
+- [insider] A tight lede that states the expected move directly can carry the piece when the source adds no usable detail.
+- [insider] When the only confirmed fact is an expected move, a concise team-specific lede/headline pair is enough if it stays non-repetitive.
 
 ## What to avoid
 - Don’t repeat the same basic fact in the headline, intro, and body without adding new substance.
@@ -25,4 +27,4 @@
 - Don’t assume a draft needs extra explanatory texture if the source only supports the core update.
 - Avoid filler that is not tied directly to the concrete event or response.
 - Don’t frame a simple clearance as broader availability forecasting unless the source explicitly does that.
-- If the source digest is effectively empty, treat the item as non-publishable rather than inventing names, reactions, or outcomes (source-side, not fixable in prose).
+- Don’t use source-meta phrasing like “according to a report Tuesday” when the lede can state the confirmed expectation directly.
