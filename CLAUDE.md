@@ -64,6 +64,8 @@ Image is selected once (for EN) and reused by the DE article for the same story.
 
 `image_validator.does_image_match` accepts `expected_team_code` + `expected_team_name` and rejects: different-team-wordmark contradictions, portraits/mugshots, dated archival photos, low-quality. Ambiguity = accept; only positive contradiction = reject. OCR check (`image_contains_text`) accepts jersey/yard-line numbers but rejects words/wordmarks/scoreboards.
 
+Rejection `reason` strings include a telemetry-parseable prefix from a fixed set: `off-topic:`, `wrong-sport:`, `wrong-team:`, `portrait:`, `dated:`, `low-quality:`. This makes automated rejection analysis tractable without regex on free-form text.
+
 ### Agent Chain (nested agent-tools via OpenAI Agents SDK)
 
 ```
@@ -136,11 +138,30 @@ All migrations applied manually via SQL Editor (not `supabase db push`):
 
 All prompt text lives in YAML files (`editorial/prompts.yml`, `writer/prompts.yml`), loaded once via `@lru_cache`. Each module validates required prompt keys at load time. Prompt iteration does not require changing Python code.
 
-Both EN and DE `article_writer_agent` prompts include a "Beat-reporter texture" block (capped at ~15% of prose): active/specific verbs, scene/stakes language tied to source facts, sentence-length variety, and concrete nouns. The guardrail is explicit: texture rides on facts, never replaces them.
+### Persona / prompt split
 
-Both `article_writer_agent` prompts (EN + DE) also include a "Source-as-story anti-pattern" block: the publication of a source article is never the story. For roundups, rankings, and grade columns the writer must focus on THIS team's specific row (grade, rank, pick, named player), and is forbidden from sentences whose subject is the source publication or the act of publishing. A per-paragraph self-check is mandated: "what new football fact did this give the reader?"
+`writer/personas.py` style guides own **voice and character only** — written as evocative first-person sketches. The `article_writer_agent` prompt (EN + DE) owns **structure**: per-persona word-count targets, paragraph-length guidance, intro shape, opening examples, and angle defaults. This split ensures persona selection produces meaningfully differentiated articles rather than generic output.
 
-The `article_data_agent` prompt includes a "Roundup / ranking / grade extraction rule": for multi-team source pieces it must extract row-level verdicts as `key_facts`, not column-level meta. If only column-level meta is available, `content_status="thin"` + `confidence <= 0.3` is required, routing downstream to the writer's "thin → write shorter" path. The two prompts interlock.
+### article_writer_agent (EN + DE)
+
+Both prompts include:
+- A "Beat-reporter texture" block (capped at ~15% of prose): active/specific verbs, scene/stakes language tied to source facts, sentence-length variety, and concrete nouns. Texture rides on facts, never replaces them.
+- A "Source-as-story anti-pattern" block: the publication of a source article is never the story. For roundups, rankings, and grade columns the writer must focus on THIS team's specific row (grade, rank, pick, named player), and is forbidden from sentences whose subject is the source publication or the act of publishing. A per-paragraph self-check is mandated: "what new football fact did this give the reader?"
+- A `quality_gate_feedback` / rewrite handling block (the DE prompt was missing this block prior to 2026-04-28 — now mirrors EN).
+
+The DE prompt targets modern DACH NFL voices (ran.de, Detail Football, Footballerei) — direct, match-day fluency, not dry agentur tone.
+
+### article_quality_gate_agent
+
+Includes score calibration anchors and explicit hard-fail triggers so borderline scores are consistent across cycles.
+
+### editorial_memory_agent
+
+Wiki schema captures both "what works" and "what to avoid" sections. `writer/workflow.py` feeds 1-in-5 clean approves (deterministic by fingerprint hash) alongside rejections so the memory accumulates positive lessons.
+
+### article_data_agent
+
+Includes a "Roundup / ranking / grade extraction rule": for multi-team source pieces it must extract row-level verdicts as `key_facts`, not column-level meta. If only column-level meta is available, `content_status="thin"` + `confidence <= 0.3` is required, routing downstream to the writer's "thin → write shorter" path. Interlocks with the writer prompts.
 
 ## Config
 
