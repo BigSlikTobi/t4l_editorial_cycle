@@ -1,28 +1,25 @@
-# Rewrite And Dismissal Lessons
+# Editorial Style Wiki
 
-- Favor source-faithful rewrites when the article has one solid news peg but the digest is thin. Tighten the scope instead of expanding into analysis the source does not support.
-- Lead with the concrete classification, quote, or fact the source actually provides; do not bury the only usable detail under generic commentary.
-- In breaking-news updates, use a clean wire-style lead and stop at the confirmed development. If the source only says someone is stepping away, do not imply ripple effects, vacancy details, or personnel consequences without support.
-- When the core news is a death or other obituary-style update, make the headline and first sentence do the work. Keep the intro factual, name the relevant team or audience connection, and avoid reflective filler that adds no source-backed detail.
-- Avoid repeating the headline’s claim in new wording without adding evidence or a sharper angle. If the draft mostly paraphrases itself, it needs a narrower structure.
-- Be cautious with evaluative phrases like “upside,” “true contender,” or “work to do” unless the source explicitly supports that framing.
-- Do not invent roster-strength, scheme, betting, timing, protection, rhythm, contender-path, or eligibility-impact analysis from a sparse digest. Keep claims tethered to what the source actually says.
-- When a source groups teams or players into a tier, ranking, or odds frame, the rewrite should explain the classification, not pretend it proves deeper quality or significance.
-- If the source includes a blunt quote or direct critique, center the piece on that exact complaint and its concrete takeaway instead of stretching it into broader analysis.
-- Avoid naming multiple players, units, or roles as if the source supported detailed breakdowns when the digest only substantiates a general diagnosis.
-- Keep headlines concrete and descriptive in thin-source situations. Prefer the classification, quote, odds frame, or core criticism itself over marketing language.
-- Strip out filler that restates the same point in slightly different words; concise source-based notes read better than inflated analysis.
-- If the digest only supports one fact, build the piece around that fact and stop there.
-- Rewrite lessons should shrink the scope, not merely soften the prose; if the source is thin, precision beats breadth.
-- Dismiss when a story is basically a notice of a ranking, list, or board with no supporting facts, consequence, or angle beyond the top names.
-- Dismiss when the story is just a bare announcement or role change with no timing, reason, replacement, or consequence to develop.
-- Dismiss bare status-change stories when the only supported update is that someone is stepping away, and the source gives no timing, reason, replacement, or team impact to develop.
-- Dismiss list-style “way-too-early” prospect boards or draft rankings when they only surface headline names and offer no substantive facts, consequences, or team-specific angle to build a worthwhile article.
-- If a rewrite still relies on unsupported tactical inference after one pass, dismiss it rather than forcing a publishable angle.
-- If the digest is effectively empty, generic, or only repeats a source label without any team-specific substance, treat it as a dismissal, not a rescue rewrite.
-- Dismiss when the closed-world digest cannot verify even the basic names, claims, or update being made; a story that depends on outside information is not salvageable from that material.
-- Dismiss when the story’s premise is unsupported and the copy leans only on generic tone-setting about support, focus, or locker-room vibes; without a concrete development, quote, or consequence, there is no rewriteable core.
-- Unsupported “everyone is aligned / keeping noise out” narratives are not enough on their own; if the source does not supply a real news hook, treat the item as dead on arrival.
-- Dismiss when the item is just a thin obituary or remembrance with no usable detail beyond the death itself and no meaningful team-specific connection to develop.
-- Dismiss when the digest is empty or clearly mismatched to the headline so the claimed transaction, move, or update has no grounded support; if the source material does not verify the story being told, it is not rewriteable.
-- A solid obituary-style item can be a rewrite when it has a clear NFL or team connection and the headline/intro stay tightly grounded; do not dismiss a death notice just because it is concise.
+## What works (keep doing)
+- Lead with the concrete event or fact the source actually supports; clean, grounded openers are the safest path when the digest is thin.
+- Keep draft-reaction pieces short and direct: one concrete selection, quote, or reaction can be enough if the story stays tightly scoped.
+- Use the headline and intro to carry the core news so the body does not have to rescue a weak setup.
+- When source support is limited, narrow the piece instead of widening into analysis or atmosphere.
+- Favor source-faithful rewrites over trying to manufacture a bigger angle from a small digest.
+- If the source only provides one usable signal, build the story around that signal and stop there.
+- Grounded stories score well when they avoid speculation and stay close to the supplied facts.
+- Clear, direct phrasing beats meta or overly reflective framing in thin-source articles.
+- Clean approves tend to reward stories that publish only what the digest actually establishes, with no extra inference.
+
+## What to avoid
+- Don’t repeat the same basic fact in the headline, intro, and body without adding new substance.
+- Don’t pad thin draft-reaction stories with generic filler like vague weight, familiarity, or atmosphere unless the source explicitly supports it.
+- Don’t widen a sparse source into broader commentary, analysis, or implied significance that the digest does not establish.
+- Avoid meta-sounding framing that draws attention to the construction of the story instead of the news itself.
+- Don’t let a rewrite merely soften the prose; it should make the scope tighter and more precise.
+- Don’t use unsupported evaluative language or implied takeaways when the source only gives a bare reaction.
+- Don’t force multiple angles from one small fact pattern; that usually produces repetition instead of value.
+- Don’t let repetition substitute for evidence.
+- Don’t assume a draft reaction needs extra explanatory texture if the source only supports the pick and the reaction.
+- Avoid filler that is not tied directly to the concrete event or response.
+- If the source digest is effectively empty, treat the item as non-publishable rather than inventing names, reactions, or outcomes (source-side, not fixable in prose).
