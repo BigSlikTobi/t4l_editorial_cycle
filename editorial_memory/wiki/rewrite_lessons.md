@@ -3,6 +3,7 @@
 - Favor source-faithful rewrites when the article has one solid news peg but the digest is thin. Tighten the scope instead of expanding into analysis the source does not support.
 - Lead with the concrete classification, quote, or fact the source actually provides; do not bury the only usable detail under generic commentary.
 - In breaking-news updates, use a clean wire-style lead and stop at the confirmed development. If the source only says someone is stepping away, do not imply ripple effects, vacancy details, or personnel consequences without support.
+- When the core news is a death or other obituary-style update, make the headline and first sentence do the work. Keep the intro factual, name the relevant team or audience connection, and avoid reflective filler that adds no source-backed detail.
 - Avoid repeating the headline’s claim in new wording without adding evidence or a sharper angle. If the draft mostly paraphrases itself, it needs a narrower structure.
 - Be cautious with evaluative phrases like “upside,” “true contender,” or “work to do” unless the source explicitly supports that framing.
 - Do not invent roster-strength, scheme, betting, timing, protection, rhythm, contender-path, or eligibility-impact analysis from a sparse digest. Keep claims tethered to what the source actually says.
@@ -13,10 +14,15 @@
 - Strip out filler that restates the same point in slightly different words; concise source-based notes read better than inflated analysis.
 - If the digest only supports one fact, build the piece around that fact and stop there.
 - Rewrite lessons should shrink the scope, not merely soften the prose; if the source is thin, precision beats breadth.
+- Dismiss when a story is basically a notice of a ranking, list, or board with no supporting facts, consequence, or angle beyond the top names.
 - Dismiss when the story is just a bare announcement or role change with no timing, reason, replacement, or consequence to develop.
+- Dismiss bare status-change stories when the only supported update is that someone is stepping away, and the source gives no timing, reason, replacement, or team impact to develop.
+- Dismiss list-style “way-too-early” prospect boards or draft rankings when they only surface headline names and offer no substantive facts, consequences, or team-specific angle to build a worthwhile article.
 - If a rewrite still relies on unsupported tactical inference after one pass, dismiss it rather than forcing a publishable angle.
 - If the digest is effectively empty, generic, or only repeats a source label without any team-specific substance, treat it as a dismissal, not a rescue rewrite.
 - Dismiss when the closed-world digest cannot verify even the basic names, claims, or update being made; a story that depends on outside information is not salvageable from that material.
 - Dismiss when the story’s premise is unsupported and the copy leans only on generic tone-setting about support, focus, or locker-room vibes; without a concrete development, quote, or consequence, there is no rewriteable core.
 - Unsupported “everyone is aligned / keeping noise out” narratives are not enough on their own; if the source does not supply a real news hook, treat the item as dead on arrival.
-- Dismiss bare status-change stories when the only supported update is that someone is stepping away, and the source gives no timing, reason, replacement, or team impact to develop.
+- Dismiss when the item is just a thin obituary or remembrance with no usable detail beyond the death itself and no meaningful team-specific connection to develop.
+- Dismiss when the digest is empty or clearly mismatched to the headline so the claimed transaction, move, or update has no grounded support; if the source material does not verify the story being told, it is not rewriteable.
+- A solid obituary-style item can be a rewrite when it has a clear NFL or team connection and the headline/intro stay tightly grounded; do not dismiss a death notice just because it is concise.
