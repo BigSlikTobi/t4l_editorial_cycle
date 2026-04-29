@@ -1,14 +1,15 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the exact verified development plainly; concrete news beats broad setup.
+- Lead with the verified development plainly; concrete news beats broad setup.
 - Keep the headline and intro aligned on the same core fact, but make each line add something new rather than repeating it.
 - Stay tightly grounded in the source even when the story feels thin; restraint can be the right call.
 - Direct, news-first phrasing tends to work better than generic label-heavy copy.
 - When the source supports a single core development, build around that and stop there.
 - A concrete team/player or personnel hook can carry a thin source digest if the lead names it cleanly.
 - [analyst] A personnel move works when the intro sharpens the decision point instead of just restating the move.
-- [insider] A verified team-linked milestone or career announcement can carry the piece if the lead names it directly and cleanly.
+- [insider] A verified extension, milestone, or role change can carry the piece if the lead stays tightly on that one development.
+- [insider] Appropriate hedging is a strength when the source is limited but the extension/status change is clear.
 - [columnist] A formal honor or role-change works best when the opening makes the action the hook, not just the subject’s identity.
 - Clean approve pieces often succeed by being specific without overexplaining.
 
@@ -23,4 +24,5 @@
 - Don’t drift beyond a thin source digest just to manufacture extra substance.
 - Don’t invent timeline, candidates, or added developments when the source is only reporting a status change.
 - [analyst] Don’t pad a personnel-status update with extra context that isn’t doing new work; tighten around the decision point instead.
-- [insider] Don’t bury the actual honor, milestone, or retirement under generic connection-first framing.
+- [insider] Don’t bury the actual honor, milestone, extension, or retirement under generic connection-first framing.
+- Don’t add unsupported roster, division, or opponent context when the digest only backs the extension itself.
