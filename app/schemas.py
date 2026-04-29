@@ -51,6 +51,7 @@ class ArticleDigestAgentResult(BaseModel):
     key_facts: list[str] = Field(default_factory=list)
     confidence: float = Field(ge=0.0, le=1.0)
     content_status: Literal["full", "thin", "missing"] = "full"
+    team_mentions: list[str] = Field(default_factory=list)
 
 
 class ArticleDigest(BaseModel):

@@ -152,7 +152,7 @@ class ImageValidator:
             return verdict.matches, verdict.reason
         except Exception as exc:
             logger.warning("Image match validation failed: %s", exc)
-            return False, f"validator error: {exc}"
+            return False, f"low-quality: validator error: {exc}"
 
     async def image_contains_text(self, image_url: str) -> tuple[bool, str]:
         """Return (contains_text, notes). Fail-closed: error → (True, reason) so
@@ -218,4 +218,4 @@ class ImageValidator:
             return verdict.contains_text, verdict.notes
         except Exception as exc:
             logger.warning("OCR validation failed, treating as contains_text=True: %s", exc)
-            return True, f"validator error: {exc}"
+            return True, f"wordmark: validator error: {exc}"
