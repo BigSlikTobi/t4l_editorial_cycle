@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import dataclasses
+import hashlib
 import json
 import logging
 import os
@@ -262,7 +263,12 @@ class WriterWorkflow:
         rewrite_attempt: int,
     ) -> None:
         if decision.decision == "approve" and rewrite_attempt == 0:
-            return
+            # Sample 1 in 5 clean approves so the memory has positive examples
+            # to extract "what works" lessons from. Deterministic by fingerprint
+            # so reruns yield the same selection.
+            fp_hash = int(hashlib.sha256(story.story_fingerprint.encode()).hexdigest()[:8], 16)
+            if fp_hash % 5 != 0:
+                return
 
         event_markdown = build_feedback_event_markdown(
             cycle_id=cycle_id,
