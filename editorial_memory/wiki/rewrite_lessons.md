@@ -2,6 +2,7 @@
 
 - Favor source-faithful rewrites when the article has one solid news peg but the digest is thin. Tighten the scope instead of expanding into analysis the source does not support.
 - Lead with the concrete classification, quote, or fact the source actually provides; do not bury the only usable detail under generic commentary.
+- In breaking-news updates, use a clean wire-style lead and stop at the confirmed development. If the source only says someone is stepping away, do not imply ripple effects, vacancy details, or personnel consequences without support.
 - Avoid repeating the headline’s claim in new wording without adding evidence or a sharper angle. If the draft mostly paraphrases itself, it needs a narrower structure.
 - Be cautious with evaluative phrases like “upside,” “true contender,” or “work to do” unless the source explicitly supports that framing.
 - Do not invent roster-strength, scheme, betting, timing, protection, rhythm, contender-path, or eligibility-impact analysis from a sparse digest. Keep claims tethered to what the source actually says.
@@ -12,8 +13,10 @@
 - Strip out filler that restates the same point in slightly different words; concise source-based notes read better than inflated analysis.
 - If the digest only supports one fact, build the piece around that fact and stop there.
 - Rewrite lessons should shrink the scope, not merely soften the prose; if the source is thin, precision beats breadth.
+- Dismiss when the story is just a bare announcement or role change with no timing, reason, replacement, or consequence to develop.
 - If a rewrite still relies on unsupported tactical inference after one pass, dismiss it rather than forcing a publishable angle.
 - If the digest is effectively empty, generic, or only repeats a source label without any team-specific substance, treat it as a dismissal, not a rescue rewrite.
 - Dismiss when the closed-world digest cannot verify even the basic names, claims, or update being made; a story that depends on outside information is not salvageable from that material.
 - Dismiss when the story’s premise is unsupported and the copy leans only on generic tone-setting about support, focus, or locker-room vibes; without a concrete development, quote, or consequence, there is no rewriteable core.
 - Unsupported “everyone is aligned / keeping noise out” narratives are not enough on their own; if the source does not supply a real news hook, treat the item as dead on arrival.
+- Dismiss bare status-change stories when the only supported update is that someone is stepping away, and the source gives no timing, reason, replacement, or team impact to develop.
