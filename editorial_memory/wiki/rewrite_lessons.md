@@ -12,7 +12,7 @@
 - [insider] Appropriate hedging is a strength when the source is limited but the status change is clear.
 - Strong wire-style ledes work best when they match the core news without adding unsupported color.
 - Supported quotes can work as the whole frame when they are the only factual backbone and the copy stays inside them.
-- [analyst] Tight roster-status updates work best when they stay on the decision point and avoid extra context that does no new work.
+- [insider] Clear team-specific stakes and a clean breaking-news cadence help when the source digest is narrow.
 
 ## What to avoid
 - Don’t lead with broad identity or era language when the source gives a more concrete development.
