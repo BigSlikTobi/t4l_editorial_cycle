@@ -8,11 +8,13 @@
 - When the source supports a single core development, build around that and stop there.
 - A concrete team/player or personnel hook can carry a thin source digest if the lead names it cleanly.
 - Clean approve pieces often succeed by being specific without overexplaining.
-- [insider] A verified extension, milestone, role change, or retirement can carry the piece if the lead stays tightly on that one development.
+- [insider] A verified extension, milestone, role change, retirement, or status update can carry the piece if the lead stays tightly on that one development.
 - [insider] Appropriate hedging is a strength when the source is limited but the status change is clear.
 - Strong wire-style ledes work best when they match the core news without adding unsupported color.
 - Supported quotes can work as the whole frame when they are the only factual backbone and the copy stays inside them.
 - [insider] Clear team-specific stakes and a clean breaking-news cadence help when the source digest is narrow.
+- Direct public support or endorsement quotes can carry a piece when they are the verified core fact; keep the framing simple and let the quote do the work.
+- [columnist] A columnist voice can work when it stays anchored to the one supported quote and avoids stretching into broader implications.
 
 ## What to avoid
 - Don’t lead with broad identity or era language when the source gives a more concrete development.
@@ -25,9 +27,14 @@
 - Don’t drift beyond a thin source digest just to manufacture extra substance.
 - Don’t invent timeline, candidates, or added developments when the source is only reporting a status change.
 - [analyst] Don’t pad a personnel-status update with extra context that isn’t doing new work; tighten around the decision point instead.
-- Don’t bury the actual honor, milestone, extension, or retirement under generic connection-first framing.
+- Don’t bury the actual honor, milestone, extension, retirement, or status update under generic connection-first framing.
 - Don’t add unsupported narrative flourishes about role, impact, or how a quote travels beyond the building when the digest is effectively empty.
 - Don’t build a story around a quote alone if the source digest provides no real factual backbone beyond the headline-level claim.
 - [columnist] Don’t lean on interpretation or significance when the reporting basis is too thin; keep the piece inside what the source actually supports.
 - Don’t name an unsupported personnel detail as part of the discussion unless the digest actually backs it up.
 - [source-side, not fixable in prose] If the digest is effectively empty, treat it as a sourcing problem rather than trying to embellish around it.
+- Don’t repeat the same retirement/send-off fact in the headline, intro, and first sentence; one clean setup is enough, then move to source-backed detail.
+- [columnist] Don’t let a thin, reflective angle turn into filler atmosphere; if the piece is grounded on one end-of-career moment, keep the prose tight and concrete.
+- Don’t frame a verified support quote as if it proves a wider scandal or controversy unless the digest explicitly supports that context; cut the unsupported implication and keep the piece inside the quoted backing.
+- [source-side, not fixable in prose] Don’t try to salvage a retirement or send-off story when the digest is missing or unusable; there is no factual base to write from.
+- [columnist] Don’t expand a simple public endorsement quote into scandal-fallout interpretation unless the source explicitly provides that context.
