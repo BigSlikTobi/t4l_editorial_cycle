@@ -11,6 +11,8 @@
 - [insider] A verified extension, milestone, role change, or retirement can carry the piece if the lead stays tightly on that one development.
 - [insider] Appropriate hedging is a strength when the source is limited but the status change is clear.
 - Strong wire-style ledes work best when they match the core news without adding unsupported color.
+- Supported quotes can work as the whole frame when they are the only factual backbone and the copy stays inside them.
+- [analyst] Tight roster-status updates work best when they stay on the decision point and avoid extra context that does no new work.
 
 ## What to avoid
 - Don’t lead with broad identity or era language when the source gives a more concrete development.
@@ -23,5 +25,9 @@
 - Don’t drift beyond a thin source digest just to manufacture extra substance.
 - Don’t invent timeline, candidates, or added developments when the source is only reporting a status change.
 - [analyst] Don’t pad a personnel-status update with extra context that isn’t doing new work; tighten around the decision point instead.
-- [insider] Don’t bury the actual honor, milestone, extension, or retirement under generic connection-first framing.
-- Don’t add unsupported roster, division, or opponent context when the digest only backs the status change itself.
+- Don’t bury the actual honor, milestone, extension, or retirement under generic connection-first framing.
+- Don’t add unsupported narrative flourishes about role, impact, or how a quote travels beyond the building when the digest is effectively empty.
+- Don’t build a story around a quote alone if the source digest provides no real factual backbone beyond the headline-level claim.
+- [columnist] Don’t lean on interpretation or significance when the reporting basis is too thin; keep the piece inside what the source actually supports.
+- Don’t name an unsupported personnel detail as part of the discussion unless the digest actually backs it up.
+- [source-side, not fixable in prose] If the digest is effectively empty, treat it as a sourcing problem rather than trying to embellish around it.
