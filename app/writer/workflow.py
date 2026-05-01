@@ -189,7 +189,7 @@ class WriterWorkflow:
             metadata={
                 "fingerprint": story.story_fingerprint,
                 "language": article.language,
-                "rewrite_attempt": rewrite_attempt,
+                "rewrite_attempt": str(rewrite_attempt),
             },
         )
         try:
@@ -292,7 +292,7 @@ class WriterWorkflow:
                     metadata={
                         "fingerprint": story.story_fingerprint,
                         "decision": decision.decision,
-                        "rewrite_attempt": rewrite_attempt,
+                        "rewrite_attempt": str(rewrite_attempt),
                     },
                 )
                 result = await Runner.run(

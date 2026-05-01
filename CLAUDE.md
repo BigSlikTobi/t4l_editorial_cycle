@@ -159,6 +159,12 @@ Includes score calibration anchors and explicit hard-fail triggers so borderline
 
 Wiki schema captures both "what works" and "what to avoid" sections. `writer/workflow.py` feeds 1-in-5 clean approves (deterministic by fingerprint hash) alongside rejections so the memory accumulates positive lessons.
 
+Memory injection is controlled by two caps in `app/writer/editorial_memory.py`:
+- `MAX_WIKI_PAGE_CHARS = 7000` — maximum chars read from any single wiki page before truncation (raised from 2400 on 2026-05-01 after `rewrite_lessons.md` grew past the old cap and was silently cut).
+- `MAX_MEMORY_CHARS = 12000` — maximum total chars injected across all wiki pages combined.
+
+A wiki-summary-agent (smarter alternative) was deferred; a remote agent fires 2026-05-15 to evaluate whether to build it.
+
 ### article_data_agent
 
 Includes a "Roundup / ranking / grade extraction rule": for multi-team source pieces it must extract row-level verdicts as `key_facts`, not column-level meta. If only column-level meta is available, `content_status="thin"` + `confidence <= 0.3` is required, routing downstream to the writer's "thin → write shorter" path. Interlocks with the writer prompts.
