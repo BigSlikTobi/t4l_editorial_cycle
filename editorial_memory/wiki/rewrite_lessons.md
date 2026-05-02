@@ -1,34 +1,24 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the exact reported decision, quote, or development; clean news beats interpretive setup.
-- Keep headline and lede on the same core fact, but let each sentence add one new detail.
-- When the source is thin, a tightly framed status or personnel update can still carry the piece if you stay exact.
-- Use hedging only as needed; precision is stronger than over-explaining.
-- Strong wire-style ledes work best when they match the source without adding color or speculation.
-- A single confirmed development is often enough; build around it and stop there.
-- Direct, news-first phrasing tends to outperform generic label-heavy copy.
-- A clear source-matched stance can work when the lede sticks to one supported fact and doesn’t inflate the report.
-- A precise, no-apologies confirmation can be enough to justify publication when it stays tightly inside the source.
-- [analyst] Keep the lede anchored to one supported fact and avoid inflating a source-matched stance into broader implications.
-- [insider] A verified option decision, extension, milestone, role change, retirement, reunion, or status update can anchor the story if the lede stays on that one development.
-- [columnist] A vivid quote-led or opinionated hook can work when it stays anchored to the exact quoted language and avoids embellishment.
+- Lead with the strongest confirmed decision point up front; a concrete yes/no or bid-style choice carries the piece.
+- Keep the lede tightly inside the source facts before adding context or implications.
+- Use exact mechanics, status, or timing details when the source supports them; specificity lifts trust.
+- Add roster or team context only when it helps explain the decision and stays source-bound.
+- A focused draft reads well when it stops at the confirmed facts instead of stretching into speculation.
+- Let the headline and lede point to the same core development, while the body adds only verified support.
+- Strong grounding can outweigh modest execution issues when the reporting stays clean and precise.
+- [analyst] Build around the actual confirmed decision or move, not a generic preview or broad theme.
+- [analyst] Weave concrete roster context and bid/decision mechanics into the body when they are the most newsworthy confirmed facts.
 
 ## What to avoid
-- Don’t turn a specific reported decision into broader contract or roster consequences unless the source explicitly supports them.
-- Don’t make the headline and intro repeat the same announcement in slightly different words.
-- Don’t widen a focused personnel item into bigger significance or next-step implications without source backing.
-- Don’t rely on generic phrasing when the source supports a sharper, source-backed hook.
-- Don’t blur a concrete development into soft “set for” or similar tentative framing when the action is firmer.
-- Don’t force multiple angles from one clear fact pattern.
-- Don’t add unsupported detail about other named figures if the source only references them secondarily.
-- Don’t treat a missing or thin digest as if it supplies full factual support; keep the story strictly to what’s actually supported.
-- Don’t drift beyond the reported decision just to manufacture extra substance.
-- Don’t pad a quote-led hook with extra interpretive repetition; keep the commentary lean.
-- Don’t repeat the same source-backed point in the lede and first paragraph without advancing to a concrete new detail.
-- [source-side, not fixable in prose] If the digest is bare or missing factual support, treat it as a sourcing problem rather than trying to embellish around it.
-- [source-side, not fixable in prose] Don’t assign team or field details the source doesn’t support; that’s a metadata/source-setup issue, not a prose fix.
-- [analyst] Don’t restate the same source-backed stance in the lede and headline without adding a new concrete detail.
-- [columnist] Don’t add broad context or coach-intent assumptions around a quote-led hook unless the digest explicitly supports that framing.
-- [analyst] Don’t let team/player context drift outside the digest; unsupported names or offense details should trigger a source-cleanup, not a rewrite.
-- [source-side, not fixable in prose] When metadata or the digest introduces conflicting facts, the right fix is source cleanup, not a prose workaround.
+- Don’t invent transaction packages, contract details, or team links the digest does not support.
+- Don’t widen one confirmed note into a broader market, depth-chart, or strategy story without source backing.
+- Don’t stack unsupported claims or imagined next steps around a single source-backed hook.
+- Don’t overstate certainty when the source only supports a conditional status update or possible move.
+- Don’t use vague framing when the story can be anchored to a specific eligibility, risk, or decision mechanism.
+- Don’t present a player as a clean fit if the source-supported angle is actually an availability, investigation, or eligibility issue.
+- [source-side, not fixable in prose] If the digest is missing or conflicting on key eligibility or identity details, the fix is source cleanup, not prose recovery.
+- [source-side, not fixable in prose] Erroneous player-team metadata should be corrected upstream rather than patched with wording tricks.
+- [analyst] Don’t broaden a supported decision note into a full strategic read unless the digest explicitly provides that evidence.
+- [analyst] Don’t leave concrete roster or mechanics details out of the body when they are the most newsworthy confirmed facts.
