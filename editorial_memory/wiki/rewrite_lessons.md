@@ -8,6 +8,9 @@
 - Strong wire-style ledes work best when they match the source without adding color or speculation.
 - A single confirmed development is often enough; build around it and stop there.
 - Direct, news-first phrasing tends to outperform generic label-heavy copy.
+- A clear source-matched stance can work when the lede sticks to one supported fact and doesn’t try to inflate the report.
+- A precise, no-apologies style confirmation can be enough to justify publication when it stays tightly inside the source.
+- [analyst] Keep the lede anchored to one supported fact and avoid inflating a source-matched stance into broader implications.
 - [insider] A verified option decision, extension, milestone, role change, retirement, reunion, or status update can anchor the story if the lede stays on that one development.
 - [columnist] A vivid quote-led or opinionated hook can work when it stays anchored to the exact quoted language and avoids embellishment.
 
@@ -19,9 +22,10 @@
 - Don’t blur a concrete development into soft “set for” or similar tentative framing when the action is firmer.
 - Don’t force multiple angles from one clear fact pattern.
 - Don’t add unsupported detail about other named figures if the source only references them secondarily.
+- Don’t treat a missing or thin digest as if it supplies full factual support; keep the story strictly to what’s actually supported.
 - Don’t drift beyond the reported decision just to manufacture extra substance.
-- Don’t invent contract consequences, timeline, or added developments from a single option call.
 - Don’t pad a quote-led hook with extra interpretive repetition; keep the commentary lean.
 - [source-side, not fixable in prose] If the digest is bare or missing factual support, treat it as a sourcing problem rather than trying to embellish around it.
 - [source-side, not fixable in prose] Don’t assign team or field details the source doesn’t support; that’s a metadata/source-setup issue, not a prose fix.
+- [analyst] Don’t restate the same source-backed stance in the lede and headline without adding a new concrete detail.
 - [columnist] Don’t add broad context or coach-intent assumptions around a quote-led hook unless the digest explicitly supports that framing.
