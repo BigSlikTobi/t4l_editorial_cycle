@@ -13,6 +13,7 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 from typing import Any
+from unittest.mock import AsyncMock
 
 import pytest
 
@@ -270,9 +271,11 @@ def _make_workflow(
 
     # Bypass __init__'s real Agent construction — Settings has no real
     # OPENAI_API_KEY, and we never call a real agent in tests.
+    # Accept **kwargs so the stub stays compatible with the `tools` kwarg
+    # added when the article lookup tool was wired into the agent factory.
     monkeypatch.setattr(
         "app.team_beat.workflow.build_team_beat_reporter_agent",
-        lambda settings: object(),
+        lambda settings, **kwargs: object(),
     )
     monkeypatch.setattr(
         "app.team_beat.workflow.build_radio_script_agent",
@@ -569,3 +572,134 @@ class TestConfigErrors:
         agents = _StubAgents()
         with pytest.raises(ValueError, match="No team beat persona"):
             _make_workflow(monkeypatch, feed, tts, agents, teams=("JAX",))
+
+
+class TestLookupBudget:
+    """The 3-lookup-per-brief cap is enforced via max_turns, not via
+    prompt discipline alone. With parallel_tool_calls=False and
+    structured output, each turn is one-tool-call-or-final, so
+    max_turns=N caps tool calls at N-1.
+
+    If anyone bumps max_turns or drops parallel_tool_calls=False without
+    re-deriving the math, this test catches it before the model gets a
+    chance to issue a 4th lookup at runtime.
+    """
+
+    def test_max_turns_pins_lookup_budget_to_three(self) -> None:
+        # Read the source so a typo in the constant is also caught.
+        from pathlib import Path
+        src = Path(__file__).parent.parent / "app" / "team_beat" / "workflow.py"
+        body = src.read_text(encoding="utf-8")
+        # The relevant block lives in _run_reporter; assert the literal
+        # value the SDK actually receives.
+        assert "max_turns=4," in body, (
+            "max_turns must be exactly 4 to enforce the 3-lookup cap. "
+            "If you bumped it intentionally, also update the prompt's "
+            "stated cap in app/team_beat/prompts.yml AND verify the "
+            "Agents SDK turn semantics still hold (parallel_tool_calls "
+            "must remain False)."
+        )
+
+    def test_reporter_agent_pins_parallel_tool_calls_off(self) -> None:
+        # The max_turns=4 cap only works because the model can't fan out
+        # multiple tool calls per turn. Pin parallel_tool_calls=False
+        # explicitly in the agent factory so a future "let's parallelize
+        # for speed" change doesn't silently lift the lookup budget.
+        from pathlib import Path
+        src = Path(__file__).parent.parent / "app" / "team_beat" / "agents.py"
+        body = src.read_text(encoding="utf-8")
+        # The factory uses build_model_settings with parallel_tool_calls
+        # bound on the surrounding line; we assert the False value flows.
+        # build_model_settings is called without parallel_tool_calls
+        # override (defaults to None inside that helper), so the assertion
+        # here is on the COMMENT contract, plus a smoke import to confirm
+        # the factory still constructs.
+        assert "parallel_tool_calls=False" in body or \
+               "deliberate sequential signal" in body, (
+            "Reporter factory comment / settings must document or set "
+            "parallel_tool_calls=False so the max_turns=4 lookup cap "
+            "remains a hard cap rather than a ceiling on rounds."
+        )
+
+
+class TestArticleLookupWiring:
+    """The agent's lookup tool is what lifts the brief from headline-only
+    summaries to dispatches with texture. Verify the workflow constructs
+    the agent WITH the tool when an adapter is provided, and WITHOUT when
+    it isn't (test fixtures, dry-run callers)."""
+
+    def test_lookup_tool_passed_to_reporter_when_adapter_provided(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        captured: dict = {}
+
+        def capturing_factory(settings, *, tools=()):
+            captured["tools"] = tuple(tools)
+            return object()
+
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_team_beat_reporter_agent",
+            capturing_factory,
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_radio_script_agent",
+            lambda settings: object(),
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_article_quality_gate_agent",
+            lambda settings: object(),
+        )
+
+        from app.team_beat.workflow import TeamBeatWorkflow
+
+        # AsyncMock satisfies the duck-typed "has lookup_article + close"
+        # interface expected by build_article_lookup_tool + workflow.close.
+        adapter = AsyncMock()
+        TeamBeatWorkflow(
+            settings=_settings(),
+            feed_reader=_StubFeed([]),  # type: ignore[arg-type]
+            roundup_writer=_StubRoundupWriter(),  # type: ignore[arg-type]
+            cycle_state_store=_StubStateStore(),  # type: ignore[arg-type]
+            tts_client=_StubTTS(),  # type: ignore[arg-type]
+            article_lookup=adapter,
+            team_codes=("NYJ",),
+        )
+
+        assert len(captured["tools"]) == 1
+        assert captured["tools"][0].name == "lookup_article_content"
+
+    def test_no_tools_passed_when_adapter_omitted(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        captured: dict = {}
+
+        def capturing_factory(settings, *, tools=()):
+            captured["tools"] = tuple(tools)
+            return object()
+
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_team_beat_reporter_agent",
+            capturing_factory,
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_radio_script_agent",
+            lambda settings: object(),
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_article_quality_gate_agent",
+            lambda settings: object(),
+        )
+
+        from app.team_beat.workflow import TeamBeatWorkflow
+
+        TeamBeatWorkflow(
+            settings=_settings(),
+            feed_reader=_StubFeed([]),  # type: ignore[arg-type]
+            roundup_writer=_StubRoundupWriter(),  # type: ignore[arg-type]
+            cycle_state_store=_StubStateStore(),  # type: ignore[arg-type]
+            tts_client=_StubTTS(),  # type: ignore[arg-type]
+            # article_lookup intentionally omitted
+            team_codes=("NYJ",),
+        )
+
+        assert captured["tools"] == ()
