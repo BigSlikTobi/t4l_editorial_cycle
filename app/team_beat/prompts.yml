@@ -69,11 +69,36 @@ team_beat_reporter_agent: |
     (New York Jets, Chicago Bears).
 
   ──────────────────────────────────────────────────────────────────
+  ARTICLE LOOKUP — OPTIONAL TOOL, BUDGETED
+  ──────────────────────────────────────────────────────────────────
+  The `articles` input gives you only headlines, source name, category,
+  and entity tags — NOT the article body. To file a brief with texture
+  (specific quotes, named-source attributions, contract numbers, depth-
+  chart specifics) you MAY call:
+
+      lookup_article_content(url: string)
+
+  Discipline:
+  - HARD CAP: at most THREE lookups per brief. The lead paragraph plus
+    one or two supporting facts is plenty; lookups are for grounding
+    prose in actual reporting, not for surveying every URL.
+  - Choose the URLs MOST LOAD-BEARING for the lead. If two articles
+    cover the same news, lookup the one with the named source.
+  - Skip lookups entirely when the headline + entity tags already
+    carry the news (single transactional items: "Bears sign WR Smith
+    to 1-year deal").
+  - When you set `should_file: false`, do NOT call lookups at all —
+    they cost tokens for output that won't ship.
+  - The tool may return `{found: false}` (article body not stored).
+    That's fine — fall back to the headline you already had.
+
+  ──────────────────────────────────────────────────────────────────
   CLOSED WORLD
   ──────────────────────────────────────────────────────────────────
-  Use ONLY facts in the `articles` input. Do not add outside NFL
-  knowledge. Do not infer motivations or quotes. Paraphrasing is fine;
-  invention is not. If a source hedges, you hedge.
+  Use ONLY facts in the `articles` input OR in the bodies returned by
+  `lookup_article_content`. Do not add outside NFL knowledge. Do not
+  infer motivations or quotes. Paraphrasing is fine; invention is not.
+  If a source hedges, you hedge.
 
   Set `team_code` in the output to the input's team_code value verbatim.
 

@@ -66,12 +66,14 @@ from app.team_beat.schemas import (
     RadioScript,
     TTSItem,
 )
+from app.team_beat.tools import build_article_lookup_tool
 from app.team_beat.tts_client import TTSBatchClient, TTSBatchError
 from app.team_codes import team_full_name
 from app.writer.agents import build_article_quality_gate_agent
 
 if TYPE_CHECKING:
     from app.adapters import (
+        ArticleLookupFromDb,
         BeatCycleStateStore,
         BeatRoundupWriter,
         RawArticleDbReader,
@@ -251,6 +253,7 @@ class TeamBeatWorkflow:
         roundup_writer: "BeatRoundupWriter",
         cycle_state_store: "BeatCycleStateStore",
         tts_client: TTSBatchClient,
+        article_lookup: "ArticleLookupFromDb | None" = None,
         team_codes: tuple[str, ...] | None = None,
         lookback_hours: int = 12,
     ) -> None:
@@ -259,6 +262,11 @@ class TeamBeatWorkflow:
         self._roundup_writer = roundup_writer
         self._cycle_state_store = cycle_state_store
         self._tts_client = tts_client
+        # Optional — when present, the reporter agent gets a lookup tool
+        # so it can fetch full article bodies for the 1-3 articles it
+        # judges load-bearing for the brief. When None (test fixtures,
+        # CLI dry-runs without a DB), the agent works headline-only.
+        self._article_lookup = article_lookup
         self._team_codes = team_codes or supported_team_codes()
         self._lookback_hours = lookback_hours
 
@@ -278,7 +286,14 @@ class TeamBeatWorkflow:
             "OPENAI_API_KEY", settings.openai_api_key.get_secret_value()
         )
 
-        self._reporter_agent = build_team_beat_reporter_agent(settings)
+        reporter_tools = (
+            (build_article_lookup_tool(self._article_lookup),)
+            if self._article_lookup is not None
+            else ()
+        )
+        self._reporter_agent = build_team_beat_reporter_agent(
+            settings, tools=reporter_tools
+        )
         self._quality_gate_agent = build_article_quality_gate_agent(settings)
         self._radio_script_agent = build_radio_script_agent(settings)
 
@@ -299,11 +314,14 @@ class TeamBeatWorkflow:
             stage="team_beat_reporter",
             metadata={"team_code": work.team_code},
         )
+        # max_turns=8 budgets up to ~3 lookup_article_content tool calls
+        # plus initial reasoning + final brief output. Capped low so a
+        # mis-configured agent can't loop indefinitely on URLs.
         result = await Runner.run(
             self._reporter_agent,
             json.dumps(payload, separators=(",", ":")),
             run_config=run_config,
-            max_turns=4,
+            max_turns=8,
             auto_previous_response_id=True,
         )
         brief = coerce_output(result.final_output, BeatBrief)
@@ -703,12 +721,15 @@ class TeamBeatWorkflow:
 
     async def close(self) -> None:
         """Close all owned async resources. Safe to call multiple times."""
-        for closeable in (
+        closeables: list = [
             self._feed_reader,
             self._roundup_writer,
             self._cycle_state_store,
             self._tts_client,
-        ):
+        ]
+        if self._article_lookup is not None:
+            closeables.append(self._article_lookup)
+        for closeable in closeables:
             try:
                 await closeable.close()
             except Exception as exc:
@@ -730,6 +751,7 @@ def build_default_team_beat_workflow(
     # Local imports avoid a startup-time circular: adapters.py imports
     # team_beat.schemas; this module imports adapters only here.
     from app.adapters import (
+        ArticleLookupFromDb,
         BeatCycleStateStore,
         BeatRoundupWriter,
         RawArticleDbReader,
@@ -762,6 +784,10 @@ def build_default_team_beat_workflow(
         base_url=base_url,
         service_role_key=service_key,
     )
+    article_lookup = ArticleLookupFromDb(
+        base_url=base_url,
+        service_role_key=service_key,
+    )
     tts_client = TTSBatchClient(
         submit_url=str(settings.tts_batch_submit_url),
         poll_url=str(settings.tts_batch_poll_url),
@@ -786,6 +812,7 @@ def build_default_team_beat_workflow(
         roundup_writer=roundup_writer,
         cycle_state_store=cycle_state_store,
         tts_client=tts_client,
+        article_lookup=article_lookup,
         team_codes=team_codes,
         lookback_hours=lookback_hours,
     )

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 from typing import Any
+from unittest.mock import AsyncMock
 
 import pytest
 
@@ -270,9 +271,11 @@ def _make_workflow(
 
     # Bypass __init__'s real Agent construction — Settings has no real
     # OPENAI_API_KEY, and we never call a real agent in tests.
+    # Accept **kwargs so the stub stays compatible with the `tools` kwarg
+    # added when the article lookup tool was wired into the agent factory.
     monkeypatch.setattr(
         "app.team_beat.workflow.build_team_beat_reporter_agent",
-        lambda settings: object(),
+        lambda settings, **kwargs: object(),
     )
     monkeypatch.setattr(
         "app.team_beat.workflow.build_radio_script_agent",
@@ -569,3 +572,86 @@ class TestConfigErrors:
         agents = _StubAgents()
         with pytest.raises(ValueError, match="No team beat persona"):
             _make_workflow(monkeypatch, feed, tts, agents, teams=("JAX",))
+
+
+class TestArticleLookupWiring:
+    """The agent's lookup tool is what lifts the brief from headline-only
+    summaries to dispatches with texture. Verify the workflow constructs
+    the agent WITH the tool when an adapter is provided, and WITHOUT when
+    it isn't (test fixtures, dry-run callers)."""
+
+    def test_lookup_tool_passed_to_reporter_when_adapter_provided(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        captured: dict = {}
+
+        def capturing_factory(settings, *, tools=()):
+            captured["tools"] = tuple(tools)
+            return object()
+
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_team_beat_reporter_agent",
+            capturing_factory,
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_radio_script_agent",
+            lambda settings: object(),
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_article_quality_gate_agent",
+            lambda settings: object(),
+        )
+
+        from app.team_beat.workflow import TeamBeatWorkflow
+
+        # AsyncMock satisfies the duck-typed "has lookup_article + close"
+        # interface expected by build_article_lookup_tool + workflow.close.
+        adapter = AsyncMock()
+        TeamBeatWorkflow(
+            settings=_settings(),
+            feed_reader=_StubFeed([]),  # type: ignore[arg-type]
+            roundup_writer=_StubRoundupWriter(),  # type: ignore[arg-type]
+            cycle_state_store=_StubStateStore(),  # type: ignore[arg-type]
+            tts_client=_StubTTS(),  # type: ignore[arg-type]
+            article_lookup=adapter,
+            team_codes=("NYJ",),
+        )
+
+        assert len(captured["tools"]) == 1
+        assert captured["tools"][0].name == "lookup_article_content"
+
+    def test_no_tools_passed_when_adapter_omitted(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        captured: dict = {}
+
+        def capturing_factory(settings, *, tools=()):
+            captured["tools"] = tuple(tools)
+            return object()
+
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_team_beat_reporter_agent",
+            capturing_factory,
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_radio_script_agent",
+            lambda settings: object(),
+        )
+        monkeypatch.setattr(
+            "app.team_beat.workflow.build_article_quality_gate_agent",
+            lambda settings: object(),
+        )
+
+        from app.team_beat.workflow import TeamBeatWorkflow
+
+        TeamBeatWorkflow(
+            settings=_settings(),
+            feed_reader=_StubFeed([]),  # type: ignore[arg-type]
+            roundup_writer=_StubRoundupWriter(),  # type: ignore[arg-type]
+            cycle_state_store=_StubStateStore(),  # type: ignore[arg-type]
+            tts_client=_StubTTS(),  # type: ignore[arg-type]
+            # article_lookup intentionally omitted
+            team_codes=("NYJ",),
+        )
+
+        assert captured["tools"] == ()
