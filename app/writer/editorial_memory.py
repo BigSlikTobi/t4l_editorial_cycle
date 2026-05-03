@@ -9,8 +9,8 @@ from app.writer.personas import Persona
 WIKI_DIRNAME = "wiki"
 RAW_FEEDBACK_DIRNAME = "raw_feedback"
 REWRITE_LESSONS_FILE = "rewrite_lessons.md"
-MAX_MEMORY_CHARS = 7000
-MAX_WIKI_PAGE_CHARS = 2400
+MAX_MEMORY_CHARS = 12000
+MAX_WIKI_PAGE_CHARS = 7000
 
 
 def _read_markdown(path: Path, *, max_chars: int = MAX_WIKI_PAGE_CHARS) -> str:
