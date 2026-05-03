@@ -190,54 +190,30 @@ class _StubStateStore:
 
 
 class _StubTTS:
-    """Mirrors the split TTSBatchClient API.
+    """Mirrors the produce-only TTSBatchClient surface used by the workflow.
 
-    Knobs:
-      * ``urls`` — per-item public URLs returned by process_batch.
-      * ``raise_on_create`` / ``raise_on_process`` — exception to raise
-        from the named stage. ``raise_on_create`` of TTSBatchError is
-        treated as "create succeeded enough to know the batch_id" if
-        the exception carries one.
+    The workflow only ever calls `create_and_wait` and `close` now —
+    `process_batch` is the harvest cycle's job (covered separately in
+    test_team_beat_tts_client.py + harvest-script tests).
     """
 
     def __init__(
         self,
         *,
-        urls: dict[str, str | None] | None = None,
         raise_on_create: Exception | None = None,
-        raise_on_process: Exception | None = None,
         batch_id: str = "batches/x",
     ) -> None:
-        self._urls = urls or {}
         self._raise_create = raise_on_create
-        self._raise_process = raise_on_process
         self._batch_id = batch_id
         self.create_calls = 0
-        self.process_calls = 0
+        self.last_on_worker_stall = None
 
-    @property
-    def calls(self) -> int:
-        # Back-compat: tests that asserted "tts.calls == 1" predate the
-        # split. Treat one full create+process roundtrip as one call.
-        return self.process_calls
-
-    async def create_and_wait(self, items) -> str:
+    async def create_and_wait(self, items, *, on_worker_stall=None) -> str:
         self.create_calls += 1
+        self.last_on_worker_stall = on_worker_stall
         if self._raise_create is not None:
             raise self._raise_create
         return self._batch_id
-
-    async def process_batch(self, batch_id, item_ids, *, path_prefix_suffix=None):
-        self.process_calls += 1
-        if self._raise_process is not None:
-            raise self._raise_process
-        return TTSBatchOutcome(
-            batch_id=batch_id,
-            items=[
-                TTSResult(item_id=item_id, public_url=self._urls.get(item_id))
-                for item_id in item_ids
-            ],
-        )
 
     async def close(self) -> None: ...
 
@@ -353,34 +329,31 @@ def _script(team: str) -> RadioScript:
 
 
 class TestRunCycle:
-    async def test_both_teams_file_successfully(
+    async def test_both_teams_file_with_batch_id_audio_pending(
         self, monkeypatch: pytest.MonkeyPatch
     ) -> None:
+        """Produce cycle: brief lands, batch_id captured, audio_url=NULL.
+        Audio is filled in by the harvest cycle later — it is intentionally
+        NOT set during the produce cycle anymore."""
         feed = _StubFeed([_article("a1", "NYJ"), _article("a2", "CHI")])
         agents = _StubAgents()
         agents.briefs = {"NYJ": _filed_brief("NYJ"), "CHI": _filed_brief("CHI")}
         agents.scripts = {"NYJ": _script("NYJ"), "CHI": _script("CHI")}
-        tts = _StubTTS(urls={
-            _tts_item_id("NYJ", CYCLE_AT): "https://cdn/nyj.mp3",
-            _tts_item_id("CHI", CYCLE_AT): "https://cdn/chi.mp3",
-        })
+        tts = _StubTTS(batch_id="batches/produce-success")
         workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents)
 
         summary = await workflow.run_cycle(now=CYCLE_AT)
 
         assert summary.cycle_slot == "AM"
         assert summary.filed_count == 2
-        assert summary.no_news_count == 0
-        assert summary.error_count == 0
-        # Both roundups upserted, with their audio_urls set.
+        # Both roundups upserted with the captured batch_id and NULL audio.
         assert len(writer.upserted) == 2
-        urls = {r.team_code: r.audio_url for r in writer.upserted}
-        assert urls == {"NYJ": "https://cdn/nyj.mp3", "CHI": "https://cdn/chi.mp3"}
-        # Both cycle states recorded as filed.
-        outcomes = [s.outcome for s in state.records]
-        assert outcomes.count(BeatOutcome.FILED) == 2
-        # The dateline byline stamp is applied at persistence — every
-        # stored body starts with "Filed by " (EN) or "Bericht von " (DE).
+        for r in writer.upserted:
+            assert r.audio_url is None
+            assert r.tts_batch_id == "batches/produce-success"
+        # Cycle states recorded as filed.
+        assert sum(1 for s in state.records if s.outcome is BeatOutcome.FILED) == 2
+        # Dateline byline stamp still applied at persistence.
         for r in writer.upserted:
             assert r.en_body.startswith("Filed by ")
             assert r.de_body.startswith("Bericht von ")
@@ -395,7 +368,7 @@ class TestRunCycle:
             "CHI": _no_news_brief("CHI", "Quiet 12h window"),
         }
         agents.scripts = {"NYJ": _script("NYJ")}
-        tts = _StubTTS(urls={_tts_item_id("NYJ", CYCLE_AT): "https://cdn/nyj.mp3"})
+        tts = _StubTTS(batch_id="batches/one-team")
         workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents)
 
         summary = await workflow.run_cycle(now=CYCLE_AT)
@@ -404,7 +377,7 @@ class TestRunCycle:
         assert summary.no_news_count == 1
         # Only NYJ's roundup is written; CHI gets a no_news state row only.
         assert [r.team_code for r in writer.upserted] == ["NYJ"]
-        assert tts.calls == 1  # one batch call with one item
+        assert tts.create_calls == 1  # one batch with one item
         chi_state = next(s for s in state.records if s.team_code == "CHI")
         assert chi_state.outcome is BeatOutcome.NO_NEWS
         assert "Quiet" in chi_state.reason
@@ -417,7 +390,7 @@ class TestRunCycle:
         agents.briefs = {"CHI": _filed_brief("CHI")}
         agents.scripts = {"CHI": _script("CHI")}
         agents.reporter_raises = {"NYJ": RuntimeError("agent boom")}
-        tts = _StubTTS(urls={_tts_item_id("CHI", CYCLE_AT): "https://cdn/chi.mp3"})
+        tts = _StubTTS()
         workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents)
 
         summary = await workflow.run_cycle(now=CYCLE_AT)
@@ -430,12 +403,13 @@ class TestRunCycle:
         # CHI still went through end-to-end.
         assert [r.team_code for r in writer.upserted] == ["CHI"]
 
-    async def test_tts_create_failure_persists_briefs_with_null_audio_and_batch_id(
+    async def test_tts_create_failure_persists_diagnostic_batch_id(
         self, monkeypatch: pytest.MonkeyPatch
     ) -> None:
         """When create_and_wait raises a TTSBatchError carrying a batch_id
-        (e.g. JOB_STATE_FAILED), the batch_id still lands in team_roundup
-        so recovery can introspect it. audio_url stays NULL."""
+        (e.g. JOB_STATE_FAILED reported by Gemini), the diagnostic
+        batch_id still lands in team_roundup so the harvest cycle can
+        log the terminal failure cleanly."""
         feed = _StubFeed([_article("a1", "NYJ"), _article("a2", "CHI")])
         agents = _StubAgents()
         agents.briefs = {"NYJ": _filed_brief("NYJ"), "CHI": _filed_brief("CHI")}
@@ -450,22 +424,20 @@ class TestRunCycle:
 
         assert summary.filed_count == 2
         assert all(r.audio_url is None for r in writer.upserted)
-        # The diagnostic batch_id is preserved on every roundup row.
         assert all(r.tts_batch_id == "batches/diagnostic" for r in writer.upserted)
-        # process_batch was never called (create failed first).
-        assert tts.process_calls == 0
 
     async def test_tts_create_crash_no_batch_id_persisted(
         self, monkeypatch: pytest.MonkeyPatch
     ) -> None:
-        """When create_and_wait crashes with a non-TTSBatchError (e.g.
-        network blip, JobTimeoutError), no batch_id is available and the
-        roundup row records None — recovery requires --batch-id manually."""
+        """When create_and_wait crashes without a batch_id (e.g. submit
+        rejected, Gemini-API recovery exhausted), the roundup row records
+        None — operator must look up the batch_id by hand if recovery is
+        even possible."""
         feed = _StubFeed([_article("a1", "NYJ")])
         agents = _StubAgents()
         agents.briefs = {"NYJ": _filed_brief("NYJ")}
         agents.scripts = {"NYJ": _script("NYJ")}
-        tts = _StubTTS(raise_on_create=RuntimeError("network blip"))
+        tts = _StubTTS(raise_on_create=RuntimeError("submit rejected"))
         workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents, teams=("NYJ",))
 
         await workflow.run_cycle(now=CYCLE_AT)
@@ -473,59 +445,27 @@ class TestRunCycle:
         assert len(writer.upserted) == 1
         assert writer.upserted[0].audio_url is None
         assert writer.upserted[0].tts_batch_id is None
-        assert tts.process_calls == 0
 
-    async def test_tts_process_failure_persists_batch_id_for_recovery(
+    async def test_workflow_passes_canceler_callback_through_to_create(
         self, monkeypatch: pytest.MonkeyPatch
     ) -> None:
-        """create_and_wait succeeded → batch_id captured. process_batch
-        then crashes (the exact failure mode that prompted these fixes:
-        bucket missing, worker timeout, manifest empty). Roundup rows
-        carry the batch_id with NULL audio_url so tts_recover.py can
-        finish out-of-band."""
-        feed = _StubFeed([_article("a1", "NYJ"), _article("a2", "CHI")])
+        """The workflow's _on_worker_stall callback (which PATCHes
+        extraction_jobs to status=failed) must be wired through to
+        TTSBatchClient.create_and_wait so the client can invoke it on
+        worker stall."""
+        feed = _StubFeed([_article("a1", "NYJ")])
         agents = _StubAgents()
-        agents.briefs = {"NYJ": _filed_brief("NYJ"), "CHI": _filed_brief("CHI")}
-        agents.scripts = {"NYJ": _script("NYJ"), "CHI": _script("CHI")}
-        tts = _StubTTS(
-            batch_id="batches/recoverable",
-            raise_on_process=RuntimeError("Bucket not found"),
-        )
-        workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents)
+        agents.briefs = {"NYJ": _filed_brief("NYJ")}
+        agents.scripts = {"NYJ": _script("NYJ")}
+        tts = _StubTTS(batch_id="batches/x")
+        workflow, _, _ = _make_workflow(monkeypatch, feed, tts, agents, teams=("NYJ",))
 
         await workflow.run_cycle(now=CYCLE_AT)
 
-        # The brief landed; audio is NULL; batch_id is on every row.
-        assert len(writer.upserted) == 2
-        assert all(r.audio_url is None for r in writer.upserted)
-        assert all(r.tts_batch_id == "batches/recoverable" for r in writer.upserted)
-
-    async def test_tts_full_success_persists_batch_id_and_audio_url(
-        self, monkeypatch: pytest.MonkeyPatch
-    ) -> None:
-        """Happy path: both stages succeed. Roundup rows carry both
-        audio_url and tts_batch_id (the latter is now always set on
-        success, as a side-effect of the split-stage refactor)."""
-        feed = _StubFeed([_article("a1", "NYJ"), _article("a2", "CHI")])
-        agents = _StubAgents()
-        agents.briefs = {"NYJ": _filed_brief("NYJ"), "CHI": _filed_brief("CHI")}
-        agents.scripts = {"NYJ": _script("NYJ"), "CHI": _script("CHI")}
-        tts = _StubTTS(
-            batch_id="batches/success",
-            urls={
-                _tts_item_id("NYJ", CYCLE_AT): "https://cdn/nyj.mp3",
-                _tts_item_id("CHI", CYCLE_AT): "https://cdn/chi.mp3",
-            },
-        )
-        workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents)
-
-        await workflow.run_cycle(now=CYCLE_AT)
-
-        urls = {r.team_code: (r.audio_url, r.tts_batch_id) for r in writer.upserted}
-        assert urls == {
-            "NYJ": ("https://cdn/nyj.mp3", "batches/success"),
-            "CHI": ("https://cdn/chi.mp3", "batches/success"),
-        }
+        # Workflow always passes a non-None callback (it's a closure
+        # over the optional ExtractionJobCanceler — None-canceler case
+        # is handled inside the closure itself).
+        assert tts.last_on_worker_stall is not None
 
     async def test_quality_gate_dismiss_records_error_outcome(
         self, monkeypatch: pytest.MonkeyPatch
@@ -545,7 +485,7 @@ class TestRunCycle:
             ),
         }
         agents.scripts = {"CHI": _script("CHI")}
-        tts = _StubTTS(urls={_tts_item_id("CHI", CYCLE_AT): "https://cdn/chi.mp3"})
+        tts = _StubTTS()
         workflow, writer, state = _make_workflow(monkeypatch, feed, tts, agents)
 
         summary = await workflow.run_cycle(now=CYCLE_AT)
@@ -556,8 +496,8 @@ class TestRunCycle:
         # CHI flows through normally; NYJ never reaches the radio script
         # or TTS stages.
         assert [r.team_code for r in writer.upserted] == ["CHI"]
-        # Single TTS call, single item.
-        assert tts.calls == 1
+        # Single TTS create call, single item (CHI only — NYJ was gated out).
+        assert tts.create_calls == 1
 
 
 class TestConfigErrors:

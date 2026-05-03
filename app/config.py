@@ -84,13 +84,18 @@ class Settings(BaseSettings):
     tts_status_poll_interval_seconds: float = 30.0
     tts_status_poll_timeout_seconds: float = 1800.0  # 30 min
     # Per-stage timeouts for the underlying AsyncJobClient submit→poll cycle.
-    # Gemini batch creation can take 10-20+ minutes for the worker to round-
-    # trip end-to-end (file upload + create + initial poll), so the default
-    # extraction timeout (300s) is too tight. Status checks are short. Process
-    # involves downloading + uploading every MP3, so allow some headroom.
-    tts_create_timeout_seconds: float = 1800.0   # 30 min
+    # Process involves downloading + uploading every MP3, so allow some headroom.
+    # Status action is fast (one Gemini state read).
+    tts_create_timeout_seconds: float = 1800.0   # 30 min  (legacy field, kept for tests)
     tts_status_action_timeout_seconds: float = 60.0  # per status check
     tts_process_timeout_seconds: float = 900.0   # 15 min
+    # Short poll for the happy-path create cycle. The TTS service worker
+    # *should* return the Gemini batch_id within 1-2 min of submit. If the
+    # worker stalls past this, we fall back to listing Gemini batches via
+    # the Gemini API directly (see TTSBatchClient.discover_recent_batch_id).
+    # Either way the produce cycle exits in under ~3 min and the audio is
+    # harvested by team-beat-harvest.yml on its own cron.
+    tts_create_short_timeout_seconds: float = 120.0   # 2 min
 
     def agent_models(self) -> dict[str, str]:
         return {

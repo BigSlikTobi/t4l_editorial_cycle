@@ -11,6 +11,7 @@ import pytest
 from app.adapters import (
     BeatCycleStateStore,
     BeatRoundupWriter,
+    ExtractionJobCanceler,
     ExternalServiceError,
 )
 from app.team_beat.schemas import BeatCycleResult, BeatOutcome, BeatRoundup
@@ -198,3 +199,55 @@ class TestBeatCycleStateStore:
 
         assert bodies[0]["outcome"] == "error"
         assert "TTS batch" in bodies[0]["reason"]
+
+
+def _canceler(handler) -> ExtractionJobCanceler:
+    c = ExtractionJobCanceler(base_url="https://db", service_role_key="k")
+    c._client = httpx.AsyncClient(
+        base_url="https://db",
+        transport=httpx.MockTransport(handler),
+        headers={
+            "Authorization": "Bearer k",
+            "apikey": "k",
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal",
+        },
+    )
+    return c
+
+
+class TestExtractionJobCanceler:
+    """The canceler PATCHes a stale extraction_jobs row to status='failed'
+    so the sibling cleanup workflow doesn't re-POST it (which would create
+    a duplicate Gemini batch = duplicate spend)."""
+
+    async def test_cancel_patches_row_with_failed_status(self) -> None:
+        bodies: list[dict] = []
+        params: list[dict] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            bodies.append(json.loads(request.read()))
+            params.append(dict(request.url.params))
+            return httpx.Response(204)
+
+        canceler = _canceler(handler)
+        ok = await canceler.cancel("job-uuid-1", reason="poll timed out")
+        await canceler.close()
+
+        assert ok is True
+        assert bodies[0]["status"] == "failed"
+        assert bodies[0]["error"]["code"] == "client_canceled"
+        assert bodies[0]["error"]["message"] == "poll timed out"
+        assert bodies[0]["error"]["retryable"] is False
+        assert "finished_at" in bodies[0]
+        # PATCH must filter on the exact job_id.
+        assert params[0]["job_id"] == "eq.job-uuid-1"
+
+    async def test_cancel_returns_false_on_4xx(self) -> None:
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(404, text="not found")
+
+        canceler = _canceler(handler)
+        ok = await canceler.cancel("nonexistent", reason="x")
+        await canceler.close()
+        assert ok is False

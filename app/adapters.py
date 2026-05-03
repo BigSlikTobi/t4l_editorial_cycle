@@ -695,3 +695,75 @@ class BeatCycleStateStore:
             state_id, result.team_code, result.outcome.value,
         )
         return state_id
+
+
+# --- ExtractionJobCanceler (cancel stale gemini_tts_batch rows) ---
+#
+# When TTSBatchClient.create_and_wait times out at the async-job layer
+# (the worker stalled after creating the Gemini batch but before writing
+# terminal state to extraction_jobs), the row sits at status='running'
+# until expires_at. The sibling repo's cleanup workflow re-POSTs such
+# rows every 5 min, which would create a *second* Gemini batch for the
+# same payload — duplicate spend. This canceler PATCHes the row to
+# status='failed' immediately on our side so cleanup ignores it.
+#
+# Mirrors `scripts/team_beat_preflight.py` but as a library adapter so
+# the workflow can call it inline rather than wait for the next cron.
+
+
+class ExtractionJobCanceler:
+    """PATCHes an extraction_jobs row to status='failed' so the sibling
+    cleanup workflow doesn't re-POST it."""
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
+        self._client = httpx.AsyncClient(
+            base_url=base_url,
+            timeout=timeout_seconds,
+            headers={
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
+                "Content-Type": "application/json",
+                "Prefer": "return=minimal",
+            },
+        )
+
+    async def close(self) -> None:
+        await self._client.aclose()
+
+    @_default_retry()
+    async def cancel(self, job_id: str, *, reason: str) -> bool:
+        """Mark the given extraction_jobs row as failed.
+
+        Returns True on a successful PATCH (HTTP 2xx), False on a hard
+        upstream error (the caller can decide whether to log loud or
+        proceed with the cycle anyway). Network/transient errors are
+        retried by `_default_retry()`.
+        """
+        from datetime import UTC, datetime as _dt
+        payload = {
+            "status": "failed",
+            "finished_at": _dt.now(UTC).isoformat(),
+            "error": {
+                "code": "client_canceled",
+                "message": reason,
+                "retryable": False,
+            },
+        }
+        response = await self._client.patch(
+            "/rest/v1/extraction_jobs",
+            params={"job_id": f"eq.{job_id}"},
+            json=payload,
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            logger.warning(
+                "ExtractionJobCanceler PATCH failed for job_id=%s "
+                "(HTTP %d): %s. Sibling cleanup may re-POST and create a "
+                "duplicate Gemini batch.",
+                job_id, response.status_code, response.text[:200],
+            )
+            return False
+        logger.info("Canceled stale extraction_jobs row %s (%s)", job_id, reason)
+        return True
