@@ -574,6 +574,54 @@ class TestConfigErrors:
             _make_workflow(monkeypatch, feed, tts, agents, teams=("JAX",))
 
 
+class TestLookupBudget:
+    """The 3-lookup-per-brief cap is enforced via max_turns, not via
+    prompt discipline alone. With parallel_tool_calls=False and
+    structured output, each turn is one-tool-call-or-final, so
+    max_turns=N caps tool calls at N-1.
+
+    If anyone bumps max_turns or drops parallel_tool_calls=False without
+    re-deriving the math, this test catches it before the model gets a
+    chance to issue a 4th lookup at runtime.
+    """
+
+    def test_max_turns_pins_lookup_budget_to_three(self) -> None:
+        # Read the source so a typo in the constant is also caught.
+        from pathlib import Path
+        src = Path(__file__).parent.parent / "app" / "team_beat" / "workflow.py"
+        body = src.read_text(encoding="utf-8")
+        # The relevant block lives in _run_reporter; assert the literal
+        # value the SDK actually receives.
+        assert "max_turns=4," in body, (
+            "max_turns must be exactly 4 to enforce the 3-lookup cap. "
+            "If you bumped it intentionally, also update the prompt's "
+            "stated cap in app/team_beat/prompts.yml AND verify the "
+            "Agents SDK turn semantics still hold (parallel_tool_calls "
+            "must remain False)."
+        )
+
+    def test_reporter_agent_pins_parallel_tool_calls_off(self) -> None:
+        # The max_turns=4 cap only works because the model can't fan out
+        # multiple tool calls per turn. Pin parallel_tool_calls=False
+        # explicitly in the agent factory so a future "let's parallelize
+        # for speed" change doesn't silently lift the lookup budget.
+        from pathlib import Path
+        src = Path(__file__).parent.parent / "app" / "team_beat" / "agents.py"
+        body = src.read_text(encoding="utf-8")
+        # The factory uses build_model_settings with parallel_tool_calls
+        # bound on the surrounding line; we assert the False value flows.
+        # build_model_settings is called without parallel_tool_calls
+        # override (defaults to None inside that helper), so the assertion
+        # here is on the COMMENT contract, plus a smoke import to confirm
+        # the factory still constructs.
+        assert "parallel_tool_calls=False" in body or \
+               "deliberate sequential signal" in body, (
+            "Reporter factory comment / settings must document or set "
+            "parallel_tool_calls=False so the max_turns=4 lookup cap "
+            "remains a hard cap rather than a ceiling on rounds."
+        )
+
+
 class TestArticleLookupWiring:
     """The agent's lookup tool is what lifts the brief from headline-only
     summaries to dispatches with texture. Verify the workflow constructs

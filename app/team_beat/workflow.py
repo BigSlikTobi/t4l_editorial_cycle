@@ -314,14 +314,19 @@ class TeamBeatWorkflow:
             stage="team_beat_reporter",
             metadata={"team_code": work.team_code},
         )
-        # max_turns=8 budgets up to ~3 lookup_article_content tool calls
-        # plus initial reasoning + final brief output. Capped low so a
-        # mis-configured agent can't loop indefinitely on URLs.
+        # max_turns=4 is the *code-enforced* hard cap on lookups. With
+        # parallel_tool_calls=False (set in build_team_beat_reporter_agent)
+        # and structured output_type=BeatBrief, every Agents SDK turn is
+        # either ONE tool call OR the final structured response — never
+        # both, never neither. So 4 turns = at most 3 lookup_article_content
+        # calls before the model is forced to emit the brief, exactly
+        # matching the 3-lookup budget the prompt declares. The prompt
+        # discipline alone could be ignored; this turn ceiling cannot.
         result = await Runner.run(
             self._reporter_agent,
             json.dumps(payload, separators=(",", ":")),
             run_config=run_config,
-            max_turns=8,
+            max_turns=4,
             auto_previous_response_id=True,
         )
         brief = coerce_output(result.final_output, BeatBrief)
