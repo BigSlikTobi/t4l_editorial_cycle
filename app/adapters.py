@@ -20,6 +20,7 @@ from app.schemas import (
     RawArticle,
     StoredArticleRecord,
 )
+from app.team_beat.schemas import BeatCycleResult, BeatRoundup
 
 logger = logging.getLogger(__name__)
 
@@ -561,3 +562,136 @@ class ImageUploader:
             )
         rows = response.json()
         return rows[0]["id"] if rows else None
+
+
+# --- Team beat roundup writer + cycle state store ---
+#
+# Writes to the new public.team_roundup and public.team_beat_cycle_state
+# tables (see supabase/migrations/008_team_roundup.sql). Tables live in
+# the `public` schema because the new Supabase project does not provision
+# the legacy `content` schema. PostgREST routes /rest/v1/{table} to public
+# by default, so no Content-Profile header is needed.
+
+
+class BeatRoundupWriter:
+    """Upserts public.team_roundup rows keyed by (team_code, cycle_ts).
+
+    Reruns of the same cycle slot for the same team overwrite in place,
+    so the GitHub Actions cron is safely idempotent and we don't
+    accumulate orphaned audio rows when a workflow is re-run.
+    """
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
+        self._client = httpx.AsyncClient(
+            base_url=base_url,
+            timeout=timeout_seconds,
+            headers={
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
+                "Content-Type": "application/json",
+                "Prefer": "return=representation,resolution=merge-duplicates",
+            },
+        )
+
+    async def close(self) -> None:
+        await self._client.aclose()
+
+    @staticmethod
+    def _payload(roundup: BeatRoundup) -> dict:
+        return {
+            "team_code": roundup.team_code,
+            "cycle_ts": roundup.cycle_ts.isoformat(),
+            "cycle_slot": roundup.cycle_slot,
+            "persona_name": roundup.persona_name,
+            "en_body": roundup.en_body,
+            "de_body": roundup.de_body,
+            "radio_script": roundup.radio_script,
+            "audio_url": roundup.audio_url,
+            "tts_batch_id": roundup.tts_batch_id,
+        }
+
+    @_default_retry()
+    async def upsert(self, roundup: BeatRoundup) -> int:
+        """Upsert and return the row id.
+
+        Uses the (team_code, cycle_ts) unique constraint declared in
+        migration 008 as the on_conflict target so reruns don't 409.
+        """
+        response = await self._client.post(
+            "/rest/v1/team_roundup?on_conflict=team_code,cycle_ts",
+            json=self._payload(roundup),
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"team_roundup upsert failed ({response.status_code}): "
+                f"{response.text[:200]}"
+            )
+        rows = response.json()
+        if not rows:
+            raise ExternalServiceError(
+                "team_roundup upsert returned no rows; expected representation"
+            )
+        roundup_id = int(rows[0]["id"])
+        logger.info(
+            "Upserted team_roundup id=%d team=%s cycle=%s",
+            roundup_id, roundup.team_code, roundup.cycle_ts.isoformat(),
+        )
+        return roundup_id
+
+
+class BeatCycleStateStore:
+    """Append-only outcome log for public.team_beat_cycle_state.
+
+    Every (team, cycle) attempt writes one row regardless of outcome.
+    This is the single source of truth for distinguishing 'beat reporter
+    ran and stayed silent' from 'cycle never ran' or 'cycle errored'.
+    """
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
+        self._client = httpx.AsyncClient(
+            base_url=base_url,
+            timeout=timeout_seconds,
+            headers={
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
+                "Content-Type": "application/json",
+                "Prefer": "return=representation",
+            },
+        )
+
+    async def close(self) -> None:
+        await self._client.aclose()
+
+    @_default_retry()
+    async def record(self, result: BeatCycleResult) -> int:
+        payload = {
+            "team_code": result.team_code,
+            "cycle_ts": result.cycle_ts.isoformat(),
+            "cycle_slot": result.cycle_slot,
+            "outcome": result.outcome.value,
+            "reason": result.reason or None,
+            "article_count": result.article_count,
+            "roundup_id": result.roundup_id,
+        }
+        response = await self._client.post(
+            "/rest/v1/team_beat_cycle_state",
+            json=payload,
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"team_beat_cycle_state insert failed ({response.status_code}): "
+                f"{response.text[:200]}"
+            )
+        rows = response.json()
+        state_id = int(rows[0]["id"]) if rows else 0
+        logger.info(
+            "Recorded beat cycle state id=%d team=%s outcome=%s",
+            state_id, result.team_code, result.outcome.value,
+        )
+        return state_id

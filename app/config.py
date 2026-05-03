@@ -49,6 +49,8 @@ class Settings(BaseSettings):
     openai_model_persona_selector_agent: str = "gpt-5.4-mini"
     openai_model_article_quality_gate_agent: str = "gpt-5.4-mini"
     openai_model_editorial_memory_agent: str = "gpt-5.4-mini"
+    openai_model_team_beat_reporter_agent: str = "gpt-5.4-mini"
+    openai_model_radio_script_agent: str = "gpt-5.4-mini"
     editorial_memory_dir: Path = Path("editorial_memory")
 
     openai_temperature: float | None = None
@@ -63,6 +65,33 @@ class Settings(BaseSettings):
     openai_model_vision_validator: str = "gpt-5.4-mini"
     image_selection_timeout_seconds: float = 30.0
 
+    # Team Beat — gemini_tts_batch_service (sibling Cloud Run deployment).
+    # Submit + poll URLs front the three-stage create→status→process lifecycle
+    # documented in tackle_4_loss_intelligence/.../gemini_tts_batch_service/README.md.
+    # The bearer token authenticates submit+poll calls; it is *not* a Gemini
+    # or Supabase credential. Storage bucket is caller-chosen and lives in our
+    # Supabase project.
+    tts_batch_submit_url: AnyHttpUrl | None = None
+    tts_batch_poll_url: AnyHttpUrl | None = None
+    tts_batch_function_auth_token: SecretStr | None = None
+    tts_model_name: str = "gemini-3.1-flash-tts-preview"
+    tts_voice_name: str = "Kore"
+    tts_storage_bucket: str = "team-beat-audio"
+    tts_storage_path_prefix: str = "gemini-tts-batch"
+    # Status-poll cadence between create and process: how often we ask the
+    # batch service to re-read the upstream Gemini batch state. The batch
+    # service's own /poll cycle is governed by extraction_poll_interval_seconds.
+    tts_status_poll_interval_seconds: float = 30.0
+    tts_status_poll_timeout_seconds: float = 1800.0  # 30 min
+    # Per-stage timeouts for the underlying AsyncJobClient submit→poll cycle.
+    # Gemini batch creation can take 10-20+ minutes for the worker to round-
+    # trip end-to-end (file upload + create + initial poll), so the default
+    # extraction timeout (300s) is too tight. Status checks are short. Process
+    # involves downloading + uploading every MP3, so allow some headroom.
+    tts_create_timeout_seconds: float = 1800.0   # 30 min
+    tts_status_action_timeout_seconds: float = 60.0  # per status check
+    tts_process_timeout_seconds: float = 900.0   # 15 min
+
     def agent_models(self) -> dict[str, str]:
         return {
             "article_data_agent": self.openai_model_article_data_agent,
@@ -72,6 +101,8 @@ class Settings(BaseSettings):
             "persona_selector_agent": self.openai_model_persona_selector_agent,
             "article_quality_gate_agent": self.openai_model_article_quality_gate_agent,
             "editorial_memory_agent": self.openai_model_editorial_memory_agent,
+            "team_beat_reporter_agent": self.openai_model_team_beat_reporter_agent,
+            "radio_script_agent": self.openai_model_radio_script_agent,
         }
 
     def agent_model(self, agent_name: str) -> str:

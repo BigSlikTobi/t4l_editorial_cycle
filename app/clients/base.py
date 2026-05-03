@@ -127,10 +127,23 @@ class AsyncJobClient:
             )
         return response.json()
 
-    async def run(self, payload: dict[str, Any]) -> dict[str, Any]:
-        """Submit, poll until terminal, and return the `result` dict."""
+    async def run(
+        self,
+        payload: dict[str, Any],
+        *,
+        timeout_seconds: float | None = None,
+    ) -> dict[str, Any]:
+        """Submit, poll until terminal, and return the `result` dict.
+
+        `timeout_seconds` overrides the instance default for this one
+        submit→poll cycle. Used by callers (e.g. the TTS client) where
+        different actions have very different latency profiles —
+        Gemini batch creation can take many minutes, while a status
+        check is sub-second.
+        """
         job_id = await self.submit(payload)
-        deadline = asyncio.get_event_loop().time() + self._timeout
+        timeout = timeout_seconds if timeout_seconds is not None else self._timeout
+        deadline = asyncio.get_event_loop().time() + timeout
         while True:
             data = await self.poll_once(job_id)
             status = data.get("status")
@@ -150,6 +163,6 @@ class AsyncJobClient:
                 raise JobFailedError(f"Job {job_id} returned unknown status {status!r}")
             if asyncio.get_event_loop().time() >= deadline:
                 raise JobTimeoutError(
-                    f"Job {job_id} did not finish within {self._timeout}s"
+                    f"Job {job_id} did not finish within {timeout}s"
                 )
             await asyncio.sleep(self._poll_interval)

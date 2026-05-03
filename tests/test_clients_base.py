@@ -194,3 +194,24 @@ class TestAsyncJobClient:
         ) as client:
             with pytest.raises(JobTimeoutError):
                 await client.run({})
+
+    async def test_per_call_timeout_override_takes_precedence(self) -> None:
+        """Per-call timeout_seconds wins over the instance default.
+
+        Lets callers (e.g. the TTS client) use a single AsyncJobClient
+        for stages with very different latency profiles — Gemini batch
+        creation can take many minutes, status checks are sub-second."""
+        def handler(request: httpx.Request) -> httpx.Response:
+            if request.url.path.endswith("/submit"):
+                return httpx.Response(202, json={"job_id": "j"})
+            return httpx.Response(200, json={"status": "running", "job_id": "j"})
+
+        async with _client_with_transport(
+            httpx.MockTransport(handler),
+            poll_interval_seconds=0.0,
+            timeout_seconds=60.0,  # generous instance default
+        ) as client:
+            # Per-call override of 0.01s wins → fast timeout despite the
+            # generous instance default.
+            with pytest.raises(JobTimeoutError, match="0.01s"):
+                await client.run({}, timeout_seconds=0.01)
