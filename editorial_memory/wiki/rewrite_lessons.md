@@ -11,6 +11,8 @@
 - Clean, direct news leads beat soft interpretive filler when the core update is small.
 - [insider] Build around the one supported update, not a layered explainer or context add-on.
 - Tight repetition control matters: once the core fact is stated, add only sourced detail or the piece goes flat.
+- A vivid direct quote can add tap-worthiness when it stays fully tied to the verified moment.
+- When the story is small, specificity and execution can make it read stronger than its scope.
 
 ## What to avoid
 - Don’t soften a clear source claim with hedging, then overstate it with extra narrative around it.
@@ -27,3 +29,5 @@
 - [source-side, not fixable in prose] If the digest is empty or only provides a thin claim, the fix is more source detail, not heavier prose.
 - [source-side, not fixable in prose] Don’t invent player or team context when the digest supplies none; unsupported names and comparisons are a source gap, not an execution fix.
 - [source-side, not fixable in prose] If the article can only restate a generic headline without digest support, the problem is the missing source, not a missing sentence.
+- Don’t add unrelated named references or scene-setting when the basic miscue is already the whole story.
+- Don’t include cross-player or cross-story references that the source does not connect to the moment at hand.
