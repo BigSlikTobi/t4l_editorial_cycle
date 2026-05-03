@@ -18,6 +18,8 @@ def fake_settings(monkeypatch: pytest.MonkeyPatch) -> Settings:
         "OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT",
         "OPENAI_MODEL_PERSONA_SELECTOR_AGENT",
         "OPENAI_MODEL_EDITORIAL_MEMORY_AGENT",
+        "OPENAI_MODEL_TEAM_BEAT_REPORTER_AGENT",
+        "OPENAI_MODEL_RADIO_SCRIPT_AGENT",
     ):
         monkeypatch.delenv(key, raising=False)
     return Settings(_env_file=None)
@@ -50,4 +52,17 @@ class TestSettings:
             "persona_selector_agent",
             "article_quality_gate_agent",
             "editorial_memory_agent",
+            "team_beat_reporter_agent",
+            "radio_script_agent",
         }
+
+    def test_tts_defaults(self, fake_settings: Settings) -> None:
+        assert fake_settings.tts_model_name == "gemini-3.1-flash-tts-preview"
+        assert fake_settings.tts_voice_name == "Kore"
+        assert fake_settings.tts_storage_bucket == "team-beat-audio"
+        assert fake_settings.tts_storage_path_prefix == "gemini-tts-batch"
+        # URLs + auth token are optional (only required at runtime when
+        # the team-beat workflow actually calls the batch service).
+        assert fake_settings.tts_batch_submit_url is None
+        assert fake_settings.tts_batch_poll_url is None
+        assert fake_settings.tts_batch_function_auth_token is None
