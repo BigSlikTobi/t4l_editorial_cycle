@@ -35,9 +35,16 @@ from __future__ import annotations
 
 import asyncio
 import logging
+from collections.abc import Awaitable, Callable
+from datetime import UTC, datetime, timedelta
 from typing import Any, Iterable
 
-from app.clients.base import AsyncJobClient, JobFailedError, SupabaseJobsConfig
+from app.clients.base import (
+    AsyncJobClient,
+    JobFailedError,
+    JobTimeoutError,
+    SupabaseJobsConfig,
+)
 
 from .schemas import TTSBatchOutcome, TTSItem, TTSResult
 
@@ -64,7 +71,26 @@ class TTSBatchError(RuntimeError):
 
 
 class TTSBatchClient:
-    """Composes one AsyncJobClient and orchestrates create→status→process."""
+    """Drives the gemini_tts_batch_service in a produce/harvest split.
+
+    Two responsibilities:
+      * `create_and_wait()` — submit a batch and capture its Gemini
+        batch_id quickly. The PRODUCE cycle calls this and immediately
+        persists; it does NOT wait for the batch to finish. If the
+        async-job worker stalls (the documented failure mode where the
+        worker successfully creates the Gemini batch but crashes before
+        writing terminal state), batch_id is recovered by listing
+        Gemini batches via the Gemini API directly.
+      * `process_batch()` — for an already-SUCCEEDED batch, call the
+        worker's process action to download MP3s and upload to Storage.
+        The HARVEST cycle (scripts/tts_recover.py on its own cron)
+        calls this only after confirming the batch is SUCCEEDED.
+
+    The Gemini API key is required for the produce path's recovery and
+    for `check_batch_state()` (used by the harvest script). It's
+    optional only because some unit tests construct the client without
+    it; runtime callers always pass it.
+    """
 
     def __init__(
         self,
@@ -77,20 +103,23 @@ class TTSBatchClient:
         voice_name: str,
         storage_bucket: str,
         storage_path_prefix: str = "gemini-tts-batch",
+        gemini_api_key: str | None = None,
         # Async-job protocol cadence (each submit→poll cycle):
         job_poll_interval_seconds: float = 2.0,
         # Default per-stage timeout used when no per-stage override is set.
         # Real production values are passed per-stage below.
         job_timeout_seconds: float = 300.0,
-        # Per-stage submit→poll timeouts. Gemini batch creation can take
-        # 10-20+ minutes round-trip in the worker; status checks are short;
-        # process spans MP3 download + per-item upload to Supabase Storage.
-        create_timeout_seconds: float | None = None,
+        # Per-stage submit→poll timeouts. The produce path uses
+        # `create_short_timeout_seconds` (fast happy-path; on timeout
+        # it falls back to Gemini-API recovery). Process timeout is the
+        # ceiling for one MP3 download+upload run.
+        create_short_timeout_seconds: float = 120.0,
         status_action_timeout_seconds: float | None = None,
         process_timeout_seconds: float | None = None,
-        # Outer Gemini-state poll cadence (between successive `status` calls):
-        status_poll_interval_seconds: float = 30.0,
-        status_timeout_seconds: float = 1800.0,
+        # Recovery window for Gemini-API listing — when the worker
+        # stalls, we look for batches created within this many seconds
+        # of our submit (with a small grace period for clock skew).
+        gemini_recovery_window_seconds: float = 600.0,
     ) -> None:
         self._client = AsyncJobClient(
             submit_url=submit_url,
@@ -104,13 +133,13 @@ class TTSBatchClient:
         self._voice_name = voice_name
         self._storage_bucket = storage_bucket
         self._storage_path_prefix = storage_path_prefix
-        self._status_poll_interval = status_poll_interval_seconds
-        self._status_timeout = status_timeout_seconds
+        self._gemini_api_key = gemini_api_key
         # Per-stage overrides — None means "use the underlying client's
         # default timeout for this stage too".
-        self._create_timeout = create_timeout_seconds
+        self._create_short_timeout = create_short_timeout_seconds
         self._status_action_timeout = status_action_timeout_seconds
         self._process_timeout = process_timeout_seconds
+        self._gemini_recovery_window = gemini_recovery_window_seconds
 
     async def close(self) -> None:
         await self._client.close()
@@ -123,62 +152,200 @@ class TTSBatchClient:
 
     # --- public API --------------------------------------------------------
     #
-    # Two ways to drive a cycle:
-    #   * synthesize()              — one-shot create→status→process; raises on
-    #                                 anything that prevents process from
-    #                                 producing a manifest.
-    #   * create_and_wait() +       — split form. The caller captures the
-    #     process_batch()             batch_id between stages so it can be
-    #                                 persisted to DB before process runs,
-    #                                 making partial failures recoverable.
-    # Both forms share the same stage methods underneath.
+    # Produce/harvest split:
+    #
+    #   PRODUCE (twice-daily team-beat cycle):
+    #     create_and_wait(items) → batch_id
+    #         Submits a Gemini batch, captures its batch_id quickly
+    #         (short async-job poll, falls back to Gemini-API listing
+    #         if the worker stalls). Does NOT wait for the batch to
+    #         finish. Persist the batch_id and exit.
+    #
+    #   HARVEST (every 30 min via team-beat-harvest.yml):
+    #     check_batch_state(batch_id) → "JOB_STATE_SUCCEEDED" | …
+    #     process_batch(batch_id, item_ids, ...) → TTSBatchOutcome
+    #         Skip rows whose batch isn't SUCCEEDED yet. For SUCCEEDED
+    #         rows, run the process action against the worker (which
+    #         downloads MP3s and uploads them to Storage), then PATCH
+    #         team_roundup.audio_url.
+    #
+    # The recovery script (scripts/tts_recover.py) is the harvest CLI.
 
-    async def synthesize(
+    async def create_and_wait(
         self,
         items: Iterable[TTSItem],
         *,
-        path_prefix_suffix: str | None = None,
-    ) -> TTSBatchOutcome:
-        """Run the full create→status→process lifecycle.
+        on_worker_stall: "Callable[[str, str], Awaitable[None]] | None" = None,
+    ) -> str:
+        """Submit a Gemini batch and return its batch_id.
 
-        `path_prefix_suffix` is appended to `storage_path_prefix` so each
-        cycle gets its own deterministic, upsert-overwriteable folder
-        (e.g. `gemini-tts-batch/2026-05-02_AM`). When omitted we use the
-        configured prefix verbatim.
-        """
-        item_list = list(items)
-        if not item_list:
-            raise ValueError("synthesize() requires at least one TTSItem")
+        Happy path: short async-job poll (~120s default) → worker
+        returns the batch_id → return.
 
-        batch_id = await self.create_and_wait(item_list)
-        return await self.process_batch(
-            batch_id,
-            [item.id for item in item_list],
-            path_prefix_suffix=path_prefix_suffix,
-        )
+        Stall path: async-job poll times out → list Gemini batches via
+        the Gemini API directly, find ours by `create_time` window →
+        return. The optional `on_worker_stall(job_id, reason)` callback
+        is invoked with our async-job's job_id so the caller can PATCH
+        the row to status='failed' (preventing the sibling cleanup from
+        re-POSTing it and creating a duplicate Gemini batch).
 
-    async def create_and_wait(self, items: Iterable[TTSItem]) -> str:
-        """Submit a `create` job, then poll Gemini state until SUCCEEDED.
-
-        Returns the Gemini batch_id. Raises TTSBatchError if the upstream
-        Gemini batch reaches any terminal non-success state, or if the
-        outer status loop exceeds its deadline. The batch_id may still be
-        attached to the raised exception (TTSBatchError.batch_id) when
-        possible so the caller can persist it for recovery.
+        Raises TTSBatchError ONLY when both paths fail (the worker
+        stalled AND the Gemini API returned no recent matching batch).
         """
         item_list = list(items)
         if not item_list:
             raise ValueError("create_and_wait() requires at least one TTSItem")
 
-        batch_id = await self._create(item_list)
-        terminal_state = await self._wait_for_terminal_state(batch_id)
-        if terminal_state != GEMINI_SUCCESS_STATE:
+        submit_time = datetime.now(UTC)
+        # Submit eagerly so we have the async-job id even if poll fails.
+        # Reading internals of AsyncJobClient is ugly; the cleanest path
+        # is to call submit() + poll_once() ourselves.
+        payload = self._build_create_payload(item_list)
+        try:
+            job_id = await self._client.submit(payload)
+        except JobFailedError as exc:
             raise TTSBatchError(
-                f"Gemini batch {batch_id} reached terminal non-success state {terminal_state}",
-                batch_id=batch_id,
-                state=terminal_state,
+                f"TTS create submit rejected: {exc}",
+            ) from exc
+        logger.info(
+            "TTS create submitted: job_id=%s items=%d (waiting up to %ss for worker)",
+            job_id, len(item_list), self._create_short_timeout,
+        )
+
+        try:
+            result = await self._poll_until_terminal(
+                job_id, timeout_seconds=self._create_short_timeout
             )
-        return batch_id
+            batch_id = result.get("batch_id")
+            if batch_id:
+                logger.info("TTS create returned batch_id=%s (happy path)", batch_id)
+                return str(batch_id)
+            # Defensive: terminal success but no batch_id is a worker bug
+            # we should still try to recover from.
+            logger.warning(
+                "TTS create terminal-succeeded but result has no batch_id: %s",
+                result,
+            )
+        except JobTimeoutError:
+            logger.warning(
+                "TTS create poll timed out after %ss; falling back to "
+                "Gemini-API listing to recover batch_id",
+                self._create_short_timeout,
+            )
+            if on_worker_stall is not None:
+                try:
+                    await on_worker_stall(
+                        job_id,
+                        f"create poll timeout after {self._create_short_timeout}s",
+                    )
+                except Exception:
+                    logger.exception(
+                        "on_worker_stall callback failed for job_id=%s; "
+                        "proceeding to Gemini-API recovery anyway", job_id,
+                    )
+        except JobFailedError as exc:
+            # The worker reported terminal failure on our async-job
+            # protocol. The Gemini batch may or may not have been
+            # created depending on where the worker died — try recovery
+            # before giving up.
+            logger.warning(
+                "TTS create reported failure (%s); trying Gemini-API recovery", exc,
+            )
+
+        # Recovery path: list recent Gemini batches and pick ours.
+        recovered = await self.discover_recent_batch_id(submit_time=submit_time)
+        if recovered is None:
+            raise TTSBatchError(
+                "TTS create failed AND no Gemini batch was created in the "
+                f"last {self._gemini_recovery_window:g}s. The submit may "
+                "have errored before reaching Gemini; nothing to harvest."
+            )
+        logger.info(
+            "TTS create recovered batch_id=%s via Gemini-API listing", recovered,
+        )
+        return recovered
+
+    async def discover_recent_batch_id(
+        self, submit_time: datetime, *, window_seconds: float | None = None
+    ) -> str | None:
+        """List Gemini batches and return the most-recent one created
+        on or after `submit_time` (with a 30s grace for clock skew).
+
+        Returns None when no candidate batch exists in the window — the
+        caller should treat this as "nothing was actually submitted to
+        Gemini" rather than "still pending".
+
+        Single-tenant assumption: when multiple batches fall in the
+        window we take the most recent. At cycle frequency (twice
+        daily, single producer) this is correct; if you ever run two
+        team-beat cycles overlapping in the same Gemini project, label
+        batches with a unique `display_name` and match on it instead.
+        """
+        if not self._gemini_api_key:
+            logger.error(
+                "Gemini API key not configured on TTSBatchClient; cannot "
+                "recover batch_id when worker stalls."
+            )
+            return None
+        client = _gemini_client(self._gemini_api_key)
+        window = window_seconds or self._gemini_recovery_window
+        cutoff = submit_time - timedelta(seconds=30)
+        candidates: list[tuple[datetime, str]] = []
+        # SDK lists newest-first by create_time; short-circuit when older.
+        for batch in client.batches.list(config={"page_size": 20}):
+            ct = getattr(batch, "create_time", None)
+            name = getattr(batch, "name", None)
+            if ct is None or name is None:
+                continue
+            if ct >= cutoff:
+                candidates.append((ct, str(name)))
+            else:
+                break
+            if len(candidates) >= 20:
+                break
+        if not candidates:
+            logger.warning(
+                "Gemini-API recovery: no batches created since %s "
+                "(submit_time=%s, window=%ss)",
+                cutoff.isoformat(), submit_time.isoformat(), window,
+            )
+            return None
+        candidates.sort(reverse=True)
+        chosen = candidates[0][1]
+        if len(candidates) > 1:
+            logger.warning(
+                "Gemini-API recovery: %d candidates in window; using newest %s. "
+                "Other candidates: %s",
+                len(candidates), chosen, [c[1] for c in candidates[1:]],
+            )
+        return chosen
+
+    async def check_batch_state(self, batch_id: str) -> str:
+        """Read the current Gemini batch state via the Gemini API directly.
+
+        Used by the harvest script to decide whether to skip a roundup
+        row (still pending) or process it (SUCCEEDED). Routes around
+        the async-job worker's status action — Gemini's own SDK is
+        more reliable for this read.
+
+        Returns the state string (e.g. "JOB_STATE_SUCCEEDED",
+        "JOB_STATE_PENDING"). Raises TTSBatchError on transport errors
+        the caller should surface.
+        """
+        if not self._gemini_api_key:
+            raise TTSBatchError(
+                "Gemini API key not configured; cannot check batch state."
+            )
+        client = _gemini_client(self._gemini_api_key)
+        try:
+            batch = client.batches.get(name=batch_id)
+        except Exception as exc:
+            raise TTSBatchError(
+                f"Gemini batch state read failed for {batch_id}: {exc}",
+                batch_id=batch_id,
+            ) from exc
+        state = getattr(batch.state, "name", batch.state)
+        return str(state) if state is not None else "UNKNOWN"
 
     async def process_batch(
         self,
@@ -212,8 +379,9 @@ class TTSBatchClient:
 
     # --- stages ------------------------------------------------------------
 
-    async def _create(self, items: list[TTSItem]) -> str:
-        payload: dict[str, Any] = {
+    def _build_create_payload(self, items: list[TTSItem]) -> dict[str, Any]:
+        """Render the action=create body the worker expects."""
+        return {
             "action": "create",
             "model_name": self._model_name,
             "voice_name": self._voice_name,
@@ -222,45 +390,38 @@ class TTSBatchClient:
                 for item in items
             ],
         }
-        logger.info(
-            "TTS create: model=%s voice=%s items=%d (timeout=%ss)",
-            self._model_name, self._voice_name, len(items),
-            self._create_timeout,
-        )
-        result = await self._client.run(payload, timeout_seconds=self._create_timeout)
-        batch_id = result.get("batch_id")
-        if not batch_id:
-            raise TTSBatchError(
-                f"create response missing batch_id: {result}",
-            )
-        logger.info("TTS create returned batch_id=%s state=%s", batch_id, result.get("status"))
-        return str(batch_id)
 
-    async def _status_once(self, batch_id: str) -> dict[str, Any]:
-        return await self._client.run(
-            {"action": "status", "batch_id": batch_id},
-            timeout_seconds=self._status_action_timeout,
-        )
+    async def _poll_until_terminal(
+        self, job_id: str, *, timeout_seconds: float
+    ) -> dict[str, Any]:
+        """Poll our async-job protocol until terminal or `timeout_seconds`.
 
-    async def _wait_for_terminal_state(self, batch_id: str) -> str:
-        deadline = asyncio.get_event_loop().time() + self._status_timeout
-        last_state: str | None = None
+        Mirrors `AsyncJobClient.run`'s polling semantics but for an
+        already-submitted job_id (since `create_and_wait` calls submit
+        directly so it has the id even when polling fails)."""
+        deadline = asyncio.get_event_loop().time() + timeout_seconds
         while True:
-            result = await self._status_once(batch_id)
-            state = result.get("status")
-            if state != last_state:
-                logger.info("TTS status batch=%s state=%s", batch_id, state)
-                last_state = state
-            if state in GEMINI_TERMINAL_STATES:
-                return str(state)
-            if asyncio.get_event_loop().time() >= deadline:
-                raise TTSBatchError(
-                    f"Gemini batch {batch_id} did not reach terminal state within "
-                    f"{self._status_timeout}s (last state={state})",
-                    batch_id=batch_id,
-                    state=state,
+            data = await self._client.poll_once(job_id)
+            status = data.get("status")
+            if status == "succeeded":
+                result = data.get("result")
+                if result is None:
+                    raise JobFailedError(f"Job {job_id} succeeded with no result")
+                return result
+            if status == "failed":
+                raise JobFailedError(
+                    f"Job {job_id} failed: {data.get('error')}",
+                    error=data.get("error"),
                 )
-            await asyncio.sleep(self._status_poll_interval)
+            if status == "expired":
+                raise JobFailedError(f"Job {job_id} expired before completion")
+            if status not in ("queued", "running"):
+                raise JobFailedError(f"Job {job_id} returned unknown status {status!r}")
+            if asyncio.get_event_loop().time() >= deadline:
+                raise JobTimeoutError(
+                    f"Job {job_id} did not finish within {timeout_seconds}s"
+                )
+            await asyncio.sleep(self._client._poll_interval)  # noqa: SLF001
 
     async def _process(self, batch_id: str, path_prefix: str) -> list[dict[str, Any]]:
         payload: dict[str, Any] = {
@@ -299,6 +460,17 @@ class TTSBatchClient:
                 "error": err if isinstance(err, str) else str(err) if err is not None else "unknown",
             })
         return merged
+
+
+def _gemini_client(api_key: str):
+    """Lazy-import google.genai and return a configured Client.
+
+    Lazy so module load stays cheap (the SDK pulls in protobuf and a
+    transitive grpc tree) and so unit tests can mock the import via
+    `monkeypatch.setattr` without needing the real SDK installed.
+    """
+    from google import genai
+    return genai.Client(api_key=api_key)
 
 
 def _outcome_from_manifest(
