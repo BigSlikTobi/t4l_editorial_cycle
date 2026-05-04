@@ -1,32 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the one concrete verified takeaway up front; a clear source-backed status note makes thin-source pieces usable fast.
-- Keep headline and lede tightly aligned on the same confirmed development for a clean first read.
-- Stay strictly inside the source digest when the item is thin; concise beats embellished.
-- Use exact status language when it is clearly supported by the source.
-- A narrow, source-bound update can carry the story without extra context or trend framing.
-- Let verified facts do the work instead of adding implications the source does not provide.
-- Strong grounding can offset a simple setup when the execution stays clean and precise.
-- Clean, direct news leads beat soft interpretive filler when the core update is small.
+- Lead with the single confirmed development immediately; a report-driven first sentence can carry a thin digest.
+- Keep headline and lede aligned on the same verified move so the first read feels clean and unified.
+- Stay tightly inside the digest when details are sparse; concise reporting beats embellished context.
+- Use exact status language when the source supports it, especially for reported attempts or near-misses.
+- A narrow update can still read well if it stays focused on one confirmed action rather than widening into a larger story.
+- Let the verified fact do the work instead of layering on implications the source never states.
+- Clean, direct news framing is stronger than source-narration or meta phrasing in short-inside pieces.
+- Strong grounding can offset limited specifics when the execution stays precise and restrained.
 - [analyst] Center the angle on the supported quote or comparison, and keep the rest of the framing minimal.
-- [analyst] A specific source-endorsed comparison can add readability when it stays tightly tied to the lede and does not introduce extra claims.
 - [columnist] A clear team-specific hook plus the right named people can make a small source-backed observation feel readable without overreaching.
-- [columnist] Tight, source-bound follow-through is enough when the payoff is a single vivid quoted assessment.
+- [source-side, not fixable in prose] When the digest contains one usable confirmed claim, a tight rewrite can still publish cleanly even if broader context is missing.
 
 ## What to avoid
-- Don’t soften a clear source claim with hedging, then overstate it with extra narrative around it.
-- Don’t add broader team, market, scheme, or strategy framing unless the digest explicitly supports it.
-- Don’t let banned source-narration/meta wording creep into the intro.
-- Don’t make the headline and lede pull in different directions; keep the first read unified.
-- Don’t widen a single confirmed update into a broader story without evidence.
-- Don’t pad a short source-backed note with unsupported implications or timing/scope speculation.
-- Don’t treat a headline-level digest like a full-reporting source.
-- Don’t repeat the same claim across headline, subhead, and intro when the digest is thin; repetition doesn’t add substance.
-- Don’t introduce unsupported report language or vague framing when the digest has no usable facts.
-- Don’t bury the one concrete fact under soft, interpretive filler or ask the reader to infer meaning that isn’t stated.
+- Don’t add source-narration or meta phrasing when the digest already has a usable reported fact.
+- Don’t widen a single confirmed attempt into a broader narrative without evidence.
+- Don’t ask the reader to infer details that the digest does not provide, like terms, timing, or draft-position specifics.
+- Don’t let headline and intro drift apart; keep both pointed at the same confirmed development.
+- Don’t pad a thin source note with unsupported implications or extra context just to create depth.
+- Don’t introduce named references or side mentions unless they are clearly connected to a fact already in the digest.
+- Don’t treat a thin digest like a fuller reporting package; the rewrite should get sharper, not busier.
+- Don’t bury the one concrete fact under soft framing or generic explanatory language.
 - [analyst] Don’t add roster-fit, usage, or role speculation unless the source directly supports it.
-- [analyst] Don’t bring in extra names or comparisons that are not clearly tied to the cited quote.
-- [source-side, not fixable in prose] If the digest is empty or only provides a thin claim, the fix is more source detail, not heavier prose.
-- [source-side, not fixable in prose] Don’t invent player or team context when the digest supplies none; unsupported names and comparisons are a source gap, not an execution fix.
-- [source-side, not fixable in prose] If the article can only restate a generic headline without digest support, the problem is the missing source, not a missing sentence.
+- [source-side, not fixable in prose] If the digest gives no trade terms or timing, the missing detail is a source gap, not something prose can manufacture.
+- [source-side, not fixable in prose] If the article can only restate the attempted move, the fix is cleaner framing, not added substance.
+- [source-side, not fixable in prose] When the source is only headline-level and the draft repeats unsupported Dallas/Cleveland/draft-night specifics, the issue is source deficiency, not a prose fix.
