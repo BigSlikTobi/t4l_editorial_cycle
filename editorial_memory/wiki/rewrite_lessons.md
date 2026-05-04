@@ -11,6 +11,8 @@
 - Clean, direct news leads beat soft interpretive filler when the core update is small.
 - [analyst] Center the angle on the supported quote or comparison, and keep the rest of the framing minimal.
 - [analyst] A specific source-endorsed comparison can add readability when it stays tightly tied to the lede and does not introduce extra claims.
+- [columnist] A clear team-specific hook plus the right named people can make a small source-backed observation feel readable without overreaching.
+- [columnist] Tight, source-bound follow-through is enough when the payoff is a single vivid quoted assessment.
 
 ## What to avoid
 - Don’t soften a clear source claim with hedging, then overstate it with extra narrative around it.
