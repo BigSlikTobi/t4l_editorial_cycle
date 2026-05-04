@@ -1,21 +1,22 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed development in one clean sentence; a direct first line can carry a thin insider update.
-- Keep the next sentence on the most relevant verified background detail so the piece feels anchored without overexplaining.
-- Keep headline and lede aligned on the same concrete development.
-- Stay tightly inside the available facts when the source is sparse; concise reporting beats invented context.
+- Lead with the confirmed move in a clean, direct sentence; a simple first-line update can carry a thin insider report.
+- Keep headline and lede pointed at the same concrete development.
+- In breaking-news items, make the lede carry the consequence immediately, then add support after.
+- Stay tightly inside the source digest when the facts are limited; restrained reporting reads stronger than padded context.
+- Let the verified transaction do the work instead of layering on implications the source never states.
 - Use exact status language when the source supports it, especially for signings, cuts, recoveries, trial timing, or role changes.
-- Let the verified fact do the work instead of layering on implications the source never states.
-- Clean, direct news framing is stronger than source-meta or narrational phrasing in short insider pieces.
-- Strong grounding can offset limited specifics when the execution stays precise and restrained.
+- A timely, specific personnel move can be readable even without deep context if the grounding stays precise.
+- Clean news framing is stronger than source-meta or narrational phrasing in short insider pieces.
+- Strong grounding can offset limited specificity when the execution stays disciplined.
 - [analyst] Center the angle on the supported quote or comparison, and keep the rest of the framing minimal.
 - [columnist] A clear, source-supported hook can make a small update readable, but only if it stays direct and doesn’t overclaim.
 
 ## What to avoid
-- Don’t add scheduling certainty, delay timelines, or offseason-planning claims unless the source directly supports it.
-- Don’t repeat the same premise in headline, subhead, and intro; make the nut graph add something new.
-- Don’t widen a single confirmed update into a broader narrative without evidence.
+- Don’t make the headline, sub-headline, and first sentence near-duplicates; vary the structure so the tap appeal doesn’t flatten.
+- Don’t add backup-chart certainty, depth-chart order, or reserve-role conclusions unless the source directly supports them.
+- Don’t widen a single confirmed transaction into a settled pecking-order story without evidence.
 - Don’t ask the reader to infer details that the digest does not provide, like terms, timing, or broader implications.
 - Don’t let headline and intro drift apart; keep both pointed at the same confirmed development.
 - Don’t pad a thin source note with unsupported implications or extra context just to create depth.
