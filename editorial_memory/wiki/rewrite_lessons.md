@@ -10,19 +10,21 @@
 - Clean, direct news framing is stronger than source-narration or meta phrasing in short-inside pieces.
 - Strong grounding can offset limited specifics when the execution stays precise and restrained.
 - [analyst] Center the angle on the supported quote or comparison, and keep the rest of the framing minimal.
-- [columnist] A clear team-specific hook plus the right named people can make a small source-backed observation feel readable without overreaching.
+- [columnist] A clear, source-supported hook can make a small update readable, but only if it stays direct and doesn’t overclaim.
 - [source-side, not fixable in prose] When the digest contains one usable confirmed claim, a tight rewrite can still publish cleanly even if broader context is missing.
 
 ## What to avoid
 - Don’t add source-narration or meta phrasing when the digest already has a usable reported fact.
-- Don’t widen a single confirmed attempt into a broader narrative without evidence.
-- Don’t ask the reader to infer details that the digest does not provide, like terms, timing, or draft-position specifics.
+- Don’t widen a single confirmed move into a broader narrative without evidence.
+- Don’t ask the reader to infer details that the digest does not provide, like terms, timing, or broader implications.
 - Don’t let headline and intro drift apart; keep both pointed at the same confirmed development.
 - Don’t pad a thin source note with unsupported implications or extra context just to create depth.
-- Don’t introduce named references or side mentions unless they are clearly connected to a fact already in the digest.
+- Don’t introduce broad fan/league significance unless the source actually supports it.
 - Don’t treat a thin digest like a fuller reporting package; the rewrite should get sharper, not busier.
 - Don’t bury the one concrete fact under soft framing or generic explanatory language.
 - [analyst] Don’t add roster-fit, usage, or role speculation unless the source directly supports it.
-- [source-side, not fixable in prose] If the digest gives no trade terms or timing, the missing detail is a source gap, not something prose can manufacture.
-- [source-side, not fixable in prose] If the article can only restate the attempted move, the fix is cleaner framing, not added substance.
-- [source-side, not fixable in prose] When the source is only headline-level and the draft repeats unsupported Dallas/Cleveland/draft-night specifics, the issue is source deficiency, not a prose fix.
+- [source-side, not fixable in prose] If the digest gives no team-specific angle, don’t manufacture one in prose.
+- [source-side, not fixable in prose] If the article can only restate the schedule change or attempt, the fix is cleaner framing, not added substance.
+- [source-side, not fixable in prose] If the source is headline-level only, missing context is a source gap, not something prose can invent.
+- [columnist] Don’t force a read-worthy angle from an empty digest; if the only usable fact is a timing note, the piece may not be salvageable beyond a minimal update.
+- [source-side, not fixable in prose] Don’t treat wrong or unusable team context as an execution fix when it comes from the source context itself.
