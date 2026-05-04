@@ -23,6 +23,6 @@
 - Don’t treat a thin digest like a fuller reporting package; the rewrite should get sharper, not busier.
 - Don’t bury the one concrete fact under soft framing or generic explanatory language.
 - Don’t use source-meta phrasing like “according to the report” or mention what the source does or doesn’t lay out when the digest already supplies the facts.
-- Don’t build on an empty digest; if the source has no facts beyond the headline, the story is source-side, not fixable in prose.
+- Don’t build on an empty digest; if the source has no facts beyond the headline, the story is source-side, not fixable in prose (source-side, not fixable in prose).
 - [analyst] Don’t add roster-fit, usage, or role speculation unless the source directly supports it.
 - [columnist] Don’t turn a supported quote into a bigger temperature-setter or significance claim without source facts.
