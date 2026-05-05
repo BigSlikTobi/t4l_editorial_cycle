@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single verified development in a clean, direct sentence; thin trial updates can work when the first line is decisive.
+- Lead with the single verified development in a clean, direct sentence; thin updates can work when the first line is decisive.
 - Keep headline and lede pointed at the same concrete fact without adding extra explanatory framing.
 - Center short insider updates on the one source-supported procedural change when that is the strongest hook.
 - Stay tightly inside the digest when facts are limited; restrained reporting reads stronger than padded context.
@@ -11,6 +11,8 @@
 - Strong grounding can offset limited specificity when the execution stays disciplined.
 - Useful context is welcome when it stays sourced and doesn’t drift into speculation.
 - [analyst] Center the angle on the supported procedural update and keep surrounding framing minimal.
+- [insider] Put the concrete visit/signing development in the headline and first sentence before any broader roster theory.
+- [insider] A clear roster/secondary development can carry a thin piece if the headline, lede, and body all stay anchored to the same verified facts.
 
 ## What to avoid
 - Don’t make the headline, lede, and body all repeat the same claim; repetition flattens the piece.
@@ -24,5 +26,6 @@
 - Don’t assert a trial status or other procedural milestone unless the provided digest clearly supports it.
 - Don’t pad a thin source note with unsupported implications or extra context just to create depth.
 - Don’t treat a thin digest like a fuller reporting package; the rewrite should get sharper, not busier.
+- Don’t lean on a vague “secondary overhaul” frame unless the concrete news is already anchored immediately.
 - Don’t build on an empty digest or placeholder source; if there are no usable facts to verify, the story is source-side, not fixable in prose (source-side, not fixable in prose).
-- [columnist] Don’t replace a clear angle with vague phrasing; keep the lede useful and specific.
+- [insider] Don’t introduce roster context or a signing development that isn’t actually present in the provided facts; if the digest is empty, the piece is source-side, not fixable in prose.
