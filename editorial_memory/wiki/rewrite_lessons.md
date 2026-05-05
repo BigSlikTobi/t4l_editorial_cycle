@@ -1,11 +1,11 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed move in a clean, direct sentence; a simple first-line update can carry a thin insider report.
+- Lead with the confirmed fact in a clean, direct sentence; a simple first-line update can carry a thin insider report.
 - Keep headline and lede pointed at the same concrete development.
 - In breaking-news items, make the lede carry the consequence immediately, then add support after.
 - Stay tightly inside the source digest when the facts are limited; restrained reporting reads stronger than padded context.
-- Let the verified transaction do the work instead of layering on implications the source never states.
+- Let the verified event do the work instead of layering on implications the source never states.
 - Use exact status language when the source supports it, especially for signings, cuts, recoveries, trial timing, or role changes.
 - A timely, specific personnel move can be readable even without deep context if the grounding stays precise.
 - Clean news framing is stronger than source-meta or narrational phrasing in short insider pieces.
@@ -22,7 +22,7 @@
 - Don’t pad a thin source note with unsupported implications or extra context just to create depth.
 - Don’t introduce broad fan/league significance unless the source actually supports it.
 - Don’t treat a thin digest like a fuller reporting package; the rewrite should get sharper, not busier.
-- Don’t bury the one concrete fact under soft framing or generic explanatory language.
+- Don’t bury the one concrete fact under soft framing, generic explanatory language, or repeated source-meta lines about missing details.
 - Don’t use source-meta phrasing like “according to the report” or mention what the source does or doesn’t lay out when the digest already supplies the facts.
 - Don’t build on an empty digest; if the source has no facts beyond the headline, the story is source-side, not fixable in prose (source-side, not fixable in prose).
 - [analyst] Don’t add roster-fit, usage, or role speculation unless the source directly supports it.
