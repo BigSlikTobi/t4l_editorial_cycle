@@ -9,6 +9,7 @@
 - Use exact status, fit, or role language when the source supports it, especially for scheme, signing, cut, recovery, trial timing, or lineup fit.
 - Clean news framing is stronger than source-meta or narrational phrasing in short insider pieces.
 - Strong grounding can offset limited specificity when the execution stays disciplined.
+- Useful roster context is welcome when it stays sourced and doesn’t drift into speculation.
 - [analyst] Center the angle on the supported development and keep surrounding framing minimal.
 - [columnist] A clear, source-supported hook can make a small update readable, but only if it stays direct and doesn’t overclaim.
 
