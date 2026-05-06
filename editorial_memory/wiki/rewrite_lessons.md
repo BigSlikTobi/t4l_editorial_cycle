@@ -1,31 +1,25 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed angle in a direct sentence; a thin update can still work when the first line is unmistakable.
-- Keep headline and lede aligned on the same concrete fact without extra framing or second-guessing.
-- Stay tightly inside the digest when facts are limited; disciplined restraint reads stronger than padded context.
-- Let the source-backed detail do the work instead of layering on implications the source never states.
-- Use exact procedural language when the source supports it, especially for stage/status-style developments.
-- A thin source can still succeed if the rewrite keeps only the verified news peg and removes unsourced color.
-- Useful context is welcome when it is sourced and does not drift into speculation.
-- Strong grounding can offset limited specificity when the execution stays disciplined.
-- [columnist] A narrow, source-backed angle can work if the headline and intro stay tightly focused on one clear idea.
-- [insider] Put the concrete development in the headline and first sentence before any broader theory or roundup framing.
-- [analyst] Center the angle on supported facts and keep surrounding framing minimal when the digest is thin.
-- Strong specificity can carry a piece when it stays fully grounded and avoids meta language.
+- Lead with the verified development plainly; a compensation-pick note works when the first sentence states the news without detour.
+- Keep headline, intro, and body aligned on the same actual focus so the package feels unified.
+- Stay inside the source-backed digest when the facts are narrow; disciplined restraint beats widening the angle.
+- Use exact formula, projection, or procedural language when the source supports it, especially for draft/status updates.
+- Let the real news peg do the work instead of adding connective tissue or meta framing.
+- Strong specificity can carry a piece when it remains fully grounded and does not drift into speculation.
+- A thin update can still succeed if the rewrite removes unsourced color and preserves the verified core fact.
+- For analyst updates, foreground the concrete team impact in the lede and keep surrounding framing minimal when the source is limited.
+- If a rewrite clarifies what the change means for the team’s draft board, that sharper consequence can rescue a modest source note.
 
 ## What to avoid
-- Don’t make the headline and lede repeat the same idea; repetition flattens the piece.
+- Don’t make the headline point at one development while the body is really about another.
+- Don’t import a separate team/player angle into a story whose actual focus is a compensation-pick update.
+- Don’t widen a narrow, verified projection into a broader narrative unless the digest clearly supports it.
+- Don’t add names, labels, or side plots that belong to a different story, even if they are familiar or tempting.
+- Don’t let a headline overpromise a different angle than the article delivers.
 - Don’t add connective tissue that makes a modest fit sound more conclusive than the source supports.
-- Don’t widen one verified update into a broader resolution or team-signaling story without evidence.
-- Don’t introduce afterthought context that adds little value compared with the cleaner core angle.
-- Don’t imply certainty about motives, fit, or next steps when the digest only supports a narrower claim.
 - Don’t ask the reader to infer implications the source does not provide.
-- Don’t let source narration or meta language crowd out the actual fact or quote.
-- Don’t pad a thin source note with unsupported implications or extra context just to create depth.
-- Don’t import extra identifiers or labels from outside the digest, even if they seem standard or obvious.
-- [columnist] Don’t hang the lead on broad framing when the source only supports a narrow, single-message update.
-- [insider] Don’t add timing or closure language that isn’t in the digest.
-- [analyst] Don’t add unsupported market, cap, or shopping dynamics, and don’t introduce names that aren’t grounded in the source facts; if the source is effectively empty, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
-- Don’t broaden a clean, specific angle with one extra supported note if that note dilutes the focus more than it adds value.
-- Don’t let a strong digested fit lose punch by drifting away from the single headline promise.
+- Don’t pad a thin source note with unsupported context just to create depth.
+- [analyst] Don’t introduce stray cross-story framing in a comp-pick update; keep the projection and draft-board details in the lane the source actually supports.
+- [analyst] Don’t leave the headline/intro too thin when the source has usable concrete facts; make the team consequence explicit instead of leaning on vague packaging.
+- Don’t try to salvage a good core fact by mixing it with an unrelated angle; the fix is usually to cut back, not broaden.
