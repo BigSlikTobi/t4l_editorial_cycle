@@ -30,3 +30,4 @@
 - [columnist] Don’t try to salvage a story when the source digest has no usable facts beyond a headline-level premise; that’s source-side, not fixable in prose (source-side, not fixable in prose).
 - [analyst] Don’t add unsupported market, cap, or shopping dynamics, and don’t introduce names that aren’t grounded in the source facts; if the source is effectively empty, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
 - [insider] Don’t use banned source-digest narration or meta phrases like “according to the source digest”; if the digest is empty, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t build on rumor-only premises when the digest contains no verifiable facts to support the framing; that’s source-side, not fixable in prose (source-side, not fixable in prose).
