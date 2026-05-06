@@ -29,3 +29,4 @@
 - Don’t lean on a vague “secondary overhaul” frame unless the concrete news is already anchored immediately.
 - Don’t build on an empty digest or placeholder source; if there are no usable facts to verify, the story is source-side, not fixable in prose (source-side, not fixable in prose).
 - [insider] Don’t introduce roster context or a signing development that isn’t actually present in the provided facts; if the digest is empty, the piece is source-side, not fixable in prose.
+- [columnist] Don’t spin a publishable narrative from an empty or missing digest; if there are no usable facts, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
