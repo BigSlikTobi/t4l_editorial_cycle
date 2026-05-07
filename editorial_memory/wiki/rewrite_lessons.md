@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified development plainly; a note works best when the first sentence states the news without detour.
+- Lead with the verified development plainly; the first sentence should state the news without detour.
 - Keep headline, intro, and body aligned on the same actual focus so the package feels unified.
 - Stay inside the source-backed digest when the facts are narrow; disciplined restraint beats widening the angle.
 - Use exact formula, projection, or procedural language when the source supports it, especially for draft/status updates.
@@ -12,6 +12,7 @@
 - If a rewrite clarifies what the change means for the team’s draft board, that sharper consequence can rescue a modest source note.
 - When the source is sparse, a cleanly narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
 - For insider notes, a hedged, direct setup around the one confirmed decision point can work when the source only supports a headline-level fact.
+- For non-team event stories, keep the lede and headline anchored to the verified event itself and avoid drifting into novelty commentary.
 
 ## What to avoid
 - Don’t make the headline point at one development while the body is really about another.
@@ -26,3 +27,5 @@
 - Don’t repeat the same limited source-level idea in the headline, sub-head, and intro without adding new verified detail.
 - Don’t use report-style or other source-flavored phrasing that is banned by the house style when a plain, direct setup will do.
 - Don’t restate the same confirmed option over and over; repetitive ledes and bodies weaken even a source-aligned note when they add no new verified detail.
+- Don’t let novelty or significance commentary outrun the verified facts; if the source only supports the event, keep the framing equally plain.
+- Don’t turn a simple event announcement into multiple near-identical sentences; trim repetition and keep one clean fight/venue hook.
