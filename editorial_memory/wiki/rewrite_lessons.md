@@ -1,37 +1,29 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified development plainly; the first sentence should state the news without detour.
-- Keep headline, intro, and body aligned on the same actual focus so the package feels unified.
+- Lead with the verified transaction or development plainly; a clean first sentence works best for short breaking updates.
+- Keep headline, intro, and body aligned on the same confirmed event so the package feels unified.
 - Stay inside the source-backed digest when the facts are narrow; disciplined restraint beats widening the angle.
-- Use exact formula, projection, or procedural language when the source supports it, especially for draft/status updates.
+- Use exact procedural or transaction language when the source supports it, especially for roster or status updates.
 - Let the real news peg do the work instead of adding connective tissue or meta framing.
 - Strong specificity can carry a piece when it remains fully grounded and does not drift into speculation.
-- A thin update can still succeed if it removes unsourced color and preserves the verified core fact.
-- For insider updates, a clean breaking-news structure centered on the confirmed development can work even when the longer-term outlook is only lightly supported.
-- For insider notes, a hedged, direct setup around the one confirmed decision point can work when the source only supports a headline-level fact.
-- For non-team event stories, keep the lede and headline anchored to the verified event itself and avoid drifting into novelty commentary.
-- When the source is sparse, a cleanly narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
-- If a rewrite clarifies the immediate contract or roster consequence, that sharper consequence can rescue a modest source note.
+- A thin update can still succeed if it preserves the verified core fact and trims unsourced color.
+- A clean breaking-news structure centered on the confirmed move can work even when the broader consequence is not yet established.
+- When the source is sparse, a narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
+- Direct, factual wording is especially effective for release/transaction items.
 
 ## What to avoid
 - Don’t make the headline point at one development while the body is really about another.
-- Don’t import a separate team/player angle into a story whose actual focus is one verified decision or update.
-- Don’t widen a narrow, verified projection into a broader narrative unless the digest clearly supports it.
-- Don’t add names, labels, or side plots that belong to a different story, even if they are familiar or tempting.
-- Don’t let a headline overpromise a different angle than the article delivers.
-- Don’t add connective tissue that makes a modest fit sound more conclusive than the source supports.
-- Don’t ask the reader to infer implications the source does not provide.
+- Don’t import a separate team/player angle into a story whose actual focus is one verified move or update.
+- Don’t widen a narrow, verified transaction into a broader roster-shake-up narrative unless the digest clearly supports it.
+- Don’t add consequences, implications, or follow-through that the source does not actually support.
+- Don’t add meta narration or source-flavored phrasing in the middle of the piece when a plain, direct setup will do.
+- Don’t ask the reader to infer roster or contract meaning the source does not provide.
 - Don’t pad a thin source note with unsupported context just to create depth.
-- [analyst] Don’t leave the headline/intro too thin when the source has usable concrete facts; make the team consequence explicit instead of leaning on vague packaging.
-- [analyst] Don’t claim downstream contract or roster implications that the source digest does not actually support.
-- Don’t repeat the same limited source-level idea in the headline, sub-head, and intro without adding new verified detail.
-- Don’t use report-style or other source-flavored phrasing that is banned by the house style when a plain, direct setup will do.
-- Don’t restate the same confirmed option over and over; repetitive ledes and bodies weaken even a source-aligned note when they add no new verified detail.
-- Don’t let novelty or significance commentary outrun the verified facts; if the source only supports the event, keep the framing equally plain.
-- Don’t turn a simple event announcement into multiple near-identical sentences; trim repetition and keep one clean fight/venue hook.
-- Don’t state a specific development as confirmed when the source digest is empty or effectively empty; that is a grounding failure, not a prose issue (source-side, not fixable in prose).
-- [insider] Don’t treat a likely 2026 outcome as settled when the digest only verifies an expected visit; hedge the future-state claim unless the source explicitly supports it.
-- [insider] Don’t add timetable talk, “clear enough” style directional framing, or implied reporting when the only grounded move is to center the visit and its Pittsburgh stake.
-- [insider] Don’t stretch a title-level claim into extra certainty; if the source is thin, keep the lede tightly on the one verified development and avoid unsupported follow-through.
-- [analyst] Don’t write contract-status or option stories from an empty digest; if grounding is 0.00, the issue is source-side, not fixable in prose.
+- Don’t repeat the same limited source-level idea in the headline, intro, and body without adding new verified detail.
+- Don’t let novelty or significance commentary outrun the verified facts; if the source only supports the move, keep the framing equally plain.
+- Don’t state a downstream consequence as confirmed when it is only implied by the transaction.
+- [insider] Don’t stretch a source-backed release into extra certainty about roster direction; keep the lede tightly on the confirmed moves and avoid unsupported follow-through.
+- [insider] Don’t use “shake-up” style framing unless the digest explicitly supports that broader interpretation.
+- Don’t name players or add timing details when the source digest is empty or effectively empty; that’s a source-side problem, not something prose can fix.
+- (source-side, not fixable in prose) Automatic dismissals can happen when there is no factual base to verify against, even if the headline is tidy.
