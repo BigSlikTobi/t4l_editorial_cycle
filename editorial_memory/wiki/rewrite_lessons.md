@@ -8,11 +8,11 @@
 - Let the real news peg do the work instead of adding connective tissue or meta framing.
 - Strong specificity can carry a piece when it remains fully grounded and does not drift into speculation.
 - A thin update can still succeed if it removes unsourced color and preserves the verified core fact.
-- For analyst updates, foreground the concrete team impact in the lede and keep surrounding framing minimal when the source is limited.
-- If a rewrite clarifies what the change means for the team’s draft board, that sharper consequence can rescue a modest source note.
-- When the source is sparse, a cleanly narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
+- For insider updates, a clean breaking-news structure centered on the confirmed development can work even when the longer-term outlook is only lightly supported.
 - For insider notes, a hedged, direct setup around the one confirmed decision point can work when the source only supports a headline-level fact.
 - For non-team event stories, keep the lede and headline anchored to the verified event itself and avoid drifting into novelty commentary.
+- When the source is sparse, a cleanly narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
+- If a rewrite clarifies the immediate contract or roster consequence, that sharper consequence can rescue a modest source note.
 
 ## What to avoid
 - Don’t make the headline point at one development while the body is really about another.
@@ -24,9 +24,14 @@
 - Don’t ask the reader to infer implications the source does not provide.
 - Don’t pad a thin source note with unsupported context just to create depth.
 - [analyst] Don’t leave the headline/intro too thin when the source has usable concrete facts; make the team consequence explicit instead of leaning on vague packaging.
+- [analyst] Don’t claim downstream contract or roster implications that the source digest does not actually support.
 - Don’t repeat the same limited source-level idea in the headline, sub-head, and intro without adding new verified detail.
 - Don’t use report-style or other source-flavored phrasing that is banned by the house style when a plain, direct setup will do.
 - Don’t restate the same confirmed option over and over; repetitive ledes and bodies weaken even a source-aligned note when they add no new verified detail.
 - Don’t let novelty or significance commentary outrun the verified facts; if the source only supports the event, keep the framing equally plain.
 - Don’t turn a simple event announcement into multiple near-identical sentences; trim repetition and keep one clean fight/venue hook.
 - Don’t state a specific development as confirmed when the source digest is empty or effectively empty; that is a grounding failure, not a prose issue (source-side, not fixable in prose).
+- [insider] Don’t treat a likely 2026 outcome as settled when the digest only verifies an expected visit; hedge the future-state claim unless the source explicitly supports it.
+- [insider] Don’t add timetable talk, “clear enough” style directional framing, or implied reporting when the only grounded move is to center the visit and its Pittsburgh stake.
+- [insider] Don’t stretch a title-level claim into extra certainty; if the source is thin, keep the lede tightly on the one verified development and avoid unsupported follow-through.
+- [analyst] Don’t write contract-status or option stories from an empty digest; if grounding is 0.00, the issue is source-side, not fixable in prose.
