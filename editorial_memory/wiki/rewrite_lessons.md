@@ -11,8 +11,8 @@
 - When the source is sparse, a narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
 - A thin update can still succeed if it preserves the verified core fact and trims unsourced color.
 - [insider] Clear team-specific transaction updates work when the lede, standfirst, and body all stay aligned on the same confirmed fact.
+- [insider] Supporting context can strengthen a short transaction item when it stays inside the digest and clearly serves the core update.
 - [columnist] Tight, source-anchored ledes work best when any added scene-setting stays minimal and clearly tied to the reported fact.
-- [columnist] Fan-useful scheduling details can boost a short item when they remain concrete and fully inside the reported facts.
 
 ## What to avoid
 - Don't widen a narrow verified update into a broader narrative unless the digest clearly supports it.
