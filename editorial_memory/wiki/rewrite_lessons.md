@@ -1,32 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified core angle immediately so the story feels grounded from the first line.
-- Keep headline and lede tightly matched to the single confirmed angle when the source record is narrow.
-- Use plain, wire-style wording for signings, returns, moves, and other transaction updates.
-- Stay strictly inside the source-backed digest when facts are limited; restraint beats speculative expansion.
-- Let the confirmed news peg do the work instead of adding extra framing, roster-planning context, or camp/backfield color.
-- A narrow, clean lede can carry a short item when it stays fully anchored to the reported fact.
-- Strong specificity helps when it remains source-anchored and does not drift into inference.
-- When the source is sparse, a focused headline/intro pair is stronger than repeated paraphrases of the same point.
-- A thin update can still succeed if it preserves the verified core fact and trims unsupported color.
-- [insider] Clear transaction updates work best when the headline, lede, and body all stay aligned on the same confirmed move.
-- [columnist] Tight, source-anchored ledes work best when any scene-setting stays minimal and clearly tied to the reported fact.
+- Lead with the exact source-backed decision or non-decision when the report is thin; a direct lede can carry the piece.
+- Keep the headline and lede centered on one verified news point instead of widening into team-picture context.
+- Use specific named-player groupings when the source clearly gives the pool in play.
+- Tight, source-anchored framing works best when the digest supports only one safe claim.
+- Concrete transaction or decision details strengthen the note when they are explicitly sourced.
+- Minimal updates work best when they stay focused on the confirmed status and avoid overreading it.
+- Strong specificity helps when it is limited to what is explicitly confirmed, not implied fallout.
+- A grounded item can still work if it stays inside the confirmed source and avoids overreach.
+- [analyst] Translate vague status notes into a concrete decision only when the source actually supports that decision.
+- [insider] Stay tightly inside the sourced report and let the named group and confirmed status do the work without embellishment.
 
 ## What to avoid
-- Don't widen a narrow verified update into a broader narrative unless the digest clearly supports it.
-- Don't add roster-planning, receiver-room, backfield, or similar framing unless the source digest explicitly supports that angle.
-- Don't let vague atmosphere or soft invented context replace concrete reporting; extract the specific value from the hook.
-- Don't repeat the same limited source-level idea in the headline, intro, and body without adding new verified detail.
-- Don't add consequences, implications, or follow-through that the source does not actually support.
-- Don't pad a thin source note with unsupported context just to create depth.
-- Don't introduce background details unless they are explicitly supported in the source material.
-- Don't let the headline promise more than the digest can verify.
-- Don't repeat a transaction note with filler that doesn't advance the core fact; keep headline and intro sharp instead of echoing each other.
-- Don't keep unsupported side references if they don't materially move the story.
-- Don't lean on team-context framing or named-entity references unless the source digest explicitly supports them.
-- Don't build a full narrative frame around a quote-style claim when the source record has no usable facts; the piece needs anchored detail, not just a headline paraphrase.
-- (source-side, not fixable in prose) Don't treat a missing or empty source digest as salvageable; if the core claims cannot be verified, the item should be dismissed rather than rewritten.
-- (source-side, not fixable in prose) Don't keep rewriting when the digest supplies no factual support beyond a general premise.
-- (source-side, not fixable in prose) Don't attempt a prose fix for unsupported details when the digest is effectively empty; there is no publishable article to rescue.
-- (source-side, not fixable in prose) Don't assume a headline/angle can be confirmed from the title alone when the digest contains no verifiable source backing.
+- Don’t widen a thin source note into a bigger roster or team-picture story unless the digest explicitly supports that framing.
+- Don’t add roster implications, competition conclusions, or broader offseason meaning if the source only confirms that a decision is still pending.
+- Don’t imply the competition has narrowed or been clarified when the digest only says it is too soon to decide.
+- Don’t over-explain a simple source-backed update with filler that creates extra claims.
+- Don’t let the body drift beyond the one confirmed fact when source material is extremely thin.
+- Don’t pad a brief update with consequence framing that isn’t directly sourced.
+- Don’t use generic report-style narration to bridge gaps in the source; stay on the confirmed fact.
+- Don’t turn a “too soon to decide” note into a fuller competition narrative unless the digest supplies that next step.
+- [analyst] Don’t convert a thin digest into a stronger decision story unless the source supports that unresolved decision.
+- [insider] Don’t add surrounding roster context unless the digest explicitly establishes it.
+- [insider] If the source package is too thin to verify the key claim, cut the piece down instead of compensating with context.
+- When the source digest is effectively empty, don’t repeat the headline claim across headline, subhead, lede, and body; that adds no verified substance.
+- (source-side, not fixable in prose) If the digest is empty or internally unusable, there is nothing safe to salvage—treat it as a stop sign, not a writing problem.
