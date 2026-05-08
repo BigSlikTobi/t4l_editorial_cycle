@@ -11,7 +11,6 @@
 - When the source is sparse, a narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
 - A thin update can still succeed if it preserves the verified core fact and trims unsourced color.
 - [insider] Clear team-specific transaction updates work when the lede, standfirst, and body all stay aligned on the same confirmed fact.
-- [insider] Supporting context can strengthen a short transaction item when it stays inside the digest and clearly serves the core update.
 - [columnist] Tight, source-anchored ledes work best when any added scene-setting stays minimal and clearly tied to the reported fact.
 
 ## What to avoid
@@ -23,6 +22,9 @@
 - Don't pad a thin source note with unsupported context just to create depth.
 - Don't introduce offseason or background details unless they are explicitly supported in the source material.
 - Don't let the headline promise more than the digest can verify.
+- Don't repeat a retirement or return note with filler that doesn't advance the core fact; keep headline and intro sharp instead of echoing each other.
+- Don't keep unsupported name-drops or side references if they don't materially move the story.
+- Don't lean on team-context framing or named-entity references unless the source digest explicitly supports them.
 - Don't treat missing or linked-only material as if it confirmed the story; if the digest is effectively empty, there is nothing salvageable to build on.
 - (source-side, not fixable in prose) Don't try to manufacture missing support when the source digest provides no key facts beyond the basic hook; if the digest is effectively empty, the item is not salvageable in prose and should be dismissed.
 - (source-side, not fixable in prose) Don't keep rewriting when the digest gives only a general premise and no concrete, source-supported details to build on.
