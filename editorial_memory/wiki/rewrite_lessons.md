@@ -1,34 +1,31 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the strongest verified development immediately so the piece feels purposeful from the first line.
-- Keep headline and intro tightly matched to the one supported angle when the story is narrow.
-- Use plain wire-style wording for a return, move, or transaction; direct factual language reads best.
-- Stay inside the source-backed digest when facts are limited; disciplined restraint beats invented scope.
-- Let the real news peg do the work instead of adding connective tissue or meta framing.
-- A narrow, clean lede can carry a short item when it stays fully grounded in the confirmed fact.
-- Strong specificity helps when it remains fully source-anchored and does not drift into speculation.
-- When the source is sparse, a narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
-- A thin update can still succeed if it preserves the verified core fact and trims unsourced color.
-- [insider] Clear team-specific transaction updates work when the lede, standfirst, and body all stay aligned on the same confirmed fact.
-- [columnist] Tight, source-anchored ledes work best when any added scene-setting stays minimal and clearly tied to the reported fact.
+- Lead with the verified core transaction immediately so the story feels grounded from the first line.
+- Keep headline and lede tightly matched to the one confirmed angle when the source record is narrow.
+- Use plain, wire-style wording for signings, returns, moves, and other transaction updates.
+- Stay strictly inside the source-backed digest when facts are limited; restraint beats speculative expansion.
+- Let the confirmed news peg do the work instead of adding extra framing or roster-planning context.
+- A narrow, clean lede can carry a short item when it stays fully anchored to the reported fact.
+- Strong specificity helps when it remains source-anchored and does not drift into inference.
+- When the source is sparse, a focused headline/intro pair is stronger than repeated paraphrases of the same point.
+- A thin update can still succeed if it preserves the verified core fact and trims unsupported color.
+- [insider] Clear transaction updates work best when the headline, lede, and body all stay aligned on the same confirmed move.
+- [columnist] Tight, source-anchored ledes work best when any scene-setting stays minimal and clearly tied to the reported fact.
 
 ## What to avoid
 - Don't widen a narrow verified update into a broader narrative unless the digest clearly supports it.
-- Don't add celebrity-style scene-setting or broad color that is not anchored by the source digest.
+- Don't add roster-planning, receiver-room, or similar framing unless the source digest explicitly supports that angle.
 - Don't let vague atmosphere replace concrete reporting; extract the specific value from the hook.
 - Don't repeat the same limited source-level idea in the headline, intro, and body without adding new verified detail.
 - Don't add consequences, implications, or follow-through that the source does not actually support.
 - Don't pad a thin source note with unsupported context just to create depth.
-- Don't introduce offseason or background details unless they are explicitly supported in the source material.
+- Don't introduce background details unless they are explicitly supported in the source material.
 - Don't let the headline promise more than the digest can verify.
-- Don't repeat a retirement or return note with filler that doesn't advance the core fact; keep headline and intro sharp instead of echoing each other.
-- Don't keep unsupported name-drops or side references if they don't materially move the story.
+- Don't repeat a transaction note with filler that doesn't advance the core fact; keep headline and intro sharp instead of echoing each other.
+- Don't keep unsupported side references if they don't materially move the story.
 - Don't lean on team-context framing or named-entity references unless the source digest explicitly supports them.
-- Don't treat missing or linked-only material as if it confirmed the story; if the digest is effectively empty, there is nothing salvageable to build on.
-- (source-side, not fixable in prose) Don't try to manufacture missing support when the source digest provides no key facts beyond the basic hook; if the digest is effectively empty, the item is not salvageable in prose and should be dismissed.
-- (source-side, not fixable in prose) Don't keep rewriting when the digest gives only a general premise and no concrete, source-supported details to build on.
-- Don't mention an unidentified holdout or similar missing detail unless the source digest names it.
-- (source-side, not fixable in prose) Don't add unsupported roster specifics when the digest is empty; a clean dismiss is better than inventing names or roles.
-- (source-side, not fixable in prose) Don't treat a generic roster-trim premise as rewritable unless the digest supplies concrete, verifiable player moves.
-- (source-side, not fixable in prose) Don't attempt a rewrite when the digest contains only the headline and missing-content status; there is no publishable article to salvage.
+- (source-side, not fixable in prose) Don't treat a missing or empty source digest as salvageable; if the core claims cannot be verified, the item should be dismissed rather than rewritten.
+- (source-side, not fixable in prose) Don't keep rewriting when the digest supplies no factual support beyond a general premise.
+- (source-side, not fixable in prose) Don't attempt a prose fix for unsupported details when the digest is effectively empty; there is no publishable article to rescue.
+- (source-side, not fixable in prose) Don't assume a transaction headline can be confirmed from the title alone when the digest contains no verifiable source backing.
