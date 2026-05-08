@@ -29,3 +29,6 @@
 - (source-side, not fixable in prose) Don't try to manufacture missing support when the source digest provides no key facts beyond the basic hook; if the digest is effectively empty, the item is not salvageable in prose and should be dismissed.
 - (source-side, not fixable in prose) Don't keep rewriting when the digest gives only a general premise and no concrete, source-supported details to build on.
 - Don't mention an unidentified holdout or similar missing detail unless the source digest names it.
+- (source-side, not fixable in prose) Don't add unsupported roster specifics when the digest is empty; a clean dismiss is better than inventing names or roles.
+- (source-side, not fixable in prose) Don't treat a generic roster-trim premise as rewritable unless the digest supplies concrete, verifiable player moves.
+- (source-side, not fixable in prose) Don't attempt a rewrite when the digest contains only the headline and missing-content status; there is no publishable article to salvage.
