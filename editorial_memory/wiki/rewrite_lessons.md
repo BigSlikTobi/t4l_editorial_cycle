@@ -10,6 +10,7 @@
 - Strong specificity helps when it remains fully source-anchored and does not drift into speculation.
 - When the source is sparse, a narrowed headline/intro pair is stronger than repeated paraphrases of the same point.
 - A thin update can still succeed if it preserves the verified core fact and trims unsourced color.
+- [insider] Clear team-specific transaction updates work when the lede, standfirst, and body all stay aligned on the same confirmed fact.
 - [columnist] Tight, source-anchored ledes work best when any added scene-setting stays minimal and clearly tied to the reported fact.
 - [columnist] Fan-useful scheduling details can boost a short item when they remain concrete and fully inside the reported facts.
 
@@ -22,6 +23,7 @@
 - Don't pad a thin source note with unsupported context just to create depth.
 - Don't introduce offseason or background details unless they are explicitly supported in the source material.
 - Don't let the headline promise more than the digest can verify.
-- [columnist] Don't lean on broad stylistic color when the usable facts are just the central reported development.
+- Don't treat missing or linked-only material as if it confirmed the story; if the digest is effectively empty, there is nothing salvageable to build on.
 - (source-side, not fixable in prose) Don't try to manufacture missing support when the source digest provides no key facts beyond the basic hook; if the digest is effectively empty, the item is not salvageable in prose and should be dismissed.
 - (source-side, not fixable in prose) Don't keep rewriting when the digest gives only a general premise and no concrete, source-supported details to build on.
+- Don't mention an unidentified holdout or similar missing detail unless the source digest names it.
