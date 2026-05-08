@@ -1,28 +1,29 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified core announcement when the source is narrow; a clean lede can carry the item.
-- Keep the headline centered on one confirmed point instead of widening into extra context.
-- Tight, source-anchored framing works best when the digest supports a single clear claim.
-- Keep the intro factual and direct; concise announcement-led copy reads better than meta commentary about the source package.
-- Concrete sourced details strengthen the note when they are explicitly provided.
-- Minimal updates work best when they stay focused on the confirmed status and avoid overreading it.
-- Clear headline-to-intro alignment improves small news items when both repeat the same verified point.
-- A grounded item can still work if it stays inside the confirmed source and avoids overreach.
-- [insider] Stay tightly inside the sourced report and let the named status and confirmed consequence do the work without embellishment.
-- [analyst] Build the fantasy angle from supported baselines, rankings, and additions the digest actually verifies.
-- [analyst] A clear fantasy reason to act is valuable when it is fully rooted in the provided stats and team context.
+- Lead with the clearest concrete development when a source bundle contains multiple threads; one strong angle beats a crowded recap.
+- Keep the headline tightly aligned to the primary verified fact so the first read immediately matches the story’s main point.
+- Surface the most consequential contract, status, or timing detail early when it is fully confirmed by the source.
+- A tightly grounded insider item can work even when the source has several parts, as long as the copy stays disciplined.
+- Use supporting notes only if they reinforce the main update without competing with it.
+- Clean, sourced specificity improves credibility when it directly reinforces the main announcement or checkpoint.
+- Breaking-news voice works well when the item gives fans a clear utility checkpoint and the copy stays in the facts.
+- Use multiple confirmed details together when they all support the same roster update, rather than splitting them into separate mini-stories.
+- [insider] Keep the lede/headline package concise and utility-first when the digest gives a clear roster action.
+- [insider] Supporting notes like jersey numbers or staff context can stay in if they remain subordinate to the main verified development.
+- [analyst] Build the angle from verified baselines and context the digest actually supports; keep the payoff sharp and data-backed.
+- [analyst] A clear reason to act is strongest when it is rooted in the provided numbers rather than broad framing.
 
 ## What to avoid
-- Don’t widen a thin source note into a bigger roster or team-picture story unless the digest explicitly supports that framing.
-- Don’t add roster implications, competition conclusions, or broader offseason meaning if the source only confirms a status update.
-- Don’t imply the competition has narrowed or been clarified when the digest only says it is too soon to decide.
-- Don’t over-explain a simple source-backed update with filler that creates extra claims.
-- Don’t let the body drift beyond the one confirmed fact when source material is extremely thin.
-- Don’t pad a brief update with consequence framing that isn’t directly sourced.
-- Don’t use generic report-style narration to bridge gaps in the source; stay on the confirmed fact.
-- Don’t turn a “too soon to decide” note into a fuller competition narrative unless the digest supplies that next step.
+- Don’t compress several source threads so tightly that the lead loses punch; pick the single best news line first.
+- Don’t let secondary details crowd out the primary roster-closing, status, or contract development.
+- Don’t bury the cleanest angle under extra true-but-inessential context.
+- Don’t overwork the lede with multiple verified facts when one concrete update can carry the item.
+- Don’t make a supporting note do the job of the main headline or first sentence.
+- Don’t widen a source-backed update into a broader team-picture story unless the digest explicitly supports that frame.
+- Don’t over-explain a simple confirmed move with filler that softens the impact.
+- Don’t use generic report-style narration to stitch together source threads when a direct announcement-led approach is available.
 - Don’t keep unsupported player references or wrong-team fields when the source package doesn’t verify them.
-- Don’t write around a missing digest with meta lines about what the source did or didn’t include; if the backbone is missing, keep the piece strictly to what’s verified.
-- [insider] Don’t add surrounding roster context unless the digest explicitly establishes it.
+- [insider] Don’t bury the main verified development under comparison notes or side detail.
 - [analyst] Don’t lean so hard on broad framing that the analytical payoff gets soft; keep the fantasy rationale sharp and data-backed.
+- Dismiss/rewrite cannot be salvaged when the source digest is empty or missing; that’s a source-side, not fixable in prose issue.
