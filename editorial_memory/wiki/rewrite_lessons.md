@@ -26,4 +26,5 @@
 - Don’t keep unsupported player references or wrong-team fields when the source package doesn’t verify them.
 - [insider] Don’t bury the main verified development under comparison notes or side detail.
 - [analyst] Don’t lean so hard on broad framing that the analytical payoff gets soft; keep the fantasy rationale sharp and data-backed.
-- Dismiss/rewrite cannot be salvaged when the source digest is empty or missing; that’s a source-side, not fixable in prose issue.
+- Don’t state a move, signing, or other roster claim unless it is actually supported by the source digest; if the digest is empty, cut the story back rather than inventing context or significance.
+- Don’t try to rescue an essentially empty digest with hedged meta-summary language; if there’s no factual base, the piece is not salvageable in prose (source-side, not fixable in prose).
