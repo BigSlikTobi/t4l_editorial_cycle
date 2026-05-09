@@ -11,7 +11,6 @@
 - Keep the angle specific to the actual decision state when coverage is still unfolding; avoid vague “in the mix” phrasing.
 - [insider] Stick to the direct roster/action update when the source is basically headline-only; don’t force a larger narrative.
 - [insider] When a report is the only basis, keep the language clearly attributed rather than upgrading it into certainty.
-- [insider] Tightly grounded roster updates with named players, draft context, and timing can still read cleanly without overreach.
 - [analyst] Keep the analytical payoff sharp and grounded in the numbers or concrete roster/cap implications the digest actually provides.
 - [columnist] A simple confirmed date, offseason condition, or announcement can be the hook; don’t inflate it into a broader stakes narrative unless the source supports it.
 
@@ -21,7 +20,6 @@
 - Don’t widen a source-backed roster move into a broader team-story unless the digest explicitly supports that angle.
 - Don’t bury the main development under comparison notes, side detail, or extra scene-setting.
 - Don’t overwork the lede with multiple verified facts when one concrete update can carry the item.
-- Don’t make a supporting note do the job of the headline or first sentence.
 - Don’t repeat the lede with meta phrasing, filler, or generic evaluation language that adds no sourced substance.
 - Don’t present a reported move as confirmed fact when the digest only supports attribution; hedge or attribute it.
 - Don’t add quote-like certainty around contract or signing details unless the source clearly confirms them.
@@ -32,3 +30,9 @@
 - [insider] Don’t attach unsupported player references or stray details to a simple announcement; keep every name tied to the source.
 - [insider] Don’t upgrade a reported item into hard fact; keep attribution visible when the source is just a report.
 - [insider] Don’t build a rewrite around invented specifics when the digest is effectively empty; that’s a source-side failure, not a prose fix.
+- [insider] Don’t add unsupported filler about timing or missing terms when the source only supports the agreement itself; keep the rewrite pinned to the confirmed signing only.
+- [insider] Don’t use source-narration phrasing such as “according to the source report” in the lede; it weakens a breaking-news item when the fact itself can carry the sentence.
+- [insider] Don’t imply timing, terms, or draft-class implications when the digest only confirms the signing.
+- [insider] Don’t infer that draft picks are rookies or that the move clarifies the incoming group unless the source explicitly says so; that kind of added substance is not salvageable from nothing.
+- [insider] Don’t turn a missing digest into a narrative about implications or roster clarity; keep clear-eyed about when there is no factual base to rewrite.
+- [insider] Don’t claim a move “removes one more unsigned name from the board” or “officially” changes the roster picture unless the source digest actually supports that status change.
