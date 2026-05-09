@@ -9,9 +9,10 @@
 - Keep supporting context subordinate to the main verified development; it should clarify, not compete.
 - Use multiple confirmed details together only when they all reinforce the same main update.
 - Keep the first sentence free of filler so the announcement or roster move lands immediately.
+- Keep the angle specific to the actual decision state when coverage is still unfolding; avoid vague “in the mix” phrasing.
 - [insider] Stick to the direct roster action when the source is basically headline-only; don’t force a larger narrative.
-- [insider] Keep the piece lean and strictly factual when the source only supports the release/signing itself and the timing.
-- [analyst] Keep the analytical payoff sharp and grounded in the numbers or context the digest actually provides.
+- [analyst] Keep the analytical payoff sharp and grounded in the numbers or concrete roster/cap implications the digest actually provides.
+- [analyst] A sparse source can still pass when the headline and lede stay tightly inside the digest and the team-specific stake is clear.
 - [columnist] A fan-tap angle works when it stays anchored to the single verified announcement and avoids unsupported embellishment.
 
 ## What to avoid
@@ -22,10 +23,11 @@
 - Don’t overwork the lede with multiple verified facts when one concrete update can carry the item.
 - Don’t make a supporting note do the job of the headline or first sentence.
 - Don’t use generic report-style narration when a direct announcement-led approach is available.
-- Don’t repeat the lede with meta phrasing or filler that adds no sourced substance.
+- Don’t repeat the lede with meta phrasing, filler, or generic evaluation language that adds no sourced substance.
+- Don’t rely on broad framing like “in the mix” without a concrete decision point, roster consequence, or other specific takeaway.
 - Don’t introduce unrelated named figures or examples unless they materially support the main update.
 - Don’t state an immediate downstream change unless the source digest actually supports it; keep the article to the confirmed release/signing/timing.
 - Don’t try to rescue an essentially empty digest with hedged summary language; if there’s no factual base, the piece is not salvageable in prose (source-side, not fixable in prose).
 - [insider] Don’t wrap a simple release/signing in extra explanation when the source gives you only the core action.
-- [analyst] Don’t let broad framing soften the direct fantasy or roster takeaway; keep it grounded and specific.
+- [analyst] Don’t let broad framing soften the direct fantasy, roster, or cap takeaway; keep it grounded and specific.
 - [columnist] Don’t turn a straightforward personal-announcement item into a bigger narrative arc unless the source explicitly supports it.
