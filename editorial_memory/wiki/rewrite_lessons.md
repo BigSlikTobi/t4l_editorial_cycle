@@ -1,15 +1,14 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the clearest source-backed hook when the digest is tight; a direct market or roster update beats widening the angle.
+- Lead with the clearest source-backed hook when the digest is tight; a direct update beats widening the angle.
 - Keep the headline and lede locked to the same verified development so the reader lands on the news immediately.
-- Use a clean, direct roster or betting-angle update when that is the strongest supported story shape.
+- Use a clean, direct roster or market update when that is the strongest supported story shape.
 - Let one concrete fact carry the item when the source is thin; brevity can be the right form of discipline.
 - Keep supporting context subordinate to the main update; it should sharpen the point, not compete with it.
 - Surface the core status, timing, signing, or announcement immediately when it is fully supported.
-- Use multiple confirmed details together only when they reinforce the same main update.
 - Keep the angle specific to the actual decision or market state; avoid vague “in the mix” phrasing.
-- [analyst] Keep the analytical payoff sharp and grounded in the numbers or concrete roster/cap implications the digest actually provides.
+- [analyst] Keep the analytical payoff sharp and grounded in the numbers or concrete cap/roster implications the digest actually provides.
 - [analyst] When the digest fully supports it, stack a few verified team-context details to strengthen the case without overstating it.
 - [columnist] A confirmed market number, timing detail, or return-to-form context can be the hook; don’t inflate it into broader stakes unless the source supports it.
 - If the source digest has no usable facts, call it a hard stop rather than trying to write around the gap.
@@ -26,5 +25,4 @@
 - Don’t add ranking/comparison framing or named comparators unless the source digest actually supports them.
 - Don’t state an immediate downstream change unless the source digest actually supports it; keep the article to the confirmed action and consequence.
 - Don’t turn an essentially empty digest into a polished narrative; if the factual base is missing, the piece is not salvageable in prose (source-side, not fixable in prose).
-- [analyst] Don’t let the lede and setup restate the same point in different words; cut repetition and use the second sentence to add new, source-backed tension or implication.
 - [columnist] Don’t turn a factless or unverifiable premise into a personality piece; that’s a source-substance failure, not a framing opportunity (source-side, not fixable in prose).
