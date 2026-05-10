@@ -12,6 +12,7 @@
 - [insider] Stick to the direct roster/action update when the source is basically headline-only; don’t force a larger narrative.
 - [analyst] Keep the analytical payoff sharp and grounded in the numbers or concrete roster/cap implications the digest actually provides.
 - [columnist] A simple confirmed date, airing detail, offseason condition, or announcement can be the hook; don’t inflate it into broader stakes or player-tie-in theater unless the source supports it.
+- If the source digest has no usable facts, call it a hard stop rather than trying to write around the gap.
 
 ## What to avoid
 - Don’t add scene-setting, color, or implied context that goes beyond the verified fact; keep the opening strictly grounded.
@@ -28,3 +29,4 @@
 - [insider] Don’t keep unsupported contract specifics like term or dollar figures when the source digest doesn’t actually verify them; rebuild around the connection the digest does support.
 - [insider] Don’t add missing-source article citations or unsupported roster-importance framing; stay strictly with the confirmed deal and nothing more.
 - [insider] Don’t repeat the same unsupported claim across headline, subhead, and intro when the digest is empty; if the fact base isn’t there, the draft can’t be patched by rephrasing (source-side, not fixable in prose).
+- [columnist] Don’t turn a factless or unverifiable premise into a personality piece; that’s a source-substance failure, not a framing opportunity (source-side, not fixable in prose).
