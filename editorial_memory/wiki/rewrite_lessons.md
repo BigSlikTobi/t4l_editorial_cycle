@@ -26,4 +26,5 @@
 - Don’t state an immediate downstream change unless the source digest actually supports it; keep the article to the confirmed action and consequence.
 - Don’t try to rescue an essentially empty digest with hedged summary language; if there’s no factual base, the piece is not salvageable in prose (source-side, not fixable in prose).
 - [insider] Don’t keep unsupported contract specifics like term or dollar figures when the source digest doesn’t actually verify them; rebuild around the connection the digest does support.
-- [columnist] Don’t inflate a broadcast assignment into matchup theater, player tie-ins, or extra stakes when the source only confirms the airing detail.
+- [insider] Don’t add missing-source article citations or unsupported roster-importance framing; stay strictly with the confirmed deal and nothing more.
+- [insider] Don’t repeat the same unsupported claim across headline, subhead, and intro when the digest is empty; if the fact base isn’t there, the draft can’t be patched by rephrasing (source-side, not fixable in prose).
