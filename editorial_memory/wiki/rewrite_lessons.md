@@ -25,4 +25,5 @@
 - Don’t add ranking/comparison framing or named comparators unless the source digest actually supports them.
 - Don’t state an immediate downstream change unless the source digest actually supports it; keep the article to the confirmed action and consequence.
 - Don’t try to rescue an essentially empty digest with hedged summary language; if there’s no factual base, the piece is not salvageable in prose (source-side, not fixable in prose).
+- [insider] Don’t keep unsupported contract specifics like term or dollar figures when the source digest doesn’t actually verify them; rebuild around the connection the digest does support.
 - [columnist] Don’t inflate a broadcast assignment into matchup theater, player tie-ins, or extra stakes when the source only confirms the airing detail.
