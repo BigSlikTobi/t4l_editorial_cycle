@@ -11,6 +11,7 @@
 - Maintain a crisp insider-style update when the report is solid but limited; clarity matters more than breadth.
 - [insider] Focus on the confirmed event, the named parties, and the directly reported terms or matchup rather than speculative implications.
 - [analyst] A bare source summary can still work if the lede stays tightly grounded and avoids over-explaining consequences.
+- A clean wire-style lede that states the core fact multiple ways can still score well when grounding is strong.
 
 ## What to avoid
 - Don’t add unsupported claims about what the development means for the roster, starter job, team strategy, or future outlook unless the digest explicitly supports them.
@@ -21,7 +22,7 @@
 - Don’t treat a reported competition or deal as a platform for extra certainty about downstream effects unless those effects are verified.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t pad the intro with general commentary when one confirmed fact can do the job.
+- [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare agreement.
 - [analyst] Don’t turn a bare summary into roster-conversation analysis or half-measures framing unless the source directly makes that case.
 - If the factual base is effectively empty beyond the headline, keep the piece minimal rather than stretching it; that’s a source-limit issue, not a prose fix (source-side, not fixable in prose).
 - Don’t force a rewrite to survive when the source package can’t support the named matchup or relationship; unresolved grounding issues should be dismissed, not embellished.
-- Don’t keep repeating the same sourced summary in new wording after a rewrite has already failed to add substance.
