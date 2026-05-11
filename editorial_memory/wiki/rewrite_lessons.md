@@ -1,25 +1,26 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the one confirmed development when the digest is thin; a tight headline-to-lede match beats expanding the frame.
-- Keep the headline and intro anchored to the same verified event so the reader gets the update immediately.
-- Restate the core fact plainly and precisely in the lede; direct summary is stronger than interpretive setup.
-- Use only the details the source actually supplies; concrete, sourced specifics can carry a short piece.
-- Let a single verified transaction, agreement, or competition stand on its own when that is the only durable fact available.
+- Lead with the one verified move when the digest is narrow; a tight headline-to-lede match is stronger than stretching for extra angle.
+- Keep headline, intro, and body anchored to the same confirmed event so the update lands immediately.
+- State the core fact plainly in the lede; direct summary beats interpretive setup.
+- Use only source-supplied details, especially on names, terms, and room/context specifics.
+- Let a single verified transaction or signing stand on its own when that is the durable news.
 - Surface the core action immediately, then stop unless the digest clearly adds more.
-- When the evidence is sparse, brevity can be the right form of discipline.
+- Brevity is a strength when the evidence is sparse.
 - Maintain a crisp insider-style update when the report is solid but limited; clarity matters more than breadth.
-- [insider] Focus on the confirmed event, the named parties, and the directly reported terms or matchup rather than speculative implications.
+- [insider] Focus on the confirmed move, the named parties, and the directly reported terms rather than speculative implications.
+- [insider] Strong grounding can support adding a verified fit angle or player-history detail when it is explicitly sourced.
 - [analyst] A bare source summary can still work if the lede stays tightly grounded and avoids over-explaining consequences.
 - A clean wire-style lede that states the core fact multiple ways can still score well when grounding is strong.
 
 ## What to avoid
-- Don’t add unsupported claims about what the development means for the roster, starter job, team strategy, or future outlook unless the digest explicitly supports them.
+- Don’t add unsupported roster or room claims; even a plausible list of names can sink grounding if the digest doesn’t support it.
 - Don’t widen a headline-level report into a broader narrative when the source evidence is thin.
 - Don’t make factual claims that go beyond the source digest; grounding failures are publish-stoppers.
 - Don’t repeat the lede or create a mild loop by restating the same news in slightly different words.
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
-- Don’t treat a reported competition or deal as a platform for extra certainty about downstream effects unless those effects are verified.
+- Don’t treat a reported deal or signing as a platform for extra certainty about downstream effects unless those effects are verified.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t pad the intro with general commentary when one confirmed fact can do the job.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare agreement.
