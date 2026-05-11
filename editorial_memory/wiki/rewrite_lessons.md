@@ -10,9 +10,8 @@
 - Brevity is a strength when the evidence is sparse.
 - Maintain a crisp insider-style update when the report is solid but limited; clarity matters more than breadth.
 - [insider] Focus on the confirmed move, the named parties, and the directly reported terms rather than speculative implications.
-- [insider] Strong grounding can support adding a verified fit angle or player-history detail when it is explicitly sourced.
 - [analyst] A bare source summary can still work if the lede stays tightly grounded and avoids over-explaining consequences.
-- A clean wire-style lede that states the core fact multiple ways can still score well when grounding is strong.
+- A clean wire-style lede that states the core fact directly can still score well when grounding is strong.
 
 ## What to avoid
 - Don’t add unsupported roster or room claims; even a plausible list of names can sink grounding if the digest doesn’t support it.
@@ -22,8 +21,9 @@
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
 - Don’t treat a reported deal or signing as a platform for extra certainty about downstream effects unless those effects are verified.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
-- Don’t pad the intro with general commentary when one confirmed fact can do the job.
+- Don’t pad the intro with general commentary or meta phrases like “according to the available report” when one confirmed fact can do the job.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare agreement.
-- [analyst] Don’t turn a bare summary into roster-conversation analysis or half-measures framing unless the source directly makes that case.
+- [insider] Don’t import unsupported backstory such as waiver status or a “passed through New England” frame unless the digest explicitly supplies it.
 - If the factual base is effectively empty beyond the headline, keep the piece minimal rather than stretching it; that’s a source-limit issue, not a prose fix (source-side, not fixable in prose).
 - Don’t force a rewrite to survive when the source package can’t support the named matchup or relationship; unresolved grounding issues should be dismissed, not embellished.
+- Don’t introduce specific names or roster references when the digest is effectively empty; unsupported detail is worse than a sparse, headline-level brief.
