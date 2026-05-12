@@ -26,6 +26,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 # Multi-hour integration test (12 cycles, 1/hour, logs to var/test_runs/)
 nohup ./run_12h_test.sh &
+
+# Podcast pipeline (VPS cron uses scripts/podcast_daily.sh for both languages)
+./venv/bin/editorial-cycle podcast produce --language en-US
+./venv/bin/editorial-cycle podcast produce --language de-DE
+./venv/bin/editorial-cycle podcast deliver --episode-id <id> --language en-US
+./venv/bin/editorial-cycle podcast latest-id
 ```
 
 ## Architecture
@@ -133,6 +139,8 @@ All migrations applied manually via SQL Editor (not `supabase db push`):
 - `005_curated_images.sql` — applied (`content.curated_images` table + storage GRANTs)
 - `006_add_sources.sql` — applied (`sources jsonb` on `content.team_article`)
 - `007_add_story_fingerprint.sql` — **pending** (`story_fingerprint text` on `content.team_article`)
+- `010_podcast_episodes.sql` — applied (`public.podcast_episodes` audit-log table)
+- `011_podcast_episode_metadata.sql` — applied (`episode_title` + `episode_summary` columns on `podcast_episodes`)
 
 ## Prompts
 
@@ -169,9 +177,51 @@ A wiki-summary-agent (smarter alternative) was deferred; a remote agent fires 20
 
 Includes a "Roundup / ranking / grade extraction rule": for multi-team source pieces it must extract row-level verdicts as `key_facts`, not column-level meta. If only column-level meta is available, `content_status="thin"` + `confidence <= 0.3` is required, routing downstream to the writer's "thin → write shorter" path. Interlocks with the writer prompts.
 
+## Podcast Pipeline (`app/podcast/`)
+
+Daily personal NFL podcast for the user, produced once per language (EN + DE) and delivered to Spotify. Runs each morning at 04:00 CET on the Hostinger VPS via `scripts/podcast_daily.sh`. Architecture mirrors editorial/writer: two new modules (`app/podcast/` for generation, `app/delivery/` for distribution) sharing only `schemas.py` + `adapters.py` with the rest of the codebase.
+
+```
+podcast/workflow.py  (state machine)
+  ├── clustering.py      →  league-wide feed re-clustered for breadth
+  ├── agents.py          →  dialogue_writer_agent + episode_metadata_agent
+  ├── script.py          →  PodcastScript (interleaved Marcus/Robin turns)
+  ├── render.py          →  per-speaker Gemini TTS (chunked at speaker boundaries)
+  └── audio_compose.py   →  music ducking + EBU R128 loudnorm via ffmpeg
+
+delivery/dispatcher.py   →  language-aware Spotify upload (BCP-47 → CLI locale)
+  └── delivery/spotify.py →  wraps save-to-spotify CLI
+```
+
+### Hosts
+`podcast/personas.py`: Marcus (EN — data-driven analyst) and Robin (DE — match-day fluency). Prompts in `podcast/prompts.yml` include a "CONTROVERSY IS THE SHOW" section: hosts must take different positions on most clusters; disagreement is collegial, not hostile. Concrete conflict patterns are provided (`"I disagree"`, `"Hold on, that's not what I saw"`, etc.).
+
+### Audio
+`podcast/audio_compose.py`: single-song music pipeline — brand vocal head, smooth volume-envelope ducking under voice, return for sting, fade. EBU R128 loudnorm + alimiter + HPF post-processing. Requires ffmpeg on PATH.
+
+### Gemini TTS (`app/clients/gemini_tts.py`)
+Direct multi-speaker TTS via `google-genai` SDK. No Cloud Run worker dependency. Per-call retries on 5xx/429. Chunking at speaker boundaries keeps long-form generations consistent.
+
+### Episode Metadata
+`episode_metadata_agent` generates a content-aware title + 1-2 sentence summary from the day's ranked clusters. Persisted to `episode_title` / `episode_summary` on the `podcast_episodes` DB row, then forwarded to Spotify as the episode's metadata.
+
+### Delivery (`app/delivery/`)
+`delivery/spotify.py` wraps the `save-to-spotify` CLI (positional file arg, `--summary`, `--json`, no `--token-path`). `delivery/dispatcher.py` maps BCP-47 language codes to CLI locale strings (`de-DE` → `de`).
+
+### VPS Deployment
+- Cron: `0 4 * * * /opt/t4l/scripts/podcast_daily.sh` (Europe/Berlin timezone)
+- Runbook: `docs/podcast_runbook.md` — covers deadsnakes PPA, `unzip`, OAuth bootstrap, first run verification
+- Logs: `/opt/t4l/logs/podcast_YYYY-MM-DD.log`
+
+### Podcast DB Tables
+- `public.podcast_episodes` — audit-log: id, run_date, language, status, audio_path, duration, error, episode_title, episode_summary
+- Migrations: `010_podcast_episodes.sql` (applied), `011_podcast_episode_metadata.sql` (applied)
+
 ## Config
 
 `app/config.py` uses pydantic-settings `BaseSettings` with `.env` file. Per-agent model names are configurable via env vars (`OPENAI_MODEL_ARTICLE_DATA_AGENT`, etc.). `agent_model(name)` resolves agent name to model string.
+
+Podcast-specific config keys: `GEMINI_API_KEY`, `GEMINI_TTS_MODEL`, `PODCAST_MUSIC_PATH`, `PODCAST_OUTPUT_DIR`, `SPOTIFY_CLI_PATH`.
 
 Tests must use `Settings(_env_file=None)` and explicitly `monkeypatch.delenv` model override vars to avoid real `.env` bleeding into test fixtures.
 
