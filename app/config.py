@@ -97,6 +97,124 @@ class Settings(BaseSettings):
     # harvested by team-beat-harvest.yml on its own cron.
     tts_create_short_timeout_seconds: float = 120.0   # 2 min
 
+    # T4L Daily Briefing — personal NFL podcast feature.
+    # The podcast pipeline lives in app/podcast and app/delivery. It pulls
+    # the same raw NFL feed the editorial cycle uses, re-clusters league-
+    # wide, generates a two-persona script (color + analyst), and renders
+    # audio via a *direct* Gemini multi-speaker TTS call (NOT the team-beat
+    # Cloud Run worker). MVP is personal-only; the Spotify delivery uses
+    # the Save-to-Spotify CLI installed on the VPS.
+    podcast_default_language: str = "en-US"
+    podcast_target_word_count: int = 4200       # ~25 min runtime
+    podcast_min_word_count: int = 700           # ~5 min adaptive floor
+    podcast_lookback_hours: int = 24
+    podcast_audio_temp_dir: Path = Path("/tmp/t4l_podcast")
+    # Direct Gemini TTS integration (separate from the team-beat Cloud Run
+    # tts_batch_service). The model + voice settings here are unrelated to
+    # `tts_model_name` / `tts_voice_name`, which belong to team-beat. Voice
+    # names (e.g. "Puck", "Charon") come from Gemini's prebuilt voice list.
+    podcast_gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
+    # Two grounded former-athlete podcaster voices. Both male, both
+    # carry chest-resonance authority. Marcus (color/host) drives
+    # narrative; the analyst (Ray) drives technical/metrics breakdown.
+    # The Gemini prebuilt voice catalogue ships ~30 voices — common
+    # picks for low/grounded male: Zubenelgenubi, umbriel, Charon,
+    # Orus, Algenib, Algieba, Sadachbia, Achird.
+    podcast_gemini_voice_color: str = "Zubenelgenubi"
+    podcast_gemini_voice_analyst: str = "umbriel"
+    # Natural-language register hint prepended to every style prompt.
+    # Gemini TTS doesn't expose a pitch dial, so we steer register via
+    # prompt direction. Tune the strength via env if voices are still
+    # too high — e.g. "deep baritone, chest voice, lower register".
+    podcast_voice_register_hint: str = (
+        "Both voices sit in a LOW baritone register. Pitch is deep, "
+        "grounded in the chest cavity — not throat, not nasal. Think "
+        "veteran sports-talk radio: warm, low resonance, no upward "
+        "lift on emphasis (emphasis comes from VOLUME, not PITCH)."
+    )
+    podcast_gemini_poll_interval_seconds: float = 10.0
+    podcast_gemini_timeout_seconds: float = 1800.0  # 30 min ceiling
+    # Gemini's TTS preview API occasionally returns 500/503 INTERNAL
+    # errors that are transient. Retry with exponential backoff so a
+    # single hiccup doesn't kill an episode that's 14 chunks in.
+    podcast_gemini_max_retries: int = 4
+    podcast_gemini_retry_base_seconds: float = 4.0
+    # Fallback path: if Gemini multi-speaker is flaky, render a single voice
+    # with inline character tags. Off by default; flip to True via env if
+    # the multi-speaker mode misbehaves.
+    podcast_force_single_voice: bool = False
+
+    # Background music + sting. Two pipelines depending on configuration:
+    #
+    # 1. SINGLE-SONG MODE (podcast_intro_song_mode=True, default):
+    #    `podcast_intro_music_path` points to a single song that carries
+    #    the brand vocal at its head. The pipeline is:
+    #      0..vocal_intro_seconds   → music solo (brand vocal heard)
+    #      vocal..vocal+headlines   → music pitched/slowed, voice mixed
+    #      vocal+headlines..+sting  → music returns to normal pitch
+    #      last fade_out_seconds    → fade to silence
+    #    `podcast_sting_music_path` is ignored in this mode.
+    #
+    # 2. TWO-FILE MODE (podcast_intro_song_mode=False):
+    #    Legacy: separate intro_music (bed) + sting_music (transition).
+    podcast_intro_music_path: Path | None = None
+    podcast_sting_music_path: Path | None = None
+    podcast_intro_song_mode: bool = True
+    # Single-song mode parameters
+    podcast_song_vocal_intro_seconds: float = 7.0  # length of the brand-vocal head
+    # Smooth transition (seconds) between full volume and bed level —
+    # used at BOTH the intro→bed and bed→sting boundaries so the music
+    # never has a hard volume cut.
+    podcast_song_transition_seconds: float = 1.0
+    podcast_song_sting_seconds: float = 25.0  # post-headlines solo at full volume
+    podcast_song_fade_out_seconds: float = 3.0
+    # Two-file mode parameters (legacy)
+    podcast_intro_solo_seconds: float = 4.0
+    podcast_intro_tail_seconds: float = 1.5
+    # Bed volume under voice — at -26 dB the music sits clearly behind
+    # the two hosts so intelligibility wins, while still being audibly
+    # present. Tune via .env if voices are still fighting the music.
+    podcast_music_bed_volume_db: float = -26.0
+    podcast_sting_max_seconds: float = 30.0
+    podcast_sting_fade_out_seconds: float = 2.0
+
+    # Brand-line standalone padding: silence inserted right after the
+    # branded intro line so it lands on its own before the headlines.
+    podcast_brand_line_pause_seconds: float = 0.9
+
+    # Audio post-processing — EBU R128 loudness target for podcasts
+    # is -16 LUFS integrated, with a true-peak ceiling at -1 dBTP.
+    # `loudnorm` (ffmpeg) implements R128 in a single pass; we follow
+    # with a `alimiter` for safety. A high-pass at 80 Hz removes
+    # rumble. Disable by setting podcast_postprocess_enabled=False.
+    podcast_postprocess_enabled: bool = True
+    podcast_postprocess_target_lufs: float = -16.0
+    podcast_postprocess_true_peak_db: float = -1.0
+    podcast_postprocess_loudness_range_lu: float = 11.0
+    podcast_postprocess_highpass_hz: int = 80
+
+    # Long-form TTS quality control via chunking. Gemini multi-speaker
+    # output quality degrades on very long single generations; we cut
+    # the body into chunks at speaker boundaries and render each chunk
+    # as its own Gemini call. Empirically ~1100 chars per chunk keeps
+    # pacing tight and consistent throughout a 25-min episode.
+    podcast_tts_chunk_max_chars: int = 1100
+    # Path to the ffmpeg / ffprobe binaries. Most VPS installs have
+    # them on PATH; override if you keep them somewhere odd.
+    ffmpeg_path: str = "ffmpeg"
+    ffprobe_path: str = "ffprobe"
+    # Agent models (resolved by `agent_model("podcast_…")`).
+    openai_model_podcast_cluster_ranker_agent: str = "gpt-5.4-mini"
+    openai_model_podcast_cold_open_writer_agent: str = "gpt-5.4-mini"
+    openai_model_podcast_dialogue_writer_agent: str = "gpt-5.4"
+    openai_model_podcast_director_pass_agent: str = "gpt-5.4-mini"
+    openai_model_podcast_episode_metadata_agent: str = "gpt-5.4-mini"
+
+    # Delivery (Save-to-Spotify CLI on the VPS).
+    spotify_token_path: Path = Path.home() / ".config" / "save-to-spotify" / "token.json"
+    save_to_spotify_cli_path: str = "save-to-spotify"
+    save_to_spotify_show_id: str | None = None
+
     def agent_models(self) -> dict[str, str]:
         return {
             "article_data_agent": self.openai_model_article_data_agent,
@@ -108,6 +226,11 @@ class Settings(BaseSettings):
             "editorial_memory_agent": self.openai_model_editorial_memory_agent,
             "team_beat_reporter_agent": self.openai_model_team_beat_reporter_agent,
             "radio_script_agent": self.openai_model_radio_script_agent,
+            "podcast_cluster_ranker_agent": self.openai_model_podcast_cluster_ranker_agent,
+            "podcast_cold_open_writer_agent": self.openai_model_podcast_cold_open_writer_agent,
+            "podcast_dialogue_writer_agent": self.openai_model_podcast_dialogue_writer_agent,
+            "podcast_director_pass_agent": self.openai_model_podcast_director_pass_agent,
+            "podcast_episode_metadata_agent": self.openai_model_podcast_episode_metadata_agent,
         }
 
     def agent_model(self, agent_name: str) -> str:

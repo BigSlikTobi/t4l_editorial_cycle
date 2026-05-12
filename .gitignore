@@ -10,3 +10,15 @@ build/
 .pytest_cache/
 supabase/.temp/
 .claude/
+
+# Podcast music assets — kept out of git. Licensed sources live in a
+# separate private bucket; deploy script copies them to assets/ on
+# the target host. See docs/podcast_runbook.md for the install flow.
+assets/*.mp3
+assets/*.m4a
+assets/*.wav
+assets/*.ogg
+# Local MCP / agent tooling configuration — machine-specific.
+.mcp.json
+# Generated architecture graph artifacts.
+var/architecture_graph.html

@@ -54,6 +54,11 @@ class TestSettings:
             "editorial_memory_agent",
             "team_beat_reporter_agent",
             "radio_script_agent",
+            "podcast_cluster_ranker_agent",
+            "podcast_cold_open_writer_agent",
+            "podcast_dialogue_writer_agent",
+            "podcast_director_pass_agent",
+            "podcast_episode_metadata_agent",
         }
 
     def test_tts_defaults(self, fake_settings: Settings) -> None:
