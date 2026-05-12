@@ -1,9 +1,9 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline, lede, and body locked to the same verified event; tight alignment beats trying to stretch the angle.
-- Lead with the concrete fact when that is the real news; direct summary is often strongest.
-- Use a clean breaking-news lede that states the core fact directly, especially for insider or obituary-style updates.
+- Keep the headline, lede, and body locked to the same verified event; tight alignment beats stretching the angle.
+- Lead with the concrete transaction or schedule fact when that is the real news; direct summary is often strongest.
+- Use a clean breaking-news lede that states the core fact directly, especially for insider-style updates.
 - Stay strictly inside source digests on names, timing, and context; clean grounding is a major success signal.
 - A crisp update can work well when the report is limited but solid.
 - Surface the core action immediately, then stop unless the digest clearly adds more.
@@ -11,7 +11,8 @@
 - A bare source summary can still score well if it is tightly grounded and avoids over-explaining consequences.
 - [insider] Focus on the confirmed move, the named parties, and the directly reported terms rather than speculative implications.
 - [insider] Keep the lede direct and news-first; a strong hook matters more than stylistic framing when the facts are solid.
-- [insider] Use team-specific context only when it is directly supported and helps clarify the move without adding new claims.
+- [columnist] A simple, useful fan takeaway can strengthen a schedule story when it remains fully inside the verified fact pattern.
+- [columnist] Let the headline, subhead, and lede all point to the same confirmed event without forcing extra color or unsupported significance.
 
 ## What to avoid
 - Don’t add unsupported roster, room, or backstory claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -25,4 +26,7 @@
 - Don’t use missing-report or digest references as substitute context; if the source doesn’t supply it, leave it out.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t open with a vague, qualified setup when a direct breaking-news sentence is available.
+- [columnist] Don’t let the headline, subhead, and lede all say the same thing; if the fact is simple, the body needs to add the value.
 - Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
+- [analyst] Don’t build role projections, draft-value framing, or roster-shaping claims when the digest is effectively empty; that is source-side, not fixable in prose.
+- [insider] Don’t try to salvage a story with vague wording when the source trail is empty or mismatched; treat that as a non-publishable sourcing problem.
