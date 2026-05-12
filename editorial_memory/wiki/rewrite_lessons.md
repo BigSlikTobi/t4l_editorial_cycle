@@ -34,3 +34,5 @@
 - [columnist] Don’t over-write the finish when the core news is already clear; polish should not dilute the hook.
 - [columnist] Don’t try to turn an effectively empty digest into a readable column; smooth prose cannot replace missing factual support (source-side, not fixable in prose).
 - [columnist] Don’t use vague filler to bridge missing obituary details; if the factual base is empty, the piece is not publishable as-is (source-side, not fixable in prose).
+- [insider] Don’t invent contract terms, free-agency timing, or other specifics when the digest is empty; unsupported deal details are a hard grounding fail.
+- [insider] Don’t publish from an empty digest at all; no factual basis means no writer-side fix is possible (source-side, not fixable in prose).
