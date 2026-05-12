@@ -11,7 +11,8 @@
 - A bare source summary can still score well if it is tightly grounded and avoids over-explaining consequences.
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
 - [insider] Focus on the confirmed move and the directly reported terms rather than inferred context or performance spin.
-- [insider] If only the core addition is confirmed, a minimal rewrite that stays anchored to the names can be the right finish.
+- [analyst] Use the strongest verified facts to frame a concrete, useful schedule or team question without overreaching.
+- [analyst] Tightly grounded specificity can carry the piece when you turn verified workload, deal, or usage details into a clear football question.
 - [columnist] A direct, tightly grounded opening can carry a schedule or event update when the hook is clear.
 
 ## What to avoid
@@ -31,8 +32,9 @@
 - [insider] Don’t imply roster plans or longer-term consequences from a signing unless the source explicitly supports that inference.
 - [insider] Don’t proceed when the underlying materials show a player/team mismatch or otherwise inconsistent sourcing; that’s a source-side reliability failure, not a prose fix.
 - [insider] Don’t lean on source narration like “latest personnel move” or “No further details were included”; cut meta framing and keep only confirmed facts.
-- [insider] Don’t build out receiver-room or other roster-context framing from a thin report when it isn’t factually supported.
+- [insider] Don’t build out roster-context framing from a thin report when it isn’t factually supported.
 - [insider] Don’t use “a report said” style hedges when the confirmed transaction can be stated directly.
+- [analyst] Don’t stretch a grounded schedule or usage note into certainty about early-season outcomes; keep the question posed, not answered.
 - [columnist] Don’t let the middle drift into a shaky player list or extra framing that isn’t clearly anchored to the reported matchup or event.
 - [columnist] Don’t over-write the finish when the core news is already clear; polish should not dilute the hook.
 - [columnist] Don’t try to turn an effectively empty digest into a readable column; smooth prose cannot replace missing factual support (source-side, not fixable in prose).
