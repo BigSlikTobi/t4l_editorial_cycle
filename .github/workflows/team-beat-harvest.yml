@@ -1,0 +1,126 @@
+name: team-beat-harvest
+
+# Harvest side of the team-beat produce/harvest split.
+#
+# Every 30 minutes:
+#   1. Scan public.team_roundup for rows where audio_url IS NULL AND
+#      tts_batch_id IS NOT NULL (briefs that the produce cycle wrote
+#      but whose Gemini batch hadn't finished yet).
+#   2. For each row, check the Gemini batch state via the Gemini API
+#      directly (route around the worker's flaky status action).
+#   3. If JOB_STATE_SUCCEEDED → run the worker's process action to
+#      download MP3s + upload to Storage, then PATCH audio_url.
+#   4. If still pending → skip, try again next firing.
+#   5. If terminal failed → log, leave audio_url=NULL.
+#
+# Idempotent: runs that find no ready batches exit 0. Storage upserts +
+# the PATCH is overwrite, so reruns mid-flight are safe.
+#
+# Why every 30 min: Gemini batches typically resolve in 5-30 min for
+# our small payloads (4-8 items). 30 min is a comfortable balance
+# between audio-publish latency and Actions runner cost.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      all_cycles:
+        description: "Harvest every NULL-audio row, not just the most recent cycle"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      dry_run:
+        description: "Check + process without PATCHing team_roundup"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+# Single-flight: never let two harvest runs overlap. Two runs hitting the
+# same batch's process action could race on PATCH and confuse the audit.
+concurrency:
+  group: team-beat-harvest
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    # Sized to outlast the worker's process action plus the Gemini state
+    # checks. Process per batch is bounded by tts_process_timeout_seconds
+    # (default 900s). With a few batches in flight + state checks +
+    # install + a margin: 30 min is plenty.
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Harvest ready TTS batches
+        env:
+          # Same secret set as team-beat.yml — see comments there for
+          # why each is required.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          TTS_BATCH_SUBMIT_URL: ${{ secrets.TTS_BATCH_SUBMIT_URL }}
+          TTS_BATCH_POLL_URL: ${{ secrets.TTS_BATCH_POLL_URL }}
+          TTS_BATCH_FUNCTION_AUTH_TOKEN: ${{ secrets.TTS_BATCH_FUNCTION_AUTH_TOKEN }}
+          # Gemini API key is REQUIRED for harvest — it's how we check
+          # batch state without going through the flaky worker action.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+          # workflow_dispatch inputs through env (shell-injection-safe;
+          # see #26 review thread on team-beat.yml).
+          ALL_CYCLES_INPUT: ${{ github.event.inputs.all_cycles }}
+          DRY_RUN_INPUT: ${{ github.event.inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          # Optional TTS model/voice/bucket overrides via repo variables.
+          # See team-beat.yml for the rationale (vars expand to "" when
+          # unset, which would override Settings defaults to ""). Same
+          # guard pattern here.
+          if [ -n "${{ vars.TTS_MODEL_NAME }}" ]; then
+            export TTS_MODEL_NAME="${{ vars.TTS_MODEL_NAME }}"
+          fi
+          if [ -n "${{ vars.TTS_VOICE_NAME }}" ]; then
+            export TTS_VOICE_NAME="${{ vars.TTS_VOICE_NAME }}"
+          fi
+
+          # Build argv from env-passed dispatch inputs.
+          # Default: scheduled cron firings always pass --all-cycles
+          # (we want to sweep every stale row, not just the most recent).
+          # workflow_dispatch defaults to true unless explicitly "false".
+          args=()
+          if [ "${ALL_CYCLES_INPUT:-true}" != "false" ]; then
+            args+=(--all-cycles)
+          fi
+          if [ "${DRY_RUN_INPUT:-false}" = "true" ]; then
+            args+=(--dry-run)
+          fi
+
+          mkdir -p var
+          # Tee the log so failures (or pending-skip details) are
+          # inspectable from the artifact.
+          python scripts/tts_recover.py "${args[@]}" 2>&1 | tee var/team-beat-harvest.log
+
+      - name: Upload harvest log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: team-beat-harvest-${{ github.run_id }}
+          path: var/team-beat-harvest.log
+          if-no-files-found: ignore
+          retention-days: 14

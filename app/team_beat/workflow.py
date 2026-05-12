@@ -76,6 +76,7 @@ if TYPE_CHECKING:
         ArticleLookupFromDb,
         BeatCycleStateStore,
         BeatRoundupWriter,
+        ExtractionJobCanceler,
         RawArticleDbReader,
     )
 
@@ -254,6 +255,7 @@ class TeamBeatWorkflow:
         cycle_state_store: "BeatCycleStateStore",
         tts_client: TTSBatchClient,
         article_lookup: "ArticleLookupFromDb | None" = None,
+        extraction_job_canceler: "ExtractionJobCanceler | None" = None,
         team_codes: tuple[str, ...] | None = None,
         lookback_hours: int = 12,
     ) -> None:
@@ -267,6 +269,12 @@ class TeamBeatWorkflow:
         # judges load-bearing for the brief. When None (test fixtures,
         # CLI dry-runs without a DB), the agent works headline-only.
         self._article_lookup = article_lookup
+        # Optional — when present, the workflow PATCHes any extraction_jobs
+        # row that stalled mid-create to status='failed' so the sibling
+        # cleanup workflow doesn't re-POST it and create a duplicate
+        # Gemini batch. Without it, the cycle still works but a stalled
+        # create may incur duplicate spend.
+        self._extraction_job_canceler = extraction_job_canceler
         self._team_codes = team_codes or supported_team_codes()
         self._lookback_hours = lookback_hours
 
@@ -520,18 +528,19 @@ class TeamBeatWorkflow:
         cycle_ts: datetime,
         cycle_slot: CycleSlot,
     ) -> None:
-        """Create the Gemini batch, wait for SUCCEEDED, then process.
+        """Submit a Gemini TTS batch and capture its batch_id. PRODUCE
+        side of the produce/harvest split.
 
-        Mutates each `work` in `works_with_scripts` in place:
-          * Sets `work.tts_batch_id` after the create+status stage
-            succeeds (so the batch_id lands in DB even when process
-            fails).
-          * Sets `work.audio_url` after process succeeds.
+        Mutates each `work.tts_batch_id` in place. Does NOT wait for the
+        batch to finish and does NOT call process — those are the harvest
+        cycle's job (scripts/tts_recover.py on team-beat-harvest.yml).
+        Audio URLs are filled in later, asynchronously, when the harvest
+        finds the batch in JOB_STATE_SUCCEEDED.
 
-        All errors are caught and logged; the workflow keeps the
-        `filed` outcome with a NULL audio_url. The batch_id alone
-        is enough for `scripts/tts_recover.py` to finish the job
-        out-of-band later.
+        Failures are non-fatal: the brief is still written with NULL
+        audio_url and (when possible) the batch_id, so the harvest can
+        either finish the job (success) or surface a clear "failed at
+        Gemini side" diagnosis (terminal failure).
         """
         if not works_with_scripts:
             return
@@ -545,19 +554,30 @@ class TeamBeatWorkflow:
                 title=f"{work.team_code} {cycle_slot}",
             ))
 
-        # Stage 1: create + status.
-        # Capture the batch_id whether the stage succeeded or failed —
-        # a failed batch's id is still useful for diagnostics. But only
-        # advance to stage 2 when create_and_wait returned normally; a
-        # TTSBatchError means the upstream Gemini batch is terminal in
-        # a non-success state and there's no output file to process.
+        async def _on_worker_stall(job_id: str, reason: str) -> None:
+            """When the create poll times out, mark the stuck row failed
+            on our side so the sibling cleanup workflow doesn't re-POST
+            and create a duplicate Gemini batch."""
+            if self._extraction_job_canceler is None:
+                logger.warning(
+                    "TTS create stalled (job_id=%s) but no canceler "
+                    "configured; sibling cleanup may re-POST and bill "
+                    "for a duplicate Gemini batch.",
+                    job_id,
+                )
+                return
+            await self._extraction_job_canceler.cancel(job_id, reason=reason)
+
         batch_id: str | None = None
-        create_succeeded = False
         try:
-            batch_id = await self._tts_client.create_and_wait(items)
-            create_succeeded = True
+            batch_id = await self._tts_client.create_and_wait(
+                items, on_worker_stall=_on_worker_stall,
+            )
         except TTSBatchError as exc:
-            batch_id = exc.batch_id  # may be None if create itself failed
+            # exc.batch_id is set when the failure happened after the
+            # Gemini batch was submitted (e.g. terminal non-success, or
+            # recovery exhausted) — surface it for diagnostics.
+            batch_id = exc.batch_id
             logger.error(
                 "TTS create_and_wait failed (batch_id=%s, state=%s): %s",
                 batch_id, exc.state, exc,
@@ -565,33 +585,15 @@ class TeamBeatWorkflow:
         except Exception as exc:
             logger.exception("TTS create_and_wait crashed: %s", exc)
 
-        # Persist the batch_id (success or diagnostic) on every team's
-        # roundup row before process runs.
+        # Persist the batch_id (or None) onto every team's roundup row.
+        # The harvest cycle reads tts_batch_id to decide which rows to
+        # check + process.
         for work in works_with_scripts:
             work.tts_batch_id = batch_id
 
-        if not create_succeeded:
-            return
-
-        # Stage 2: process. Failures here are non-fatal — the batch_id
-        # is already on every work, so `scripts/tts_recover.py` can
-        # finish the job out-of-band later.
-        try:
-            outcome = await self._tts_client.process_batch(
-                batch_id,
-                [item.id for item in items],
-                path_prefix_suffix=_tts_path_prefix_suffix(cycle_ts, cycle_slot),
-            )
-        except Exception as exc:
-            logger.exception(
-                "TTS process_batch crashed for batch_id=%s (audio recoverable "
-                "via scripts/tts_recover.py): %s",
-                batch_id, exc,
-            )
-            return
-
-        for work in works_with_scripts:
-            work.audio_url = outcome.url_for(_tts_item_id(work.team_code, cycle_ts))
+        # Audio URLs intentionally NOT set here — that's the harvest's
+        # job. The roundup row lands with audio_url=NULL and the harvest
+        # cycle PATCHes it once Gemini finishes the batch.
 
     async def _persist_team(
         self,
@@ -734,6 +736,8 @@ class TeamBeatWorkflow:
         ]
         if self._article_lookup is not None:
             closeables.append(self._article_lookup)
+        if self._extraction_job_canceler is not None:
+            closeables.append(self._extraction_job_canceler)
         for closeable in closeables:
             try:
                 await closeable.close()
@@ -759,6 +763,7 @@ def build_default_team_beat_workflow(
         ArticleLookupFromDb,
         BeatCycleStateStore,
         BeatRoundupWriter,
+        ExtractionJobCanceler,
         RawArticleDbReader,
     )
     from app.clients.base import SupabaseJobsConfig
@@ -793,6 +798,25 @@ def build_default_team_beat_workflow(
         base_url=base_url,
         service_role_key=service_key,
     )
+    extraction_job_canceler = ExtractionJobCanceler(
+        base_url=base_url,
+        service_role_key=service_key,
+    )
+    gemini_api_key = (
+        settings.gemini_api_key.get_secret_value()
+        if settings.gemini_api_key
+        else None
+    )
+    if gemini_api_key is None:
+        # Recovery + harvest both need Gemini API access. Without it, a
+        # stalled worker means stranded briefs (the brief lands but no
+        # batch_id is recoverable, so the harvest can't ever finish them).
+        logger.warning(
+            "GEMINI_API_KEY is not configured. The team-beat cycle will "
+            "still produce briefs, but if the TTS worker stalls, the "
+            "Gemini batch_id cannot be recovered and the audio will be "
+            "permanently stranded. Set GEMINI_API_KEY in .env / secrets."
+        )
     tts_client = TTSBatchClient(
         submit_url=str(settings.tts_batch_submit_url),
         poll_url=str(settings.tts_batch_poll_url),
@@ -802,13 +826,12 @@ def build_default_team_beat_workflow(
         voice_name=settings.tts_voice_name,
         storage_bucket=settings.tts_storage_bucket,
         storage_path_prefix=settings.tts_storage_path_prefix,
+        gemini_api_key=gemini_api_key,
         job_poll_interval_seconds=settings.extraction_poll_interval_seconds,
         job_timeout_seconds=settings.extraction_timeout_seconds,
-        create_timeout_seconds=settings.tts_create_timeout_seconds,
+        create_short_timeout_seconds=settings.tts_create_short_timeout_seconds,
         status_action_timeout_seconds=settings.tts_status_action_timeout_seconds,
         process_timeout_seconds=settings.tts_process_timeout_seconds,
-        status_poll_interval_seconds=settings.tts_status_poll_interval_seconds,
-        status_timeout_seconds=settings.tts_status_poll_timeout_seconds,
     )
 
     return TeamBeatWorkflow(
@@ -818,6 +841,7 @@ def build_default_team_beat_workflow(
         cycle_state_store=cycle_state_store,
         tts_client=tts_client,
         article_lookup=article_lookup,
+        extraction_job_canceler=extraction_job_canceler,
         team_codes=team_codes,
         lookback_hours=lookback_hours,
     )

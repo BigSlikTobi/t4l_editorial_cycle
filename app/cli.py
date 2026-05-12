@@ -10,6 +10,10 @@ import typer
 
 from app.config import get_settings
 from app.orchestration import CycleOrchestrator, build_default_orchestrator
+from app.podcast.workflow import (
+    PodcastProduceWorkflow,
+    build_default_podcast_workflow,
+)
 from app.schemas import CycleResult
 from app.team_beat.workflow import (
     TeamBeatWorkflow,
@@ -19,6 +23,8 @@ from app.team_beat.workflow import (
 logger = logging.getLogger(__name__)
 
 app = typer.Typer(help="T4L Editorial Cycle Agent — hourly NFL editorial cycle runner.")
+podcast_app = typer.Typer(help="T4L Daily Briefing — produce + deliver the personal NFL podcast.")
+app.add_typer(podcast_app, name="podcast")
 
 RunResultT = TypeVar("RunResultT")
 
@@ -117,3 +123,119 @@ def run_team_beat(
         if team.reason:
             line += f" — {team.reason}"
         typer.echo(line)
+
+
+# --- podcast subcommands ---
+
+
+async def _run_podcast_with_cleanup(workflow: PodcastProduceWorkflow, awaitable):
+    try:
+        return await awaitable
+    finally:
+        await workflow.close()
+
+
+@podcast_app.command("produce")
+def produce_podcast(
+    language: str = typer.Option(
+        "en-US",
+        help="Language code: en-US or de-DE.",
+    ),
+    dry_run: bool = typer.Option(
+        False,
+        help="Skip Gemini TTS render. Writes script JSON to --output-script if set.",
+    ),
+    output_script: Path | None = typer.Option(
+        None,
+        help="(dry-run) Path to write the script JSON for inspection.",
+    ),
+    lookback_hours: int | None = typer.Option(
+        None,
+        help="Override settings.podcast_lookback_hours (default: 24).",
+    ),
+) -> None:
+    """Generate today's podcast episode for one language."""
+    settings = get_settings()
+    workflow = build_default_podcast_workflow(settings)
+
+    summary = asyncio.run(
+        _run_podcast_with_cleanup(
+            workflow,
+            workflow.run_cycle(
+                language=language,  # type: ignore[arg-type]
+                dry_run=dry_run,
+                output_script_path=output_script,
+                lookback_hours=lookback_hours,
+            ),
+        )
+    )
+
+    typer.echo(
+        f"Podcast episode #{summary.episode_id} | {summary.language} | "
+        f"{summary.run_date.isoformat()} | status={summary.status} | "
+        f"stories={summary.story_count} words={summary.word_count} "
+        f"duration={summary.duration_seconds or 0}s"
+    )
+    if summary.audio_local_path:
+        typer.echo(f"  Audio: {summary.audio_local_path}")
+    if summary.error_message:
+        typer.echo(f"  Note: {summary.error_message}")
+
+
+@podcast_app.command("deliver")
+def deliver_podcast(
+    episode_id: int = typer.Argument(..., help="podcast_episodes.id to deliver."),
+    dry_run: bool = typer.Option(
+        False,
+        help="Log the save-to-spotify invocation without running it.",
+    ),
+) -> None:
+    """Upload a rendered episode to your personal Spotify library."""
+    # Imported here so the produce path doesn't pay for delivery imports.
+    from app.delivery.dispatcher import dispatch_episode
+
+    settings = get_settings()
+    result = asyncio.run(dispatch_episode(episode_id, settings=settings, dry_run=dry_run))
+
+    if result.success:
+        typer.echo(
+            f"Delivered episode #{episode_id} → Spotify"
+            + (f" (id={result.spotify_episode_id})" if result.spotify_episode_id else "")
+        )
+        if result.invocation:
+            typer.echo(f"  Invoked: {result.invocation}")
+    else:
+        typer.echo(f"Delivery FAILED for episode #{episode_id}: {result.error_message}")
+        raise typer.Exit(code=1)
+
+
+@podcast_app.command("latest-id")
+def latest_podcast_id(
+    language: str = typer.Option(..., help="Language code (en-US or de-DE)."),
+    status: str | None = typer.Option(
+        None,
+        help="Optional status filter (pending|rendering|rendered|delivered|failed).",
+    ),
+) -> None:
+    """Print the id of the most recent podcast_episodes row matching filters.
+
+    Used by the daily VPS shell script to chain produce → deliver
+    without parsing logs.
+    """
+    from app.adapters import PodcastEpisodeWriter
+
+    settings = get_settings()
+    base_url = str(settings.supabase_url).rstrip("/")
+    service_role_key = settings.supabase_service_role_key.get_secret_value()
+    writer = PodcastEpisodeWriter(base_url=base_url, service_role_key=service_role_key)
+
+    async def _run() -> int | None:
+        try:
+            return await writer.latest_id(language=language, status=status)
+        finally:
+            await writer.close()
+
+    result = asyncio.run(_run())
+    if result is None:
+        raise typer.Exit(code=1)
+    typer.echo(str(result))

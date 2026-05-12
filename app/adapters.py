@@ -20,6 +20,7 @@ from app.schemas import (
     RawArticle,
     StoredArticleRecord,
 )
+from app.podcast.schemas import PodcastEpisodeRecord
 from app.team_beat.schemas import BeatCycleResult, BeatRoundup
 
 logger = logging.getLogger(__name__)
@@ -695,3 +696,276 @@ class BeatCycleStateStore:
             state_id, result.team_code, result.outcome.value,
         )
         return state_id
+
+
+# --- ExtractionJobCanceler (cancel stale gemini_tts_batch rows) ---
+#
+# When TTSBatchClient.create_and_wait times out at the async-job layer
+# (the worker stalled after creating the Gemini batch but before writing
+# terminal state to extraction_jobs), the row sits at status='running'
+# until expires_at. The sibling repo's cleanup workflow re-POSTs such
+# rows every 5 min, which would create a *second* Gemini batch for the
+# same payload — duplicate spend. This canceler PATCHes the row to
+# status='failed' immediately on our side so cleanup ignores it.
+#
+# Mirrors `scripts/team_beat_preflight.py` but as a library adapter so
+# the workflow can call it inline rather than wait for the next cron.
+
+
+class ExtractionJobCanceler:
+    """PATCHes an extraction_jobs row to status='failed' so the sibling
+    cleanup workflow doesn't re-POST it."""
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
+        self._client = httpx.AsyncClient(
+            base_url=base_url,
+            timeout=timeout_seconds,
+            headers={
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
+                "Content-Type": "application/json",
+                "Prefer": "return=minimal",
+            },
+        )
+
+    async def close(self) -> None:
+        await self._client.aclose()
+
+    @_default_retry()
+    async def cancel(self, job_id: str, *, reason: str) -> bool:
+        """Mark the given extraction_jobs row as failed.
+
+        Returns True on a successful PATCH (HTTP 2xx), False on a hard
+        upstream error (the caller can decide whether to log loud or
+        proceed with the cycle anyway). Network/transient errors are
+        retried by `_default_retry()`.
+        """
+        from datetime import UTC, datetime as _dt
+        payload = {
+            "status": "failed",
+            "finished_at": _dt.now(UTC).isoformat(),
+            "error": {
+                "code": "client_canceled",
+                "message": reason,
+                "retryable": False,
+            },
+        }
+        response = await self._client.patch(
+            "/rest/v1/extraction_jobs",
+            params={"job_id": f"eq.{job_id}"},
+            json=payload,
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            logger.warning(
+                "ExtractionJobCanceler PATCH failed for job_id=%s "
+                "(HTTP %d): %s. Sibling cleanup may re-POST and create a "
+                "duplicate Gemini batch.",
+                job_id, response.status_code, response.text[:200],
+            )
+            return False
+        logger.info("Canceled stale extraction_jobs row %s (%s)", job_id, reason)
+        return True
+
+
+# --- PodcastEpisodeWriter (public.podcast_episodes) ---
+#
+# Mirror of BeatRoundupWriter for the podcast feature. One row per
+# (run_date, language); status moves pending → rendering → rendered →
+# delivered (or failed at any step). Audio path is local (the VPS temp
+# dir); Spotify is the canonical media store, this row is the audit log.
+
+
+class PodcastEpisodeWriter:
+    """Read + write rows in public.podcast_episodes.
+
+    Methods are deliberately granular per state transition rather than
+    a generic upsert: the workflow's state machine is small and explicit,
+    and naming the transitions in code makes the audit log easier to
+    read at the SQL level.
+    """
+
+    def __init__(
+        self, base_url: str, service_role_key: str, timeout_seconds: float = 15.0
+    ) -> None:
+        self._client = httpx.AsyncClient(
+            base_url=base_url,
+            timeout=timeout_seconds,
+            headers={
+                "Authorization": f"Bearer {service_role_key}",
+                "apikey": service_role_key,
+                "Content-Type": "application/json",
+                "Prefer": "return=representation",
+            },
+        )
+
+    async def close(self) -> None:
+        await self._client.aclose()
+
+    @_default_retry()
+    async def upsert_pending(
+        self, *, run_date: str, language: str
+    ) -> int:
+        """Insert (or upsert) a pending row for today's (date, language).
+
+        Reruns of the same day overwrite in place via the (run_date,
+        language) unique constraint, so the cron is idempotent. Returns
+        the row id.
+        """
+        payload = {
+            "run_date": run_date,
+            "language": language,
+            "status": "pending",
+            "story_count": 0,
+            "word_count": 0,
+            "audio_local_path": None,
+            "duration_seconds": None,
+            "delivered_at": None,
+            "spotify_episode_id": None,
+            "error_message": None,
+            "updated_at": datetime.now(UTC).isoformat(),
+        }
+        response = await self._client.post(
+            "/rest/v1/podcast_episodes?on_conflict=run_date,language",
+            json=payload,
+            headers={"Prefer": "return=representation,resolution=merge-duplicates"},
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"podcast_episodes upsert failed ({response.status_code}): "
+                f"{response.text[:200]}"
+            )
+        rows = response.json()
+        if not rows:
+            raise ExternalServiceError(
+                "podcast_episodes upsert returned no rows; expected representation"
+            )
+        return int(rows[0]["id"])
+
+    @_default_retry()
+    async def _patch(self, episode_id: int, payload: dict) -> None:
+        body = {**payload, "updated_at": datetime.now(UTC).isoformat()}
+        response = await self._client.patch(
+            "/rest/v1/podcast_episodes",
+            params={"id": f"eq.{episode_id}"},
+            json=body,
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"podcast_episodes PATCH id={episode_id} failed "
+                f"({response.status_code}): {response.text[:200]}"
+            )
+
+    async def mark_rendering(
+        self, episode_id: int, *, story_count: int, word_count: int
+    ) -> None:
+        await self._patch(
+            episode_id,
+            {
+                "status": "rendering",
+                "story_count": story_count,
+                "word_count": word_count,
+                "error_message": None,
+            },
+        )
+
+    async def mark_rendered(
+        self,
+        episode_id: int,
+        *,
+        audio_local_path: str | None,
+        duration_seconds: int | None,
+        story_count: int,
+        word_count: int,
+        episode_title: str | None = None,
+        episode_summary: str | None = None,
+    ) -> None:
+        payload: dict[str, object] = {
+            "status": "rendered",
+            "audio_local_path": audio_local_path,
+            "duration_seconds": duration_seconds,
+            "story_count": story_count,
+            "word_count": word_count,
+            "error_message": None,
+        }
+        # Only patch metadata columns when we have values — preserves
+        # any prior write (e.g. a re-render shouldn't blank the title).
+        if episode_title is not None:
+            payload["episode_title"] = episode_title
+        if episode_summary is not None:
+            payload["episode_summary"] = episode_summary
+        await self._patch(episode_id, payload)
+
+    async def mark_delivered(
+        self, episode_id: int, *, spotify_episode_id: str | None
+    ) -> None:
+        await self._patch(
+            episode_id,
+            {
+                "status": "delivered",
+                "spotify_episode_id": spotify_episode_id,
+                "delivered_at": datetime.now(UTC).isoformat(),
+                "error_message": None,
+            },
+        )
+
+    async def mark_failed(self, episode_id: int, *, error_message: str) -> None:
+        await self._patch(
+            episode_id,
+            {
+                "status": "failed",
+                "error_message": error_message[:1000],
+            },
+        )
+
+    @_default_retry()
+    async def get(self, episode_id: int) -> PodcastEpisodeRecord:
+        response = await self._client.get(
+            "/rest/v1/podcast_episodes",
+            params={"id": f"eq.{episode_id}", "select": "*"},
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"podcast_episodes GET id={episode_id} failed "
+                f"({response.status_code}): {response.text[:200]}"
+            )
+        rows = response.json()
+        if not rows:
+            raise ExternalServiceError(f"podcast_episodes id={episode_id} not found")
+        return PodcastEpisodeRecord.model_validate(rows[0])
+
+    @_default_retry()
+    async def latest_id(
+        self, *, language: str, status: str | None = None
+    ) -> int | None:
+        """Return the id of the most recent row matching (language, status?).
+
+        Used by the daily VPS shell script to chain produce → deliver
+        without parsing logs. Returns None if no row matches.
+        """
+        params: dict[str, str] = {
+            "language": f"eq.{language}",
+            "select": "id",
+            "order": "created_at.desc",
+            "limit": "1",
+        }
+        if status is not None:
+            params["status"] = f"eq.{status}"
+        response = await self._client.get(
+            "/rest/v1/podcast_episodes", params=params,
+        )
+        _check_transient(response)
+        if response.status_code >= 400:
+            raise ExternalServiceError(
+                f"podcast_episodes latest_id failed ({response.status_code}): "
+                f"{response.text[:200]}"
+            )
+        rows = response.json()
+        if not rows:
+            return None
+        return int(rows[0]["id"])
