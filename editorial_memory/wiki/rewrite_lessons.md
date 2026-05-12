@@ -35,3 +35,5 @@
 - [insider] Don’t proceed when the underlying materials show a player/team mismatch or otherwise inconsistent sourcing; that’s a source-side reliability failure, not a prose fix.
 - [columnist] Don’t underplay a clean schedule-only update; when the digest is tight but complete, a direct and fully grounded headline/lede can be enough.
 - [columnist] Don’t try to turn an effectively empty digest into a readable column; smooth prose cannot replace missing factual support (source-side, not fixable in prose).
+- [columnist] Don’t try to manufacture a memorial-style article from an empty factual base; when the digest is missing key facts, the failure is source-side, not a prose problem.
+- [columnist] Don’t use vague filler to bridge missing obituary details; if the factual base is empty, the piece is not publishable as-is (source-side, not fixable in prose).
