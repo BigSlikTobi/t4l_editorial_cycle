@@ -8,12 +8,10 @@
 - Surface the core action or key analytic fact immediately, then stop unless the digest clearly adds more.
 - Brevity is a strength when the evidence is sparse.
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
-- When the source supports it, concrete numbers or comparison results can carry the piece if the lead stays centered on the clearest fact.
+- When the source supports it, concrete numbers, rankings, or comparison results can carry the piece if the lead stays centered on the clearest fact.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] Center the measurement method and concrete outcomes; a source-tethered comparison can work well without extra color.
-- [columnist] Keep the piece centered on the direct quote or personal reaction the source actually supports; one vivid line can do the work without extra framing.
-- [columnist] A concrete fan hook or team/player stake can make a tight, grounded column feel fresh without needing extra flourish.
+- [analyst] Center the measurement method and concrete outcomes; a source-tethered comparison or ranking can work well without extra color.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, or backstory claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -29,12 +27,12 @@
 - If source materials conflict or the digest points to a different subject, treat it as a sourcing problem and do not force the named story through in prose.
 - [analyst] Don’t project unrelated material onto a solid analytic core; keep the article strictly on the verified comparison set and remove stray framing that doesn’t belong to the source.
 - [analyst] Don’t repeat the same lead nearly verbatim in the body; duplication without added sourced detail makes a strong analysis read thin.
-- [analyst] Don’t use broad recap language when a tighter draft-value hook would be cleaner and more publishable.
-- [analyst] Don’t make the headline and intro both restate the same verified point without adding new sourced detail.
+- [analyst] Don’t make the headline, intro, and body all say the same verified point; repetition without added sourced detail reads thin.
+- [analyst] Don’t add source-meta filler or explain what the report does not add; if the draft only has the ranking, keep it centered on that ranking.
+- [analyst] Don’t inflate a single placement into extra claims about weekly math, load severity, or “toughest” framing unless the source actually supports those specifics.
 - Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
 - [analyst] Don’t project an unsupported future path onto a usable present-tense development angle.
 - [analyst] Don’t add personnel context unless the source explicitly supplies it.
-- [analyst] Don’t make the headline, intro, and body all say the same verified point; repetition without added sourced detail reads thin.
 - [analyst] Don’t present coaching focus or interpretation as confirmed when the digest has only generic source-meta mention; this is a grounding failure (source-side, not fixable in prose).
 - [analyst] Don’t state a release or other outcome as established when the source only supports a proposed lever or conditional scenario.
 - [analyst] Don’t repeat the same source fact across headline, subhead, and intro; when the source is thin, paraphrase alone doesn’t create value.
@@ -52,9 +50,10 @@
 - [columnist] Don’t add unrelated player references when the source only supports a single reaction quote and one descriptor.
 - [columnist] Don’t use inflated emotional color like “life-changing” or “a lot less ordinary” when the digest has no facts to support it.
 - [columnist] Don’t make the headline and intro simply rephrase the same generic idea when the digest is effectively empty; repetition cannot substitute for a concrete development.
+- [columnist] Don’t imply broader significance or “matters because” framing unless the digest actually supports that layer; keep schedule-news pieces exact and modest.
+- [columnist] Don’t make the title/intro oversell schedule context or imply a fuller slate of details than the digest gives; match the confirmed fact exactly.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
 - [insider] Don’t invent or infer contract details, player identity, or transaction specifics when the digest is effectively empty; that’s source-side, not fixable in prose.
-- [insider] Don’t treat an empty digest as if it can be rescued by cleaner wording; if there are no verifiable facts, the draft cannot be safely rewritten (source-side, not fixable in prose).
-- [columnist] If a search story has only the generic fact of “still in focus,” avoid broad, repetitive framing; without a concrete update or sourced angle, it is not publishable and is source-side, not fixable in prose.
-- [analyst] Don’t build a release-structure question on a source set with no key facts at all; unsupported scenario framing makes the piece unrecoverable (source-side, not fixable in prose).
+- [insider] Don’t treat an empty digest as enough for a transaction story; if the source is bare, the article can’t be rescued in copy.
+- [insider] Don’t let a thin transaction digest sprawl into extra implications or framing; stay with the single confirmed move.
