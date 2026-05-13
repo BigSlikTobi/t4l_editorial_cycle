@@ -4,14 +4,16 @@
 - Keep the headline, lede, and body locked to the same verified event; tight alignment beats stretching the angle.
 - Lead with one clear news hook when the digest supports it; direct summary is often strongest.
 - Use a clean breaking-news or schedule-analysis lede that states the core fact directly.
-- Stay strictly inside source digests on names, timing, roster limits, and context; clean grounding is a major success signal.
+- Stay strictly inside source digests on names, timing, venue, and context; clean grounding is a major success signal.
 - Surface the core action or key analytic fact immediately, then stop unless the digest clearly adds more.
 - Brevity is a strength when the evidence is sparse.
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
-- When the source supports it, concrete numbers can carry the piece if the lead stays centered on the clearest figure.
+- When the source supports it, concrete numbers or comparison results can carry the piece if the lead stays centered on the clearest fact.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
+- [analyst] Center the measurement method and concrete outcomes; a source-tethered comparison can work well without extra color.
 - [columnist] Keep the piece centered on the direct quote or personal reaction the source actually supports; one vivid line can do the work without extra framing.
+- [columnist] A concrete fan hook or team/player stake can make a tight, grounded column feel fresh without needing extra flourish.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, or backstory claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -25,6 +27,10 @@
 - Don’t pad the intro with meta phrases like “according to the report” or “the digest says” when one confirmed fact can do the job.
 - Don’t let reflective, self-aware filler or poetic restatements substitute for new information; keep the execution direct.
 - If source materials conflict or the digest points to a different subject, treat it as a sourcing problem and do not force the named story through in prose.
+- [analyst] Don’t project unrelated material onto a solid analytic core; keep the article strictly on the verified comparison set and remove stray framing that doesn’t belong to the source.
+- [analyst] Don’t repeat the same lead nearly verbatim in the body; duplication without added sourced detail makes a strong analysis read thin.
+- [analyst] Don’t use broad recap language when a tighter draft-value hook would be cleaner and more publishable.
+- [analyst] Don’t make the headline and intro both restate the same verified point without adding new sourced detail.
 - Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
 - [analyst] Don’t project an unsupported future path onto a usable present-tense development angle.
 - [analyst] Don’t add personnel context unless the source explicitly supplies it.
