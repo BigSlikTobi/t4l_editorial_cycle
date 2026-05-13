@@ -14,6 +14,7 @@
 - [insider] A direct, concrete signing or roster update can carry the piece when the article stays news-led and stops after the verified development.
 - [columnist] A direct, tightly grounded opening can carry a schedule or event update when the hook is clear.
 - [columnist] When the source only supports one quoted reaction, keep the piece centered on that reaction and the single verified descriptor that came with it.
+- [columnist] Keep a reported event and the upcoming milestone it relates to in the same narrow frame; a tight two-part news peg can work if you don’t widen it into generic league chatter.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, or backstory claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -27,9 +28,14 @@
 - Don’t let reflective, self-aware filler or poetic restatements substitute for new information; keep the execution direct.
 - If source materials conflict or the digest points to a different subject, treat it as a sourcing problem and do not force the named story through in prose.
 - Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
+- [columnist] Don’t add generic schedule-release framing or league-wide unveiling language when the digest only supports a reported link and an upcoming date.
+- [columnist] Don’t imply extra certainty or detail about an international trip unless the digest actually provides it.
+- [columnist] Don’t repeat the same reported connection in the lede and body without adding sourced specifics; repetition reads as thin execution.
+- [columnist] Don’t try to turn a narrow report into broad chatter about the full schedule board; keep the scope as tight as the evidence.
 - [columnist] Don’t add extra context or unsupported reaction details when the source is effectively fact-light; vague reaction language cannot substitute for source-backed substance.
 - [columnist] Don’t repeat unsupported details as if they were confirmed, especially when the article is already built around a thin or empty source set.
 - [columnist] Don’t try to turn an effectively empty digest into a readable column; smooth prose cannot replace missing factual support (source-side, not fixable in prose).
+- [columnist] Don’t add sourced-looking specifics to a reported Germany/game link unless the digest actually supports them; a bare topic plus thin claim is still unsalvageable when the key angle is unsupported (source-side, not fixable in prose).
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
 - [analyst] Don’t build a contract-stakes story when the digest contains no usable facts; this is a source-side failure, not a prose problem.
