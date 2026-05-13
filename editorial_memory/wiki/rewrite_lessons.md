@@ -10,8 +10,7 @@
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
 - When the source supports it, concrete numbers can carry the piece if the lead stays centered on the clearest figure.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] Tightly grounded specificity can carry the piece when you turn verified workload, deal, schedule, or usage details into a clear football question.
-- [analyst] Trade-off framing works when it stays inside the digests and pairs the strongest available facts with a clear angle.
+- [insider] A direct, concrete signing update can carry the piece when the article stays news-led and stops after the verified development.
 - [columnist] A direct, tightly grounded opening can carry a schedule or event update when the hook is clear.
 
 ## What to avoid
@@ -21,9 +20,9 @@
 - Don’t blend two different story angles into one lead when one main hook would be cleaner.
 - Don’t repeat the lede or create a loop by restating the same transaction in slightly different words.
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
-- Don’t treat a reported deal, signing, or schedule hook as a platform for extra certainty about downstream effects unless those effects are verified.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t pad the intro with meta phrases like “according to the report” or “the digest says” when one confirmed fact can do the job.
+- Don’t lean on vague source-like wrap-ups or repetitive phrasing when a direct news sentence is available.
 - If source materials conflict or the digest points to a different subject, treat it as a sourcing problem and do not force the named story through in prose.
 - Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
 - [analyst] Don’t stretch a grounded schedule or usage note into certainty about early-season outcomes; keep the question posed, not answered.
@@ -38,4 +37,7 @@
 - [insider] Don’t proceed when the underlying materials show a player/team mismatch or otherwise inconsistent sourcing; that’s a source-side reliability failure, not a prose fix.
 - [insider] Don’t lean on source narration like “latest personnel move” or “No further details were included”; cut meta framing and keep only confirmed facts.
 - [insider] Don’t invent contract terms, free-agency timing, or other specifics when the digest is empty; unsupported deal details are a hard grounding fail.
+- [insider] Don’t include player-pool framing around unconfirmed names unless the source material supports that context.
 - [insider] Don’t publish from an empty digest at all; no factual basis means no writer-side fix is possible (source-side, not fixable in prose).
+- [insider] Don’t restate the headline with filler like “no other details were included” when the digest is empty; that adds no reportable substance.
+- [insider] Don’t use status-style filler as a substitute for verified facts in a dismiss-level empty-digest item.
