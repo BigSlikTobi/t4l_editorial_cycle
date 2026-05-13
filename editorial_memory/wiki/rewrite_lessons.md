@@ -11,10 +11,9 @@
 - When the source supports it, concrete numbers can carry the piece if the lead stays centered on the clearest figure.
 - A plain, grounded obituary-style lead works when it states the fact cleanly and adds only verified credentials.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] A usable contract-stakes frame can work when it is kept tightly inside the verified source facts.
 - [insider] A direct, concrete signing or roster update can carry the piece when the article stays news-led and stops after the verified development.
 - [columnist] A direct, tightly grounded opening can carry a schedule or event update when the hook is clear.
-- [columnist] A landmark-event angle can work if it stays pinned to the single confirmed development and does not broaden into extra context.
+- [columnist] When the source only supports one quoted reaction, keep the piece centered on that reaction and the single verified descriptor that came with it.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, or backstory claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -25,36 +24,14 @@
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t pad the intro with meta phrases like “according to the report” or “the digest says” when one confirmed fact can do the job.
-- Don’t lean on vague source-like wrap-ups or repetitive phrasing when a direct news sentence is available.
 - Don’t let reflective, self-aware filler or poetic restatements substitute for new information; keep the execution direct.
 - If source materials conflict or the digest points to a different subject, treat it as a sourcing problem and do not force the named story through in prose.
-- [analyst] Don’t assert a dollar range or other key number unless it is actually supported by the digest; unverified figures undercut the whole argument.
-- [analyst] Don’t turn contract-stakes framing into certainty when the source only supports looming stakes, not confirmed outcomes.
-- [analyst] Don’t stretch a grounded schedule or usage note into certainty about early-season outcomes; keep the question posed, not answered.
-- [analyst] Don’t stack multiple valid numbers or supporting details so heavily that the lead loses its single focus.
-- [columnist] Don’t add extra schedule color or implied context when the digest is effectively headline-only; keep the Paris/game frame to the confirmed matchup and venue.
-- [columnist] Don’t imply more game context than the digest supports just because the event is newsworthy; landmark-venue stories still need tight grounding.
 - Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
-- [columnist] Don’t let the middle drift into a shaky player list or extra framing that isn’t clearly anchored to the reported matchup or event.
-- [columnist] Don’t over-write the finish when the core news is already clear; polish should not dilute the hook.
-- [columnist] Don’t turn a factual obituary into a more poetic or reflective piece when the source only supports a direct, grounded lead.
+- [columnist] Don’t add extra context or unsupported reaction details when the source is effectively fact-light; vague reaction language cannot substitute for source-backed substance.
+- [columnist] Don’t repeat unsupported details as if they were confirmed, especially when the article is already built around a thin or empty source set.
 - [columnist] Don’t try to turn an effectively empty digest into a readable column; smooth prose cannot replace missing factual support (source-side, not fixable in prose).
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
-- [insider] Don’t open with a vague, qualified setup when a direct breaking-news sentence is available.
-- [insider] Don’t imply roster plans or longer-term consequences from a signing unless the source explicitly supports that inference.
-- [insider] Don’t proceed when the underlying materials show a player/team mismatch or otherwise inconsistent sourcing; that’s a source-side reliability failure, not a prose fix.
-- [insider] Don’t lean on source narration like “latest personnel move” or “No further details were included”; cut meta framing and keep only confirmed facts.
-- [insider] Don’t invent contract terms, free-agency timing, or other specifics when the digest is empty; unsupported deal details are a hard grounding fail.
-- [insider] Don’t include player-pool framing around unconfirmed names unless the source material supports that context.
-- [insider] Don’t publish from an empty digest at all; no factual basis means no writer-side fix is possible (source-side, not fixable in prose).
-- [insider] Don’t restate the headline with filler like “no other details were included” when the digest is empty; that adds no reportable substance.
-- [insider] Don’t use status-style filler as a substitute for verified facts in a dismiss-level empty-digest item.
-- [insider] Don’t let the headline, subhead, and intro repeat the same roster-full point; if the confirmed move is the whole story, keep the update concise and non-redundant.
-- [insider] Don’t add unsupported roster-context lines or meta sentences; if the digest only supports the signing, keep the piece to that one verified transaction.
-- [insider] Don’t frame the move as part of a larger roster-building arc unless that inference is explicitly sourced.
-- [insider] Don’t dress unsupported claims in source-like phrasing such as “according to a report” or “now part of New Orleans’ roster”; meta language does not repair an empty or unverified source set.
 - [analyst] Don’t build a contract-stakes story when the digest contains no usable facts; this is a source-side failure, not a prose problem.
-- [analyst] Don’t present a retention decision, cap question, or looming stakes as established if the source does not actually supply those facts.
-- [analyst] Don’t rely on a generic headline or lede to carry an unsupported analyst frame; when the source is empty, the angle collapses.
 - [analyst] Don’t force a publishable story from a no-facts digest (source-side, not fixable in prose).
+- [columnist] Don’t add locker-room implications, extra roster color, or unrelated player references when the source only supports a single reaction quote and one descriptor.
