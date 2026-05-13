@@ -31,6 +31,8 @@
 - [analyst] Don’t make the headline, intro, and body all say the same verified point; repetition without added sourced detail reads thin.
 - [analyst] Don’t present coaching focus or interpretation as confirmed when the digest has only generic source-meta mention; this is a grounding failure (source-side, not fixable in prose).
 - [analyst] Don’t state a release or other outcome as established when the source only supports a proposed lever or conditional scenario.
+- [analyst] Don’t repeat the same source fact across headline, subhead, and intro; when the source is thin, paraphrase alone doesn’t create value.
+- [analyst] Don’t add an unrelated player reference just because the name appears in a player list; if the digest doesn’t support that person, it’s a grounding failure (source-side, not fixable in prose).
 - [columnist] Don’t add generic league-wide framing or broad team-context chatter when the digest only supports a specific personal quote.
 - [columnist] Don’t imply extra certainty or detail about a personal claim unless the digest actually provides it.
 - [columnist] Don’t repeat the same reported connection in the lede and body without adding sourced specifics; repetition reads as thin execution.
@@ -42,6 +44,8 @@
 - [columnist] Don’t pad a quote-led piece with depth-chart speculation or extra roster-room inference; keep the frame to the confirmed quote and confirmed team mention.
 - [columnist] Don’t promise freshness or a new development when the digest only confirms that a search exists; if there’s no concrete update, keep the wording modest.
 - [columnist] Don’t add unrelated player references when the source only supports a single reaction quote and one descriptor.
+- [columnist] Don’t use inflated emotional color like “life-changing” or “a lot less ordinary” when the digest has no facts to support it.
+- [columnist] Don’t make the headline and intro simply rephrase the same generic idea when the digest is effectively empty; repetition cannot substitute for a concrete development.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
 - [insider] Don’t invent or infer contract details, player identity, or transaction specifics when the digest is effectively empty; that’s source-side, not fixable in prose.
