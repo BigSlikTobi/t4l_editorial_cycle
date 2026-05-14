@@ -12,7 +12,7 @@
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
 - [columnist] A tight, specific hook can work even in a short schedule item when it stays fully factual and avoids extra narrative.
 - [columnist] If the digest supports concrete schedule details, packaging them into a usable team-specific update can improve tap value without breaking grounding.
-- [insider] Tight breaking-news framing works when it stays clean and factual, with only the minimum verified context needed to orient the reader.
+- [columnist] Tight schedule-leak framing works when it cleanly separates confirmed items from rumored dates and stays readable for fans.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, backstory, or mechanics claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -45,13 +45,7 @@
 - [columnist] Don’t use source-meta language or invented framing to compensate for missing substantiation; a rumor with no facts is source-side, not fixable in prose.
 - [columnist] Don’t lead with a generic schedule published/released restatement if the body adds no concrete dates, times, or TV details; the headline and intro need different jobs.
 - [columnist] Don’t lean on prime-time, holiday-scale, or implied-big-stage framing when the source only confirms the matchup itself.
-- [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
-- [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
-- [insider] Don’t invent or infer contract details, player identity, or transaction specifics when the digest is effectively empty; that’s source-side, not fixable in prose.
-- [insider] Don’t treat an empty digest as enough for a transaction story; if the source is bare, the article can’t be rescued in copy.
-- [insider] Don’t let a thin transaction digest sprawl into extra implications or framing; stay with the single confirmed move.
-- [insider] Don’t overexplain a legal or disciplinary update when the digest already supplies the essential court/status facts; clean procedural context is enough.
-- [insider] Don’t use source-meta language like “according to the report” or “No additional details were provided in the source digest”; write the item as a clean news item, not a prompt response.
-- [insider] Don’t pad a breaking-news item with self-referential explanation; if the core fact is clear, the prose should stay invisible and direct.
-- [insider] Don’t force a story when the digest is effectively missing; an unsupported legal posture or scrutiny frame is a source-side failure, not a prose fix.
 - [columnist] Don’t assert a team-specific placement or repeat roster names when the source digest is empty; that’s a hard grounding failure (source-side, not fixable in prose).
+- [columnist] For schedule leaks, keep the confirmed game separate from rumored dates and label leaks clearly instead of laundering them into facts.
+- [columnist] Cut player-specific framing unless it is directly tied to source-supported schedule details.
+- [columnist] Use the schedule release timing and the count of listed games to carry the piece when other specifics are unconfirmed.
