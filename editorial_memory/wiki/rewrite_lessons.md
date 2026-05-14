@@ -13,7 +13,8 @@
 - [columnist] A tight, specific hook can work even in a short schedule item when it stays fully factual and avoids extra narrative.
 - [columnist] If the digest supports concrete schedule details, packaging them into a usable team-specific update can improve tap value without breaking grounding.
 - [columnist] Tight schedule-leak framing works when it cleanly separates confirmed items from rumored dates and stays readable for fans.
-- Keep separate reports separate in the prose when the digests support more than one holiday slate or related leak.
+- [columnist] Concrete team/date/opponent details make a schedule-leak piece immediately tappable when they are all source-backed.
+- [columnist] Extra specifics like holiday notes can improve value when they are clearly supported by the source rather than implied.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, backstory, or mechanics claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -51,4 +52,7 @@
 - [columnist] Cut player-specific framing unless it is directly tied to source-supported schedule details.
 - [columnist] Use the schedule release timing and the count of listed games to carry the piece when other specifics are unconfirmed.
 - [columnist] Tighten leak stories to the source-backed holiday anchors and exact kickoff times; cut extra schedule claims that aren’t needed and avoid wording that sounds more certain than the leaks support.
-- Don’t merge one team’s confirmed holiday games with another report’s holiday slate; keep each leak in its own lane unless the source explicitly connects them.
+- [columnist] Don’t treat rumored holiday or prime-time spots as confirmed; soften the language until the source backs it.
+- [columnist] Don’t include unsupported injury or playoff-history details in leak coverage unless the digest explicitly supplies them.
+- [columnist] Don’t let the lede and headline mirror each other too closely; the intro needs to add fresh, sourced detail.
+- [columnist] Don’t merge one team’s confirmed holiday games with another report’s holiday slate; keep each leak in its own lane unless the source explicitly connects them.
