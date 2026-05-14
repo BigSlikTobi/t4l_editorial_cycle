@@ -3,7 +3,7 @@
 ## What works (keep doing)
 - Keep the headline, lede, and body locked to the same verified event; tight alignment beats stretching the angle.
 - Lead with one clear news hook when the digest supports it; direct summary is often strongest.
-- Use a clean breaking-news or schedule-analysis lede that states the core fact directly.
+- Use a clean breaking-news lede that states the core fact directly.
 - Stay strictly inside source digests on names, timing, venue, charge/status, and context; clean grounding is a major success signal.
 - Surface the core action or key factual development immediately, then stop unless the digest clearly adds more.
 - Brevity is a strength when the evidence is sparse.
@@ -11,7 +11,7 @@
 - When the source supports it, concrete numbers, rankings, or comparison results can carry the piece if the lead stays centered on the clearest fact.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] When the source is thin, a modest quarterback-development or team-angle frame can work only if every detail stays grounded in the digest.
+- [insider] Tight breaking-news framing works when it stays clean and factual, with only the minimum verified context needed to orient the reader.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, backstory, or mechanics claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -31,31 +31,23 @@
 - [analyst] Don’t add source-meta filler or explain what the report does not add; if the draft only has the ranking, keep it centered on that ranking.
 - [analyst] Don’t inflate a single placement into extra claims about weekly math, load severity, or “toughest” framing unless the source actually supports those specifics.
 - [analyst] Don’t state roster or developmental specifics like mechanics work or prior-career context unless the digest explicitly supplies them.
-- Dismissed items with an effectively empty digest are source-side, not fixable in prose: if there’s no factual basis, don’t force a publishable article.
 - [analyst] Don’t project an unsupported future path onto a usable present-tense development angle.
 - [analyst] Don’t add personnel context unless the source explicitly supplies it.
 - [analyst] Don’t present coaching focus or interpretation as confirmed when the digest has only generic source-meta mention; this is a grounding failure (source-side, not fixable in prose).
-- [analyst] Don’t state a release or other outcome as established when the source only supports a proposed lever or conditional scenario.
-- [analyst] Don’t repeat the same source fact across headline, subhead, and intro; when the source is thin, paraphrase alone doesn’t create value.
-- [analyst] Don’t add an unrelated player reference just because the name appears in a player list; if the digest doesn’t support that person, it’s a grounding failure (source-side, not fixable in prose).
 - [columnist] Don’t add generic league-wide framing or broad team-context chatter when the digest only supports a specific personal quote.
 - [columnist] Don’t imply extra certainty or detail about a personal claim unless the digest actually provides it.
 - [columnist] Don’t repeat the same reported connection in the lede and body without adding sourced specifics; repetition reads as thin execution.
 - [columnist] Don’t try to turn a narrow report into broad chatter; keep the scope as tight as the evidence.
 - [columnist] Don’t add extra context or unsupported reaction details when the source is effectively fact-light; vague reaction language cannot substitute for source-backed substance.
 - [columnist] Don’t repeat unsupported details as if they were confirmed, especially when the article is already built around a thin or empty source set.
-- [columnist] Don’t try to turn an effectively empty digest into a readable column; smooth prose cannot replace missing factual support (source-side, not fixable in prose).
-- [columnist] Don’t add sourced-looking specifics unless the digest actually supports them; a bare topic plus thin claim is still unsalvageable when the key angle is unsupported (source-side, not fixable in prose).
-- [columnist] Don’t pad a quote-led piece with depth-chart speculation or extra roster-room inference; keep the frame to the confirmed quote and confirmed team mention.
-- [columnist] Don’t promise freshness or a new development when the digest only confirms that a search exists; if there’s no concrete update, keep the wording modest.
-- [columnist] Don’t add unrelated player references when the source only supports a single reaction quote and one descriptor.
-- [columnist] Don’t use inflated emotional color like “life-changing” or “a lot less ordinary” when the digest has no facts to support it.
 - [columnist] Don’t make the headline and intro simply rephrase the same generic idea when the digest is effectively empty; repetition cannot substitute for a concrete development.
 - [columnist] Don’t imply broader significance or “matters because” framing unless the digest actually supports that layer; keep schedule-news pieces exact and modest.
-- [columnist] Don’t make the title/intro oversell schedule context or imply a fuller slate of details than the digest gives; match the confirmed fact exactly.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
 - [insider] Don’t invent or infer contract details, player identity, or transaction specifics when the digest is effectively empty; that’s source-side, not fixable in prose.
 - [insider] Don’t treat an empty digest as enough for a transaction story; if the source is bare, the article can’t be rescued in copy.
 - [insider] Don’t let a thin transaction digest sprawl into extra implications or framing; stay with the single confirmed move.
 - [insider] Don’t overexplain a legal or disciplinary update when the digest already supplies the essential court/status facts; clean procedural context is enough.
+- [insider] Don’t use source-meta language like “according to the report” or “No additional details were provided in the source digest”; write the item as a clean news item, not a prompt response.
+- [insider] Don’t pad a breaking-news item with self-referential explanation; if the core fact is clear, the prose should stay invisible and direct.
+- [insider] Don’t force a story when the digest is effectively missing; an unsupported legal posture or scrutiny frame is a source-side failure, not a prose fix.
