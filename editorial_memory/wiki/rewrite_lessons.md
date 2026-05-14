@@ -10,11 +10,9 @@
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
+- [analyst] Give readers a concrete reason to tap by pairing the main verified claim with specific windows, weeks, or opponents when those details are source-backed.
 - [columnist] A tight, specific hook can work even in a short schedule item when it stays fully factual and avoids extra narrative.
 - [columnist] If the digest supports concrete schedule details, packaging them into a usable team-specific update can improve tap value without breaking grounding.
-- [columnist] Tight schedule-leak framing works when it cleanly separates confirmed items from rumored dates and stays readable for fans.
-- [columnist] Concrete team/date/opponent details make a schedule-leak piece immediately tappable when they are all source-backed.
-- [columnist] Extra specifics like holiday notes can improve value when they are clearly supported by the source rather than implied.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, backstory, or mechanics claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -56,3 +54,8 @@
 - [columnist] Don’t include unsupported injury or playoff-history details in leak coverage unless the digest explicitly supplies them.
 - [columnist] Don’t let the lede and headline mirror each other too closely; the intro needs to add fresh, sourced detail.
 - [columnist] Don’t merge one team’s confirmed holiday games with another report’s holiday slate; keep each leak in its own lane unless the source explicitly connects them.
+- Don’t build around a single headline-level signing note as if it confirmed timing, contract status, or roster implications when the digest is missing; that’s a source-side gap, not a prose fix.
+- Don’t add scene-setting filler like “the season pushes on” or “the rookie signing class keeps moving” when it isn’t in the digest; it dilutes a thin update.
+- Don’t assert more than the source provides when the only confirmed fact is that a signing happened; keep the copy narrowly inside the note.
+- Don’t repeat the same sourced update in the lede and body without adding a sharper angle or new verified detail; one clean fact needs efficient packaging, not duplication.
+- Don’t force a story through when the source URL/title or topic metadata clearly points to a different subject; unresolved subject mismatch is source-side, not fixable in prose.
