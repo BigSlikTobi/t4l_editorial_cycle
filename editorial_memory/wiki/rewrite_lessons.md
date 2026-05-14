@@ -44,6 +44,8 @@
 - [columnist] Don’t make the headline and intro simply rephrase the same generic idea when the digest is effectively empty; repetition cannot substitute for a concrete development.
 - [columnist] Don’t imply broader significance or “matters because” framing unless the digest actually supports that layer; keep schedule-news pieces exact and modest.
 - [columnist] Don’t add extra narrative to a clean schedule hook; if the verified fact is the opener opponent, let that be the story.
+- [columnist] Don’t build a story from a bare rumor headline alone; if the digest has no concrete facts, avoid adding specifics or editorial filler.
+- [columnist] Don’t use source-meta language or invented framing to compensate for missing substantiation; a rumor with no facts is source-side, not fixable in prose.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
 - [insider] Don’t invent or infer contract details, player identity, or transaction specifics when the digest is effectively empty; that’s source-side, not fixable in prose.
