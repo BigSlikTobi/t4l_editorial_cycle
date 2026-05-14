@@ -11,6 +11,7 @@
 - When the source supports it, concrete numbers, rankings, or comparison results can carry the piece if the lead stays centered on the clearest fact.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
+- [columnist] A tight, team-specific hook can work even in a short schedule item when it stays fully factual and avoids extra narrative.
 - [insider] Tight breaking-news framing works when it stays clean and factual, with only the minimum verified context needed to orient the reader.
 
 ## What to avoid
@@ -42,6 +43,7 @@
 - [columnist] Don’t repeat unsupported details as if they were confirmed, especially when the article is already built around a thin or empty source set.
 - [columnist] Don’t make the headline and intro simply rephrase the same generic idea when the digest is effectively empty; repetition cannot substitute for a concrete development.
 - [columnist] Don’t imply broader significance or “matters because” framing unless the digest actually supports that layer; keep schedule-news pieces exact and modest.
+- [columnist] Don’t add extra narrative to a clean schedule hook; if the verified fact is the opener opponent, let that be the story.
 - [insider] Don’t add source-like narration, extra context, or timing details when the digest only supports the bare transaction.
 - [insider] Don’t echo an unsupported claim across headline, lede, subhead, or social copy; if a detail isn’t confirmed, keep it out.
 - [insider] Don’t invent or infer contract details, player identity, or transaction specifics when the digest is effectively empty; that’s source-side, not fixable in prose.
