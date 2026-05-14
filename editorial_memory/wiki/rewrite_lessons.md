@@ -2,13 +2,12 @@
 
 ## What works (keep doing)
 - Keep the headline, lede, and body locked to the same verified event; tight alignment beats stretching the angle.
-- Lead with one clear news hook when the digest supports it; direct summary is often strongest.
+- Lead with one clear news hook when the source signal is thin; direct summary is often strongest.
 - Use a clean breaking-news lede that states the core fact directly.
 - Stay strictly inside source digests on names, timing, venue, charge/status, and context; clean grounding is a major success signal.
 - Surface the core action or key factual development immediately, then stop unless the digest clearly adds more.
 - Brevity is a strength when the evidence is sparse.
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
-- When the source supports it, concrete numbers, rankings, or comparison results can carry the piece if the lead stays centered on the clearest fact.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
 - [columnist] A tight, team-specific hook can work even in a short schedule item when it stays fully factual and avoids extra narrative.
@@ -55,3 +54,5 @@
 - [insider] Don’t use source-meta language like “according to the report” or “No additional details were provided in the source digest”; write the item as a clean news item, not a prompt response.
 - [insider] Don’t pad a breaking-news item with self-referential explanation; if the core fact is clear, the prose should stay invisible and direct.
 - [insider] Don’t force a story when the digest is effectively missing; an unsupported legal posture or scrutiny frame is a source-side failure, not a prose fix.
+- [insider] Don’t assert contract terms or broader roster significance unless the source fact actually supports them; keep extension copy to the confirmed transaction and nothing more.
+- [insider] Don’t write “new deal” or “keeps the running back in place” style language when the digest is empty; unsupported extension framing is a hard fail and source-side, not fixable in prose.
