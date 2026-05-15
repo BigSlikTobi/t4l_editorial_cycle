@@ -11,8 +11,7 @@
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
 - [columnist] A tight, specific hook can work in a short schedule item when it stays fully factual and avoids extra narrative.
-- [columnist] If the digest supports concrete schedule or roster details, packaging them into a usable team-specific update can improve tap value without breaking grounding.
-- When the digest is sparse, a carefully hedged roundup reference can still work if it avoids adding confirmation the source doesn’t actually provide.
+- [analyst] A rewrite can salvage a schedule story when it recenters the lede on the confirmed national windows and the few most important standalone games.
 
 ## What to avoid
 - Don’t add unsupported roster, impact, backstory, or mechanics claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -25,14 +24,12 @@
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t add meta phrasing like “according to the report” when one confirmed fact can do the job.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
-- Don’t present roundup-item details as confirmed facts when the digest only supports a thin reference; hedge until the source is explicit.
-- Don’t leave self-referential lines about the digest in the article; they read like missing-source filler, not news.
-- [analyst] Don’t add unsupported context like depth-chart or momentum implications unless the digest explicitly supplies them.
+- [analyst] Don’t add unsupported context like depth-chart, injury, or momentum implications unless the digest explicitly supplies them.
 - [analyst] Don’t make the headline, intro, and body all say the same verified point; repetition without added sourced detail reads thin.
+- [analyst] Don’t use player-status language unless it is source-backed; in schedule copy, keep any mention of a player to the verified note the league expects him to be playing.
 - [columnist] Don’t add generic holiday-stage or attention filler when the digest only supports the confirmed schedule placement.
 - [columnist] Don’t repeat the same schedule-release line across headline, intro, and body; repetition reads as thin execution.
 - [columnist] Don’t try to turn a narrow report into broad chatter; keep the scope as tight as the evidence.
-- [columnist] Don’t add extra narrative to a clean transaction or schedule hook; if the verified fact is the opener, let that be the story.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
 - Don’t treat rumored or implied implications as confirmed facts; soften the language until the source backs it.
 - Don’t build around named teams, players, or slate details when the source digest is missing or empty; that’s a source-side, not fixable in prose issue.
@@ -41,3 +38,5 @@
 - Don’t add unsupported consequence language to a schedule-release hook; a grounded, specific inventory of confirmed games is enough.
 - Don’t over-explain a clean schedule item when the verified hook is already clear and concrete.
 - Don’t make the columnist voice sound chatty at the expense of precision; specific, factual packaging works better than flourish.
+- [analyst] Don’t leave a schedule story at a generic release summary when the source supports a sharper rewrite around the key primetime windows.
+- [analyst] Don’t say a game is on Sunday night unless the schedule digest explicitly supports that phrasing; check the exact national window wording.
