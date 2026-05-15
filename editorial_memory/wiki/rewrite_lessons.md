@@ -1,22 +1,21 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline, lede, and body locked to the same verified event or angle; tight alignment beats stretching the premise.
-- Lead directly with the most concrete confirmed hook when the source is rich enough to support it.
-- Use a clean, factual breaking-news lede that states the confirmed development without embellishment.
+- Keep the headline, lede, and body locked to one verified angle; tight alignment beats stretching the premise.
+- Lead with the strongest confirmed hook when the source is rich enough to support it.
+- Use a clean, factual lede that states the confirmed development without embellishment.
 - Stay inside the source on names, status, dates, and event details; grounded execution is a major success signal.
 - Surface the core action immediately, then stop unless the digest clearly adds more.
 - Brevity works when the evidence is sparse and the angle is narrow.
-- Add only the context the digest actually supports; concise context can help without drifting.
+- Add only context the digest actually supports; concise context can help without drifting.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] Precise scheduling context can strengthen a narrow item when it stays strictly factual and specific.
 - [columnist] A tight national-stage hook can work when it is anchored in concrete slate details instead of generic spotlight language.
 - [columnist] Team-specific stakes can be effective when they come directly from the verified event and stay tied to the exact matchup or window.
-- [columnist] A rewrite can be saved by replacing generic “reliable draw” framing with one sharper schedule-specific takeaway tied to the actual windows.
+- [columnist] Clean alignment between headline and lede, plus grounded team context, can carry a piece even when the broader “buzz” is thin.
 
 ## What to avoid
-- Don’t add unsupported roster, impact, backstory, mechanics, or sequel claims; even plausible detail can sink grounding if the digest doesn’t support it.
+- Don’t add unsupported names, roster details, impact, backstory, mechanics, or sequel claims; plausible detail can still sink grounding.
 - Don’t turn a confirmed move into a broader significance claim unless the source actually supports that layer.
 - Don’t widen a headline-level report into a bigger narrative when the source evidence is thin.
 - Don’t make factual claims that go beyond the source digest; grounding failures are publish-stoppers.
@@ -26,7 +25,6 @@
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
 - [analyst] Don’t let a schedule story drift into speculation about availability or trajectory; keep only the source-backed windows and dates.
-- [analyst] Don’t leave a schedule story at a generic summary when the source supports sharper, more concrete pressure points.
 - [columnist] Don’t make a schedule item generic with vague “spotlight” framing; use the actual windows, dates, and TV slots already in the source.
 - [columnist] Don’t repeat the same schedule-release line across headline, intro, and body; repetition reads as thin execution.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
@@ -40,3 +38,6 @@
 - [columnist] Don’t broaden a narrow schedule report into vague “always in the spotlight” chatter; center the exact schedule facts instead.
 - [columnist] Don’t pad a schedule-release lede with generic national-draw language; make the lede distinct with the concrete primetime count and named windows.
 - [columnist] Don’t let the story feel thin by failing to use the strongest schedule details in the opening.
+- Don’t let unsupported names or stray side paragraphs pull the piece away from the verified core; trim to the clean source-backed angle.
+- Don’t keep a thin schedule paragraph just to add length when it distracts from the main verified story.
+- [columnist] Don’t underuse a strong verified organizational/culture angle when it is the clearest concrete hook available; let that detail drive the piece.
