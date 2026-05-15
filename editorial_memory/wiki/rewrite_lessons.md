@@ -10,9 +10,9 @@
 - Add only the kind of context the digest supports; concise context can lift a piece without drifting.
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] Give readers a concrete reason to tap by pairing the main verified claim with specific windows, weeks, or opponents when those details are source-backed.
 - [columnist] A tight, specific hook can work even in a short schedule item when it stays fully factual and avoids extra narrative.
 - [columnist] If the digest supports concrete schedule details, packaging them into a usable team-specific update can improve tap value without breaking grounding.
+- [columnist] Concrete home-date framing can be enough on its own when it stays within the verified schedule fact.
 
 ## What to avoid
 - Don’t add unsupported roster, room, performance, backstory, or mechanics claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -26,12 +26,12 @@
 - Don’t pad the intro with meta phrases like “according to the report” or “the digest says” when one confirmed fact can do the job.
 - Don’t let reflective, self-aware filler or poetic restatements substitute for new information; keep the execution direct.
 - If source materials conflict or the digest points to a different subject, treat it as a sourcing problem and do not force the named story through in prose.
-- [analyst] Don’t project unrelated material onto a solid analytic core; keep the article strictly on the verified comparison set and remove stray framing that doesn’t belong to the source.
+- [analyst] Don’t add source-meta filler or explain what the report does not add; if the draft only has the ranking, keep it centered on that ranking.
 - [analyst] Don’t repeat the same lead nearly verbatim in the body; duplication without added sourced detail makes a strong analysis read thin.
 - [analyst] Don’t make the headline, intro, and body all say the same verified point; repetition without added sourced detail reads thin.
-- [analyst] Don’t add source-meta filler or explain what the report does not add; if the draft only has the ranking, keep it centered on that ranking.
 - [analyst] Don’t inflate a single placement into extra claims about weekly math, load severity, or “toughest” framing unless the source actually supports those specifics.
 - [analyst] Don’t state roster or developmental specifics like mechanics work or prior-career context unless the digest explicitly supplies them.
+- [analyst] Don’t add unsupported specificity such as a player’s role or a “home-heavy” slate when the digest is empty; if the source has no usable facts, the piece is source-side, not fixable in prose.
 - [columnist] Don’t add generic league-wide framing or broad team-context chatter when the digest only supports a specific personal quote.
 - [columnist] Don’t imply extra certainty or detail about a personal claim unless the digest actually provides it.
 - [columnist] Don’t repeat the same reported connection in the lede and body without adding sourced specifics; repetition reads as thin execution.
@@ -48,14 +48,16 @@
 - [columnist] Don’t assert a team-specific placement or repeat roster names when the source digest is empty; that’s a hard grounding failure (source-side, not fixable in prose).
 - [columnist] For schedule leaks, keep the confirmed game separate from rumored dates and label leaks clearly instead of laundering them into facts.
 - [columnist] Cut player-specific framing unless it is directly tied to source-supported schedule details.
-- [columnist] Use the schedule release timing and the count of listed games to carry the piece when other specifics are unconfirmed.
 - [columnist] Tighten leak stories to the source-backed holiday anchors and exact kickoff times; cut extra schedule claims that aren’t needed and avoid wording that sounds more certain than the leaks support.
 - [columnist] Don’t treat rumored holiday or prime-time spots as confirmed; soften the language until the source backs it.
 - [columnist] Don’t include unsupported injury or playoff-history details in leak coverage unless the digest explicitly supplies them.
 - [columnist] Don’t let the lede and headline mirror each other too closely; the intro needs to add fresh, sourced detail.
 - [columnist] Don’t merge one team’s confirmed holiday games with another report’s holiday slate; keep each leak in its own lane unless the source explicitly connects them.
-- Don’t build around a single headline-level signing note as if it confirmed timing, contract status, or roster implications when the digest is missing; that’s a source-side gap, not a prose fix.
-- Don’t add scene-setting filler like “the season pushes on” or “the rookie signing class keeps moving” when it isn’t in the digest; it dilutes a thin update.
-- Don’t assert more than the source provides when the only confirmed fact is that a signing happened; keep the copy narrowly inside the note.
-- Don’t repeat the same sourced update in the lede and body without adding a sharper angle or new verified detail; one clean fact needs efficient packaging, not duplication.
-- Don’t force a story through when the source URL/title or topic metadata clearly points to a different subject; unresolved subject mismatch is source-side, not fixable in prose.
+- [columnist] Don’t build around a single headline-level signing note as if it confirmed timing, contract status, or roster implications when the digest is missing; that’s a source-side gap, not a prose fix.
+- [columnist] Don’t add scene-setting filler like “the season pushes on” or “the rookie signing class keeps moving” when it isn’t in the digest; it dilutes a thin update.
+- [columnist] Don’t assert more than the source provides when the only confirmed fact is that a signing happened; keep the copy narrowly inside the note.
+- [columnist] Don’t repeat the same sourced update in the lede and body without adding a sharper angle or new verified detail; one clean fact needs efficient packaging, not duplication.
+- Don’t force a story through when the source URL/title or topic metadata clearly points to a different subject; that is a sourcing problem, not a prose problem.
+- [columnist] Don’t repeat the same confirmed schedule fact three times in different words; if Seattle hosting two Monday night home games is the hook, state it once and move on.
+- [columnist] Don’t add schedule-copy filler or meta phrasing when the core facts already carry the note; keep the lede tight and direct.
+- [columnist] Don’t repeat the headline in the intro when the digest is empty; that is a weak execution pattern and
