@@ -11,8 +11,9 @@
 - A plain, grounded lead works when it states the fact cleanly and adds only verified detail.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
 - [analyst] Precise scheduling context can strengthen a narrow item when it stays strictly factual and specific.
-- [analyst] Concrete numbers and matchup detail can justify publication even if the lede is more functional than punchy.
-- [columnist] A tight, specific hook can work in a short schedule item when it stays fully factual and avoids extra narrative.
+- [columnist] A tight national-stage hook can work when it is anchored in concrete slate details instead of generic spotlight language.
+- [columnist] Team-specific stakes can be effective when they come directly from the verified event and stay tied to the exact matchup or window.
+- [columnist] A rewrite can be saved by replacing generic “reliable draw” framing with one sharper schedule-specific takeaway tied to the actual windows.
 
 ## What to avoid
 - Don’t add unsupported roster, impact, backstory, mechanics, or sequel claims; even plausible detail can sink grounding if the digest doesn’t support it.
@@ -26,9 +27,7 @@
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
 - [analyst] Don’t let a schedule story drift into speculation about availability or trajectory; keep only the source-backed windows and dates.
 - [analyst] Don’t leave a schedule story at a generic summary when the source supports sharper, more concrete pressure points.
-- [analyst] Don’t soften a tough-slate story into broad filler when the digest supports specific counts and gauntlets; front-load the concrete pressure points.
-- [analyst] Don’t inject an unsupported preseason or reunion note into a schedule story; keep the focus on the verified slate details.
-- [columnist] Don’t turn a narrow schedule report into broad chatter; keep the scope as tight as the evidence.
+- [columnist] Don’t make a schedule item generic with vague “spotlight” framing; use the actual windows, dates, and TV slots already in the source.
 - [columnist] Don’t repeat the same schedule-release line across headline, intro, and body; repetition reads as thin execution.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
 - Don’t treat rumored or implied implications as confirmed facts; soften the language until the source backs it.
@@ -38,4 +37,6 @@
 - Don’t add unsupported consequence language to a schedule-release hook; a grounded, specific inventory of confirmed games is enough.
 - Don’t over-explain a clean schedule item when the verified hook is already clear and concrete.
 - [analyst] Don’t use a broad headline like “toughest schedule” when the source supports a more specific and higher-payoff frame.
-- [columnist] Don’t broaden a video gag into a larger narrative; center the exact on-screen message and keep any implication tightly bounded by the digest.
+- [columnist] Don’t broaden a narrow schedule report into vague “always in the spotlight” chatter; center the exact schedule facts instead.
+- [columnist] Don’t pad a schedule-release lede with generic national-draw language; make the lede distinct with the concrete primetime count and named windows.
+- [columnist] Don’t let the story feel thin by failing to use the strongest schedule details in the opening.
