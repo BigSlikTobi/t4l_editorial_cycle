@@ -10,10 +10,9 @@
 - Add only context the digest actually supports; concise context can help without drifting.
 - Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] A concrete matchup- or slate-specific frame can work when it is backed by exact source details and gives the reader a real reason to care.
-- [analyst] Pulling together two supported angles can be effective when both stay source-tight and reinforce the same stakes.
+- [analyst] Concrete schedule or projection facts can do real work when they’re placed directly in the lede/body, not left as vague summary.
 - [columnist] A tight national-stage hook can work when it is anchored in concrete slate details instead of generic spotlight language.
-- [columnist] Team-specific stakes can be effective when they come directly from the verified event and stay tied to the exact matchup or window.
+- When the digest is thin, a narrow, source-faithful update is safer than trying to manufacture a bigger story.
 
 ## What to avoid
 - Don’t add unsupported names, roster details, impact, backstory, mechanics, or sequel claims; plausible detail can still sink grounding.
@@ -25,30 +24,11 @@
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
-- Don’t make the opening and headline chase different angles; if the source is a broader schedule roundup, keep the framing consistent from the first sentence.
-- [analyst] Don’t let a schedule story drift into speculation about availability or trajectory; keep only the source-backed windows and dates.
-- [analyst] Don’t use a broad headline like “toughest schedule” when the source supports a more specific and higher-payoff frame.
-- [analyst] Don’t attach unsupported history or status claims to a schedule-release hook; keep the piece inside the verified slate facts.
-- [analyst] Don’t lean on generic “questions around” framing when the digest already supports a sharper roster-and-schedule pressure point.
-- [columnist] Don’t make a schedule item generic with vague “spotlight” framing; use the actual windows, dates, and TV slots already in the source.
-- [columnist] Don’t repeat the same schedule-release line across headline, intro, and body; repetition reads as thin execution.
-- [columnist] Don’t broaden a narrow schedule report into vague “always in the spotlight” chatter; center the exact schedule facts instead.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
-- Don’t treat rumored or implied implications as confirmed facts; soften the language until the source backs it.
-- Don’t build around named teams, players, or slate details when the source digest is missing or empty; that’s a source-side, not fixable in prose issue.
 - Don’t lean on vague filler to compensate for absent source facts; if the digest has no usable detail, there is no safe rewrite path.
-- Don’t assign a team-specific frame from an ungrounded team field alone; the angle must be backed by the digest itself.
-- Don’t add unsupported consequence language to a schedule-release hook; a grounded, specific inventory of confirmed games is enough.
-- Don’t over-explain a clean schedule item when the verified hook is already clear and concrete.
-- Don’t let unsupported names or stray side paragraphs pull the piece away from the verified core; trim to the clean source-backed angle.
-- Don’t keep a thin schedule paragraph just to add length when it distracts from the main verified story.
-- Don’t expand a quoted reaction into unsupported draft-path or rookie-season claims; stay strictly on the quote and the Browns reference already in the source summary.
-- Don’t write past an empty digest: if the only support is the summary line, avoid adding details from the headline or assumed context.
-- Don’t treat a quote plus a team mention as permission to infer the full backstory; keep the rewrite inside the explicitly supported reaction.
-- Don’t add Cleveland-specific development language unless the source digest actually supplies it.
-- Don’t leave a schedule roundup cluttered with tangential extra notes when they dilute the main marquee hook.
-- Don’t add meta commentary about the article’s cluster or player list when the digest supports a straight transaction note; cut it and stay on the move in/out.
-- Don’t mention that the digest contained no other details as if it were article content; that’s a source limitation, not a usable narrative beat.
-- Don’t use content-management filler to paper over a bare transaction note; if the source only supports the move, keep the copy strictly on the move.
-- Don’t expect a rewrite to fix a truly empty digest; when the source has no extra facts, the limitation is source-side, not an execution problem.
-- Don’t add unsupported contextualizing language just to make a bare signing/waive note feel fuller; sparseness is safer than invention.
+- Don’t expect a rewrite to fix a truly empty digest; when the source has no extra facts, the limitation is source-side, not an execution problem (source-side, not fixable in prose).
+- Don’t add unsupported framing about named subjects when the digest is effectively empty; that’s source-side, not fixable in prose.
+- [columnist] Don’t lead with trade-request framing or other unsupported storyline labels when the source only supports a narrower update.
+- [columnist] Don’t make a schedule item generic with vague “spotlight” framing; use the actual windows, dates, and TV slots already in the source.
+- [analyst] Don’t misstate marquee schedule details in the lede or headline; every premium game reference has to match the source exactly.
+- [analyst] Don’t leave the most useful facts buried; if the digest includes projections, strength-of-schedule notes, or national dates, make them visible early.
