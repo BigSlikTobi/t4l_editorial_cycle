@@ -8,6 +8,7 @@
 - Surface the core action immediately, then stop unless the digest clearly adds more.
 - Brevity works when the evidence is sparse and the angle is narrow.
 - Add only context the digest actually supports; concise context can help without drifting.
+- Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
 - [analyst] A concrete matchup-specific frame can work when it is backed by exact source details and gives the reader a real reason to care.
 - [analyst] Specific calendar hooks can carry the piece when they are fan-facing and all come straight from the digest.
@@ -24,6 +25,7 @@
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
+- Don’t make the opening and headline chase different angles; if the source is a broader schedule roundup, keep the framing consistent from the first sentence.
 - [analyst] Don’t let a schedule story drift into speculation about availability or trajectory; keep only the source-backed windows and dates.
 - [analyst] Don’t use a broad headline like “toughest schedule” when the source supports a more specific and higher-payoff frame.
 - [analyst] Don’t attach unsupported history or status claims to a schedule-release hook; keep the piece inside the verified slate facts.
@@ -43,3 +45,4 @@
 - Don’t write past an empty digest: if the only support is the summary line, avoid adding details from the headline or assumed context.
 - Don’t treat a quote plus a team mention as permission to infer the full backstory; keep the rewrite inside the explicitly supported reaction.
 - Don’t add Cleveland-specific development language unless the source digest actually supplies it.
+- Don’t leave a schedule roundup cluttered with tangential extra notes when they dilute the main marquee hook.
