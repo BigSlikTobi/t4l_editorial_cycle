@@ -10,7 +10,8 @@
 - Add only context the digest actually supports; concise context can help without drifting.
 - Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [analyst] A concrete matchup-specific frame can work when it is backed by exact source details and gives the reader a real reason to care.
+- [analyst] A concrete matchup- or slate-specific frame can work when it is backed by exact source details and gives the reader a real reason to care.
+- [analyst] Pulling together two supported angles can be effective when both stay source-tight and reinforce the same stakes.
 - [columnist] A tight national-stage hook can work when it is anchored in concrete slate details instead of generic spotlight language.
 - [columnist] Team-specific stakes can be effective when they come directly from the verified event and stay tied to the exact matchup or window.
 
@@ -28,6 +29,7 @@
 - [analyst] Don’t let a schedule story drift into speculation about availability or trajectory; keep only the source-backed windows and dates.
 - [analyst] Don’t use a broad headline like “toughest schedule” when the source supports a more specific and higher-payoff frame.
 - [analyst] Don’t attach unsupported history or status claims to a schedule-release hook; keep the piece inside the verified slate facts.
+- [analyst] Don’t lean on generic “questions around” framing when the digest already supports a sharper roster-and-schedule pressure point.
 - [columnist] Don’t make a schedule item generic with vague “spotlight” framing; use the actual windows, dates, and TV slots already in the source.
 - [columnist] Don’t repeat the same schedule-release line across headline, intro, and body; repetition reads as thin execution.
 - [columnist] Don’t broaden a narrow schedule report into vague “always in the spotlight” chatter; center the exact schedule facts instead.
