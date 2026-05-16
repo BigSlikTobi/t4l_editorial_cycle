@@ -11,7 +11,6 @@
 - Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
 - [analyst] A concrete matchup-specific frame can work when it is backed by exact source details and gives the reader a real reason to care.
-- [analyst] Specific calendar hooks can carry the piece when they are fan-facing and all come straight from the digest.
 - [columnist] A tight national-stage hook can work when it is anchored in concrete slate details instead of generic spotlight language.
 - [columnist] Team-specific stakes can be effective when they come directly from the verified event and stay tied to the exact matchup or window.
 
@@ -46,3 +45,8 @@
 - Don’t treat a quote plus a team mention as permission to infer the full backstory; keep the rewrite inside the explicitly supported reaction.
 - Don’t add Cleveland-specific development language unless the source digest actually supplies it.
 - Don’t leave a schedule roundup cluttered with tangential extra notes when they dilute the main marquee hook.
+- Don’t add meta commentary about the article’s cluster or player list when the digest supports a straight transaction note; cut it and stay on the move in/out.
+- Don’t mention that the digest contained no other details as if it were article content; that’s a source limitation, not a usable narrative beat.
+- Don’t use content-management filler to paper over a bare transaction note; if the source only supports the move, keep the copy strictly on the move.
+- Don’t expect a rewrite to fix a truly empty digest; when the source has no extra facts, the limitation is source-side, not an execution problem.
+- Don’t add unsupported contextualizing language just to make a bare signing/waive note feel fuller; sparseness is safer than invention.
