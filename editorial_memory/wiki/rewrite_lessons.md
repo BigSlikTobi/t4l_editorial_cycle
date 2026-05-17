@@ -9,8 +9,8 @@
 - Brevity works when the evidence is sparse and the angle is narrow.
 - Add only context the digest actually supports; concise context can help without drifting.
 - Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
+- [insider] Center the lede on the verified status change and the source’s stated frame, but only to the extent the digest explicitly supports it.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [columnist] When the source provides one exact quote or phrase, build the lead around that precise wording rather than paraphrasing into softer texture.
 
 ## What to avoid
 - Don’t add unsupported names, roster details, impact, backstory, mechanics, or sequel claims; plausible detail can still sink grounding.
@@ -23,7 +23,7 @@
 - Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
+- [insider] Don’t add extra plan/year language unless the digest explicitly supports it; cut headline/subhead/intro repetition so each element does one job.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
-- [insider] Don’t describe a player move as a “confirmed answer” or imply the team has chosen a full reset unless the report explicitly says so.
 - Don’t invent an ending or career-context frame when the digest has no usable facts; if the source is empty, the right move is dismissal, not embellishment (source-side, not fixable in prose).
 - Don’t write into an empty digest as if it contained confirmed developments; source-less items are unsalvageable grounding failures (source-side, not fixable in prose).
