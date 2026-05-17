@@ -11,6 +11,7 @@
 - Prefer direct, factual treatment over broader takeaway language when the evidence is thin.
 - Cleanly executed short notes can work well when the grounding is tight and the added color stays stylistic.
 - A readable headline plus no fabricated claims is a strong baseline for thin-source stories.
+- [insider] Lead with the confirmed move/status and any explicit hard fact that belongs in the lede, even if the digest is sparse.
 
 ## What to avoid
 - Don’t stretch one supported quote into a bigger football takeaway than the source can prove.
@@ -26,4 +27,12 @@
 - Don’t pad sparse reporting with repetitive framing; tighten instead.
 - Don’t invent confidence signals or performance implications from a single quote.
 - Don’t publish a story when the source digest is missing or unusable; that’s a source-side problem, not something prose can fix.
-- Don’t lean on meta commentary about how interesting the quote is when there isn’t enough sourced reporting to back it up.
+- Don’t lean on meta commentary about the source item itself as evidence; cut source-reference language and stay on the confirmed football fact.
+- Don’t use vague placeholder phrasing when the confirmed fact can be stated directly.
+- Don’t imply a verified explanation, cause of death, or report-backed conclusion unless it is explicitly present in source_digests.
+- Don’t say “according to the report” or similar report-led framing when the actual source details aren’t there.
+- Don’t stack the same unsupported claim across headline and intro; if the source is empty, reduce to the one verified subject fact.
+- Don’t treat source-substance gaps as a prose problem; if the digest contains no facts, the fix is to narrow, not embellish.
+- Don’t add status language like “back in Pittsburgh” or a “firm” note when the digest contains no usable facts to verify it.
+- Don’t turn an empty digest into a story premise; absence of information is not a usable angle (source-side, not fixable in prose).
+- Don’t repeat source-item meta language like “the subject of a medical examiner report” when the digest itself supplies no factual story to report.
