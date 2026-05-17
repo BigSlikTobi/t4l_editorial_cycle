@@ -26,5 +26,7 @@
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
-- [columnist] Don’t pad a single supported fact with source-narration or meta phrasing like “that is the whole note” or “the report does not add.”
+- [columnist] Don’t pad a single supported fact with source-narration or meta phrasing like “the report” or “No further details were included.”
 - Don’t expect a rewrite to fix a truly empty digest; when the source has no extra facts, the limitation is source-side, not an execution problem (source-side, not fixable in prose).
+- Don’t add draft-status or other unsupported background just because the headline feels stronger with it; keep retirement-style briefs tightly to the confirmed fact.
+- Don’t invent an ending or career-context frame when the digest has no usable facts; if the source is empty, the right move is dismissal, not embellishment (source-side, not fixable in prose).
