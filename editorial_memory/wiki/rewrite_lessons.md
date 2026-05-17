@@ -10,9 +10,7 @@
 - Add only context the digest actually supports; concise context can help without drifting.
 - Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
 - [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
-- [columnist] A modest, source-bound hook reads better than a bigger claim when the digest only supports a small update.
 - [columnist] When the source provides one exact quote or phrase, build the lead around that precise wording rather than paraphrasing into softer texture.
-- [columnist] A single supported fact can still carry the story if the lede is crisp and specific enough.
 
 ## What to avoid
 - Don’t add unsupported names, roster details, impact, backstory, mechanics, or sequel claims; plausible detail can still sink grounding.
@@ -26,7 +24,6 @@
 - Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
 - Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
 - Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
-- [columnist] Don’t pad a single supported fact with source-narration or meta phrasing like “the report” or “No further details were included.”
-- Don’t expect a rewrite to fix a truly empty digest; when the source has no extra facts, the limitation is source-side, not an execution problem (source-side, not fixable in prose).
-- Don’t add draft-status or other unsupported background just because the headline feels stronger with it; keep retirement-style briefs tightly to the confirmed fact.
+- [insider] Don’t describe a player move as a “confirmed answer” or imply the team has chosen a full reset unless the report explicitly says so.
 - Don’t invent an ending or career-context frame when the digest has no usable facts; if the source is empty, the right move is dismissal, not embellishment (source-side, not fixable in prose).
+- Don’t write into an empty digest as if it contained confirmed developments; source-less items are unsalvageable grounding failures (source-side, not fixable in prose).
