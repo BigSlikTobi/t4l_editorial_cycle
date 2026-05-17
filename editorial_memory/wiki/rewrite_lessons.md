@@ -1,29 +1,29 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline, lede, and body locked to one verified angle; tight alignment beats stretching the premise.
-- Lead with the strongest confirmed hook when the source is rich enough to support it.
-- Use a clean, factual lede that states the confirmed development without embellishment.
-- Stay inside the source on names, status, dates, and event details; grounded execution is a major success signal.
-- Surface the core action immediately, then stop unless the digest clearly adds more.
-- Brevity works when the evidence is sparse and the angle is narrow.
-- Add only context the digest actually supports; concise context can help without drifting.
-- Use the source’s broader framing when it is clearly present, not just the single most clickable sub-hook.
-- [insider] Center the lede on the verified status change and the source’s stated frame, but only to the extent the digest explicitly supports it.
-- [analyst] Use one dominant verified angle as the throughline, and let secondary facts support it instead of competing with it.
+- Keep the story centered on one verified angle when the source only supports a single claim.
+- Use the source’s exact language or close paraphrase for the lede when a quote or named development is the core fact.
+- Keep the headline, subhead, and intro in sync, but make each element do a distinct job.
+- Surface the main action immediately; don’t bury it under extra framing.
+- Stay inside the source on confidence, status, dates, and other hard facts.
+- Let a narrow, well-grounded note stay narrow; compact execution can still read cleanly.
+- Use one dominant verified angle as the throughline, with secondary facts only if they’re truly sourced.
+- Prefer direct, factual treatment over broader takeaway language when the evidence is thin.
+- Cleanly executed short notes can work well when the grounding is tight and the added color stays stylistic.
+- A readable headline plus no fabricated claims is a strong baseline for thin-source stories.
 
 ## What to avoid
-- Don’t add unsupported names, roster details, impact, backstory, mechanics, or sequel claims; plausible detail can still sink grounding.
-- Don’t build a piece around a quote or phrasing the source digest does not actually support; the central claim has to be text-grounded.
-- Don’t turn a confirmed move into a broader significance claim unless the source actually supports that layer.
-- Don’t widen a headline-level report into a bigger narrative when the source evidence is thin.
-- Don’t make factual claims that go beyond the source digest; grounding failures are publish-stoppers.
-- Don’t blend multiple story angles into one lead when one main hook would be cleaner.
-- Don’t repeat the lede or create a loop by restating the same update in slightly different words.
-- Don’t bury the core event under timeline, context, or significance language that isn’t directly sourced.
-- Don’t overbuild a sparse digest into a polished story; if the support isn’t there, stay tightly factual.
-- Don’t let reflective filler or implied consequence language substitute for new information; keep the execution direct.
-- [insider] Don’t add extra plan/year language unless the digest explicitly supports it; cut headline/subhead/intro repetition so each element does one job.
-- Don’t force a story through when the source clearly supports only a narrow transaction or schedule note; keep the copy inside the note.
-- Don’t invent an ending or career-context frame when the digest has no usable facts; if the source is empty, the right move is dismissal, not embellishment (source-side, not fixable in prose).
-- Don’t write into an empty digest as if it contained confirmed developments; source-less items are unsalvageable grounding failures (source-side, not fixable in prose).
+- Don’t stretch one supported quote into a bigger football takeaway than the source can prove.
+- Don’t repeat the same idea across headline, subhead, and intro; avoid DRY breakdowns that make a piece feel thin.
+- Don’t add broad claims about confidence, season outlook, or player output unless the source explicitly supports them.
+- Don’t widen a narrow update into internal-source or locker-room interpretation without clear evidence.
+- Don’t let paraphrase drift away from the exact confirmed development.
+- Don’t build around implied consequence language when the source only gives one concrete statement.
+- Don’t make the headline promise a fuller story than the digest can support.
+- Don’t bury the core quote under extra commentary or summary language.
+- Don’t force a more complete-sounding narrative onto a thin source note.
+- Don’t blend multiple angles when one clean, sourced premise is enough.
+- Don’t pad sparse reporting with repetitive framing; tighten instead.
+- Don’t invent confidence signals or performance implications from a single quote.
+- Don’t publish a story when the source digest is missing or unusable; that’s a source-side problem, not something prose can fix.
+- Don’t lean on meta commentary about how interesting the quote is when there isn’t enough sourced reporting to back it up.
