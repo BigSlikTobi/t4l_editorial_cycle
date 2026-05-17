@@ -36,3 +36,9 @@
 - Don’t add status language like “back in Pittsburgh” or a “firm” note when the digest contains no usable facts to verify it.
 - Don’t turn an empty digest into a story premise; absence of information is not a usable angle (source-side, not fixable in prose).
 - Don’t repeat source-item meta language like “the subject of a medical examiner report” when the digest itself supplies no factual story to report.
+- Don’t let generic draft-history filler or causal flourishes do the work when the source-supported explanation is the point.
+- Don’t let lede and standfirst restate the same explanation; give each sentence a distinct job.
+- Don’t overstate what a sparse digest proves; if the source only supports the explanation itself, keep the framing tightly on that fact.
+- Don’t treat missing digest detail as permission for broader narrative setup; cut to the supported explanation instead.
+- Don’t claim a player “explains” a disputed or unsupported premise when the digest has no facts to back the explanation; if the source is empty, that’s a source-side, not fixable in prose, problem.
+- Don’t build narrative momentum from unsupported repetition or explanatory flourishes when the digest itself is fact-free; strip it back to verified substance only.
