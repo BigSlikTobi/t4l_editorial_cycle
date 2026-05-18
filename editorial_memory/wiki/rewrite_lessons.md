@@ -10,8 +10,10 @@
 - Keep persona work aligned with the angle; [analyst] should foreground construction, balance, and trade-offs.
 - [analyst] Public evaluations can still work if they’re framed as a real interior-line assessment, not just a compliment.
 - Keep strong grounding and specificity visible in the lede, not buried later.
-- [columnist] A clear team-specific stake can carry the piece when the digest is thin, as long as the lede stays anchored to the reported fact.
-- [columnist] Keep the headline direct and aligned with the reported development; plain premise beats hype.
+- [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
+- [insider] Lead with the concrete expected decision first, then briefly state the basic consequence; a clean, factual package can be enough when the development itself is the story.
+- [insider] Keep the headline, lede, and intro aligned on the same source-supported consequence when the update is narrow but important.
+- [analyst] A concrete team-specific decision point can carry a short item even when the source is sparse, as long as the copy stays inside the room-level facts.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -31,9 +33,17 @@
 - Don’t lean on generic scene-setting when the source already gives a sharper, more specific angle.
 - Don’t pad a thin column with vague “lesson” language if the actual news value is the concrete reference itself.
 - Don’t mention the source digest or its missing details in the copy; strip meta commentary and stay inside the supported fact pattern.
-- Don’t add city-color or other unsupported local implications when the only solid fact is that a decision is expected.
 - [columnist] Don’t turn a single supported decision into a broader civic or historic narrative unless the source actually spells that out.
 - [columnist] Don’t try to rescue an empty-digest story by leaning harder into mood or commentary; unsupported framing won’t make it publishable.
 - [columnist] Don’t over-specify locations, markets, or other local details when the source digest is missing; that’s ungrounded, source-side, not fixable in prose.
 - [columnist] Don’t name players or other people unless the source ties them directly to the reported decision; keep the frame on the stadium, city, and host year.
 - [columnist] Don’t layer in league-rhetoric filler when the reported expectation itself is the story.
+- [insider] Don’t repeat ESPN/source framing instead of adding any source-supported detail beyond the basic expected award.
+- [insider] Don’t use meta language about what the reporting did or did not include; cut it and keep the copy inside the concrete news.
+- [insider] Don’t repeat the same sentence in body form; tighten thin updates so each line adds a distinct fact or consequence.
+- [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
+- [insider] Don’t add unsupported dispute-history specifics or resolution language unless the source digest explicitly confirms them.
+- [insider] Don’t ground an article on empty source material and repeated sourcing language; if the digest has no usable facts beyond the headline-level claim, it is source-side, not fixable in prose.
+- [analyst] Don’t say “according to the report” or similar when the digest itself supplies no report-level detail; keep attribution implicit unless the source is actually named.
+- [analyst] Don’t widen a quarterback-room update into vague “rest of the room” language; stick to the specific, named players the digest supports.
+- [analyst] Don’t let a narrow roster decision get stretched beyond the room-level facts; if the supported point is simply who becomes the odd man out, keep it that tight.
