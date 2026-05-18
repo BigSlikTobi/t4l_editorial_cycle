@@ -10,8 +10,8 @@
 - Keep persona work aligned with the angle; [analyst] should foreground construction, balance, and trade-offs.
 - [analyst] Public evaluations can still work if they’re framed as a real interior-line assessment, not just a compliment.
 - Keep strong grounding and specificity visible in the lede, not buried later.
-- When the source is sparse, a tight contrast or revealing detail can carry the piece without extra scene-setting.
-- If only one fact is supported, a clean, narrow lede can still work without trying to manufacture broader significance.
+- [columnist] A clear team-specific stake can carry the piece when the digest is thin, as long as the lede stays anchored to the reported fact.
+- [columnist] Keep the headline direct and aligned with the reported development; plain premise beats hype.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -35,3 +35,5 @@
 - [columnist] Don’t turn a single supported decision into a broader civic or historic narrative unless the source actually spells that out.
 - [columnist] Don’t try to rescue an empty-digest story by leaning harder into mood or commentary; unsupported framing won’t make it publishable.
 - [columnist] Don’t over-specify locations, markets, or other local details when the source digest is missing; that’s ungrounded, source-side, not fixable in prose.
+- [columnist] Don’t name players or other people unless the source ties them directly to the reported decision; keep the frame on the stadium, city, and host year.
+- [columnist] Don’t layer in league-rhetoric filler when the reported expectation itself is the story.
