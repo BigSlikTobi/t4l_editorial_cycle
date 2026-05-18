@@ -27,3 +27,9 @@ class TestPodcastPersonas:
     def test_get_persona_round_trip(self) -> None:
         assert get_podcast_persona("color") is COLOR_PERSONA
         assert get_podcast_persona("analyst") is ANALYST_PERSONA
+
+    def test_german_personas_support_denglish_listener_and_opinion(self) -> None:
+        assert "natürlichem Denglish" in COLOR_PERSONA.style_guide_de
+        assert "direkt mit 'du'" in COLOR_PERSONA.style_guide_de
+        assert "eigener Meinung" in ANALYST_PERSONA.style_guide_de
+        assert "Ich bleib dabei" in ANALYST_PERSONA.style_guide_de

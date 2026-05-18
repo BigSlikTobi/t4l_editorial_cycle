@@ -41,6 +41,7 @@ from app.podcast.clustering import (
     group_for_podcast,
     select_clusters_for_budget,
 )
+from app.podcast.continuity import load_continuity_context, write_episode_memory
 from app.podcast.render import render_to_audio
 from app.podcast.schemas import PodcastLanguage, PodcastScript
 from app.podcast.script import compose_script
@@ -123,6 +124,13 @@ class PodcastProduceWorkflow:
                 "Clustered: %d total, %d selected for budget",
                 len(clusters), len(selected),
             )
+            continuity_context = load_continuity_context(
+                root=self._settings.podcast_episode_root,
+                run_date=run_date,
+                language=language,
+                clusters=selected,
+                lookback_days=self._settings.podcast_continuity_days,
+            )
 
             script = await compose_script(
                 selected,
@@ -130,6 +138,7 @@ class PodcastProduceWorkflow:
                 run_date=run_date,
                 target_word_count=self._settings.podcast_target_word_count,
                 settings=self._settings,
+                continuity_context=continuity_context,
             )
 
             await self._episodes.mark_rendering(
@@ -191,6 +200,10 @@ class PodcastProduceWorkflow:
                 word_count=script.word_count,
                 episode_title=script.episode_title,
                 episode_summary=script.episode_summary,
+            )
+            write_episode_memory(
+                self._settings.podcast_episode_root / run_date.isoformat() / language,
+                script,
             )
             return PodcastRunSummary(
                 episode_id=episode_id,

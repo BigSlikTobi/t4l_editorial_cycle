@@ -6,7 +6,15 @@ from unittest.mock import AsyncMock, patch
 
 import pytest
 
-from app.podcast.schemas import PodcastCluster, PodcastScript, ScriptLine
+from app.podcast.schemas import (
+    PodcastCluster,
+    PodcastContinuityCallback,
+    PodcastContinuityContext,
+    PodcastScript,
+    PodcastSection,
+    PodcastSectionPlan,
+    ScriptLine,
+)
 from app.podcast.script import (
     _coerce_cold_open_lines,
     _coerce_ranked_clusters,
@@ -153,9 +161,11 @@ class TestComposeScript:
             language="en-US",
             run_date=date(2026, 5, 9),
             cold_open=[ScriptLine(speaker="color", text="Cold open line")],
-            body=[
-                ScriptLine(speaker="color", text="Welcome in."),
-                ScriptLine(speaker="analyst", text="Numbers say one thing."),
+            sections=[
+                PodcastSection(kind="news", title="News", lines=[ScriptLine(speaker="color", text="Welcome in.")]),
+                PodcastSection(kind="player_of_day", title="Player", lines=[ScriptLine(speaker="analyst", text="Player note.")]),
+                PodcastSection(kind="team_of_day", title="Team", lines=[ScriptLine(speaker="color", text="Team note.")]),
+                PodcastSection(kind="deep_dive", title="Deep", lines=[ScriptLine(speaker="analyst", text="Numbers say one thing.")]),
             ],
             outro=[ScriptLine(speaker="color", text="See you tomorrow.")],
         )
@@ -175,15 +185,60 @@ class TestComposeScript:
                 return _FakeRunResult(
                     [{"speaker": "color", "text": "BREAKING."}, {"speaker": "analyst", "text": "0.42 EPA."}]
                 )
+            if "Section Planner" in name:
+                return _FakeRunResult(
+                    PodcastSectionPlan(
+                        run_date=date(2026, 5, 9),
+                        red_line="News to player to team to deep dive.",
+                        sections=[
+                            PodcastSection(kind="news", title="News", research_summary="n"),
+                            PodcastSection(kind="player_of_day", title="Player", research_summary="p"),
+                            PodcastSection(kind="team_of_day", title="Team", research_summary="t"),
+                            PodcastSection(kind="deep_dive", title="Deep", research_summary="d"),
+                        ],
+                        rejected_candidates=["x was thin"],
+                    )
+                )
+            if "Research Agent" in name:
+                return _FakeRunResult(f"{name} report")
+            if "Section Synthesis" in name:
+                return _FakeRunResult("Final red line synthesis.")
             if "Dialogue Writer" in name:
                 return _FakeRunResult(final)
+            if "Host Authority Pass" in name:
+                authority = final.model_copy(
+                    update={
+                        "sections": [
+                            final.sections[0].model_copy(
+                                update={
+                                    "lines": [
+                                        final.sections[0].lines[0].model_copy(
+                                            update={"text": "Welcome in with protection context."}
+                                        )
+                                    ]
+                                }
+                            ),
+                            *final.sections[1:],
+                        ]
+                    }
+                )
+                return _FakeRunResult(authority)
             if "Director Pass" in name:
                 # Director adds a prosody hint to one line.
-                directed = final.model_copy(
+                authority = PodcastScript.model_validate_json(input_)
+                directed = authority.model_copy(
                     update={
-                        "body": [
-                            final.body[0].model_copy(update={"prosody_hints": ["warm"]}),
-                            final.body[1],
+                        "sections": [
+                            authority.sections[0].model_copy(
+                                update={
+                                    "lines": [
+                                        authority.sections[0].lines[0].model_copy(
+                                            update={"prosody_hints": ["warm"]}
+                                        )
+                                    ]
+                                }
+                            ),
+                            *authority.sections[1:],
                         ]
                     }
                 )
@@ -199,15 +254,37 @@ class TestComposeScript:
             run_date=date(2026, 5, 9),
             target_word_count=4200,
             settings=settings,
+            continuity_context=PodcastContinuityContext(
+                lookback_days=3,
+                useful_callbacks=[
+                    PodcastContinuityCallback(
+                        prior_date=date(2026, 5, 8),
+                        topic="Big trade",
+                        reason="same player",
+                        suggested_use="short callback",
+                    )
+                ],
+            ),
         )
         # All 4 agents called.
         called = [name for (name, _) in runs]
         assert any("Cluster Ranker" in n for n in called)
         assert any("Cold Open" in n for n in called)
+        assert any("Section Planner" in n for n in called)
+        assert any("Player of the Day Research" in n for n in called)
+        assert any("Team of the Day Research" in n for n in called)
+        assert any("Deep Dive Research" in n for n in called)
+        assert any("Section Synthesis" in n for n in called)
         assert any("Dialogue Writer" in n for n in called)
+        assert any("Host Authority Pass" in n for n in called)
         assert any("Director Pass" in n for n in called)
         # Director pass result preserved.
-        assert script.body[0].prosody_hints == ["warm"]
+        assert script.sections[0].lines[0].prosody_hints == ["warm"]
+        assert script.sections[0].lines[0].text == "Welcome in with protection context."
         # Word count recomputed.
         assert script.word_count > 0
         assert script.story_count == 1
+        planner_payload = next(input_ for name, input_ in runs if "Section Planner" in name)
+        assert "continuity_context" in planner_payload
+        dialogue_payload = next(input_ for name, input_ in runs if "Dialogue Writer" in name)
+        assert "Big trade" in dialogue_payload

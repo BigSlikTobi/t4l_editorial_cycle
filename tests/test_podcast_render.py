@@ -16,7 +16,8 @@ from app.podcast.render import (
     script_to_payload,
     script_to_segment_payloads,
 )
-from app.podcast.schemas import PodcastScript, ScriptLine
+from app.podcast.pronunciation import PodcastPronunciationGuide, PronunciationEntry
+from app.podcast.schemas import PodcastScript, PodcastSection, ScriptLine
 
 
 def _settings(tmp_path: Path, *, force_single: bool = False) -> Settings:
@@ -50,6 +51,25 @@ class TestScriptToPayload:
         payload = script_to_payload(_script(), settings=_settings(tmp_path), title="t")
         # 5 lines total (cold open + body 3 + outro).
         assert len(payload.lines) == 5
+
+    def test_flattens_structured_sections(self, tmp_path: Path) -> None:
+        script = PodcastScript(
+            language="de-DE",
+            run_date=date(2026, 5, 9),
+            cold_open=[ScriptLine(speaker="color", text="Cold.")],
+            sections=[
+                PodcastSection(kind="news", title="News", lines=[ScriptLine(speaker="color", text="News.")]),
+                PodcastSection(kind="player_of_day", title="Player", lines=[ScriptLine(speaker="analyst", text="Player.")]),
+                PodcastSection(kind="team_of_day", title="Team", lines=[ScriptLine(speaker="color", text="Team.")]),
+                PodcastSection(kind="deep_dive", title="Deep", lines=[ScriptLine(speaker="analyst", text="Deep.")]),
+            ],
+            body=[ScriptLine(speaker="color", text="Legacy.")],
+            outro=[ScriptLine(speaker="color", text="Bye.")],
+        )
+
+        payload = script_to_payload(script, settings=_settings(tmp_path), title="t")
+        texts = [text for _, text in payload.lines]
+        assert texts == ["Cold.", "News.", "Player.", "Team.", "Deep.", "Bye."]
 
     def test_narrator_coerced_to_color(self, tmp_path: Path) -> None:
         payload = script_to_payload(_script(), settings=_settings(tmp_path), title="t")
@@ -92,6 +112,32 @@ class TestScriptToPayload:
         assert "TTS the following" in payload.style_prompt
         assert "Marcus Hale" in payload.style_prompt
         assert "Robin Donnelly" in payload.style_prompt
+
+    def test_pronunciation_guide_attached(self, tmp_path: Path) -> None:
+        guide = PodcastPronunciationGuide(
+            entries=[
+                PronunciationEntry(
+                    term="T4L",
+                    spoken_as="Tackle for Loss",
+                    confidence="high",
+                ),
+                PronunciationEntry(
+                    term="Tyler Shough",
+                    spoken_as="TY-ler SHUCK",
+                    confidence="high",
+                ),
+            ],
+        )
+        payload = script_to_payload(
+            _script(),
+            settings=_settings(tmp_path),
+            title="t",
+            pronunciation_guide=guide,
+        )
+        assert payload.style_prompt is not None
+        assert "Pronunciation Guide" in payload.style_prompt
+        assert "T4L: say Tackle for Loss" in payload.style_prompt
+        assert "Tyler Shough: say TY-ler SHUCK" in payload.style_prompt
 
 
 class TestScriptToSegmentPayloads:
@@ -261,6 +307,7 @@ class TestBuildStylePrompt:
         assert "(laughs)" in prompt or "(sighs)" in prompt
         # Explicit "do not read parens aloud" guard.
         assert "DO NOT" in prompt or "NICHT" in prompt
+        assert "Naturalness Strategy" in prompt
 
     def test_de_mentions_both_speakers(self) -> None:
         prompt = _build_style_prompt("de-DE")
@@ -269,6 +316,7 @@ class TestBuildStylePrompt:
         # German-specific token.
         assert "Podcast" in prompt
         assert "NICHT" in prompt
+        assert "micro-imperfections" in prompt
 
 
 @pytest.mark.asyncio

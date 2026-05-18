@@ -108,12 +108,24 @@ class Settings(BaseSettings):
     podcast_target_word_count: int = 4200       # ~25 min runtime
     podcast_min_word_count: int = 700           # ~5 min adaptive floor
     podcast_lookback_hours: int = 24
+    podcast_continuity_days: int = 3
+    podcast_episode_root: Path = Path("var/podcast/episodes")
     podcast_audio_temp_dir: Path = Path("/tmp/t4l_podcast")
     # Direct Gemini TTS integration (separate from the team-beat Cloud Run
     # tts_batch_service). The model + voice settings here are unrelated to
     # `tts_model_name` / `tts_voice_name`, which belong to team-beat. Voice
     # names (e.g. "Puck", "Charon") come from Gemini's prebuilt voice list.
     podcast_gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
+    # Artifact/Codex podcast runtime prefers Gemini Batch TTS for cost, then
+    # falls back to synchronous TTS when the morning delivery window is at risk.
+    podcast_gemini_batch_enabled: bool = True
+    # Check batch completion every 10 minutes. After 12 checks (120 min)
+    # without a terminal state, fall back to synchronous TTS.
+    podcast_gemini_batch_poll_interval_seconds: float = 600.0
+    podcast_gemini_batch_timeout_seconds: float = 7200.0
+    # nflreadpy/nflverse analytics pack for the Codex artifact podcast runtime.
+    podcast_analytics_enabled: bool = True
+    podcast_analytics_season: int | None = None
     # Two grounded former-athlete podcaster voices. Both male, both
     # carry chest-resonance authority. Marcus (color/host) drives
     # narrative; the analyst (Ray) drives technical/metrics breakdown.
@@ -159,6 +171,9 @@ class Settings(BaseSettings):
     #    Legacy: separate intro_music (bed) + sting_music (transition).
     podcast_intro_music_path: Path | None = None
     podcast_sting_music_path: Path | None = None
+    podcast_player_of_day_jingle_path: Path | None = None
+    podcast_team_of_day_jingle_path: Path | None = None
+    podcast_deep_dive_jingle_path: Path | None = None
     podcast_intro_song_mode: bool = True
     # Single-song mode parameters
     podcast_song_vocal_intro_seconds: float = 7.0  # length of the brand-vocal head
@@ -177,6 +192,8 @@ class Settings(BaseSettings):
     podcast_music_bed_volume_db: float = -26.0
     podcast_sting_max_seconds: float = 30.0
     podcast_sting_fade_out_seconds: float = 2.0
+    podcast_section_jingle_max_seconds: float = 10.0
+    podcast_section_jingle_fade_out_seconds: float = 1.0
 
     # Brand-line standalone padding: silence inserted right after the
     # branded intro line so it lands on its own before the headlines.
@@ -207,6 +224,7 @@ class Settings(BaseSettings):
     openai_model_podcast_cluster_ranker_agent: str = "gpt-5.4-mini"
     openai_model_podcast_cold_open_writer_agent: str = "gpt-5.4-mini"
     openai_model_podcast_dialogue_writer_agent: str = "gpt-5.4"
+    openai_model_podcast_host_authority_pass_agent: str = "gpt-5.4-mini"
     openai_model_podcast_director_pass_agent: str = "gpt-5.4-mini"
     openai_model_podcast_episode_metadata_agent: str = "gpt-5.4-mini"
 
@@ -214,6 +232,13 @@ class Settings(BaseSettings):
     spotify_token_path: Path = Path.home() / ".config" / "save-to-spotify" / "token.json"
     save_to_spotify_cli_path: str = "save-to-spotify"
     save_to_spotify_show_id: str | None = None
+    podcast_thumbnail_enabled: bool = True
+    podcast_thumbnail_image_model: str = "gpt-image-2"
+    podcast_thumbnail_image_quality: str = "medium"
+    podcast_thumbnail_image_size: str = "1024x1024"
+    podcast_thumbnail_cli_path: Path = (
+        Path.home() / ".codex" / "skills" / ".system" / "imagegen" / "scripts" / "image_gen.py"
+    )
 
     def agent_models(self) -> dict[str, str]:
         return {
@@ -229,6 +254,7 @@ class Settings(BaseSettings):
             "podcast_cluster_ranker_agent": self.openai_model_podcast_cluster_ranker_agent,
             "podcast_cold_open_writer_agent": self.openai_model_podcast_cold_open_writer_agent,
             "podcast_dialogue_writer_agent": self.openai_model_podcast_dialogue_writer_agent,
+            "podcast_host_authority_pass_agent": self.openai_model_podcast_host_authority_pass_agent,
             "podcast_director_pass_agent": self.openai_model_podcast_director_pass_agent,
             "podcast_episode_metadata_agent": self.openai_model_podcast_episode_metadata_agent,
         }

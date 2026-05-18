@@ -1,0 +1,58 @@
+# Manual overrides for the architecture graph extractor.
+#
+# Most nodes and edges are auto-detected via AST. This file fills in the gaps
+# where static analysis is brittle or ambiguous:
+#   - agent_tool_edges: links an Agent node to the tool it carries, plus the
+#     nested agent wrapped by that tool (if any).
+#   - adapter_service_edges: explicit adapter-class → external-service links
+#     the URL-path heuristic can't infer (e.g. edge functions whose path is
+#     "/" without a distinguishing suffix).
+#   - external_services: nodes for external systems that have no source file
+#     (edge functions hosted elsewhere, third-party APIs).
+
+external_services:
+  - id: "service:supabase.edge.news_feed"
+    label: "Supabase edge: news_feed"
+    meta: {kind: "supabase_edge_function"}
+  - id: "service:supabase.edge.article_lookup"
+    label: "Supabase edge: article_lookup"
+    meta: {kind: "supabase_edge_function"}
+  - id: "service:supabase.edge.image_selection"
+    label: "Supabase edge: image_selection"
+    meta: {kind: "supabase_edge_function"}
+  - id: "service:openai"
+    label: "OpenAI API"
+    meta: {kind: "third_party_api"}
+  - id: "service:wikimedia"
+    label: "Wikimedia Commons API"
+    meta: {kind: "third_party_api"}
+  - id: "service:google_cc"
+    label: "Google Custom Search"
+    meta: {kind: "third_party_api"}
+
+# Agent → tool → nested-agent wiring. Agent labels match the Agent(name=...)
+# literal in agents.py.
+agent_tool_edges:
+  - agent: "Article Data Agent"
+    tool: "lookup_article_content"
+  - agent: "Story Cluster Agent"
+    tool: "digest_article"
+    wraps_agent: "Article Data Agent"
+  - agent: "Editorial Cycle Orchestrator"
+    tool: "analyze_story_cluster"
+    wraps_agent: "Story Cluster Agent"
+
+# Adapter class → external service edges the URL heuristic misses.
+adapter_service_edges:
+  - adapter: "RawFeedReader"
+    service: "service:supabase.edge.news_feed"
+  - adapter: "ArticleLookupAdapter"
+    service: "service:supabase.edge.article_lookup"
+  - adapter: "ImageSelectionClient"
+    service: "service:supabase.edge.image_selection"
+  - adapter: "ImageSelectionClient"
+    service: "service:google_cc"
+  - adapter: "WikimediaCommonsClient"
+    service: "service:wikimedia"
+  - adapter: "ImageValidator"
+    service: "service:openai"

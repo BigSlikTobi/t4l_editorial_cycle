@@ -55,8 +55,13 @@ class MusicConfig:
     bed_volume_db: float
     ffmpeg_path: str
     ffprobe_path: str
+    player_of_day_jingle_path: Path | None = None
+    team_of_day_jingle_path: Path | None = None
+    deep_dive_jingle_path: Path | None = None
     sting_max_seconds: float = 30.0
     sting_fade_out_seconds: float = 2.0
+    section_jingle_max_seconds: float = 10.0
+    section_jingle_fade_out_seconds: float = 1.0
     # Single-song mode: one music file carries the brand vocal head,
     # ducks (volume-only, no pitch shift) under the voice, resumes at
     # full volume for the sting, then fades out. When True,
@@ -75,7 +80,16 @@ class MusicConfig:
 
     @property
     def has_any_music(self) -> bool:
-        return self.intro_music_path is not None or self.sting_music_path is not None
+        return any(
+            path is not None
+            for path in (
+                self.intro_music_path,
+                self.sting_music_path,
+                self.player_of_day_jingle_path,
+                self.team_of_day_jingle_path,
+                self.deep_dive_jingle_path,
+            )
+        )
 
 
 @dataclass
@@ -463,6 +477,7 @@ async def compose_episode(
     *,
     cold_open_voice_path: Path | None,
     body_voice_path: Path,
+    body_section_voice_paths: list[Path] | None = None,
     music: MusicConfig,
     output_path: Path,
     workdir: Path,
@@ -476,7 +491,10 @@ async def compose_episode(
        Else if only `cold_open_voice_path` is set, intro_section is
        just the cold-open voice file.
        Else (no cold open), intro_section is omitted.
-    2. Concat: `[intro_section?] [sting?] [body]` → output.
+    2. Concat: `[intro_section?] [sting?] [news] [player_jingle?]
+       [player] [team_jingle?] [team] [deep_dive_jingle?]
+       [deep_dive]` when section voice paths are supplied; otherwise
+       use the legacy `[body]` input.
 
     File-not-found warnings: any music path that doesn't exist on disk
     is skipped with a logged warning; the rest of the pipeline still
@@ -494,6 +512,19 @@ async def compose_episode(
     if sting_path is not None and not sting_path.exists():
         logger.warning("Sting music not found, skipping: %s", sting_path)
         sting_path = None
+
+    section_jingles = [
+        music.player_of_day_jingle_path,
+        music.team_of_day_jingle_path,
+        music.deep_dive_jingle_path,
+    ]
+    usable_section_jingles: list[Path | None] = []
+    for path in section_jingles:
+        if path is not None and not path.exists():
+            logger.warning("Section jingle not found, skipping: %s", path)
+            usable_section_jingles.append(None)
+        else:
+            usable_section_jingles.append(path)
 
     # Stage 1: intro_section.
     # In song-mode, the single song file handles brand vocal + bed +
@@ -550,7 +581,21 @@ async def compose_episode(
                 fade_out_seconds=music.sting_fade_out_seconds,
             )
         )
-    concat_inputs.append(ConcatInput(path=body_voice_path))
+    if body_section_voice_paths:
+        for idx, section_path in enumerate(body_section_voice_paths):
+            if idx > 0:
+                jingle = usable_section_jingles[idx - 1]
+                if jingle is not None:
+                    concat_inputs.append(
+                        ConcatInput(
+                            path=jingle,
+                            max_duration_seconds=music.section_jingle_max_seconds,
+                            fade_out_seconds=music.section_jingle_fade_out_seconds,
+                        )
+                    )
+            concat_inputs.append(ConcatInput(path=section_path))
+    else:
+        concat_inputs.append(ConcatInput(path=body_voice_path))
 
     # Stage 2: concat into a raw composite (no post-processing yet).
     raw_composite = workdir / "raw_composite.wav"
