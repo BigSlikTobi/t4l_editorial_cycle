@@ -59,6 +59,7 @@ def _build_argv(
     summary: str,
     show_id: str | None,
     language: str | None,
+    image_path: str | None = None,
 ) -> list[str]:
     """Build the save-to-spotify upload argv.
 
@@ -78,6 +79,8 @@ def _build_argv(
     ]
     if show_id:
         argv.extend(["--show-id", show_id])
+    if image_path:
+        argv.extend(["--image", image_path])
     lang_code = _spotify_lang_code(language)
     if lang_code:
         argv.extend(["--language", lang_code])
@@ -88,7 +91,7 @@ def _parse_episode_id(stdout: str) -> str | None:
     """Pull an episode id out of the CLI's stdout.
 
     With `--json`, the CLI emits a JSON object — we look for any of the
-    common keys (`episode_id`, `id`, `episode`). Falls back to a regex
+    common keys (`episode_id`, `episode_uri`, `id`, `episode`). Falls back to a regex
     on a `episode_id: ...` line for non-JSON output. None when nothing
     parses; the delivery is still considered successful if exit code
     was 0 (we just can't link the episode back later).
@@ -100,7 +103,7 @@ def _parse_episode_id(stdout: str) -> str | None:
     try:
         payload = json.loads(stdout)
         if isinstance(payload, dict):
-            for key in ("episode_id", "id", "episode", "uri"):
+            for key in ("episode_id", "episode_uri", "id", "episode", "uri"):
                 value = payload.get(key)
                 if isinstance(value, str) and value:
                     return value
@@ -136,6 +139,7 @@ class SaveToSpotifyDelivery:
         summary: str,
         dry_run: bool,
         language: str | None = None,
+        image_path: str | None = None,
     ) -> DeliveryResult:
         argv = _build_argv(
             cli_path=self._cli_path,
@@ -144,6 +148,7 @@ class SaveToSpotifyDelivery:
             summary=summary,
             show_id=self._show_id,
             language=language,
+            image_path=image_path,
         )
         invocation = shlex.join(argv)
 
@@ -160,6 +165,12 @@ class SaveToSpotifyDelivery:
             return DeliveryResult(
                 success=False,
                 error_message=f"audio file not found: {audio_path}",
+                invocation=invocation,
+            )
+        if image_path and not Path(image_path).exists():
+            return DeliveryResult(
+                success=False,
+                error_message=f"image file not found: {image_path}",
                 invocation=invocation,
             )
         if not self._token_path.exists():

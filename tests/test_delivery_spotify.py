@@ -60,6 +60,7 @@ class TestBuildArgv:
         assert "--token-path" not in argv  # token is XDG-discovered
         assert "--show-id" not in argv
         assert "--language" not in argv
+        assert "--image" not in argv
 
     def test_with_show_id(self, tmp_path: Path) -> None:
         argv = _build_argv(
@@ -85,10 +86,29 @@ class TestBuildArgv:
         assert "--language" in argv
         assert argv[argv.index("--language") + 1] == "de"
 
+    def test_with_image_path(self, tmp_path: Path) -> None:
+        argv = _build_argv(
+            cli_path="cli",
+            audio_path="/tmp/x.wav",
+            title="t",
+            summary="d",
+            show_id=None,
+            language=None,
+            image_path="/tmp/cover.png",
+        )
+        assert "--image" in argv
+        assert argv[argv.index("--image") + 1] == "/tmp/cover.png"
+
 
 class TestParseEpisodeId:
     def test_json_episode_id(self) -> None:
         assert _parse_episode_id('{"episode_id": "spot-abc"}') == "spot-abc"
+
+    def test_json_episode_uri(self) -> None:
+        assert (
+            _parse_episode_id('{"episode_uri": "spotify:episode:abc123"}')
+            == "spotify:episode:abc123"
+        )
 
     def test_json_id_key(self) -> None:
         assert _parse_episode_id('{"id": "spot-xyz"}') == "spot-xyz"
@@ -168,6 +188,23 @@ class TestSaveToSpotifyDelivery:
         assert result.success is False
         assert "Spotify token not found" in (result.error_message or "")
         assert "save-to-spotify auth login" in (result.error_message or "")
+
+    async def test_missing_image_returns_failure(self, tmp_path: Path) -> None:
+        settings = _settings(tmp_path)
+        audio = tmp_path / "x.wav"
+        audio.write_bytes(b"\x00\x00")
+
+        delivery = SaveToSpotifyDelivery(settings)
+        result = await delivery.dispatch(
+            audio_path=str(audio),
+            title="t",
+            summary="d",
+            image_path=str(tmp_path / "missing.png"),
+            dry_run=False,
+        )
+
+        assert result.success is False
+        assert "image file not found" in (result.error_message or "")
 
     async def test_subprocess_success(self, tmp_path: Path) -> None:
         settings = _settings(tmp_path)

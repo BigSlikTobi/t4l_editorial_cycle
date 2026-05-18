@@ -15,13 +15,22 @@ Pure functions plus the multi-segment renderer:
 from __future__ import annotations
 
 import logging
+import json
 from datetime import UTC, date, datetime
 from pathlib import Path
 
 from app.clients.gemini_tts import GeminiTTSClient
 from app.config import Settings
 from app.podcast.audio_compose import MusicConfig, compose_episode
+from app.podcast.batch_tts import (
+    GeminiBatchTTSClient,
+    GeminiBatchTTSError,
+)
 from app.podcast.personas import ANALYST_PERSONA, COLOR_PERSONA
+from app.podcast.pronunciation import (
+    PodcastPronunciationGuide,
+    render_pronunciation_prompt,
+)
 from app.podcast.schemas import (
     MultiSpeakerTTSPayload,
     PodcastLanguage,
@@ -51,7 +60,11 @@ def _line_text_with_hints(text: str, hints: list[str]) -> str:
 
 
 def _build_style_prompt(
-    language: PodcastLanguage, *, register_hint: str | None = None
+    language: PodcastLanguage,
+    *,
+    register_hint: str | None = None,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
 ) -> str:
     """Compose the natural-language style prompt prepended to the transcript.
 
@@ -154,13 +167,37 @@ def _build_style_prompt(
             f"### Robin (Robin Donnelly)\n\n{analyst_brief}"
         )
     full = f"{header}\n\n{speaker_briefs}"
+    pronunciation_prompt = render_pronunciation_prompt(pronunciation_guide)
+    if pronunciation_prompt:
+        full = f"{pronunciation_prompt}\n\n{full}"
+    if host_memory:
+        full = (
+            "## Show Relationship Memory\n\n"
+            f"{host_memory.strip()}\n\n"
+            "Use this only for chemistry, callbacks, rhythm, and affectionate "
+            "inside jokes. Do not treat it as a source for real NFL facts.\n\n"
+            f"{full}"
+        )
     if register_hint:
         full = f"## Voice Register\n\n{register_hint}\n\n{full}"
+    full = (
+        "## Naturalness Strategy\n\n"
+        "The read should not sound polished to the point of being synthetic. "
+        "Keep the script text intact, but perform it with human micro-imperfections: "
+        "small hesitations before hard names, varied breath timing, occasional half-beat "
+        "pauses, gentle overlaps in energy, and imperfect sentence landings. Do not add "
+        "new facts, filler monologues, or extra words; make the existing words feel lived-in.\n\n"
+        f"{full}"
+    )
     return full
 
 
 def _build_continuation_style_prompt(
-    language: PodcastLanguage, *, register_hint: str | None = None
+    language: PodcastLanguage,
+    *,
+    register_hint: str | None = None,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
 ) -> str:
     """Short style prompt for body chunks AFTER the first one.
 
@@ -224,6 +261,22 @@ def _build_continuation_style_prompt(
         )
     if register_hint:
         body = f"{register_hint}\n\n{body}"
+    pronunciation_prompt = render_pronunciation_prompt(pronunciation_guide)
+    if pronunciation_prompt:
+        body = f"{pronunciation_prompt}\n\n{body}"
+    if host_memory:
+        body = (
+            "Show relationship memory still applies: Marcus and Robin are old "
+            "friends with shared shorthand and affectionate callbacks. Keep the "
+            "chemistry warm; do not invent NFL facts from memory.\n\n"
+            f"{body}"
+        )
+    body = (
+        "Naturalness carry-over: stay conversational and slightly imperfect. "
+        "Use breath, small hesitations, uneven emphasis, and real reaction timing; "
+        "do not add words or facts beyond the transcript.\n\n"
+        f"{body}"
+    )
     return body
 
 
@@ -272,11 +325,19 @@ def _flatten_lines(sections: list[list[ScriptLine]]) -> list[tuple[str, str]]:
     return out
 
 
+def _script_main_line_sections(script: PodcastScript) -> list[list[ScriptLine]]:
+    if script.sections:
+        return [section.lines for section in script.sections]
+    return [script.body]
+
+
 def script_to_payload(
     script: PodcastScript,
     *,
     settings: Settings,
     title: str,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
 ) -> MultiSpeakerTTSPayload:
     """Flatten a script into one (speaker, text) list for Gemini.
 
@@ -289,11 +350,14 @@ def script_to_payload(
     """
     return MultiSpeakerTTSPayload(
         language=script.language,
-        lines=_flatten_lines([script.cold_open, script.body, script.outro]),
+        lines=_flatten_lines([script.cold_open, *_script_main_line_sections(script), script.outro]),
         voice_map=_voice_map(settings),
         title=title,
         style_prompt=_build_style_prompt(
-            script.language, register_hint=settings.podcast_voice_register_hint
+            script.language,
+            register_hint=settings.podcast_voice_register_hint,
+            host_memory=host_memory,
+            pronunciation_guide=pronunciation_guide,
         ),
     )
 
@@ -303,6 +367,8 @@ def script_to_segment_payloads(
     *,
     settings: Settings,
     title: str,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
 ) -> tuple[MultiSpeakerTTSPayload | None, MultiSpeakerTTSPayload]:
     """Split the script into (cold_open_payload, body+outro_payload).
 
@@ -313,11 +379,14 @@ def script_to_segment_payloads(
     """
     voice_map = _voice_map(settings)
     style_prompt = _build_style_prompt(
-        script.language, register_hint=settings.podcast_voice_register_hint
+        script.language,
+        register_hint=settings.podcast_voice_register_hint,
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
     )
 
     cold_open_lines = _flatten_lines([script.cold_open])
-    body_lines = _flatten_lines([script.body, script.outro])
+    body_lines = _flatten_lines([*_script_main_line_sections(script), script.outro])
 
     cold_open_payload: MultiSpeakerTTSPayload | None = None
     if cold_open_lines:
@@ -337,6 +406,50 @@ def script_to_segment_payloads(
         style_prompt=style_prompt,
     )
     return cold_open_payload, body_payload
+
+
+def script_to_music_payloads(
+    script: PodcastScript,
+    *,
+    settings: Settings,
+    title: str,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
+) -> tuple[MultiSpeakerTTSPayload | None, list[MultiSpeakerTTSPayload]]:
+    """Split script into cold-open plus section/body payloads for music compose."""
+
+    cold_open_payload, legacy_body_payload = script_to_segment_payloads(
+        script,
+        settings=settings,
+        title=title,
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
+    )
+    if not script.sections:
+        return cold_open_payload, [legacy_body_payload]
+
+    voice_map = _voice_map(settings)
+    style_prompt = _build_style_prompt(
+        script.language,
+        register_hint=settings.podcast_voice_register_hint,
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
+    )
+    payloads: list[MultiSpeakerTTSPayload] = []
+    for idx, section in enumerate(script.sections):
+        lines = list(section.lines)
+        if idx == len(script.sections) - 1:
+            lines = [*lines, *script.outro]
+        payloads.append(
+            MultiSpeakerTTSPayload(
+                language=script.language,
+                lines=_flatten_lines([lines]),
+                voice_map=voice_map,
+                title=f"{title} — {section.title}",
+                style_prompt=style_prompt,
+            )
+        )
+    return cold_open_payload, payloads
 
 
 def _audio_filename(language: PodcastLanguage, run_date: date) -> str:
@@ -362,6 +475,9 @@ def _build_music_config(settings: Settings) -> MusicConfig:
     return MusicConfig(
         intro_music_path=settings.podcast_intro_music_path,
         sting_music_path=settings.podcast_sting_music_path,
+        player_of_day_jingle_path=settings.podcast_player_of_day_jingle_path,
+        team_of_day_jingle_path=settings.podcast_team_of_day_jingle_path,
+        deep_dive_jingle_path=settings.podcast_deep_dive_jingle_path,
         intro_solo_seconds=settings.podcast_intro_solo_seconds,
         intro_tail_seconds=settings.podcast_intro_tail_seconds,
         bed_volume_db=settings.podcast_music_bed_volume_db,
@@ -369,6 +485,8 @@ def _build_music_config(settings: Settings) -> MusicConfig:
         ffprobe_path=settings.ffprobe_path,
         sting_max_seconds=settings.podcast_sting_max_seconds,
         sting_fade_out_seconds=settings.podcast_sting_fade_out_seconds,
+        section_jingle_max_seconds=settings.podcast_section_jingle_max_seconds,
+        section_jingle_fade_out_seconds=settings.podcast_section_jingle_fade_out_seconds,
         song_mode=settings.podcast_intro_song_mode,
         song_vocal_intro_seconds=settings.podcast_song_vocal_intro_seconds,
         song_transition_seconds=settings.podcast_song_transition_seconds,
@@ -490,6 +608,240 @@ async def _render_payload_to_disk(
     return outcome.duration_seconds
 
 
+def _write_tts_status(path: Path | None, payload: dict) -> None:
+    if path is None:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
+async def _render_to_audio_batch(
+    script: PodcastScript,
+    *,
+    run_date: date,
+    settings: Settings,
+    title: str | None,
+    host_memory: str | None,
+    pronunciation_guide: PodcastPronunciationGuide | None,
+    status_path: Path | None,
+) -> RenderResult:
+    """Render a German podcast script through Gemini Batch TTS."""
+
+    if settings.gemini_api_key is None:
+        raise RuntimeError("gemini_api_key is not configured; cannot use Gemini Batch TTS")
+    if script.language != "de-DE":
+        raise ValueError("Gemini Batch podcast runtime is German-only in v1")
+    if settings.podcast_force_single_voice:
+        raise ValueError("Gemini Batch podcast runtime requires multi-speaker mode")
+
+    music = _build_music_config(settings)
+    output_dir = Path(settings.podcast_audio_temp_dir)
+    workdir = output_dir / "batch_compose"
+    workdir.mkdir(parents=True, exist_ok=True)
+
+    batch_client = GeminiBatchTTSClient(
+        api_key=settings.gemini_api_key.get_secret_value(),
+        model=settings.podcast_gemini_tts_model,
+        poll_interval_seconds=settings.podcast_gemini_batch_poll_interval_seconds,
+        timeout_seconds=settings.podcast_gemini_batch_timeout_seconds,
+    )
+
+    display_name = f"t4l-podcast-{run_date.isoformat()}-de"
+    batch_payloads: list[MultiSpeakerTTSPayload] = []
+    batch_paths: list[Path] = []
+    cold_open_path: Path | None = None
+
+    if not music.has_any_music:
+        payload = script_to_payload(
+            script,
+            settings=settings,
+            title=title or f"T4L Daily — {run_date.isoformat()}",
+            host_memory=host_memory,
+            pronunciation_guide=pronunciation_guide,
+        )
+        continuation_prompt = _build_continuation_style_prompt(
+            script.language,
+            register_hint=settings.podcast_voice_register_hint,
+            host_memory=host_memory,
+            pronunciation_guide=pronunciation_guide,
+        )
+        chunks = _chunk_lines(
+            payload.lines, max_chars=settings.podcast_tts_chunk_max_chars
+        )
+        for idx, chunk_lines in enumerate(chunks):
+            chunk_payload = payload.model_copy(
+                update={
+                    "lines": chunk_lines,
+                    "style_prompt": payload.style_prompt if idx == 0 else continuation_prompt,
+                }
+            )
+            batch_payloads.append(chunk_payload)
+            batch_paths.append(workdir / f"batch_chunk_{idx:02d}.wav")
+
+        outcome = await batch_client.render_payloads(
+            payloads=batch_payloads,
+            output_paths=batch_paths,
+            workdir=workdir,
+            display_name=display_name,
+        )
+        final_path = output_dir / _audio_filename(script.language, run_date)
+        await _concat_voice_chunks(batch_paths, output_path=final_path, music=music)
+        duration = int(sum(outcome.durations_seconds))
+        _write_tts_status(
+            status_path,
+            {
+                "mode": "batch",
+                "batch_id": outcome.batch_id,
+                "state": outcome.state,
+                "chunk_count": len(batch_paths),
+                "fallback": None,
+            },
+        )
+        return RenderResult(str(final_path), duration, "audio/wav")
+
+    cold_open_payload, section_payloads = script_to_music_payloads(
+        script,
+        settings=settings,
+        title=title or f"T4L Daily — {run_date.isoformat()}",
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
+    )
+    if cold_open_payload is not None:
+        cold_open_path = output_dir / _segment_filename(
+            script.language, run_date, "coldopen"
+        )
+        batch_payloads.append(cold_open_payload)
+        batch_paths.append(cold_open_path)
+
+    continuation_prompt = _build_continuation_style_prompt(
+        script.language,
+        register_hint=settings.podcast_voice_register_hint,
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
+    )
+    section_chunk_paths: list[list[Path]] = []
+    body_chunk_index = 0
+    for section_idx, section_payload in enumerate(section_payloads):
+        chunks = _chunk_lines(
+            section_payload.lines, max_chars=settings.podcast_tts_chunk_max_chars
+        )
+        paths_for_section: list[Path] = []
+        for chunk_lines in chunks:
+            chunk_path = workdir / f"body_chunk_{body_chunk_index:02d}.wav"
+            chunk_payload = section_payload.model_copy(
+                update={
+                    "lines": chunk_lines,
+                    "style_prompt": (
+                        section_payload.style_prompt
+                        if body_chunk_index == 0
+                        else continuation_prompt
+                    ),
+                }
+            )
+            batch_payloads.append(chunk_payload)
+            batch_paths.append(chunk_path)
+            paths_for_section.append(chunk_path)
+            body_chunk_index += 1
+        section_chunk_paths.append(paths_for_section)
+
+    outcome = await batch_client.render_payloads(
+        payloads=batch_payloads,
+        output_paths=batch_paths,
+        workdir=workdir,
+        display_name=display_name,
+    )
+    body_section_paths: list[Path] = []
+    for idx, paths_for_section in enumerate(section_chunk_paths):
+        section_path = output_dir / _segment_filename(
+            script.language, run_date, f"section{idx}"
+        )
+        await _concat_voice_chunks(paths_for_section, output_path=section_path, music=music)
+        body_section_paths.append(section_path)
+    body_path = output_dir / _segment_filename(script.language, run_date, "body")
+    await _concat_voice_chunks(body_section_paths, output_path=body_path, music=music)
+
+    final_path = output_dir / _audio_filename(script.language, run_date)
+    duration = await compose_episode(
+        cold_open_voice_path=cold_open_path,
+        body_voice_path=body_path,
+        body_section_voice_paths=body_section_paths if script.sections else None,
+        music=music,
+        output_path=final_path,
+        workdir=workdir,
+    )
+    _write_tts_status(
+        status_path,
+        {
+            "mode": "batch",
+            "batch_id": outcome.batch_id,
+            "state": outcome.state,
+            "chunk_count": len(batch_paths),
+            "fallback": None,
+        },
+    )
+    return RenderResult(str(final_path), duration, "audio/wav")
+
+
+async def render_to_audio_with_batch_fallback(
+    script: PodcastScript,
+    *,
+    run_date: date,
+    settings: Settings,
+    title: str | None = None,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
+    status_path: Path | None = None,
+) -> RenderResult:
+    """Prefer Gemini Batch TTS, falling back to synchronous rendering."""
+
+    if settings.podcast_gemini_batch_enabled:
+        try:
+            return await _render_to_audio_batch(
+                script,
+                run_date=run_date,
+                settings=settings,
+                title=title,
+                host_memory=host_memory,
+                pronunciation_guide=pronunciation_guide,
+                status_path=status_path,
+            )
+        except GeminiBatchTTSError as exc:
+            logger.warning("Gemini Batch TTS failed; falling back to sync TTS: %s", exc)
+            _write_tts_status(
+                status_path,
+                {
+                    "mode": "sync",
+                    "batch_enabled": True,
+                    "fallback": {
+                        "reason": str(exc),
+                        "error_type": type(exc).__name__,
+                    },
+                },
+            )
+
+    result = await render_to_audio(
+        script,
+        run_date=run_date,
+        settings=settings,
+        title=title,
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
+    )
+    if not settings.podcast_gemini_batch_enabled:
+        _write_tts_status(
+            status_path,
+            {
+                "mode": "sync",
+                "batch_enabled": False,
+                "fallback": None,
+            },
+        )
+    return result
+
+
 async def render_to_audio(
     payload_or_script: MultiSpeakerTTSPayload | PodcastScript,
     *,
@@ -497,6 +849,8 @@ async def render_to_audio(
     settings: Settings,
     client: GeminiTTSClient | None = None,
     title: str | None = None,
+    host_memory: str | None = None,
+    pronunciation_guide: PodcastPronunciationGuide | None = None,
 ) -> RenderResult:
     """Render to a WAV on disk and return a RenderResult.
 
@@ -523,6 +877,8 @@ async def render_to_audio(
                 payload_or_script,
                 settings=settings,
                 title=title or f"T4L Daily — {run_date.isoformat()}",
+                host_memory=host_memory,
+                pronunciation_guide=pronunciation_guide,
             )
         else:
             payload = payload_or_script
@@ -547,10 +903,12 @@ async def render_to_audio(
             "(intro and/or sting). Got a flat payload."
         )
     script = payload_or_script
-    cold_open_payload, body_payload = script_to_segment_payloads(
+    cold_open_payload, section_payloads = script_to_music_payloads(
         script,
         settings=settings,
         title=title or f"T4L Daily — {run_date.isoformat()}",
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
     )
 
     workdir = output_dir / "compose"
@@ -587,43 +945,51 @@ async def render_to_audio(
     # re-reads the persona briefs as "start of show" cues and adds
     # ~25-30s of fresh intro audio at the head of every chunk.
     continuation_prompt = _build_continuation_style_prompt(
-        script.language, register_hint=settings.podcast_voice_register_hint
+        script.language,
+        register_hint=settings.podcast_voice_register_hint,
+        host_memory=host_memory,
+        pronunciation_guide=pronunciation_guide,
     )
-    body_chunks = _chunk_lines(
-        body_payload.lines, max_chars=settings.podcast_tts_chunk_max_chars
-    )
-    body_chunk_paths: list[Path] = []
-    for idx, chunk_lines in enumerate(body_chunks):
-        chunk_path = workdir / f"body_chunk_{idx:02d}.wav"
-        chunk_style = body_payload.style_prompt if idx == 0 else continuation_prompt
-        chunk_payload = body_payload.model_copy(
-            update={"lines": chunk_lines, "style_prompt": chunk_style}
+    body_section_paths: list[Path] = []
+    body_chunk_count = 0
+    for section_idx, section_payload in enumerate(section_payloads):
+        body_chunks = _chunk_lines(
+            section_payload.lines, max_chars=settings.podcast_tts_chunk_max_chars
         )
-        await _render_payload_to_disk(
-            payload=chunk_payload,
-            output_path=chunk_path,
-            settings=settings,
-            client=resolved_client,
+        body_chunk_paths: list[Path] = []
+        for chunk_lines in body_chunks:
+            chunk_path = workdir / f"body_chunk_{body_chunk_count:02d}.wav"
+            chunk_style = (
+                section_payload.style_prompt
+                if body_chunk_count == 0
+                else continuation_prompt
+            )
+            chunk_payload = section_payload.model_copy(
+                update={"lines": chunk_lines, "style_prompt": chunk_style}
+            )
+            await _render_payload_to_disk(
+                payload=chunk_payload,
+                output_path=chunk_path,
+                settings=settings,
+                client=resolved_client,
+            )
+            body_chunk_paths.append(chunk_path)
+            body_chunk_count += 1
+        section_path = output_dir / _segment_filename(
+            script.language, run_date, f"section{section_idx}"
         )
-        body_chunk_paths.append(chunk_path)
-    logger.info("Rendered body in %d chunks", len(body_chunk_paths))
+        await _concat_voice_chunks(body_chunk_paths, output_path=section_path, music=music)
+        body_section_paths.append(section_path)
+    logger.info("Rendered body in %d chunks", body_chunk_count)
 
     body_path = output_dir / _segment_filename(script.language, run_date, "body")
-    if len(body_chunk_paths) == 1:
-        # Single chunk — still pass through ffmpeg so the format is
-        # normalized for downstream compose.
-        await _concat_voice_chunks(
-            body_chunk_paths, output_path=body_path, music=music
-        )
-    else:
-        await _concat_voice_chunks(
-            body_chunk_paths, output_path=body_path, music=music
-        )
+    await _concat_voice_chunks(body_section_paths, output_path=body_path, music=music)
 
     final_path = output_dir / _audio_filename(script.language, run_date)
     duration = await compose_episode(
         cold_open_voice_path=cold_open_path,
         body_voice_path=body_path,
+        body_section_voice_paths=body_section_paths if script.sections else None,
         music=music,
         output_path=final_path,
         workdir=workdir,

@@ -9,6 +9,7 @@ from app.podcast.schemas import (
     MultiSpeakerTTSPayload,
     PodcastCluster,
     PodcastEpisodeRecord,
+    PodcastSection,
     PodcastScript,
     ScriptLine,
 )
@@ -43,6 +44,50 @@ class TestPodcastScript:
         )
         texts = [line.text for line in script.all_lines()]
         assert texts == ["A", "B", "C", "D"]
+
+    def test_all_lines_prefers_fixed_sections(self) -> None:
+        script = PodcastScript(
+            language="de-DE",
+            run_date=date(2026, 5, 9),
+            cold_open=[ScriptLine(speaker="color", text="A")],
+            sections=[
+                PodcastSection(
+                    kind="news",
+                    title="News",
+                    lines=[ScriptLine(speaker="color", text="B")],
+                ),
+                PodcastSection(
+                    kind="player_of_day",
+                    title="Player",
+                    lines=[ScriptLine(speaker="analyst", text="C")],
+                ),
+                PodcastSection(
+                    kind="team_of_day",
+                    title="Team",
+                    lines=[ScriptLine(speaker="color", text="D")],
+                ),
+                PodcastSection(
+                    kind="deep_dive",
+                    title="Deep",
+                    lines=[ScriptLine(speaker="analyst", text="E")],
+                ),
+            ],
+            body=[ScriptLine(speaker="color", text="legacy body ignored")],
+            outro=[ScriptLine(speaker="color", text="F")],
+        )
+
+        assert [line.text for line in script.all_lines()] == ["A", "B", "C", "D", "E", "F"]
+
+    def test_sections_must_use_fixed_order(self) -> None:
+        with pytest.raises(ValidationError):
+            PodcastScript(
+                language="de-DE",
+                run_date=date(2026, 5, 9),
+                sections=[
+                    PodcastSection(kind="player_of_day", title="Player"),
+                    PodcastSection(kind="news", title="News"),
+                ],
+            )
 
     def test_rejects_unknown_language(self) -> None:
         with pytest.raises(ValidationError):

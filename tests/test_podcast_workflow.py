@@ -22,6 +22,7 @@ def _settings(tmp_path: Path) -> Settings:
         supabase_service_role_key="sk",
         gemini_api_key="gk-test",
         podcast_audio_temp_dir=tmp_path,
+        podcast_episode_root=tmp_path / "episodes",
         podcast_target_word_count=200,
         podcast_min_word_count=50,
     )
@@ -93,7 +94,9 @@ class TestPodcastProduceWorkflow:
             run_date: date,
             target_word_count: int,
             settings: Settings,
+            continuity_context: Any = None,
         ) -> PodcastScript:
+            assert continuity_context is not None
             return _script()
 
         monkeypatch.setattr("app.podcast.workflow.compose_script", fake_compose)
@@ -114,6 +117,7 @@ class TestPodcastProduceWorkflow:
         assert summary.audio_local_path is None
         assert summary.error_message and "dry-run" in summary.error_message
         assert out.exists()
+        assert not (settings.podcast_episode_root / "2026-05-09").exists()
         # Script JSON has the expected sections.
         payload = json.loads(out.read_text(encoding="utf-8"))
         assert payload["language"] == "en-US"
@@ -134,6 +138,7 @@ class TestPodcastProduceWorkflow:
         )
 
         async def fake_compose(*args: Any, **kwargs: Any) -> PodcastScript:
+            assert kwargs["continuity_context"] is not None
             return _script()
 
         async def fake_render(payload: Any, *, run_date: date, settings: Settings, client: Any = None, title: str | None = None):
@@ -155,6 +160,13 @@ class TestPodcastProduceWorkflow:
         assert summary.status == "rendered"
         assert summary.duration_seconds == 1234
         assert summary.audio_local_path and summary.audio_local_path.endswith("ep.wav")
+        memory_path = (
+            settings.podcast_episode_root
+            / "2026-05-09"
+            / "en-US"
+            / "episode_memory.json"
+        )
+        assert memory_path.exists()
         episodes.mark_rendered.assert_awaited()
         episodes.mark_failed.assert_not_called()
 

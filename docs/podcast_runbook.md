@@ -1,5 +1,41 @@
 # T4L Daily Briefing — Personal Podcast Runbook
 
+## Current production direction — Codex artifact runtime
+
+The German morning podcast is moving to a Codex-owned artifact runtime:
+
+```bash
+./venv/bin/editorial-cycle podcast init-codex-run
+# Codex researches selected clusters and writes ledgers + script.de-DE.json.
+./venv/bin/editorial-cycle podcast validate-artifacts var/podcast/episodes/YYYY-MM-DD
+./venv/bin/editorial-cycle podcast render-artifact var/podcast/episodes/YYYY-MM-DD
+./venv/bin/editorial-cycle podcast publish-artifact var/podcast/episodes/YYYY-MM-DD
+```
+
+This path does not use `public.podcast_episodes` as its state machine.
+The episode directory under `var/podcast/episodes/YYYY-MM-DD/` is the audit
+trail. Rendering prefers Gemini Batch TTS with `gemini-3.1-flash-tts-preview`
+and falls back to synchronous Gemini TTS only when the batch fails or after
+12 ten-minute status checks without completion. Initialization also writes
+`analytics_pack.json` from
+nflverse data via `nflreadpy`; Robin's research should use that file for
+player/team/schedule/roster stats, derived usage context, and
+`angle_candidates`. Those candidates are not script-ready claims; Codex should
+use them to run a second source pass and develop football questions that move
+the story beyond the news hook. Cite approved nflverse stats as `NFLVERSE` in
+the claim ledger. Initialization also writes `pronunciation_guide.json`, which
+is passed into Gemini TTS so brand terms and hard names are spoken correctly.
+Publishing remains personal-only, but now rehearses a friends-safe packet:
+`public_metadata.json`, `show_notes.md`, `publication_safety_report.json`,
+`thumbnail_prompt.json`, and a copyright-friendly generated thumbnail. The
+Spotify upload uses the cleaned metadata and thumbnail while the full show
+notes stay in the episode directory. Before rendering, Codex must also complete
+a host-authority pass and write `host_authority_notes.md` so Marcus and Robin's
+scripted takes sound specific, owned, and football-literate without adding
+unsupported claims.
+The older DB-backed `podcast produce → latest-id → deliver` commands remain
+available as a fallback while the Codex runtime is rolled out.
+
 The daily NFL podcast pipeline that drops a 20–30 min two-persona
 episode (EN + DE) into the user's personal Spotify library every
 morning. Personal-only MVP; runs on the user's Hostinger VPS.
@@ -64,6 +100,13 @@ GEMINI_API_KEY=AIza...
 # SPOTIFY_TOKEN_PATH=/root/.config/save-to-spotify/token.json
 # SAVE_TO_SPOTIFY_CLI_PATH=save-to-spotify
 # SAVE_TO_SPOTIFY_SHOW_ID=optional-personal-show-id
+
+# Personal-podcast rehearsal publication packet
+# PODCAST_THUMBNAIL_ENABLED=true
+# PODCAST_THUMBNAIL_IMAGE_MODEL=gpt-image-2
+# PODCAST_THUMBNAIL_IMAGE_QUALITY=medium
+# PODCAST_THUMBNAIL_IMAGE_SIZE=1024x1024
+# PODCAST_THUMBNAIL_CLI_PATH=/root/.codex/skills/.system/imagegen/scripts/image_gen.py
 ```
 
 ### Background music (optional)

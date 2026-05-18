@@ -20,7 +20,7 @@ from agents import Agent
 
 from app.config import Settings
 from app.podcast.prompts import get_prompt
-from app.podcast.schemas import EpisodeMetadata, PodcastScript
+from app.podcast.schemas import EpisodeMetadata, PodcastScript, PodcastSectionPlan
 from app.writer.model import build_model_settings
 
 
@@ -42,6 +42,57 @@ def build_cold_open_writer_agent(settings: Settings) -> Agent:
         name="Podcast Cold Open Writer Agent",
         instructions=get_prompt("cold_open_writer_agent"),
         model=settings.agent_model("podcast_cold_open_writer_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+    )
+
+
+def build_section_planner_agent(settings: Settings) -> Agent:
+    return Agent(
+        name="Podcast Section Planner Agent",
+        instructions=get_prompt("section_planner_agent"),
+        model=settings.agent_model("podcast_cluster_ranker_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+        output_type=PodcastSectionPlan,
+    )
+
+
+def build_player_of_day_research_agent(settings: Settings) -> Agent:
+    return Agent(
+        name="Podcast Player of the Day Research Agent",
+        instructions=get_prompt("player_of_day_research_agent"),
+        model=settings.agent_model("podcast_dialogue_writer_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+    )
+
+
+def build_team_of_day_research_agent(settings: Settings) -> Agent:
+    return Agent(
+        name="Podcast Team of the Day Research Agent",
+        instructions=get_prompt("team_of_day_research_agent"),
+        model=settings.agent_model("podcast_dialogue_writer_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+    )
+
+
+def build_deep_dive_research_agent(settings: Settings) -> Agent:
+    return Agent(
+        name="Podcast Deep Dive Research Agent",
+        instructions=get_prompt("deep_dive_research_agent"),
+        model=settings.agent_model("podcast_dialogue_writer_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+    )
+
+
+def build_section_synthesis_agent(settings: Settings) -> Agent:
+    return Agent(
+        name="Podcast Section Synthesis Agent",
+        instructions=get_prompt("section_synthesis_agent"),
+        model=settings.agent_model("podcast_dialogue_writer_agent"),
         model_settings=build_model_settings(settings, parallel_tool_calls=False),
         tools=[],
     )
@@ -72,6 +123,17 @@ def build_director_pass_agent(settings: Settings) -> Agent:
         name="Podcast Director Pass Agent",
         instructions=get_prompt("director_pass_agent"),
         model=settings.agent_model("podcast_director_pass_agent"),
+        model_settings=build_model_settings(settings, parallel_tool_calls=False),
+        tools=[],
+        output_type=PodcastScript,
+    )
+
+
+def build_host_authority_pass_agent(settings: Settings) -> Agent:
+    return Agent(
+        name="Podcast Host Authority Pass Agent",
+        instructions=get_prompt("host_authority_pass_agent"),
+        model=settings.agent_model("podcast_host_authority_pass_agent"),
         model_settings=build_model_settings(settings, parallel_tool_calls=False),
         tools=[],
         output_type=PodcastScript,

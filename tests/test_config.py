@@ -20,6 +20,7 @@ def fake_settings(monkeypatch: pytest.MonkeyPatch) -> Settings:
         "OPENAI_MODEL_EDITORIAL_MEMORY_AGENT",
         "OPENAI_MODEL_TEAM_BEAT_REPORTER_AGENT",
         "OPENAI_MODEL_RADIO_SCRIPT_AGENT",
+        "OPENAI_MODEL_PODCAST_HOST_AUTHORITY_PASS_AGENT",
     ):
         monkeypatch.delenv(key, raising=False)
     return Settings(_env_file=None)
@@ -57,6 +58,7 @@ class TestSettings:
             "podcast_cluster_ranker_agent",
             "podcast_cold_open_writer_agent",
             "podcast_dialogue_writer_agent",
+            "podcast_host_authority_pass_agent",
             "podcast_director_pass_agent",
             "podcast_episode_metadata_agent",
         }

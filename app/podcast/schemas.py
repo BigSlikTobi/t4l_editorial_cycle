@@ -12,13 +12,21 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from app.schemas import EntityMatch, RawArticle
 
 PodcastLanguage = Literal["en-US", "de-DE"]
 PodcastSpeaker = Literal["color", "analyst", "narrator"]
 PodcastStatus = Literal["pending", "rendering", "rendered", "delivered", "failed"]
+PodcastSectionKind = Literal["news", "player_of_day", "team_of_day", "deep_dive"]
+
+PODCAST_SECTION_ORDER: tuple[PodcastSectionKind, ...] = (
+    "news",
+    "player_of_day",
+    "team_of_day",
+    "deep_dive",
+)
 
 
 class PodcastCluster(BaseModel):
@@ -67,6 +75,42 @@ class ScriptLine(BaseModel):
     prosody_hints: list[str] = Field(default_factory=list)
 
 
+class PodcastSection(BaseModel):
+    """One fixed station in the expanded daily podcast format."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    kind: PodcastSectionKind
+    title: str = Field(min_length=1)
+    handover: str = ""
+    research_summary: str = ""
+    lines: list[ScriptLine] = Field(default_factory=list)
+
+
+class PodcastSectionPlan(BaseModel):
+    """Research and story blueprint for the four-section podcast."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    run_date: date | None = None
+    red_line: str = Field(default="")
+    sections: list[PodcastSection] = Field(default_factory=list)
+    rejected_candidates: list[str] = Field(default_factory=list)
+    notes: str = ""
+
+    @model_validator(mode="after")
+    def validate_section_order(self) -> "PodcastSectionPlan":
+        if self.sections:
+            kinds = [section.kind for section in self.sections]
+            expected = list(PODCAST_SECTION_ORDER[: len(kinds)])
+            if kinds != expected:
+                raise ValueError(
+                    "section plan must follow fixed podcast order: "
+                    "news, player_of_day, team_of_day, deep_dive"
+                )
+        return self
+
+
 class PodcastScript(BaseModel):
     """The full script for one episode, structured by section."""
 
@@ -75,6 +119,7 @@ class PodcastScript(BaseModel):
     language: PodcastLanguage
     run_date: date
     cold_open: list[ScriptLine] = Field(default_factory=list)
+    sections: list[PodcastSection] = Field(default_factory=list)
     body: list[ScriptLine] = Field(default_factory=list)
     outro: list[ScriptLine] = Field(default_factory=list)
     story_count: int = 0
@@ -87,7 +132,23 @@ class PodcastScript(BaseModel):
     episode_title: str | None = None
     episode_summary: str | None = None
 
+    @model_validator(mode="after")
+    def validate_section_order(self) -> "PodcastScript":
+        if self.sections:
+            kinds = [section.kind for section in self.sections]
+            if kinds != list(PODCAST_SECTION_ORDER):
+                raise ValueError(
+                    "PodcastScript.sections must contain exactly: "
+                    "news, player_of_day, team_of_day, deep_dive"
+                )
+        return self
+
     def all_lines(self) -> list[ScriptLine]:
+        if self.sections:
+            section_lines = [
+                line for section in self.sections for line in section.lines
+            ]
+            return [*self.cold_open, *section_lines, *self.outro]
         return [*self.cold_open, *self.body, *self.outro]
 
 
@@ -98,6 +159,58 @@ class EpisodeMetadata(BaseModel):
 
     title: str = Field(min_length=1, max_length=120)
     summary: str = Field(min_length=1, max_length=400)
+
+
+class PodcastContinuityTopic(BaseModel):
+    """One compact, factual-safe memory item from a prior episode.
+
+    This is continuity context only. It can shape callbacks, framing,
+    and "we talked about this recently" moments, but it is not evidence
+    for new NFL claims.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    topic: str = Field(min_length=1)
+    entities: list[str] = Field(default_factory=list)
+    summary: str = ""
+    speaker_callback: str | None = None
+    safe_to_reference: bool = True
+
+
+class PodcastEpisodeMemory(BaseModel):
+    """Compact recap persisted after an episode for future continuity."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    run_date: date
+    language: PodcastLanguage
+    covered_topics: list[PodcastContinuityTopic] = Field(default_factory=list)
+    open_loops: list[str] = Field(default_factory=list)
+    avoid_repeating: list[str] = Field(default_factory=list)
+
+
+class PodcastContinuityCallback(BaseModel):
+    """A prior-episode callback selected as relevant to today's clusters."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    prior_date: date
+    topic: str
+    reason: str
+    suggested_use: str
+    speaker_callback: str | None = None
+
+
+class PodcastContinuityContext(BaseModel):
+    """Filtered prior-episode context passed to planning/script agents."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    lookback_days: int = 0
+    useful_callbacks: list[PodcastContinuityCallback] = Field(default_factory=list)
+    open_loops: list[str] = Field(default_factory=list)
+    avoid_repeating: list[str] = Field(default_factory=list)
 
 
 class MultiSpeakerTTSPayload(BaseModel):

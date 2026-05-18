@@ -239,3 +239,209 @@ def latest_podcast_id(
     if result is None:
         raise typer.Exit(code=1)
     typer.echo(str(result))
+
+
+# --- artifact/Codex runtime subcommands ---
+
+
+@podcast_app.command("init-codex-run")
+def init_codex_podcast_run(
+    run_date: str | None = typer.Option(
+        None,
+        help="Episode date as YYYY-MM-DD. Default: today in UTC.",
+    ),
+    lookback_hours: int | None = typer.Option(
+        None,
+        help="Override settings.podcast_lookback_hours.",
+    ),
+    episode_root: Path = typer.Option(
+        Path("var/podcast/episodes"),
+        help="Root directory for artifact-based podcast episodes.",
+    ),
+    host_memory: Path = typer.Option(
+        Path("editorial_memory/podcast/host_relationship.md"),
+        help="Durable Marcus/Robin relationship memory file.",
+    ),
+) -> None:
+    """Create German Codex podcast artifacts: manifest, clusters, memory snapshot."""
+    from datetime import date
+
+    from app.adapters import RawArticleDbReader
+    from app.podcast.artifacts import initialize_episode_artifacts
+
+    settings = get_settings()
+    base_url = str(settings.supabase_url).rstrip("/")
+    service_role_key = settings.supabase_service_role_key.get_secret_value()
+    feed = RawArticleDbReader(base_url=base_url, service_role_key=service_role_key)
+    parsed_date = date.fromisoformat(run_date) if run_date else None
+
+    async def _run() -> Path:
+        try:
+            return await initialize_episode_artifacts(
+                settings=settings,
+                feed_reader=feed,
+                run_date=parsed_date,
+                lookback_hours=lookback_hours,
+                root=episode_root,
+                host_memory_path=host_memory,
+            )
+        finally:
+            await feed.close()
+
+    out_dir = asyncio.run(_run())
+    typer.echo(str(out_dir))
+
+
+@podcast_app.command("validate-artifacts")
+def validate_podcast_artifacts(
+    episode_dir: Path = typer.Argument(
+        ...,
+        help="Artifact episode directory, e.g. var/podcast/episodes/2026-05-13.",
+    ),
+) -> None:
+    """Validate German artifact ledgers, claim markers, and host chemistry."""
+    from app.podcast.artifacts import validate_episode_artifacts
+
+    try:
+        summary = validate_episode_artifacts(episode_dir)
+    except Exception as exc:
+        typer.echo(f"invalid: {exc}")
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"valid: {summary.episode_dir}")
+
+
+@podcast_app.command("render-artifact")
+def render_podcast_artifact(
+    episode_dir: Path = typer.Argument(
+        ...,
+        help="Artifact episode directory, e.g. var/podcast/episodes/2026-05-13.",
+    ),
+) -> None:
+    """Render a validated German artifact episode with Gemini Batch + sync fallback."""
+    from app.podcast.artifacts import (
+        load_pronunciation_guide,
+        load_script,
+        read_json,
+        validate_episode_artifacts,
+        write_json,
+    )
+    from app.podcast.audio_compose import probe_duration_seconds
+    from app.podcast.continuity import write_episode_memory
+    from app.podcast.factcheck import strip_script_claim_refs
+    from app.podcast.render import render_to_audio_with_batch_fallback
+
+    settings = get_settings()
+
+    async def _run() -> None:
+        validate_episode_artifacts(episode_dir)
+        manifest = read_json(episode_dir / "manifest.json")
+        host_memory_text = (episode_dir / "conversation_memory_snapshot.md").read_text(
+            encoding="utf-8"
+        )
+        pronunciation_guide = load_pronunciation_guide(episode_dir)
+        script = strip_script_claim_refs(load_script(episode_dir))
+        result = await render_to_audio_with_batch_fallback(
+            script,
+            run_date=script.run_date,
+            settings=settings,
+            title=manifest.get("title"),
+            host_memory=host_memory_text,
+            pronunciation_guide=pronunciation_guide,
+            status_path=episode_dir / "tts_status.json",
+        )
+        duration = await probe_duration_seconds(
+            Path(result.audio_path),
+            ffprobe_path=settings.ffprobe_path,
+        )
+        write_json(
+            episode_dir / "audio_probe.json",
+            {
+                "audio_path": result.audio_path,
+                "duration_seconds": int(duration),
+                "mime_type": result.mime_type,
+            },
+        )
+        manifest["status"] = "rendered"
+        manifest["audio_path"] = result.audio_path
+        write_json(episode_dir / "manifest.json", manifest)
+        write_episode_memory(episode_dir, script)
+
+    try:
+        asyncio.run(_run())
+    except Exception as exc:
+        typer.echo(f"render failed: {exc}")
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"rendered: {episode_dir}")
+
+
+@podcast_app.command("publish-artifact")
+def publish_podcast_artifact(
+    episode_dir: Path = typer.Argument(
+        ...,
+        help="Artifact episode directory, e.g. var/podcast/episodes/2026-05-13.",
+    ),
+    dry_run: bool = typer.Option(
+        False,
+        help="Show the save-to-spotify invocation without uploading.",
+    ),
+) -> None:
+    """Upload a rendered artifact episode to Spotify without DB state."""
+    from datetime import UTC, datetime
+
+    from app.delivery.spotify import SaveToSpotifyDelivery
+    from app.podcast.artifacts import read_json, write_json
+    from app.podcast.publication import (
+        dry_run_thumbnail_invocation,
+        prepare_publication_rehearsal,
+    )
+
+    settings = get_settings()
+
+    async def _run() -> None:
+        manifest = read_json(episode_dir / "manifest.json")
+        audio_path = manifest.get("audio_path")
+        if not audio_path:
+            raise RuntimeError("manifest has no audio_path; run render-artifact first")
+        prepared = await prepare_publication_rehearsal(
+            episode_dir=episode_dir,
+            settings=settings,
+            dry_run=dry_run,
+        )
+        if dry_run and prepared.thumbnail_path is None and settings.podcast_thumbnail_enabled:
+            typer.echo(
+                "thumbnail dry-run: "
+                + dry_run_thumbnail_invocation(settings, episode_dir / "thumbnail.png")
+            )
+        delivery = SaveToSpotifyDelivery(settings)
+        result = await delivery.dispatch(
+            audio_path=audio_path,
+            title=prepared.title,
+            summary=prepared.summary,
+            language="de-DE",
+            image_path=str(prepared.thumbnail_path) if prepared.thumbnail_path else None,
+            dry_run=dry_run,
+        )
+        write_json(
+            episode_dir / "upload_metadata.json",
+            {
+                "success": result.success,
+                "spotify_episode_id": result.spotify_episode_id,
+                "error_message": result.error_message,
+                "invocation": result.invocation,
+                "dry_run": dry_run,
+            },
+        )
+        if not result.success:
+            raise RuntimeError(result.error_message or "Spotify upload failed")
+        if not dry_run:
+            manifest["status"] = "published"
+            manifest["published_at"] = datetime.now(UTC).isoformat()
+            manifest["spotify_episode_id"] = result.spotify_episode_id
+            write_json(episode_dir / "manifest.json", manifest)
+
+    try:
+        asyncio.run(_run())
+    except Exception as exc:
+        typer.echo(f"publish failed: {exc}")
+        raise typer.Exit(code=1) from exc
+    typer.echo(f"published: {episode_dir}" if not dry_run else f"publish dry-run: {episode_dir}")

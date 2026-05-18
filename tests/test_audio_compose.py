@@ -209,6 +209,53 @@ class TestComposeEpisode:
         assert "-af" in post_argv
 
     @pytest.mark.asyncio
+    async def test_section_jingles_inserted_before_sections_two_to_four(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        body = tmp_path / "body.wav"; body.write_bytes(b"\x00")
+        section_paths = []
+        for idx in range(4):
+            path = tmp_path / f"section{idx}.wav"
+            path.write_bytes(b"\x00")
+            section_paths.append(path)
+        player = tmp_path / "player.wav"; player.write_bytes(b"\x00")
+        team = tmp_path / "team.wav"; team.write_bytes(b"\x00")
+        deep = tmp_path / "deep.wav"; deep.write_bytes(b"\x00")
+
+        calls: list[list[str]] = []
+
+        async def fake_run(argv: list[str]) -> tuple[int, bytes, bytes]:
+            calls.append(argv)
+            return 0, b"", b""
+
+        async def fake_probe(path: Path, *, ffprobe_path: str) -> float:
+            return 40.0
+
+        monkeypatch.setattr(audio_compose, "_run", fake_run)
+        monkeypatch.setattr(audio_compose, "probe_duration_seconds", fake_probe)
+
+        music = _music()
+        music.player_of_day_jingle_path = player
+        music.team_of_day_jingle_path = team
+        music.deep_dive_jingle_path = deep
+
+        await compose_episode(
+            cold_open_voice_path=None,
+            body_voice_path=body,
+            body_section_voice_paths=section_paths,
+            music=music,
+            output_path=tmp_path / "final.wav",
+            workdir=tmp_path / "compose",
+        )
+
+        concat_argv = calls[0]
+        assert concat_argv.count("-i") == 7
+        assert str(section_paths[0]) in concat_argv
+        assert str(player) in concat_argv
+        assert str(team) in concat_argv
+        assert str(deep) in concat_argv
+
+    @pytest.mark.asyncio
     async def test_missing_intro_music_skips_intro_mix(
         self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
     ) -> None:
