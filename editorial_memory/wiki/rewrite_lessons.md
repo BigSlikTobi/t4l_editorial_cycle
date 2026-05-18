@@ -23,6 +23,8 @@
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
 - Don’t use meta or source-aware phrasing when straightforward reporting is available.
 - [analyst] Don’t soften the core numbers or trade-offs into vague narrative; keep the lede on the concrete roster/schedule facts.
-- In dismisses, if the digest has no usable facts, treat it as a source-side problem, not a prose-fixable one.
 - [columnist] Don’t widen a narrow update into a larger narrative about consequences unless the source establishes them.
 - [columnist] Tighten the headline and intro to the factual event itself; don’t imply outcomes the source doesn’t establish.
+- Don’t publish when the source digest is empty or missing; that is a source-side, not fixable in prose problem.
+- Don’t introduce unsupported details or relationship context when the provided source material doesn’t ground them.
+- Don’t treat a quote-only reaction as enough to build a story if the digest provides no usable facts.
