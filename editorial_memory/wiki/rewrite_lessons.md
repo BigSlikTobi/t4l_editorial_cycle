@@ -9,11 +9,13 @@
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - Keep persona work aligned with the angle; [analyst] should foreground construction, balance, and trade-offs.
 - [analyst] Public evaluations can still work if they’re framed as a real interior-line assessment, not just a compliment.
-- Keep strong grounding and specificity visible in the lede, not buried later.
+- [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
+- [insider] Keep the headline and lede aligned on the same source-supported fact when the update is narrow but important.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
-- [insider] Lead with the concrete expected decision first, then briefly state the basic consequence; a clean, factual package can be enough when the development itself is the story.
-- [insider] Keep the headline, lede, and intro aligned on the same source-supported consequence when the update is narrow but important.
-- [analyst] A concrete team-specific decision point can carry a short item even when the source is sparse, as long as the copy stays inside the room-level facts.
+- [insider] A concise, source-tight dispute or decision update can work when it states the result plainly and avoids overexplaining.
+- [insider] When the outcome is the news, a direct loss/decision frame can carry the story without extra narrative buildup.
+- [insider] Tighten thin updates so each sentence adds a distinct confirmed fact or consequence.
+- [insider] Clean, tightly grounded digest coverage can carry multiple concrete developments in one brief update when every detail is source-supported.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -25,25 +27,20 @@
 - Don’t treat sparse sourcing as permission to infer implications that aren’t spelled out.
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
 - [analyst] Don’t soften the core numbers or trade-offs into vague narrative; keep the lede on the concrete roster/schedule facts.
-- [analyst] Don’t write the update like a mere praise note; if the source only supports evaluation, frame why the evaluation matters and avoid repeating the same point in lede and body.
-- Don’t publish when the source digest is empty or missing; that is a source-side, not fixable in prose problem.
-- Don’t introduce unsupported details or relationship context when the provided source material doesn’t ground them.
-- Don’t treat a quote-only reaction as enough to build a story if the digest provides no usable facts.
-- Don’t repeat the same claim across headline, sub-head, and intro; vary the package so each element adds something.
-- Don’t lean on generic scene-setting when the source already gives a sharper, more specific angle.
-- Don’t pad a thin column with vague “lesson” language if the actual news value is the concrete reference itself.
-- Don’t mention the source digest or its missing details in the copy; strip meta commentary and stay inside the supported fact pattern.
+- [analyst] Don’t widen a quarterback-room update into vague “rest of the room” language; stick to the specific, named players the digest supports.
+- [analyst] Don’t let a narrow roster decision get stretched beyond the room-level facts; if the supported point is simply who becomes the odd man out, keep it that tight.
+- [insider] Don’t repeat source framing instead of adding any source-supported detail beyond the basic fact or outcome.
+- [insider] Don’t use meta language about what the reporting did or did not include; cut it and keep the copy inside the concrete news.
+- [insider] Don’t repeat the same sentence in body form; tighten thin updates so each line adds a distinct fact or consequence.
+- [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
+- [insider] Don’t add unsupported status, roster, or availability consequences unless the source digest explicitly confirms them.
+- [insider] Don’t ground an article on empty source material and repeated sourcing language; if the digest has no usable facts beyond the headline-level claim, it is source-side, not fixable in prose.
+- [insider] Don’t mention missing details in a way that creates new reporting; if you must note a limitation, keep it brief and do not imply extra facts.
+- [insider] Don’t name an extra player or detail unless the digests actually support it; cutting unsupported names is mandatory, not optional.
+- [insider] Don’t try to polish away a headline-only digest with structure alone; if grounding is absent, dismiss it as source-side, not fixable in prose.
+- [insider] Don’t overbuild a brief insider digest into fuller analysis when the supported value is just the official confirmation and immediate OTAs context.
 - [columnist] Don’t turn a single supported decision into a broader civic or historic narrative unless the source actually spells that out.
 - [columnist] Don’t try to rescue an empty-digest story by leaning harder into mood or commentary; unsupported framing won’t make it publishable.
 - [columnist] Don’t over-specify locations, markets, or other local details when the source digest is missing; that’s ungrounded, source-side, not fixable in prose.
 - [columnist] Don’t name players or other people unless the source ties them directly to the reported decision; keep the frame on the stadium, city, and host year.
 - [columnist] Don’t layer in league-rhetoric filler when the reported expectation itself is the story.
-- [insider] Don’t repeat ESPN/source framing instead of adding any source-supported detail beyond the basic expected award.
-- [insider] Don’t use meta language about what the reporting did or did not include; cut it and keep the copy inside the concrete news.
-- [insider] Don’t repeat the same sentence in body form; tighten thin updates so each line adds a distinct fact or consequence.
-- [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
-- [insider] Don’t add unsupported dispute-history specifics or resolution language unless the source digest explicitly confirms them.
-- [insider] Don’t ground an article on empty source material and repeated sourcing language; if the digest has no usable facts beyond the headline-level claim, it is source-side, not fixable in prose.
-- [analyst] Don’t say “according to the report” or similar when the digest itself supplies no report-level detail; keep attribution implicit unless the source is actually named.
-- [analyst] Don’t widen a quarterback-room update into vague “rest of the room” language; stick to the specific, named players the digest supports.
-- [analyst] Don’t let a narrow roster decision get stretched beyond the room-level facts; if the supported point is simply who becomes the odd man out, keep it that tight.
