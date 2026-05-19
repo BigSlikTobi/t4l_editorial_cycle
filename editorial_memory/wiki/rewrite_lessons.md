@@ -14,6 +14,7 @@
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
 - [casey whitaker] A narrow ownership wrinkle can still publish cleanly when the headline, intro, and body all stay aligned to the same sourced fact.
+- [casey whitaker] Build the lede around the exact quote when the premise is just a reaction line; keep the rest of the piece equally quote-bound.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -38,3 +39,6 @@
 - [casey whitaker] Don’t use a punchy closing line if it starts to feel like style over substance; keep the final beat grounded in the reported detail.
 - (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
 - [casey whitaker] Don’t keep a piece circling the same supported point in multiple sentences; if the premise is thin, make the execution even tighter and cut meta source comments.
+- [casey whitaker] Don’t add claims about where the subject sits in a race or broader reaction when the source only gives the quote itself.
+- [casey whitaker] Don’t mismatch the story to the available source material; if the digest is effectively empty, the article needs a different source base or should be dismissed.
+- [casey whitaker] Don’t proceed when the source digest is effectively unusable or the named subject/data inputs are mismatched; that is a dismissal, not a prose fix.
