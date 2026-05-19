@@ -12,8 +12,8 @@
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Keep the headline and lede aligned on the same source-supported fact when the update is narrow but important.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
-- [insider] A concise, source-tight dispute or decision update can work when it states the result plainly and avoids overexplaining.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
+- [analyst] A clean approval can come from simply reporting the unresolved status of a team issue without forcing a bigger thesis.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -24,6 +24,10 @@
 - Don’t rely on generic setup language when a direct, sourced statement will do.
 - Don’t treat sparse sourcing as permission to infer implications that aren’t spelled out.
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
+- [analyst] Don’t lean on cap/roster consequences unless the digest actually includes the contract terms or another hard basis for them.
+- [analyst] Don’t frame a contract note as if the player is “tied” to a team when the source only says a contract story was published.
+- [analyst] Don’t treat a headline-level mention of veterans as confirmed roster planning; stay literal when the digest is missing and grounding is weak.
+- [analyst] Don’t build around absent contract details or meta source narration; if the digest has no real facts, the angle is not salvageable.
 - [insider] Don’t repeat source framing instead of adding any source-supported detail beyond the basic fact or outcome.
 - [insider] Don’t use meta language like “according to the report”; cut it and keep the copy inside the concrete news.
 - [insider] Don’t repeat the same sentence in body form; tighten thin updates so each line adds a distinct fact or consequence.
@@ -31,10 +35,10 @@
 - [insider] Don’t add unsupported timing, duties, or personnel-setup detail unless the digest explicitly confirms it.
 - [insider] Don’t ground an article on headline-level source material and filler; if there are no usable facts beyond the basic move, keep it extremely tight rather than embellishing it.
 - [insider] Don’t introduce unsupported named entities; if the digest does not confirm a person’s name, do not write it into the piece.
-- [analyst] Don’t dilute a clean team takeaway with extra speculative framing; if the quote already supports the point, keep the note compact and direct.
+- [insider] Don’t build from a digest with no contract terms or other concrete substance; that’s a source-side problem, not something prose can fix.
 - [casey whitaker] Don’t turn a brief quote into “what it means for the moment” or “drawing a line in the sand” unless the source actually supports that interpretation.
 - [casey whitaker] Don’t pad a quote-led piece with scene-setting and soft inference when the source digest is thin and the body can only stay short.
 - [casey whitaker] Don’t make the intro merely restate the headline; anchor it to the exact quote and cut interpretive filler.
 - [casey whitaker] Don’t build a column from a missing or unusable source digest; that’s a source-side problem, not something prose can fix.
-- [casey whitaker] Don’t let unsupported player-name spillover into the body when the digest contains no usable facts to ground it.
 - (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
+- [analyst] Don’t force a broader narrative when the approved result is simply a grounded status update about unresolved futures.
