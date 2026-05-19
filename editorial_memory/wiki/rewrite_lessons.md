@@ -7,12 +7,13 @@
 - Keep the piece focused on verified implications without drifting into unsupported outlook language.
 - Let a thin or constrained update remain narrow if the sourcing is strong and the execution is clean.
 - Make the headline reflect the core premise plainly instead of overselling the story.
+- Lead with the unusual, source-supported wrinkle in a tighter way when the premise is simple but distinctive.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
-- [casey whitaker] Tight, source-bound calling-out can still read well when the copy stays specific and avoids overexplaining the reaction.
+- [casey whitaker] A narrow ownership wrinkle can still publish cleanly when the headline, intro, and body all stay aligned to the same sourced fact.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -36,3 +37,4 @@
 - [casey whitaker] Don’t build a column around an unsupported achievement or outcome claim; keep the reaction tied to what is safely grounded.
 - [casey whitaker] Don’t use a punchy closing line if it starts to feel like style over substance; keep the final beat grounded in the reported detail.
 - (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
+- [casey whitaker] Don’t keep a piece circling the same supported point in multiple sentences; if the premise is thin, make the execution even tighter and cut meta source comments.
