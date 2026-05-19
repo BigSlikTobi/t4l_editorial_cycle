@@ -8,6 +8,7 @@
 - Let a thin or constrained update remain narrow if the sourcing is strong and the execution is clean.
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
+- [analyst] Lean on a direct, source-grounded quote and a concrete team takeaway when the article is just an approval-level update.
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Keep the headline and lede aligned on the same source-supported fact when the update is narrow but important.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
@@ -30,6 +31,7 @@
 - [insider] Don’t add unsupported timing, duties, or personnel-setup detail unless the digest explicitly confirms it.
 - [insider] Don’t ground an article on headline-level source material and filler; if there are no usable facts beyond the basic move, keep it extremely tight rather than embellishing it.
 - [insider] Don’t introduce unsupported named entities; if the digest does not confirm a person’s name, do not write it into the piece.
+- [analyst] Don’t dilute a clean team takeaway with extra speculative framing; if the quote already supports the point, keep the note compact and direct.
 - [casey whitaker] Don’t turn a brief quote into “what it means for the moment” or “drawing a line in the sand” unless the source actually supports that interpretation.
 - [casey whitaker] Don’t pad a quote-led piece with scene-setting and soft inference when the source digest is thin and the body can only stay short.
 - [casey whitaker] Don’t make the intro merely restate the headline; anchor it to the exact quote and cut interpretive filler.
