@@ -11,6 +11,7 @@
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
+- [insider] Keep the chronology exact when the source supports a simple sequence; a clean “X happened before Y” framing can carry a thin update.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
 - [analyst] Tight league-wide consequence framing can work when the source only supports a broad structural discussion.
@@ -30,6 +31,7 @@
 - [insider] Don’t use meta language like “according to the report”; cut it and keep the copy inside the concrete news.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
 - [insider] Don’t add unsupported timing, duties, or personnel-setup detail unless the digest explicitly confirms it.
+- [insider] Don’t add separate-timeline or roster-implication language unless the source actually establishes it; keep chronology only to the verified sequence.
 - [insider] Don’t ground an article on headline-level source material and filler; if there are no usable facts beyond the basic move, keep it extremely tight rather than embellishing it.
 - [insider] Don’t proceed when the source digest is effectively empty or unusable; that is a dismissal, not a prose fix.
 - [casey whitaker] Don’t turn a brief quote into “what it means for the moment” or “drawing a line in the sand” unless the source actually supports that interpretation.
@@ -46,3 +48,5 @@
 - [analyst] Don’t lead with headline-level repetition or vague structural commentary when the source-backed development is already clear.
 - [analyst] Don’t include explicit meta mentions of a named person if the source gives no attached action or relevance.
 - [analyst] Don’t build on headline-level source material alone; if the digest has no real facts, the piece is a dismissal rather than a rewrite.
+- [insider] Don’t force a sequence or event claim when the digest is marked missing or otherwise cannot verify the underlying facts; that is a source-side gap, not a prose fix.
+- (source-side, not fixable in prose) Don’t try to salvage a surgery/jail sequence, or any similarly specific timeline, when the digest itself contains no confirming facts; dismiss instead.
