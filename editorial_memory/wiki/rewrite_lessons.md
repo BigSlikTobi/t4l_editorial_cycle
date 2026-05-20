@@ -16,6 +16,7 @@
 - [casey whitaker] Keep the headline and intro distinct in function: one can quote or summarize the core claim, but the other should add the concrete sourced payoff without repeating the same abstract stakes.
 - [casey whitaker] Cleanly stated regret or admission can be enough when the digest supports a specific, grounded takeaway and the copy stays inside it.
 - [casey whitaker] A tight, readable lede that matches the source exactly is enough when the story is built around one supported quote or admission.
+- [casey whitaker] Team-specific, quote-grounded claims can carry the piece when the headline, intro, and body all stay on the same supported fact pattern.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -44,7 +45,6 @@
 - (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
 - [casey whitaker] Don’t mismatch the story to the available source material; if the digest is effectively empty, the article needs a different source base or should be dismissed.
 - [casey whitaker] Don’t proceed when the source digest is effectively unusable or the named subject/data inputs are mismatched; that is a dismissal, not a prose fix.
-- [analyst] Don’t build on headline-level source material alone; if the digest has no real facts, the piece is a dismissal rather than a rewrite.
 - [insider] Don’t force a sequence or event claim when the digest is marked missing or otherwise cannot verify the underlying facts; that is a source-side gap, not a prose fix.
 - (source-side, not fixable in prose) Don’t try to salvage a surgery/jail sequence, or any similarly specific timeline, when the digest itself contains no confirming facts; dismiss instead.
 - [casey whitaker] Don’t overstate certainty in a thin, headline-level item; if the digest only proves one development, keep the second sentence equally narrow.
