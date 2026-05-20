@@ -9,6 +9,7 @@
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - Lead with the unusual, source-supported wrinkle in a tighter way when the premise is simple but distinctive.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
+- [analyst] Tight grounding can carry a polished OTA/roster note when the copy stays inside the digest and avoids meta language.
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
@@ -26,6 +27,7 @@
 - Don’t treat sparse sourcing as permission to infer implications that aren’t spelled out.
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
 - [analyst] Don’t lean on cap/roster consequences unless the digest actually includes the contract terms or another hard basis for them.
+- [analyst] Don’t pad a clean source digest with meta framing; keep the tap reason and takeaway inside the sourced facts.
 - [insider] Don’t repeat source framing instead of adding any source-supported detail beyond the basic fact or outcome.
 - [insider] Don’t use meta language like “according to the report”; cut it and keep the copy inside the concrete news.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
