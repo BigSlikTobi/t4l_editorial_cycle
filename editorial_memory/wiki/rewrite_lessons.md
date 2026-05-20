@@ -9,12 +9,10 @@
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - Lead with the unusual, source-supported wrinkle in a tighter way when the premise is simple but distinctive.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
-- [analyst] When the source offers a concrete workload or usage number, build the angle around why that figure matters rather than repeating the same fact.
-- [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
-- [casey whitaker] Lean on the exact quote and any specific names already in the source so the note feels crisp instead of repetitive.
+- [casey whitaker] A lede can work when it is simply the one supported development, with any second sentence staying inside that fact.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -27,11 +25,9 @@
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
 - [analyst] Don’t lean on roster or distribution consequences unless the digest actually supports them; keep the angle tied to the quoted workload fact first.
 - [analyst] Don’t repeat the same single fact in multiple sentences; cut repetition and use the extra space to explain the one supported implication.
-- [analyst] Don’t build the piece into a broader confirmed plan from a player comment alone.
 - [insider] Don’t repeat source framing instead of adding any source-supported detail beyond the basic fact or outcome.
 - [insider] Don’t use meta language like “according to the report”; cut it and keep the copy inside the concrete news.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
-- [insider] Don’t add unsupported timing, duties, or personnel-setup detail unless the digest explicitly confirms it.
 - [insider] Don’t ground an article on headline-level source material and filler; if there are no usable facts beyond the basic move, keep it extremely tight rather than embellishing it.
 - [insider] Don’t proceed when the source digest is effectively empty or unusable; that is a dismissal, not a prose fix.
 - [casey whitaker] Don’t turn a brief quote into “what it means for the moment” or “drawing a line in the sand” unless the source actually supports that interpretation.
@@ -39,14 +35,12 @@
 - [casey whitaker] Don’t make the intro merely restate the headline; anchor it to the exact quote and cut interpretive filler.
 - [casey whitaker] Don’t tack on a meta closing line about how the story “should have been”; end on the concrete reported detail instead.
 - [casey whitaker] Don’t build a column around an unsupported achievement or outcome claim; keep the reaction tied to what is safely grounded.
-- [casey whitaker] Don’t use a punchy closing line if it starts to feel like style over substance; keep the final beat grounded in the reported detail.
-- (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
-- [casey whitaker] Don’t keep a piece circling the same supported point in multiple sentences; if the premise is thin, make the execution even tighter and cut meta source comments.
 - [casey whitaker] Don’t add claims about where the subject sits in a race or broader reaction when the source only gives the quote itself.
+- (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
 - [casey whitaker] Don’t mismatch the story to the available source material; if the digest is effectively empty, the article needs a different source base or should be dismissed.
 - [casey whitaker] Don’t proceed when the source digest is effectively unusable or the named subject/data inputs are mismatched; that is a dismissal, not a prose fix.
-- [analyst] Don’t lead with headline-level repetition or vague structural commentary when the source-backed development is already clear.
-- [analyst] Don’t include explicit meta mentions of a named person if the source gives no attached action or relevance.
 - [analyst] Don’t build on headline-level source material alone; if the digest has no real facts, the piece is a dismissal rather than a rewrite.
 - [insider] Don’t force a sequence or event claim when the digest is marked missing or otherwise cannot verify the underlying facts; that is a source-side gap, not a prose fix.
 - (source-side, not fixable in prose) Don’t try to salvage a surgery/jail sequence, or any similarly specific timeline, when the digest itself contains no confirming facts; dismiss instead.
+- [casey whitaker] Don’t overstate certainty in a thin, headline-level item; if the digest only proves one development, keep the second sentence equally narrow.
+- [casey whitaker] Don’t center a named player as if the piece has team-specific implications when the source only supports a generic list entry; keep the framing at the list level.
