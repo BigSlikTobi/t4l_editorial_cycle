@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Stay tightly inside the sourced premise and build around the best-supported hook rather than reaching for extra color.
+- Stay tightly inside the sourced premise and build around the strongest supported takeaway rather than reaching for extra color.
 - Center the story on one clear analytical thread when several facts are available, especially roster-building or usage-volume angles.
 - Use concrete figures, timing details, and named room/context elements directly in the reporting; specificity makes the note feel grounded.
 - Keep the piece focused on verified implications without drifting into unsupported outlook language.
@@ -13,6 +13,9 @@
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
 - [casey whitaker] A lede can work when it is simply the one supported development, with any second sentence staying inside that fact.
+- [casey whitaker] Keep the headline and intro distinct in function: one can quote or summarize the core claim, but the other should add the concrete sourced payoff without repeating the same abstract stakes.
+- [casey whitaker] Cleanly stated regret or admission can be enough when the digest supports a specific, grounded takeaway and the copy stays inside it.
+- [casey whitaker] A tight, readable lede that matches the source exactly is enough when the story is built around one supported quote or admission.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -36,6 +39,8 @@
 - [casey whitaker] Don’t tack on a meta closing line about how the story “should have been”; end on the concrete reported detail instead.
 - [casey whitaker] Don’t build a column around an unsupported achievement or outcome claim; keep the reaction tied to what is safely grounded.
 - [casey whitaker] Don’t add claims about where the subject sits in a race or broader reaction when the source only gives the quote itself.
+- [casey whitaker] Don’t let headline, lede, and body all restate the same single quote; each element needs a distinct job or the piece feels padded.
+- [casey whitaker] Don’t use broad atmospheric language to compensate for a one-quote premise; trim it and foreground the exact sourced statement.
 - (source-side, not fixable in prose) If the digest does not actually confirm the named subject, the piece should be dismissed rather than rewritten around the gap.
 - [casey whitaker] Don’t mismatch the story to the available source material; if the digest is effectively empty, the article needs a different source base or should be dismissed.
 - [casey whitaker] Don’t proceed when the source digest is effectively unusable or the named subject/data inputs are mismatched; that is a dismissal, not a prose fix.
@@ -44,3 +49,6 @@
 - (source-side, not fixable in prose) Don’t try to salvage a surgery/jail sequence, or any similarly specific timeline, when the digest itself contains no confirming facts; dismiss instead.
 - [casey whitaker] Don’t overstate certainty in a thin, headline-level item; if the digest only proves one development, keep the second sentence equally narrow.
 - [casey whitaker] Don’t center a named player as if the piece has team-specific implications when the source only supports a generic list entry; keep the framing at the list level.
+- [casey whitaker] Don’t package one source story against an unrelated cluster headline; if the broader angle isn’t directly supported, narrow the headline and intro to the actual reported admission.
+- [casey whitaker] Don’t let the lede get repetitive when the core fact is already clear; state the admission once, cleanly, and move on.
+- [casey whitaker] Don’t lean on source-meta phrasing or abstract stakes when the direct quote and endpoint already carry the story.
