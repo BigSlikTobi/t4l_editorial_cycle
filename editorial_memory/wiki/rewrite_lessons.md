@@ -2,19 +2,19 @@
 
 ## What works (keep doing)
 - Stay tightly inside the sourced premise and build around the best-supported hook rather than reaching for extra color.
-- Center the story on one clear analytical thread when several facts are available, especially roster-building or schedule-tradeoff angles.
+- Center the story on one clear analytical thread when several facts are available, especially roster-building or usage-volume angles.
 - Use concrete figures, timing details, and named room/context elements directly in the reporting; specificity makes the note feel grounded.
 - Keep the piece focused on verified implications without drifting into unsupported outlook language.
 - Let a thin or constrained update remain narrow if the sourcing is strong and the execution is clean.
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - Lead with the unusual, source-supported wrinkle in a tighter way when the premise is simple but distinctive.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
+- [analyst] When the source offers a concrete workload or usage number, build the angle around why that figure matters rather than repeating the same fact.
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
-- [insider] Keep the chronology exact when the source supports a simple sequence; a clean “X happened before Y” framing can carry a thin update.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
-- [analyst] Tight league-wide consequence framing can work when the source only supports a broad structural discussion.
+- [casey whitaker] Lean on the exact quote and any specific names already in the source so the note feels crisp instead of repetitive.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -25,13 +25,13 @@
 - Don’t rely on generic setup language when a direct, sourced statement will do.
 - Don’t treat sparse sourcing as permission to infer implications that aren’t spelled out.
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
-- [analyst] Don’t lean on cap/roster consequences unless the digest actually includes the contract terms or another hard basis for them.
-- [analyst] Don’t add team-specific or player-specific implications when the source only supports a league-wide consequence.
+- [analyst] Don’t lean on roster or distribution consequences unless the digest actually supports them; keep the angle tied to the quoted workload fact first.
+- [analyst] Don’t repeat the same single fact in multiple sentences; cut repetition and use the extra space to explain the one supported implication.
+- [analyst] Don’t build the piece into a broader confirmed plan from a player comment alone.
 - [insider] Don’t repeat source framing instead of adding any source-supported detail beyond the basic fact or outcome.
 - [insider] Don’t use meta language like “according to the report”; cut it and keep the copy inside the concrete news.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
 - [insider] Don’t add unsupported timing, duties, or personnel-setup detail unless the digest explicitly confirms it.
-- [insider] Don’t add separate-timeline or roster-implication language unless the source actually establishes it; keep chronology only to the verified sequence.
 - [insider] Don’t ground an article on headline-level source material and filler; if there are no usable facts beyond the basic move, keep it extremely tight rather than embellishing it.
 - [insider] Don’t proceed when the source digest is effectively empty or unusable; that is a dismissal, not a prose fix.
 - [casey whitaker] Don’t turn a brief quote into “what it means for the moment” or “drawing a line in the sand” unless the source actually supports that interpretation.
