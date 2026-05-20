@@ -9,13 +9,11 @@
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - Lead with the unusual, source-supported wrinkle in a tighter way when the premise is simple but distinctive.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
-- [analyst] Tight grounding can carry a polished OTA/roster note when the copy stays inside the digest and avoids meta language.
 - [insider] Lead with the concrete outcome or event first, then state only the consequence the source actually supports.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
 - [casey whitaker] A short quote-led column can work when it stays on the exact quoted line and keeps the interpretation minimal.
 - [casey whitaker] Strong specificity can carry a column when the story is anchored to a concrete oddity or error and the reaction is reported cleanly.
-- [casey whitaker] A narrow ownership wrinkle can still publish cleanly when the headline, intro, and body all stay aligned to the same sourced fact.
-- [casey whitaker] Build the lede around the exact quote when the premise is just a reaction line; keep the rest of the piece equally quote-bound.
+- [analyst] Tight league-wide consequence framing can work when the source only supports a broad structural discussion.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -27,12 +25,13 @@
 - Don’t treat sparse sourcing as permission to infer implications that aren’t spelled out.
 - Don’t use abstract repetition about patience, pressure, or other generalities when the concrete facts can do the work.
 - [analyst] Don’t lean on cap/roster consequences unless the digest actually includes the contract terms or another hard basis for them.
-- [analyst] Don’t pad a clean source digest with meta framing; keep the tap reason and takeaway inside the sourced facts.
+- [analyst] Don’t add team-specific or player-specific implications when the source only supports a league-wide consequence.
 - [insider] Don’t repeat source framing instead of adding any source-supported detail beyond the basic fact or outcome.
 - [insider] Don’t use meta language like “according to the report”; cut it and keep the copy inside the concrete news.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
 - [insider] Don’t add unsupported timing, duties, or personnel-setup detail unless the digest explicitly confirms it.
 - [insider] Don’t ground an article on headline-level source material and filler; if there are no usable facts beyond the basic move, keep it extremely tight rather than embellishing it.
+- [insider] Don’t proceed when the source digest is effectively empty or unusable; that is a dismissal, not a prose fix.
 - [casey whitaker] Don’t turn a brief quote into “what it means for the moment” or “drawing a line in the sand” unless the source actually supports that interpretation.
 - [casey whitaker] Don’t pad a quote-led piece with scene-setting and soft inference when the source digest is thin and the body can only stay short.
 - [casey whitaker] Don’t make the intro merely restate the headline; anchor it to the exact quote and cut interpretive filler.
@@ -44,3 +43,6 @@
 - [casey whitaker] Don’t add claims about where the subject sits in a race or broader reaction when the source only gives the quote itself.
 - [casey whitaker] Don’t mismatch the story to the available source material; if the digest is effectively empty, the article needs a different source base or should be dismissed.
 - [casey whitaker] Don’t proceed when the source digest is effectively unusable or the named subject/data inputs are mismatched; that is a dismissal, not a prose fix.
+- [analyst] Don’t lead with headline-level repetition or vague structural commentary when the source-backed development is already clear.
+- [analyst] Don’t include explicit meta mentions of a named person if the source gives no attached action or relevance.
+- [analyst] Don’t build on headline-level source material alone; if the digest has no real facts, the piece is a dismissal rather than a rewrite.
