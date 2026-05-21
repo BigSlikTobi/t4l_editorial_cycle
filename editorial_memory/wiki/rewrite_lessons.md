@@ -32,5 +32,6 @@
 - [casey whitaker] Don’t overstate certainty in a thin, headline-level item; if the digest only proves one development, keep the second sentence equally narrow.
 - [analyst] Don’t lean on roster or distribution consequences unless the digest actually supports them; keep the angle tied to the quoted workload fact first.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
+- [insider] Don’t build a Week 1 return/status story when the source digest has no verifiable facts to support it; if nothing is confirmed, cut the story rather than implying availability.
+- [insider] Don’t proceed when the source digest is effectively empty or contains no usable facts for the claimed angle; that is a source-side, not fixable in prose, failure.
 - [casey whitaker] Don’t invent quote attribution, side relationships, or final-year color that are absent from the digest; a dismissal like this is a source-side, not fixable in prose, failure.
-- (source-side, not fixable in prose) Don’t proceed when the source digest is effectively empty, mismatched, or cannot verify the named subject or sequence; that is a dismissal, not a prose fix.
