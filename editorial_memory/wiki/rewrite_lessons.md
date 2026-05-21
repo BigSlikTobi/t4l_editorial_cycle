@@ -43,3 +43,4 @@
 - [casey whitaker] Don’t treat a topic label as reportable substance; if the digest has no usable facts beyond the label, dismiss rather than infer the article’s angle.
 - [casey whitaker] Don’t assert specific sourced details when the digest is missing key source content; unresolved grounding problems should be treated as hard dismisses on rewrite_attempt=1.
 - [casey whitaker] Don’t attribute the claim to a named intermediary or add missing causal detail unless the digest actually supports it; missing source content is source-side, not fixable in prose.
+- [casey whitaker] Don’t try to salvage an article when the source digest is empty of usable facts; that’s a source-side failure, not a prose fix.
