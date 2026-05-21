@@ -12,7 +12,9 @@
 - A clear team-specific hook can make a sparse update work if it is grounded in the one supported quote and stays free of speculation.
 - Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
-- [casey whitaker] Keep a final-season or final-year declaration anchored to the exact quote and the named team connection; that is enough when the digest only supports one clear statement.
+- [insider] A strong approve can come from staying tightly grounded in the digest while using the best-supported specifics, including a player quote, to deliver the news immediately.
+- [insider] When two sourced developments both matter, a direct lede that unifies them can still work if the first paragraph keeps the focus on the same two facts.
+- [insider] Two concrete hooks can coexist in one story when both are cleanly sourced and the body tracks them without reaching.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -37,4 +39,5 @@
 - [casey whitaker] Don’t proceed when the source digest is effectively empty and internally mismatched to the article’s names; unresolved grounding problems on rewrite_attempt=1 are hard dismisses, not salvageable prose fixes.
 - [analyst] Don’t lean on roster or distribution consequences unless the digest actually supports them; keep the angle tied to the quoted workload fact first.
 - [insider] Don’t state a reported item as settled fact when the digest only supports a hedge; keep uncertainty consistent in the headline and intro.
-- [insider] Don’t draft around a headline-premise when the digest has no usable facts to support it; a missing summary makes the item ungroundable, so treat it as source-side, not fixable in prose.
+- [insider] Don’t split the lede across two separate developments so much that neither one drives the opening; if two facts belong together, unify them quickly and keep the first paragraph on the same pair.
+- [insider] Don’t add extra contract/cap or reunion framing when it doesn’t sharpen the core sourced hook; thin integration can blur the story.
