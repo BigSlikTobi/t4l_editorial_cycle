@@ -9,10 +9,13 @@
 - Make the headline reflect the core premise plainly instead of overselling the story.
 - Lead with the unusual, source-supported wrinkle in a tighter way when the premise is simple but distinctive.
 - Quote-led notes can work when they stay on the exact quoted lines and keep interpretation minimal.
+- A clear team-specific hook can make a sparse update work if it is grounded in the one supported quote and stays free of speculation.
+- Named entities can strengthen a thin report when they are used only to anchor the verified statement, not to imply extra meaning.
 - [casey whitaker] A lede works best when it is simply the verified development or quote, with any second sentence staying inside that fact.
 - [analyst] Give readers a clear team-specific reason to tap by stating the status update or concrete reason first, then adding only the source-supported takeaway.
 - [insider] Proper hedging plus exact source-supported event framing can make a thin but real development feel publishable.
 - [casey whitaker] A direct declaration can carry the piece if the report stays anchored to that statement and avoids piling on extra consequence language.
+- [casey whitaker] When the source only supports one development, frame the headline and intro around that exact fact rather than broad ripple language.
 
 ## What to avoid
 - Don’t stretch a limited set of facts into a broader takeaway than the evidence supports.
@@ -37,3 +40,9 @@
 - [casey whitaker] Don’t present a thin source note as a multi-layered narrative; when the core fact is a direct declaration, keep the report anchored to that statement and avoid extra consequence language.
 - [casey whitaker] Don’t build a return-or-comeback frame from a digest that only supports a farewell declaration and a vague Pittsburgh reference; that’s source-side, not fixable in prose.
 - [casey whitaker] Don’t repeat the same farewell quote as if it supplies fresh substance; if the story has no new facts beyond the declaration, it’s too thin to sustain expansion.
+- [casey whitaker] Don’t let a quote-driven item drift generic or repetitive; if the digest only supports the headline-level claim, keep the draft tightly focused on that exact supported line and remove filler about the depth chart or similar consequences.
+- [analyst] Don’t duplicate the headline in the subhead and opening sentence when the digest has no usable facts; that flat repetition removes the tap reason.
+- [analyst] Don’t force a story from an empty digest; if there’s nothing to ground beyond the headline, it’s a source-side, not fixable in prose, failure.
+- [casey whitaker] Don’t add unrelated player references or roster-ripple language when the digests only support one position-flexibility note; keep the lede grounded in the single verified development.
+- [casey whitaker] Don’t build claims about Smith’s flexibility or Dallas’ protection/personnel fits when the digest is effectively empty; this is source-side, not fixable in prose.
+- [casey whitaker] Don’t treat a topic label as reportable substance; if the digest has no usable facts beyond the label, dismiss rather than infer the article’s angle.
