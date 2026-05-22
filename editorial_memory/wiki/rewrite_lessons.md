@@ -12,6 +12,7 @@
 - For columnist-style rewrites, clarity and fidelity to the quote matter more than added color.
 - When a quote is the strongest hook, build around its exact language rather than paraphrasing it into a bigger claim.
 - [columnist] A clean, quote-led frame can work even when the source digest is thin, as long as the headline and body stay tightly matched.
+- [columnist] Keep the framing modest and exact when the only supported fact is a narrow opening, not a full commitment.
 
 ## What to avoid
 - Don’t stretch a single quote or injury note into broader implications than the source supports.
@@ -29,3 +30,4 @@
 - Don’t publish a confident headline or angle when the source digest is effectively empty; that’s a grounding failure, not a style fix (source-side, not fixable in prose).
 - Don’t proceed when the underlying source digest is empty or missing the facts needed to substantiate the claim; treat that as an unrecoverable grounding problem (source-side, not fixable in prose).
 - [columnist] Don’t force a bigger thesis onto a thin quote; if the digest only supports one clear read, keep the framing modest and exact.
+- [columnist] Don’t rely on unsupported broader context to make a narrow “door remains open” update feel more consequential than it is.
