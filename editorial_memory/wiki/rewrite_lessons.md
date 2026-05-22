@@ -27,3 +27,5 @@
 - Don’t introduce cap, incentive, or depth-chart interpretation unless the source explicitly supports it.
 - Don’t proceed as if thinly sourced details authorize extra inference; keep the note bound to what is actually confirmed.
 - Don’t repeat the lede sentence in the opening paragraph; replace duplication with a new supporting detail.
+- Don’t invent transaction specifics like dollar figures or awards when the source digest is empty or doesn’t confirm them (source-side, not fixable in prose).
+- Don’t build a publishable note around contract, roster, or “keep him here” implications when the digest has no usable facts (source-side, not fixable in prose).
