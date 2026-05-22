@@ -10,6 +10,8 @@
 - Use the source’s own framing when it is precise enough to stand on its own.
 - For columnist-style rewrites, clarity and fidelity to the quote matter more than added color.
 - Strong grounding can outweigh modestly repetitive structure if the central fact is unmistakable.
+- When a piece has two possible angles, a clean single-angle frame reads stronger than trying to hold both at once.
+- When two source-supported angles exist, one can serve as the lead and the other as a crisp secondary note.
 
 ## What to avoid
 - Don’t stretch a single quote into broader implications than the source supports.
@@ -21,4 +23,7 @@
 - Don’t let headline, lede, and body drift into slightly different angles; keep them reinforcing the same fact.
 - Don’t rely on generic setup when the direct quote is already the strongest lead.
 - Don’t turn a simple quote-driven item into a bigger thesis than the reporting justifies.
-- Don’t imply more certainty than the source provides about how long the situation will last.
+- Don’t split a lede between two stories; choose one clean lead angle and keep the other secondary.
+- Don’t repeat the same retirement/farewell fact in the headline, sub-headline, and intro.
+- Don’t tack a secondary angle on at the end after burying the more useful hook; build the cleaner source-supported payoff into the structure.
+- Don’t mix secondary OTA/defensive-system material into a headline-led last-season story unless it clearly serves the main angle.
