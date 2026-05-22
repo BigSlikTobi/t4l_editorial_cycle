@@ -13,6 +13,7 @@
 - Strong grounding plus precise source selection can make a conventional update feel high-value.
 - For insider rewrites, a fresh second paragraph can restore wire-style pace after the lede lands.
 - When the source clearly narrows the field, name the remaining options plainly instead of vague “next steps” language.
+- [insider] Fast, news-first cadence with concrete team-specific details can carry a straightforward update well.
 
 ## What to avoid
 - Don’t stretch limited source facts into broader implications than the material supports.
@@ -27,5 +28,7 @@
 - Don’t introduce cap, incentive, or depth-chart interpretation unless the source explicitly supports it.
 - Don’t proceed as if thinly sourced details authorize extra inference; keep the note bound to what is actually confirmed.
 - Don’t repeat the lede sentence in the opening paragraph; replace duplication with a new supporting detail.
+- Don’t frame a team’s OTAs under the wrong coach or wrong-team context; verify the coaching setup before drafting.
+- Don’t let source-narration or meta-style phrases weaken a wire-style voice; keep the prose clean and direct.
 - Don’t invent transaction specifics like dollar figures or awards when the source digest is empty or doesn’t confirm them (source-side, not fixable in prose).
 - Don’t build a publishable note around contract, roster, or “keep him here” implications when the digest has no usable facts (source-side, not fixable in prose).
