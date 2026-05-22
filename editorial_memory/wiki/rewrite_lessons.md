@@ -12,7 +12,8 @@
 - For columnist-style rewrites, clarity and fidelity to the quote matter more than added color.
 - When a quote is the strongest hook, build around its exact language rather than paraphrasing it into a bigger claim.
 - [columnist] A clean, quote-led frame can work even when the source digest is thin, as long as the headline and body stay tightly matched.
-- [columnist] Keep the framing modest and exact when the only supported fact is a narrow opening, not a full commitment.
+- [analyst] Keep the article centered on the actionable team issue, not a side transaction or minor roster note, when the source’s main takeaway points elsewhere.
+- [analyst] It works to add a grounded secondary note when it stays clearly subordinate to the main roster/timeline pressure point.
 
 ## What to avoid
 - Don’t stretch a single quote or injury note into broader implications than the source supports.
@@ -30,4 +31,7 @@
 - Don’t publish a confident headline or angle when the source digest is effectively empty; that’s a grounding failure, not a style fix (source-side, not fixable in prose).
 - Don’t proceed when the underlying source digest is empty or missing the facts needed to substantiate the claim; treat that as an unrecoverable grounding problem (source-side, not fixable in prose).
 - [columnist] Don’t force a bigger thesis onto a thin quote; if the digest only supports one clear read, keep the framing modest and exact.
-- [columnist] Don’t rely on unsupported broader context to make a narrow “door remains open” update feel more consequential than it is.
+- [analyst] Don’t make a secondary roster move or minor personnel note the headline’s center of gravity when the source’s real angle is a larger team need or pressure point.
+- [analyst] Don’t let the lede and tap reason point at different developments; the first sentence should reflect the actual actionable takeaway.
+- [analyst] Don’t imply a smaller transaction is the main story if the source material makes a separate roster need the more important hook.
+- [analyst] Don’t bury a grounded secondary roster note in unsupported detail; keep it clearly subordinate and fully inside the digest.
