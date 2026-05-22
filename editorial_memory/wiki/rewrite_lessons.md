@@ -12,6 +12,7 @@
 - A straightforward headline can work well when it states the core update plainly.
 - Strong grounding plus precise source selection can make a conventional update feel high-value.
 - For insider rewrites, a fresh second paragraph can restore wire-style pace after the lede lands.
+- When the source clearly narrows the field, name the remaining options plainly instead of vague “next steps” language.
 
 ## What to avoid
 - Don’t stretch limited source facts into broader implications than the material supports.
