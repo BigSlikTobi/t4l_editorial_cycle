@@ -13,13 +13,12 @@
 - When a quote is the strongest hook, build around its exact language rather than paraphrasing it into a bigger claim.
 - [columnist] A clean, quote-led frame can work even when the source digest is thin, as long as the headline and body stay tightly matched.
 - [analyst] Keep the article centered on the actionable team issue, not a side transaction or minor roster note, when the source’s main takeaway points elsewhere.
-- [analyst] It works to add a grounded secondary note when it stays clearly subordinate to the main roster/timeline pressure point.
 
 ## What to avoid
 - Don’t stretch a single quote or injury note into broader implications than the source supports.
 - Don’t recast a stated time window into a firmer commitment, farewell, final-season, or no-timetable claim.
 - Don’t add roster, team, or downstream consequence language when the source only supports the basic development.
-- Don’t lean on secondary context about a defense or position group unless the source directly supports it.
+- Don’t lean on secondary context unless the source directly supports it.
 - Don’t let repetitive framing crowd out the one useful fact the piece has.
 - Don’t oversell significance in the headline if the body can only support a narrow, literal claim.
 - Don’t pad a short sourced update with extra explanation that doesn’t add new information.
@@ -35,3 +34,6 @@
 - [analyst] Don’t let the lede and tap reason point at different developments; the first sentence should reflect the actual actionable takeaway.
 - [analyst] Don’t imply a smaller transaction is the main story if the source material makes a separate roster need the more important hook.
 - [analyst] Don’t bury a grounded secondary roster note in unsupported detail; keep it clearly subordinate and fully inside the digest.
+- Don’t try to turn a bare headline-level quote into a publishable story if the source set has no usable facts beyond that claim.
+- Don’t repeat unsupported filler around a single quote; when the digest is that thin, adding materiality you can’t source only makes the draft weaker.
+- Don’t treat a quote alone as enough to carry a full story when there’s no concrete update, context, or development behind it (source-side, not fixable in prose).
