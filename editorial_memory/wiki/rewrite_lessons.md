@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Stay tightly grounded in the clearest supported quote, status update, or deadline when the source is narrow.
+- Stay tightly grounded in the clearest supported update when the source is narrow.
 - Use the source’s own phrasing as the spine when it is the most reliable fact.
 - Keep headline, lede, and body aligned on the same core claim.
 - Let a plain, direct headline carry a simple sourced update when the reporting is thin.
