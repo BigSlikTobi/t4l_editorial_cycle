@@ -25,11 +25,9 @@
 - Don’t let headline, lede, and body drift into slightly different angles; keep them reinforcing the same fact.
 - Don’t rely on generic setup when the direct source detail is already the strongest lead.
 - Don’t turn a simple status update into a bigger thesis than the reporting justifies.
-- Don’t attribute details like a timetable or quote to a reporter unless they are verified in the source text.
 - Don’t build the story around stitched-together context when the source digest contains no actual facts to support the claim (source-side, not fixable in prose).
 - Don’t publish a confident headline or angle when the source digest is effectively empty; that’s a grounding failure, not a style fix (source-side, not fixable in prose).
-- Don’t proceed when the underlying source digest is empty or missing the facts needed to substantiate the claim; treat that as an unrecoverable grounding problem (source-side, not fixable in prose).
-- [columnist] Don’t force a bigger thesis onto a thin quote; if the digest only supports one clear read, keep the framing modest and exact.
+- Don’t force a bigger thesis onto a thin quote; if the digest only supports one clear read, keep the framing modest and exact.
 - [analyst] Don’t make a secondary roster move or minor personnel note the headline’s center of gravity when the source’s real angle is a larger team need or pressure point.
 - [analyst] Don’t let the lede and tap reason point at different developments; the first sentence should reflect the actual actionable takeaway.
 - [analyst] Don’t imply a smaller transaction is the main story if the source material makes a separate roster need the more important hook.
@@ -37,3 +35,8 @@
 - Don’t try to turn a bare headline-level quote into a publishable story if the source set has no usable facts beyond that claim.
 - Don’t repeat unsupported filler around a single quote; when the digest is that thin, adding materiality you can’t source only makes the draft weaker.
 - Don’t treat a quote alone as enough to carry a full story when there’s no concrete update, context, or development behind it (source-side, not fixable in prose).
+- [analyst] Don’t turn an ESPN-item mention into an extension-watch or OTAs/contract angle unless the digest actually supplies concrete reporting to support it (source-side, not fixable in prose).
+- [analyst] Don’t import unrelated prior-team names or movement implications unless the digest explicitly supports that transition.
+- [analyst] Don’t turn a role-definition piece into a move/arrival story; if the source only supports development language, keep the focus there.
+- [analyst] Don’t add leadership or learning stages beyond what the brief actually states; keep the sequence in the lede restrained and literal.
+- [analyst] Don’t build a developmental-plan or offense-first narrative out of an ESPN-item mention alone; if the digest only confirms the item, keep the claim that narrow (source-side, not fixable in prose).
