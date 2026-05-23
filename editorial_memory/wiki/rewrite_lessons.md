@@ -3,16 +3,15 @@
 ## What works (keep doing)
 - Stay tightly grounded in the clearest supported update when the source is narrow.
 - Use the source’s own phrasing as the spine when it is the most reliable fact.
+- Lead with a direct quote when it is the strongest hook and the source is thin.
 - Keep headline, lede, and body aligned on the same core claim.
-- Let a plain, direct headline carry a simple sourced update when the reporting is thin.
 - Preserve a restrained, wire-clean tone instead of over-explaining a straightforward statement.
 - Make the article publishable by giving readers a specific fact rather than vague tease language.
 - Add a secondary angle only when it is clearly supported and still subordinate to the main fact.
 - Strong grounding can outweigh modestly repetitive structure if the central fact is unmistakable.
 - For columnist-style rewrites, clarity and fidelity to the source question matter more than added color.
-- When a question or quote is the strongest hook, build around its exact language rather than paraphrasing it into a bigger claim.
 - [columnist] A clean, quote-led frame can work even when the source digest is thin, as long as the headline and body stay tightly matched.
-- [analyst] Keep the article centered on the actionable team issue, not a side transaction or minor roster note, when the source’s main takeaway points elsewhere.
+- [columnist] A scene-led read is strongest when it stays inside the one available fact pattern and doesn’t try to widen the thesis.
 - [analyst] A concrete coaching directive or team instruction can be enough to anchor the story when it is clearly sourced and specific.
 
 ## What to avoid
@@ -29,6 +28,8 @@
 - Don’t build the story around stitched-together context when the source digest contains no actual facts to support the claim (source-side, not fixable in prose).
 - Don’t publish a confident headline or angle when the source digest is effectively empty; that’s a grounding failure, not a style fix (source-side, not fixable in prose).
 - Don’t force a bigger thesis onto a thin quote; if the digest only supports one clear read, keep the framing modest and exact.
+- [columnist] Don’t lean on report-style filler like “in the report” or vague “inside the building” language when the direct quote and relationship angle already do the work.
+- [columnist] Don’t make locker-room or behind-the-scenes inference the point unless the source explicitly supports that reading.
 - [analyst] Don’t make a secondary roster move or minor personnel note the headline’s center of gravity when the source’s real angle is a larger team need or pressure point.
 - [analyst] Don’t let the lede and tap reason point at different developments; the first sentence should reflect the actual actionable takeaway.
 - [analyst] Don’t imply a smaller transaction is the main story if the source material makes a separate roster need the more important hook.
