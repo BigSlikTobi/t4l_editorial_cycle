@@ -13,6 +13,7 @@
 - When a question or quote is the strongest hook, build around its exact language rather than paraphrasing it into a bigger claim.
 - [columnist] A clean, quote-led frame can work even when the source digest is thin, as long as the headline and body stay tightly matched.
 - [analyst] Keep the article centered on the actionable team issue, not a side transaction or minor roster note, when the source’s main takeaway points elsewhere.
+- [analyst] A concrete coaching directive or team instruction can be enough to anchor the story when it is clearly sourced and specific.
 
 ## What to avoid
 - Don’t stretch a single quote or injury note into broader implications than the source supports.
