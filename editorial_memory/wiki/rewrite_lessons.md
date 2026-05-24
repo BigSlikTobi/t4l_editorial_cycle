@@ -11,6 +11,8 @@
 - [columnist] A clean, direct frame can work when the headline and intro stay tightly matched to the announcement or matchup.
 - When the source is narrow, a small but real news tap can still clear if the grounding is excellent.
 - [analyst] Center the one clearly supported named option in the lede, and keep any alternates brief and literal.
+- [analyst] When the digest supports it, a simple OTA/timeline hook plus one vetted veteran name can carry the piece without extra flourish.
+- [analyst] If the source includes a sharper roster-building angle, pull that forward instead of repeating the same timeline setup.
 
 ## What to avoid
 - Don’t stretch a single quote or update into broader implications than the source supports.
@@ -32,3 +34,12 @@
 - Don’t introduce unsupported hierarchy or alternate-candidate framing around a QB conversation when the digest has no usable facts to verify it.
 - Don’t treat a rewrite as salvageable if the source digest itself lacks concrete facts; that is source-side, not fixable in prose.
 - Don’t add named-option analysis in analyst pieces unless the digest actually supports those names and relationships [analyst].
+- Don’t claim a player is “already comfortable” or “feels at home” in a city when the digest provides no facts to ground that sentiment; empty-source cases are hard dismissals.
+- Don’t attach a named team context to a zero-fact digest just to create a story angle; that’s a source-side gap, not a prose fix (source-side, not fixable in prose).
+- Don’t keep unsupported roster names in the lede when the source digest only cleanly supports the broader QB-plan frame; strip to verified entities first.
+- Don’t let the headline pick a shaky player-center angle if the source’s strongest verified fact is the OTA schedule and the veteran quarterback being monitored.
+- Don’t overcomplicate a fixable rewrite; when grounding is the problem, simplifying to the supported dates, practices, and vetted names is the right move.
+- Don’t make the lede work harder than the source does; if the digest supports a clean OTA timeline, let that do the heavy lifting.
+- Don’t center a veteran-QB conclusion more definitively than the source supports; keep contact status and uncertainty explicit.
+- Don’t let the intro and body rehash the same setup instead of extracting the sharper roster-building angle.
+- Don’t treat “most notable contact” as a settled answer when the source only supports it as one data point in an ongoing evaluation.
