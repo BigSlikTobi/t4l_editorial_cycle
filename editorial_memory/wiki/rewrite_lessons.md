@@ -10,7 +10,7 @@
 - For columnist-style rewrites, clarity and fidelity to the source question matter more than added color.
 - [columnist] A clean, direct frame can work when the headline and intro stay tightly matched to the announcement or matchup.
 - When the source is narrow, a small but real news tap can still clear if the grounding is excellent.
-- [columnist] A reversal or walk-back can work if the headline and lede immediately center the change in tone and the concrete trigger already in the source.
+- [analyst] Center the one clearly supported named option in the lede, and keep any alternates brief and literal.
 
 ## What to avoid
 - Don’t stretch a single quote or update into broader implications than the source supports.
@@ -21,10 +21,14 @@
 - Don’t oversell significance in the headline if the body can only support a narrow, literal claim.
 - Don’t pad a short sourced update with extra explanation that doesn’t add new information.
 - Don’t let headline, lede, and body drift into slightly different angles; keep them reinforcing the same fact.
-- Don’t build the story around unsupported framing that is not doing any real work for the reader.
+- Don’t build a decision narrative from a headline-level mention when the digest has no supporting facts; keep it literal.
+- Don’t imply broader sourcing or a defined decision point unless the digest actually gives you that support.
 - Don’t write around a topic when the digest has no usable facts; if the source is only headline-level, the piece is not properly grounded (source-side, not fixable in prose).
 - Don’t repeatedly state that information is missing; source-meta phrasing is a dead end when there’s no concrete football development to publish.
 - Don’t invent named-player specifics or rivalry details when the digest doesn’t actually supply them; that’s a grounding failure, not a flourish.
 - Don’t force a columnist frame onto a source record that has no usable facts to support it.
 - Don’t keep saying a piece “walked it back” or “backed off” unless the source gives enough concrete detail to make that reversal feel specific rather than repetitive.
 - Don’t repeat the same point across headline, subhead, and intro without adding new verified detail.
+- Don’t introduce unsupported hierarchy or alternate-candidate framing around a QB conversation when the digest has no usable facts to verify it.
+- Don’t treat a rewrite as salvageable if the source digest itself lacks concrete facts; that is source-side, not fixable in prose.
+- Don’t add named-option analysis in analyst pieces unless the digest actually supports those names and relationships [analyst].
