@@ -11,6 +11,7 @@
 - [columnist] A clean, direct frame can work when the headline and intro stay tightly matched to the announcement or complaint.
 - [columnist] A narrow status update can still clear if it stays literal and coherent across headline, lede, and body.
 - [analyst] Keep the frame at the verified team-level premise when the digest lacks supporting detail; a simple execution/health/stability angle can be enough if it stays literal.
+- [analyst] When the source is thin, a direct headline/lede on the one supported pressure point can still work if you avoid adding usage or background claims.
 - When a source is narrow, a small but real news tap can still clear if the grounding is excellent.
 
 ## What to avoid
@@ -23,6 +24,7 @@
 - Don’t let headline, lede, and body drift into slightly different angles; keep them reinforcing the same fact.
 - Don’t build a decision narrative from a headline-level mention when the digest has no supporting facts; keep it literal.
 - Don’t imply broader sourcing or a defined decision point unless the digest actually gives you that support.
+- Don’t use source-meta/report-style framing to compensate for thin support, and don’t add unsupported usage claims like role-load or background-piece language when the digest is empty or nearly empty (source-side, not fixable in prose).
 - Don’t write around a topic when the source has no usable facts; if the source is only headline-level, the piece is not properly grounded (source-side, not fixable in prose).
 - Don’t force a columnist frame onto a source record that has no usable facts to support it.
 - Don’t invent named-player specifics, contract claims, or availability claims when the digest doesn’t verify them.
@@ -31,3 +33,5 @@
 - [analyst] Don’t attach team context or player linkage that the digest does not actually verify just to create a story angle; that’s a source-side gap, not a prose fix (source-side, not fixable in prose).
 - [analyst] Don’t dress up broad “path back” or “execution” language with extra certainty unless the source explicitly supports the detail level.
 - [analyst] Don’t repeat unsupported player mentions or treatment details as if they were confirmed facts; if the digest is effectively empty, it’s a source-side failure, not a rewriteable one (source-side, not fixable in prose).
+- [analyst] Don’t use source-meta phrasing like “the report tied” or similar when the record itself has no usable facts; that usually signals unsupported, dismissible copy (source-side, not fixable in prose).
+- [analyst] Don’t turn a generic title about expectations into claims that a team has made a player the centerpiece or raised the bar unless the digest actually supplies those facts (source-side, not fixable in prose).
