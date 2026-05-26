@@ -1,27 +1,30 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the sharpest concrete hook first, then pivot quickly to the bigger projection or outlook.
-- For [analyst], anchor the lede to a specific matchup or forecastable game beat rather than a broad process recap.
-- Keep headline and intro aligned on one core beat so the piece feels immediate and unified.
-- Use the strongest specific fact as the spine of the article, especially when the source set is narrow.
-- Keep the execution lean; concise, source-backed setup often reads stronger than extra explanatory build.
-- Preserve a clean, literal tone when the piece is based on limited but clear preview material.
-- Add context only when it advances the central argument already implied by the source.
-- Strong pieces often succeed by linking a named matchup or event to a clear outcome without extra detours.
-- A direct analyst frame can work when it stays grounded in one or two precise source facts.
-- When a draft has a usable hook, quicken the turn from hook to implication instead of rephrasing the same beat twice.
+- Lead with the single confirmed fact first, especially when the source is a digest or one-paragraph item.
+- Keep headline and lede tightly aligned on the same supported development.
+- Use a direct, restrained tone when the source is thin or only supports one clean takeaway.
+- Stay inside the source’s exact scope; narrow inputs can still make strong stories if the framing is disciplined.
+- Let the confirmed action or reaction carry the hook instead of layering on extra explanation.
+- Keep the lede concise and avoid front-loading interpretation before the fact is stated.
+- [insider] Precision and restraint often beat expanded context when the source is sparse.
+- A simple “X reacts after Y” frame can work if it stays fully source-bound.
+- When a rewrite saves a draft, preserve the fixed version’s tight sourcing and stripped-down focus.
+- Team-specific significance can work when it is stated in limited, factual terms rather than extrapolated.
+- Strong sparse-source pieces keep the story at headline-level confirmation and do not force extra color or explanation.
+- [insider] Concrete contract updates or adjustments can read well when every number and claim is explicitly grounded.
 
 ## What to avoid
-- Don’t open with repeated setup in both headline and lede when one strong hook would do.
-- Don’t make the headline and intro restate the same matchup/outlook combination.
-- Don’t bury the main read under a generic schedule summary or broad calendar framing.
-- Don’t let filler or explanatory padding replace specific source-backed detail.
-- Don’t spread the same point across too many framing layers; get to the conclusion faster.
-- Don’t make the lede feel like a summary of previews instead of an analyst’s take.
-- Don’t over-explain a straightforward projection when the most persuasive path is a direct one.
-- Don’t force extra context that doesn’t sharpen the argument or change the takeaway.
-- [analyst] Don’t default to calendar recaps when a matchup-plus-outlook angle is the real story.
-- [analyst] Don’t dilute the lede with process language when the strongest signal is a specific game or win-total implication.
-- Don’t overstate or misframe forecast details; keep win-path language tightly tied to the supplied digests.
-- Don’t carry extra roster explanation beyond the one or two injury notes that actually matter for the angle.
+- Don’t add unsupported consequences, broader future implications, or inferred fallout when the source confirms only one development.
+- Don’t let the lede drift into summary language that goes beyond the digest.
+- Don’t pad a thin source with industry-wide or team-wide implications unless the source explicitly supplies them.
+- Don’t make the headline promise more detail than the lede can support.
+- Don’t overbuild context around a source-light story; keep the framing tightly source-bound.
+- Don’t infer motive, hidden exchange details, or off-page specifics from a limited digest.
+- [columnist] Don’t turn a small coach/player reaction into a larger read on a team’s future unless the source directly supports it.
+- Don’t use meta narration about what the source item does or does not spell out.
+- Don’t let unsupported phrasing weaken grounding; precision matters more than flourish in sparse-source stories.
+- Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
+- Don’t add contract-, trade-, or roster-style specifics that the source digest does not explicitly provide.
+- [insider] Don’t claim confirmation your digest does not actually contain; if the source is headline-only, the prose must stay equally limited (source-side, not fixable in prose).
+- If the source digest is missing or non-verifiable, do not try to “rewrite around” it; the problem is source-side, not a prose fix (source-side, not fixable in prose).
