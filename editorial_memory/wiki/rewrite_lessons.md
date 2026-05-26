@@ -30,3 +30,4 @@
 - Don’t rely on broad commentary when the digest has no usable key facts to support it; that’s dismissible source-side drift, not a rewriteable framing issue (source-side, not fixable in prose).
 - [analyst] Don’t attach team context or player linkage that the digest does not actually verify just to create a story angle; that’s a source-side gap, not a prose fix (source-side, not fixable in prose).
 - [analyst] Don’t dress up broad “path back” or “execution” language with extra certainty unless the source explicitly supports the detail level.
+- [analyst] Don’t repeat unsupported player mentions or treatment details as if they were confirmed facts; if the digest is effectively empty, it’s a source-side failure, not a rewriteable one (source-side, not fixable in prose).
