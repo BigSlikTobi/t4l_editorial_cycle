@@ -25,3 +25,5 @@
 - Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
 - [insider] Don’t claim confirmation your digest does not actually contain; if the source is headline-only, the prose must stay equally limited (source-side, not fixable in prose).
 - If the source digest is missing or non-verifiable, do not try to “rewrite around” it; the problem is source-side, not a prose fix (source-side, not fixable in prose).
+- [insider] If a digest only confirms absence or a headline-level status, avoid treating the underlying reason or full situation as established; hedge or omit anything beyond the confirmed fact.
+- [insider] Don’t label someone’s role or status without source support; adding “quarterback” or similar identity framing can sink grounding when the digest is empty (source-side, not fixable in prose).
