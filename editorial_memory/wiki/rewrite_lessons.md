@@ -9,7 +9,7 @@
 - Keep the lede concise and avoid front-loading interpretation before the fact is stated.
 - When a rewrite saves a draft, preserve the fixed version’s tight sourcing and stripped-down focus.
 - Strong sparse-source pieces keep the story at headline-level confirmation and do not force extra color or explanation.
-- Concrete contract or extension updates can read well when every claim is explicitly grounded.
+- Concrete arrest, contract, or extension updates can read well when every claim is explicitly grounded.
 - [columnist] A sharp quote-driven angle works best when it stays anchored to the one fact the source actually confirms.
 - A clean approve can still be team-specific and clickable when the headline and intro stay fully inside the source story.
 
@@ -25,3 +25,6 @@
 - Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
 - Don’t claim a player was “shopping” someone, or cite “the report,” unless the digest actually supports that framing.
 - [columnist] Don’t widen a quote-based extension story into rumor-season context unless the source explicitly brings that context in.
+- Don’t add source-narration about what the digest included or omitted; strip meta lines and keep any follow-up sentence as a plain continuation of confirmed facts.
+- Never present missing-digest details as confirmed; if the source is absent or incomplete, treat the story as unverified and do not invent facts.
+- Don’t convert a source gap into certainty in the body or headline; missing support is a source-side problem, not a prose flourish issue. (source-side, not fixable in prose)
