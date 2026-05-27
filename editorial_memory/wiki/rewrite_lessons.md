@@ -11,7 +11,9 @@
 - Strong sparse-source pieces keep the story at headline-level confirmation and do not force extra color or explanation.
 - Concrete status updates can read well when every claim is explicitly grounded.
 - [insider] Wire-style execution works when it stays precise, concrete, and fully inside the digest.
-- A clean approve can still be team-specific and clickable when the headline and intro stay fully inside the source story.
+- [insider] Small but useful transaction updates work when the exact transaction, role, injury/history, and roster context are all cleanly grounded.
+- High-impact breaking-news pieces work best when the intro adds only source-backed context, not repeated contract language.
+- [insider] Useful context can include recent production or rankings if it stays source-backed and supports the main update.
 
 ## What to avoid
 - Don’t add unsupported consequences, broader future implications, or inferred fallout when the source confirms only one development.
@@ -29,3 +31,5 @@
 - Don’t add source-narration about what the digest included or omitted; strip meta lines and keep any follow-up sentence as a plain continuation of confirmed facts.
 - Never present missing-digest details as confirmed; if the source is absent or incomplete, treat the story as unverified and do not invent facts.
 - Don’t convert a source gap into certainty in the body or headline; missing support is a source-side problem, not a prose flourish issue. (source-side, not fixable in prose)
+- Don’t keep repeating the same contract facts in successive graphs; each paragraph should advance the news cleanly.
+- Don’t state an unsupported tenure detail when the source only supports the extension terms and the status change.
