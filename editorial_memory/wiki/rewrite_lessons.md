@@ -11,9 +11,7 @@
 - Strong sparse-source pieces keep the story at headline-level confirmation and do not force extra color or explanation.
 - Concrete status updates can read well when every claim is explicitly grounded.
 - [insider] Wire-style execution works when it stays precise, concrete, and fully inside the digest.
-- [insider] Small but useful transaction updates work when the exact transaction, role, injury/history, and roster context are all cleanly grounded.
-- High-impact breaking-news pieces work best when the intro adds only source-backed context, not repeated contract language.
-- [insider] Useful context can include recent production or rankings if it stays source-backed and supports the main update.
+- [insider] Useful context can be included only when the source actually supports it; keep any added detail minimal and directly tied to the update.
 
 ## What to avoid
 - Don’t add unsupported consequences, broader future implications, or inferred fallout when the source confirms only one development.
@@ -31,5 +29,20 @@
 - Don’t add source-narration about what the digest included or omitted; strip meta lines and keep any follow-up sentence as a plain continuation of confirmed facts.
 - Never present missing-digest details as confirmed; if the source is absent or incomplete, treat the story as unverified and do not invent facts.
 - Don’t convert a source gap into certainty in the body or headline; missing support is a source-side problem, not a prose flourish issue. (source-side, not fixable in prose)
-- Don’t keep repeating the same contract facts in successive graphs; each paragraph should advance the news cleanly.
+- Don’t add named-entity extras or roster context unless the source explicitly substantiates them.
+- Don’t state an unsupported status update after practice when the digest only confirms an update exists, not the result.
+- Don’t repeat the same contract or status facts in successive graphs; each paragraph should advance the news cleanly.
 - Don’t state an unsupported tenure detail when the source only supports the extension terms and the status change.
+- Don’t fabricate contract figures or other specifics when the digest provides no usable facts; if the only source layer is a summary, treat the story as unpublishable rather than filling gaps.
+- Don’t mix up the story’s named subject with another player or entity in the metadata or copy; identity mismatches are a hard stop, not something prose can smooth over. (source-side, not fixable in prose)
+- Don’t pad a thin column-style story with generic commentary or revisionist framing when the source only supports one factual takeaway.
+- Don’t invent hidden retractions, replayed moves, or other unstated nuance to create depth; if the digest is bare, keep the angle bare too.
+- Don’t let a columnist voice outrun the source; opinionated language still has to stay pinned to the one supported claim.
+- Don’t make a rewrite brief do the work of new reporting; if the fix is just tighter focus, keep it tight and factual.
+- Don’t try to publish an effectively empty digest; if there are no usable facts, the right call is to hold, not to decorate the void.
+- Don’t lean on source-meta phrasing like “the digest does not add more detail”; that reads as filler instead of reporting.
+- Don’t assume a flagged or aggregated source mention is enough to create news without actual underlying facts.
+- Don’t restate the same vague claim in lede and body; repetition can’t compensate for missing source facts.
+- Don’t build a story from the existence of an ESPN item alone; without usable digest facts, the piece is unpublishable.
+- Don’t use banned meta-style phrasing or source narration to prop up a thin columnist piece; if the source is bare, keep the draft bare too.
+- Don’t force Patriots or other team context into a digest that doesn’t support it; that gap is source-side, not fixable in prose. (source-side, not fixable in prose)
