@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single confirmed fact first, especially when the source is a digest or one-paragraph item.
+- Lead with the single confirmed development first, especially when the source is a digest or one-paragraph item.
 - Keep headline and lede tightly aligned on the same supported development.
 - Use a direct, restrained tone when the source is thin or only supports one clean takeaway.
 - Stay inside the source’s exact scope; narrow inputs can still make strong stories if the framing is disciplined.
@@ -10,9 +10,8 @@
 - [insider] Precision and restraint often beat expanded context when the source is sparse.
 - A simple “X reacts after Y” frame can work if it stays fully source-bound.
 - When a rewrite saves a draft, preserve the fixed version’s tight sourcing and stripped-down focus.
-- Team-specific significance can work when it is stated in limited, factual terms rather than extrapolated.
 - Strong sparse-source pieces keep the story at headline-level confirmation and do not force extra color or explanation.
-- [insider] Concrete contract updates or adjustments can read well when every number and claim is explicitly grounded.
+- [insider] Concrete legal or contract updates can read well when every claim is explicitly grounded.
 
 ## What to avoid
 - Don’t add unsupported consequences, broader future implications, or inferred fallout when the source confirms only one development.
@@ -21,10 +20,8 @@
 - Don’t make the headline promise more detail than the lede can support.
 - Don’t overbuild context around a source-light story; keep the framing tightly source-bound.
 - Don’t infer motive, hidden exchange details, or off-page specifics from a limited digest.
-- [columnist] Don’t turn a small coach/player reaction into a larger read on a team’s future unless the source directly supports it.
 - Don’t use meta narration about what the source item does or does not spell out.
 - Don’t let unsupported phrasing weaken grounding; precision matters more than flourish in sparse-source stories.
 - Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
-- Don’t add contract-, trade-, or roster-style specifics that the source digest does not explicitly provide.
 - [insider] Don’t claim confirmation your digest does not actually contain; if the source is headline-only, the prose must stay equally limited (source-side, not fixable in prose).
 - If the source digest is missing or non-verifiable, do not try to “rewrite around” it; the problem is source-side, not a prose fix (source-side, not fixable in prose).
