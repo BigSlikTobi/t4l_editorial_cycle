@@ -7,11 +7,11 @@
 - Stay inside the source’s exact scope; narrow inputs can still make strong stories if the framing is disciplined.
 - Let the confirmed action or reaction carry the hook instead of layering on extra explanation.
 - Keep the lede concise and avoid front-loading interpretation before the fact is stated.
-- [insider] Precision and restraint often beat expanded context when the source is sparse.
-- A simple “X reacts after Y” frame can work if it stays fully source-bound.
 - When a rewrite saves a draft, preserve the fixed version’s tight sourcing and stripped-down focus.
 - Strong sparse-source pieces keep the story at headline-level confirmation and do not force extra color or explanation.
-- [insider] Concrete legal or contract updates can read well when every claim is explicitly grounded.
+- Concrete contract or extension updates can read well when every claim is explicitly grounded.
+- [columnist] A sharp quote-driven angle works best when it stays anchored to the one fact the source actually confirms.
+- A clean approve can still be team-specific and clickable when the headline and intro stay fully inside the source story.
 
 ## What to avoid
 - Don’t add unsupported consequences, broader future implications, or inferred fallout when the source confirms only one development.
@@ -23,7 +23,5 @@
 - Don’t use meta narration about what the source item does or does not spell out.
 - Don’t let unsupported phrasing weaken grounding; precision matters more than flourish in sparse-source stories.
 - Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
-- [insider] Don’t claim confirmation your digest does not actually contain; if the source is headline-only, the prose must stay equally limited (source-side, not fixable in prose).
-- If the source digest is missing or non-verifiable, do not try to “rewrite around” it; the problem is source-side, not a prose fix (source-side, not fixable in prose).
-- [insider] If a digest only confirms absence or a headline-level status, avoid treating the underlying reason or full situation as established; hedge or omit anything beyond the confirmed fact.
-- [insider] Don’t label someone’s role or status without source support; adding “quarterback” or similar identity framing can sink grounding when the digest is empty (source-side, not fixable in prose).
+- Don’t claim a player was “shopping” someone, or cite “the report,” unless the digest actually supports that framing.
+- [columnist] Don’t widen a quote-based extension story into rumor-season context unless the source explicitly brings that context in.
