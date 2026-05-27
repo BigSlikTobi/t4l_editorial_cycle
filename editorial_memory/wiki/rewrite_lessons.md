@@ -24,6 +24,8 @@
 - Don’t let unsupported phrasing weaken grounding; precision matters more than flourish in sparse-source stories.
 - Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
 - Don’t claim extra context that the digest doesn’t actually establish.
+- [insider] Don’t waste space on generic setup or “no further details” framing; get straight to the concrete update.
+- [insider] Don’t let headline and first sentence diverge from the same limited-but-usable fact pattern.
 - Don’t add source-narration about what the digest included or omitted; strip meta lines and keep any follow-up sentence as a plain continuation of confirmed facts.
 - Never present missing-digest details as confirmed; if the source is absent or incomplete, treat the story as unverified and do not invent facts.
 - Don’t convert a source gap into certainty in the body or headline; missing support is a source-side problem, not a prose flourish issue. (source-side, not fixable in prose)
