@@ -1,35 +1,29 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the clearest verified contract, roster-battle, role question, or evaluation checkpoint when the source supports it.
-- Keep the headline and intro tightly aligned on the same real hook, then add one fresh detail instead of repeating the setup.
-- Use the specific job, role, or deal change at issue as the organizing frame when it is explicitly supported.
-- Stay grounded in the source while still being specific about what is actually being sorted out.
-- Let the story move quickly from event-setting into the concrete news or competition the team is working through.
-- A tight quote-led note can work when the source only supports one clear takeaway.
-- Brief, source-grounded team context is fine if it does not widen the claim.
-- Keep the piece inside the digest when it cleanly supports one timely, concrete takeaway.
-- A restrained tone works when it still foregrounds the article's one or two concrete facts and stakes.
-- [insider] In OTA coverage, center the verified battle or evaluation window rather than generic camp context.
-- [insider] When the source supports it, a contract-adjustment note can work if the lede stays on the actual deal change and not surrounding chatter.
-- [analyst] A strong grounded piece can still work if it names the concrete roster questions the source already raises.
+- Lead with the single verified update when the source supports one concrete development.
+- Open immediately with the consequence of the ruling or move, not just the bare event.
+- Keep the headline and first sentence tightly aligned on the same confirmed hook.
+- Use a minimalist lede when the digest is thin but factual.
+- Stay pinned to the source-backed outcome instead of broadening into extra context.
+- Let one verified detail carry the piece rather than padding it with embellishment.
+- Keep context brief and inside the bounds of what the source explicitly supports.
+- Build around the concrete fact, not source-process commentary.
+- Clean, direct reporting can work well even with limited source detail if every sentence advances the same verified update.
+- [insider] Center the confirmed procedure/move and expected return window, not what the digest did or did not include.
+- [insider] When the source is thin, restraint is a strength: a short, tightly grounded item is better than invented framing.
 
 ## What to avoid
-- Don’t let the headline, subhead, and intro all restate the same setup without advancing to the actual question or news value.
-- Don’t leave a flat lede when the digests already point to a stronger competition, checkpoint, or role battle.
-- Don’t bury the most consequential player battle under generic offseason framing.
-- Don’t widen a specific note into broad roster conclusions beyond what the source supports.
-- Don’t overemphasize camp context when the real value is in the job battles or concrete deal changes the source already makes clear.
-- Don’t make the story feel repetitive by cycling through the same setup language in multiple places.
-- Don’t treat a source-backed roster fight or contract adjustment as background when it should be the main hook.
-- Don’t infer extra implications from a narrow digest; keep the claim as tight as the evidence.
-- Don’t convert a clear update into vague “team is sorting things out” language.
-- Don’t write as if the article has three separate angles when the source really supports one concise point.
-- Don’t use source-narration or hedging language to fill space when the draft can’t be firmly reported.
-- Don’t stretch thin facts into speculative roster-chat or status-locking framing; keep the note as simple as the source allows.
-- [insider] Don’t default to broad camp framing when the source gives a sharper depth-chart, role, or contract update.
-- [insider] Don’t add trade-rumor or outside-context framing unless the digest explicitly supports it.
-- [analyst] Don’t pad the piece with repeated setup beats instead of the concrete player stakes the digests already provide.
-- [columnist] Don’t identify a coach, team role, or relationship that the source digest does not actually support.
-- (source-side, not fixable in prose) Don’t salvage a story built on an empty or unusable source by inventing reported details.
-- (source-side, not fixable in prose) Don’t publish when the digest is missing or too thin to support basic factual identification or any solid angle.
+- Don’t repeat the same verified fact in the headline, lede, and body without adding new source-backed detail.
+- Don’t add meta narration about the source or digest itself.
+- Don’t widen a narrow update into extra timeline, roster, or procedural color unless the source supports it.
+- Don’t imply details beyond the verified outcome or consequence.
+- Don’t add unsupported context when the source has no key facts to support it.
+- Don’t pad a simple procedure, signing, or move with speculative implications.
+- Don’t let source-process framing crowd out the actual news event.
+- Don’t add new specifics unless they are explicitly present in the source.
+- Don’t force broader context when the digest only contains the bare outcome.
+- Don’t try to salvage a publishable story from a digest that offers no usable facts beyond the title/summary (source-side, not fixable in prose).
+- [insider] Don’t use filler language that sounds like summary commentary instead of reporting the verified update.
+- [insider] Don’t make direct signing or roster-change claims when the digest contains only a headline-level summary and no verifiable details.
+- [insider] Don’t repeat story-specific specifics when the source digest is too thin to support them; keep to the verified title-level fact or dismiss it.
