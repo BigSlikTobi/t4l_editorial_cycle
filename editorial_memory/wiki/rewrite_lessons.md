@@ -9,9 +9,9 @@
 - Keep the lede concise and avoid front-loading interpretation before the fact is stated.
 - Strong sparse-source pieces keep the story at quote-level confirmation and do not force extra color or explanation.
 - Concrete status updates can read well when every claim is explicitly grounded.
-- [analyst] Keep only the source-backed takeaway when the story is thin; clean, direct confirmation can be enough if the wording is tight.
 - [insider] Wire-style execution works when it stays precise, concrete, and fully inside the digest.
 - [columnist] A restrained columnist voice can still work when it stays tightly grounded and lets the confirmed quote do the work.
+- When the source is only a report headline, hedge transaction language to match what is actually confirmed.
 
 ## What to avoid
 - Don’t add unsupported consequences, broader future implications, or inferred fallout when the source confirms only one development.
@@ -24,16 +24,18 @@
 - Don’t let unsupported phrasing weaken grounding; precision matters more than flourish in sparse-source stories.
 - Don’t bury the one confirmed takeaway under scene-setting, extrapolation, or speculative significance.
 - Don’t repeat the same claim across headline, intro, and body without adding new source-backed detail; thin stories still need a distinct step forward.
-- [analyst] Don’t turn a source-backed comment into a bigger QB battle, depth-chart stakes, or team-decision narrative unless the digest actually supports it.
-- [analyst] Don’t assign team context when the digest does not provide it; missing context is a grounding failure, not a creative bridge.
 - [insider] Don’t waste space on generic setup or self-referential filler; get straight to the concrete update.
 - Don’t add source-narration about what the digest included or omitted; strip meta lines and keep any follow-up sentence as a plain continuation of confirmed facts.
-- Never present missing-digest details as confirmed; if the source is absent or incomplete, treat the story as unverified and do not invent facts.
 - Don’t convert a source gap into certainty in the body or headline; missing support is a source-side problem, not a prose flourish issue. (source-side, not fixable in prose)
-- Don’t add named-entity extras or roster context unless the source explicitly substantiates them.
-- Don’t state an unsupported status update after practice when the digest only confirms an update exists, not the result.
-- Don’t repeat the same contract or status facts in successive graphs; each paragraph should advance the news cleanly.
-- Don’t fabricate contract figures or other specifics when the digest provides no usable facts; if the only source layer is a summary, treat the story as unpublishable rather than filling gaps.
-- Don’t mix up the story’s named subject with another player or entity in the metadata or copy; identity mismatches are a hard stop, not something prose can smooth over. (source-side, not fixable in prose)
+- Don’t state a transaction as fully completed if the source only supports a reported connection; match the hedge to the evidence.
+- Don’t include phrases like “the report ties” or “pending the team’s next step” unless the digest itself supplies that framing.
+- Don’t add roster implications or next-step speculation when the digest only gives a bare report.
 - Don’t force team context into a digest that doesn’t support it; that gap is source-side, not fixable in prose. (source-side, not fixable in prose)
 - [analyst] Don’t build a system-change story when the digest is effectively empty; no anchor means no publishable angle.
+- Don’t assert an outcome like a release when the digest only supports the arrest and named parties; unsupported disposition claims are a grounding failure.
+- Don’t use source-meta phrasing such as “according to the digest” or “No additional details were included”; keep the prose in-story and plain.
+- Don’t let a rewrite keep the right names but add an unsupported procedural step; the fix is to narrow the claim, not decorate it.
+- [insider] Don’t write as if the article is filling in missing source material; if the source doesn’t confirm the action, leave it out.
+- Don’t describe a bare digest as “tied to” a person or transaction unless the source actually substantiates that link; circular hedge language is still unsupported framing.
+- Don’t add report-level context when the only facts are headline-deep; if the rewrite still can’t add source-backed detail, the piece is a dismissal, not a styling problem.
+- Don’t contradict the source headline with a different outcome or status; if the digest says released, the draft cannot treat the same event as only an arrest.
