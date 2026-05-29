@@ -13,6 +13,7 @@
 - [analyst] Two concrete developments can work in one piece if both stay inside the digests and the headline still tracks the main one.
 - [insider] A closed-world utility item can work well when it gives one concrete decision point and stays inside the record.
 - [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
+- [columnist] A clean approve can come from staying tightly inside the source and centering one supported development without inventing extra context.
 
 ## What to avoid
 - Don’t combine two separate source digests without a sharper throughline; one story needs to lead.
@@ -31,3 +32,6 @@
 - Don’t write an injury-update narrative when the digest is effectively empty; that’s a source-substance failure, not a prose fix (source-side, not fixable in prose).
 - Don’t name marquee figures or broader OTA implications unless the source actually gives you concrete facts to support them; otherwise the piece reads like invented context.
 - Don’t assert that teammates “cleared the air” or similar relationship claims unless the closed-world record actually supplies the substance behind that phrase (source-side, not fixable in prose).
+- Don’t build a rumor-context story when the digest has no usable facts; that’s a closed-world failure, not an execution tweak (source-side, not fixable in prose).
+- Don’t add backfield speculation, role projections, or a reset-path narrative when the source only supports a reunion-and-opportunity setup.
+- Don’t pad a columnist piece with generic stakes or implied role details when the digest stays at the headline level.
