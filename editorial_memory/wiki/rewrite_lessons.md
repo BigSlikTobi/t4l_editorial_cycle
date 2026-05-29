@@ -9,7 +9,6 @@
 - Keep the ending lean when the core facts already carry the piece.
 - Let a narrow competition/update frame stand on its own without overexplaining it.
 - Tight source grounding can still carry approval when the draft stays specific and avoids unsupported color.
-- [analyst] Center the piece on the clearest supported angle, then let any other sourced detail function as support rather than a second story.
 - [insider] A closed-world utility item can work well when it gives one concrete decision point and stays inside the record.
 - [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
 - [columnist] A clean approve can come from staying tightly inside the source and centering one supported development without inventing extra context.
@@ -38,3 +37,11 @@
 - Don’t stay so abstract that a solid source story feels thin; for columnist work, replace repeated framing with the concrete news hook and make the lede do the work.
 - Don’t let the headline, subhead, and first sentence all restate the same idea in near-identical language; compress repetition and advance the fact in each line.
 - Don’t trade away specificity for polished generalities when the source gives you a clear, timely angle.
+- Don’t treat an empty digest as salvageable by prose; if there are no recoverable facts, the item should be dismissed as source-side (source-side, not fixable in prose).
+- Don’t invent current-team status or moving-on implications when the source only supports a bare retirement notice.
+- Don’t imply present-tense roster relevance from a retirement story unless the record explicitly supports it.
+- Don’t add timing, pricing, deadlines, or roster consequences unless they are directly sourced; keep contract-angle stories anchored to the one verified fact.
+- Don’t turn a tricky extension spot into a fuller negotiation narrative without sourced details.
+- Don’t let the lede wander beyond the single supported complication when the source is narrow.
+- Don’t turn an empty source digest into contract-analysis prose; if the only support is a headline-level title, the piece is source-side and not recoverable in editing (source-side, not fixable in prose).
+- Don’t call a contract situation “tricky,” “difficult,” or a “decision point” unless the supplied digest actually supports that framing.
