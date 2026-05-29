@@ -24,6 +24,10 @@
 - Don’t let a secondary note pull focus from the main reported fact.
 - Don’t repeat the same sourced point across headline, subhead, and intro.
 - Don’t widen a narrow interview into a broader background story unless the source explicitly supports it.
-- Don’t invent details about an unspecified factor or condition when the digest doesn’t say what it is.
-- Don’t build on a source that has no usable key facts; if the core facts aren’t there, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
+- Don’t invent roster-wide scene-setting, locker-room implications, or other texture when the digest doesn’t support them.
+- Don’t lead with implied conflict if the report only says the sides cleared the air and leaves what was discussed unspecified.
+- Don’t add broad roster-spin or implied consequence when the source support is effectively missing.
+- Don’t lean on unsupported framing when the digest is thin; if the core facts aren’t there, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t write an injury-update narrative when the digest is effectively empty; that’s a source-substance failure, not a prose fix (source-side, not fixable in prose).
+- Don’t name marquee figures or broader OTA implications unless the source actually gives you concrete facts to support them; otherwise the piece reads like invented context.
+- Don’t assert that teammates “cleared the air” or similar relationship claims unless the closed-world record actually supplies the substance behind that phrase (source-side, not fixable in prose).
