@@ -11,8 +11,8 @@
 - Tight source grounding can still carry approval when the draft stays specific and avoids unsupported color.
 - [insider] A closed-world utility item can work well when it gives one concrete decision point and stays inside the record.
 - [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
-- [columnist] A clean approve can come from staying tightly inside the source and centering one supported development without inventing extra context.
-- [columnist] A source-supported but modest update can still work if it names the team, the player, the age/context, and the concern plainly without reaching beyond the digest.
+- [insider] A sharp local staffing update can work if the headline and lede stay centered on the one supported change.
+- [analyst] When the digests support two concrete team angles, keep both in frame but tie them to one roster trade-off rather than splitting the story.
 
 ## What to avoid
 - Don’t combine two separate source digests without a sharper throughline; one story needs to lead.
@@ -45,3 +45,7 @@
 - Don’t let the lede wander beyond the single supported complication when the source is narrow.
 - Don’t turn an empty source digest into contract-analysis prose; if the only support is a headline-level title, the piece is source-side and not recoverable in editing (source-side, not fixable in prose).
 - Don’t call a contract situation “tricky,” “difficult,” or a “decision point” unless the supplied digest actually supports that framing.
+- Don’t present a source-missing staffing change as fully confirmed without enough digest support; hedge or strip unsupported specifics and keep the update source-safe.
+- Don’t project a 2026 role map or suggest a receiver plan has already crystallized when the digest is empty; stick to the one supported premise and the named players in frame.
+- Don’t convert a headline-only or empty ESPN digest into asserted personnel moves; if the source supplies no usable detail, dismiss it as source-side rather than trying to write around it (source-side, not fixable in prose).
+- Don’t build a role-projection story or attribute stock-buying logic when the digest is missing; unsupported analyst inference is not salvageable without source facts (source-side, not fixable in prose).
