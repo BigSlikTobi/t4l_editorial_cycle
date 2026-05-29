@@ -10,10 +10,10 @@
 - Let a narrow competition/update frame stand on its own without overexplaining it.
 - Tight source grounding can still carry approval when the draft stays specific and avoids unsupported color.
 - [analyst] Center the piece on the clearest supported angle, then let any other sourced detail function as support rather than a second story.
-- [analyst] Two concrete developments can work in one piece if both stay inside the digests and the headline still tracks the main one.
 - [insider] A closed-world utility item can work well when it gives one concrete decision point and stays inside the record.
 - [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
 - [columnist] A clean approve can come from staying tightly inside the source and centering one supported development without inventing extra context.
+- [columnist] A source-supported but modest update can still work if it names the team, the player, the age/context, and the concern plainly without reaching beyond the digest.
 
 ## What to avoid
 - Don’t combine two separate source digests without a sharper throughline; one story needs to lead.
@@ -35,3 +35,6 @@
 - Don’t build a rumor-context story when the digest has no usable facts; that’s a closed-world failure, not an execution tweak (source-side, not fixable in prose).
 - Don’t add backfield speculation, role projections, or a reset-path narrative when the source only supports a reunion-and-opportunity setup.
 - Don’t pad a columnist piece with generic stakes or implied role details when the digest stays at the headline level.
+- Don’t stay so abstract that a solid source story feels thin; for columnist work, replace repeated framing with the concrete news hook and make the lede do the work.
+- Don’t let the headline, subhead, and first sentence all restate the same idea in near-identical language; compress repetition and advance the fact in each line.
+- Don’t trade away specificity for polished generalities when the source gives you a clear, timely angle.
