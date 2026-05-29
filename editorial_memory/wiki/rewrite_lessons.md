@@ -10,6 +10,7 @@
 - Let the sourced interview or quote be the story, especially when it is the main verified frame.
 - Tight source grounding can still carry approval if the draft avoids embellishment and stays specific.
 - [analyst] When the source gives one supported perspective, build the piece around that perspective rather than inventing a broader narrative.
+- [insider] A closed-world utility item can work well when it gives one concrete decision point and stays inside the record.
 - [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
 
 ## What to avoid
