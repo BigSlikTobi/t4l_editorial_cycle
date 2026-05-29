@@ -1,24 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the strongest verified quote or fact when the source is thin; a single clean takeaway can carry the piece.
-- Keep the lede tightly anchored to the exact supported development instead of widening into broader team or contract context.
-- Preserve a direct, factual read when the source only supports one narrow claim.
-- Match the headline to the one confirmed point in the body; simple alignment beats clever framing.
-- Use precise wording around quoted significance when that is the only durable signal in the digest.
-- Stay disciplined about source limits: if the digest is sparse, the best draft is often the most restrained one.
-- [analyst] When the source gives one supported opinion or valuation, build the analysis around that quote rather than inventing a fuller transaction story.
-- [analyst] Treat the team’s valuation as the story when that is the only verified angle, and avoid unsupported color.
-- Keep the story centered on the named person’s stated view when that is the only verified angle.
-- Tight source grounding can be enough for approval even when the piece is simple; execution matters more than added flourish.
+- Lead with the clearest sourced core when the piece is thin; a direct, factual takeaway can be enough.
+- Keep the headline and lede tightly aligned to the same verified point.
+- Add one concrete source-backed angle in the intro instead of repeating the same line across headline, subhead, and first paragraph.
+- Stay centered on the named subject’s own words or disclosed stance when that is the durable signal.
+- Use restrained wording when the source only supports one narrow claim; simplicity reads cleaner than overreach.
+- Preserve a direct read on sensitive or personal disclosures instead of widening into commentary about significance.
+- Let the sourced interview or quote be the story, especially when it is the main verified frame.
+- Tight source grounding can still carry approval if the draft avoids embellishment and stays specific.
+- [analyst] When the source gives one supported perspective, build the piece around that perspective rather than inventing a broader narrative.
+- [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
 
 ## What to avoid
-- Don’t turn a single quoted opinion into a full contract or roster-decision narrative unless the digest actually supplies those details.
-- Don’t add implied team context or behind-the-scenes certainty that isn’t in the closed source set.
-- Don’t overstate what the source proves; if the evidence is narrow, write narrowly.
-- Don’t let the headline promise a more complete development than the body can verify.
-- Don’t build around unsupported specifics just because the team and player are known.
-- Don’t treat a thin digest like a full-news package; avoid filling gaps with inference.
-- [analyst] Don’t widen the piece beyond the quoted significance unless the expansion is explicitly grounded in the source.
-- [analyst] Don’t invent extra reporting, contract details, or color when the source only supports a valuation quote.
-- Don’t manufacture a news peg from sparse source material; when the digest lacks usable facts, that’s a source-side problem, not a prose fix (source-side, not fixable in prose).
+- Don’t turn a personal disclosure into a meta piece about what the story means or why it matters.
+- Don’t describe the article instead of delivering sourced detail; commentary can crowd out the actual reporting.
+- Don’t add unsupported references to other athletes, teams, or names that are not in the digest.
+- Don’t widen a narrow interview into a fuller background narrative unless the source explicitly supports it.
+- Don’t let the headline promise more context, scope, or implication than the body verifies.
+- Don’t treat a thin digest like a complete news package; avoid filling gaps with inference.
+- Don’t overstate significance when the verified core is simply that the subject spoke openly.
+- Don’t repeat the same sourced point three times across headline, subhead, and intro.
+- Don’t invent details about an unspecified factor or condition when the digest doesn’t say what it is.
+- Don’t make unsupported cross-name references; if the digest doesn’t supply them, leave them out.
+- Don’t build on a source that has no usable key facts; if the core facts aren’t there, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
+- Don’t repeat injury/timeline language as if confirmed when the digest is empty or unusable; that’s a source-substance failure, not a prose fix (source-side, not fixable in prose).
