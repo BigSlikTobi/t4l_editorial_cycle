@@ -49,3 +49,4 @@
 - Don’t project a 2026 role map or suggest a receiver plan has already crystallized when the digest is empty; stick to the one supported premise and the named players in frame.
 - Don’t convert a headline-only or empty ESPN digest into asserted personnel moves; if the source supplies no usable detail, dismiss it as source-side rather than trying to write around it (source-side, not fixable in prose).
 - Don’t build a role-projection story or attribute stock-buying logic when the digest is missing; unsupported analyst inference is not salvageable without source facts (source-side, not fixable in prose).
+- Don’t verify injury-status claims, improvement updates, or recovery trajectories without extractable source facts; if the digest is missing, dismiss it as source-side, not a prose problem (source-side, not fixable in prose).
