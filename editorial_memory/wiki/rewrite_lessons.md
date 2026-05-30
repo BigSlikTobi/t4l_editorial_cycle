@@ -9,10 +9,8 @@
 - Keep the ending lean when the core facts already carry the piece.
 - Let a narrow competition/update frame stand on its own without overexplaining it.
 - Tight source grounding can still carry approval when the draft stays specific and avoids unsupported color.
-- [insider] A closed-world utility item can work well when it gives one concrete decision point and stays inside the record.
-- [columnist] Keep a thin note disciplined and concrete when the source only supports a narrow return/update frame.
-- [insider] A sharp local staffing update can work if the headline and lede stay centered on the one supported change.
-- [analyst] When the digests support two concrete team angles, keep both in frame but tie them to one roster trade-off rather than splitting the story.
+- In thin injury updates, keep the copy tight, hedged, and centered on the immediate team-specific concern.
+- When the source supports two concrete team angles, keep both in frame but tie them to one trade-off rather than splitting the story.
 
 ## What to avoid
 - Don’t combine two separate source digests without a sharper throughline; one story needs to lead.
@@ -50,3 +48,8 @@
 - Don’t convert a headline-only or empty ESPN digest into asserted personnel moves; if the source supplies no usable detail, dismiss it as source-side rather than trying to write around it (source-side, not fixable in prose).
 - Don’t build a role-projection story or attribute stock-buying logic when the digest is missing; unsupported analyst inference is not salvageable without source facts (source-side, not fixable in prose).
 - Don’t verify injury-status claims, improvement updates, or recovery trajectories without extractable source facts; if the digest is missing, dismiss it as source-side, not a prose problem (source-side, not fixable in prose).
+- Don’t include source-meta phrasing about what the report did or did not provide; keep the update clean and factual.
+- Don’t repeat the same hedged injury concern without adding concrete detail or player identity.
+- Don’t center a draft on the source’s missingness; when the digest is light, remove meta caveats and write only to the supported fantasy-impact roundup angles.
+- Don’t build a breaking-news injury note from an empty digest; if the report has no player identification or confirmed detail, it’s source-side, not fixable in prose (source-side, not fixable in prose).
+- Don’t make up player names or team links to fill a missing digest; unsupported substance must be dismissed, not patched with invented context (source-side, not fixable in prose).
