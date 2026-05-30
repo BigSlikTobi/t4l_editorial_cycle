@@ -1,39 +1,30 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with one clean, source-supported hook instead of stitching multiple digest threads into equal partners.
-- Keep the headline and intro locked to the same verified angle.
+- Lead with a single, source-supported quote or fact when it is the sharpest available hook.
+- Keep the headline and intro locked to the same verified angle and level of certainty.
+- Preserve literal, close-to-source wording when the quote itself carries the story.
 - Build around the most concrete detail when the source mix is thin or multi-part.
-- Use a secondary source note only if it directly strengthens the main hook.
-- Stay disciplined with analyst framing: make the throughline explicit and avoid connective filler.
-- Keep the ending lean when the core facts already carry the piece.
-- Let a narrow competition/update frame stand on its own without overexplaining it.
-- Tight source grounding can still carry approval when the draft stays specific and avoids unsupported color.
-- In thin injury or update items, keep the copy tight, hedged, and centered on the immediate reported fact.
-- For insider-style items, a single vivid verified detail can carry the lede if it stays source-safe.
-- A simple fact-first lede works when the digest is thin and the source only supports a narrow claim.
+- Keep analyst/columnist framing tight: make the throughline explicit without adding broad commentary.
+- Stay disciplined with source grounding; a usable core can carry the piece if the draft avoids unsupported context.
+- Use a narrow update or denial frame on its own instead of stretching it into a bigger narrative.
+- Let a direct dismissal stand without overexplaining its wider implications.
+- Keep the copy tight and centered on the immediate reported fact when the source only supports a limited claim.
+- For insider-style items, one vivid verified detail can carry the lede if it stays source-safe.
+- Clean, modest headline-and-intro alignment can be enough for a small news hit when grounding is exceptional.
 
 ## What to avoid
-- Don't combine two separate source digests without a sharper throughline; one story needs to lead.
-- Don't let a broad bridge paragraph dilute stronger, source-supported angles.
-- Don't make the final paragraph generic when the article has specific facts available.
+- Don't combine separate source threads without a sharper throughline; one story needs to lead.
+- Don't let broad commentary or bridge paragraphs dilute the source-backed core.
+- Don't broaden a quote-driven item into locker-room or conversation framing unless the digest supports it.
+- Don't add surrounding context, named entities, or background unless the source explicitly provides it.
 - Don't split the headline and intro across competing hooks; pick one primary frame.
-- Don't add connective filler just to move between verified points.
-- Don't overbuild a rookie-competition or update item into a fuller narrative than the source supports.
-- Don't let a secondary note pull focus from the main reported fact.
-- Don't repeat the same sourced point across headline, subhead, and intro.
-- Don't widen a narrow interview into a broader background story unless the source explicitly supports it.
-- Don't stay so abstract that a solid source story feels thin; replace repeated framing with the concrete news hook and make the lede do the work.
+- Don't make the headline outrun the body when the source only supports a narrow denial or update.
+- Don't replace a literal quote with a looser paraphrase that weakens the point.
+- Don't widen a narrow interview or comment into a fuller story than the source supports.
+- Don't let repetition or commentary substitute for concrete detail in an insider-style item.
 - Don't invent explanatory context or "normal" background when the digest provides no usable facts.
-- Don't claim a report offers more detail than it does; strip back any invented explanatory framing.
 - Don't claim context the digest doesn't confirm, even if the topic has a strong news peg.
-- Don't fabricate injury/status details or unsupported names when the digest has no facts to anchor them.
 - Don't add claims beyond an empty or near-empty digest in hopes of making the story publishable; it needs real source substance first (source-side, not fixable in prose).
-- Don't turn a missing-summary or empty digest into a faux roundup with invented OTA takeaways, names, or injury updates; if the source has no usable facts, there is nothing reliable to salvage (source-side, not fixable in prose).
-- Don't repeat an unsupported premise as if it were confirmed, or lean on source-narration/meta phrasing when the digest is empty (source-side, not fixable in prose).
-- Don't present a trade framework, negotiation path, or consequence as established unless the digest actually supports it; rebuild the lede around the verified fact only.
-- Don't use source-meta phrasing about what the digest does or doesn't contain; cut those lines and stay inside the reported facts.
-- Don't let repetition substitute for concrete detail in insider-style items; the lede should carry the verified news, not commentary about the source.
-- Don't let the headline outrun the body: if the source only supports a narrow update, the intro has to match that exact level of certainty.
-- Don't force a fantasy or OTA angle onto a source digest that contains no usable facts; when the material is effectively empty, the correct move is to stop rather than invent (source-side, not fixable in prose).
-- Don't treat trade buzz around a player as verified when the digest is empty or internally inconsistent; if the source base can't support the claim, rebuild around what is actually confirmed (source-side, not fixable in prose).
+- Don't treat trade buzz or locker-room chatter as established if the digest doesn't support it (source-side, not fixable in prose).
+- Don't use source-meta phrasing about what the digest does or doesn't contain; stay inside the reported facts.
