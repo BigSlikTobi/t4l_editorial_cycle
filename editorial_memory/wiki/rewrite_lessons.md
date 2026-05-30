@@ -10,7 +10,7 @@
 - Let a narrow competition/update frame stand on its own without overexplaining it.
 - Tight source grounding can still carry approval when the draft stays specific and avoids unsupported color.
 - In thin injury updates, keep the copy tight, hedged, and centered on the immediate team-specific concern.
-- When the source supports two concrete team angles, keep both in frame but tie them to one trade-off rather than splitting the story.
+- When the source supports a player self-update, keep the piece anchored to that verified development rather than broadening into commentary.
 
 ## What to avoid
 - Don’t combine two separate source digests without a sharper throughline; one story needs to lead.
@@ -23,33 +23,12 @@
 - Don’t repeat the same sourced point across headline, subhead, and intro.
 - Don’t widen a narrow interview into a broader background story unless the source explicitly supports it.
 - Don’t invent roster-wide scene-setting, locker-room implications, or other texture when the digest doesn’t support them.
-- Don’t lead with implied conflict if the report only says the sides cleared the air and leaves what was discussed unspecified.
-- Don’t add broad roster-spin or implied consequence when the source support is effectively missing.
-- Don’t lean on unsupported framing when the digest is thin; if the core facts aren’t there, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
-- Don’t write an injury-update narrative when the digest is effectively empty; that’s a source-substance failure, not a prose fix (source-side, not fixable in prose).
-- Don’t name marquee figures or broader OTA implications unless the source actually gives you concrete facts to support them; otherwise the piece reads like invented context.
-- Don’t assert that teammates “cleared the air” or similar relationship claims unless the closed-world record actually supplies the substance behind that phrase (source-side, not fixable in prose).
-- Don’t build a rumor-context story when the digest has no usable facts; that’s a closed-world failure, not an execution tweak (source-side, not fixable in prose).
-- Don’t add backfield speculation, role projections, or a reset-path narrative when the source only supports a reunion-and-opportunity setup.
-- Don’t pad a columnist piece with generic stakes or implied role details when the digest stays at the headline level.
 - Don’t stay so abstract that a solid source story feels thin; for columnist work, replace repeated framing with the concrete news hook and make the lede do the work.
 - Don’t let the headline, subhead, and first sentence all restate the same idea in near-identical language; compress repetition and advance the fact in each line.
 - Don’t trade away specificity for polished generalities when the source gives you a clear, timely angle.
-- Don’t treat an empty digest as salvageable by prose; if there are no recoverable facts, the item should be dismissed as source-side (source-side, not fixable in prose).
-- Don’t invent current-team status or moving-on implications when the source only supports a bare retirement notice.
-- Don’t imply present-tense roster relevance from a retirement story unless the record explicitly supports it.
-- Don’t add timing, pricing, deadlines, or roster consequences unless they are directly sourced; keep contract-angle stories anchored to the one verified fact.
-- Don’t turn a tricky extension spot into a fuller negotiation narrative without sourced details.
-- Don’t let the lede wander beyond the single supported complication when the source is narrow.
-- Don’t turn an empty source digest into contract-analysis prose; if the only support is a headline-level title, the piece is source-side and not recoverable in editing (source-side, not fixable in prose).
-- Don’t call a contract situation “tricky,” “difficult,” or a “decision point” unless the supplied digest actually supports that framing.
-- Don’t present a source-missing staffing change as fully confirmed without enough digest support; hedge or strip unsupported specifics and keep the update source-safe.
-- Don’t project a 2026 role map or suggest a receiver plan has already crystallized when the digest is empty; stick to the one supported premise and the named players in frame.
-- Don’t convert a headline-only or empty ESPN digest into asserted personnel moves; if the source supplies no usable detail, dismiss it as source-side rather than trying to write around it (source-side, not fixable in prose).
-- Don’t build a role-projection story or attribute stock-buying logic when the digest is missing; unsupported analyst inference is not salvageable without source facts (source-side, not fixable in prose).
-- Don’t verify injury-status claims, improvement updates, or recovery trajectories without extractable source facts; if the digest is missing, dismiss it as source-side, not a prose problem (source-side, not fixable in prose).
-- Don’t include source-meta phrasing about what the report did or did not provide; keep the update clean and factual.
-- Don’t repeat the same hedged injury concern without adding concrete detail or player identity.
-- Don’t center a draft on the source’s missingness; when the digest is light, remove meta caveats and write only to the supported fantasy-impact roundup angles.
-- Don’t build a breaking-news injury note from an empty digest; if the report has no player identification or confirmed detail, it’s source-side, not fixable in prose (source-side, not fixable in prose).
-- Don’t make up player names or team links to fill a missing digest; unsupported substance must be dismissed, not patched with invented context (source-side, not fixable in prose).
+- Don’t overstate unverified details such as quote text, injury specifics, or timeline claims when the digest only confirms the story exists.
+- Don’t pad a columnist piece with generic stakes or implied timeline meaning when the digest stays at the headline level.
+- Don’t lead with unsupported details from the broader report unless they are actually present in the source digest; keep the update source-safe.
+- Don’t turn a source-supported self-update into a speculative recovery narrative unless the digest gives you hard facts to anchor it.
+- Don’t imply extra rehab certainty or timeline nuance beyond the exact verified update; keep the lede on the precise sourced wording and target return date.
+- Don’t let recovery reporting drift into narrative embellishment when the digest only supports a short, factual status update.
