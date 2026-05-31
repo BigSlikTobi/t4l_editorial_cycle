@@ -1,26 +1,24 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with a single, specific reported figure when the source is strong enough to stand on it.
-- Keep headline and lede tightly matched to the verified claim and any record context.
-- Use a clean comparison frame when the source explicitly supports a record or benchmark.
-- Preserve close-to-source wording for the core fact when precision matters more than flourish.
-- Let a narrow factual update carry the story without padding it into a bigger narrative.
-- Keep commentary restrained and source-bound when the factual backbone is the main value.
-- Strong specificity can offset a limited source package if the numbers and comparison are well grounded.
-- Tight execution on a thin but clear update can still produce a readable, publishable piece.
-- Clean, well-structured prose still matters even when the story ultimately fails source support.
-- A precise comparison can work when it is explicitly grounded in the digest.
+- Keep the story tightly inside the source facts; restrained scope can read strong when the package is narrow.
+- Use a clean, direct spring-update angle when the source material only supports one main development.
+- Let a single supported development carry the piece instead of stretching for broader meaning.
+- Ground the article in concrete comments or reported details so the reader gets something specific and usable.
+- Align headline and lede on the same verified angle to keep the piece focused from the start.
+- Advance quickly past the headline idea in the intro rather than repeating it verbatim.
+- Strong grounding can compensate for only moderate impact when the execution is clean.
+- Short, direct framing works well for columnist-style reaction pieces and straightforward daily updates.
+- Preserve precise wording around the central fact or adjustment when the article depends on one reported interaction.
 
 ## What to avoid
-- Don’t add team, depth-chart, contract, or season-footing framing unless the source digest explicitly supports it.
-- Don’t let a headline imply a team angle or other context that the body cannot verify.
-- Don’t force a columnist angle into a story that is already complete as a straightforward reported item.
-- Don’t expand a strong number into marketability or broader football meaning without source backing.
-- Don’t keep unsupported sidebar details in the body just to make a short piece feel more substantial.
-- Don’t invent or leave in wrong-team fields when the digest provides no team support at all.
-- Don’t treat a reported figure as a license to add speculative implications about contracts, roles, or future football status.
-- Don’t let execution drift when the core fact is clear; grounding still has to be exact.
-- Don’t use commentary prose to cover for missing source support.
-- Don’t attach a team label or side reference unless the source directly names it.
-- Don’t present a record claim, benchmark comparison, or even the core numeric premise when the source digest is missing or empty; that is a closed-world failure, not a prose fix (source-side, not fixable in prose).
+- Don’t drift beyond what the source actually supports, even if the topic invites bigger interpretation.
+- Don’t pad a simple source-driven story with scenic, interpretive, or unnecessary filler.
+- Don’t bury the central supported development under extra setup or side context.
+- Don’t make a narrow update sound broader or more consequential than the evidence allows.
+- Don’t use commentary tone to imply analysis the source doesn’t provide.
+- Don’t let the headline promise more than the body clearly delivers.
+- Don’t repeat the headline’s exact idea in the lede; move to the most useful new detail.
+- Don’t present unsupported context as if it were necessary background.
+- Don’t force a modest update into a bigger narrative frame than the material justifies.
+- Don’t wander outside the source package when the strongest version of the story is the restrained one.
