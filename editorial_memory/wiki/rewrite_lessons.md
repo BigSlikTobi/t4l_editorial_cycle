@@ -1,30 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with a single, source-supported quote or fact when it is the sharpest available hook.
-- Keep the headline and intro locked to the same verified angle and level of certainty.
-- Preserve literal, close-to-source wording when the quote itself carries the story.
-- Build around the most concrete detail when the source mix is thin or multi-part.
-- Keep analyst/columnist framing tight: make the throughline explicit without adding broad commentary.
-- Stay disciplined with source grounding; a usable core can carry the piece if the draft avoids unsupported context.
-- Use a narrow update or denial frame on its own instead of stretching it into a bigger narrative.
-- Let a direct dismissal stand without overexplaining its wider implications.
-- Keep the copy tight and centered on the immediate reported fact when the source only supports a limited claim.
-- For insider-style items, one vivid verified detail can carry the lede if it stays source-safe.
-- Clean, modest headline-and-intro alignment can be enough for a small news hit when grounding is exceptional.
+- Lead with the single supported update when the source is thin; a clean rehab/status note can carry the piece.
+- Keep the headline and intro locked to the exact verified claim and timetable.
+- Use a narrow hope/target frame when that is all the source safely supports.
+- Preserve close-to-source wording for the core update when precision matters more than flair.
+- Keep insider items tightly source-bound; one factual nugget is better than a broad reconstruction.
+- Let a modest, local news peg stand on its own instead of trying to inflate it.
+- Keep the body centered on the immediate reported fact when the digest supports only one claim.
+- Maintain tight persona execution: [insider] be concise and factual, with no extra scene-setting.
+- Clean lede/headline alignment can make a quick-hit update feel complete even without added color.
+- Strong grounding matters most on rehab/status notes; stay anchored to the stated condition and target.
 
 ## What to avoid
-- Don't combine separate source threads without a sharper throughline; one story needs to lead.
-- Don't let broad commentary or bridge paragraphs dilute the source-backed core.
-- Don't broaden a quote-driven item into locker-room or conversation framing unless the digest supports it.
-- Don't add surrounding context, named entities, or background unless the source explicitly provides it.
-- Don't split the headline and intro across competing hooks; pick one primary frame.
-- Don't make the headline outrun the body when the source only supports a narrow denial or update.
-- Don't replace a literal quote with a looser paraphrase that weakens the point.
-- Don't widen a narrow interview or comment into a fuller story than the source supports.
-- Don't let repetition or commentary substitute for concrete detail in an insider-style item.
-- Don't invent explanatory context or "normal" background when the digest provides no usable facts.
-- Don't claim context the digest doesn't confirm, even if the topic has a strong news peg.
-- Don't add claims beyond an empty or near-empty digest in hopes of making the story publishable; it needs real source substance first (source-side, not fixable in prose).
-- Don't treat trade buzz or locker-room chatter as established if the digest doesn't support it (source-side, not fixable in prose).
-- Don't use source-meta phrasing about what the digest does or doesn't contain; stay inside the reported facts.
+- Don't overreach beyond the source digest with added timetable, recovery, or progress claims.
+- Don't layer in camp/preseason significance unless the source explicitly gives that frame.
+- Don't mention named people or side references unless the digest directly ties them to the story.
+- Don't let the headline outrun the body; the headline should not imply more certainty than the source provides.
+- Don't lean on source-narration or meta phrasing about what the digest contains.
+- Don't turn a simple update into a bigger narrative through bridge paragraphs or commentary.
+- Don't add unsupported context just to make a short digest feel fuller.
+- Don't treat a hope, target, or expectation as a confirmed outcome.
+- Don't use [insider] copy to imply inside knowledge that is not actually in the source.
+- Don't claim implications for future phases of the calendar when the source only supports the immediate update.
+- Don't add side mentions unless the source digest gives a direct, factual connection.
+- Don't claim claims beyond an empty or near-empty digest in hopes of making the story publishable; it needs real source substance first (source-side, not fixable in prose).
