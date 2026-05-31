@@ -1,35 +1,26 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single supported update when the source is thin; a clean rehab/status note can carry the piece.
-- Keep the headline and intro locked to the exact verified claim and timetable.
-- Use a narrow hope/target frame when that is all the source safely supports.
-- Preserve close-to-source wording for the core update when precision matters more than flair.
-- Keep insider items tightly source-bound; one factual nugget is better than a broad reconstruction.
-- Let a modest, local news peg stand on its own instead of trying to inflate it.
-- Keep the body centered on the immediate reported fact when the digest supports only one claim.
-- Maintain tight persona execution: [insider] be concise and factual, with no extra scene-setting.
-- Clean lede/headline alignment can make a quick-hit update feel complete even without added color.
-- Strong grounding matters most on thin updates; stay anchored to the one supported fact and connection.
-- [columnist] If the source is narrow, keep the commentary frame tied to the one endorsed fact rather than expanding into a bigger narrative.
+- Lead with a single, specific reported figure when the source is strong enough to stand on it.
+- Keep headline and lede tightly matched to the verified claim and any record context.
+- Use a clean comparison frame when the source explicitly supports a record or benchmark.
+- Preserve close-to-source wording for the core fact when precision matters more than flourish.
+- Let a narrow factual update carry the story without padding it into a bigger narrative.
+- Keep commentary restrained and source-bound when the factual backbone is the main value.
+- Strong specificity can offset a limited source package if the numbers and comparison are well grounded.
+- Tight execution on a thin but clear update can still produce a readable, publishable piece.
+- Clean, well-structured prose still matters even when the story ultimately fails source support.
+- A precise comparison can work when it is explicitly grounded in the digest.
 
 ## What to avoid
-- Don't build a story on a missing or empty digest; if there are no verifiable facts, the piece is unusable.
-- Don't repeat a headline-summary source as if it contained extra facts; a thin or empty digest cannot support added claims.
-- Don't overreach beyond the source digest with added timetable, recovery, or progress claims.
-- Don't layer in camp/preseason significance unless the source explicitly gives that frame.
-- Don't mention named people or side references unless the digest directly ties them to the story.
-- Don't let the headline outrun the body; the headline should not imply more certainty than the source provides.
-- Don't repeat the same point in the headline, subhead, and intro; thin updates need compression, not echo.
-- Don't lean on source-narration or meta phrasing about what the digest contains.
-- Don't turn a simple update into a bigger narrative through bridge paragraphs or commentary.
-- Don't add unsupported context just to make a short digest feel fuller.
-- Don't treat a hope, target, or expectation as a confirmed outcome.
-- Don't use [insider] copy to imply inside knowledge that is not actually in the source.
-- Don't claim implications for future phases of the calendar when the source only supports the immediate update.
-- Don't add side mentions unless the source digest gives a direct, factual connection.
-- Don't let commentary persona pieces drift into generic filler or jersey-line padding when the digest only supports a basic response story.
-- Don't rely on meta-style filler when the source material itself is too thin to verify the claim.
-- Don't force a columnist angle onto a story that has no factual backbone to support commentary.
-- Don't build around backlash or response framing unless the underlying source actually supplies the facts behind it.
-- Don't let source-side emptiness get dressed up as reporting; if the digest is effectively blank, the piece is source-side, not fixable in prose.
+- Don’t add team, depth-chart, contract, or season-footing framing unless the source digest explicitly supports it.
+- Don’t let a headline imply a team angle or other context that the body cannot verify.
+- Don’t force a columnist angle into a story that is already complete as a straightforward reported item.
+- Don’t expand a strong number into marketability or broader football meaning without source backing.
+- Don’t keep unsupported sidebar details in the body just to make a short piece feel more substantial.
+- Don’t invent or leave in wrong-team fields when the digest provides no team support at all.
+- Don’t treat a reported figure as a license to add speculative implications about contracts, roles, or future football status.
+- Don’t let execution drift when the core fact is clear; grounding still has to be exact.
+- Don’t use commentary prose to cover for missing source support.
+- Don’t attach a team label or side reference unless the source directly names it.
+- Don’t present a record claim, benchmark comparison, or even the core numeric premise when the source digest is missing or empty; that is a closed-world failure, not a prose fix (source-side, not fixable in prose).
