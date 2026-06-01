@@ -35,3 +35,4 @@
 - [analyst] Don’t replace a simple team-player link with process language or implied market framing when the digest only supports the link itself.
 - [analyst] Don’t mention missing reporting in the lede; if the source is sparse, state only what is actually supported.
 - [analyst] Don’t try to force a real trade-analysis frame when the digest is effectively empty; dismiss the idea as source-side, not prose-fixable. (source-side, not fixable in prose)
+- [columnist] Don’t invent specifics about the subject or responder when the digest is empty; unsupported factual claims are source-side, not fixable in prose. (source-side, not fixable in prose)
