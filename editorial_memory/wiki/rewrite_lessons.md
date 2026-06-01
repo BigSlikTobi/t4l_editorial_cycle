@@ -31,3 +31,7 @@
 - Don’t salvage weak evidence by recycling the same unsupported return/goal framing in different forms.
 - [insider] Don’t obsess over polishing away every bit of repetition if the reporting is solid and the core development is clearly delivered.
 - [columnist] Don’t rely on a quote-led or opinion-friendly hook when the source digest itself contains no usable facts beyond the headline/summary; that’s unsupported from the allowed material. (source-side, not fixable in prose)
+- Don’t lead with meta language about what the report does or doesn’t include; open on the one supported fact instead.
+- [analyst] Don’t replace a simple team-player link with process language or implied market framing when the digest only supports the link itself.
+- [analyst] Don’t mention missing reporting in the lede; if the source is sparse, state only what is actually supported.
+- [analyst] Don’t try to force a real trade-analysis frame when the digest is effectively empty; dismiss the idea as source-side, not prose-fixable. (source-side, not fixable in prose)
