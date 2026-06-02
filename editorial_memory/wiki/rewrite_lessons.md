@@ -14,6 +14,7 @@
 - [insider] Clear fan payoff helps: when the source supports it, include concrete implications like odds movement, standings, or package value.
 - [insider] In a blockbuster trade writeup, lead with the actual deal mechanics and source-backed stakes, not generic market framing.
 - [insider] When the source backs it, tying a trade to the new team’s roster impact or reunion context can sharpen the value of the update.
+- [insider] For a major trade, direct lede-plus-detail delivery on the compensation package is a strength when it stays tightly sourced.
 
 ## What to avoid
 - Don’t drift beyond what the source actually supports, even if the topic invites bigger interpretation.
@@ -41,3 +42,5 @@
 - [analyst] Don’t mention missing reporting in the lede; if the source is sparse, state only what is actually supported.
 - [analyst] Don’t try to force a real trade-analysis frame when the digest is effectively empty; dismiss the idea as source-side, not prose-fixable. (source-side, not fixable in prose)
 - [insider] Don’t carry unsupported player or rookie name-drops into the story; if the digest doesn’t confirm them, remove them and stay on the verified trade/reunion impact.
+- [insider] Don’t add a 2026-run or Stafford-style outlook unless it is directly tied to a sourced claim; keep the lede on the deal terms and verified stakes.
+- [insider] Don’t bury the exact compensation in a broad breaking-deal intro; lead with the trade package immediately.
