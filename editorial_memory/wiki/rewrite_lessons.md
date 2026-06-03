@@ -10,10 +10,8 @@
 - Preserve precise wording around the central fact when the article depends on one reported development.
 - Cleanly supported report-driven pieces can work even without deep context if they stay exact about what is confirmed.
 - Strong grounding can compensate for only moderate polish when the execution is clean.
-- [analyst] A tightly grounded report can pass even with modest polish if it clearly delivers the sourced development.
 - [insider] Clear fan payoff helps when the source supports it: include concrete implications rather than vague market talk.
 - [insider] In a major transaction writeup, lead with the actual deal mechanics and source-backed stakes, not generic framing.
-- [insider] Immediate delivery of the core transaction payoff works best when the headline, lede, and body all point to the same verified deal.
 - [analyst] Tighten the headline around the concrete deadline or trigger when that is the only sourced update; timing can be the hook if you avoid repetition.
 
 ## What to avoid
@@ -29,12 +27,13 @@
 - Don’t wander outside the source package when the strongest version of the story is the restrained one.
 - Don’t stack paraphrases of the same quote across headline, intro, and body; add only distinct, source-backed detail.
 - Don’t lead with meta language about what the report does or doesn’t include; open on the one supported fact instead.
-- Don’t rely on pause/limbo/hold language as a substitute for a sharper fact-based update.
 - [analyst] Don’t replace a simple reported link with process language or implied market framing when the source only supports the link itself.
 - [analyst] Don’t mention missing reporting in the lede; if the source is sparse, state only what is actually supported.
 - [analyst] Don’t try to force a real analysis frame when the digest is effectively empty; dismiss the idea as source-side, not prose-fixable. (source-side, not fixable in prose)
-- [analyst] Don’t build in congressional-attention or appearance context unless the source explicitly supports it; empty digests are source-side, not prose-fixable. (source-side, not fixable in prose)
-- [insider] Don’t add unsupported name-drops, outlooks, or roster implications when the source package doesn’t confirm them; stay on the verified facts. (source-side, not fixable in prose)
-- [analyst] Don’t let a contract-timeline note read like a thin restatement; if there are no figures or terms, sharpen the angle around the deadline and next decision instead of repeating the calendar.
 - [analyst] Don’t build a headline around a deadline when the source digest is effectively empty; that’s source-side, not fixable in prose. (source-side, not fixable in prose)
+- [insider] Don’t add unsupported name-drops, outlooks, or roster implications when the source package doesn’t confirm them; stay on the verified facts. (source-side, not fixable in prose)
+- [insider] Don’t state an unsupported trade or deal as fact just because a headline mentions the teams or player; if the digest has no deal details, keep the lede explicitly qualified.
+- [insider] Don’t lean on source-meta phrasing like “source package” or “according to the report”; rewrite around the actual confirmed material instead.
+- [analyst] Don’t let a contract-timeline note read like a thin restatement; if there are no figures or terms, sharpen the angle around the deadline and next decision instead of repeating the calendar.
 - [analyst] Don’t treat generic training-camp timing as sufficient support for an extension claim without actual source detail; if grounding is zero, the issue is source-side, not wording. (source-side, not fixable in prose)
+- [insider] Don’t convert a headline-only digest into a pseudo-report or imply a trade angle without actual deal details; if the source title is all you have, the item is not publishable as a news fact. (source-side, not fixable in prose)
