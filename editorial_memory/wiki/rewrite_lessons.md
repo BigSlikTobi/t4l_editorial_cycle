@@ -10,6 +10,7 @@
 - Strong source quotes add authority when they reinforce the same verified development.
 - Include the most concrete contextual detail available, but keep it subordinate to the main update.
 - Keep the article restrained and factual when the source support is thin; simple and source-faithful can still work.
+- [insider] Concrete fan value rises when the piece bundles status, timing, and a small team-fit detail inside the same verified update.
 
 ## What to avoid
 - Don’t add move details, terms, or roster implications unless the source digest clearly supports them.
