@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the story tightly anchored to the core reported fact; narrow scope can still read strong when the sourcing is solid.
+- Keep the story tightly anchored to the one core reported fact; narrow scope can still work when the sourcing is solid.
 - Use a clean, direct breaking-update angle when the source material only supports one main development.
 - Let one supported development carry the piece instead of stretching for broader meaning.
 - Ground the article in concrete reported details so the reader gets something specific and usable.
@@ -14,6 +14,7 @@
 - [insider] Clear fan payoff helps when the source supports it: include concrete implications rather than vague market talk.
 - [insider] In a major transaction writeup, lead with the actual deal mechanics and source-backed stakes, not generic framing.
 - [insider] Immediate delivery of the core transaction payoff works best when the headline, lede, and body all point to the same verified deal.
+- [analyst] Tighten the headline around the concrete deadline or trigger when that is the only sourced update; timing can be the hook if you avoid repetition.
 
 ## What to avoid
 - Don’t drift beyond what the source actually supports, even if the topic invites bigger interpretation.
@@ -34,3 +35,6 @@
 - [analyst] Don’t try to force a real analysis frame when the digest is effectively empty; dismiss the idea as source-side, not prose-fixable. (source-side, not fixable in prose)
 - [analyst] Don’t build in congressional-attention or appearance context unless the source explicitly supports it; empty digests are source-side, not prose-fixable. (source-side, not fixable in prose)
 - [insider] Don’t add unsupported name-drops, outlooks, or roster implications when the source package doesn’t confirm them; stay on the verified facts. (source-side, not fixable in prose)
+- [analyst] Don’t let a contract-timeline note read like a thin restatement; if there are no figures or terms, sharpen the angle around the deadline and next decision instead of repeating the calendar.
+- [analyst] Don’t build a headline around a deadline when the source digest is effectively empty; that’s source-side, not fixable in prose. (source-side, not fixable in prose)
+- [analyst] Don’t treat generic training-camp timing as sufficient support for an extension claim without actual source detail; if grounding is zero, the issue is source-side, not wording. (source-side, not fixable in prose)
