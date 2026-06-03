@@ -12,6 +12,7 @@
 - Strong grounding can compensate for only moderate polish when the execution is clean.
 - [insider] Clear fan payoff helps when the source supports it: include concrete implications rather than vague market talk.
 - [insider] In a major transaction writeup, lead with the actual deal mechanics and source-backed stakes, not generic framing.
+- [insider] A strong hook can come from verified market reaction or urgency, as long as it stays inside the sourced material.
 - [analyst] Tighten the headline around the concrete deadline or trigger when that is the only sourced update; timing can be the hook if you avoid repetition.
 
 ## What to avoid
