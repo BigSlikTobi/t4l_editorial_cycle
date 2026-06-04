@@ -12,7 +12,7 @@
 - [insider] A roundup mention can still work if the headline and lede stick strictly to the confirmed terms.
 - [insider] Precise contract details in the source are enough to carry the item without added narrative.
 - [insider] A narrow practice-report hook can work if it stays limited to the confirmed team activity and does not imply extra action.
-- [insider] A fully grounded contract-extension brief can clear on first pass when it keeps the term, figure, and team/player hook explicit and uses a clean wire-style lede.
+- [analyst] Foreground the cap/roster hinge and exact numeric milestones when those are the strongest verified facts; that kind of tight, numbers-first framing fits the persona well.
 
 ## What to avoid
 - Don’t let the article outrun the source digest; if the source is effectively empty, avoid certainty beyond what is actually supported.
@@ -32,7 +32,7 @@
 - Don’t turn a single confirmed announcement into commentary about what it “means” for a team unless that interpretation is explicitly sourced.
 - [analyst] If the digest has no usable facts, don’t draft specific player/team claims from implication alone; treat it as a source-side miss, not an execution fix.
 - [analyst] Avoid writing around an empty factual base with confident analyst framing; unsupported specificity is not recoverable in prose.
-- [insider] When the digest includes concrete contract/cap/timeline details, keep them explicit in the brief instead of smoothing them into vague significance.
+- [analyst] Keep the exact numeric facts and verified source names in view; don’t smooth them into vague significance or generic takeaways.
 - [columnist] Don’t add extra team-meaning or narrative spin to a clearly supported named-player hook; keep the claim as specific as the source.
 - [insider] Don’t pad a thin hiring brief with filler about what the move adds if the digest gives no further particulars; a concise news hit is stronger.
 - [insider] Don’t mention contract/transaction figures in the rewrite unless the source digest directly supports them; if the digest is missing, cut to the bare confirmed agreement.
@@ -40,3 +40,4 @@
 - [insider] Don’t invent a front-office placement, veteran-GM framing, or definitive hire language when the source only offers a headline-level report; that’s source-side, not fixable in prose.
 - Don’t build a headline-level claim on an effectively missing digest; when the factual base is absent, treat it as a source-side miss (source-side, not fixable in prose).
 - Don’t add “core development” or similar significance language when the digest does not supply any verified substance; unsupported framing cannot rescue an empty source.
+- Don’t drift into unsupported speculation when the source does offer a strong factual spine; the best execution stays tightly on the quoted remark, endorsement, and exact milestone numbers.
