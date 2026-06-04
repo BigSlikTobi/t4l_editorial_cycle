@@ -12,6 +12,7 @@
 - [insider] A roundup mention can still work if the headline/lede stick strictly to the confirmed terms.
 - [insider] Precise contract details in the source are enough to carry the item without added narrative.
 - [insider] A narrow practice-report hook can work if it stays limited to the confirmed team activity and does not imply extra action.
+- [columnist] A specific named-player hook can carry the piece when it stays tightly grounded in the confirmed fact and avoids extra team meaning.
 
 ## What to avoid
 - Don’t let the article outrun the source digest; if the source is effectively empty, avoid certainty beyond what is actually supported.
@@ -28,3 +29,8 @@
 - [insider] Don’t rely on roundup headline/summary language to justify unsupported claims in the body.
 - [insider] Don’t salvage an ungrounded contract or extension item by rewriting around it; if the key facts are missing, it’s source-side, not fixable in prose.
 - [insider] Don’t add allegations framing or other extra context unless the digest directly supports it; keep the lede to the confirmed update and no more.
+- Don’t turn a single confirmed announcement into commentary about what it “means” for a team unless that interpretation is explicitly sourced.
+- [analyst] If the digest has no usable facts, don’t draft specific player/team claims from implication alone; treat it as a source-side miss, not an execution fix.
+- [analyst] Avoid writing around an empty factual base with confident analyst framing; unsupported specificity is not recoverable in prose.
+- [insider] When the digest includes concrete contract/cap/timeline details, keep them explicit in the brief instead of smoothing them into vague significance.
+- [columnist] Don’t add extra team-meaning or narrative spin to a clearly supported named-player hook; keep the claim as specific as the source.
