@@ -1,27 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the lede and headline pointed at the real news hook, not just the trigger event; if the story is about a status change or market reset, say so early.
-- Use the strongest confirmed fact as the anchor, then widen only when the source supports a next relevant consequence or name.
-- Match headline and intro tightly to the article’s actual angle so the piece feels purposeful and grounded.
-- Add a clear “what this means next” layer when the source provides it; that helps a straight news item feel like a story, not a recap.
-- Bring in follow-on details only when they are explicitly supported, especially when they explain why a name or status change matters.
-- Keep only the verified facts that advance the angle; a focused frame is stronger than a bloated recap.
-- Cleanly remove unsupported side threads so the article stays aligned with the source cluster.
-- Strong grounding matters: when the source package contains only one supported fact, a tight one-fact brief can still read cleanly and usefully.
-- Clean execution with no extra source-narration language helps insider briefs feel confident and restrained.
-- [insider] Build the lede around the source-proven status change or market implication, not just the event itself.
-- [insider] When a source package points to a wider market shift, use the confirmed details to show who is next and why.
-- [insider] Tight contract/production context can improve clarity when it directly supports the market-reset angle.
+- Keep the headline and lede centered on the same confirmed hook; if the source only supports a narrow update, say that plainly and stop there.
+- Use a specific, sourced fact as the anchor instead of broad roster-planning or role language.
+- Match the framing to the exact level of certainty the source supports.
+- Keep insider briefs tight when the source package is thin: one clear fact can be enough if handled cleanly.
+- Remove extra roster context when it does not add verified meaning to the main update.
+- Keep named references minimal unless they directly advance the sourced point.
+- Clean, restrained execution helps a short insider item feel publishable even without much source material.
+- When the story is only a single confirmed update, a simple one-angle brief is stronger than trying to widen it.
+- [insider] A roundup mention can still work if the headline/lede stick strictly to the confirmed terms.
+- [insider] Precise contract details in the source are enough to carry the item without added narrative.
 
 ## What to avoid
-- Don’t write the piece as a narrow recap when the source story is actually about a broader market reset or follow-on effect.
-- Don’t leave the most newsworthy downstream names or implications in the background if the digests clearly support them.
-- Don’t add unsupported side facts or comparison points that the provided digests do not ground.
-- Don’t let the final sentence introduce a new angle that the source package never supports.
-- Don’t let the headline over-focus on the trigger event if the deeper story is the market reaction or status change around it.
-- Don’t recast a market-shift story as a single-item transaction story; keep the frame as wide as the source warrants.
-- Don’t use unrelated contextual filler to bridge a weak transition.
-- Don’t stretch beyond the verified digests just to make the item feel bigger; unsupported context is a grounding failure.
-- [insider] Don’t center the story on the event alone when the source package is really about the resulting status change.
-- [insider] Don’t introduce unrelated personnel or roster context unless it is explicitly supported by the provided facts.
+- Don’t let the article outrun the source digest; if the source is effectively empty, avoid certainty beyond what is actually supported.
+- Don’t add roster implications, role claims, or planning language unless the provided facts explicitly ground them.
+- Don’t shift from the core update into unsupported broader framing just to make the item feel bigger.
+- Don’t bury the main fact under side references to other named players.
+- Don’t use report-style or overly declarative phrasing when the sourcing is thin.
+- Don’t make the headline and lede drift apart; they should express the same confirmed news hook.
+- Don’t treat a thin-source story as an excuse to stack on unverified context.
+- Don’t present a major-sounding figure or extension claim when the source package is empty or missing key facts; that is not safely repairable by prose.
+- [insider] Don’t present a roster move or extension as having bigger team implications unless the source digest actually supports that certainty.
+- [insider] Don’t convert a single-fact update into a fuller team-plan narrative without source backing.
+- [insider] Don’t rely on roundup headline/summary language to justify unsupported claims in the body.
+- [insider] Don’t salvage an ungrounded contract or extension item by rewriting around it; if the key facts are missing, it’s source-side, not fixable in prose.
