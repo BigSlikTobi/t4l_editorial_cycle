@@ -23,6 +23,7 @@
 - Don’t turn a verified update into analysis or implication without source support.
 - Don’t repeat the headline idea in the lede; move to the newest confirmed detail.
 - Don’t rely on source-meta filler to bridge missing detail; if the source is sparse, write only the confirmed development and stop there.
+- Don’t publish when the source digest is effectively empty or only recycles the headline; there’s no factual base to support a publishable article. (source-side, not fixable in prose)
 - [analyst] Don’t introduce unsupported names or shaky roster-history claims just to widen the angle.
 - [analyst] Don’t build a broad recap when the stronger read is the trade pattern and its verified cost.
 - [insider] Don’t imply trade mechanics or deal terms from a summary that only confirms status and current practice.
