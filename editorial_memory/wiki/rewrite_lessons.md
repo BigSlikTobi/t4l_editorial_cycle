@@ -1,31 +1,25 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the story tightly inside the verified source digest when facts are limited; a focused, source-faithful take can still read well.
-- Lead with the clearest verified development first, then add the most relevant supporting detail.
-- Align headline, intro, and lede on the same core fact so the piece feels unified rather than repetitive.
-- Use a direct breaking-update or status-update frame when the source supports one main angle.
-- Preserve precise wording around the central fact instead of stretching it into broader implications.
-- Strong source quotes add authority when they reinforce the same verified development.
-- Include the most concrete contextual detail available, but keep it subordinate to the main update.
-- Keep the article restrained and factual when the source support is thin; simple and source-faithful can still work.
-- [analyst] When the angle is pattern-based, anchor the lede in verified history and concrete cost, not a broad recap.
-- [analyst] A tight, digest-bound trade story works when it adds a clearly supported pattern shift or historical baseline.
-- [insider] Concrete fan value rises when the piece bundles status, timing, and a small team-fit detail inside the same verified update.
-- [insider] A narrow OTA/practice update works best when it stays centered on the confirmed return/status change and nothing more.
+- Keep the lede direct and grounded on the core verified fact when the source cleanly supports a high-value update.
+- Lead with the confirmed headline fact, then add the next concrete detail rather than drifting into analysis.
+- Stay inside the provided source and use only the contract/status details that are explicitly verified.
+- Include concrete deal terms and attribution when they are part of the confirmed package.
+- A clean breaking-update frame works well for extension stories that have a clear, publishable core.
+- When the source is strong, a restrained factual tone can still deliver high impact and strong readworthiness.
+- Align headline, lede, and body on the same central development so the piece feels tightly anchored.
+- Keep the story efficient: enough detail to justify publication, but no extra framing beyond the verified update.
+- [insider] Clean extension stories work best when they anchor the deal, the duration, the dollar figure, and the source of confirmation without overexplaining.
+- [insider] If the contract package is robust, it’s worth using the full verified terms in the opening rather than soft-pedaling them.
 
 ## What to avoid
-- Don’t add move details, terms, roster implications, or extra named participants unless the source digest clearly supports them.
-- Don’t let a thin source package drive broad framing choices; narrow the story instead.
-- Don’t include unsupported meta language about the sourcing or reporting process.
-- Don’t make the headline promise a bigger development than the body can verify.
-- Don’t pad a simple update with extra context that isn’t in the source material.
-- Don’t turn a verified update into analysis or implication without source support.
-- Don’t repeat the headline idea in the lede; move to the newest confirmed detail.
-- Don’t rely on source-meta filler to bridge missing detail; if the source is sparse, write only the confirmed development and stop there.
-- Don’t publish when the source digest is effectively empty or only recycles the headline; there’s no factual base to support a publishable article. (source-side, not fixable in prose)
-- [analyst] Don’t introduce unsupported names or shaky roster-history claims just to widen the angle.
-- [analyst] Don’t build a broad recap when the stronger read is the trade pattern and its verified cost.
-- [insider] Don’t imply trade mechanics or deal terms from a summary that only confirms status and current practice.
-- [insider] Don’t force a blockbuster-trade frame when the digest is too thin to verify the underlying move details; that’s source-side, not fixable in prose. (source-side, not fixable in prose)
-- [insider] Don’t publish a recap at all when the source digest is effectively empty; that is a source-side failure, not something prose can repair. (source-side, not fixable in prose)
+- Don’t widen a verified extension into broader team-context or implication language unless the source explicitly supports it.
+- Don’t pad a simple contract update with unsupported extra context or narrative flourish.
+- Don’t let the headline promise more than the body can verify, even on a strong story.
+- Don’t repeat the same core fact in multiple places; move quickly from the lead fact to the next verified detail.
+- Don’t add agent, deal, or roster specifics unless they are clearly present in the source package.
+- Don’t turn a straightforward extension report into analysis or speculation about consequences.
+- Don’t rely on source-meta language or reporting-process filler to carry the story.
+- Don’t force a bigger angle onto a clean update; keep the frame as narrow as the source warrants.
+- Don’t build an article on a premise the digest doesn’t support, even if the headline sounds newsy (source-side, not fixable in prose).
+- Don’t write a lede that simply restates an unsupported headline; if there are no source facts, the piece will read invented rather than reported (source-side, not fixable in prose).
