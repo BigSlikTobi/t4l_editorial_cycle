@@ -1,18 +1,18 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline and lede centered on the same confirmed hook; if the source only supports a narrow update, say that plainly and stop there.
-- Use a specific, sourced fact as the anchor instead of broad roster-planning or role language.
+- Keep the headline and lede centered on the same confirmed hook; if the source only supports one narrow update, say that plainly and stop there.
+- Use specific, sourced facts as the anchor instead of broad roster-planning or role language.
 - Match the framing to the exact level of certainty the source supports.
 - Keep insider briefs tight when the source package is thin: one clear fact can be enough if handled cleanly.
 - Remove extra roster context when it does not add verified meaning to the main update.
 - Keep named references minimal unless they directly advance the sourced point.
 - Clean, restrained execution helps a short insider item feel publishable even without much source material.
 - When the story is only a single confirmed update, a simple one-angle brief is stronger than trying to widen it.
-- [insider] A roundup mention can still work if the headline/lede stick strictly to the confirmed terms.
+- [insider] A roundup mention can still work if the headline and lede stick strictly to the confirmed terms.
 - [insider] Precise contract details in the source are enough to carry the item without added narrative.
 - [insider] A narrow practice-report hook can work if it stays limited to the confirmed team activity and does not imply extra action.
-- [columnist] A specific named-player hook can carry the piece when it stays tightly grounded in the confirmed fact and avoids extra team meaning.
+- [insider] A fully grounded contract-extension brief can clear on first pass when it keeps the term, figure, and team/player hook explicit and uses a clean wire-style lede.
 
 ## What to avoid
 - Don’t let the article outrun the source digest; if the source is effectively empty, avoid certainty beyond what is actually supported.
@@ -22,7 +22,7 @@
 - Don’t use report-style or overly declarative phrasing when the sourcing is thin.
 - Don’t make the headline and lede drift apart; they should express the same confirmed news hook.
 - Don’t treat a thin-source story as an excuse to stack on unverified context.
-- Don’t present a major-sounding figure or extension claim when the source package is empty or missing key facts; that is not safely repairable by prose.
+- Don’t present a major-sounding figure, extension claim, or other broad front-office move as if it carries extra significance when the source package has no concrete details; that is not safely repairable by prose.
 - Don’t build a story on allegations/arrest context unless the digest directly supports it; if the source is missing, that’s source-side, not fixable in prose.
 - [insider] Don’t present a roster move or extension as having bigger team implications unless the source digest actually supports that certainty.
 - [insider] Don’t convert a single-fact update into a fuller team-plan narrative without source backing.
@@ -34,3 +34,9 @@
 - [analyst] Avoid writing around an empty factual base with confident analyst framing; unsupported specificity is not recoverable in prose.
 - [insider] When the digest includes concrete contract/cap/timeline details, keep them explicit in the brief instead of smoothing them into vague significance.
 - [columnist] Don’t add extra team-meaning or narrative spin to a clearly supported named-player hook; keep the claim as specific as the source.
+- [insider] Don’t pad a thin hiring brief with filler about what the move adds if the digest gives no further particulars; a concise news hit is stronger.
+- [insider] Don’t mention contract/transaction figures in the rewrite unless the source digest directly supports them; if the digest is missing, cut to the bare confirmed agreement.
+- [insider] Don’t use unsupported report-certainty language or imply consequences beyond the verified extension itself; keep the lede tightly on the confirmed deal.
+- [insider] Don’t invent a front-office placement, veteran-GM framing, or definitive hire language when the source only offers a headline-level report; that’s source-side, not fixable in prose.
+- Don’t build a headline-level claim on an effectively missing digest; when the factual base is absent, treat it as a source-side miss (source-side, not fixable in prose).
+- Don’t add “core development” or similar significance language when the digest does not supply any verified substance; unsupported framing cannot rescue an empty source.
