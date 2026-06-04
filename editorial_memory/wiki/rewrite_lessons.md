@@ -11,6 +11,7 @@
 - Keep the story efficient: enough detail to justify publication, but no extra framing beyond the verified update.
 - [insider] Clean extension stories work best when they anchor the deal, the duration, the dollar figure, and the source of confirmation without overexplaining.
 - [insider] If the contract package is robust, it’s worth using the full verified terms in the opening rather than soft-pedaling them.
+- Use a report-style hedge when confirmation is incomplete; clearly label the deal as reported instead of flattening nuance.
 
 ## What to avoid
 - Don’t widen a verified extension into broader team-context or implication language unless the source explicitly supports it.
@@ -21,5 +22,7 @@
 - Don’t turn a straightforward extension report into analysis or speculation about consequences.
 - Don’t rely on source-meta language or reporting-process filler to carry the story.
 - Don’t force a bigger angle onto a clean update; keep the frame as narrow as the source warrants.
+- Don’t present a reported deal as fully confirmed when the source digest doesn’t support it.
 - Don’t build an article on a premise the digest doesn’t support, even if the headline sounds newsy (source-side, not fixable in prose).
 - Don’t write a lede that simply restates an unsupported headline; if there are no source facts, the piece will read invented rather than reported (source-side, not fixable in prose).
+- Don’t try to salvage an empty or unrelated source digest into a publishable extension story; if the factual basis is missing, the problem is source-side, not an execution fix (source-side, not fixable in prose).
