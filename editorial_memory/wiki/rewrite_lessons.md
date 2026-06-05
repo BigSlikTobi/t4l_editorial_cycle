@@ -13,7 +13,6 @@
 - [analyst] A strong sourced trigger can support a timely angle if the body quickly advances with concrete decision points and direct quotes instead of repeating the same premise.
 - [insider] Keep contract or personnel leads centered on the deal/status change itself, with one credible background credential if it is directly relevant.
 - [columnist] A usable news peg can work for a columnist draft if the copy stays disciplined and the angle does not outrun the source.
-- [columnist] When the digest only supplies two bare facts, a draft is still viable if it stays strictly reportorial and does not pretend there is deeper sourcing.
 
 ## What to avoid
 - Don’t state a reported action as settled fact when the digest still hedges it; keep warrant/charge/status language aligned with the source’s certainty.
@@ -55,3 +54,4 @@
 - Don’t build a contract story on an empty digest plus a recycled headline; if the source has no usable detail, it’s a source-side problem, not a prose rescue.
 - Don’t force a false rework narrative around contract terms, years, or salary when the support is missing; drop the claim rather than inventing a path to publication.
 - [columnist] Don’t treat a two-fact digest as a springboard for a bigger column if the draft has no additional substance; keep it tight or dismiss it.
+- [insider] Don’t try to salvage a contract-report item from an effectively empty digest; when the only support is the headline’s names and numbers, it’s a source-side problem, not fixable in prose.
