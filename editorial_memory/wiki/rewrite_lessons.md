@@ -7,12 +7,13 @@
 - A focused breaking-news wire style can work well when it stays inside the core facts and moves quickly.
 - Keep the lede tight on the key status change or decision point, then use one or two supporting facts for context.
 - Strong grounding can carry a story even when impact is modest, as long as the piece stays clean and direct.
-- Clear, audience-facing wording works best when it avoids speculative expansion.
 - Preserve a crisp factual sequence: what happened, what the reported consequence is, and the most relevant background detail.
 - Reported legal, disciplinary, personnel, or contract updates work when the prose stays precise about what is confirmed versus what is only reported.
 - Dense concrete details can justify publication when they are tightly relevant to the core development.
 - [analyst] A strong sourced trigger can support a timely angle if the body quickly advances with concrete decision points and direct quotes instead of repeating the same premise.
 - [insider] Keep contract or personnel leads centered on the deal/status change itself, with one credible background credential if it is directly relevant.
+- [columnist] A usable news peg can work for a columnist draft if the copy stays disciplined and the angle does not outrun the source.
+- [columnist] When the digest only supplies two bare facts, a draft is still viable if it stays strictly reportorial and does not pretend there is deeper sourcing.
 
 ## What to avoid
 - Don’t state a reported action as settled fact when the digest still hedges it; keep warrant/charge/status language aligned with the source’s certainty.
@@ -24,6 +25,8 @@
 - Don’t let secondary context pull attention away from the reported incident, charge, personnel note, or contract detail.
 - Avoid implying a verified status change beyond what the reporting actually supports; keep the prose tightly hedged when the source is thin.
 - Don’t overcomplicate a clean, tightly sourced update with unnecessary explanation when the core facts already carry the item.
+- Don’t repeat the same idea across the headline, subhead, and intro; one clean pass is stronger than layered paraphrase.
+- Don’t pad a reported development with filler about the calendar or surrounding routine unless it adds new information.
 - Don’t build a piece on missing or unverifiable source support; if the digest isn’t there, cut the inference and keep the note limited.
 - Don’t invent concrete details or role changes when the source digest is empty or doesn’t support them.
 - Don’t force a columnist-style angle to do the work of missing sourcing.
@@ -34,3 +37,21 @@
 - Don’t publish contract specifics or other granular framing when the source digest contains no usable content; unsupported details are a source-side problem, not fixable in prose.
 - Don’t rely on a headline alone as evidence for a rewrite-saved-it draft; if the digest is empty, dismiss rather than trying to reconstruct the story.
 - [insider] Don’t treat a bare headline as enough grounding for deal terms, salary, or duration claims; keep contract language tied to explicit source text.
+- [insider] Don’t let banned source-meta phrasing weaken a clean personnel update; keep every sentence inside the confirmed development and its direct, sourced context.
+- Don’t overcharacterize a source-supported follow-up with extra labels like “speeding warrant” unless the digest actually says that.
+- Don’t treat timing as more specific than the source supports; simple “after” framing is safer than concrete sequencing claims when the digest is thin.
+- Don’t add “only concrete follow-up” or “no team statement” lines unless those facts are explicitly in the source.
+- Don’t stack unsupported commentary around a simple juxtaposition; when the angle is enough, keep the rewrite strictly to the sourced contrast.
+- [insider] Don’t overcommit to contract numbers, years, or rework details unless the digest explicitly supports them; rebuild the lead around the verified fact instead of filling gaps with assumed specifics.
+- [insider] Don’t keep “reported” or “included in the digest” meta language in the rewrite; if it reads like source commentary rather than news copy, cut it.
+- [insider] Don’t treat a usable news peg as permission to publish unsupported deal language; grounding comes first, then the contract framing only if the source actually carries it.
+- [columnist] Don’t let repeated, unsupported framing carry the piece when the source only supports a narrow hook; cut the narrative padding and say exactly what the digest confirms.
+- Don’t let a headline-level summary turn into wrong-team or wrong-context mismatch risk; stay inside the single confirmed team/context the source actually gives.
+- Don’t imply extra specifics beyond the two confirmed reasons in the digest; if speed work and weight loss are all you have, keep the rewrite there.
+- Don’t let a clean news peg justify added story layers when the rewrite brief is asking for a tight factual reset.
+- Don’t convert a headline-only report into a causal narrative when the digest has no backing; unsupported “reward for attendance/performance” logic is a source-side problem, not fixable in prose.
+- Don’t repeat unsupported reporting language or add a warrant claim when the provided digest is empty; that is a source-side problem, not fixable in prose.
+- Don’t try a second-pass salvage when the digest contains no actual facts and the draft is still thin after a rewrite; dismiss instead.
+- Don’t build a contract story on an empty digest plus a recycled headline; if the source has no usable detail, it’s a source-side problem, not a prose rescue.
+- Don’t force a false rework narrative around contract terms, years, or salary when the support is missing; drop the claim rather than inventing a path to publication.
+- [columnist] Don’t treat a two-fact digest as a springboard for a bigger column if the draft has no additional substance; keep it tight or dismiss it.
