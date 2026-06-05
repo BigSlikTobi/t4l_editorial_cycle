@@ -55,3 +55,6 @@
 - Don’t force a false rework narrative around contract terms, years, or salary when the support is missing; drop the claim rather than inventing a path to publication.
 - [columnist] Don’t treat a two-fact digest as a springboard for a bigger column if the draft has no additional substance; keep it tight or dismiss it.
 - [insider] Don’t try to salvage a contract-report item from an effectively empty digest; when the only support is the headline’s names and numbers, it’s a source-side problem, not fixable in prose.
+- [insider] Don’t carry over unsupported team/player/contract specifics from a prompt or headline when the digest itself can’t support them; rewrite from verified source facts only.
+- [insider] Don’t keep a story alive on source-meta commentary when the article never reaches a source-supported contract detail or team consequence; if rewrite attempt 1 still lacks facts, dismiss it.
+- [insider] Don’t treat a team mention in the digest as enough to support a linked contract claim; if the source provides no confirming contract facts, that’s a source-side problem, not fixable in prose.
