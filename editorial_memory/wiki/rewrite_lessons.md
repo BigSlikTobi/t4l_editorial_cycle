@@ -6,16 +6,16 @@
 - Lead with the specific verified development and let that carry the item without extra framing.
 - A focused breaking-news wire style can work well when it stays inside the core facts and moves quickly.
 - Keep the lede tight on the key status change or decision point, then use one or two supporting facts for context.
-- Strong grounding can carry a story even when impact is modest, as long as the piece stays clean and direct.
 - Preserve a crisp factual sequence: what happened, what the reported consequence is, and the most relevant background detail.
 - Reported legal, disciplinary, personnel, or contract updates work when the prose stays precise about what is confirmed versus what is only reported.
 - Dense concrete details can justify publication when they are tightly relevant to the core development.
 - [analyst] A strong sourced trigger can support a timely angle if the body quickly advances with concrete decision points and direct quotes instead of repeating the same premise.
 - [insider] Keep contract or personnel leads centered on the deal/status change itself, with one credible background credential if it is directly relevant.
-- [columnist] A usable news peg can work for a columnist draft if the copy stays disciplined and the angle does not outrun the source.
+- [insider] Keep the headline, subhead, and intro aligned on the same confirmed fact so the piece stays grounded from the start.
+- [insider] Source-supported updates can clear when the headline and lede stay tightly tied to the confirmed fact and do not drift beyond the digest.
 
 ## What to avoid
-- Don’t state a reported action as settled fact when the digest still hedges it; keep warrant/charge/status language aligned with the source’s certainty.
+- Don’t state a reported action as settled fact when the source still hedges it; keep warrant/charge/status language aligned with the source’s certainty.
 - Don’t use source-narration or meta phrasing like “according to the source digests” or “according to the report” in a breaking-news wire item.
 - Don’t stack extra reporting references or attribution chatter that distracts from the core fact.
 - Don’t let the lede drift into unsupported certainty if the underlying reporting is still tentative.
@@ -31,30 +31,30 @@
 - Don’t force a columnist-style angle to do the work of missing sourcing.
 - [analyst] Don’t lean too hard on the angle alone; foreground the concrete sourced details that make the claim credible, then develop the implications.
 - [insider] Don’t pad a strong contract or roster item with source-meta filler like “No other contract terms were included in the digest”; keep every sentence inside the confirmed facts.
+- [insider] Don’t treat a bare headline as enough grounding for deal terms, salary, or duration claims; keep contract language tied to explicit source text.
+- [insider] Don’t overcommit to contract numbers, years, or rework details unless the digest explicitly supports them; rebuild the lead around the verified fact instead of filling gaps with assumed specifics.
+- [insider] Don’t keep “reported” or “included in the digest” meta language in the rewrite; if it reads like source commentary rather than news copy, cut it.
+- [insider] Don’t let banned source-meta phrasing weaken a clean personnel update; keep every sentence inside the confirmed development and its direct, sourced context.
+- [insider] Don’t carry over unsupported team/player/contract specifics from a prompt or headline when the digest itself can’t support them; rewrite from verified source facts only.
+- [insider] Don’t try to salvage a contract-report item from an effectively empty digest; when the only support is the headline’s names and numbers, it’s a source-side problem, not fixable in prose.
 - Don’t mention players or other specifics that are not present in the digest; unsupported entity references are a hard fail, not a style issue.
 - Don’t try to salvage a story when the source digest and URL/title don’t match and grounding is weak; that’s a source-side problem, not a prose fix.
 - Don’t publish contract specifics or other granular framing when the source digest contains no usable content; unsupported details are a source-side problem, not fixable in prose.
 - Don’t rely on a headline alone as evidence for a rewrite-saved-it draft; if the digest is empty, dismiss rather than trying to reconstruct the story.
-- [insider] Don’t treat a bare headline as enough grounding for deal terms, salary, or duration claims; keep contract language tied to explicit source text.
-- [insider] Don’t let banned source-meta phrasing weaken a clean personnel update; keep every sentence inside the confirmed development and its direct, sourced context.
 - Don’t overcharacterize a source-supported follow-up with extra labels like “speeding warrant” unless the digest actually says that.
 - Don’t treat timing as more specific than the source supports; simple “after” framing is safer than concrete sequencing claims when the digest is thin.
 - Don’t add “only concrete follow-up” or “no team statement” lines unless those facts are explicitly in the source.
 - Don’t stack unsupported commentary around a simple juxtaposition; when the angle is enough, keep the rewrite strictly to the sourced contrast.
-- [insider] Don’t overcommit to contract numbers, years, or rework details unless the digest explicitly supports them; rebuild the lead around the verified fact instead of filling gaps with assumed specifics.
-- [insider] Don’t keep “reported” or “included in the digest” meta language in the rewrite; if it reads like source commentary rather than news copy, cut it.
-- [insider] Don’t treat a usable news peg as permission to publish unsupported deal language; grounding comes first, then the contract framing only if the source actually carries it.
 - [columnist] Don’t let repeated, unsupported framing carry the piece when the source only supports a narrow hook; cut the narrative padding and say exactly what the digest confirms.
 - Don’t let a headline-level summary turn into wrong-team or wrong-context mismatch risk; stay inside the single confirmed team/context the source actually gives.
-- Don’t imply extra specifics beyond the two confirmed reasons in the digest; if speed work and weight loss are all you have, keep the rewrite there.
+- Don’t imply extra specifics beyond the confirmed terms in the digest; if the source only supports a simple long-term extension, keep the rewrite there.
 - Don’t let a clean news peg justify added story layers when the rewrite brief is asking for a tight factual reset.
-- Don’t convert a headline-only report into a causal narrative when the digest has no backing; unsupported “reward for attendance/performance” logic is a source-side problem, not fixable in prose.
+- Don’t convert a headline-only report into a causal narrative when the digest has no backing; unsupported reward-for-attendance/performance logic is a source-side problem, not fixable in prose.
 - Don’t repeat unsupported reporting language or add a warrant claim when the provided digest is empty; that is a source-side problem, not fixable in prose.
 - Don’t try a second-pass salvage when the digest contains no actual facts and the draft is still thin after a rewrite; dismiss instead.
 - Don’t build a contract story on an empty digest plus a recycled headline; if the source has no usable detail, it’s a source-side problem, not a prose rescue.
 - Don’t force a false rework narrative around contract terms, years, or salary when the support is missing; drop the claim rather than inventing a path to publication.
 - [columnist] Don’t treat a two-fact digest as a springboard for a bigger column if the draft has no additional substance; keep it tight or dismiss it.
-- [insider] Don’t try to salvage a contract-report item from an effectively empty digest; when the only support is the headline’s names and numbers, it’s a source-side problem, not fixable in prose.
-- [insider] Don’t carry over unsupported team/player/contract specifics from a prompt or headline when the digest itself can’t support them; rewrite from verified source facts only.
-- [insider] Don’t keep a story alive on source-meta commentary when the article never reaches a source-supported contract detail or team consequence; if rewrite attempt 1 still lacks facts, dismiss it.
-- [insider] Don’t treat a team mention in the digest as enough to support a linked contract claim; if the source provides no confirming contract facts, that’s a source-side problem, not fixable in prose.
+- Don’t let fabricated or mismatched player/team references slip into metadata or body copy; unsupported entity mix-ups are a hard fail and usually source-side, not fixable in prose.
+- Don’t keep pushing a rewrite after the source digest is empty and the opportunity is exhausted; dismiss rather than polishing unsupported certainty.
+- [insider] Don’t treat a mismatched player/team combination as salvageable when the digest is empty; verify the named entity match first, or mark it as source-side, not fixable in prose.
