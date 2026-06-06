@@ -10,6 +10,7 @@
 - Let specific, relevant context do the work instead of broad narrative framing.
 - [insider] Keep visit, contract, personnel, or roster-lead stories centered on the status change itself, with background only when it directly supports the angle.
 - [insider] Include scheme or roster context only if it is clearly tied to the reported news peg and does not widen the story beyond the digest.
+- Clean approves are usually the result of restraint: one verified update plus only the context needed to make it make sense.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -23,3 +24,5 @@
 - [insider] Don’t add roster-impact, role, or depth-chart conclusions unless the source explicitly supports them.
 - [insider] Don’t use team-context details as an excuse to generalize beyond the verified update.
 - [insider] Don’t treat a short digest as permission to infer larger organizational implications; stay inside the confirmed facts.
+- (source-side, not fixable in prose) Don’t try to rescue an article when the source digest is effectively empty; there may be no publishable factual base to work from.
+- (source-side, not fixable in prose) Don’t manufacture contract terms, player details, or other specifics that are not present in the available source facts.
