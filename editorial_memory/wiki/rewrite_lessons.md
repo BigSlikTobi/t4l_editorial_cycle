@@ -2,23 +2,23 @@
 
 ## What works (keep doing)
 - Keep the story tightly inside the supplied digest and deliver the core update cleanly.
-- Lead with the confirmed transaction or status change immediately; don’t bury the main development under setup.
+- Lead with the confirmed transaction, status change, or absence immediately; don’t bury the main development under setup.
 - Use a direct headline and intro that name the concrete development clearly.
-- Add only the context that directly strengthens the angle, such as a clear team need or receiver-room fit.
+- Add only the context that directly strengthens the angle, such as a clear team need or roster fit.
 - Preserve a crisp factual sequence: the update, the most relevant background, then the supporting team context.
 - Strong grounding can offset a modestly sized update when every added detail is clearly supported.
 - Let specific, relevant context do the work instead of broad narrative framing.
 - Clean approves are usually the result of restraint: one verified update plus only the context needed to make it make sense.
-- [insider] Tight personnel updates can publish cleanly when the lede states the confirmed transaction or trade context and nothing else.
+- [insider] Tight personnel updates can publish cleanly when the lede states the confirmed transaction or roster context and nothing else.
 - [insider] Use team-specific framing only when it is directly supported and actually helps explain the reported development.
-- A blunt, exact quote or reported expectation can carry the piece when the source is thin, as long as the headline and intro stay centered on that verified claim.
+- A blunt, exact reported expectation or deadline can carry the piece when the source is thin, as long as the headline and intro stay centered on that verified claim.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
 - Don’t stack extra context that doesn’t directly advance the news peg.
-- Don’t let the item drift away from the core status change, visit, or personnel development.
+- Don’t let the item drift away from the core status change, visit, absence, or personnel development.
 - Don’t repeat the same transaction fact in the headline, subhead, and intro without adding new utility.
-- Don’t get the core transaction wrong in the lead; match the source’s exact framing before adding color.
+- Don’t get the core update wrong in the lead; match the source’s exact framing before adding color.
 - Don’t add unsupported claims about role, pecking order, depth chart, or long-term roster certainty.
 - Don’t attribute facts to outside reporting or name a reporter/source unless that detail is explicitly in the digest.
 - Don’t force a narrow insider note into a bigger strategic story when the digest only supports the immediate update.
