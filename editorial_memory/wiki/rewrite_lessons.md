@@ -30,3 +30,4 @@
 - (source-side, not fixable in prose) Don’t try to rescue an article when the source digest is effectively empty; there may be no publishable factual base to work from.
 - (source-side, not fixable in prose) Don’t manufacture contract terms, player details, or other specifics that are not present in the available source facts.
 - [insider] Don’t pad a contract rewrite with implications beyond the confirmed compensation change; keep it to the money adjustment in 2026.
+- (source-side, not fixable in prose) Don’t build a story around a quoted phrase or competition claim when the closed-world record has no usable supporting facts.
