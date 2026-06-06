@@ -10,9 +10,8 @@
 - Strong grounding can offset a modestly sized update when every added detail is clearly supported.
 - Let specific, relevant context do the work instead of broad narrative framing.
 - Clean approves are usually the result of restraint: one verified update plus only the context needed to make it make sense.
-- [analyst] A clear decision or status update can work when the lede and headline stay centered on the verified claim and the supporting context stays inside the digest.
-- [columnist] A strong concept-only hook can work if the copy stays disciplined and doesn’t over-interpret what the reference means.
-- [columnist] A culturally legible reference can carry the piece when the headline and body stay anchored to the verified inspiration and don’t overreach.
+- [columnist] A concrete offseason development can carry the piece when the headline and lede stay tapworthy and the copy stays anchored to measurable, source-backed detail.
+- [columnist] A specific technique- or body-composition angle works when it is presented as a verified change, not as vague improvement talk.
 - [insider] A source-backed comparative frame can work if it is stated as reported context, not as a meta-description of the article.
 
 ## What to avoid
@@ -34,6 +33,9 @@
 - [analyst] Don’t settle for a bland, generic angle when the source offers a more specific problem-solution hook.
 - [columnist] Don’t imply the headline claim proves what a staff thinks or feels unless the source explicitly says so.
 - [columnist] Don’t keep layering interpretive commentary when the piece only has one concrete fact to support it.
+- [columnist] Don’t default to airy calendar-language or a vague offseason reset when the story has a concrete change with measurable stakes.
+- [columnist] Don’t bury the specific change; if there are body-composition, training, or technique details, make them the tap-in reason rather than leaving them implied.
+- [columnist] Don’t leave a multi-story cluster unrealized when the angle promises a broader comparison or package.
 - [insider] Don’t present an addition as confirmed if the source only supports it as a notable offseason name or reported context; keep acquisition/status claims exact.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
 - (source-side, not fixable in prose) Don’t manufacture trade terms, player details, or other specifics that are not present in the available source facts.
