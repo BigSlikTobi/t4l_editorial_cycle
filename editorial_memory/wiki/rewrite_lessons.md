@@ -11,6 +11,8 @@
 - [insider] Keep visit, contract, personnel, or roster-lead stories centered on the status change itself, with background only when it directly supports the angle.
 - [insider] Include scheme or roster context only if it is clearly tied to the reported news peg and does not widen the story beyond the digest.
 - Clean approves are usually the result of restraint: one verified update plus only the context needed to make it make sense.
+- [insider] Tight contract updates can publish cleanly when the lede states the confirmed compensation change and nothing else.
+- [insider] A direct, clear headline and intro that name the concrete development can carry the piece when grounding is strong.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -24,5 +26,7 @@
 - [insider] Don’t add roster-impact, role, or depth-chart conclusions unless the source explicitly supports them.
 - [insider] Don’t use team-context details as an excuse to generalize beyond the verified update.
 - [insider] Don’t treat a short digest as permission to infer larger organizational implications; stay inside the confirmed facts.
+- Don’t use source-meta or reporter-style framing when the digest is thin; state the confirmed fact directly.
 - (source-side, not fixable in prose) Don’t try to rescue an article when the source digest is effectively empty; there may be no publishable factual base to work from.
 - (source-side, not fixable in prose) Don’t manufacture contract terms, player details, or other specifics that are not present in the available source facts.
+- [insider] Don’t pad a contract rewrite with implications beyond the confirmed compensation change; keep it to the money adjustment in 2026.
