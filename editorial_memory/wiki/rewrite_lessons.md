@@ -17,6 +17,8 @@
 - [analyst] Center the story on the exact source quote or concrete usage claim when it is the strongest verified hook.
 - [analyst] A direct, quote-led lede can work well when the available source is thin but the central claim is explicit.
 - [analyst] When the digest supplies a precise assignment or usage idea, build the click on that concrete role instead of widening into bigger theory.
+- [columnist] A strong concept-only hook can work if the copy stays disciplined and doesn’t over-interpret what the tribute or reference means.
+- [columnist] A culturally legible reference can carry the piece when the headline and body stay anchored to the verified inspiration and don’t overreach.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -35,6 +37,7 @@
 - [analyst] Don’t let the intro simply restate the headline; it needs to add a distinct, useful layer.
 - [analyst] Don’t settle for a bland, generic angle when the source offers a more specific problem-solution hook.
 - [columnist] Don’t imply the headline claim proves what a staff thinks or feels unless the source explicitly says so.
+- [columnist] Don’t keep layering interpretive commentary when the piece only has one concrete fact to support it.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
 - (source-side, not fixable in prose) Don’t manufacture trade terms, player details, or other specifics that are not present in the available source facts.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
