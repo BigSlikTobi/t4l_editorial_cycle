@@ -10,6 +10,7 @@
 - Let specific, relevant context do the work instead of broad narrative framing.
 - Clean approves usually come from restraint: one verified update plus only the context needed to make it make sense.
 - [analyst] A roster-battle angle works when it stays anchored to the digest’s actual positional groups and named players.
+- [insider] A well-grounded personnel battle can carry the piece when the draft position, college production, and contract stakes are all kept exact.
 - [columnist] A direct source-backed stance works best when the copy stays focused on that exact message and doesn’t pad it with scene-setting.
 - [columnist] A concrete offseason or rumor-related development can work when the copy stays anchored to the one supported fact and avoids filler.
 
@@ -39,3 +40,4 @@
 - [insider] Don’t treat a contract-stalemate or unresolved-status story as if added explanation can supply missing evidence; if the digest is thin, keep the prose minimal.
 - [insider] Don’t build around unsupported negotiation specifics when the digest is missing or unusable; if the source offers no verifiable facts, treat it as a source-side failure, not a prose fix.
 - Don’t make the intro generic when the digest already supplies a sharper, named update or stance.
+- [insider] Don’t pad a clearly supported roster battle with extra interpretation; if the facts already carry the payoff, keep the piece lean.
