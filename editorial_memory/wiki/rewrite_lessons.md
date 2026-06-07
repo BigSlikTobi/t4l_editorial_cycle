@@ -10,10 +10,8 @@
 - Let specific, relevant context do the work instead of broad narrative framing.
 - Clean approves usually come from restraint: one verified update plus only the context needed to make it make sense.
 - [analyst] A roster-battle angle works when it stays anchored to the digest’s actual positional groups and named players.
-- [analyst] Specific, grounded cutdown or depth-chart detail is stronger than vague “tight calls” language alone.
-- [insider] A source-backed comparative frame can work if it is stated as reported context, not as a meta-description of the article.
-- [columnist] A concrete offseason development can carry the piece when the headline and lede stay tapworthy and the copy stays anchored to measurable, source-backed detail.
-- [analyst] Tighten the headline/lede around the most useful roster battlegrounds when the digest names them clearly.
+- [columnist] A direct source-backed stance works best when the copy stays focused on that exact message and doesn’t pad it with scene-setting.
+- [columnist] A concrete offseason or rumor-related development can work when the copy stays anchored to the one supported fact and avoids filler.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -27,10 +25,11 @@
 - Don’t add unsupported claims about role, pecking order, depth chart, workload certainty, or long-term certainty.
 - Don’t force a narrow update into a bigger strategic story when the digest only supports the immediate development.
 - Don’t overcomplicate a clean sourced item with explanation that isn’t necessary for the reader to understand the news.
-- Don’t open with source-meta framing or phrases like “one report calls”; cut attribution-heavy lead-ins that slow wire-style urgency.
+- Don’t use repeated “noise/rumor mill” style filler when the digest only supports one plain, direct message.
+- Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives a stated preference or reaction.
 - [analyst] Don’t turn a stat-led or timing-led evaluation into a bigger thesis unless the digest supports that jump.
-- [analyst] Don’t lean on broad workload language or comparisons that outrun the source-based angle.
-- [columnist] Don’t default to airy calendar-language or a vague offseason reset when the story has a concrete change with measurable stakes.
+- [columnist] Don’t default to airy calendar-language or vague framing when the story has a concrete quote or stance with immediate stakes.
+- [columnist] Don’t pad a stance-driven update with meta phrasing or scene-setting that doesn’t add facts.
 - [insider] Don’t present an addition as confirmed if the source only supports it as reported context; keep acquisition/status claims exact.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
@@ -39,4 +38,4 @@
 - [insider] Don’t use a reported comparison as a headline crutch unless the copy also makes the concrete roster change clear.
 - [insider] Don’t treat a contract-stalemate or unresolved-status story as if added explanation can supply missing evidence; if the digest is thin, keep the prose minimal.
 - [insider] Don’t build around unsupported negotiation specifics when the digest is missing or unusable; if the source offers no verifiable facts, treat it as a source-side failure, not a prose fix.
-- Don’t make the intro generic when the digest already supplies sharper, named roster battlegrounds.
+- Don’t make the intro generic when the digest already supplies a sharper, named update or stance.
