@@ -3,7 +3,7 @@
 ## What works (keep doing)
 - Keep the story tightly inside the supplied digest and deliver the core update cleanly.
 - Lead with the most concrete verified status or decision point, not a broad theme.
-- Use a direct headline and intro that name the specific ruling or checkpoint clearly.
+- Use a direct headline and intro that name the specific ruling, checkpoint, or reporting decision clearly.
 - Make the headline and lede work together on the same payoff, not just the same general topic.
 - Preserve a crisp factual sequence: the update first, then only the context needed to explain it.
 - Let specific, relevant context do the work instead of broad narrative framing.
@@ -12,6 +12,7 @@
 - [columnist] A direct source-backed stance works best when the copy stays focused on that exact message and doesn’t pad it with scene-setting.
 - [insider] A well-grounded personnel or availability checkpoint can carry the piece when the update is kept exact and the copy stays wire-clean.
 - [insider] Roundups can work when they are framed as names mentioned in the injury/update digest, not as proof of a return or status change.
+- [insider] A straightforward report-to-reporting update can work when it is phrased as the subject’s stated plan and not inflated into a broader claim.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -40,17 +41,14 @@
 - [insider] Don’t frame injury/news roundups as actual return confirmation unless the digest explicitly says the player is returning or trending back.
 - [insider] Don’t use “return updates” or similar progress language when the source only supports inclusion in a latest injury check.
 - [insider] Don’t repeat headline-level return phrasing in the lede unless the source gives a real status change to support it.
-- (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
-- (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
-- (source-side, not fixable in prose) Don’t draft around an empty or fact-free digest by inferring “trust,” “standing,” or similar narrative claims from nothing.
-- [analyst] Don’t widen a specific assignment or matchup note into a broader projection if the digest only supports the concrete usage claim.
-- [insider] Don’t use a reported comparison as a headline crutch unless the copy also makes the concrete roster change clear.
-- [insider] Don’t treat a contract-stalemate or unresolved-status story as if added explanation can supply missing evidence; if the digest is thin, keep the prose minimal.
-- [insider] Don’t build around unsupported negotiation specifics when the digest is missing or unusable; if the source offers no verifiable facts, treat it as a source-side failure, not a prose fix.
+- [insider] Don’t treat a reported comparison as a headline crutch unless the copy also makes the concrete roster change clear.
 - [insider] Don’t pad a clearly supported roster checkpoint with extra interpretation; if the facts already carry the payoff, keep the piece lean.
-- [insider] Don’t lean on banned reporting-meta or process language when the update is already straightforward and thin; keep it wire-style and concrete.
-- [analyst] Don’t hang a story on a specific trade-board or planning frame when the digest is effectively empty; unsupported team and player specifics are a source-side failure, not a prose fix.
 - [insider] Don’t infer roster consequences from an injunction headline alone; if the digest only confirms the ruling, keep the copy limited to that confirmed fact and the immediate next-step implication.
 - [insider] Don’t try to salvage a publishable item from a bare or conflicting digest; if the story metadata, source title, and article all disagree, treat it as unrecoverable source-side failure (source-side, not fixable in prose).
 - [insider] Don’t name extra players or other specifics when the digest is effectively empty; unsupported additions sink grounding even if the headline feels plausible.
 - [insider] Don’t attempt a rewrite when the source backbone is absent; the fix is not better phrasing but a usable digest.
+- (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
+- (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
+- (source-side, not fixable in prose) Don’t draft around an empty or fact-free digest by inferring “trust,” “standing,” or similar narrative claims from nothing.
+- [analyst] Don’t widen a specific assignment or matchup note into a broader projection if the digest only supports the concrete usage claim.
+- [analyst] Don’t hang a story on a specific trade-board or planning frame when the digest is effectively empty; unsupported team and player specifics are a source-side failure, not a prose fix.
