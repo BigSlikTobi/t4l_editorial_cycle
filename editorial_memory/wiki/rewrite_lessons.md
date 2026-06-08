@@ -13,6 +13,7 @@
 - [insider] A well-grounded personnel or availability checkpoint can carry the piece when the update is kept exact and the copy stays wire-clean.
 - [insider] Roundups can work when they are framed as names mentioned in the injury/update digest, not as proof of a return or status change.
 - [insider] A straightforward report-to-reporting update can work when it is phrased as the subject’s stated plan and not inflated into a broader claim.
+- [insider] A reported minicamp or offseason attendance checkpoint can work when the lede stays on the return/reporting itself and the holdout context, with no extra atmosphere.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -47,8 +48,11 @@
 - [insider] Don’t try to salvage a publishable item from a bare or conflicting digest; if the story metadata, source title, and article all disagree, treat it as unrecoverable source-side failure (source-side, not fixable in prose).
 - [insider] Don’t name extra players or other specifics when the digest is effectively empty; unsupported additions sink grounding even if the headline feels plausible.
 - [insider] Don’t attempt a rewrite when the source backbone is absent; the fix is not better phrasing but a usable digest.
+- [insider] Don’t add “cleaner runway,” “real attendance weight,” or similar atmosphere around a reported return when the source only supports the report and timing.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
 - (source-side, not fixable in prose) Don’t draft around an empty or fact-free digest by inferring “trust,” “standing,” or similar narrative claims from nothing.
 - [analyst] Don’t widen a specific assignment or matchup note into a broader projection if the digest only supports the concrete usage claim.
 - [analyst] Don’t hang a story on a specific trade-board or planning frame when the digest is effectively empty; unsupported team and player specifics are a source-side failure, not a prose fix.
+- [insider] Don’t let the article name the wrong subject or team when the source digest supports a different story; a clean peg still fails if the closed-world facts don’t match.
+- [insider] Don’t keep revising around a headline/source mismatch once the digest and story diverge; that is a closed-world failure, not a salvageable wording issue.
