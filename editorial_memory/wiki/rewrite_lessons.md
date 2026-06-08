@@ -9,10 +9,11 @@
 - Strong grounding can offset a modestly sized update when every added detail is clearly supported.
 - Let specific, relevant context do the work instead of broad narrative framing.
 - Clean approves usually come from restraint: one verified update plus only the context needed to make it make sense.
-- [analyst] A roster-battle angle works when it stays anchored to the digest’s actual positional groups and named players.
-- [insider] A well-grounded personnel battle can carry the piece when the draft position, college production, and contract stakes are all kept exact.
+- Quote-driven pieces work when they stay tightly inside the exact sourced line and keep the supporting frame minimal.
 - [columnist] A direct source-backed stance works best when the copy stays focused on that exact message and doesn’t pad it with scene-setting.
 - [columnist] A concrete offseason or rumor-related development can work when the copy stays anchored to the one supported fact and avoids filler.
+- [analyst] A roster-battle angle works when it stays anchored to the digest’s actual positional groups and named players.
+- [insider] A well-grounded personnel battle can carry the piece when the draft position, college production, and contract stakes are all kept exact.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
@@ -28,9 +29,10 @@
 - Don’t overcomplicate a clean sourced item with explanation that isn’t necessary for the reader to understand the news.
 - Don’t use repeated “noise/rumor mill” style filler when the digest only supports one plain, direct message.
 - Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives a stated preference or reaction.
-- [analyst] Don’t turn a stat-led or timing-led evaluation into a bigger thesis unless the digest supports that jump.
 - [columnist] Don’t default to airy calendar-language or vague framing when the story has a concrete quote or stance with immediate stakes.
 - [columnist] Don’t pad a stance-driven update with meta phrasing or scene-setting that doesn’t add facts.
+- [columnist] Don’t let the copy restate the same quote three times; if the headline and lede already carry it, the body needs a different job.
+- [columnist] Don’t add named roster references or broader team framing unless the available facts support them.
 - [insider] Don’t present an addition as confirmed if the source only supports it as reported context; keep acquisition/status claims exact.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
