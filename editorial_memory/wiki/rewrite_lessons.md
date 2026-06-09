@@ -32,3 +32,4 @@
 - [columnist] Don’t build from an empty digest with unsupported specifics; if the source has no verifiable facts, the problem is source-side, not execution.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder team field were evidence; fix the underlying source data first.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest or from facts that are missing entirely.
+- (source-side, not fixable in prose) Don’t publish when the digest is effectively missing or the team/source mapping is mismatched; rewrite around verified source data only.
