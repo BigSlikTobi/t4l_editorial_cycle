@@ -10,7 +10,6 @@
 - Strong grounding can offset a modestly sized update when every detail is supported.
 - A hedged breaking-news update can still work when it stays faithful to the source and avoids overclaiming.
 - [insider] A clear injury, practice-exit, injunction, or transaction note works when it stays exact and wire-clean.
-- [insider] A narrow personnel checkpoint works best when it stays on the confirmed fact and avoids speculation.
 - [columnist] A source-backed stance or quote works best when the copy stays focused on that exact message.
 
 ## What to avoid
@@ -24,11 +23,6 @@
 - Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives the confirmed event or expectation.
 - Don’t add unsupported claims about planning clarity, role, pecking order, workload certainty, long-term certainty, or contract terms.
 - [insider] Don’t pad a thin injury, roster, or ruling note with report-style meta phrasing; keep the confirmed fact front and center.
-- [insider] Don’t add timing or extra status language unless the source explicitly supports it.
-- [insider] Don’t infer consequences beyond the confirmed injunction, practice exit, injury, or transaction if the digest doesn’t support them.
-- [insider] Don’t import unsupported speculation about return timing or availability.
-- [insider] Don’t claim the move is confirmed by agents, or add reunion/narrative color, unless the digest explicitly supports it.
-- [columnist] Don’t pad a stance-driven update with scene-setting that doesn’t add facts.
 - [columnist] Don’t build from an empty digest with unsupported specifics; if the source has no verifiable facts, the problem is source-side, not execution.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder team field were evidence; fix the underlying source data first.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest or from facts that are missing entirely.
