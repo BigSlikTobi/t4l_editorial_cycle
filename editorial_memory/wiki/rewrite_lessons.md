@@ -1,52 +1,34 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the story tightly inside the supplied digest and deliver the core update cleanly.
-- Lead with the most concrete verified status, ruling, or decision point, not a broad theme.
-- Use a direct headline and intro that name the specific report, ruling, checkpoint, or decision clearly.
-- Make the headline and lede work together on the same payoff, not just the same general topic.
-- Preserve a crisp factual sequence: the update first, then only the context needed to explain it.
-- Let specific, relevant context do the work instead of broad narrative framing.
-- Strong grounding can offset a modestly sized update when every added detail is clearly supported.
-- Quote-driven or stance-driven pieces work when they stay tightly inside the exact sourced line and keep the supporting frame minimal.
-- [columnist] A direct source-backed stance works best when the copy stays focused on that exact message and doesn’t pad it with scene-setting.
-- [insider] A well-grounded personnel or availability checkpoint can carry the piece when the update is kept exact and the copy stays wire-clean.
-- [analyst] A narrow, concrete reporting angle is strongest when it stays inside the verified premise and avoids speculative context.
+- Keep the story tightly on the single confirmed update and deliver it cleanly in one pass.
+- Lead with the exact status change, injury, ruling, signing, or decision point rather than a broad availability theme.
+- Make the headline and lede carry the same concrete payoff.
+- Use a direct, specific headline when the source gives a clear factual hook.
+- Preserve a crisp factual sequence: confirmed update first, then only the minimal context needed.
+- Let the verified detail do the work instead of widening into narrative framing.
+- Strong grounding can offset a modestly sized update when every detail is supported.
+- A hedged breaking-news update can still work when it stays faithful to the source and avoids overclaiming.
+- [insider] A clear injury, practice-exit, or transaction note works when it stays exact and wire-clean.
+- [insider] A narrow personnel checkpoint works best when it stays on the confirmed fact and avoids speculation.
+- [columnist] A source-backed stance or quote works best when the copy stays focused on that exact message.
 
 ## What to avoid
 - Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
 - Don’t stack extra context that doesn’t directly advance the news peg.
-- Don’t let the item drift away from the core status change, ruling, visit, absence, ranking, decision, or personnel development.
-- Don’t repeat the same transaction fact in the headline, subhead, and intro without adding new utility.
-- Don’t let the lede package go soft: if the headline and intro both say the same thing, the opening loses force.
-- Don’t use a generic headline when the source offers a more concrete payoff or problem-solution angle.
-- Don’t get the core update wrong in the lead; match the source’s exact framing before adding color.
-- Don’t import names, statuses, or roster claims from the wrong digest.
-- Don’t add unsupported claims about role, pecking order, depth chart, workload certainty, or long-term certainty.
-- Don’t force a narrow update into a bigger strategic story when the digest only supports the immediate development.
+- Don’t let the item drift away from the core status change, ruling, signing, visit, absence, ranking, decision, or personnel development.
+- Don’t repeat the same fact in the headline and lede without adding new utility.
+- Don’t use meta phrasing like “according to the report” or “no further detail in the digest”; write the update straight.
+- Don’t soften a confirmed development into generic availability language when the digest gives a sharper fact.
 - Don’t overcomplicate a clean sourced item with explanation that isn’t necessary for the reader to understand the news.
-- Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives a stated preference or reaction.
-- Don’t lean on reporting/meta language like what a report “does” or “doesn’t add”; write the actual update straight.
-- Don’t repeat the same hedge or qualification in multiple sentences.
-- [columnist] Don’t default to airy calendar-language or vague framing when the story has a concrete quote or stance with immediate stakes.
-- [columnist] Don’t pad a stance-driven update with meta phrasing or scene-setting that doesn’t add facts.
-- [columnist] Don’t let the copy restate the same quote three times; if the headline and lede already carry it, the body needs a different job.
+- Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives the confirmed event or expectation.
+- Don’t add unsupported claims about role, pecking order, workload certainty, long-term certainty, or contract terms.
+- [insider] Don’t pad a thin injury or roster note with report-style meta phrasing; keep the confirmed fact front and center.
+- [insider] Don’t add timing or extra status language unless the source explicitly supports it.
+- [insider] Don’t infer consequences beyond the confirmed practice exit, injury, or transaction if the digest doesn’t support them.
+- [insider] Don’t import unsupported speculation about return timing or availability.
+- [insider] Don’t claim the move is confirmed by agents, or add reunion/narrative color like “back in Kansas City colors,” unless the digest explicitly supports it.
+- [columnist] Don’t pad a stance-driven update with scene-setting that doesn’t add facts.
 - [columnist] Don’t build from an empty digest with unsupported specifics; if the source has no verifiable facts, the problem is source-side, not execution.
-- [insider] Don’t present an addition as confirmed if the source only supports it as reported context; keep acquisition/status claims exact.
-- [insider] Don’t lean on a “report” as substance when the digest has no verifiable facts beyond the report itself; that’s too thin to publish.
-- [insider] Don’t add timing, venue, or “getting on the field” language unless the source explicitly supports those details.
-- [insider] Don’t pad a thin roster note with report-style meta phrasing; if the digest is bare, the prose cannot manufacture grounding.
-- [insider] Don’t infer roster consequences from an injunction headline alone; if the digest only confirms the ruling, keep the copy limited to that confirmed fact and the immediate next-step implication.
-- [insider] Don’t attempt a rewrite when the source backbone is absent; the fix is not better phrasing but a usable digest.
-- (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the transaction, correct it before publishing.
-- (source-side, not fixable in prose) Don’t build a story from an empty digest; if there are no usable facts, the issue is the source material, not the prose.
-- (source-side, not fixable in prose) Don’t draft around an empty or fact-free digest by inferring “trust,” “standing,” or similar narrative claims from nothing.
-- [analyst] Don’t widen a specific assignment or matchup note into a broader projection if the digest only supports the concrete usage claim.
-- [analyst] Don’t hang a story on a specific trade-board or planning frame when the digest is effectively empty; unsupported team and player specifics are a source-side failure, not a prose fix.
-- [analyst] Don’t overreach beyond the digest into league-posture or congressional-scrutiny framing when the file contains no supporting facts; keep the piece at the verified report level.
-- [insider] Don’t let the article name the wrong subject or team when the source digest supports a different story; a clean peg still fails if the closed-world facts don’t match.
-- [insider] Don’t keep revising around a headline/source mismatch once the digest and story diverge; that is a closed-world failure, not a salvageable wording issue.
-- [insider] Don’t convert a clean reported return-to-minicamp note into a bigger certainty claim; keep “expected to report” and similar wording exact when that’s all the digest supports.
-- [columnist] Don’t turn a thin source into a specific award-or-cover claim unless the digest confirms that exact outcome; keep it at the confirmed theme and framing.
-- [columnist] Don’t turn an empty source into a meaning-laden reaction piece; if the post or report lacks verifiable facts, treat it as unsalvageable without better source material.
-- [columnist] Don’t add implication-heavy language from a social post unless the digest clearly supplies the factual basis for that interpretation.
+- (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder summary were evidence; if the digest misstates the event, correct it before publishing.
+- (source-side, not fixable in prose) Don’t build a story from an empty digest or from facts that are missing entirely.
