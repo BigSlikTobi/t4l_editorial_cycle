@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Keep the story tightly on one confirmed update and deliver it cleanly in one pass.
-- Lead with the exact status change, ruling, signing, injury, attendance, or decision point rather than a broad availability theme.
+- Lead with the exact status change, ruling, signing, injury, attendance, visit, or decision point rather than a broad availability theme.
 - Make the headline and lede align on the same concrete payoff, without extra setup.
 - Use a direct, specific headline when the source gives a clear factual hook.
 - Preserve a crisp factual sequence: confirmed update first, then only the minimal context needed.
@@ -11,7 +11,7 @@
 - A hedged breaking-news update can still work when it stays faithful to the source and avoids overclaiming.
 - A narrowly supported personnel or retirement note can pass when it stays anchored to the confirmed announcement or self-stated timeline and avoids importing biography the source does not provide.
 - [insider] A clean, tightly supported minicamp/holdout update can pass when it sticks to one reportable fact and keeps the team and status change precise.
-- [insider] A small but fully grounded signing or personnel update can work if it stays inside the confirmed fact pattern and keeps the lede/headline aligned.
+- [analyst] A thin but grounded competition note can still work if the lede makes the actual decision point explicit, names the contenders clearly, and every sentence adds value off that same fact.
 - [columnist] A personal health or retirement disclosure can pass when it is tightly grounded, specific, and handled straight without extra framing or speculation.
 
 ## What to avoid
@@ -25,13 +25,17 @@
 - Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives the confirmed event or expectation.
 - Don’t add unsupported claims about importance, planning clarity, role, pecking order, workload certainty, long-term certainty, or contract terms.
 - Don’t add atmosphere or endpoint framing that goes beyond the source package, even for a strong personal milestone.
+- [analyst] Don’t rest on the unresolved competition alone; make the actual decision point explicit and avoid repetitive room-sorting language that adds no value.
 - [insider] Don’t pad a thin injury, roster, or attendance note with report-style meta phrasing; keep the confirmed fact front and center.
-- [analyst] Don’t add team-specific or matchup-specific framing when the source material is too thin to verify it; keep the angle on the one supported remark.
 - [insider] Don’t import unsupported career details, accolades, draft history, or team impact into a personnel announcement when the source doesn’t supply them.
 - [columnist] Don’t build from an empty digest with unsupported specifics; if the source has no verifiable facts, the problem is source-side, not execution.
 - [columnist] Don’t turn a narrowly supported health or retirement disclosure into a bigger personal narrative or significance claim the source does not establish.
-- [insider] Don’t pad a single sourced availability note with a roster-name list unless each extra name is directly tied to the update.
+- [insider] Don’t imply stronger certainty than the digest provides, especially on week-1 availability or similar forward-looking status notes.
+- [insider] Don’t assert contract details, roster implications, or cap-management expansion unless the source directly supports them.
+- [insider] Don’t treat an empty digest as salvageable if the headline repeats unsupported contract mechanics; that’s source-side, not fixable in prose.
 - (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder team field were evidence; fix the underlying source data first.
 - (source-side, not fixable in prose) Don’t build a story from an empty digest or from facts that are missing entirely.
 - (source-side, not fixable in prose) Don’t publish when the digest is effectively missing or the team/source mapping is mismatched; rewrite around verified source data only.
-- [insider] Don’t add opener-state language or broader roster implications unless the digest explicitly supports them; keep the piece inside the one supported quote.
+- (source-side, not fixable in prose) Don’t treat a headline-level note with no usable source facts as if it can be rescued with wording; if the digest is empty beyond the headline, dismiss it.
+- [insider] Don’t add unsupported identity labels like rookie status or “top receiver” unless the source explicitly provides them.
+- [insider] Don’t imply an absence timeline or longer-term outlook when the source only says the player should be fine for Week 1.
