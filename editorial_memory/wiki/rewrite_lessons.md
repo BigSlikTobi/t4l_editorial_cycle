@@ -12,6 +12,7 @@
 - [columnist] Keep the piece anchored to the speaker’s exact wording and the immediate, stated takeaway.
 - [analyst] When the source offers a strong statistical or scheme hook, lead with that analytical frame and use the personnel move as proof, not vice versa.
 - [analyst] Surface the most actionable decision point in the lede, then let later paragraphs add support instead of rehashing the setup.
+- When the core fact is solid, keep the prose lean and let the concrete development do the work.
 
 ## What to avoid
 - Don’t widen a tightly supported update into a larger transition or roster-change story unless the source clearly supports it.
@@ -25,4 +26,7 @@
 - Don’t overexplain a simple sourced remark with strategic language that isn’t in the source package.
 - Don’t turn a source-supported comment into a “moving on” or “what comes next” article without evidence.
 - [analyst] Don’t bury the most actionable team-building or scheme takeaway under a generic minicamp-battles frame; lead with the analytical hook, then use roster fights as evidence.
-- (source-side, not fixable in prose) Don’t fabricate retirement, roster, or line-specific consequences when the digest supplies no facts beyond the title/headline.
+- Don’t repeat meta language about the source material when the rewrite can state the move and its immediate stake directly.
+- Don’t proceed when the digest is too thin or internally noisy to support the named entity or cap-space detail; unsupported detail risk at rewrite stage is a publish blocker.
+- Don’t paper over a grounding failure by leaning harder on headline wording if the source package itself doesn’t supply the needed facts.
+- Don’t treat unrelated player mentions or noisy metadata as safe to carry into the story (source-side, not fixable in prose).
