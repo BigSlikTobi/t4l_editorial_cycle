@@ -15,23 +15,23 @@
 - [columnist] A personal health or retirement disclosure can pass when it is tightly grounded, specific, and handled straight without extra framing or speculation.
 
 ## What to avoid
-- Dont widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
-- Dont stack extra context that doesnt directly advance the news peg.
-- Dont let the item drift away from the core status change, ruling, signing, attendance, visit, absence, ranking, decision, or personnel development.
-- Dont repeat the same fact in the headline, subhead, and lede without adding new utility.
-- Dont use meta phrasing like according to the report or no further detail in the digest; write the update straight.
-- Dont soften a confirmed development into generic availability language when the digest gives a sharper fact.
-- Dont overcomplicate a clean sourced item with explanation that isnt necessary for the reader to understand the news.
-- Dont overstate certainty with phrasing that implies a settled outcome when the source only gives the confirmed event or expectation.
-- Dont add unsupported claims about importance, planning clarity, role, pecking order, workload certainty, long-term certainty, or contract terms.
-- Dont add atmosphere or endpoint framing that goes beyond the source package, even for a strong personal milestone.
-- [insider] Dont pad a thin injury, roster, or attendance note with report-style meta phrasing; keep the confirmed fact front and center.
-- [analyst] Dont add team-specific or matchup-specific framing when the source material is too thin to verify it; keep the angle on the one supported remark.
-- [insider] Dont import unsupported career details, accolades, draft history, or team impact into a personnel announcement when the source doesnt supply them.
-- [columnist] Dont build from an empty digest with unsupported specifics; if the source has no verifiable facts, the problem is source-side, not execution.
-- [columnist] Dont turn a narrowly supported health or retirement disclosure into a bigger personal narrative or significance claim the source does not establish.
-- [insider] Dont pad a single sourced availability note with a roster-name list unless each extra name is directly tied to the update.
-- (source-side, not fixable in prose) Dont proceed as if a wrong or placeholder team field were evidence; fix the underlying source data first.
-- (source-side, not fixable in prose) Dont build a story from an empty digest or from facts that are missing entirely.
-- (source-side, not fixable in prose) Dont publish when the digest is effectively missing or the team/source mapping is mismatched; rewrite around verified source data only.
-- [insider] Dont add opener-state language or broader roster implications unless the digest explicitly supports them; keep the piece inside the one supported quote.
+- Don’t widen a tightly supported update into broader narrative framing unless the source clearly justifies it.
+- Don’t stack extra context that doesn’t directly advance the news peg.
+- Don’t let the item drift away from the core status change, ruling, signing, attendance, visit, absence, ranking, decision, or personnel development.
+- Don’t repeat the same fact in the headline, subhead, and lede without adding new utility.
+- Don’t use meta phrasing like “according to the report” or “no further detail in the digest”; write the update straight.
+- Don’t soften a confirmed development into generic availability language when the digest gives a sharper fact.
+- Don’t overcomplicate a clean sourced item with explanation that isn’t necessary for the reader to understand the news.
+- Don’t overstate certainty with phrasing that implies a settled outcome when the source only gives the confirmed event or expectation.
+- Don’t add unsupported claims about importance, planning clarity, role, pecking order, workload certainty, long-term certainty, or contract terms.
+- Don’t add atmosphere or endpoint framing that goes beyond the source package, even for a strong personal milestone.
+- [insider] Don’t pad a thin injury, roster, or attendance note with report-style meta phrasing; keep the confirmed fact front and center.
+- [analyst] Don’t add team-specific or matchup-specific framing when the source material is too thin to verify it; keep the angle on the one supported remark.
+- [insider] Don’t import unsupported career details, accolades, draft history, or team impact into a personnel announcement when the source doesn’t supply them.
+- [columnist] Don’t build from an empty digest with unsupported specifics; if the source has no verifiable facts, the problem is source-side, not execution.
+- [columnist] Don’t turn a narrowly supported health or retirement disclosure into a bigger personal narrative or significance claim the source does not establish.
+- [insider] Don’t pad a single sourced availability note with a roster-name list unless each extra name is directly tied to the update.
+- (source-side, not fixable in prose) Don’t proceed as if a wrong or placeholder team field were evidence; fix the underlying source data first.
+- (source-side, not fixable in prose) Don’t build a story from an empty digest or from facts that are missing entirely.
+- (source-side, not fixable in prose) Don’t publish when the digest is effectively missing or the team/source mapping is mismatched; rewrite around verified source data only.
+- [insider] Don’t add opener-state language or broader roster implications unless the digest explicitly supports them; keep the piece inside the one supported quote.
