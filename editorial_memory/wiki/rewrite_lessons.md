@@ -30,3 +30,7 @@
 - Don’t proceed when the digest is too thin or internally noisy to support the named entity or cap-space detail; unsupported detail risk at rewrite stage is a publish blocker.
 - Don’t paper over a grounding failure by leaning harder on headline wording if the source package itself doesn’t supply the needed facts.
 - Don’t treat unrelated player mentions or noisy metadata as safe to carry into the story (source-side, not fixable in prose).
+- Don’t add “according to reports” unless the source digest itself includes a concrete report detail.
+- Don’t add speculation about how created cap space will be used; keep the rewrite to the confirmed restructure fact.
+- Don’t use a thin digest to imply more than the restructure itself; source scarcity is a grounding problem, not a writing flourish problem.
+- [insider] Don’t trust metadata that mixes unrelated names/entities into the story; if the digest is fact-thin or mismatched, stop instead of forcing a publishable rewrite (source-side, not fixable in prose).
