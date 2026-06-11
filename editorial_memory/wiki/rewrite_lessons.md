@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Keep the piece tightly grounded in the digest and deliver the key facts fans care about without drift.
-- Let a clean, source-backed headline carry the story when the core news is the injury or transaction itself.
+- Let a clean, source-backed headline carry the story when the core news is the transaction itself.
 - Build the headline and lede around the confirmed development first, then add context only if it is explicitly supported.
 - A narrow, factual update can still be strong if it is fully source-grounded and well executed.
 - Preserve a clear throughline from headline to lede to body so the reader immediately understands the significance.
@@ -11,6 +11,7 @@
 - [insider] When the digest is thin, keep the story laser-focused on the confirmed update rather than trying to broaden it.
 - [columnist] Lead with the verified public remark or quote when that is the real news peg.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
+- Major contract updates read best when the money, term, and guarantee details are stated plainly and consistently across the piece.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative that the digest does not support.
