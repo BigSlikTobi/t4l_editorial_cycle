@@ -1,18 +1,17 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the piece tightly grounded in the digest and deliver the key facts fans care about without drift.
-- Let a clean, source-backed headline carry the story when the core news is the transaction or quote itself.
-- Build the headline and lede around the confirmed development first, then add context only if it is explicitly supported.
-- A narrow, factual update can still be strong if it is fully source-grounded and well executed.
-- Preserve a clear throughline from headline to lede to body so the reader immediately understands the significance.
-- When the source support is limited, a concise update that stops at the confirmed facts can be the right call.
-- [insider] Use the confirmed injury, contract, or transaction facts as the spine, then add only source-supported team context.
-- [insider] When the digest is thin, keep the story laser-focused on the confirmed update rather than trying to broaden it.
-- [insider] Direct, specific, useful insider copy with no fabrication or banned meta language is a strong default.
+- Keep the piece tightly grounded in the one confirmed fact and deliver only what the digest supports.
+- Let a clean, source-backed headline carry the story when the core news is the quote or label itself.
+- Build the headline, lede, and body around the same concrete hook so the angle stays consistent.
+- A small-but-useful observation can work well if it is sharply executed and clearly sourced.
+- Preserve a clear throughline from headline to lede to body so the reader immediately gets the point.
+- When a source phrase is the best evidence, center the exact wording instead of inflating it.
+- Direct, specific copy with no fabrication or banned meta language is a strong default.
+- A narrow, factual update can still be strong if it stays fully source-grounded.
+- [insider] Use confirmed injury, contract, or transaction facts as the spine, then add only source-supported team context.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
-- [analyst] Tight quote-driven pieces work when the exact line is the hook and the framing stays modest.
-- Hedge to the source’s exact wording when the evidence is thin; mirror the quote instead of amplifying it.
+- Quote-led stories work best when the headline and intro stay close to the speaker’s exact language and the named role/title.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative that the digest does not support.
@@ -23,7 +22,7 @@
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t stack repetitive detail across headline and intro when one clean presentation would do.
 - Don’t use source-meta filler or report-language when the article can state the fact directly.
-- Don’t force extra story shape onto a tight insider update when the digest already supports only a limited read.
-- Don’t turn a single status update into broader conclusions about readiness, medical approval, or team implications unless the source explicitly supports it.
-- Don’t fabricate or build confidence/status assertions from an ungrounded digest; if the source only supports a headline-level claim, the piece is source-side, not fixable in prose.
-- Don’t keep trying to salvage a piece when the digest has no verifiable facts beyond the summary; that’s a source-side problem, not a rewrite problem (source-side, not fixable in prose).
+- Don’t force extra story shape onto a tight update when the digest already supports only a limited read.
+- Don’t turn a single status or quote into broader conclusions unless the source explicitly supports it.
+- Don’t invent texture, reactions, or broader direction from a quote when the source only supports the quote and the named role.
+- Don’t build confidence or status claims from thin or missing source support; if the digest can’t verify the development, treat it as source-side, not fixable in prose (source-side, not fixable in prose).
