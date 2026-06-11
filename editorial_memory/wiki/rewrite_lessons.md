@@ -12,6 +12,8 @@
 - [insider] When the source is thin, keep the piece locked to the confirmed development and stop there.
 - [insider] Keep retirement and status updates tightly on the verified announcement; a direct fact can carry the story if the writing stays clean and restrained.
 - [insider] Ground opening-week or availability updates in the confirmed rehab/status facts, with only source-backed context layered in.
+- [insider] Use the clean, verified roster move as the spine, then add date/contract/production proof points in the next paragraph rather than re-stating the same fact in every slot.
+- [insider] Clean breaking-news structure works when the story is tightly grounded in the digests and includes the key transaction details plus just enough roster context.
 - [columnist] Lead with the exact quote or public remark when that is the only solid hook available.
 - [columnist] A narrow angle can work well if it stays on the quoted statement and the verified reaction to it.
 
@@ -25,6 +27,7 @@
 - Don’t use source-meta phrasing like “the report identifies” when the article itself can state the fact directly.
 - Don’t add recovery, team, or next-step implications unless the source explicitly supports them.
 - Don’t repeat the same lede-level fact in headline and intro without adding a second useful detail.
+- Don’t frame a signing or move as settled “after” a specific event unless the available digests clearly support that sequence.
 - [analyst] Don’t bury the specific source-backed takeaway under a generic “battle continues” frame.
 - [analyst] Don’t fabricate or import an unsupported player/personnel addition to prop up a receiver-room angle.
 - [analyst] Don’t invent production or stat lines to strengthen a roster/return angle; keep every number source-verifiable.
@@ -35,5 +38,6 @@
 - [insider] Don’t treat a missing or mismatched source digest as something rewrites can rescue; if the core facts aren’t there, the piece is unpublishable as-is (source-side, not fixable in prose).
 - [insider] Don’t turn a generic retirement announcement into a claim about leaving a specific team unless that move is actually supported in the digest.
 - [insider] Don’t try to salvage a story when the source digest has no usable facts; dismiss it rather than forcing prose around a void (source-side, not fixable in prose).
+- [insider] Don’t overstate ESPN’s certainty or other source attribution; keep the wording strictly to what the digest supports.
 - [columnist] Don’t extrapolate from a public quote into locker-room mood, team stability, or broader dynamics unless the source directly supports those claims.
 - [columnist] Don’t turn a thin quote into a diagnosis of what the remark “suggests”; stay inside the remark itself and the verified reaction around it.
