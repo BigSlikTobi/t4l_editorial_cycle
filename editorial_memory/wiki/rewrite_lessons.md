@@ -1,43 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the lede centered on the one source-backed fact that actually carries the story.
-- When the core update is the news, build around that statement instead of widening into extra narrative.
-- Use a tight, factual decision-point frame when the source points to a likely timing window.
-- Preserve a clear takeaway: what is confirmed, what is still unresolved, and what the next checkpoint is.
-- Let the headline mirror the verified core claim without adding a bigger battle story than the source supports.
-- Keep analytical stories anchored to the most concrete football takeaway first, then add context only if it stays inside the verified frame.
-- A narrow, source-grounded update can still work if it avoids overexplaining the implications.
-- [analyst] Lead with the actionable football development or stated stance first, then use contract or production details to make the roster decision concrete.
-- [insider] When the source is thin, keep the piece locked to the confirmed development and stop there.
-- [insider] Keep retirement and status updates tightly on the verified announcement; a direct fact can carry the story if the writing stays clean and restrained.
-- [insider] Ground opening-week or availability updates in the confirmed rehab/status facts, with only source-backed context layered in.
-- [insider] Use the clean, verified roster move as the spine, then add date/contract/production proof points in the next paragraph rather than re-stating the same fact in every slot.
-- [insider] Clean breaking-news structure works when the story is tightly grounded in the digests and includes the key transaction details plus just enough roster context.
-- [columnist] Lead with the exact quote or public remark when that is the only solid hook available.
-- [columnist] A narrow angle can work well if it stays on the quoted statement and the verified reaction to it.
+- Keep the piece tightly grounded in the digest and deliver the key facts fans care about without drift.
+- Let a clean, source-backed headline carry the story when the core news is the injury or transaction itself.
+- Build the headline and lede around the confirmed development first, then add context only if it is explicitly supported.
+- A narrow, factual update can still be strong if it is fully source-grounded and well executed.
+- Preserve a clear throughline from headline to lede to body so the reader immediately understands the significance.
+- When the source support is limited, a concise update that stops at the confirmed facts can be the right call.
+- [insider] Use the confirmed injury, contract, or transaction facts as the spine, then add only source-supported team context.
+- [insider] When the digest is thin, keep the story laser-focused on the confirmed update rather than trying to broaden it.
+- [columnist] Lead with the verified public remark or quote when that is the real news peg.
+- [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 
 ## What to avoid
-- Don’t introduce unsupported roster, personnel, or byline-style details to make a source-backed update feel bigger.
-- Don’t claim the subject shared the disclosure or moved the story along unless the source explicitly supports that action.
-- Don’t widen a simple factual update into a larger narrative unless the source actually spells it out.
-- Don’t let the headline promise a broader fight or storyline than the lede can verify.
-- Don’t stack extra context around a clean quote when the quote itself already supplies the news peg.
-- Don’t infer more certainty than the source gives about where the situation is headed or who controls it.
-- Don’t use source-meta phrasing like “the report identifies” when the article itself can state the fact directly.
-- Don’t add recovery, team, or next-step implications unless the source explicitly supports them.
-- Don’t repeat the same lede-level fact in headline and intro without adding a second useful detail.
-- Don’t frame a signing or move as settled “after” a specific event unless the available digests clearly support that sequence.
-- [analyst] Don’t bury the specific source-backed takeaway under a generic “battle continues” frame.
-- [analyst] Don’t fabricate or import an unsupported player/personnel addition to prop up a receiver-room angle.
-- [analyst] Don’t invent production or stat lines to strengthen a roster/return angle; keep every number source-verifiable.
-- [insider] Don’t force extra detail into a thin update when the digest only supports one clear development.
-- [insider] Don’t use source-meta filler such as “no further details were included in the source digest”; just stay with the verified fact.
-- [insider] Don’t assert retirement, team status, or other headline-level facts when the source digest is missing or unusable; that’s a source-side, not fixable in prose.
-- [insider] Don’t fabricate a core retirement, age, or personnel-change premise when the source digest is effectively empty; closed-world dismissals are source-side, not fixable in prose.
-- [insider] Don’t treat a missing or mismatched source digest as something rewrites can rescue; if the core facts aren’t there, the piece is unpublishable as-is (source-side, not fixable in prose).
-- [insider] Don’t turn a generic retirement announcement into a claim about leaving a specific team unless that move is actually supported in the digest.
-- [insider] Don’t try to salvage a story when the source digest has no usable facts; dismiss it rather than forcing prose around a void (source-side, not fixable in prose).
-- [insider] Don’t overstate ESPN’s certainty or other source attribution; keep the wording strictly to what the digest supports.
-- [columnist] Don’t extrapolate from a public quote into locker-room mood, team stability, or broader dynamics unless the source directly supports those claims.
-- [columnist] Don’t turn a thin quote into a diagnosis of what the remark “suggests”; stay inside the remark itself and the verified reaction around it.
+- Don’t widen a source-backed update into extra narrative that the digest does not support.
+- Don’t leave out the specific confirmed fact that makes the development meaningful.
+- Don’t bury the strongest factual takeaway under generic framing.
+- Don’t add roster-competition, role, or immediate-impact language unless the source explicitly supports it.
+- Don’t add context that wanders beyond the verified frame, even if it feels helpful.
+- Don’t overstate certainty or imply implications the source does not spell out.
+- Don’t stack repetitive detail across headline and intro when one clean presentation would do.
+- Don’t use source-meta filler when the article can state the fact directly.
+- Don’t force extra story shape onto a tight insider update when the digest already supports only a limited read.
+- [insider] Don’t publish an injury or roster update as if source silence still supports a specific diagnosis or season-long implication.
+- [insider] Don’t treat a thin injury or roster update as if it needs broader drama to be publishable.
+- [columnist] Don’t turn a single public remark into wider locker-room or organizational conclusions without direct support.
+- [analyst] Don’t replace the concrete football development with a generic “battle continues” frame.
