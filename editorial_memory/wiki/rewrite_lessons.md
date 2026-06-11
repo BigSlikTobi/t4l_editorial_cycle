@@ -9,9 +9,10 @@
 - When the source support is limited, a concise update that stops at the confirmed facts can be the right call.
 - [insider] Use the confirmed injury, contract, or transaction facts as the spine, then add only source-supported team context.
 - [insider] When the digest is thin, keep the story laser-focused on the confirmed update rather than trying to broaden it.
-- [columnist] Lead with the verified public remark or quote when that is the real news peg.
+- [insider] Direct, specific, useful insider copy with no fabrication or banned meta language is a strong default.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 - Major contract updates read best when the money, term, and guarantee details are stated plainly and consistently across the piece.
+- A sharp, sourced quote can be enough on its own if the headline and intro avoid piling on unsupported interpretation.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative that the digest does not support.
@@ -23,7 +24,6 @@
 - Don’t stack repetitive detail across headline and intro when one clean presentation would do.
 - Don’t use source-meta filler when the article can state the fact directly.
 - Don’t force extra story shape onto a tight insider update when the digest already supports only a limited read.
-- [insider] Don’t publish an injury or roster update as if source silence still supports a specific diagnosis or season-long implication.
-- [insider] Don’t treat a thin injury or roster update as if it needs broader drama to be publishable.
-- [columnist] Don’t turn a single public remark into wider locker-room or organizational conclusions without direct support.
-- [analyst] Don’t replace the concrete football development with a generic “battle continues” frame.
+- Don’t let the headline and lede just restate the same quote-level point; give the reader a cleaner angle or tighter setup.
+- Don’t pad a thin quote-driven piece with claims about centrality, reaction, or meaning that the digest does not verify.
+- Don’t build a story on an empty source digest; if there are no usable facts, the piece is not publishable (source-side, not fixable in prose).
