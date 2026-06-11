@@ -10,7 +10,8 @@
 - A narrow, source-grounded update can still work if it avoids overexplaining the implications.
 - [analyst] Lead with the actionable football development or stated stance first, then use contract or production details to make the roster decision concrete.
 - [insider] When the source is thin, keep the piece locked to the confirmed development and stop there.
-- For health, status, or retirement updates, a direct fact can carry the story if the writing stays clean and restrained.
+- [insider] Keep retirement and status updates tightly on the verified announcement; a direct fact can carry the story if the writing stays clean and restrained.
+- [insider] Ground opening-week or availability updates in the confirmed rehab/status facts, with only source-backed context layered in.
 - [columnist] Lead with the exact quote or public remark when that is the only solid hook available.
 - [columnist] A narrow angle can work well if it stays on the quoted statement and the verified reaction to it.
 
@@ -32,5 +33,7 @@
 - [insider] Don’t assert retirement, team status, or other headline-level facts when the source digest is missing or unusable; that’s a source-side, not fixable in prose.
 - [insider] Don’t fabricate a core retirement, age, or personnel-change premise when the source digest is effectively empty; closed-world dismissals are source-side, not fixable in prose.
 - [insider] Don’t treat a missing or mismatched source digest as something rewrites can rescue; if the core facts aren’t there, the piece is unpublishable as-is (source-side, not fixable in prose).
+- [insider] Don’t turn a generic retirement announcement into a claim about leaving a specific team unless that move is actually supported in the digest.
+- [insider] Don’t try to salvage a story when the source digest has no usable facts; dismiss it rather than forcing prose around a void (source-side, not fixable in prose).
 - [columnist] Don’t extrapolate from a public quote into locker-room mood, team stability, or broader dynamics unless the source directly supports those claims.
 - [columnist] Don’t turn a thin quote into a diagnosis of what the remark “suggests”; stay inside the remark itself and the verified reaction around it.
