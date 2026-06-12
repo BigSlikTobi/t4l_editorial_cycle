@@ -41,6 +41,9 @@
 - [insider] Don’t lean on “reported” repetition or continuity filler when the real update is the agreement itself; lead with the concrete deal and its end date.
 - [insider] Don’t build around inaccessible or empty-source reporting; if the digest has no factual payload, the story should be dismissed rather than dressed up.
 - [insider] Don’t use phrases like “the source does not spell out” or similar narration of missing evidence; that is a signal the piece is under-grounded.
+- [insider] Don’t stack report-on-the-report phrasing like “according to X” or “X reports” when the digest only supports the headline fact; state the verified development directly.
+- [insider] Don’t include “no other details were provided” style commentary; if extra detail is absent, tighten to the supported fact instead of narrating the gap.
+- [insider] Don’t make the lede do more than the digest can support; when the confirmed legal update is the story, lead with the charge(s) only.
 - [columnist] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
 - [columnist] Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t add broader implications or criticism-framing when the only supported material is the blunt quote itself.
