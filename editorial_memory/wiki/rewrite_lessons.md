@@ -11,6 +11,7 @@
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single team-specific development can score well when grounding is airtight.
 - [insider] Keep the focus on the confirmed team event or transaction; add only source-supported context, not extra cross-team framing.
+- [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 - [analyst] Use exact contract terms, usage, or performance numbers when the source supports them; they can make an otherwise narrow update feel genuinely useful.
 - [columnist] A blunt, source-aligned quote can carry the whole piece when the digest only supports that one point.
