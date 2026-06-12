@@ -14,12 +14,14 @@
 - [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 - [columnist] A blunt, source-aligned quote can carry the whole piece when the digest only supports that one point.
+- [insider] A clean extension update works when it includes the specific term and end date, plus only the minimal verified context needed to frame why it matters.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
 - Don’t leave out the single concrete development that makes the story worth reading.
 - Don’t bury the strongest factual takeaway under generic framing.
 - Don’t repeat the same idea across headline, subhead, intro, and opening; one clean presentation is enough.
+- Don’t let a generic lede simply restate the headline when the source offers a stronger angle.
 - Don’t add scene-setting or team-fill language unless the source explicitly supports it.
 - Don’t add roster-competition, role, or immediate-impact language unless the source explicitly supports it.
 - Don’t add context that wanders beyond the verified frame, even if it feels helpful.
