@@ -14,7 +14,6 @@
 - [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 - [columnist] A blunt, source-aligned quote can carry the whole piece when the digest only supports that one point.
-- [insider] A clean extension update works when it includes the specific term and end date, plus only the minimal verified context needed to frame why it matters.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -48,10 +47,11 @@
 - [insider] Don’t overstate a discipline decision or policy finding; keep the outcome precise and avoid implying motive or broader judgment beyond the source.
 - [insider] Don’t add unsupported team-status or off-field framing when the digest only confirms the charges and the violation.
 - [insider] Don’t add unsupported protection-order or four-new-charges specifics when the digest is empty; that is a source-side verification failure, not a prose fix (source-side, not fixable in prose).
-- [columnist] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
-- [columnist] Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
-- [columnist] Don’t add broader implications or criticism-framing when the only supported material is the blunt quote itself.
-- [columnist] Don’t publish a quote-led column when grounding is effectively absent, even if the line is sharp; a readable quote alone is not enough.
-- [columnist] Don’t add self-aware filler when the story is already thin; keep the lede on the single supported development.
-- [columnist] Don’t paraphrase a public checkpoint loosely enough to flip the meaning; precision matters more than flourish.
-- [columnist] Don’t force extra interpretation onto a thin camp-checkpoint quote; if the source only gives a small status update, stay that small.
+- [insider] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
+- [insider] Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
+- [insider] Don’t add broader implications or criticism-framing when the only supported material is the blunt quote itself.
+- [insider] Don’t publish a quote-led column when grounding is effectively absent, even if the line is sharp; a readable quote alone is not enough.
+- [insider] Don’t add self-aware filler when the story is already thin; keep the lede on the single supported development.
+- [insider] Don’t paraphrase a public checkpoint loosely enough to flip the meaning; precision matters more than flourish.
+- [insider] Don’t force extra interpretation onto a thin camp-checkpoint quote; if the source only gives a small status update, stay that small.
+- [insider] Don’t invent repeat-arrest or felony-charge claims from an empty digest; if the source has no factual payload, dismiss it rather than reconstructing the story.
