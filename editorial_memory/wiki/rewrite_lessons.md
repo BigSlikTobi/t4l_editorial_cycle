@@ -14,7 +14,8 @@
 - [insider] For breaking contract updates, a direct headline plus a non-redundant lede can be enough when the digest only confirms the deal and term.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 - [analyst] Use exact contract terms, usage, or performance numbers when the source supports them; they can make an otherwise narrow update feel genuinely useful.
-- [columnist] A direct quote or exact line can do the heavy lifting if the story stays centered on that one supported point.
+- [columnist] A blunt, source-aligned quote can carry the whole piece when the digest only supports that one point.
+- [columnist] Keep the lede quote-driven and minimal if the digest does not provide extra factual support beyond the exact line.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative that the digest does not support.
@@ -31,6 +32,7 @@
 - Don’t present a case as having confirmed legal context beyond the digest; keep to the verified charge only.
 - Don’t use self-referential phrasing in the subhead/intro; cut meta commentary and lead with the confirmed development.
 - Don’t publish when the source digest is effectively empty; unsupported claims like denial/status/incarceration details are source-side, not fixable in prose (source-side, not fixable in prose).
+- Don’t pad a clean update with repetitive wording or filler that adds no new sourced detail.
 - [insider] Don’t add long-term-plan or roster-direction framing unless the digest explicitly supports it; keep the reported extension itself as the hook.
 - [insider] Don’t repeat the same contract fact in lede and body without adding fresh sourced detail.
 - [insider] Don’t stretch a clear contract update into broader developmental or future-building claims just because they feel plausible.
@@ -38,4 +40,6 @@
 - [insider] Don’t add unsupported prison-status or legal-detail embellishment; keep parole decisions and confinement claims exactly to what the source confirms.
 - [insider] Don’t pad a breaking legal headline with meta phrasing or repeated lede language; keep headline, subhead, and first sentence aligned and direct.
 - [insider] Don’t treat an effectively empty digest as a license to infer background facts; if the source can’t verify it inside the closed world, leave it out.
-- [columnist] Don’t build a confident narrative around a coach’s-call angle unless the digest actually contains usable support beyond the topic line; unsupported specifics are source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t add broader implications or criticism-framing when the only supported material is the blunt quote itself.
+- [columnist] Don’t publish a quote-led column when grounding is effectively absent, even if the line is sharp; a readable quote alone is not enough.
