@@ -13,9 +13,7 @@
 - [insider] Keep the focus on the confirmed team event or transaction; add only source-supported context, not extra cross-team framing.
 - [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
-- [analyst] Use exact contract terms, usage, or performance numbers when the source supports them; they can make an otherwise narrow update feel genuinely useful.
 - [columnist] A blunt, source-aligned quote can carry the whole piece when the digest only supports that one point.
-- [columnist] Keep a thin quote-led update readable by sticking to the single supported checkpoint and exact attribution.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -45,6 +43,9 @@
 - [insider] Don’t stack report-on-the-report phrasing like “according to X” or “X reports” when the digest only supports the headline fact; state the verified development directly.
 - [insider] Don’t include “no other details were provided” style commentary; if extra detail is absent, tighten to the supported fact instead of narrating the gap.
 - [insider] Don’t make the lede do more than the digest can support; when the confirmed legal update is the story, lead with the charge(s) only.
+- [insider] Don’t overstate a discipline decision or policy finding; keep the outcome precise and avoid implying motive or broader judgment beyond the source.
+- [insider] Don’t add unsupported team-status or off-field framing when the digest only confirms the charges and the violation.
+- [insider] Don’t add unsupported protection-order or four-new-charges specifics when the digest is empty; that is a source-side verification failure, not a prose fix (source-side, not fixable in prose).
 - [columnist] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
 - [columnist] Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t add broader implications or criticism-framing when the only supported material is the blunt quote itself.
