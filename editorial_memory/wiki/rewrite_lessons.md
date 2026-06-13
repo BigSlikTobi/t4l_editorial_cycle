@@ -11,6 +11,7 @@
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single team-specific development can score well when grounding is airtight.
 - [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
+- [insider] When a digest only offers a name in a roundup, lead with the name and the verified context, and keep the note very short.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
 - [analyst] If the digest only supports a watch-list or roundup, name the tracked items plainly and keep the value in the verified list itself.
 
@@ -27,33 +28,16 @@
 - Don’t use source-meta filler or report-language when the article can state the fact directly.
 - Don’t mix in a separate team’s story or stray into wrong-team metadata; keep one article on one verified development.
 - Don’t pad a clean update with repetitive wording or filler that adds no new sourced detail.
-- [insider] Don’t add long-term-plan or roster-direction framing unless the digest explicitly supports it; keep the reported extension itself as the hook.
-- [insider] Don’t repeat the same contract fact in lede and body without adding fresh sourced detail.
-- [insider] Don’t stretch a clear contract update into broader developmental or future-building claims just because they feel plausible.
-- [insider] Don’t overbuild around one clean contract development when the source only gives you the extension, term, and basic significance.
-- [insider] Don’t add unsupported prison-status or legal-detail embellishment; keep parole decisions and confinement claims exactly to what the source confirms.
-- [insider] Don’t pad a breaking legal headline with meta phrasing or repeated lede language; keep headline, subhead, and first sentence aligned and direct.
-- [insider] Don’t treat an effectively empty digest as a license to infer background facts; if the source can’t verify it inside the closed world, leave it out.
-- [insider] Don’t speculate about what a reworked contract means beyond the report; keep the lede on the confirmed player, team, and figure only.
-- [insider] Don’t add source-meta language about what the report does or doesn’t lay out; remove that filler when grounding is thin.
-- [insider] Don’t lean on “reported” repetition or continuity filler when the real update is the agreement itself; lead with the concrete deal and its end date.
-- [insider] Don’t build around inaccessible or empty-source reporting; if the digest has no factual payload, the story should be dismissed rather than dressed up.
-- [insider] Don’t use phrases like “the source does not spell out” or similar narration of missing evidence; that is a signal the piece is under-grounded.
-- [insider] Don’t stack report-on-the-report phrasing like “according to X” or “X reports” when the digest only supports the headline fact; state the verified development directly.
-- [insider] Don’t include “no other details were provided” style commentary; if extra detail is absent, tighten to the supported fact instead of narrating the gap.
-- [insider] Don’t make the lede do more than the digest can support; when the confirmed legal update is the story, lead with the charge(s) only.
-- [insider] Don’t overstate a discipline decision or policy finding; keep the outcome precise and avoid implying motive or broader judgment beyond the source.
-- [insider] Don’t add unsupported team-status or off-field framing when the digest only confirms the charges and the violation.
+- Don’t build around inaccessible or empty-source reporting; if the digest has no factual payload, the story should be dismissed rather than dressed up.
+- Don’t use phrases like “the source does not spell out” or similar narration of missing evidence; that is a signal the piece is under-grounded.
+- Don’t stack report-on-the-report phrasing like “according to X” or “X reports” when the digest only supports the headline fact; state the verified development directly.
+- Don’t include “no other details were provided” style commentary; if extra detail is absent, tighten to the supported fact instead of narrating the gap.
+- Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
+- Don’t turn a roundup mention into an injury-status story unless the digest actually names a status, timeline, or practice detail.
 - [insider] Don’t add unsupported protection-order or four-new-charges specifics when the digest is empty; that is a source-side verification failure, not a prose fix (source-side, not fixable in prose).
-- [insider] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
-- [insider] Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
-- [insider] Don’t add broader implications or criticism-framing when the only supported material is the blunt quote itself.
-- [insider] Don’t publish a quote-led column when grounding is effectively absent, even if the line is sharp; a readable quote alone is not enough.
-- [insider] Don’t add self-aware filler when the story is already thin; keep the lede on the single supported development.
-- [insider] Don’t paraphrase a public checkpoint loosely enough to flip the meaning; precision matters more than flourish.
-- [insider] Don’t force extra interpretation onto a thin camp-checkpoint quote; if the source only gives a small status update, stay that small.
-- [analyst] Don’t claim a specific injury status or team-specific injury detail when the digest only supports a names-to-watch roundup.
-- [analyst] Don’t wrap a fantasy-watch list in meta framing about why it matters; present the tracked names and keep the value in the verified list.
 - [insider] Don’t invent repeat-arrest or felony-charge claims from an empty digest; if the source has no factual payload, dismiss it rather than reconstructing the story.
+- [insider] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
+- [insider] Don’t paraphrase a public checkpoint loosely enough to flip the meaning; precision matters more than flourish.
+- [analyst] Don’t claim a specific injury status or team-specific injury detail when the digest only supports a names-to-watch roundup.
 - [analyst] Don’t force a fantasy watch-list angle when the digest has no actual injury updates or statuses; that’s a source-side gap, not a prose fix (source-side, not fixable in prose).
 - [analyst] Don’t lean on a team-field or headline framing that implies confirmed team context when the source provides none; keep metadata aligned with the verified payload.
