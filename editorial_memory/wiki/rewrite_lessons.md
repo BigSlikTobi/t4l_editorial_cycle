@@ -10,10 +10,9 @@
 - A narrow, factual update can still work if it stays fully source-grounded and useful to fans.
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single team-specific development can score well when grounding is airtight.
-- [insider] Keep the focus on the confirmed team event or transaction; add only source-supported context, not extra cross-team framing.
 - [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
 - [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
-- [columnist] A blunt, source-aligned quote can carry the whole piece when the digest only supports that one point.
+- [analyst] If the digest only supports a watch-list or roundup, name the tracked items plainly and keep the value in the verified list itself.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -27,7 +26,6 @@
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use source-meta filler or report-language when the article can state the fact directly.
 - Don’t mix in a separate team’s story or stray into wrong-team metadata; keep one article on one verified development.
-- Don’t publish when the source digest is effectively empty; unsupported claims are source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t pad a clean update with repetitive wording or filler that adds no new sourced detail.
 - [insider] Don’t add long-term-plan or roster-direction framing unless the digest explicitly supports it; keep the reported extension itself as the hook.
 - [insider] Don’t repeat the same contract fact in lede and body without adding fresh sourced detail.
@@ -54,4 +52,8 @@
 - [insider] Don’t add self-aware filler when the story is already thin; keep the lede on the single supported development.
 - [insider] Don’t paraphrase a public checkpoint loosely enough to flip the meaning; precision matters more than flourish.
 - [insider] Don’t force extra interpretation onto a thin camp-checkpoint quote; if the source only gives a small status update, stay that small.
+- [analyst] Don’t claim a specific injury status or team-specific injury detail when the digest only supports a names-to-watch roundup.
+- [analyst] Don’t wrap a fantasy-watch list in meta framing about why it matters; present the tracked names and keep the value in the verified list.
 - [insider] Don’t invent repeat-arrest or felony-charge claims from an empty digest; if the source has no factual payload, dismiss it rather than reconstructing the story.
+- [analyst] Don’t force a fantasy watch-list angle when the digest has no actual injury updates or statuses; that’s a source-side gap, not a prose fix (source-side, not fixable in prose).
+- [analyst] Don’t lean on a team-field or headline framing that implies confirmed team context when the source provides none; keep metadata aligned with the verified payload.
