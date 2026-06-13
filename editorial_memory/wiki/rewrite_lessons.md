@@ -10,9 +10,9 @@
 - A narrow, factual update can still work if it stays fully source-grounded and useful to fans.
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single team-specific development can score well when grounding is airtight.
+- [insider] Lead with the verified bottom line and keep the intro tight when the digest supports only one real fact.
 - [insider] Use exact contract terms, total value, AAV, or timeline details when the source supports them; they can make a narrow update feel genuinely useful.
-- [analyst] Keep the football takeaway concrete and attached to a source-backed development, not an abstract theory.
-- [analyst] If the digest only supports a watch-list or roundup, name the tracked items plainly and keep the value in the verified list itself.
+- [insider] A simple status update can clear when it stays on one team, avoids repetition, and does not overstate implications.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -29,24 +29,13 @@
 - Don’t pad a clean update with repetitive wording or filler that adds no new sourced detail.
 - Don’t build around inaccessible or empty-source reporting; if the digest has no factual payload, the story should be dismissed rather than dressed up.
 - Don’t use phrases like “the source does not spell out” or similar narration of missing evidence; that is a signal the piece is under-grounded.
-- Don’t stack report-on-the-report phrasing like “according to X” or “X reports” when the digest only supports the headline fact; state the verified development directly.
-- Don’t include “no other details were provided” style commentary; if extra detail is absent, tighten to the supported fact instead of narrating the gap.
-- Don’t build a confident narrative around a quote unless the digest actually contains usable support beyond the line itself; unsupported interpretation is source-side, not fixable in prose (source-side, not fixable in prose).
-- Don’t turn a roundup mention into an injury-status story unless the digest actually names a status, timeline, or practice detail.
-- [insider] Don’t add unsupported protection-order or four-new-charges specifics when the digest is empty; that is a source-side verification failure, not a prose fix (source-side, not fixable in prose).
-- [insider] Don’t invent repeat-arrest or felony-charge claims from an empty digest; if the source has no factual payload, dismiss it rather than reconstructing the story.
-- [insider] Don’t misstate who is expecting what; keep the quote’s subject and attribution exact, especially on a thin one-line update.
-- [insider] Don’t paraphrase a public checkpoint loosely enough to flip the meaning; precision matters more than flourish.
+- [insider] Don’t leave a vague forward-looking sentence in place when the digest only supports the confirmed present-tense status; cut it and stay with the verified conclusion.
+- [insider] Don’t pile on roundup or moving-on language when the rewrite brief says the only verified note is the present status update.
 - [analyst] Don’t claim a specific injury status or team-specific injury detail when the digest only supports a names-to-watch roundup.
 - [analyst] Don’t force a fantasy watch-list angle when the digest has no actual injury updates or statuses; that’s a source-side gap, not a prose fix (source-side, not fixable in prose).
 - [analyst] Don’t lean on a team-field or headline framing that implies confirmed team context when the source provides none; keep metadata aligned with the verified payload.
-- [analyst] Don’t add unsupported defensive-install specifics or named-person details when the digest is effectively empty; dismiss instead of reverse-engineering the story (source-side, not fixable in prose).
-- Don’t build headlines, subheads, and intros that all say the same thing; if the source has one clean hook, use it once and move on.
-- Don’t soften a thin update with vague, unsupported language about how the offense or situation “feels”; cut filler and stay concrete.
-- [analyst] Don’t call out a “shared space” or similar relationship framing unless the source explicitly supports that interpretation.
-- [analyst] Don’t make one player the central marker of an effort if the digest only supplies a thin premise; keep the note source-safe and avoid unsupported certainty.
-- [analyst] Don’t add extra scene-setting or “player pool” framing when the source digest only supports the core premise; trim to the verified hook and keep named players only if they can be mentioned without implying roles not in the source.
+- [analyst] Don’t add unsupported scene-setting or relationship framing when the digest is too thin to support it; dismiss instead of reverse-engineering the story (source-side, not fixable in prose).
 - Don’t proceed with a rewrite when the digest is too thin to support the article’s specific claims; dismiss instead of trying to salvage unsupported detail.
 - Don’t assume high-level grounding is enough if the source digest is missing key facts; weak source substance is a stop sign, not a polishing problem.
-- [analyst] Don’t build a storyline around a no-interception drought, a named focus player, or other matchup framing when the digest is effectively empty; that is a source-side failure, not something prose can repair (source-side, not fixable in prose).
-- [analyst] Don’t attach unrelated named players to an angle unless the digest clearly ties them to the verified development; avoid implied connections from a bare headline idea.
+- Don’t build a storyline around a no-interception drought, a named focus player, or other matchup framing when the digest is effectively empty; that is a source-side failure, not something prose can repair (source-side, not fixable in prose).
+- Don’t treat a dismissed-case or no-discipline note as a license to infer more legal or league detail than the digest supplies; keep it to the verified bottom line.
