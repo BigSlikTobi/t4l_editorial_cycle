@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Keep the piece tightly grounded in the confirmed fact set and deliver only what the digest supports.
-- Lead with the concrete development when the real news is a completed status change, signing, or other verified bottom line.
+- Lead with the concrete development when the real news is a completed status change, signing, deletion, or other verified bottom line.
 - Let a clean, source-backed headline carry the story when the core news is the verified post, quote, label, term, or event itself.
 - Build the headline and lede around one concrete hook so the angle stays consistent.
 - Preserve a clear throughline from headline to lede to body so the reader immediately gets the point.
