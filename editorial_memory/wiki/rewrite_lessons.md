@@ -12,6 +12,7 @@
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single development can score well when grounding is airtight.
 - [insider] Lead with the verified bottom line and keep the intro tight when the digest supports only one real fact.
+- [insider] When the digest does support a transactional update, keep the copy moving: one transaction lead, then a concise concrete add-on, not repeated restatement.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -27,4 +28,5 @@
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
 - Don’t proceed with a rewrite when the digest is too thin to support the article’s specific claims; dismiss instead of trying to salvage unsupported detail.
 - Don’t assume high-level grounding is enough if the source digest is missing key facts; weak source substance is a stop sign, not a polishing problem.
-- [insider] Don’t treat a dismissed case with no usable source digest as fixable in prose; source-side, not fixable in prose.
+- [insider] Don’t turn a clean transaction brief into repetitive ledes or self-referential filler; tighten instead of restating the trade.
+- [insider] Don’t try to salvage an empty digest; if the source material has no usable facts beyond the title, dismiss rather than rewrite again (source-side, not fixable in prose).
