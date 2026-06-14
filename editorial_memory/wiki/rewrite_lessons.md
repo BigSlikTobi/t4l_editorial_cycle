@@ -11,10 +11,12 @@
 - A narrow, factual update can work if it stays fully source-grounded and useful to readers.
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single development can score well when grounding is airtight.
+- A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
 - [insider] Lead with the verified bottom line and keep the intro tight when the digest supports only one real fact.
 - [columnist] Death-at-age headlines work best when the headline and first sentence stay on that single confirmed fact and the sourced identification.
 - [columnist] A strong quote can be the story’s center when it is concrete, team-relevant, and honestly framed as optimism rather than a finished outcome.
 - [columnist] Phrases like “almost there” or “light at the end of the tunnel” can make a solid return update when they are presented as the sourced optimism, not as a confirmed comeback.
+- [columnist] A blunt player standard or self-critique can be the hook if the story stays on that verified quote and does not widen into extra context.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -35,3 +37,5 @@
 - [columnist] Don’t build a death story on a fabricated source frame or unsupported details; if the digest only contains the death notice and team link, stay there or dismiss (source-side, not fixable in prose).
 - [insider] Don’t force an OTA injury update when the source digest is empty; missing source facts make the piece unpublishable, not salvageable by polish (source-side, not fixable in prose).
 - [columnist] Don’t write a return story as if the comeback is confirmed when the source only signals optimism; keep it in the “almost there” / “light at the end of the tunnel” lane, not a completed timeline.
+- [columnist] Don’t add unsupported year or room-context framing around a blunt player quote; stay inside the verified standard and cut repetition.
+- [columnist] Don’t restate the same quote over and over without adding verified substance; repetition exposes thin grounding.
