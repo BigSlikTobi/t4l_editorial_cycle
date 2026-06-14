@@ -13,6 +13,8 @@
 - Clean wire-style execution on a single development can score well when grounding is airtight.
 - [insider] Lead with the verified bottom line and keep the intro tight when the digest supports only one real fact.
 - [columnist] Death-at-age headlines work best when the headline and first sentence stay on that single confirmed fact and the sourced identification.
+- [columnist] A strong quote can be the story’s center when it is concrete, team-relevant, and honestly framed as optimism rather than a finished outcome.
+- [columnist] Phrases like “almost there” or “light at the end of the tunnel” can make a solid return update when they are presented as the sourced optimism, not as a confirmed comeback.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -32,3 +34,4 @@
 - [insider] Don’t try to salvage an empty digest; if the source material has no usable facts beyond the title, dismiss rather than rewrite again (source-side, not fixable in prose).
 - [columnist] Don’t build a death story on a fabricated source frame or unsupported details; if the digest only contains the death notice and team link, stay there or dismiss (source-side, not fixable in prose).
 - [insider] Don’t force an OTA injury update when the source digest is empty; missing source facts make the piece unpublishable, not salvageable by polish (source-side, not fixable in prose).
+- [columnist] Don’t write a return story as if the comeback is confirmed when the source only signals optimism; keep it in the “almost there” / “light at the end of the tunnel” lane, not a completed timeline.
