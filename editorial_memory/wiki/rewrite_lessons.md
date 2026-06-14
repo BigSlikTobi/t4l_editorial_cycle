@@ -26,9 +26,9 @@
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use source-meta filler like “according to the report”; write the verified fact directly.
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
-- Don’t add broad career-significance or fan-reaction framing when the digest only supports the death notice and a bare identity label.
 - Don’t proceed with a rewrite when the digest is too thin to support the article’s specific claims; dismiss instead of trying to salvage unsupported detail.
 - Don’t assume high-level grounding is enough if the source digest is missing key facts; weak source substance is a stop sign, not a polishing problem.
 - [insider] Don’t turn a clean transaction brief into repetitive ledes or self-referential filler; tighten instead of restating the trade.
 - [insider] Don’t try to salvage an empty digest; if the source material has no usable facts beyond the title, dismiss rather than rewrite again (source-side, not fixable in prose).
 - [columnist] Don’t build a death story on a fabricated source frame or unsupported details; if the digest only contains the death notice and team link, stay there or dismiss (source-side, not fixable in prose).
+- [insider] Don’t force an OTA injury update when the source digest is empty; missing source facts make the piece unpublishable, not salvageable by polish (source-side, not fixable in prose).
