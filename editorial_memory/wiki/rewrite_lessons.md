@@ -13,6 +13,7 @@
 - Clean wire-style execution on a single development can score well when grounding is airtight.
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
 - [columnist] A simple human-interest moment can work when the lede stays on the one supported scene and avoids team/status embellishment.
+- [insider] Tight grounding can still read well when it includes concrete supporting details like timing, prior stops, or background only as far as the digest supports.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
