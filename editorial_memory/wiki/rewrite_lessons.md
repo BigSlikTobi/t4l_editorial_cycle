@@ -12,8 +12,7 @@
 - Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single development can score well when grounding is airtight.
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
-- [columnist] A simple human-interest moment can work when the lede stays on the one supported scene and avoids team/status embellishment.
-- [insider] Tight grounding can still read well when it includes concrete supporting details like timing, prior stops, or background only as far as the digest supports.
+- [insider] Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -26,11 +25,9 @@
 - Don’t rely on generic evaluation language when the source provides no concrete detail to sharpen the angle.
 - Don’t add scene-setting, team-fill, or source-meta language unless the source explicitly supports it.
 - Don’t add roster-competition, role, or immediate-impact language unless the source explicitly supports it.
-- Don’t add context that wanders beyond the verified frame, even if it feels helpful.
+- Don’t add unsupported awards or credentials; if a title like “UFL Offensive Player of the Year” is not in the digest, cut it.
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
-- [columnist] Don’t identify a subject with team/status language unless the digest explicitly supports it; keep the story inside the one verified human-interest action.
-- [analyst] Don’t write contract-details or similar claims when the source digest has no key facts to support them; unsupported specificity is a hard fail (source-side, not fixable in prose).
-- [analyst] Don’t drop in stray named entities or comparisons that are not tied to a source fact; they create the illusion of grounding without evidence.
-- [analyst] Don’t lean on vague filler when the digest offers no factual core to salvage; the piece should be withheld or rebuilt from real source facts.
-- [columnist] Don’t publish OTA/early-evaluation framing when the source digest provides no usable facts beyond the existence of the story; thin generic setup is not enough to ground the piece (source-side, not fixable in prose).
+- [insider] Don’t build a lede from unsupported specifics when the digest is missing key facts; unsupported precision is a hard fail (source-side, not fixable in prose).
+- [insider] Don’t let the headline/introduction just repeat the same basic sentence; rebuild around the confirmed hook and use the body to add only verified context.
+- [insider] Don’t publish when the source digest is missing usable verified facts and the draft adds unsupported specifics like performance claims or roster context; that’s non-recoverable (source-side, not fixable in prose).
