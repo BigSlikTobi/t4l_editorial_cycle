@@ -9,10 +9,10 @@
 - When a source phrase or exact figure is the best evidence, center it instead of inflating it.
 - Direct, specific copy with no fabrication or banned meta language is a strong default.
 - A narrow, factual update can work if it stays fully source-grounded and useful to readers.
-- Small but useful observations can work when they are sharply executed and clearly sourced.
 - Clean wire-style execution on a single development can score well when grounding is airtight.
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
 - [insider] Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
+- [insider] Use reported contract terms as the news peg when that is the only verified substance; keep the framing modest and factual.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -33,3 +33,5 @@
 - [insider] Don’t publish when the source digest is missing usable verified facts and the draft adds unsupported specifics like performance claims or roster context; that’s non-recoverable (source-side, not fixable in prose).
 - [insider] Don’t proceed when the only digest is unrelated to the story subject; hard-fail fabrication against a closed-world source is source-side, not fixable in prose.
 - [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
+- [insider] Don’t present a reported contract as confirmed or dress it up with unsupported significance; keep it clearly framed as a report and avoid “major commitment” style filler.
+- [insider] Don’t salvage a draft when the digest contains no usable support for the stated deal terms; unsupported signed-contract claims are a hard grounding failure (source-side, not fixable in prose).
