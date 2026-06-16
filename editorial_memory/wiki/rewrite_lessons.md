@@ -31,3 +31,5 @@
 - [insider] Don’t build a lede from unsupported specifics when the digest is missing key facts; unsupported precision is a hard fail (source-side, not fixable in prose).
 - [insider] Don’t let the headline/introduction just repeat the same basic sentence; rebuild around the confirmed hook and use the body to add only verified context.
 - [insider] Don’t publish when the source digest is missing usable verified facts and the draft adds unsupported specifics like performance claims or roster context; that’s non-recoverable (source-side, not fixable in prose).
+- [insider] Don’t proceed when the only digest is unrelated to the story subject; hard-fail fabrication against a closed-world source is source-side, not fixable in prose.
+- [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
