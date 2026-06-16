@@ -35,6 +35,10 @@
 - [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
 - [insider] Don’t present a reported contract as confirmed or dress it up with unsupported significance; keep it clearly framed as a report and avoid “major commitment” style filler.
 - [insider] Don’t salvage a draft when the digest contains no usable support for the stated deal terms; unsupported signed-contract claims are a hard grounding failure (source-side, not fixable in prose).
+- [insider] Don’t continue when the source digest is effectively empty or the story inputs and headline focus point to different subjects; there’s no factual base to repair (source-side, not fixable in prose).
+- [insider] Don’t lean on meta commentary when the body has no usable reporting; if the digest is empty, the draft is not salvageable from the provided material (source-side, not fixable in prose).
+- [insider] Don’t add Dallas offseason-focus or lingering contract-drama framing unless the digest directly supports it; keep the lede to the one confirmed minicamp attendance fact.
+- [insider] Don’t build around headline-level repetition when the digest is empty; there’s no substance to expand beyond the headline itself (source-side, not fixable in prose).
 - [analyst] Don’t pad a preview with a roster-name dump unless the digest gives a concrete reason each name matters.
 - [analyst] Don’t turn a preview into a broad roster dump if only one confirmed topic actually carries the story.
 - [analyst] Don’t add unsupported significance to contract questions; keep the frame on what the digest explicitly says, not what it might imply.
