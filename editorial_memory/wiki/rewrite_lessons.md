@@ -12,7 +12,7 @@
 - Clean wire-style execution on a single development can score well when grounding is airtight.
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
 - [insider] Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
-- [insider] Use reported contract terms as the news peg when that is the only verified substance; keep the framing modest and factual.
+- [analyst] When the source supports a preview, keep the lede centered on the confirmed storyline and include only teammates or context that clearly help explain that hook.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -35,3 +35,6 @@
 - [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
 - [insider] Don’t present a reported contract as confirmed or dress it up with unsupported significance; keep it clearly framed as a report and avoid “major commitment” style filler.
 - [insider] Don’t salvage a draft when the digest contains no usable support for the stated deal terms; unsupported signed-contract claims are a hard grounding failure (source-side, not fixable in prose).
+- [analyst] Don’t pad a preview with a roster-name dump unless the digest gives a concrete reason each name matters.
+- [analyst] Don’t turn a preview into a broad roster dump if only one confirmed topic actually carries the story.
+- [analyst] Don’t add unsupported significance to contract questions; keep the frame on what the digest explicitly says, not what it might imply.
