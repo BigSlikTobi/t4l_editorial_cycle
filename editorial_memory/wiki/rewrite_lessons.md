@@ -17,6 +17,7 @@
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
 - Don’t invent a scene or action when the source digest is empty or only provides a headline/summary; the story must not become sourced-out narrative.
+- Don’t let the headline/introduction simply echo one another when the source offers no new facts; rebuild around a confirmed hook.
 - Don’t leave out the single concrete development that makes the story worth reading.
 - Don’t bury the strongest factual takeaway under generic framing.
 - Don’t repeat the same idea across headline, intro, and opening; one clean presentation is enough.
@@ -28,8 +29,7 @@
 - Don’t add unsupported awards or credentials; if a title like “UFL Offensive Player of the Year” is not in the digest, cut it.
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
-- [insider] Don’t build a lede from unsupported specifics when the digest is missing key facts; unsupported precision is a hard fail (source-side, not fixable in prose).
-- [insider] Don’t let the headline/introduction just repeat the same basic sentence; rebuild around the confirmed hook and use the body to add only verified context.
+- [insider] Don’t build a lede from unsupported specifics or named-process framing when the digest is missing key facts; unsupported precision is a hard fail (source-side, not fixable in prose).
 - [insider] Don’t publish when the source digest is missing usable verified facts and the draft adds unsupported specifics like performance claims or roster context; that’s non-recoverable (source-side, not fixable in prose).
 - [insider] Don’t proceed when the only digest is unrelated to the story subject; hard-fail fabrication against a closed-world source is source-side, not fixable in prose.
 - [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
