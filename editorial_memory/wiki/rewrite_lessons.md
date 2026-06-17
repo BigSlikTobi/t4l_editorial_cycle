@@ -21,6 +21,7 @@
 - [insider] A clean wire-style lede on a training-camp/status update can work when it stays inside the confirmed recovery timeline and avoids adding extra implication.
 - [insider] A clean, fact-only extension update can publish when the headline, intro, and body all stay inside the verified deal terms.
 - [insider] A tightly framed release update can work when it stays on the confirmed jail release and gives just enough team context for a breaking item.
+- [insider] Useful context can include family motivation, a voided contract, an angle with another team, or a season stat total when those details are explicitly sourced and remain secondary to the main return/decision.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -56,4 +57,3 @@
 - Don’t make a thin source feel fuller by restating the same confirmed line in multiple places; one clean presentation is enough.
 - [insider] Don’t add source-meta explanation or side-asides when the update is already clear; the saved rewrite worked by stripping to the single verified development and removing the extra aside.
 - Don’t treat an empty or effectively empty digest as support for specific contract details; that is a source-side stop, not a prose rescue (source-side, not fixable in prose).
-- [insider] Don’t overcomplicate a clean disciplinary update; the approved rewrite worked because it stayed tightly inside the only available fact pattern and avoided unsupported escalation.
