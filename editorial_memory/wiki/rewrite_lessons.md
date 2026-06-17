@@ -10,8 +10,8 @@
 - Direct, specific copy with no fabrication or banned meta language is a strong default.
 - A narrow, factual update can work if it stays fully source-grounded and useful to readers.
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
-- Modest, relevant context around a confirmed contract-status, discipline, or availability update can help, as long as it stays secondary to the source-backed claim.
 - [insider] Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
+- [insider] A team-specific sourced reason for an absence or status update can be enough on its own if the presentation stays consistent and clean.
 - [analyst] A thin sourced quote can still work if the lede stays disciplined and does not pretend the digest contains deeper evaluation context.
 
 ## What to avoid
@@ -25,7 +25,8 @@
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
 - Don’t proceed when the source digest contains no usable facts and the draft’s claims are ungrounded; that is a source-side stop (source-side, not fixable in prose).
-- [analyst] Don’t add injury-contrast, player-relationship, or other extra framing to a contract-related status note unless the digest directly supports it; keep the absence tied to the reported contract issue.
+- [insider] Don’t use unsupported source-narration/meta phrasing or redundant lines about “the report” or “what it makes the story”; cut them and keep the intro on the confirmed development.
+- [insider] Don’t add teammate or surrounding-player references unless the digest explicitly supports the connection.
 - [insider] Don’t build a lede from unsupported specifics or mismatched source details; if the digest is thin, stay with the single confirmed fact and remove any fabricated attribution or wrong-field information.
 - [insider] Don’t use source-meta filler like “no further details were included in the report”; cut it and keep the intro on the confirmed development.
 - [insider] Don’t repeat the same lede across headline, subhead, introduction, and opening sentence; one clean, direct presentation is stronger than DRY echoing.
