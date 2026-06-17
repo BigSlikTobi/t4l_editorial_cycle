@@ -12,16 +12,7 @@
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
 - Modest, relevant context around a confirmed contract-status, discipline, or availability update can help, as long as it stays secondary to the source-backed claim.
 - [insider] Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
-- [insider] Lead with the one confirmed fact and keep the body on that same premise when the digest is thin.
-- [insider] A clean two-update practice-status roundup can work when each note is concrete, accurate, and tied to the named player/team.
-- [insider] A precise disciplinary or availability update can be publishable when it stays inside the confirmed fact pattern and avoids any unsupported escalation.
-- [insider] When a rewrite strips out unsupported timing/process language, the story can still work by focusing on the single confirmed team decision.
-- [insider] A lede can improve quickly when it centers the one confirmed development and preserves the specific reason behind it, instead of repeating the headline.
-- [insider] A bare-bones holding update can work when it states the confirmed release and frames the rest as simply pending next developments.
-- [insider] A clean wire-style lede on a training-camp/status update can work when it stays inside the confirmed recovery timeline and avoids adding extra implication.
-- [insider] A clean, fact-only extension update can publish when the headline, intro, and body all stay inside the verified deal terms.
-- [insider] A tightly framed release update can work when it stays on the confirmed jail release and gives just enough team context for a breaking item.
-- [insider] Useful context can include family motivation, a voided contract, an angle with another team, or a season stat total when those details are explicitly sourced and remain secondary to the main return/decision.
+- [analyst] A thin sourced quote can still work if the lede stays disciplined and does not pretend the digest contains deeper evaluation context.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -33,27 +24,10 @@
 - Don’t add unsupported timing, significance, outcome language, or retirement-context details; if it is not in the digest, cut it.
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
-- Don’t lean on dry, repetitive lede structure or filler that adds tone without adding verified substance.
+- Don’t proceed when the source digest contains no usable facts and the draft’s claims are ungrounded; that is a source-side stop (source-side, not fixable in prose).
+- [analyst] Don’t add injury-contrast, player-relationship, or other extra framing to a contract-related status note unless the digest directly supports it; keep the absence tied to the reported contract issue.
 - [insider] Don’t build a lede from unsupported specifics or mismatched source details; if the digest is thin, stay with the single confirmed fact and remove any fabricated attribution or wrong-field information.
-- [insider] Don’t proceed when the source digest is missing usable verified facts and the draft adds unsupported specifics like performance claims or roster context; that’s non-recoverable (source-side, not fixable in prose).
-- [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
-- [insider] Don’t lean on meta commentary when the body has no usable reporting; if the digest is empty, the draft is not salvageable from the provided material (source-side, not fixable in prose).
-- [insider] Don’t frame the article as if the digest confirms a declaration, signing, return, release, retirement, or similar update when the digest is missing or unusable; that is a grounding failure (source-side, not fixable in prose).
-- [insider] Don’t try to rescue a story when the digest is missing and only the headline is available; that is a source-side stop, not a prose fix (source-side, not fixable in prose).
-- [insider] Don’t introduce unsupported specifics or meta framing when the only available material is the headline; if there are no usable facts, there is nothing safely to publish (source-side, not fixable in prose).
-- [insider] Don’t write around a missing digest with arrest, minicamp, or status-detail claims that can’t be verified; when the source is empty, the story is not salvageable from prose alone (source-side, not fixable in prose).
-- [insider] Don’t treat a player-name mismatch in the closed-world inputs as resolvable by prose; if the source digest and supplied entity data conflict, that is a hard grounding stop (source-side, not fixable in prose).
 - [insider] Don’t use source-meta filler like “no further details were included in the report”; cut it and keep the intro on the confirmed development.
 - [insider] Don’t repeat the same lede across headline, subhead, introduction, and opening sentence; one clean, direct presentation is stronger than DRY echoing.
-- [insider] Don’t pad a grounded update with generic framing when the concrete checkpoint is already clear; make the minicamp/status development the lead news.
-- Don’t pad a fact-first availability update with broad talk about timing, roles, or the offense unless those details are explicitly tied to the source fact.
-- Don’t slip into generic exposition when the cleanest approach is a direct note on the player’s expected availability.
-- Don’t proceed when the source digest contains no usable facts and the draft’s claims about readiness, clearer runway, or similar outlook are unsupported; that is a source-side stop (source-side, not fixable in prose).
-- [insider] Don’t build on empty digests: if the source material is effectively blank, unsupported framing like contract drama or attention/status language cannot be repaired in prose (source-side, not fixable in prose).
-- Don’t add team-management interpretation around confirmed practice-status updates unless the source explicitly supports that framing; keep it as a simple two-note roundup.
-- Don’t repeat the same contract line in the headline, intro, and first paragraph when no new facts follow; compress the duplicate setup and move on.
-- Don’t keep meta notes about what the digest did or didn’t include; remove them and make the lede do real reporting work.
-- Don’t stretch a reported deal into added commitments or team-building conclusions that aren’t in the source; stay with the verified terms.
-- Don’t make a thin source feel fuller by restating the same confirmed line in multiple places; one clean presentation is enough.
-- [insider] Don’t add source-meta explanation or side-asides when the update is already clear; the saved rewrite worked by stripping to the single verified development and removing the extra aside.
-- Don’t treat an empty or effectively empty digest as support for specific contract details; that is a source-side stop, not a prose rescue (source-side, not fixable in prose).
+- [insider] Don’t treat a player-name mismatch in the closed-world inputs as resolvable by prose; if the source digest and supplied entity data conflict, that is a hard grounding stop (source-side, not fixable in prose).
+- [analyst] Don’t treat an empty digest as enough basis for a dismissive take about accuracy, criticism, or evaluation; without source facts, the claim is unpublishable (source-side, not fixable in prose).
