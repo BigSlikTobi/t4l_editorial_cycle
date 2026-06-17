@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Keep the piece tightly grounded in the confirmed fact set and deliver only what the digest supports.
-- Lead with the one verified development when the real news is a completed status change, declaration, signing, deletion, death, or other bottom-line update.
+- Lead with the one verified development when the real news is a completed status change, declaration, signing, return, deletion, death, or other bottom-line update.
 - Let a clean, source-backed headline carry the story when the core news is the verified post, quote, label, term, or event itself.
 - Build the headline and lede around one concrete hook so the angle stays consistent.
 - Preserve a clear throughline from headline to lede to body so the reader immediately gets the point.
@@ -19,6 +19,9 @@
 - [insider] A concise team-specific hook can still work if it stays inside the confirmed fact pattern and avoids extra implications.
 - [insider] In a strong rewrite-saved-it case, keep the contract facts tight and let the reported numbers do the work; a clean, specific deal line can be enough.
 - [insider] High grounding can still be lost to execution issues, so preserve the exact sourced deal terms and avoid clutter that repeats the same point.
+- [insider] A roster update can work well when it adds grounded role context and relevant prior-history details without drifting outside the digest.
+- [insider] For a return-season story, keep the headline and intro centered on the return itself and use production history only as support, not as a competing angle.
+- [insider] A concrete return framing can support a clean insider update when it stays anchored to the one-season move and the confirmed role/production context.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
@@ -35,25 +38,19 @@
 - [insider] Don’t proceed when the source digest is missing usable verified facts and the draft adds unsupported specifics like performance claims or roster context; that’s non-recoverable (source-side, not fixable in prose).
 - [insider] Don’t treat an unrelated source digest as if it can support a different headline, team, player, or contract claim; that mismatch is a hard stop (source-side, not fixable in prose).
 - [insider] Don’t lean on meta commentary when the body has no usable reporting; if the digest is empty, the draft is not salvageable from the provided material (source-side, not fixable in prose).
-- [insider] Don’t frame the article as if the digest confirms a declaration, signing, or similar update when the digest is missing or unusable; that is a grounding failure (source-side, not fixable in prose).
+- [insider] Don’t frame the article as if the digest confirms a declaration, signing, return, or similar update when the digest is missing or unusable; that is a grounding failure (source-side, not fixable in prose).
 - [insider] Don’t carry a wrong team field or other mismatched source detail into the copy; fix the source match before polishing the prose.
 - [insider] Don’t pad a breaking-news update with repetitive filler or self-cancelling notes about missing source material; cut the placeholder language and keep the copy to the transaction plus the one concrete team takeaway.
 - [insider] Don’t lean on banned source-meta phrasing like “according to the report”; keep attribution clean or omit it when the digest is already clear.
 - [insider] Don’t add backfield plans, team impact, or other consequences unless the source directly supports them.
 - [insider] Don’t present contract terms with unsupported certainty if the digest only backs the headline-level claim; keep the reporting hedge aligned to the source strength.
 - [insider] Don’t add extra context or consequence beyond the deal itself when the rewrite brief only authorizes the reported transaction.
-- [insider] Don’t pad a signing update with vague roster-context filler like “active in its roster buildout” or “no further transaction details” when the brief only supports the transaction itself.
-- [insider] Don’t publish placeholder-level moves without a grounded name, role detail, or consequence; vague “reported sign” updates with no identifying facts are too thin to salvage.
+- [insider] Don’t pad a signing or return update with vague roster-context filler when the brief only supports the transaction itself.
+- [insider] Don’t publish placeholder-level moves without a grounded name, role detail, or consequence; vague reported updates with no identifying facts are too thin to salvage.
 - [insider] Don’t repeat an unsupported generic role label when the source material never identifies the person; unresolved vagueness is a hard stop on rewrite attempts.
 - [insider] Don’t pad a clean contract report with redundant restatement or weak hedges that don’t move the story forward.
 - [insider] Don’t add filler lines like “no other terms” unless the digest actually supports that limitation.
 - [insider] Don’t let a strong, specific contract claim get diluted by repeated body framing when the deal facts already carry the story.
 - [insider] Don’t build from an empty digest with only headline-level event language and then add roster-context or defensive-back-group implications; that’s source-side, not fixable in prose.
-- [analyst] Don’t pad a preview with a roster-name dump unless the digest gives a concrete reason each name matters.
-- [analyst] Don’t turn a preview into a broad roster dump if only one confirmed topic actually carries the story.
-- [analyst] Don’t add unsupported significance to contract questions; keep the frame on what the digest explicitly says, not what it might imply.
-- [columnist] Don’t repeat the same verified development in headline, intro, and body without adding a second concrete detail; trim generic filler and keep the lede centered on the one reportable fact.
-- [columnist] Don’t use a team or field that conflicts with the source package; correct the source match before polishing the prose.
-- [columnist] Don’t imply new findings or timing around an investigation unless the source explicitly says so.
-- [columnist] Don’t build a story from a source digest with no usable facts; if the reporting cannot support more than the headline-level claim, the draft is not publishable as written (source-side, not fixable in prose).
-- [columnist] Don’t repeat one sentence across headline, subhead, intro, and body; if the digest is thin, cut repetition and either add verified substance or stop.
+- [insider] Don’t draft from an effectively empty digest as if a headline-level summary alone can support the full story; if the source cannot validate the facts, the piece is not publishable (source-side, not fixable in prose).
+- [insider] Don’t stitch unrelated side items into a return-season breaking update; keep the lede/subhead on the main return and relegate secondary details to a clearly secondary mention only if they genuinely belong.
