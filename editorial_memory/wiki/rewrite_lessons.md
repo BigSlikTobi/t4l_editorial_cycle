@@ -12,7 +12,7 @@
 - Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
 - For columnist/analysis-adjacent takes, a candid self-assessment from the subject can be the hook if it is tied to a named, source-backed context.
 - [analyst] A team-specific decision-point angle can work if it stays inside the named players and facts the digest actually confirms.
-- [columnist] A clean quote-plus-comparison hook can carry the piece when the comparison is explicitly source-backed and the copy stays aligned from headline to intro.
+- [analyst] Specific production markers from the digest, such as catch totals or contested wins, can make a draft note feel concrete without overexplaining.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications that the digest does not support.
