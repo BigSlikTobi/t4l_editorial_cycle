@@ -12,6 +12,7 @@
 - Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
 - For columnist/analysis-adjacent takes, a candid self-assessment from the subject can be the hook if it is tied to a named, source-backed context.
 - [analyst] A team-specific decision-point angle can work if it stays inside the named players and facts the digest actually confirms.
+- [columnist] A clean quote-plus-comparison hook can carry the piece when the comparison is explicitly source-backed and the copy stays aligned from headline to intro.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications that the digest does not support.
@@ -35,3 +36,7 @@
 - Don’t ship a roundup-driven piece when the only support is that names were mentioned and there are no real takeaways; thin recap framing is no longer salvageable after rewrite (source-side, not fixable in prose).
 - Don’t lean on a “linked to” or rumor-only frame when the piece never lands a concrete source-supported development; readers need a real decision point, not generic speculation.
 - Don’t make the angle just “should X make an offer?” unless the digest provides actual evidence or stakes behind that choice.
+- Don’t keep unsupported proper nouns in the copy; if a named coach or source detail is not in the digest, remove it and build from the confirmed quote or comparison instead.
+- Don’t pad a quote-driven story with vague filler; if the only real fact is a comparison, let that comparison carry the headline and lede.
+- Don’t overbuild a small source package into extra context; when the digest only supports one clean hook, keep the piece lean and centered on it.
+- Don’t rely on a comparison alone as novelty if the piece loses the specific source-backed context that makes the quote useful.
