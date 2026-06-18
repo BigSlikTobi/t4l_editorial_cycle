@@ -32,3 +32,6 @@
 - [insider] Don’t repeat the same lede across headline, subhead, introduction, and opening sentence; one clean, direct presentation is stronger than DRY echoing.
 - [insider] Don’t treat a player-name mismatch in the closed-world inputs as resolvable by prose; if the source digest and supplied entity data conflict, that is a hard grounding stop (source-side, not fixable in prose).
 - [analyst] Don’t treat an empty digest as enough basis for a dismissive take about accuracy, criticism, or evaluation; without source facts, the claim is unpublishable (source-side, not fixable in prose).
+- [insider] Don’t add process commentary or explain how the supplemental draft works unless that detail appears in the source facts.
+- [insider] Don’t introduce team-evaluation implications or a separate path-to-the-league narrative when the confirmed fact is simply that the player entered the supplemental draft.
+- [insider] Don’t add CBS-coverage framing or supplemental-draft-pool placement unless the digest explicitly provides those facts; when the digest is missing, treat the story as unpublishable rather than improvable in prose (source-side, not fixable in prose).
