@@ -11,11 +11,11 @@
 - A narrow, factual update can work if it stays fully source-grounded and useful to readers.
 - A pressure-or-expectation frame can work when it is explicitly sourced and kept inside the quoted claim, not expanded into speculation.
 - [insider] Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
+- [insider] Fast, factual framing works best for internal personnel moves: lead with the count and the specific promoted roles, then stop.
 - [insider] A team-specific sourced reason for an absence or status update can be enough on its own if the presentation stays consistent and clean.
-- [analyst] A thin sourced quote can still work if the lede stays disciplined and does not pretend the digest contains deeper evaluation context.
 
 ## What to avoid
-- Don’t widen a source-backed update into extra narrative or implications that the digest does not support.
+- Don’t widen a source-backed update into extra narrative, analogy, or implications that the digest does not support.
 - Don’t invent a scene, action, or new finding when the source package only supports one confirmed development.
 - Don’t let the headline, subhead, and lede all repeat the same idea when the source offers no new facts; rebuild around one confirmed hook.
 - Don’t leave out the single concrete development that makes the story worth reading.
@@ -25,13 +25,20 @@
 - Don’t overstate certainty or imply implications the source does not spell out.
 - Don’t use interpretive or commentary language to do the work of reporting; keep the claim anchored to the verified fact.
 - Don’t proceed when the source digest contains no usable facts and the draft’s claims are ungrounded; that is a source-side stop (source-side, not fixable in prose).
-- [insider] Don’t use unsupported source-narration/meta phrasing or redundant lines about “the report” or “what it makes the story”; cut them and keep the intro on the confirmed development.
+- [insider] Don’t use vague filler like “clear internal reset” or “most notable edge” when the source gives you concrete facts to carry the piece.
+- [insider] Don’t add banned/meta-style phrasing in the body; keep the draft fast, factual, and centered on the confirmed announcement.
+- [insider] Don’t make the intro do more than the source supports; if the news is a front-office reshuffle, keep it to the reshuffle, the count, and the named roles.
+- [insider] Don’t use source-narration/meta phrasing or redundant lines about “the report” or “what it makes the story”; cut them and keep the intro on the confirmed development.
 - [insider] Don’t add teammate or surrounding-player references unless the digest explicitly supports the connection.
 - [insider] Don’t build a lede from unsupported specifics or mismatched source details; if the digest is thin, stay with the single confirmed fact and remove any fabricated attribution or wrong-field information.
-- [insider] Don’t use source-meta filler like “no further details were included in the report”; cut it and keep the intro on the confirmed development.
 - [insider] Don’t repeat the same lede across headline, subhead, introduction, and opening sentence; one clean, direct presentation is stronger than DRY echoing.
 - [insider] Don’t treat a player-name mismatch in the closed-world inputs as resolvable by prose; if the source digest and supplied entity data conflict, that is a hard grounding stop (source-side, not fixable in prose).
-- [analyst] Don’t treat an empty digest as enough basis for a dismissive take about accuracy, criticism, or evaluation; without source facts, the claim is unpublishable (source-side, not fixable in prose).
 - [insider] Don’t add process commentary or explain how the supplemental draft works unless that detail appears in the source facts.
 - [insider] Don’t introduce team-evaluation implications or a separate path-to-the-league narrative when the confirmed fact is simply that the player entered the supplemental draft.
 - [insider] Don’t add CBS-coverage framing or supplemental-draft-pool placement unless the digest explicitly provides those facts; when the digest is missing, treat the story as unpublishable rather than improvable in prose (source-side, not fixable in prose).
+- [insider] Don’t pad a title-level suspension story with unsupported comparison language, discipline taxonomy, or “ban list” framing; keep the lede anchored to the single confirmed precedent being cited.
+- [insider] Don’t add extra comparison names or side-by-side framing unless the source material actually ties them to the argument.
+- [insider] Don’t rely on vague comparison structure when the digest only supports the article title; write to the confirmed claim, not to an imagined fuller brief.
+- Don’t turn a clean reporting update into a holdout-speculation story when the source only supports a report-to-camp declaration.
+- Don’t miss the practical team takeaway when it is explicitly stated and verified, even if the story is otherwise short and straightforward.
+- Don’t attempt to salvage a missing or contradictory source package with rewrite; if the digest is absent or the entity data conflicts, it is a source-side stop (source-side, not fixable in prose).
