@@ -11,6 +11,7 @@
 - A narrow, factual update can work if it stays fully source-grounded and useful to readers.
 - Tight grounding can still read well when it adds only the confirmed support details the digest actually contains.
 - For columnist/analysis-adjacent takes, a candid self-assessment from the subject can be the hook if it is tied to a named, source-backed context.
+- [analyst] A team-specific decision-point angle can work if it stays inside the named players and facts the digest actually confirms.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications that the digest does not support.
@@ -26,3 +27,11 @@
 - Don’t proceed when the source digest contains no usable facts or the entity data conflicts; that is a source-side stop (source-side, not fixable in prose).
 - Don’t flatten a source-backed quote into generic “work remains” phrasing when the specific named system or context is what makes it read.
 - Don’t publish claims when the digest is missing or the source package is effectively empty; that is a hard grounding failure (source-side, not fixable in prose).
+- Don’t claim a roundup supplied specific emphasis, quotes, or “clearest” takeaways unless the digest actually contains them; strip back to the confirmed roundup mention only.
+- Don’t state that a player is being released unless the digest actually supports that release claim; if not, frame it as a decision question or roster tradeoff instead.
+- Don’t add offer, market, or contract-term details unless the source digest explicitly supports them.
+- Don’t build the lede on unsupported assertions; keep the intro inside the verified team-specific facts.
+- Don’t treat missing source material as a writing problem; if the digest is empty, that is source-side, not fixable in prose.
+- Don’t ship a roundup-driven piece when the only support is that names were mentioned and there are no real takeaways; thin recap framing is no longer salvageable after rewrite (source-side, not fixable in prose).
+- Don’t lean on a “linked to” or rumor-only frame when the piece never lands a concrete source-supported development; readers need a real decision point, not generic speculation.
+- Don’t make the angle just “should X make an offer?” unless the digest provides actual evidence or stakes behind that choice.
