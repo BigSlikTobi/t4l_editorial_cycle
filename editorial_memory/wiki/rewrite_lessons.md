@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Keep the headline and lede centered on the single verified emotional or factual hook when the source package is narrow.
-- Lead with the clearest source-backed reaction; a direct quote or plainly supported feeling can carry the piece.
+- Lead with the clearest source-backed update; a direct, plainly supported fact can carry the piece.
 - Use a tight, concrete timeline when the story depends on role changes or promotions.
 - Build the copy around the exact confirmed angle rather than widening into generic commentary.
 - Stay lean and source-grounded when there is only one strong premise to report.
@@ -15,7 +15,7 @@
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications the digest does not support.
 - Don’t let the closing turn into commentary; finish on the verified takeaway instead.
-- Don’t make the framing generic or over-written when the real story is a specific sourced reaction.
+- Don’t make the framing generic or over-written when the real story is a specific sourced reaction or update.
 - Don’t bury the strongest factual takeaway under broad summary language.
 - Don’t add timing, significance, or outcome language unless the digest spells it out.
 - Don’t overstate certainty or imply consequences the source does not verify.
@@ -24,6 +24,10 @@
 - Don’t present a source bundle with uneven fit as if it were fully clean; keep the structure disciplined.
 - Don’t treat missing source detail as a writing problem; if the digest is thin, stay minimal rather than speculate.
 - [analyst] Don’t add camp-rep or depth-chart inference unless the digest explicitly supports those mechanics; otherwise keep the angle at the verified competition frame.
-- Don’t add roster-context or receiver-room details unless the digest directly supports them; when the source is missing, keep the piece tightly on the one confirmed development.
+- [analyst] Don’t claim a backup-competition or athleticism angle when the digest is effectively empty; without usable facts, keep the piece out of publishable territory.
+- Don’t add roster-context or room-details unless the digest directly supports them; when the source is missing, keep the piece tightly on the one confirmed development.
 - [source-side, not fixable in prose] Don’t treat a digest that misstates who was fired or promoted as salvageable by wording alone; dismiss the angle when the underlying source package is wrong.
 - [source-side, not fixable in prose] Don’t try to rescue a dismissal when the closed-world record is empty or the core claim is unsupported; if the factual support isn’t there, the piece should be dropped rather than rewritten.
+- [source-side, not fixable in prose] Don’t try to manufacture a broader performance or role story from a digest that only confirms health/availability; keep the piece anchored to the single verified update or drop it.
+- [source-side, not fixable in prose] Don’t treat a usable headline fact as enough for a full feature if the digest cannot support the added significance; speculative value-add belongs out of the draft.
+- [source-side, not fixable in prose] Don’t build a columnist-style narrative when the source digest is effectively empty; unsupported framing cannot be fixed by polish.
