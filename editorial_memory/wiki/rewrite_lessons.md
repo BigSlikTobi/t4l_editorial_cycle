@@ -25,3 +25,4 @@
 - Don’t treat missing source detail as a writing problem; if the digest is too thin, stay minimal rather than speculate.
 - Don’t try to salvage a piece when the source digest has no factual content beyond a broad premise; that’s source-side, not fixable in prose.
 - [analyst] Don’t add camp-rep or depth-chart inference unless the digest explicitly supports those mechanics; otherwise keep the angle at the verified competition frame.
+- Don’t present a correction as settled fact when the source material does not verify the underlying detail (source-side, not fixable in prose).
