@@ -12,6 +12,7 @@
 - A concise, source-fed development can still read well even without broader narrative expansion.
 - [analyst] Keep the article anchored to the one concrete team or player link the digest actually supports.
 - [analyst] Future-role or competition language works only when the digest explicitly supports the roles and sequence being discussed.
+- [analyst] Clear contract math and structure translation can carry the piece when it stays tied to the verified deal terms and market takeaway.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications the digest does not support.
