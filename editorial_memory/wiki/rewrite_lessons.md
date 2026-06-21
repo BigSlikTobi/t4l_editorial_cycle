@@ -32,3 +32,4 @@
 - Don’t add roster-padding or implied reporting detail to make a thin source package feel fuller.
 - Don’t treat a simple floor/ceiling quote as permission to invent broader team claims.
 - [source-side, not fixable in prose] Don’t attempt a columnist-style take when the digest is empty or missing key facts; no rewrite can fix an unsupported core claim.
+- [source-side, not fixable in prose] Don’t try to write around an empty factual base or unsupported claims about why a subject chose a team or who they discussed; if the digest has no verifiable details, the angle should be dropped.
