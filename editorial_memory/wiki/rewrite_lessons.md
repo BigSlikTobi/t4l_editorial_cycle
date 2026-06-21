@@ -14,6 +14,8 @@
 - [analyst] Future-role or competition language works only when the digest explicitly supports the roles and sequence being discussed.
 - [analyst] Clear contract math and structure translation can carry the piece when it stays tied to the verified deal terms and market takeaway.
 - [analyst] A sourced personnel/strategy shift can work well when the piece stays grounded in concrete evidence, quotes, and measurable context.
+- [insider] A clean, immediate lede with enough concrete detail can make a simple transaction story publishable.
+- [insider] Tight grounding to the digest is enough when the story is a straightforward signing update.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications the digest does not support.
@@ -36,3 +38,6 @@
 - [source-side, not fixable in prose] Don’t attempt a columnist-style take when the digest is empty or missing key facts; no rewrite can fix an unsupported core claim.
 - [source-side, not fixable in prose] Don’t try to write around an empty factual base or unsupported claims about why a subject chose a team or who they discussed; if the digest has no verifiable details, the angle should be dropped.
 - [source-side, not fixable in prose] Don’t rely on an unverified contract figure or record-setting label; if the digest cannot verify the numbers, the story fails closed-world review.
+- Don’t repeat the same contract note in multiple places; if the confirmed transaction is the whole story, make the wording sharper rather than longer.
+- Don’t treat a clean signing update as inherently publish-ready if it still lacks a concrete payoff or additional sourced detail; thin but accurate still needs a more pointed angle.
+- [analyst] Don’t turn a rookie-deal signing into mere roster bookkeeping; frame the verified transaction and its concrete status change, not just the administrative note.
