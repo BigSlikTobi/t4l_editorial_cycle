@@ -41,3 +41,5 @@
 - Don’t repeat the same contract note in multiple places; if the confirmed transaction is the whole story, make the wording sharper rather than longer.
 - Don’t treat a clean signing update as inherently publish-ready if it still lacks a concrete payoff or additional sourced detail; thin but accurate still needs a more pointed angle.
 - [analyst] Don’t turn a rookie-deal signing into mere roster bookkeeping; frame the verified transaction and its concrete status change, not just the administrative note.
+- [insider] Don’t add extra roster-clarity language or fully specific player/team claims beyond what the digest verifies; keep the lede simple and factual when the source base is thin.
+- [source-side, not fixable in prose] Don’t build a story when the headline, named entities, and digest are internally inconsistent or the digest is empty; that is a source-package failure, not a wording problem.
