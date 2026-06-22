@@ -10,10 +10,8 @@
 - Keep the writing lean when the premise is simple; no extra framing is needed if the core fact is strong.
 - Direct, specific writing with no fabrication or meta language is a strong default.
 - A concise, source-fed development can still read well even without broader narrative expansion.
-- [analyst] Clear contract math and structure translation can carry the piece when it stays tied to the verified deal terms and market takeaway.
-- [analyst] A sourced personnel/strategy shift can work well when the piece stays grounded in concrete evidence, quotes, and measurable context.
-- [insider] A clean, immediate lede with enough concrete detail can make a simple transaction story publishable.
-- [insider] Early-role detail can strengthen a signing note when it stays tied to the verified player profile and immediate camp takeaway.
+- [insider] A clean, immediate lede with enough concrete detail can make a simple transaction/workout story publishable.
+- [insider] A tightly sourced roster update can work even when it is modest news, as long as the team and development match cleanly.
 
 ## What to avoid
 - Don’t widen a source-backed update into extra narrative, analogy, or implications the digest does not support.
@@ -25,19 +23,8 @@
 - Don’t pad a thin source package with filler that adds no verified fact.
 - Don’t force a broader frame when the real story is a single confirmed development.
 - Don’t present a source bundle with uneven fit as if it were fully clean; keep the structure disciplined.
-- Don’t repeat the lede idea in the headline, subheadline, and intro; vary the delivery so the piece doesn’t feel thinner than it is.
-- [analyst] Don’t add camp-rep or depth-chart inference unless the digest explicitly supports those mechanics; otherwise keep the angle at the verified competition frame.
-- [insider] Don’t add source-meta phrasing or “article notes” about unsigned rookies; cut anything that sounds bolted-on rather than part of the fan-facing update.
-- [source-side, not fixable in prose] Don’t treat a digest that misstates who was fired or promoted as salvageable by wording alone; dismiss the angle when the underlying source package is wrong.
-- [source-side, not fixable in prose] Don’t try to rescue a dismissal when the closed-world record is empty or the core claim is unsupported; if the factual support isn’t there, the piece should be dropped rather than rewritten.
-- Don’t build around unsupported paraphrase when the digest only gives you a headline-level takeaway.
-- Don’t add roster-padding or implied reporting detail to make a thin source package feel fuller.
-- Don’t treat a simple floor/ceiling quote as permission to invent broader team claims.
-- [source-side, not fixable in prose] Don’t attempt a columnist-style take when the digest is empty or missing key facts; no rewrite can fix an unsupported core claim.
-- [source-side, not fixable in prose] Don’t try to write around an empty factual base or unsupported claims about why a subject chose a team or who they discussed; if the digest has no verifiable details, the angle should be dropped.
-- [source-side, not fixable in prose] Don’t rely on an unverified contract figure or record-setting label; if the digest cannot verify the numbers, the story fails closed-world review.
-- [analyst] Don’t turn a rookie-deal signing into mere roster bookkeeping; frame the verified transaction and its concrete status change, not just the administrative note.
-- [insider] Don’t add extra roster-clarity language or fully specific player/team claims beyond what the digest verifies; keep the lede simple and factual when the source base is thin.
-- [source-side, not fixable in prose] Don’t build a story when the headline, named entities, and digest are internally inconsistent or the digest is empty; that is a source-package failure, not a wording problem.
-- [source-side, not fixable in prose] Don’t keep spinning a piece when the source digest is effectively missing; repeated paraphrase and scene-setting cannot replace verifiable detail.
-- [insider] Don’t leave an unsupported named-entity mention in the metadata or story package; if the digest only verifies one player and one team, every identifier must match that closed world.
+- [insider] Don’t add unsupported specifics like timing or follow-up moves when the digest only confirms the basic workout/update; keep the lede simple and factual.
+- [source-side, not fixable in prose] Don’t treat a digest that has no usable facts as salvageable by wording alone; if the source material is effectively empty, the angle should be dropped.
+- [source-side, not fixable in prose] Don’t try to rescue a dismissal when the core claim is unsupported; no rewrite can create grounded substance that isn’t in the digest.
+- [source-side, not fixable in prose] Don’t build a story when the digest is empty, internally inconsistent, or missing the named facts needed to support it; that is a source-package failure, not a wording problem.
+- [analyst] Don’t fabricate a team field or tag the story with an unsupported team code when the source digest has no team-specific basis; grounding must come from the source, not the template.
