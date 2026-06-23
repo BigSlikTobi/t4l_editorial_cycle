@@ -9,10 +9,11 @@
 - When the source is narrow, let one specific detail do the work instead of trying to expand the frame.
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - [columnist] A clear, team-specific hook can be enough on its own when it is fully sourced and not stretched into broader certainty.
-- [columnist] Keep the headline/lede pairing lean and clean; do not overbuild around a single sourced pitch or opinion.
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
 - [analyst] A grounded package is still valuable even when the source only supports a narrow, low-drama development.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the digest supports.
+- [insider] When the source supports it, a single strong fallback detail can sharpen a narrow denial or rejection story.
+- [insider] A clear timeline update is valuable when it is tightly sourced and free of embellishment.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -30,3 +31,4 @@
 - [analyst] Don’t stack headline, subhead, and intro with the same setup; advance the piece instead of restating the angle.
 - [analyst] Don’t promise a useful team-specific report when the source digest contains no facts to support one.
 - [insider] Don’t phrase movement language as confirmed progress unless the digest clearly supports that level of certainty.
+- [insider] Don’t lean on multiple outlet mentions as a substitute for a sharper source-backed hook.
