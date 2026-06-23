@@ -32,3 +32,7 @@
 - [insider] Don’t phrase “trending toward” or similar movement language as confirmed progress unless the digest explicitly supports that level of certainty.
 - Don’t publish when the source digests are effectively empty or the story depends on unsupported framing; that’s a source-side issue, not fixable in prose (source-side, not fixable in prose).
 - Don’t use source-narration/meta phrasing like “the reported direction,” “reported shift,” or “No further specifics were included” when the digest itself has no usable facts; that’s a source-side, not fixable in prose problem (source-side, not fixable in prose).
+- Don’t introduce extra named entities or side mentions that aren’t grounded in the provided source material; they read as unsupported framing (source-side, not fixable in prose).
+- Don’t lean on broad theme-driven interpretation when the digest has no usable facts to support it; that reads as unsupported reporting, not just weaker style.
+- Don’t use source-meta phrasing like “the source also names” to bridge gaps; if the digest is thin, acknowledge that the story is not yet reportable rather than narrating the source.
+- Don’t add claims about tone, standards, or a “reset” unless the digest explicitly backs them; those details quickly become invention when the source is bare.
