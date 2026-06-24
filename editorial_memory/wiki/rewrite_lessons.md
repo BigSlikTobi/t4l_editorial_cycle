@@ -12,8 +12,7 @@
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
 - [analyst] A grounded package is still valuable even when the source only supports a narrow, low-drama development.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the digest supports.
-- [insider] When the source supports it, a single strong fallback detail can sharpen a narrow denial or rejection story.
-- [insider] A clear timeline update is valuable when it is tightly sourced and free of embellishment.
+- [insider] A clear, source-faithful angle is stronger than padding a thin update with extra context.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -25,10 +24,12 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t present source bundles with muddy fit as if they were fully clean; keep the package disciplined.
 - Don’t use source-narration or meta phrasing to bridge gaps when the stronger move is to state the grounded development directly.
-- Don’t add report-attribution, legal-conclusion, or investigative language when the digest is too thin to support it.
-- Don’t introduce extra named entities or side mentions that aren’t grounded in the source material; they read as unsupported framing (source-side, not fixable in prose).
+- Don’t introduce extra named entities or side mentions that aren’t clearly tied to the source package; they read as unsupported framing (source-side, not fixable in prose).
 - [columnist] Don’t turn one sourced opinion or pitch into a broader factual claim unless the digest explicitly supplies the support.
 - [analyst] Don’t stack headline, subhead, and intro with the same setup; advance the piece instead of restating the angle.
 - [analyst] Don’t promise a useful team-specific report when the source digest contains no facts to support one.
 - [insider] Don’t phrase movement language as confirmed progress unless the digest clearly supports that level of certainty.
 - [insider] Don’t lean on multiple outlet mentions as a substitute for a sharper source-backed hook.
+- [insider] Don’t keep unclear or internally inconsistent naming in the frame; if the source package doesn’t firmly connect the person to the dispute, leave the aside out.
+- [insider] Don’t assert a core claim when the digest contains no supporting facts at all; that’s unverifiable rather than merely underwritten (source-side, not fixable in prose).
+- [insider] Don’t use wrong-team or other mismatched fielding in the frame; if the source setup is inconsistent, the draft can’t be made sound by wording alone (source-side, not fixable in prose).
