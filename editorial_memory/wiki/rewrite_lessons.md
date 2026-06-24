@@ -8,7 +8,8 @@
 - Preserve a clear line from headline to body so the reader immediately sees the core update.
 - When the source is narrow, let one specific detail do the work instead of trying to expand the frame.
 - Strong specificity can offset modest impact if the execution stays disciplined.
-- [columnist] A clear, team-specific hook can be enough on its own when it is fully sourced and not stretched into broader certainty.
+- [columnist] A clear, source-backed quote or personal statement can be the whole hook when it is not inflated into broader certainty.
+- [columnist] Keep the intro pointed and newsy; one concrete angle from the source beats atmosphere or generic commentary.
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
 - [analyst] A grounded package is still valuable even when the source only supports a narrow, low-drama development.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the digest supports.
@@ -27,7 +28,10 @@
 - Don’t introduce extra named entities or side mentions that aren’t clearly tied to the source package; they read as unsupported framing (source-side, not fixable in prose).
 - Don’t build around a fabricated or unsupported team field; if the source doesn’t supply a team-specific angle, leave it out (source-side, not fixable in prose).
 - Don’t lean on headline-level reporting language like “the report” when the digest itself contains no usable facts beyond the headline.
-- [columnist] Don’t turn one sourced opinion or pitch into a broader factual claim unless the digest explicitly supplies the support.
+- [columnist] Don’t turn one sourced opinion or quote into a broader factual claim unless the digest explicitly supplies the support.
+- [columnist] Don’t let the lede drift into atmosphere or locker-room filler when the source offers a sharper quote-based angle.
+- [columnist] Don’t repeat the same sourced point in the opening and body without adding new detail or a new angle.
+- [columnist] Don’t add unsupported teammate, quarterback, or offense references as filler context when the source only supports the central quote or statement.
 - [analyst] Don’t stack headline, subhead, and intro with the same setup; advance the piece instead of restating the angle.
 - [analyst] Don’t promise a useful team-specific report when the source digest contains no facts to support one.
 - [insider] Don’t phrase movement language as confirmed progress unless the digest clearly supports that level of certainty.
