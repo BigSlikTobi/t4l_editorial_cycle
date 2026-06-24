@@ -9,9 +9,10 @@
 - When the source is narrow, let one specific detail do the work instead of trying to expand the frame.
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - [columnist] A clear, source-backed quote or personal statement can be the whole hook when it is not inflated into broader certainty.
-- [columnist] Keep the piece focused on the source-driven takeaway; a concise quote-led angle is stronger than meta commentary or atmosphere.
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the digest supports.
+- [insider] When the source supports one reported transaction or move, a tight deal-first angle is stronger than trying to build a larger roster story around it.
+- [insider] A precise reported agreement can clear once the lede and headline stay centered on the one confirmed move.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -25,16 +26,15 @@
 - Don’t use source-narration or meta phrasing to bridge gaps when the stronger move is to state the grounded development directly.
 - Don’t stack headline, subhead, and intro with the same setup; advance the piece instead of restating the angle.
 - [columnist] Don’t turn one sourced opinion or quote into a broader factual claim unless the digest explicitly supplies the support.
-- [columnist] Don’t let the lede drift into atmosphere or locker-room filler when the source offers a sharper quote-based angle.
-- [columnist] Don’t add unsupported teammate lists or name-drops as filler context when the source only supports the central quote or statement.
-- [columnist] Don’t build the opening around why the quote matters if that explanation is just meta framing; keep the lede on the quote’s actual news value.
 - [analyst] Don’t turn an all-32 roundup into a team-specific timeline or cap story unless the digest actually supports that leap.
-- [analyst] Don’t promise a team-specific report when the source digest only supports leaguewide context and a named player’s inclusion.
 - [analyst] Don’t build on a source digest with no key facts by implying an extension path or team-specific angle that isn’t there; that’s a source-side failure, not a prose fix (source-side, not fixable in prose).
 - [insider] Don’t phrase movement language as confirmed progress unless the digest clearly supports that level of certainty.
 - [insider] Don’t lean on multiple outlet mentions as a substitute for a sharper source-backed hook.
 - [insider] Don’t add unsupported procedural or team-assignment framing when the source only supports the league decision and the named consequence.
 - [insider] Don’t assert a core claim when the digest contains no supporting facts at all; that’s unverifiable rather than merely underwritten (source-side, not fixable in prose).
+- [insider] Don’t add roster-cycle or core-building speculation when the source only supports the reported deal itself; stay with the extension and the player staying put.
+- [insider] Don’t add extra contract detail or broader team implications unless the digest actually supports them; keep the rewrite pinned to the reported agreement.
+- [insider] Don’t proceed with a package that has a clear player mismatch in the metadata; that needs a clean input correction before prose can save it.
 - [columnist] Don’t present a milestone or central-role claim as if it were verified when the source provides no usable facts to support it (source-side, not fixable in prose).
 - [columnist] Don’t build the piece on generic valuation language when there is no source digest, quotes, or concrete decision point to verify; that’s a source-side failure, not a prose fix (source-side, not fixable in prose).
 - [columnist] Don’t add named-player specifics or passing-game details that aren’t in the digest; unsupported particulars make an otherwise simple quote story unverifiable.
