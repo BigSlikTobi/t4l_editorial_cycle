@@ -12,7 +12,6 @@
 - Clean insider execution succeeds when it stays specific, grounded, and free of unsupported claims.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
 - [insider] Build a strong package around immediate source-backed stakes and a precise takeaway; clear, verified details can make a serious case readable.
-- [insider] Cleanly state the core development with enough concrete team/player specificity; grounded execution can carry a modest-impact update.
 - [columnist] A tightly centered lede that stays on the one verified announcement can still work when the digest has no deeper detail to expand.
 
 ## What to avoid
@@ -28,3 +27,4 @@
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
 - [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
 - [columnist] Don’t add vague scene-setting or broader event-context framing when the digest only supports the headline-level announcement; make the piece shorter and more direct instead.
+- [insider] Don’t introduce unsupported certainty or process details when the digest has no usable facts beyond the headline; that is a closed-world failure (source-side, not fixable in prose).
