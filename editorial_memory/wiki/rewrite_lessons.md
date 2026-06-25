@@ -30,3 +30,5 @@
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
 - [insider] Don’t recycle specific contract details or named-entity claims when the digest is missing; if the source can’t verify it, the draft can’t save it (source-side, not fixable in prose).
 - [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
+- Don’t invent an injury setback, status check, or timetable when the digest has no usable facts beyond a missing summary; that’s a source-side failure, not a prose fix.
+- [analyst] Don’t imply a setback narrative or recovery timeline unless the source provides recoverable, verifiable details.
