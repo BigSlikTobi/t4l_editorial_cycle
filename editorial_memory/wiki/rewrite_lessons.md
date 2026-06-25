@@ -11,9 +11,9 @@
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - Clean insider execution succeeds when it stays specific, grounded, and free of unsupported claims.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
-- [insider] Give readers a clear team-specific reason to care when the sourced details support it.
-- [insider] Lead with the strongest verified news value and then reinforce it with concrete contract or cap details when those figures are in the digest.
-- [insider] A concrete fan takeaway about contract or cap exposure can add value when it is directly tied to the verified event.
+- [insider] Build a strong package around immediate source-backed stakes and a precise takeaway; clear, verified details can make a serious case readable.
+- [insider] Cleanly state the core development with enough concrete team/player specificity; grounded execution can carry a modest-impact update.
+- [columnist] A tightly centered lede that stays on the one verified announcement can still work when the digest has no deeper detail to expand.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -25,14 +25,6 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
-- [analyst] Don’t lean on explanatory scaffolding about how a system works unless the digest actually supplies those details.
-- [insider] Don’t phrase movement language as confirmed progress unless the digest clearly supports that level of certainty.
-- [insider] Don’t assert severe legal stakes or other downstream consequences unless the source explicitly includes them.
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
-- [insider] Don’t recycle specific contract details or named-entity claims when the digest is missing; if the source can’t verify it, the draft can’t save it (source-side, not fixable in prose).
 - [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
-- Don’t invent an injury setback, status check, or timetable when the digest has no usable facts beyond a missing summary; that’s a source-side failure, not a prose fix.
-- [analyst] Don’t imply a setback narrative or recovery timeline unless the source provides recoverable, verifiable details.
-- [insider] Don’t frame unsupported arrest/charge language as fact; rebuild from the confirmed digest facts instead.
-- [insider] Don’t publish a central charge claim when the source digests do not support it; if the core allegation is absent, the mismatch is source-side, not a prose fix.
-- [insider] Don’t add unsupported depth-chart or roster certainty; keep the piece centered on the arrest, league review, and contract-cap implications when those are the verified facts.
+- [columnist] Don’t add vague scene-setting or broader event-context framing when the digest only supports the headline-level announcement; make the piece shorter and more direct instead.
