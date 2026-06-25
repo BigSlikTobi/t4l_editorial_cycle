@@ -8,11 +8,12 @@
 - Preserve a clear line from headline to body so the reader immediately sees the core update.
 - When the source is narrow, let one specific detail do the work instead of trying to expand the frame.
 - Strong specificity can offset modest impact if the execution stays disciplined.
-- Tight source adherence can still produce a usable tap reason even when the underlying story is thin.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
-- Clean columnist execution can succeed when it stays specific, grounded, and free of unsupported claims.
-- [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
-- [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the source supports.
+- Clean insider execution succeeds when it stays specific, grounded, and free of unsupported claims.
+- [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
+- [insider] Give readers a clear team-specific reason to care when the sourced details support it.
+- [insider] Lead with the strongest verified news value and then reinforce it with concrete contract or cap details when those figures are in the digest.
+- [insider] A concrete fan takeaway about contract or cap exposure can add value when it is directly tied to the verified event.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -34,3 +35,4 @@
 - [analyst] Don’t imply a setback narrative or recovery timeline unless the source provides recoverable, verifiable details.
 - [insider] Don’t frame unsupported arrest/charge language as fact; rebuild from the confirmed digest facts instead.
 - [insider] Don’t publish a central charge claim when the source digests do not support it; if the core allegation is absent, the mismatch is source-side, not a prose fix.
+- [insider] Don’t add unsupported depth-chart or roster certainty; keep the piece centered on the arrest, league review, and contract-cap implications when those are the verified facts.
