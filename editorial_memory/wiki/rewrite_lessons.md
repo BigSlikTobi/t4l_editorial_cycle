@@ -11,7 +11,6 @@
 - Tight source adherence can still produce a usable tap reason even when the underlying story is thin.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
-- [analyst] A short, precise body can work when it only restates the confirmed core and does not overbuild beyond the digest.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the source supports.
 - [insider] When the source supports only the headline fact, keep the lede tight and direct rather than building a larger narrative around it.
 
@@ -26,10 +25,8 @@
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
 - [analyst] Don’t lean on explanatory scaffolding about how a system works unless the digest actually supplies those details.
-- [analyst] Don’t repeat the same verified fact in different wording if it does not add new concrete information.
 - [insider] Don’t phrase movement language as confirmed progress unless the digest clearly supports that level of certainty.
-- [insider] Don’t assert implications or downstream consequences that are not directly sourced; keep the claim boundary tight.
-- [insider] Don’t use source-narration/meta phrasing like “according to the report” or “no further details were included”; it reads like placeholder copy rather than finished news.
+- [insider] Don’t assert severe legal stakes or other downstream consequences unless the source explicitly includes them.
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
 - [insider] Don’t recycle specific contract details or named-entity claims when the digest is missing; if the source can’t verify it, the draft can’t save it (source-side, not fixable in prose).
 - [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
