@@ -10,6 +10,7 @@
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - Tight source adherence can still produce a usable tap reason even when the underlying story is thin.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
+- Clean columnist execution can succeed when it stays specific, grounded, and free of unsupported claims.
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the source supports.
 - [insider] When the source supports only the headline fact, keep the lede tight and direct rather than building a larger narrative around it.
