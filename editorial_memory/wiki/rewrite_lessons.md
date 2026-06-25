@@ -13,7 +13,6 @@
 - Clean columnist execution can succeed when it stays specific, grounded, and free of unsupported claims.
 - [analyst] Lead with the most concrete, verifiable angle when that is the cleanest hook.
 - [insider] Anchor quickly to the confirmed development and avoid wandering beyond what the source supports.
-- [insider] When the source supports only the headline fact, keep the lede tight and direct rather than building a larger narrative around it.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -33,3 +32,5 @@
 - [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
 - Don’t invent an injury setback, status check, or timetable when the digest has no usable facts beyond a missing summary; that’s a source-side failure, not a prose fix.
 - [analyst] Don’t imply a setback narrative or recovery timeline unless the source provides recoverable, verifiable details.
+- [insider] Don’t frame unsupported arrest/charge language as fact; rebuild from the confirmed digest facts instead.
+- [insider] Don’t publish a central charge claim when the source digests do not support it; if the core allegation is absent, the mismatch is source-side, not a prose fix.
