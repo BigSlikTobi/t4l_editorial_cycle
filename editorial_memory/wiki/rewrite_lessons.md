@@ -11,7 +11,6 @@
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - Clean insider execution succeeds when it stays specific, grounded, and free of unsupported claims.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
-- [insider] Build a strong package around immediate source-backed stakes and a precise takeaway; clear, verified details can make a serious case readable.
 - [columnist] A tightly centered lede that stays on the one verified announcement can still work when the digest has no deeper detail to expand.
 
 ## What to avoid
@@ -26,5 +25,5 @@
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
 - [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
-- [columnist] Don’t add vague scene-setting or broader event-context framing when the digest only supports the headline-level announcement; make the piece shorter and more direct instead.
-- [insider] Don’t introduce unsupported certainty or process details when the digest has no usable facts beyond the headline; that is a closed-world failure (source-side, not fixable in prose).
+- [insider] Don’t introduce unsupported certainty, process details, or meta phrasing like “according to the report” when the digest has no usable facts beyond the headline; make the piece shorter and more direct instead (source-side, not fixable in prose).
+- [insider] Don’t add circumstance-setting or claims about missing details when the digest is empty; that turns a headline-level allegation into unsupported framing (source-side, not fixable in prose).
