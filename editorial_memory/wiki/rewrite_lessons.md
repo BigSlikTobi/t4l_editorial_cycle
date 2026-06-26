@@ -11,7 +11,7 @@
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - Clean insider execution succeeds when it stays specific, grounded, and free of unsupported claims.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
-- [columnist] A tightly centered lede that stays on the one verified announcement can still work when the digest has no deeper detail to expand.
+- [insider] A tight lede on the confirmed filing/allegation can work when the digest only gives one news peg and no broader context to expand.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -24,6 +24,5 @@
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
-- [insider] Don’t attempt to salvage a rewrite when the digest is empty of usable facts; that is a source-side failure, not a prose fix.
-- [insider] Don’t introduce unsupported certainty, process details, or meta phrasing like “according to the report” when the digest has no usable facts beyond the headline; make the piece shorter and more direct instead (source-side, not fixable in prose).
-- [insider] Don’t add circumstance-setting or claims about missing details when the digest is empty; that turns a headline-level allegation into unsupported framing (source-side, not fixable in prose).
+- [insider] Don’t introduce unsupported certainty or meta lines that admit the digest lacks details while still writing as if more is known; cut the self-defeating framing and stay with the confirmed facts (source-side, not fixable in prose).
+- [insider] Don’t write a lawsuit/police-conduct story as if the digests confirm the allegations when the source set has no usable fact content; that is ungrounded from the start (source-side, not fixable in prose).
