@@ -10,13 +10,8 @@
 - When the source is narrow, let one specific detail do the work instead of trying to expand the frame.
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
-- Clean insider/columnist/analyst execution succeeds when it stays specific, grounded, and free of unsupported claims.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
-- [insider] Use the strongest source-backed detail in the first sentence when it is more newsy than the headline.
-- [analyst] A narrow contract update can still read well if it stays bounded to the verified unresolved premise and avoids adding structure the digest never gave.
-- [analyst] Keep the piece tightly on the coach’s appraisal or confirmed premise; a precise source quote can carry the story without broader team-building claims.
-- [columnist] A columnist piece can work when it uses a concrete on-team angle and stays away from broad impression-language.
-- [columnist] A Buffalo-specific hook with a grounded quote can be enough to justify a tap even when the update is modest.
+- [insider] A direct request or demand can be the whole story if it stays tied to one sourced destination and avoids extra framing.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -28,10 +23,10 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
+- Don’t rely on source-narration or report-labeling like “according to the report” or “the item says”; cut meta phrasing and state the sourced fact directly.
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
 - [insider] Don’t introduce source-cluster or report-framing that reads like uncertainty padding; cut meta wording and state only the source-supported claim.
 - [insider] Don’t write a lawsuit/police-conduct story as if the digests confirm the allegations when the source set has no usable fact content; that is ungrounded from the start (source-side, not fixable in prose).
-- [insider] Don’t lose credit for a strong source-only update by adding unsupported details; the winning move is to stay precise, not to expand.
 - [insider] Don’t claim a player definitively asked out, a tomorrow timeline, or a specific team landing unless the digest actually supports those details.
 - [insider] Don’t let a source mismatch slip through; if the digest is about a different subject, the story needs correction before prose can fix it (source-side, not fixable in prose).
 - [columnist] Don’t use column-style sweep to imply larger conclusions from a sparse digest; keep the argument bounded to the one verified early impression or quote.
@@ -40,6 +35,4 @@
 - [analyst] Don’t imply extra certainty by turning a simple unresolved-contract note into a detailed breakdown of separate talks unless the source explicitly supplies it.
 - [analyst] Don’t name unsupported players or entities to fill out a contract story; if the closed-world inputs don’t confirm them, the piece is ungrounded (source-side, not fixable in prose).
 - [analyst] Don’t stretch a coach quote about progress into broader offensive-structure or roster-building claims unless the digest explicitly supports those implications.
-- [analyst] Don’t make the piece feel repetitive or meta-sounding; if the source point is simple, state it cleanly once and move on.
-- [insider] Don’t center source-cluster/meta phrasing when the strongest detail is a clean, direct news point; that can undercut the lede.
-- [insider] Don’t tuck away the core ask or destination behind digressions; keep the piece tightly on the subject, the team asked of, and the immediate timing when those are source-backed.
+- [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
