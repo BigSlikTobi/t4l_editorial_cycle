@@ -10,6 +10,8 @@
 - When the source is narrow, let one specific detail do the work instead of trying to expand the frame.
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
+- [analyst] Center the piece on the clearest ranking or evaluation reason the source gives, and keep any supporting context tightly attached to that same verified hook.
+- [analyst] Keep the team-specific stakes and personnel details tightly organized around the verified ranking move.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
 - [insider] A direct league decision or demand can be the whole story if it stays tied to one sourced destination and avoids extra framing.
 
@@ -23,7 +25,7 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
-- Don’t rely on source-narration or report-labeling like “according to the report” or “the item says”; cut meta phrasing and state the sourced fact directly.
+- Don’t mix in facts from other digests or storylines when they are not supported by the current source set.
 - [insider] Don’t build beyond an empty or sparse digest, even if the headline looks specific; missing support makes the story ungrounded (source-side, not fixable in prose).
 - [insider] Don’t introduce source-cluster or report-framing that reads like uncertainty padding; cut meta wording and state only the source-supported claim.
 - [insider] Don’t write a lawsuit/police-conduct story as if the digests confirm the allegations when the source set has no usable fact content; that is ungrounded from the start (source-side, not fixable in prose).
