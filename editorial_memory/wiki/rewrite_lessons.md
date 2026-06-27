@@ -11,7 +11,7 @@
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
-- [insider] A direct request or demand can be the whole story if it stays tied to one sourced destination and avoids extra framing.
+- [insider] A direct league decision or demand can be the whole story if it stays tied to one sourced destination and avoids extra framing.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -29,6 +29,7 @@
 - [insider] Don’t write a lawsuit/police-conduct story as if the digests confirm the allegations when the source set has no usable fact content; that is ungrounded from the start (source-side, not fixable in prose).
 - [insider] Don’t claim a player definitively asked out, a tomorrow timeline, or a specific team landing unless the digest actually supports those details.
 - [insider] Don’t let a source mismatch slip through; if the digest is about a different subject, the story needs correction before prose can fix it (source-side, not fixable in prose).
+- [insider] Don’t anchor a league-decision story to the wrong team field or add unresolved-status details the digest doesn’t support; fix the source match first, then keep the body tight to the verified refusal.
 - [columnist] Don’t use column-style sweep to imply larger conclusions from a sparse digest; keep the argument bounded to the one verified early impression or quote.
 - [columnist] Don’t run the headline, subhead, and intro with the same broad “early mark/strong impression” claim; make one of them carry the concrete detail and cut the repetition.
 - [analyst] Don’t invent role labels, negotiation structure, or other added scaffolding around a bare contract premise; if the digest only confirms unresolved deals, write exactly that.
@@ -36,3 +37,4 @@
 - [analyst] Don’t name unsupported players or entities to fill out a contract story; if the closed-world inputs don’t confirm them, the piece is ungrounded (source-side, not fixable in prose).
 - [analyst] Don’t stretch a coach quote about progress into broader offensive-structure or roster-building claims unless the digest explicitly supports those implications.
 - [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
+- [insider] Don’t proceed when the source digest and story metadata point to different subjects; that mismatch is a source problem, not a prose problem (source-side, not fixable in prose).
