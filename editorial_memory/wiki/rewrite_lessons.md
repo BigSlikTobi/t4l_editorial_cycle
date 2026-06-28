@@ -13,6 +13,7 @@
 - [analyst] Center the piece on the clearest ranking or evaluation reason the source gives, and keep any supporting context tightly attached to that same verified hook.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
 - [insider] Preserve reported quotes and procedural details when they are the backbone of the update; that kind of tight grounding can carry a fan-relevant story.
+- [insider] If the source gives a concrete comeback/return timeline or usage estimate, keep it explicit and use it to frame the update without overclaiming.
 - [columnist] Lead with the verified news cleanly, even on a sharp or NSFW-sounding item; a grounded first sentence beats source-narration.
 - [columnist] A sparse digest can still publish if the angle stays bounded to one verified takeaway and the prose resists sweep.
 - [columnist] A narrow honor/omission decision can publish when the package stays plainly tied to the verified outcome and avoids extra framing.
