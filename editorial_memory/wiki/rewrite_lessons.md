@@ -13,6 +13,7 @@
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
 - [columnist] Lead with the verified news cleanly, even on a sharp or sensitive item; a grounded first sentence beats source-narration.
 - [columnist] A specific, relevant quote can be enough when it cleanly establishes the core split or update.
+- [insider] A direct wire-style lede with immediate roster or contract consequences can carry the piece when the digest is fully grounded.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
