@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline, subhead, and lede aligned on one verified development; a clean package makes a small update publishable.
+- Keep the headline and lede aligned on one verified development; a clean, source-tight package is often enough to publish.
 - Lead with the most concrete source-supported development instead of meta framing or broad impression language.
 - Stay inside the supplied fact pattern from start to finish; tight grounding is a recurring strength.
 - A single concrete hook can carry the piece when the fact pattern is specific and well grounded.
@@ -11,13 +11,8 @@
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - [analyst] Center the piece on the clearest ranking or evaluation reason the source gives, and keep any supporting context tightly attached to that same verified hook.
-- [analyst] When the digest gives only one concrete evaluation, a plain, direct statement of that view is stronger than trying to broaden it into extra roster meaning.
-- [analyst] If the source offers one exact quote or claim, use that precise wording as the core of the lede instead of abstracting it into a softer theme.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
-- [insider] Preserve reported quotes and procedural details when they are the backbone of the update; that kind of tight grounding can carry a fan-relevant story.
-- [insider] A single confirmed procedural step can carry the piece if the headline, subhead, and lede each add a distinct piece of that same update.
-- [columnist] Lead with the verified news cleanly, even on a sharp or NSFW-sounding item; a grounded first sentence beats source-narration.
-- [columnist] A sparse digest can still publish if the angle stays bounded to one verified takeaway and the prose resists sweep.
+- [columnist] Lead with the verified news cleanly, even on a sharp or sensitive item; a grounded first sentence beats source-narration.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -35,19 +30,14 @@
 - [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
 - [analyst] Don’t build a fuller roster story from an empty digest or thin evaluation; if the source is only a reported view, stay on that exact claim.
 - [analyst] Don’t present an emerging-role claim or reported view as if it were verified when the source digest is missing or incomplete; unsupported reporting language is not salvageable in prose (source-side, not fixable in prose).
-- [analyst] Don’t rely on abstract negotiation language like “middle ground” or “balance phase” without adding a concrete, source-backed contract detail.
-- [analyst] Don’t repeat the same negotiated-point idea across headline and intro; pick one line to carry the claim and keep the rest additive.
-- [analyst] Don’t turn one supported quote into a broader negotiation/status update when there are no contract terms, no agreement, and no sourced evidence of unresolved talks; that grounding gap is source-side, not fixable in prose.
 - [insider] Don’t lead with source-narration or meta lines about the digest; open on the confirmed development itself.
 - [insider] Don’t make the headline, subhead, and lede say the same thing in near-identical language; each line should add a distinct layer of the same verified update.
-- [insider] Don’t add unsupported body language when the source is essentially just the summary; if the digest is thin, stay tightly on the one confirmed custody/hearing fact.
+- [insider] Don’t add unsupported body language when the source is essentially just the summary; if the digest is thin, stay tightly on the one confirmed fact.
 - [insider] Don’t proceed when the source digest and story metadata point to different subjects; that mismatch is a source problem, not a prose problem (source-side, not fixable in prose).
-- [insider] Don’t make the release sound straightforward when the paperwork or other gatekeeper condition is still outstanding; lead with the public pressure, then the constraint.
-- [insider] Don’t treat a missing-content digest as salvageable with structure or polish alone; if the source provides only a bare summary, the custody/arrest details are source-side, not fixable in prose.
 - [columnist] Don’t lean on meta lines about working from the headline/summary or “the core of it”; present the verified takeaway directly.
-- [columnist] Don’t use column-style sweep to imply larger conclusions from a sparse digest; keep the argument bounded to the one verified early impression or quote.
+- [columnist] Don’t use column-style sweep to imply larger conclusions from a sparse digest; keep the argument bounded to the one verified takeaway.
 - [columnist] Don’t run the headline, subhead, and intro with the same broad claim; make one of them carry the concrete detail and cut the repetition.
-- [columnist] Don’t add honorific, legacy, or judgmental framing beyond the verified omission/decision when the source only supports the concrete outcome.
+- [columnist] Don’t add honorific, legacy, or judgmental framing beyond the verified outcome when the source only supports the concrete update.
 - [columnist] Don’t treat a precise omission/inclusion update as a big-implications story unless the source actually supplies those implications; keep the note crisp and bounded.
 - [columnist] Don’t recycle names without source-backed substance; if the digest is only headline-level, avoid inventing context or framing around the people involved.
-- [columnist] Don’t make a thin, name-heavy digest sound salvageable if the source has no facts beyond the premise; that’s a source-side limitation, not a prose fix (source-side, not fixable in prose).
+- [columnist] Don’t treat an empty digest as salvageable with style or angle alone; if there are zero source facts to verify, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
