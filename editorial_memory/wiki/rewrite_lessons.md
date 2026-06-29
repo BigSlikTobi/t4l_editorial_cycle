@@ -18,6 +18,7 @@
 - [columnist] A sparse digest can still publish if the angle stays bounded to one verified takeaway and the prose resists sweep.
 - [columnist] A narrow honor/omission decision can publish when the package stays plainly tied to the verified outcome and avoids extra framing.
 - [columnist] When source support is thin, a clean headline-to-lede match on a single verified callout is enough; keep the piece tightly scoped.
+- [columnist] Keep the update publishable when it is tightly grounded in the digest and gives a specific team/player reason to click without drifting outside the source material.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
