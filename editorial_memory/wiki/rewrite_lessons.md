@@ -11,15 +11,11 @@
 - Strong specificity can offset modest impact if the execution stays disciplined.
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - [analyst] Center the piece on the clearest ranking or evaluation reason the source gives, and keep any supporting context tightly attached to that same verified hook.
+- [analyst] When the digest gives only one concrete evaluation, a plain, direct statement of that view is stronger than trying to broaden it into extra roster meaning.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
 - [insider] Preserve reported quotes and procedural details when they are the backbone of the update; that kind of tight grounding can carry a fan-relevant story.
-- [insider] If the source gives a concrete comeback/return timeline or usage estimate, keep it explicit and use it to frame the update without overclaiming.
 - [columnist] Lead with the verified news cleanly, even on a sharp or NSFW-sounding item; a grounded first sentence beats source-narration.
 - [columnist] A sparse digest can still publish if the angle stays bounded to one verified takeaway and the prose resists sweep.
-- [columnist] A narrow honor/omission decision can publish when the package stays plainly tied to the verified outcome and avoids extra framing.
-- [columnist] When source support is thin, a clean headline-to-lede match on a single verified callout is enough; keep the piece tightly scoped.
-- [columnist] Keep the update publishable when it is tightly grounded in the digest and gives a specific team/player reason to click without drifting outside the source material.
-- [columnist] A specific, team-relevant omission or inclusion callout can be strong even without big consequences if the copy stays precise and source-bound.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -32,18 +28,18 @@
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t treat thin source material as a license to infer more than it says; keep the claim boundary tight.
 - Don’t mix in facts from other digests or storylines when they are not supported by the current source set.
-- [insider] Don’t build toward an imminent outcome if a key gate is still unresolved; keep the leverage or bottleneck explicit and avoid overstating the process.
-- [insider] Don’t use source-narration phrasing that slows a breaking-news voice; write the confirmed development plainly and directly.
-- [insider] Don’t proceed when the source digest and story metadata point to different subjects; that mismatch is a source problem, not a prose problem (source-side, not fixable in prose).
-- [insider] Don’t make the release sound straightforward when the paperwork or other gatekeeper condition is still outstanding; lead with the public pressure, then the constraint.
+- [analyst] Don’t invent role labels, negotiation structure, or other added scaffolding around a bare contract premise; if the digest only confirms unresolved deals, write exactly that.
+- [analyst] Don’t stretch a coach quote about progress into broader offensive-structure or roster-building claims unless the digest explicitly supports those implications.
+- [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
+- [analyst] Don’t build a fuller roster story from an empty digest or thin evaluation; if the source is only a reported view, stay on that exact claim.
+- [analyst] Don’t present an emerging-role claim or reported view as if it were verified when the source digest is missing or incomplete; unsupported reporting language is not salvageable in prose (source-side, not fixable in prose).
 - [columnist] Don’t lean on meta lines about working from the headline/summary or “the core of it”; present the verified takeaway directly.
 - [columnist] Don’t use column-style sweep to imply larger conclusions from a sparse digest; keep the argument bounded to the one verified early impression or quote.
 - [columnist] Don’t run the headline, subhead, and intro with the same broad claim; make one of them carry the concrete detail and cut the repetition.
-- [analyst] Don’t invent role labels, negotiation structure, or other added scaffolding around a bare contract premise; if the digest only confirms unresolved deals, write exactly that.
-- [analyst] Don’t imply extra certainty by turning a simple unresolved-contract note into a detailed breakdown unless the source explicitly supplies it.
-- [analyst] Don’t stretch a coach quote about progress into broader offensive-structure or roster-building claims unless the digest explicitly supports those implications.
-- [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
 - [columnist] Don’t add honorific, legacy, or judgmental framing beyond the verified omission/decision when the source only supports the concrete outcome.
-- [columnist] Don’t claim a profanity-laced rant, quote-like scene setting, or extra consequences unless the digest directly supports them; if the source is effectively empty, strip back to the verified headline/summary.
-- [columnist] Don’t treat a specific omission/inclusion update as a big-implications story unless the source actually supplies those implications; keep the note crisp and bounded.
-- [columnist] Don’t try to inflate a precise exclusion callout into moral commentary; the verified omission itself can be the story.
+- [columnist] Don’t treat a precise omission/inclusion update as a big-implications story unless the source actually supplies those implications; keep the note crisp and bounded.
+- [columnist] Don’t recycle names without source-backed substance; if the digest is only headline-level, avoid inventing context or framing around the people involved.
+- [columnist] Don’t make a thin, name-heavy digest sound salvageable if the source has no facts beyond the premise; that’s a source-side limitation, not a prose fix (source-side, not fixable in prose).
+- [insider] Don’t build toward an imminent outcome if a key gate is still unresolved; keep the leverage or bottleneck explicit and avoid overstating the process.
+- [insider] Don’t proceed when the source digest and story metadata point to different subjects; that mismatch is a source problem, not a prose problem (source-side, not fixable in prose).
+- [insider] Don’t make the release sound straightforward when the paperwork or other gatekeeper condition is still outstanding; lead with the public pressure, then the constraint.
