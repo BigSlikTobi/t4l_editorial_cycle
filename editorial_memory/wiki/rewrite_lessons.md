@@ -12,6 +12,7 @@
 - A clear, source-only angle can work when the headline, intro, and body all point to the same verified context.
 - [analyst] Center the piece on the clearest ranking or evaluation reason the source gives, and keep any supporting context tightly attached to that same verified hook.
 - [analyst] When the digest gives only one concrete evaluation, a plain, direct statement of that view is stronger than trying to broaden it into extra roster meaning.
+- [analyst] If the source offers one exact quote or claim, use that precise wording as the core of the lede instead of abstracting it into a softer theme.
 - [insider] Anchor quickly to the confirmed development and support the lede with the body instead of wandering beyond what the source supports.
 - [insider] Preserve reported quotes and procedural details when they are the backbone of the update; that kind of tight grounding can carry a fan-relevant story.
 - [insider] A single confirmed procedural step can carry the piece if the headline, subhead, and lede each add a distinct piece of that same update.
@@ -34,6 +35,9 @@
 - [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
 - [analyst] Don’t build a fuller roster story from an empty digest or thin evaluation; if the source is only a reported view, stay on that exact claim.
 - [analyst] Don’t present an emerging-role claim or reported view as if it were verified when the source digest is missing or incomplete; unsupported reporting language is not salvageable in prose (source-side, not fixable in prose).
+- [analyst] Don’t rely on abstract negotiation language like “middle ground” or “balance phase” without adding a concrete, source-backed contract detail.
+- [analyst] Don’t repeat the same negotiated-point idea across headline and intro; pick one line to carry the claim and keep the rest additive.
+- [analyst] Don’t turn one supported quote into a broader negotiation/status update when there are no contract terms, no agreement, and no sourced evidence of unresolved talks; that grounding gap is source-side, not fixable in prose.
 - [insider] Don’t lead with source-narration or meta lines about the digest; open on the confirmed development itself.
 - [insider] Don’t make the headline, subhead, and lede say the same thing in near-identical language; each line should add a distinct layer of the same verified update.
 - [insider] Don’t add unsupported body language when the source is essentially just the summary; if the digest is thin, stay tightly on the one confirmed custody/hearing fact.
