@@ -41,3 +41,4 @@
 - [columnist] Don’t treat a precise omission/inclusion update as a big-implications story unless the source actually supplies those implications; keep the note crisp and bounded.
 - [columnist] Don’t recycle names without source-backed substance; if the digest is only headline-level, avoid inventing context or framing around the people involved.
 - [columnist] Don’t treat an empty digest as salvageable with style or angle alone; if there are zero source facts to verify, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t pad a headline-only premise with roster outlook or context when the digest gives no usable facts beyond the headline; unsupported detail and repeated paraphrase leave the piece ungrounded (source-side, not fixable in prose).
