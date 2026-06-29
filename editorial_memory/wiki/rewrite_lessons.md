@@ -19,6 +19,7 @@
 - [columnist] A narrow honor/omission decision can publish when the package stays plainly tied to the verified outcome and avoids extra framing.
 - [columnist] When source support is thin, a clean headline-to-lede match on a single verified callout is enough; keep the piece tightly scoped.
 - [columnist] Keep the update publishable when it is tightly grounded in the digest and gives a specific team/player reason to click without drifting outside the source material.
+- [columnist] A specific, team-relevant omission or inclusion callout can be strong even without big consequences if the copy stays precise and source-bound.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
@@ -44,3 +45,5 @@
 - [analyst] Don’t layer in extra roster-specific claims or player context when the ranking is the only supported hook; keep the reset angle tied to the verified evaluation.
 - [columnist] Don’t add honorific, legacy, or judgmental framing beyond the verified omission/decision when the source only supports the concrete outcome.
 - [columnist] Don’t claim a profanity-laced rant, quote-like scene setting, or extra consequences unless the digest directly supports them; if the source is effectively empty, strip back to the verified headline/summary.
+- [columnist] Don’t treat a specific omission/inclusion update as a big-implications story unless the source actually supplies those implications; keep the note crisp and bounded.
+- [columnist] Don’t try to inflate a precise exclusion callout into moral commentary; the verified omission itself can be the story.
