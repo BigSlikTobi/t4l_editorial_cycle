@@ -10,7 +10,7 @@
 - When the source is thin, keep the angle simple and bounded to the one verified development.
 - Let a specific, source-backed detail supply the read value instead of adding broader explanation.
 - Clean who/what/when framing can be enough for insider copy when the update is concrete and time-bound.
-- When there is a clear next step in the digest, surface it plainly rather than burying it under scene-setting.
+- [insider] A sharp timeline or prep detail can add tap value when it shifts the story from speculation to an officially planned event.
 - [columnist] A short, quote-driven or detail-driven note can work when the material is specific and source-supported.
 - [columnist] Keep the named-team or career-specific angle front and center only when the digest actually supports it.
 
@@ -25,8 +25,11 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t make the piece sound source-backed when the digest only gives a headline-level premise; if the source is missing detail, stay tightly on the one confirmed fact.
-- Don’t lean on extra references or named-drop comparisons that don’t add sourced substance; keep the note centered on the verified detail.
+- Don’t let headline/body phrasing drift into a bland confirmation package; if the update has a richer verified timeline or prep detail, surface that instead of repeating the same point twice.
+- [insider] Don’t leave the angle at pure confirmation when the digest includes concrete prep or logistics that raise the tap value.
+- [insider] Don’t carry a story under the wrong beat tag when the reported development isn’t actually team-specific.
 - [columnist] Don’t use broad criticism/spotlight/“anywhere else” framing unless the digest directly supports it.
 - [columnist] Don’t drag in mention-only references beyond what the digest actually needs; keep them incidental, not explanatory.
 - [analyst] Don’t treat a rumor, question, or absence of source detail as a roster conclusion or other settled fact.
 - [columnist] Don’t improvise extra context around a lone headline-level quote; if the source set is effectively empty, the piece is source-side, not fixable in prose.
+- [insider] Don’t miss the opportunity to elevate a confirmed event with concrete prep/logistics details like rehearsal timing, security, or permits; those details can be the tap value when they’re source-backed.
