@@ -9,6 +9,8 @@
 - Preserve a clear line from headline to body so the reader immediately sees the core takeaway.
 - When the source is thin, keep the angle simple and bounded to the one verified development.
 - Let a specific, source-backed detail supply the read value instead of adding broader explanation.
+- Clean who/what/when framing can be enough for insider copy when the update is concrete and time-bound.
+- When there is a clear next step in the digest, surface it plainly rather than burying it under scene-setting.
 - [columnist] A short, quote-driven or detail-driven note can work when the material is specific and source-supported.
 - [columnist] Keep the named-team or career-specific angle front and center only when the digest actually supports it.
 
@@ -18,7 +20,7 @@
 - Don’t pad a thin fact with generic “why it matters” language if the digest does not supply it.
 - Don’t repeat the headline verbatim in the subhead or intro; avoid redundant phrasing.
 - Don’t let filler language create facts, momentum, or extra certainty the source never supplied.
-- Don’t overstate consequences or imply follow-on developments unless the digest explicitly supports them.
+- Don’t overstate consequences or imply follow-on developments unless the digest explicitly supports it.
 - Don’t bury the strongest factual takeaway under broad summary language or meta commentary.
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
