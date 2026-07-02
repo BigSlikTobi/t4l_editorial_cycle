@@ -13,7 +13,7 @@
 - [analyst] A concrete risk framing can work when it stays anchored to named, verified roster context and avoids overstating consequences.
 
 ## What to avoid
-- Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
+- Don’t widen a small update into broader speculation, team impact, or theme-driven interpretation that the source does not support.
 - Don’t turn a question or missing-source premise into a quasi-factual conclusion; if the digest is thin, stay at the level of the verified uncertainty.
 - Don’t pad a thin fact with generic “why it matters” language if the digest does not supply it.
 - Don’t repeat the headline verbatim in the subhead or intro; avoid redundant phrasing.
@@ -21,8 +21,9 @@
 - Don’t overstate consequences or imply follow-on developments unless the digest explicitly supports it.
 - Don’t bury the strongest factual takeaway under broad summary language or meta commentary.
 - Don’t force a broader frame when the real story is one confirmed development.
-- Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
+- Don’t add unsupported process, room dynamics, or next-step framing when the source only confirms the immediate quote or decision.
 - Don’t use source-narration filler like “according to the report” when the digest already gives the concrete fact; state the verified development plainly.
 - [analyst] Don’t assert a specific contractual mechanism or increased recovery amount when the source digest has no usable facts at all; that’s a hard-fail hallucination and source-side, not fixable in prose.
 - [analyst] Don’t improvise extra context around a lone headline-level hook; if the source set is thin, the piece is source-side, not fixable in prose.
 - [analyst] Don’t invent specific developments when the source digest has no usable facts; unsupported claims are not salvageable in rewrite.
+- Don’t build a story around unsupported player/team context or quote-based praise when the closed-world record supplies no backing; that’s source-side, not fixable in prose.
