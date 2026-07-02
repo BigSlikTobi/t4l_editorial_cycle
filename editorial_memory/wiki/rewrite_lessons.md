@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline and first sentence tightly aligned on the same verified update; a clean, direct package is often enough.
+- Keep the headline and lede tightly aligned on the same verified development; a clean, direct package is often enough.
 - Lead with the exact source-supported news instead of vague setup or interpretive scene-setting.
 - Stay inside the confirmed fact pattern from start to finish; tight grounding is a recurring strength.
 - A single concrete hook can carry the piece when the source gives one clear point.
@@ -10,7 +10,7 @@
 - When the source is thin, keep the angle simple and bounded to the one verified development.
 - Let a specific, source-backed detail supply the read value instead of adding broader explanation.
 - Clean who/what/when framing can be enough for insider copy when the update is concrete and time-bound.
-- [insider] A sharp timeline or prep detail can add tap value when it shifts the story from speculation to an officially planned event.
+- [insider] A verified event or verdict plus the relevant team/job link can be enough without extra scene-setting.
 - [columnist] A short, quote-driven or detail-driven note can work when the material is specific and source-supported.
 - [columnist] Keep the named-team or career-specific angle front and center only when the digest actually supports it.
 
@@ -25,8 +25,8 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t make the piece sound source-backed when the digest only gives a headline-level premise; if the source is missing detail, stay tightly on the one confirmed fact.
-- Don’t let headline/body phrasing drift into a bland confirmation package; if the update has a richer verified timeline or prep detail, surface that instead of repeating the same point twice.
-- [insider] Don’t leave the angle at pure confirmation when the digest includes concrete prep or logistics that raise the tap value.
+- [insider] Don’t leave the angle at source-hedged narration or “according to the report” style phrasing when the digest only confirms a single concrete verdict/update; strip the meta framing and state the verified development plainly.
+- [insider] Don’t imply extra sourcing or missing-digest detail exists when the source is effectively title-level; keep the intro to the one confirmed development.
 - [insider] Don’t carry a story under the wrong beat tag when the reported development isn’t actually team-specific.
 - [columnist] Don’t use broad criticism/spotlight/“anywhere else” framing unless the digest directly supports it.
 - [columnist] Don’t drag in mention-only references beyond what the digest actually needs; keep them incidental, not explanatory.
