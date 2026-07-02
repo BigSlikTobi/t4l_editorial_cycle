@@ -10,7 +10,8 @@
 - When the source is thin, keep the angle simple and bounded to the one verified development.
 - Let a specific, source-backed detail supply the read value instead of adding broader explanation.
 - Clean who/what/when framing can be enough for insider copy when the update is concrete and time-bound.
-- [columnist] A specific, usable hook can work, but only if the lede stays strictly on the verified development.
+- A clear tap reason can come from naming the actual subjects in the source and presenting them as the article’s headliners.
+- [analyst] A concrete risk framing can work when it stays anchored to named, verified roster context and avoids overstating consequences.
 
 ## What to avoid
 - Don’t widen a small update into broader speculation or theme-driven interpretation that the source does not support.
