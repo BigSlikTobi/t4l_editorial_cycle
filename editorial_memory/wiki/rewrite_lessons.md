@@ -10,7 +10,6 @@
 - When the source is thin, keep the angle simple and bounded to the one verified development.
 - Let a specific, source-backed detail supply the read value instead of adding broader explanation.
 - Clean who/what/when framing can be enough for insider copy when the update is concrete and time-bound.
-- A clear tap reason can come from naming the actual subjects in the source and presenting them as the article’s headliners.
 - [analyst] A concrete risk framing can work when it stays anchored to named, verified roster context and avoids overstating consequences.
 
 ## What to avoid
@@ -24,8 +23,6 @@
 - Don’t force a broader frame when the real story is one confirmed development.
 - Don’t add unsupported process or next-step framing when the source only confirms the immediate decision.
 - Don’t use source-narration filler like “according to the report” when the digest already gives the concrete fact; state the verified development plainly.
-- [columnist] Don’t add unbacked scene-setting or spread/impact color like social-feed or public-frenzy claims unless the digest explicitly supports it.
-- [columnist] Don’t make a diagnosis-linked push sound more expansive than the supplied facts; keep the premise tightly bounded to what’s confirmed.
-- [columnist] Don’t duplicate the same lede sentence in the intro/body; use the body to add a clean restatement or one new verified detail, not repetition.
-- [columnist] Don’t improvise extra context around a lone headline-level hook; if the source set is thin, the piece is source-side, not fixable in prose.
-- [columnist] Don’t invent specific developments when the source digest has no usable facts; unsupported claims are not salvageable in rewrite.
+- [analyst] Don’t assert a specific contractual mechanism or increased recovery amount when the source digest has no usable facts at all; that’s a hard-fail hallucination and source-side, not fixable in prose.
+- [analyst] Don’t improvise extra context around a lone headline-level hook; if the source set is thin, the piece is source-side, not fixable in prose.
+- [analyst] Don’t invent specific developments when the source digest has no usable facts; unsupported claims are not salvageable in rewrite.
