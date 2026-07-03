@@ -1,31 +1,24 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified news immediately when the source is thin; the core fact should do the work.
-- Keep the angle tightly bounded to the smallest confirmed development rather than widening into broader narrative.
-- Use only source-supported details when the digest is sparse; restraint protects credibility.
-- Let one concrete verified fact or quote carry the piece instead of stacking extra claims around it.
-- Keep headline, subhead, and lede aligned on one confirmed point when the material is limited.
-- Preserve a clear throughline from headline to body so the reader gets the takeaway fast.
-- A concise, source-anchored update can publish well even when there is little to add beyond the central fact.
-- Clean approvals often come from disciplined restraint: no unverified fill, no interpretive drift, no attempt to outgrow the digest.
-- [columnist] Tight, supported copy works when every line stays inside the provided digest and avoids meta-reporting.
-- [columnist] A vivid, specific sourced quote can do the lifting if the rest of the piece stays tightly anchored to it.
-- [analyst] When facts are sparse, the strongest version is often the shortest one that cleanly states the verified development.
-- [insider] A brief retirement/update item can clear when it stays entirely inside the source and states the practical team impact without embellishment.
+- Lead with the strongest verified fact when the source is narrow; let the core claim carry the item.
+- Keep the angle tightly bounded to the one supported development instead of widening into broader context.
+- Use a single clear roster/update fact to organize the piece when the digest is thin.
+- Keep headline, subhead, and lede aligned on the same confirmed point without drifting into extra claims.
+- Build a tight team-specific takeaway only if it is directly supported by the source.
+- Let one sourced quote or quantified read do the work instead of stacking more interpretation around it.
+- A concise, source-anchored update can publish well when the body stays disciplined and minimal.
+- [analyst] When there is one hard fact, the best version is often a short, clean explanation of its immediate implication.
+- [analyst] Clean roster-confidence calls can work when the headline and lede stay tightly aligned with the source’s quantified read.
 
 ## What to avoid
-- Don’t make the headline, subhead, and intro restate the same point in slightly different words; each should add something new.
-- Don’t lead with source or reporter framing when the confirmed fact itself is strong enough to open.
-- Don’t add unsupported roster effects, return scenarios, or other downstream consequences that the source doesn’t establish.
-- Don’t say a team announced specifics if those specifics are not actually present in the source.
-- Don’t widen a narrow story into broader interpretation or extra context that isn’t in the source.
-- Don’t overstate certainty around details that are only lightly supported in the available material.
-- Don’t repeat headline-level claims as if they were independently established if the digest does not provide deeper support.
-- Don’t force a broader narrative frame when the real story is a simple verified update.
-- Don’t bury the central fact under setup copy or flat repetition; use the cleanest source-based hook available.
-- Don’t turn a source headline into a body fact unless the article itself cleanly establishes it; source narration is not the same as grounded reporting.
-- Don’t try to salvage a dismissal by rephrasing around an empty digest; if there are no usable facts beyond the headline, the problem is source-side, not prose-side. (source-side, not fixable in prose)
-- Don’t invent or embellish facts to create impact where the source is thin.
-- [columnist] Don’t add persona-flavored interpretation when the digest is effectively empty; the fix is more source, not more voice. (source-side, not fixable in prose)
-- [analyst] Don’t build broader roster or team-role claims when the source material contains no substantive facts to support them. (source-side, not fixable in prose)
+- Don’t repeat the same claim in the headline, subhead, and intro; each layer should add new information or move the story forward.
+- Don’t open with soft framing if the verified fact itself is strong enough to lead.
+- Don’t lean on unsupported labels like “near-lock” unless the source actually establishes that level of certainty.
+- Don’t add broader backfield, roster, or scenario context that is not present in the digest.
+- Don’t widen a narrow source read into a bigger narrative arc just to create length.
+- Don’t restate a single sourced quote as if multiple independent facts support it.
+- Don’t bury the main point under setup copy or repetitive paraphrase.
+- Don’t overbuild the item when the source only supports one tight implication.
+- [analyst] Don’t use extra roster context to inflate a one-fact update; stay inside what the source explicitly supports.
+- Don’t invent certainty or momentum beyond the source’s actual wording.
