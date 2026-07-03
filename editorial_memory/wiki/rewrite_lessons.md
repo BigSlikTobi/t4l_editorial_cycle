@@ -10,6 +10,7 @@
 - A direct, fact-first lede works well for obituary-style updates with limited source material.
 - Preserve a clear throughline from headline to body so the reader can identify the core takeaway fast.
 - [columnist] Tight, supported copy works when every line stays inside the provided digest and avoids meta-reporting.
+- When a source digest is sparse, the best version is often the shortest one that still cleanly states the verified fact.
 
 ## What to avoid
 - Don’t make the headline, subhead, and intro restate the same point in slightly different words; each should add something new.
@@ -26,3 +27,4 @@
 - Don’t use meta-language to excuse missing evidence or to describe what the digest fails to provide; if the facts aren’t there, the piece needs source, not wording.
 - Don’t turn a source headline into a body fact unless the article itself cleanly establishes it; source narration is not the same as grounded reporting.
 - Don’t try to salvage a dismissal by rephrasing around an empty digest; if there are no usable facts beyond the headline, the problem is source-side, not prose-side.
+- Don’t repeat legacy claims like Pro Bowl status or résumé details unless the digest explicitly supports them; empty-source dismissals fail on grounding first.
