@@ -11,6 +11,7 @@
 - [columnist] Tight, supported copy works when every line stays inside the provided digest and avoids meta-reporting.
 - [columnist] A vivid, specific sourced quote can do the lifting if the rest of the piece stays tightly anchored to it.
 - When a source digest is sparse, the best version is often the shortest one that still cleanly states the verified fact.
+- Clean approves often come from disciplined restraint: no extra context, no unverified fill, no attempt to outgrow the digest.
 
 ## What to avoid
 - Don’t make the headline, subhead, and intro restate the same point in slightly different words; each should add something new.
@@ -30,3 +31,4 @@
 - Don’t invent or embellish a quote to carry the piece; unsupported quotation kills grounding and cannot be rescued in prose.
 - Don’t pile on scene-setting when the only real fact is the existence of a rant or update; without more source facts, extra atmosphere reads as hallucinated support.
 - Don’t treat a thin digest as a writing problem if the missing evidence is the issue itself; some dismissals are source-side, not fixable in prose.
+- [columnist] Don’t add persona-flavored interpretation to a death notice when the digest is effectively empty; the fix is more source, not more voice. (source-side, not fixable in prose)
