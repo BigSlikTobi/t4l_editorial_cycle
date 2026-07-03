@@ -20,5 +20,9 @@
 - Don’t restate a single sourced quote as if multiple independent facts support it.
 - Don’t bury the main point under setup copy or repetitive paraphrase.
 - Don’t overbuild the item when the source only supports one tight implication.
+- Don’t add named-player or extra-team references unless they are explicitly supported by the source; keep the frame to the verified quote and the one team context.
+- Don’t speculate about locker-room dynamics beyond the quoted statement; if the source only gives the player’s own defense, stay there.
 - [analyst] Don’t use extra roster context to inflate a one-fact update; stay inside what the source explicitly supports.
 - Don’t invent certainty or momentum beyond the source’s actual wording.
+- Don’t build the piece around a quote the provided source digest does not actually support (source-side, not fixable in prose).
+- Don’t let headline, subhead, and intro all restate the same unsupported premise; unsupported central claims are a dismissal-level grounding failure.
