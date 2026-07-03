@@ -32,3 +32,4 @@
 - Don’t pile on scene-setting when the only real fact is the existence of a rant or update; without more source facts, extra atmosphere reads as hallucinated support.
 - Don’t treat a thin digest as a writing problem if the missing evidence is the issue itself; some dismissals are source-side, not fixable in prose.
 - [columnist] Don’t add persona-flavored interpretation to a death notice when the digest is effectively empty; the fix is more source, not more voice. (source-side, not fixable in prose)
+- [analyst] Don’t build a claim about a player being central to a team’s plan when the allowed evidence contains no substantive facts to support that role; if the digest is empty or missing, the failure is grounding, not style. (source-side, not fixable in prose)
