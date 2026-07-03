@@ -1,28 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the strongest verified fact when the source is narrow; let the core claim carry the item.
+- Lead with the concrete verified change when the update is simple; let the actual operational move carry the item.
 - Keep the angle tightly bounded to the one supported development instead of widening into broader context.
-- Use a single clear roster/update fact to organize the piece when the digest is thin.
-- Keep headline, subhead, and lede aligned on the same confirmed point without drifting into extra claims.
-- Build a tight team-specific takeaway only if it is directly supported by the source.
-- Let one sourced quote or quantified read do the work instead of stacking more interpretation around it.
-- A concise, source-anchored update can publish well when the body stays disciplined and minimal.
-- [analyst] When there is one hard fact, the best version is often a short, clean explanation of its immediate implication.
-- [analyst] Clean roster-confidence calls can work when the headline and lede stay tightly aligned with the source’s quantified read.
+- Use the reason for the change when it is sourced; cause-and-effect can add clarity without extra scene-setting.
+- Keep headline and intro aligned on the same confirmed point so the piece reads as one clean update.
+- Trim filler when the source is narrow; a short fact-bound rewrite is often stronger than interpretive expansion.
+- Let a single clear stadium/venue update stand on its own when that is all the source supports.
+- Build the story around the specific trigger and the specific action, not around generalized commentary.
+- Clean, minimal execution can work when every sentence adds a sourced fact or directly states the implication.
+- [analyst] A tight fact-plus-reason structure works when the source only supports one immediate operational implication.
+- Strong grounding can carry a piece even when the angle is modest, as long as the headline and lede stay fully source-faithful.
 
 ## What to avoid
-- Don’t repeat the same claim in the headline, subhead, and intro; each layer should add new information or move the story forward.
-- Don’t open with soft framing if the verified fact itself is strong enough to lead.
-- Don’t lean on unsupported labels like “near-lock” unless the source actually establishes that level of certainty.
-- Don’t add broader backfield, roster, or scenario context that is not present in the digest.
-- Don’t widen a narrow source read into a bigger narrative arc just to create length.
-- Don’t restate a single sourced quote as if multiple independent facts support it.
-- Don’t bury the main point under setup copy or repetitive paraphrase.
-- Don’t overbuild the item when the source only supports one tight implication.
-- Don’t add named-player or extra-team references unless they are explicitly supported by the source; keep the frame to the verified quote and the one team context.
-- Don’t speculate about locker-room dynamics beyond the quoted statement; if the source only gives the player’s own defense, stay there.
-- [analyst] Don’t use extra roster context to inflate a one-fact update; stay inside what the source explicitly supports.
-- Don’t invent certainty or momentum beyond the source’s actual wording.
-- Don’t build the piece around a quote the provided source digest does not actually support (source-side, not fixable in prose).
-- Don’t let headline, subhead, and intro all restate the same unsupported premise; unsupported central claims are a dismissal-level grounding failure.
+- Don’t repeat the same claim across headline, subhead, intro, and body; each layer should add something new.
+- Don’t widen a narrow source update into broad interpretive language or scene-setting.
+- Don’t add filler when the usable facts are limited; compact is better than padded.
+- Don’t lean on repeated paraphrase to create momentum; repetition exposes thin grounding.
+- Don’t overbuild the piece when the source only supports one change and its trigger.
+- Don’t leave the grounding weak by relying on a headline/summary when the digest has no deeper usable detail.
+- Don’t let the headline and intro drift into generic wording if the key fact is specific.
+- Don’t treat a simple operational update like a larger narrative arc unless the source actually supports that arc.
+- Don’t invent extra context to explain the move beyond the stated reason.
+- [analyst] Don’t use broad interpretive framing to compensate for a thin source digest; stay inside the explicit facts.
+- Don’t build the article around unsupported scene-setting (source-side, not fixable in prose).
+- Don’t repeat one sourced premise in every module; unsupported central repetition is a structure failure.
