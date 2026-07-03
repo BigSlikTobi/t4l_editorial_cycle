@@ -1,27 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline, subhead, and lede differentiated so each adds something new instead of restating the same update.
-- Lead with the freshest concrete escalation when the digest provides one immediate hook.
-- Use a vivid source-backed detail to sharpen the read value, especially in columnist-style copy.
-- Stay grounded in the verified fact pattern even when adding interpretive color.
-- Preserve a clean line from headline to body so the core takeaway is obvious fast.
-- When the source is narrow, keep the angle bounded to the one confirmed development.
-- Let a specific, source-supported moment carry the story instead of padding with process.
-- Direct, fact-first writing works when the update is immediate and time-bound.
-- Keep the Washington path or similar destination details as supporting context, not the whole lede, when a stronger hook is available.
-- [analyst] A concrete risk framing works when it stays anchored to named, verified roster context and avoids overstating consequences.
-- [columnist] Tight, supported social-media updates can work when the prose stays fully inside the supplied digests and the headline/intro remain coherent.
+- Keep the headline, subhead, and lede aligned on one verified point when the source is thin; coherence matters more than breadth.
+- Lead with the confirmed news cleanly and immediately instead of wrapping it in reporter or source framing.
+- Use only source-supported details when the digest is sparse; restraint can preserve credibility.
+- Let one concrete verified fact carry the piece rather than stacking extra claims around it.
+- Keep the angle bounded to the smallest confirmed development when the fact pattern is narrow.
+- Strong execution comes from staying inside the supplied facts and avoiding interpretive drift.
+- A direct, fact-first lede works well for obituary-style updates with limited source material.
+- Preserve a clear throughline from headline to body so the reader can identify the core takeaway fast.
+- [columnist] Tight, supported copy works when every line stays inside the provided digest and avoids meta-reporting.
 
 ## What to avoid
-- Don’t make the headline, subhead, and intro say the same thing three times; separate their jobs.
-- Don’t lead with procedural recap or source-meta language when a sharper concrete hook is already available.
-- Don’t bury the freshest escalation under generic setup or summary language.
-- Don’t widen a small update into broader speculation, team impact, or theme-driven interpretation that the source does not support.
-- Don’t turn a narrow standoff into repetitive restatement; one clean mention is usually enough.
-- Don’t add unsupported process, room dynamics, or next-step framing when the source only confirms the immediate quote or decision.
-- Don’t let filler language create extra certainty or momentum the source never supplied.
-- Don’t overstate consequences or imply follow-on developments unless the digest explicitly supports it.
-- Don’t force a broader frame when the real story is one confirmed development.
-- [analyst] Don’t assert specific contractual mechanisms or invent details when the source digest has no usable facts; that’s source-side, not fixable in prose.
-- [analyst] Don’t improvise extra context around a thin hook if it isn’t in the digest; unsupported claims aren’t salvageable in rewrite.
+- Don’t make the headline, subhead, and intro restate the same point in slightly different words; each should add something new.
+- Don’t lead with source or reporter framing when the confirmed fact itself is strong enough to open.
+- Don’t lean on unsupported phrasing or embellishment when the source digest is limited.
+- Don’t repeat headline-level claims as if they were independently established if the digest does not provide deeper support.
+- Don’t widen a narrow obituary into broader interpretation or extra context that isn’t in the source.
+- Don’t add sourcing language that creates the impression of fuller reporting than the digest supports.
+- Don’t overstate certainty around details that are only barely supported in the available material.
+- Don’t force a broader narrative frame when the real story is the confirmed death notice and little else.
+- [columnist] Don’t drift into meta-reporting or commentary that outruns the supplied facts.
+- [columnist] Don’t try to pad a thin obituary with extra color; if the source is sparse, keep the prose spare.
+- Don’t build a projected or “could join” claim when the digest is effectively empty; without factual support, the story is unsalvageable in prose (source-side, not fixable in prose).
+- Don’t use meta-language to excuse missing evidence or to describe what the digest fails to provide; if the facts aren’t there, the piece needs source, not wording.
+- Don’t turn a source headline into a body fact unless the article itself cleanly establishes it; source narration is not the same as grounded reporting.
+- Don’t try to salvage a dismissal by rephrasing around an empty digest; if there are no usable facts beyond the headline, the problem is source-side, not prose-side.
