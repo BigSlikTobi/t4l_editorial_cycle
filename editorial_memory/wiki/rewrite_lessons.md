@@ -1,26 +1,24 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified news peg when the source is thin; a clean, source-faithful lede can carry the piece.
-- Keep headline and intro locked to the same confirmed fact so the update feels tight and wire-clean.
-- Use only the certainty the source actually supports; minimal phrasing is stronger than over-explaining.
-- Build around a specific dated development when that is one of the few confirmed details.
-- Keep the angle bounded to the identifiable fact pattern instead of widening into extra context.
-- Let the article stay short and factual when the usable source material is sparse.
-- [insider] A restrained, wire-tight voice works well when the digest is limited and the update is mostly a confirmed status change.
-- [insider] Ground the lede in the identity plus the dated report when those are the firmest details available.
-- Clean execution can still work on a modest story if every sentence stays inside the confirmed record.
+- Lead with the concrete, verified development when the fact pattern is solid; a simple factual update can be enough.
+- Stay tightly inside the supplied facts when the digest is thin; restraint can improve trust and readability.
+- Use clean, grounded phrasing that avoids embellishment or interpretive drift.
+- Let one strong confirmed detail or quote carry the story instead of padding with extra context.
+- Keep the lede crisp and direct when the main value is the update itself.
+- Keep headline and intro aligned on the same verified change or quote-led angle.
+- A narrowly scoped item can still read well when every sentence remains source-faithful.
+- Quote-led tension can justify publication when it is fully supported by the source material.
+- [columnist] Preserve the disciplined, minimal framing when the piece is driven by a verified quote or operational update.
 
 ## What to avoid
-- Don’t state an arrest, charge, or other legal outcome as firmer than the digest confirms; keep the wording inside the source.
-- Don’t add certainty beyond missing source facts, especially when the digest is sparse.
-- Don’t use meta-style filler about absent details in the headline, subhead, or intro.
-- Don’t let the lede promise more confirmation than the source provides.
-- Don’t widen a thin digest into broader explanation or context just to add substance.
-- Don’t repeat the same confirmed fact across multiple modules; each layer should move the story forward.
-- Don’t rely on generic framing when the strongest details are specific and limited.
-- Don’t let execution slip into commentary when the format calls for straight reporting.
-- [insider] Avoid source-narration or editorial-aside language like “reported”/“no additional facts were included” when it adds nothing to the story.
-- [insider] If the source is missing key facts, treat that as a hard limit rather than a prompt to infer them.
-- Don’t treat a sparse digest as license to supply unsupported narrative connective tissue.
-- [insider] If the digest provides no usable facts beyond a headline/summary, do not build a rewrite around the unverified claim; that is a source-side limit, not a prose fix (source-side, not fixable in prose).
+- Don’t add unsupported narrative or symbolic meaning to a straightforward update.
+- Don’t widen a small digest-driven item into broader commentary or takeaway language.
+- Don’t overexplain a thin fact pattern with extra context that isn’t needed to understand the verified change.
+- Don’t let the piece outrun the exact wording of the source with inference or speculation.
+- Don’t pad a short update just to make it feel bigger.
+- Don’t let headline and lede drift into different angles when the core news is a single verified change or quote.
+- Don’t force emotional framing onto a plain factual development.
+- Don’t add texture or significance that isn’t present in the source, even if the quote is colorful.
+- [columnist] Avoid interpretive reads that go beyond the confirmed facts; keep the tone reportorial and restrained.
+- [columnist] If the fact set is limited, treat unsupported narrative depth as off-limits rather than trying to manufacture it.
