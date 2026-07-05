@@ -11,6 +11,8 @@
 - Quote-led tension can justify publication when it is fully supported by the source material.
 - [columnist] Preserve the disciplined, minimal framing when the piece is driven by a verified quote or operational update.
 - [columnist] When there is only one sourced fact, build the whole item around that fact and keep the angle clean and useful.
+- Strong grounding plus specificity can make a small-item story publishable even without bigger stakes.
+- A clear fan hook is enough when it stays fully tied to verified facts and doesn’t require added context.
 
 ## What to avoid
 - Don’t add unsupported narrative or symbolic meaning to a straightforward update.
