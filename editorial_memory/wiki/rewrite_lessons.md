@@ -10,6 +10,7 @@
 - A narrowly scoped item can still read well when every sentence remains source-faithful.
 - Quote-led tension can justify publication when it is fully supported by the source material.
 - [columnist] Preserve the disciplined, minimal framing when the piece is driven by a verified quote or operational update.
+- [columnist] When there is only one sourced fact, build the whole item around that fact and keep the angle clean and useful.
 
 ## What to avoid
 - Don’t add unsupported narrative or symbolic meaning to a straightforward update.
@@ -22,3 +23,7 @@
 - Don’t add texture or significance that isn’t present in the source, even if the quote is colorful.
 - [columnist] Avoid interpretive reads that go beyond the confirmed facts; keep the tone reportorial and restrained.
 - [columnist] If the fact set is limited, treat unsupported narrative depth as off-limits rather than trying to manufacture it.
+- Tighten quote-led pieces into the shortest usable form when the source digest is thin; don’t lean on generalities about comfort, pace, or adjustment unless they’re directly sourced.
+- Avoid ledes that simply repeat the headline wording; the first sentence should add shape, not echo the title.
+- When the core value is a single quote, build around that exact language instead of surrounding it with filler.
+- [columnist] Keep the framing simple when the source is thin: quote, verified context, and little else; don’t drift into style-heavy setup or source-meta vibes.
