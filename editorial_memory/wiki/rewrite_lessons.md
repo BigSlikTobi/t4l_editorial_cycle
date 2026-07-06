@@ -9,8 +9,10 @@
 - Keep sparse stories compact; brevity reads as confidence when the source has limited substance.
 - A direct, under-the-radar frame works when the source offers a single newsworthy action.
 - When the source clearly names the relevant team context, anchor the piece to that correct source-supported backdrop.
+- Pair the core transaction with a relevant performance context when both are directly supported by the digest.
 - [analyst] Embed any useful cap/contract-style figures inside body sentences, not just the lede.
 - [columnist] A sharp angle can work if it stays tightly tethered to the verified event and does not expand into commentary.
+- [insider] Correct team mapping plus concrete player-performance context can make a simple signing feel useful without overexplaining.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, subhead, and introduction without adding new sourced substance.
