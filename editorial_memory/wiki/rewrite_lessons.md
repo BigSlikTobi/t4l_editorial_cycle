@@ -1,27 +1,29 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single verified quote or fact when the source is thin; one clean attributed line can carry the piece.
-- Keep the headline and lede tightly aligned to the same sourced claim, especially on low-substance stories.
-- Use restrained, grounded phrasing that stays inside what the source actually says.
-- Let one specific detail do the work instead of stacking extra context or generalities.
-- Keep the story compact when the source is sparse; brevity reads as confidence.
-- Maintain a clear fan-facing hook, but only when it is directly anchored to verified facts.
-- [insider] A low-key, under-the-radar frame works when the source offers only a single concrete action or statement.
-- Clean, factual treatment can still be interesting when the reported material is limited.
-- [columnist] A brief, sharp take can work if it stays tethered to the quoted line rather than expanding into commentary.
-- When the source is genuinely thin, the strongest move is often to stay minimal rather than invent breadth.
+- Lead with the concrete reported update when the source is thin; a tight wire-style intro can carry the piece.
+- Keep the headline, subhead, and lede aligned to the same verified claim without drift.
+- Stay grounded in the digest and use restrained phrasing that avoids embellishment.
+- Use only the identification details already present in the source; keep them as support, not as extra story.
+- Let one specific fact do the work instead of layering on filler or repeated setup.
+- Keep sparse stories compact; brevity reads as confidence when the source has limited substance.
+- A clean, factual treatment can still be readable even on a low-detail injury or transaction-style item.
+- [insider] A direct, under-the-radar frame works when the source offers a single newsworthy action.
+- [insider] When the source clearly names the subject’s side/team, anchor the piece to that correct source-supported context.
+- [columnist] A sharp angle can work if it stays tightly tethered to the verified event and does not expand into commentary.
 
 ## What to avoid
-- Don’t stretch one quote into repeated generalizations about leadership, culture, or locker-room meaning without source support.
-- Don’t add broader commentary or symbolic meaning when the source only supports a basic factual exchange.
-- Don’t overstate the significance of a thin digest; if the source is headline-level, keep the prose headline-level too.
-- Don’t let the lede and body repeat the same claim without adding new sourced substance.
-- Don’t pad a short update with repetitive phrasing just to make it feel more complete.
-- Don’t widen a narrow fact into bigger team-story framing unless the source explicitly supports it.
-- Don’t infer extra consequences, implications, or narrative arcs that aren’t in the source.
-- Don’t build interpretive texture on top of a simple verified action; keep the piece anchored to what was actually reported.
-- [analyst] When the digest has no factual detail beyond the headline, do not add season-long or strategic implications in prose; the gap is a source limit, not a writing opportunity.
-- Mark source-substance gaps as unfixable in execution alone; if the digest is too thin, the correct move is to stay minimal or hold.
-- [columnist] Avoid commentary that outruns the source on a single-gesture story; tighten to the quote instead of expanding the angle.
-- If the source digest is empty or title-only, do not try to rescue it with embellishment; that is a source-side problem, not a prose fix (source-side, not fixable in prose).
+- Don’t repeat the same claim in the headline, subhead, and introduction without adding new sourced substance.
+- Don’t use source-meta phrasing like “according to the report” or similar filler that announces the source instead of advancing the news.
+- Don’t add unsupported wording around the status or details of the injury/update; keep the language inside what the digest actually says.
+- Don’t pad a short update with filler lines or repetitive setup just to make it feel fuller.
+- Don’t widen a narrow fact into broader narrative, significance, or interpretation unless the source explicitly supports it.
+- Don’t stretch one verified event into extra implications about leadership, culture, or bigger team meaning.
+- Don’t infer consequences or story arcs that are not in the provided digest.
+- Don’t turn a thin digest into a commentary piece; when substance is limited, tighten rather than elaborate.
+- [analyst] If the digest lacks detail beyond the headline, do not add season-long, strategic, or explanatory implications in prose.
+- [insider] Don’t carry over an incorrect team/article field when the source plainly points to a different side; treat that as a source-mapping error, not a styling choice.
+- [insider] Don’t let a one-sentence update become a near-duplicate lede; if the core fact is already in the headline, move to one clean supporting detail instead.
+- Treat source-substance gaps as limits, not opportunities to embellish; if the digest is too thin, the right move is to stay minimal or hold.
+- Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
+- [insider] Don’t state unsupported injury or identification details as fact when the digest has no usable facts; that’s fill-in, not salvageable under closed-world rules (source-side, not fixable in prose).
