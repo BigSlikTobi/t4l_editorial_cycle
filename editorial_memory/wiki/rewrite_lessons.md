@@ -1,21 +1,21 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the concrete reported update when the source is thin; a tight wire-style intro can carry the piece.
-- Keep the headline, subhead, and lede aligned to the same verified claim without drift.
-- Stay grounded in the digest and use restrained phrasing that avoids embellishment.
-- Use only the identification details already present in the source; keep them as support, not as extra story.
+- Lead with the one confirmed update when the source is thin; a ruthlessly simple lede can carry the piece.
+- Keep the headline and lede locked to the same verified claim without drift.
+- Use only source-supported context details to frame the story, and keep them secondary to the core update.
+- Stay grounded and restrained; clean factual phrasing reads better than embellished continuity language.
 - Let one specific fact do the work instead of layering on filler or repeated setup.
 - Keep sparse stories compact; brevity reads as confidence when the source has limited substance.
-- A clean, factual treatment can still be readable even on a low-detail injury or transaction-style item.
-- [insider] A direct, under-the-radar frame works when the source offers a single newsworthy action.
-- [insider] When the source clearly names the subject’s side/team, anchor the piece to that correct source-supported context.
+- A direct, under-the-radar frame works when the source offers a single newsworthy action.
+- When the source clearly names the relevant team context, anchor the piece to that correct source-supported backdrop.
+- [analyst] Embed any useful cap/contract-style figures inside body sentences, not just the lede.
 - [columnist] A sharp angle can work if it stays tightly tethered to the verified event and does not expand into commentary.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, subhead, and introduction without adding new sourced substance.
 - Don’t use source-meta phrasing like “according to the report” or similar filler that announces the source instead of advancing the news.
-- Don’t add unsupported wording around the status or details of the injury/update; keep the language inside what the digest actually says.
+- Don’t add unsupported explanation about why nothing changed, continuity, or staff stability unless the digest explicitly confirms it.
 - Don’t pad a short update with filler lines or repetitive setup just to make it feel fuller.
 - Don’t widen a narrow fact into broader narrative, significance, or interpretation unless the source explicitly supports it.
 - Don’t stretch one verified event into extra implications about leadership, culture, or bigger team meaning.
@@ -27,3 +27,4 @@
 - Treat source-substance gaps as limits, not opportunities to embellish; if the digest is too thin, the right move is to stay minimal or hold.
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - [insider] Don’t state unsupported injury or identification details as fact when the digest has no usable facts; that’s fill-in, not salvageable under closed-world rules (source-side, not fixable in prose).
+- [insider] Don’t add team-specific setup claims or player context unless the digest actually supplies them; unsupported background is a grounding failure, not an acceptable bridge.
