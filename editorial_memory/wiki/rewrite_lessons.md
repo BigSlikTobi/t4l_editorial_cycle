@@ -29,3 +29,5 @@
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t state unsupported matchup, regret, or free-agency specifics as fact when the digest has no usable facts; that’s fill-in, not salvageable under closed-world rules (source-side, not fixable in prose).
 - [insider] Don’t add team-specific setup claims or player context unless the digest actually supplies them; unsupported background is a grounding failure, not an acceptable bridge.
+- [columnist] Don’t let a strong quote or personal stance expand into generic league-wide framing; keep the angle tied to the one supported fact and avoid repetition between lede and nut graf.
+- [columnist] If the digest is effectively missing or unusable, don’t try to salvage with invented connective tissue or unrelated names; that’s a source-substance failure, not a style fix (source-side, not fixable in prose).
