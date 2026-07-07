@@ -25,9 +25,13 @@
 - Don’t infer consequences or story arcs that are not in the provided digest.
 - Don’t turn a thin digest into a commentary piece; when substance is limited, tighten rather than elaborate.
 - [analyst] If the digest lacks detail beyond the headline, do not add season-long, strategic, or explanatory implications in prose.
+- [columnist] Don’t let a strong quote or personal stance expand into generic league-wide framing; keep the angle tied to the one supported fact and avoid repetition between lede and nut graf.
+- [columnist] Don’t add broader transition/backdrop framing unless the source directly supports it; keep the angle on the single verified fact.
+- [columnist] Don’t make the intro and headline do the same job twice; vary the emphasis so each adds something new.
 - [insider] Don’t carry over an incorrect team/article field when the source plainly points to a different side; treat that as a source-mapping error, not a styling choice.
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t state unsupported matchup, regret, or free-agency specifics as fact when the digest has no usable facts; that’s fill-in, not salvageable under closed-world rules (source-side, not fixable in prose).
 - [insider] Don’t add team-specific setup claims or player context unless the digest actually supplies them; unsupported background is a grounding failure, not an acceptable bridge.
-- [columnist] Don’t let a strong quote or personal stance expand into generic league-wide framing; keep the angle tied to the one supported fact and avoid repetition between lede and nut graf.
-- [columnist] If the digest is effectively missing or unusable, don’t try to salvage with invented connective tissue or unrelated names; that’s a source-substance failure, not a style fix (source-side, not fixable in prose).
+- [columnist] Don’t invent connective tissue or unrelated names when the digest is missing or unusable; that’s a source-substance failure, not a style fix (source-side, not fixable in prose).
+- [analyst] Don’t build usage or roster-value interpretation when the digest is effectively empty; that is an unsupported leap from headline-level material (source-side, not fixable in prose).
+- [columnist] Don’t present a return/back-with-the-team claim unless the digest actually verifies the player’s status; vague roster language is not enough (source-side, not fixable in prose).
