@@ -12,7 +12,7 @@
 - [analyst] Embed useful cap, injury, or tactical figures inside body sentences, not just the lede, so the update has real utility.
 - [analyst] When a contract or extension story is supported, keep the headline/intro on the verified decision itself and use the body for sourced context.
 - [columnist] When the source is thin, a narrow framing tied to the verified comparison or angle is better than inventing broader meaning.
-- Keep the article inside the closed-world record even when the update is only a summary-level note.
+- [columnist] Build from multiple supported angles when available; tight, factual density can make a comparison piece feel useful without overreaching.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
