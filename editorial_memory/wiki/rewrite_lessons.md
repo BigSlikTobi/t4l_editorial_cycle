@@ -10,6 +10,7 @@
 - A direct, under-the-radar frame works when the source offers one newsworthy line.
 - Pair the core update with one clean, non-repetitive setup sentence rather than restating the same fact in new wording.
 - [analyst] Embed useful cap, injury, or tactical figures inside body sentences, not just the lede, so the update has real utility.
+- [analyst] When the digest includes multiple verified names/numbers, use them to give fans a concrete update without drifting beyond the source.
 - [analyst] When a contract or extension story is supported, keep the headline/intro on the verified decision itself and use the body for sourced context.
 - [columnist] When the source is thin, a narrow framing tied to the verified comparison or angle is better than inventing broader meaning.
 - [columnist] Build from multiple supported angles when available; tight, factual density can make a comparison piece feel useful without overreaching.
