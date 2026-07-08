@@ -11,10 +11,7 @@
 - A tightly grounded team-specific hook can carry a story when the angle is unusual, as long as the headline/intro stay aligned.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
-- [analyst] Use the strongest concrete facts up front, then let later details explain impact rather than restate the premise.
-- [analyst] When multiple verified angles exist, make one lane primary and keep the rest as brief context.
-- [analyst] Source-backed stakes can strengthen a tidy outlook piece when they stay concrete and bounded.
-- [analyst] A concrete roster decision with dates, contract terms, and a real alternative can support a grounded cap-and-role piece.
+- [analyst] A precise stat-led hook can work well when it is fully grounded and the wording stays clean.
 - [columnist] A personal milestone or health update can be the hook only when it is fully grounded; keep the framing clean and fan-facing.
 - [columnist] When the source is thin, a narrow frame tied to the verified angle is better than inventing broader meaning.
 
