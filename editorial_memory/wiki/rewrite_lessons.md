@@ -10,6 +10,8 @@
 - When the digest includes multiple verified names or numbers, use them to add utility without overreaching.
 - [analyst] Embed useful cap, injury, or tactical figures inside body sentences, not just the lede.
 - [analyst] When a contract or extension story is supported, keep the headline/intro on the verified decision itself and use the body for sourced context.
+- [analyst] A clean reported-note lede can work when the verified development is the whole story; keep it tight and let the hook do the work.
+- [analyst] A tightly bounded, unusual reported concept can still be readable if every named entity and the core idea are fully supported.
 - [columnist] When the source is thin, a narrow frame tied to the verified angle is better than inventing broader meaning.
 - [columnist] Build from multiple supported angles when available; tight factual density can make a comparison piece feel useful without overreaching.
 
@@ -22,6 +24,9 @@
 - Don’t widen a narrow fact into broader narrative, interpretation, or league-wide framing unless the source explicitly supports it.
 - Don’t stretch one verified event into extra implications about leadership, culture, or bigger team meaning.
 - Don’t turn a thin digest into a commentary piece; when substance is limited, tighten rather than elaborate.
+- [analyst] Don’t treat a reported consideration as a developed scenario; avoid “would have meant” style elaboration unless the digest supports it.
+- [analyst] Don’t lean on repeated paraphrase of the same reported idea; if the hook is real, the rewrite should strip to the one verified development.
+- [analyst] Don’t add outcome or timeline claims around a temporary coaching concept unless the digest explicitly supports them.
 - [columnist] Don’t add unsupported framing about what someone wants a team to consider; keep the article inside the closed-world record.
 - [columnist] Don’t let a grounded diagnosis story repeat the same diagnosis three times; keep the headline/intro distinct and use the body for one clean setup.
 - [columnist] Don’t lean on flat, self-referential lines that merely restate the obvious; if the core fact is strong, the value comes from concise framing.
