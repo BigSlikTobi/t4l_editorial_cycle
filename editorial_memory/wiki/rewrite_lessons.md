@@ -24,6 +24,9 @@
 - Don’t stretch one verified event into extra implications about culture, leadership, or offense-wide meaning.
 - Don’t turn a thin digest into a commentary piece; when substance is limited, tighten rather than elaborate.
 - Don’t add unsupported player-context or scene-setting from the source; keep the article centered on the verified subject.
+- Don’t treat a simple move as a roster-shaping or impact-heavy development unless the digest actually gives those specifics.
 - [analyst] Don’t add outcome, timeline, or usage speculation unless the digest explicitly supports it.
 - [columnist] Don’t let the lede or body drift into meta narration about what the story does or how it travels; keep the confirmed fact front and center.
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
+- Don’t name players or invent a move narrative unless the digest actually supports those details; unsupported entity swaps are a grounding failure, not an execution quirk.
+- Don’t hedge around missing details so much that the article becomes thin and unpublishable; if the digest only gives one verified fact, stay exactly there rather than narrating the lack of information.
