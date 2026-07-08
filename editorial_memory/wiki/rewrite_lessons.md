@@ -12,9 +12,7 @@
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
-- [analyst] A precise stat-led or rankings-led hook can work well when it is fully grounded and the wording stays clean.
 - [columnist] A personal milestone or health update can be the hook only when it is fully grounded; keep the framing clean and fan-facing.
-- [columnist] When the source is thin, a narrow frame tied to the verified angle is better than inventing broader meaning.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
@@ -29,10 +27,16 @@
 - Don’t turn a thin digest into a commentary piece; when substance is limited, tighten rather than elaborate.
 - Don’t add unsupported player-context or scene-setting from the source; keep the article centered on the verified subject.
 - Don’t treat a simple move as a roster-shaping or impact-heavy development unless the digest actually gives those specifics.
-- [analyst] Don’t add outcome, timeline, or usage speculation unless the digest explicitly supports it.
-- [analyst] Don’t stack softer claims or extra handoffs onto the core fact if they blur the main throughline.
+- [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
+- [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
+- [analyst] Don’t lean on generic leverage/middle-ground framing unless it is tied to a source-backed detail.
 - [columnist] Don’t let the lede or body drift into meta narration about what the story does or how it travels; keep the confirmed fact front and center.
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t name players or invent a move narrative unless the digest actually supports those details; unsupported entity swaps are a grounding failure, not an execution quirk.
 - Don’t hedge around missing details so much that the article becomes thin and unpublishable; if the digest only gives one verified fact, stay exactly there rather than narrating the lack of information.
-- [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded team-specific takeaway is enough when the ranking result is modest.
+- Don’t attach unsupported names or context to a simple announcement; if the source doesn’t support it, cut it.
+- Don’t let the headline, subhead, and intro all say the same thing about an announcement; one line should carry the hook, the others should add value.
+- Don’t build a column from a source title or inferred interest alone when the digest contains no usable facts; that is a source-side, not fixable in prose.
+- Don’t add calendar timing or other specifics that aren’t recoverable from the digest; when the source is empty, unsupported detail turns the piece into a hard fail.
+- Don’t invent a generic narrative frame to rescue an empty digest; if there are no recoverable facts, the problem is source-side, not something prose can solve.
+- [analyst] Don’t force a deadline-driven negotiation frame when the digest has no usable facts to anchor it; unsupported timing/speculation fails closed-world grounding.
