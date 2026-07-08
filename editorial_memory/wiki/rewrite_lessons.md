@@ -1,19 +1,19 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single verified hook when the digest is thin; a short, direct lede can still carry the item.
+- Lead with the verified hook when the digest is small; a short, direct lede can still carry the item.
 - Keep headline and intro aligned on the same confirmed claim, without drifting into extra context.
 - Use the source-supported angle itself as the value, rather than adding commentary about why the story was reported.
 - Stay restrained and factual; grounded phrasing reads better than editorializing when details are limited.
 - Keep sparse stories compact; brevity works when there is only one newsworthy line.
 - Pair the core update with one clean setup sentence instead of restating the same fact in different words.
 - When the digest includes multiple verified names or numbers, use them to add utility without overreaching.
+- Ground relationship/status announcements cleanly and keep the team link only if it is explicitly supported.
 - [analyst] Embed useful cap, injury, or tactical figures inside body sentences, not just the lede.
 - [analyst] When a contract or extension story is supported, keep the headline/intro on the verified decision itself and use the body for sourced context.
-- [analyst] A clean reported-note lede can work when the verified development is the whole story; keep it tight and let the hook do the work.
-- [analyst] A tightly bounded, unusual reported concept can still be readable if every named entity and the core idea are fully supported.
 - [columnist] When the source is thin, a narrow frame tied to the verified angle is better than inventing broader meaning.
 - [columnist] Build from multiple supported angles when available; tight factual density can make a comparison piece feel useful without overreaching.
+- [columnist] A personal milestone can be the hook when it is fully grounded; keep the framing clean and fan-facing.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
@@ -36,3 +36,5 @@
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t state unsupported matchup, schedule, or free-agency specifics as fact when the digest has no usable facts; that’s fill-in, not salvageable under closed-world rules (source-side, not fixable in prose).
 - Don’t proceed when the story metadata and source digest point to different subjects; that mismatch is a hard stop, not something prose can repair (source-side, not fixable in prose).
+- [columnist] Don’t let the lede or body drift into meta narration about what the story “does” or how it “travels”; keep the engagement announcement and team tie front and center.
+- [columnist] Don’t use generic recap language that makes the piece feel like a writeup of the writing process; rewrite around the confirmed fact instead.
