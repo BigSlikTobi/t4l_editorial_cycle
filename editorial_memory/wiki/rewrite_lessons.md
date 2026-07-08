@@ -9,9 +9,10 @@
 - Pair the core update with one clean setup sentence instead of repeating the same fact in different words.
 - Keep articles tightly inside the source digest; narrow framing is a strength when the verified development is simple.
 - A tightly grounded team-specific hook can carry a story when the angle is unusual, as long as the headline/intro stay aligned.
+- Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
-- [analyst] A precise stat-led hook can work well when it is fully grounded and the wording stays clean.
+- [analyst] A precise stat-led or rankings-led hook can work well when it is fully grounded and the wording stays clean.
 - [columnist] A personal milestone or health update can be the hook only when it is fully grounded; keep the framing clean and fan-facing.
 - [columnist] When the source is thin, a narrow frame tied to the verified angle is better than inventing broader meaning.
 
@@ -34,3 +35,4 @@
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t name players or invent a move narrative unless the digest actually supports those details; unsupported entity swaps are a grounding failure, not an execution quirk.
 - Don’t hedge around missing details so much that the article becomes thin and unpublishable; if the digest only gives one verified fact, stay exactly there rather than narrating the lack of information.
+- [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded team-specific takeaway is enough when the ranking result is modest.
