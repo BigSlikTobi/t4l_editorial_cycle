@@ -45,3 +45,6 @@
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
 - [columnist] Don’t layer in inferred significance when the digest only supports the praise itself; that overreaches the source.
 - [columnist] Don’t turn a direct quote into a commentary on what it means inside the building; if the source only gives the quote, keep the article there.
+- Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose.
+- [columnist] Don’t add named outside figures as relevance anchors unless the digest supports their connection; keep the piece within the verified subject.
+- [columnist] Don’t use meta-filler to imply there is substance when the digest is effectively empty; if there’s no verifiable report, don’t dress it up.
