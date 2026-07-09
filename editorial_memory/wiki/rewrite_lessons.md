@@ -12,7 +12,9 @@
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
-- [columnist] A personal milestone or health update can be the hook only when it is fully grounded; keep the framing clean and fan-facing.
+- [columnist] A personal milestone, health update, or player-quote hook can work when it is fully grounded; keep the framing clean and fan-facing.
+- [columnist] A single direct quote can carry the piece if you keep the story centered on that quote and nothing more.
+- [columnist] Center named players cleanly when the quote itself is the news; modest, source-tight quote pieces are publishable.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
@@ -40,3 +42,6 @@
 - Don’t add calendar timing or other specifics that aren’t recoverable from the digest; when the source is empty, unsupported detail turns the piece into a hard fail.
 - Don’t invent a generic narrative frame to rescue an empty digest; if there are no recoverable facts, the problem is source-side, not something prose can solve.
 - [analyst] Don’t force a deadline-driven negotiation frame when the digest has no usable facts to anchor it; unsupported timing/speculation fails closed-world grounding.
+- [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
+- [columnist] Don’t layer in inferred significance when the digest only supports the praise itself; that overreaches the source.
+- [columnist] Don’t turn a direct quote into a commentary on what it means inside the building; if the source only gives the quote, keep the article there.
