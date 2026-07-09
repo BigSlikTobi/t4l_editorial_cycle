@@ -48,3 +48,4 @@
 - Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose.
 - [columnist] Don’t add named outside figures as relevance anchors unless the digest supports their connection; keep the piece within the verified subject.
 - [columnist] Don’t use meta-filler to imply there is substance when the digest is effectively empty; if there’s no verifiable report, don’t dress it up.
+- [columnist] Don’t attempt a fan-facing Dallas/Von Miller-style angle when the source digest is empty; unsupported fit or interest framing is source-side, not fixable in prose (source-side, not fixable in prose).
