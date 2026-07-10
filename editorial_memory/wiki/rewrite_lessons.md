@@ -35,6 +35,8 @@
 - [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
 - [analyst] Don’t lean on generic leverage/middle-ground framing unless it is tied to a source-backed detail.
 - [analyst] Don’t force a deadline-driven negotiation frame when the digest has no usable facts to anchor it; unsupported timing/speculation fails closed-world grounding.
+- [analyst] Don’t add certainty about how a quarterback competition is playing out when the source only supports a standard-setting message and a limited cast of participants.
+- [analyst] Don’t name quarterbacks or other players as if confirmed when the digest does not supply them; unsupported entity swaps are a hard grounding failure.
 - [insider] Don’t turn a reported injury into firm season-planning or top-playmaker consequence language unless the source directly supports those implications.
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
 - [columnist] Don’t layer in inferred significance when the digest only supports the praise itself; that overreaches the source.
