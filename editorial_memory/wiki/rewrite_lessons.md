@@ -34,3 +34,4 @@
 - [columnist] Don’t use meta-filler to imply there is substance when the digest is effectively empty; if there’s no verifiable report, don’t dress it up.
 - [columnist] Don’t attempt a fan-facing angle when the source digest is empty; unsupported fit or interest framing is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
+- Don’t present a story as fully sourced when the provided digest has no usable facts; ungrounded status framing is a publish-stop issue (source-side, not fixable in prose).
