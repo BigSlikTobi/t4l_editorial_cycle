@@ -12,6 +12,7 @@
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
+- [analyst] Use numbers, rankings, and team-specific stakes to justify the tap when they’re grounded in the digest.
 - [insider] Injury updates work best when they stick to the reported ailment and uncertainty, without leaping to roster or planning conclusions.
 - [columnist] A personal milestone, health update, or player-quote hook can work when it is fully grounded; keep the framing clean and fan-facing.
 - [columnist] A single direct quote can carry the piece if you keep the story centered on that quote and nothing more.
