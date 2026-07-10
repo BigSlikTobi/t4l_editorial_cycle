@@ -12,15 +12,16 @@
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
+- [insider] Injury updates work best when they stick to the reported ailment and uncertainty, without leaping to roster or planning conclusions.
 - [columnist] A personal milestone, health update, or player-quote hook can work when it is fully grounded; keep the framing clean and fan-facing.
 - [columnist] A single direct quote can carry the piece if you keep the story centered on that quote and nothing more.
-- [columnist] Center named players cleanly when the quote itself is the news; modest, source-tight quote pieces are publishable.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
 - Don’t let the headline, subhead, and first sentence all restate the same premise; vary the function of each line.
 - Don’t use source-meta phrasing like “according to the report” or “reportedly” as filler.
 - Don’t build the piece around how the story is being presented; cut narration about the report and stick to the verified fact.
+- Don’t let the lede or body drift into meta narration about what the story does or how it travels; keep the confirmed fact front and center.
 - Don’t lead with a bundle of separate source angles; choose the clearest lane and tuck the others into brief context.
 - Don’t add unsupported explanation, continuity, or broader significance unless the digest explicitly confirms it.
 - Don’t pad a short update with filler lines or repetitive setup just to make it feel fuller.
@@ -32,16 +33,8 @@
 - [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
 - [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
 - [analyst] Don’t lean on generic leverage/middle-ground framing unless it is tied to a source-backed detail.
-- [columnist] Don’t let the lede or body drift into meta narration about what the story does or how it travels; keep the confirmed fact front and center.
-- Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
-- Don’t name players or invent a move narrative unless the digest actually supports those details; unsupported entity swaps are a grounding failure, not an execution quirk.
-- Don’t hedge around missing details so much that the article becomes thin and unpublishable; if the digest only gives one verified fact, stay exactly there rather than narrating the lack of information.
-- Don’t attach unsupported names or context to a simple announcement; if the source doesn’t support it, cut it.
-- Don’t let the headline, subhead, and intro all say the same thing about an announcement; one line should carry the hook, the others should add value.
-- Don’t build a column from a source title or inferred interest alone when the digest contains no usable facts; that is a source-side, not fixable in prose.
-- Don’t add calendar timing or other specifics that aren’t recoverable from the digest; when the source is empty, unsupported detail turns the piece into a hard fail.
-- Don’t invent a generic narrative frame to rescue an empty digest; if there are no recoverable facts, the problem is source-side, not something prose can solve.
 - [analyst] Don’t force a deadline-driven negotiation frame when the digest has no usable facts to anchor it; unsupported timing/speculation fails closed-world grounding.
+- [insider] Don’t turn a reported injury into firm season-planning or top-playmaker consequence language unless the source directly supports those implications.
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
 - [columnist] Don’t layer in inferred significance when the digest only supports the praise itself; that overreaches the source.
 - [columnist] Don’t turn a direct quote into a commentary on what it means inside the building; if the source only gives the quote, keep the article there.
@@ -49,3 +42,12 @@
 - [columnist] Don’t add named outside figures as relevance anchors unless the digest supports their connection; keep the piece within the verified subject.
 - [columnist] Don’t use meta-filler to imply there is substance when the digest is effectively empty; if there’s no verifiable report, don’t dress it up.
 - [columnist] Don’t attempt a fan-facing Dallas/Von Miller-style angle when the source digest is empty; unsupported fit or interest framing is source-side, not fixable in prose (source-side, not fixable in prose).
+- Don’t present unsupported ownership-process details, bidder counts, or former-player links when the digest has no usable facts; that is a source-substance failure, not a rewrite opportunity (source-side, not fixable in prose).
+- [columnist] Don’t turn a missing-summary ownership note into generic process journalism; if the digest can’t verify the development, the piece should not be forced into a clean narrative.
+- Don’t name players or invent a move narrative unless the digest actually supports those details; unsupported entity swaps are a grounding failure, not an execution quirk.
+- Don’t attach unsupported names or context to a simple announcement; if the source doesn’t support it, cut it.
+- Don’t hedge around missing details so much that the article becomes thin and unpublishable; if the digest only gives one verified fact, stay exactly there rather than narrating the lack of information.
+- Don’t add calendar timing or other specifics that aren’t recoverable from the digest; when the source is empty, unsupported detail turns the piece into a hard fail.
+- Don’t invent a generic narrative frame to rescue an empty digest; if there are no recoverable facts, the problem is source-side, not something prose can solve.
+- Don’t build a column from a source title or inferred interest alone when the digest contains no usable facts; that is a source-side, not fixable in prose.
+- Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
