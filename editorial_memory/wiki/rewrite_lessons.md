@@ -13,6 +13,7 @@
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
 - [columnist] A personal milestone, health update, or player-quote hook can work when it is fully grounded; keep the framing clean and fan-facing.
+- [insider] When the report is thin, keep the story to the documented inquiry/interest and team mentions only.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
@@ -27,12 +28,11 @@
 - Don’t add unsupported player-context or scene-setting from the source; keep the article centered on the verified subject.
 - [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
 - [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
-- [insider] Don’t turn a reported injury into firm season-planning or top-playmaker consequence language unless the source directly supports those implications.
+- [insider] Don’t state an unverified transaction or roster move as fact; in a thin report, avoid adding release/exit framing that the digest doesn’t support.
+- [insider] Don’t present legal/status claims or other unsupported consequences when the digest has no usable facts; that’s source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
 - [columnist] Don’t layer in inferred significance when the digest only supports the stated claim; that overreaches the source.
 - Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
-- [columnist] Don’t use meta-filler to imply there is substance when the digest is effectively empty; if there’s no verifiable report, don’t dress it up.
-- [columnist] Don’t attempt a fan-facing angle when the source digest is empty; unsupported fit or interest framing is source-side, not fixable in prose (source-side, not fixable in prose).
-- [insider] Don’t present legal/status claims or other unsupported consequences when the digest has no usable facts; that’s source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t present a story as fully sourced when the provided digest has no usable facts; ungrounded status framing is a publish-stop issue (source-side, not fixable in prose).
+- [insider] Don’t try to salvage an empty digest by paraphrasing the headline; if the record has no substantive facts, the piece is a dismiss, not a rewrite.
