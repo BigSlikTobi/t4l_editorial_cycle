@@ -43,3 +43,6 @@
 - [columnist] Don’t invent team fields, backfill missing support, or turn a headline-level topic into a fleshed-out report when the digest is effectively empty; that’s source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t build a story from a missing-article placeholder or other empty digest; if there are no usable facts beyond the placeholder, dismiss it as source-side, not a writing problem (source-side, not fixable in prose).
 - [columnist] Don’t fabricate death details, career milestones, or legacy framing when the digest contains no key facts; unsupported obituary-style specifics are source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t bolt on named-player drama, comparisons, or sideline context when the digest only supports the quoted joke itself; keep the headline and intro on the line that is actually verified.
+- [columnist] Don’t add repeated vague commentary on top of a thin quote-led angle; if the source lacks facts, keep the execution lean and avoid filler narration.
+- [columnist] Don’t build around a wry hook if the underlying digest has no verifiable substance beyond the quote; quote-first only works when every added reference is source-backed.
