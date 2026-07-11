@@ -27,13 +27,19 @@
 - Don’t add unsupported player-context or scene-setting from the source; keep the article centered on the verified subject.
 - [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
 - [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
+- [columnist] Don’t turn a player’s role claim into offense-wide inference unless the digest directly supports that layer; keep the piece on the stated usage shift.
+- [columnist] Don’t layer in what the role change “means” for the team when the source only verifies the claim itself.
+- [columnist] Don’t add extra player names or unsupported comparisons when the source only supports one subject and one concrete status update.
+- [columnist] Don’t add broad historical, color, or legacy commentary when the digest only verifies a headline-level death notice; keep death notices tightly on the confirmed facts.
+- [columnist] Don’t turn a verified death notice into a fuller biography unless the source supplies those details.
 - [insider] Don’t add arrest framing or other background that the digest does not actually substantiate; keep the story on the confirmed tour/workout report.
 - [insider] Don’t try to salvage a thin digest by turning headline-level background into confirmed narrative; if the source only verifies a workout/tour, stay there.
 - [insider] Don’t invent free-agency-tour or workout specifics when the digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
-- [columnist] Don’t layer in inferred significance when the digest only supports the stated claim; that overreaches the source.
-- Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t present a story as fully sourced when the provided digest has no usable facts; ungrounded status framing is a publish-stop issue (source-side, not fixable in prose).
 - [insider] Don’t try to salvage an empty digest by paraphrasing the headline; if the record has no substantive facts, the piece is a dismiss, not a rewrite.
 - [columnist] Don’t invent team fields, backfill missing support, or turn a headline-level topic into a fleshed-out report when the digest is effectively empty; that’s source-side, not fixable in prose (source-side, not fixable in prose).
+- [columnist] Don’t build a story from a missing-article placeholder or other empty digest; if there are no usable facts beyond the placeholder, dismiss it as source-side, not a writing problem (source-side, not fixable in prose).
+- [columnist] Don’t fabricate death details, career milestones, or legacy framing when the digest contains no key facts; unsupported obituary-style specifics are source-side, not fixable in prose (source-side, not fixable in prose).
