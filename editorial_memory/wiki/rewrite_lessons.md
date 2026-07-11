@@ -1,14 +1,13 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with one verified development and keep the lede short, direct, and specific.
+- Lead with the single confirmed development and keep the lede short, direct, and specific.
 - Keep headline and intro locked to the same clear hook so the reader gets one clean throughline fast.
 - Use the source-supported angle itself as the value; don’t add commentary about why the item was reported.
 - Stay restrained and factual when details are limited; grounded phrasing beats editorializing.
 - Keep sparse stories compact; brevity works when there is only one newsworthy line.
 - Pair the core update with one clean setup sentence instead of repeating the same fact in different words.
 - Keep articles tightly inside the source digest; narrow framing is a strength when the verified development is simple.
-- A tightly grounded team-specific hook can carry a story when the angle is unusual, as long as the headline/intro stay aligned.
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
@@ -28,11 +27,13 @@
 - Don’t add unsupported player-context or scene-setting from the source; keep the article centered on the verified subject.
 - [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
 - [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
-- [insider] Don’t state an unverified transaction or roster move as fact; in a thin report, avoid adding release/exit framing that the digest doesn’t support.
-- [insider] Don’t present legal/status claims or other unsupported consequences when the digest has no usable facts; that’s source-side, not fixable in prose (source-side, not fixable in prose).
+- [insider] Don’t add arrest framing or other background that the digest does not actually substantiate; keep the story on the confirmed tour/workout report.
+- [insider] Don’t try to salvage a thin digest by turning headline-level background into confirmed narrative; if the source only verifies a workout/tour, stay there.
+- [insider] Don’t invent free-agency-tour or workout specifics when the digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
 - [columnist] Don’t layer in inferred significance when the digest only supports the stated claim; that overreaches the source.
 - Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - Don’t present a story as fully sourced when the provided digest has no usable facts; ungrounded status framing is a publish-stop issue (source-side, not fixable in prose).
 - [insider] Don’t try to salvage an empty digest by paraphrasing the headline; if the record has no substantive facts, the piece is a dismiss, not a rewrite.
+- [columnist] Don’t invent team fields, backfill missing support, or turn a headline-level topic into a fleshed-out report when the digest is effectively empty; that’s source-side, not fixable in prose (source-side, not fixable in prose).
