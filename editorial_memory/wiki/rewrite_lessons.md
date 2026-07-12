@@ -1,12 +1,12 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single verified line or development and keep the lede short, direct, and specific.
-- Keep headline and intro locked to the same clean hook so the reader gets one fast throughline.
-- Use the quoted line itself as the story’s value when the digest is thin.
+- Lead with the exact verified quote or development when it is the real hook, and keep the lede direct.
+- Keep headline and intro centered on the same sourced line so the story has one clean throughline.
+- Let a strong quote do the heavy lifting when the story is otherwise thin.
 - Keep the framing tightly grounded in the names and facts the source actually provides.
-- Stay restrained and factual when details are limited; grounded phrasing beats editorializing.
-- Pair the core update with one clean setup sentence instead of repeating the same fact in different words.
+- Stay restrained and factual when details are limited; grounded phrasing beats decorative setup.
+- Build one sharp paragraph around why the quoted line matters instead of stretching it across multiple repeats.
 - Keep sparse stories compact; brevity works when there is only one newsworthy line.
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
@@ -16,11 +16,11 @@
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
-- Don’t let the headline, subhead, and first sentence all restate the same premise; vary the function of each line.
+- Don’t let the headline and intro both paraphrase the same quote; vary the function of each line.
 - Don’t use source-meta phrasing like “according to the report” or “reportedly” as filler.
 - Don’t build the piece around how the story is being presented; cut narration about the report and stick to the verified fact.
 - Don’t let the lede or body drift into meta narration about what the story does or how it travels; keep the confirmed fact front and center.
-- Don’t introduce unsupported context around a quote or prediction; if the digest only verifies the line, stay on the line and the names already in it.
+- Don’t add decorative mood-setting lines that don’t advance the sourced point.
 - Don’t widen a narrow fact into broader narrative, interpretation, or team implications unless the source explicitly supports it.
 - Don’t add unsupported explanation, continuity, or broader significance unless the digest explicitly confirms it.
 - Don’t pad a short update with filler lines or repetitive setup just to make it feel fuller.
