@@ -13,6 +13,7 @@
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
 - [columnist] A personal milestone, health update, or player-quote hook can work when it is fully grounded; keep the framing clean and fan-facing.
 - [insider] When the report is thin, keep the story to the documented inquiry/interest and team mentions only.
+- [insider] Clear record-sale or major-transaction framing works when it is directly tied to the reported price or deal terms.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
@@ -35,6 +36,8 @@
 - [insider] Don’t add arrest framing or other background that the digest does not actually substantiate; keep the story on the confirmed tour/workout report.
 - [insider] Don’t try to salvage a thin digest by turning headline-level background into confirmed narrative; if the source only verifies a workout/tour, stay there.
 - [insider] Don’t invent free-agency-tour or workout specifics when the digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
+- [insider] Don’t present an agreement as a settled ownership change unless the source explicitly supports that finality; keep reported deals clearly hedged as reported.
+- [insider] Don’t add ownership-change framing beyond the reported agreement, price, buyer group, and record-setting nature when the digest is thin.
 - [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
 - [columnist] Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
