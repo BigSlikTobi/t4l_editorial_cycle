@@ -1,8 +1,8 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the exact verified quote or development when it is the real hook, and keep the lede direct.
-- Keep headline and intro centered on the same sourced line so the story has one clean throughline.
+- Lead with the exact verified quote or self-assessment when it is the real hook, and keep the lede direct.
+- Keep headline and intro centered on the same sourced claim so the story has one clean throughline.
 - Let a strong quote do the heavy lifting when the story is otherwise thin.
 - Keep the framing tightly grounded in the names and facts the source actually provides.
 - Stay restrained and factual when details are limited; grounded phrasing beats decorative setup.
@@ -28,8 +28,11 @@
 - [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
 - [columnist] Don’t turn a player’s role claim into offense-wide inference unless the digest directly supports that layer; keep the piece on the stated usage shift.
 - [columnist] Don’t layer in what the role change “means” for the team when the source only verifies the claim itself.
+- [columnist] Don’t add player names, market context, or free-agency implications when the digest only supports the self-ranking quote; keep the piece on that single premise.
+- [columnist] Don’t invent team context or widen a self-ranking headline into a broader receiver-market frame when the source does not supply it.
 - [insider] Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
 - [insider] Don’t try to salvage an empty digest by paraphrasing the headline; if the record has no substantive facts, the piece is a dismiss, not a rewrite.
 - [columnist] Don’t build a story from a missing-article placeholder or other empty digest; if there are no usable facts beyond the placeholder, dismiss it as source-side, not a writing problem (source-side, not fixable in prose).
 - [columnist] Don’t invent team context, matchup stakes, or verified facts that are not in the digest; a quote-only headline cannot support a fuller factual frame, and team/context mismatches are dismiss-level source problems (source-side, not fixable in prose).
+- [columnist] Don’t force a free-agency or roster frame onto a piece when the digest is effectively empty; if the source gives no anchored facts, treat it as a source-side dismiss rather than a rewrite.
