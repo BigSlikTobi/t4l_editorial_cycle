@@ -1,19 +1,18 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single confirmed development and keep the lede short, direct, and specific.
-- Keep headline and intro locked to the same clear hook so the reader gets one clean throughline fast.
-- Use the source-supported angle itself as the value; don’t add commentary about why the item was reported.
+- Lead with the single verified line or development and keep the lede short, direct, and specific.
+- Keep headline and intro locked to the same clean hook so the reader gets one fast throughline.
+- Use the quoted line itself as the story’s value when the digest is thin.
+- Keep the framing tightly grounded in the names and facts the source actually provides.
 - Stay restrained and factual when details are limited; grounded phrasing beats editorializing.
-- Keep sparse stories compact; brevity works when there is only one newsworthy line.
 - Pair the core update with one clean setup sentence instead of repeating the same fact in different words.
-- Keep articles tightly inside the source digest; narrow framing is a strength when the verified development is simple.
+- Keep sparse stories compact; brevity works when there is only one newsworthy line.
 - Strong wire-style pieces can still feel tap-worthy when they stay fully grounded and deliver one clear reason to read.
 - [analyst] Embed useful figures or status details inside body sentences, not just the lede.
 - [analyst] When the source is thin, stay with the one concrete reported development and keep the framing narrow.
 - [columnist] A personal milestone, health update, or player-quote hook can work when it is fully grounded; keep the framing clean and fan-facing.
 - [insider] When the report is thin, keep the story to the documented inquiry/interest and team mentions only.
-- [insider] Clear record-sale or major-transaction framing works when it is directly tied to the reported price or deal terms.
 
 ## What to avoid
 - Don’t repeat the same claim in the headline, intro, and body without adding new sourced substance.
@@ -21,32 +20,16 @@
 - Don’t use source-meta phrasing like “according to the report” or “reportedly” as filler.
 - Don’t build the piece around how the story is being presented; cut narration about the report and stick to the verified fact.
 - Don’t let the lede or body drift into meta narration about what the story does or how it travels; keep the confirmed fact front and center.
-- Don’t lead with a bundle of separate source angles; choose the clearest lane and tuck the others into brief context.
+- Don’t introduce unsupported context around a quote or prediction; if the digest only verifies the line, stay on the line and the names already in it.
+- Don’t widen a narrow fact into broader narrative, interpretation, or team implications unless the source explicitly supports it.
 - Don’t add unsupported explanation, continuity, or broader significance unless the digest explicitly confirms it.
 - Don’t pad a short update with filler lines or repetitive setup just to make it feel fuller.
-- Don’t widen a narrow fact into broader narrative, interpretation, or team implications unless the source explicitly supports it.
-- Don’t add unsupported player-context or scene-setting from the source; keep the article centered on the verified subject.
+- Don’t add extra player names, comparisons, or scene-setting when the source only supports one subject and one concrete statement.
 - [analyst] Don’t add outcome, timeline, leverage, or usage speculation unless the digest explicitly supports it.
-- [analyst] Don’t force a stronger impact frame than the source supports; a clean, grounded takeaway is enough when the evidence is modest.
 - [columnist] Don’t turn a player’s role claim into offense-wide inference unless the digest directly supports that layer; keep the piece on the stated usage shift.
 - [columnist] Don’t layer in what the role change “means” for the team when the source only verifies the claim itself.
-- [columnist] Don’t add extra player names or unsupported comparisons when the source only supports one subject and one concrete status update.
-- [columnist] Don’t add broad historical, color, or legacy commentary when the digest only verifies a headline-level death notice; keep death notices tightly on the confirmed facts.
-- [columnist] Don’t turn a verified death notice into a fuller biography unless the source supplies those details.
-- [insider] Don’t add arrest framing or other background that the digest does not actually substantiate; keep the story on the confirmed tour/workout report.
-- [insider] Don’t try to salvage a thin digest by turning headline-level background into confirmed narrative; if the source only verifies a workout/tour, stay there.
-- [insider] Don’t invent free-agency-tour or workout specifics when the digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
-- [insider] Don’t present an agreement as a settled ownership change unless the source explicitly supports that finality; keep reported deals clearly hedged as reported.
-- [insider] Don’t add ownership-change framing beyond the reported agreement, price, buyer group, and record-setting nature when the digest is thin.
-- [columnist] Don’t add team-building or inside-the-building implications unless the source explicitly supports them; keep quote-led pieces on the quote itself.
-- [columnist] Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
+- [insider] Don’t build around social-media chatter, rumors, or future uncertainty when the source digest has no usable facts; empty-source speculation is source-side, not fixable in prose (source-side, not fixable in prose).
 - Don’t publish when the digest is effectively empty or non-verifiable; that is a source-substance problem, not a prose fix (source-side, not fixable in prose).
-- Don’t present a story as fully sourced when the provided digest has no usable facts; ungrounded status framing is a publish-stop issue (source-side, not fixable in prose).
 - [insider] Don’t try to salvage an empty digest by paraphrasing the headline; if the record has no substantive facts, the piece is a dismiss, not a rewrite.
-- [columnist] Don’t invent team fields, backfill missing support, or turn a headline-level topic into a fleshed-out report when the digest is effectively empty; that’s source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t build a story from a missing-article placeholder or other empty digest; if there are no usable facts beyond the placeholder, dismiss it as source-side, not a writing problem (source-side, not fixable in prose).
-- [columnist] Don’t fabricate death details, career milestones, or legacy framing when the digest contains no key facts; unsupported obituary-style specifics are source-side, not fixable in prose (source-side, not fixable in prose).
-- [columnist] Don’t bolt on named-player drama, comparisons, or sideline context when the digest only supports the quoted joke itself; keep the headline and intro on the line that is actually verified.
-- [columnist] Don’t add repeated vague commentary on top of a thin quote-led angle; if the source lacks facts, keep the execution lean and avoid filler narration.
-- [columnist] Don’t build around a wry hook if the underlying digest has no verifiable substance beyond the quote; quote-first only works when every added reference is source-backed.
-- [columnist] Don’t turn “all but finalized” or similar near-complete phrasing into a fact unless the digest actually verifies the transaction; missing source facts make finality language unsafe (source-side, not fixable in prose).
+- [columnist] Don’t invent team context, matchup stakes, or verified facts that are not in the digest; a quote-only headline cannot support a fuller factual frame, and team/context mismatches are dismiss-level source problems (source-side, not fixable in prose).
