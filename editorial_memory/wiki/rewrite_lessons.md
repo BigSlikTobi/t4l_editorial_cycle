@@ -49,3 +49,4 @@
 - [columnist] Don’t bolt on named-player drama, comparisons, or sideline context when the digest only supports the quoted joke itself; keep the headline and intro on the line that is actually verified.
 - [columnist] Don’t add repeated vague commentary on top of a thin quote-led angle; if the source lacks facts, keep the execution lean and avoid filler narration.
 - [columnist] Don’t build around a wry hook if the underlying digest has no verifiable substance beyond the quote; quote-first only works when every added reference is source-backed.
+- [columnist] Don’t turn “all but finalized” or similar near-complete phrasing into a fact unless the digest actually verifies the transaction; missing source facts make finality language unsafe (source-side, not fixable in prose).
