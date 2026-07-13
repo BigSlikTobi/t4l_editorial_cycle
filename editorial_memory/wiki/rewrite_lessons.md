@@ -26,3 +26,5 @@
 - Don’t fabricate names, numbers, or team details to bolster a small item.
 - Don’t turn a concrete injury list or similar source fact into speculative season-meaning language or team-impact analysis unless the source explicitly does that.
 - Source-empty or source-thin digests can’t support a publishable angle; treat missing facts as a hard stop, not a cue for filler (source-side, not fixable in prose).
+- Don’t present unsupported specifics as sourced — if the digest is effectively empty, named people, destinations, and year projections are off-limits (source-side, not fixable in prose).
+- Don’t try to salvage a piece with polished prose when the digest has no usable facts; the problem is evidentiary, not stylistic (source-side, not fixable in prose).
