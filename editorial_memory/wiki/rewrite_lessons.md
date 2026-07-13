@@ -22,6 +22,8 @@
 - Don’t paraphrase the same verified fact into multiple layers of commentary; keep the wording functional, not decorative.
 - Don’t build on source gaps with inference about terms, timeline, or impact.
 - Don’t use generic news-language to substitute for missing evidence.
+- Don’t add unsupported narration about timing, familiarity, or what a gathering “means” when the source only supports the named people and the event itself.
 - [insider] Don’t smuggle in unverified publication details or framing labels when the source only supports the transaction itself.
 - [insider] Don’t treat a strong core fact as permission to add extra context that wasn’t in the digest.
-- Don’t publish beyond what the digest actually verifies; unsupported additions are execution failures, not enrichment.
+- Source-empty digests can’t support a publishable angle; treat missing facts as a hard stop, not a cue for locker-room leadership or standard-setting filler (source-side, not fixable in prose).
+- [columnist] If the digest is effectively empty, even a clean, readable angle is not enough; don’t manufacture a narrative around an unsupported “bonding week” or “Last Rodeo” framing (source-side, not fixable in prose).
