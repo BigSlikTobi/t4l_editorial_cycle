@@ -1,9 +1,9 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed core fact and keep the lede direct when the source gives one clean development.
+- Lead with the one confirmed core fact and keep the lede direct when the source gives a single clean development.
 - Keep the headline and intro locked to the same verified throughline.
-- Use a standout source-backed detail or framing hook to organize a small item when the digest is thin.
+- Use a source-backed detail or framing hook to organize a small item when the digest is thin.
 - Stay tightly bounded to the digest on narrow reports; source-provided specifics are enough.
 - Keep the intro close to the lede instead of widening into interpretation, scene-setting, or invented significance.
 - Clean wire-style execution works when it removes unsupported flourish and stays grounded.
@@ -11,6 +11,7 @@
 - Strong factual hooks can carry the piece even when the broader context is sparse.
 - Build around the confirmed figure or central fact first; use it as the spine, not a springboard for extra claims. [analyst]
 - Keep the item specific enough to publish without adding numbers, names, or background that the digest never confirmed.
+- A clear, concrete list of confirmed facts can be enough on its own when the source is specific.
 
 ## What to avoid
 - Don’t add claims about a player being central, symbolic, or driving the story unless the digest states that directly.
@@ -23,5 +24,5 @@
 - Don’t use generic news-language to substitute for missing evidence.
 - Don’t repeat the same thin hook across headline, subhead, intro, and body; one clean pass is better than layered paraphrase.
 - Don’t fabricate names, numbers, or team details to bolster a small item.
+- Don’t turn a concrete injury list or similar source fact into speculative season-meaning language or team-impact analysis unless the source explicitly does that.
 - Source-empty or source-thin digests can’t support a publishable angle; treat missing facts as a hard stop, not a cue for filler (source-side, not fixable in prose).
-- If the digest only gives a ranking title plus a named subject, keep the takeaway narrowly tied to that source context instead of flattening it into generic middle-tier framing. [analyst]
