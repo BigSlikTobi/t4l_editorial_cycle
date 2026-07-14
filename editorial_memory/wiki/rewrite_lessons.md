@@ -1,10 +1,10 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified result when the item is a ranking or status update; a straightforward lede can carry the piece. [analyst]
+- Lead with the verified result or status change when the item is a ranking or update; a straightforward lede can carry the piece. [analyst]
 - Keep the headline and intro aligned on the same confirmed throughline so the package stays focused. [analyst]
 - Stay inside the source material and let the ranking/result speak for itself instead of inventing consequences or quotes. [analyst]
-- Use concrete, source-backed comparison language when the digest clearly supports it. [analyst]
+- Use concrete, source-backed comparison language when the digest clearly supports it.
 - Keep narrow reports tight and factual, with only source-backed detail in the hook.
 - Let the confirmed fact do the work instead of padding with scene-setting, broader significance, or meta narration.
 - When the source is sparse, strip the story back to only what is directly verifiable. [columnist]
