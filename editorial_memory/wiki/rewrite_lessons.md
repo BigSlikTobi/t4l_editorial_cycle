@@ -13,6 +13,7 @@
 - [insider] A tightly labeled retirement brief can work when the headline, intro, and body all stay on the same specific subject.
 - [columnist] A quote-centered angle can work when the writer stays disciplined about one stated regret or takeaway and resists extra career-color.
 - [columnist] A Dallas-specific tap-in can work when it stays inside the source's closed-world facts and keeps the headline and introduction aligned.
+- [columnist] A narrow sourced framing can work when the lede names the concrete premise directly instead of implying it through vague scene-setting.
 
 ## What to avoid
 - Don’t overreach beyond source support by adding interpretive language or implied implications.
@@ -26,4 +27,6 @@
 - Don’t repeat the same core fact in multiple layers of framing; one clear pass is stronger than paraphrased buildup.
 - Don’t force a broader conclusion from a status update; stay inside what the source actually confirms.
 - Don’t bring in unrelated names or references unless the digest gives a clear, source-backed reason they matter. [columnist]
-- Don’t tack on career context or comparisons that aren’t in the digest, even when the story has a strong central quote.
+- Don’t pad a sourced update with generic “what this usually means” filler when the report already gives the concrete angle.
+- Don’t lean on meta framing like “the report places” or “what is being described as” when the digest has no concrete facts to support a recoverable rewrite.
+- Don’t try to rescue a source-starved item with narration alone; if grounding is absent, the piece may be unrecoverable on a second pass (source-side, not fixable in prose).
