@@ -11,6 +11,8 @@
 - In analyst pieces, the model’s actual categories or supported framework details are useful when they are explicitly in the digest.
 - Concrete trend or metric context helps only when the source clearly supplies it.
 - Strong grounding can carry a straightforward report if the framing doesn’t wander.
+- If the source clearly supports a clean top-line ranking, write to that exact claim and keep the rest minimal.
+- A cleaner, team-level payoff angle can work when it stays tethered to the one verified ranking or recognition.
 
 ## What to avoid
 - Don’t add unsupported implications or extra case detail when the digest is only headline-level.
@@ -26,3 +28,5 @@
 - Don’t overstate the significance of a single reported update when the source only confirms the update itself.
 - Don’t add unsupported body detail to “help” a sparse report; that usually lowers grounding more than it helps readability.
 - Don’t turn a bare quote premise into a fuller analytic takeaway when the source record is effectively empty; keep it to the verified quote level or treat it as source-side, not fixable in prose.
+- Don’t name specific runners-up, vote spreads, or tie details unless they appear in the source digest.
+- Don’t add source-meta commentary about what the digest includes or omits; keep the story on the verified news peg.
