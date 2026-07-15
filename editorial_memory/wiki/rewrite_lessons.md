@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the core verified fact and the clearest local connection when the digest supports it; a plain death notice can carry the piece.
+- Lead with the core verified fact and the clearest local connection when the digest supports it; a plain news notice can carry the piece.
 - Keep headline, subhead, and lede aligned on the same confirmed throughline, but give each line a distinct job.
 - Use the co-founder/status/age combination to make the first two sentences do the heavy lifting.
 - Stay strictly inside the digest and let the confirmed fact do the work instead of inventing context or implication.
@@ -22,6 +22,6 @@
 - Don’t let the package framing drift from the actual source subject; keep labels aligned with the verified note. [analyst]
 - Don’t repeat the same core fact in multiple layers of framing; one clear pass is stronger than paraphrased buildup.
 - Don’t stack headline, subhead, and intro with the same wording; vary the job of each line so they don’t just repeat the same report.
+- Don’t state downstream consequences unless the source explicitly supports them; unsupported suspension/DUI specifics are a hard stop when the digest is empty.
 - Don’t try to rescue a source-starved item with narration alone; if grounding is absent, the piece may be unrecoverable on a second pass (source-side, not fixable in prose).
-- Don’t build a story around a source with no usable digests; if the factual base cannot be validated, the piece is unrecoverable (source-side, not fixable in prose).
 - Don’t invent market-pressure, franchise-origin, or other unsupported context when it isn’t in the digest; unsupported framing can’t substitute for missing facts.
