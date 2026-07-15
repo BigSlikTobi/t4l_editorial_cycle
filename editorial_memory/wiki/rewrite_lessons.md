@@ -1,28 +1,26 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the core verified fact and the clearest local connection when the digest supports it; a plain news notice can carry the piece.
-- Keep headline, subhead, and lede aligned on the same confirmed throughline, but give each line a distinct job.
-- Use the co-founder/status/age combination to make the first two sentences do the heavy lifting.
-- Stay strictly inside the digest and let the confirmed fact do the work instead of inventing context or implication.
-- When the source is sparse, strip the story back to what is directly verifiable and write it cleanly.
-- Clean, grounded execution can make a narrow update feel complete without extra color. [insider]
-- High grounding can outweigh a modestly less flashy angle if the package stays precise and readable.
-- Let the verified consequence or news event be the hook instead of padding with scene-setting or broad significance.
-- A clean news-notice structure can succeed even when the angle is modest, as long as the piece is tightly grounded.
-- [columnist] Keep the team-specific anchor limited to what the digest supports; one clear local link is enough.
-- A sparse digest can still support a strong click if the reader gets a clear, specific reason to care without any extra invention.
+- Lead with the verified core quote or fact when the digest supports a clean, self-contained hook.
+- Keep the lede centered on one clear claim, then use the body to frame it without adding new factual load.
+- Tight, grounded treatment can make a modest internal-team angle feel readable and complete.
+- A single clear local or team-specific anchor is enough when the digest is sparse.
+- Preserve a clean throughline from headline to lede so the main claim lands immediately.
+- Stay inside the digest and let the quoted or confirmed statement do most of the work.
+- When the source only supports one strong point, resist the urge to broaden it; concise is stronger than inflated.
+- A narrow analyst-style piece works best when it turns one claim into an internal standard or evaluation, not a larger theory.
+- Strong headline-intro alignment helps a quote-led piece feel polished even when the angle is simple.
+- High grounding can carry an otherwise modest story if the framing stays disciplined.
 
 ## What to avoid
-- Don’t overreach beyond source support by adding interpretive language or implied consequences.
-- Don’t add meta narration about source handling, story construction, or what the material included.
-- Don’t widen a tight update into broader analysis unless the digest explicitly supports it.
-- Don’t let the body drift away from the verified statement in the source digest.
-- Don’t build on source gaps with inference about meaning, impact, or relevance.
-- Don’t fabricate connective tissue between details the digest never establishes.
-- Don’t let the package framing drift from the actual source subject; keep labels aligned with the verified note. [analyst]
-- Don’t repeat the same core fact in multiple layers of framing; one clear pass is stronger than paraphrased buildup.
-- Don’t stack headline, subhead, and intro with the same wording; vary the job of each line so they don’t just repeat the same report.
-- Don’t state downstream consequences unless the source explicitly supports them; unsupported suspension/DUI specifics are a hard stop when the digest is empty.
-- Don’t try to rescue a source-starved item with narration alone; if grounding is absent, the piece may be unrecoverable on a second pass (source-side, not fixable in prose).
-- Don’t invent market-pressure, franchise-origin, or other unsupported context when it isn’t in the digest; unsupported framing can’t substitute for missing facts.
+- Don’t add player-specific assertions or extra named details that the digest does not support.
+- Don’t expand a quote into claims about what the speaker “pointed to” unless the source explicitly says so.
+- Don’t overbuild a simple praise quote into a wider narrative; keep the frame as tight as the source allows.
+- Don’t let unsupported factual additions drag down otherwise solid grounding.
+- Don’t widen a source-backed quote into broader analysis when the digest only supports the direct statement.
+- Don’t use connective tissue that implies more reporting than the digest contains.
+- Don’t stack extra claim layers on top of a clean quote; one verified point is stronger than embellished context.
+- [analyst] Don’t turn a quote-driven update into an unsupported evaluation of the unit beyond what the digest verifies.
+- Don’t try to rescue thin source material by adding specifics the digest never provides.
+- Don’t build a story when the digest is effectively empty; if the source is missing key facts, the article can’t be saved in prose (source-side, not fixable in prose).
+- Don’t mismatch the headline/story frame with the source title or available material; if the underlying source points to a different team or topic, that’s a source-side failure (source-side, not fixable in prose).
