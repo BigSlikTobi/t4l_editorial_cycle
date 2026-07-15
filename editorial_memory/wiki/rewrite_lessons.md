@@ -8,9 +8,10 @@
 - When the source is sparse, strip the story back to what is directly verifiable and write it cleanly.
 - Clean, grounded execution can make a narrow update feel complete without extra color. [insider]
 - High grounding can outweigh a modestly less flashy angle if the package stays precise and readable.
-- Let the verified consequence be the hook instead of padding with scene-setting or broad significance.
+- Let the verified consequence or news event be the hook instead of padding with scene-setting or broad significance.
 - A clean news-notice structure can succeed even when the angle is modest, as long as the piece is tightly grounded.
 - [columnist] Keep the team-specific anchor limited to what the digest supports; one clear local link is enough.
+- A sparse digest can still support a strong click if the reader gets a clear, specific reason to care without any extra invention.
 
 ## What to avoid
 - Don’t overreach beyond source support by adding interpretive language or implied consequences.
