@@ -11,6 +11,8 @@
 - A narrow analyst-style piece works best when it turns one claim into an internal standard or evaluation, not a larger theory.
 - Strong headline-intro alignment helps a quote-led piece feel polished even when the angle is simple.
 - High grounding can carry an otherwise modest story if the framing stays disciplined.
+- In analyst pieces, use the model’s actual categories or supported framework details to sharpen the hook.
+- For analyst updates, concrete trend or metric context can add value when it is explicitly supported by the digest.
 
 ## What to avoid
 - Don’t add player-specific assertions or extra named details that the digest does not support.
@@ -21,6 +23,10 @@
 - Don’t use connective tissue that implies more reporting than the digest contains.
 - Don’t stack extra claim layers on top of a clean quote; one verified point is stronger than embellished context.
 - [analyst] Don’t turn a quote-driven update into an unsupported evaluation of the unit beyond what the digest verifies.
-- Don’t try to rescue thin source material by adding specifics the digest never provides.
-- Don’t build a story when the digest is effectively empty; if the source is missing key facts, the article can’t be saved in prose (source-side, not fixable in prose).
 - Don’t mismatch the headline/story frame with the source title or available material; if the underlying source points to a different team or topic, that’s a source-side failure (source-side, not fixable in prose).
+- [analyst] Don’t invent a team need or roster tie-in when the source digest has no usable facts; keep to the available roundup metadata or scrap the angle.
+- Don’t mix two different source stories in one lede or headline; if the digest supports one outlet/topic, stay with that frame.
+- [analyst] Don’t force comparison language the digest doesn’t support; use the model’s actual categories/caveats instead of imported framing.
+- Don’t build a camp-need headline from an empty digest; if there are no usable facts, the angle is source-side, not fixable in prose.
+- [analyst] Don’t invent a “remaining need” or clean-answer frame when the source record has no validated support for a specific gap.
+- [analyst] Don’t overstate a ranking item; keep the read anchored to the board’s actual categories and the supported trend detail.
