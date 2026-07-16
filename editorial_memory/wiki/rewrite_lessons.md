@@ -1,25 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified deadline or transaction when the digest clearly supports it; a simple, immediate update can be enough.
-- Keep the lede centered on one supported claim, then stop before adding speculative layers.
-- Tight grounding in the source digests can carry an insider item even when the story is routine.
-- Use the exact reported figure or tender detail when it is central to the update.
-- A clean headline-to-lede match helps a straightforward report feel polished and trustworthy.
-- When the source supports only a narrow update, concise framing is stronger than trying to broaden the angle.
-- Let the source-backed fact do most of the work; minimal, news-first execution can read as complete.
-- Use contextual mentions only when they are directly supported and help orient the reader.
-- Clean wire-style execution works well when it combines specificity, grounding, and restraint.
+- Lead with the source-supported decision point when an article is really about a fit, not a broad concept.
+- Keep the lede centered on one concrete claim and the specific hinge that makes it newsworthy.
+- Use lineage or background only as context for the main reporting point, not as the story itself.
+- Tight grounding in the digest can carry an analyst item when the angle is nuanced rather than splashy.
+- Let a concrete roster-fit or scheme-fit detail do the heavy lifting when the source supports it.
+- Clean headline-to-lede alignment helps a narrowly framed analysis read credible.
+- Simple, immediate execution works when the source only supports a limited update.
+- When the source is specific, prefer that specificity over broad textbook framing.
+- Source-backed restraint often reads stronger than trying to inflate the payoff.
+- If the source set offers sharper named facts, use those instead of leaning on a weaker adjacent reference.
 
 ## What to avoid
-- Don’t add unsupported implications, extra case detail, or outcome language when the digest is only narrow and factual.
-- Don’t widen a source-backed update into market, leverage, or next-step speculation unless the source explicitly supports it.
-- Don’t stack additional factual layers on top of an already clean, narrow report.
-- Don’t let connective tissue imply more reporting than the digest contains.
-- Don’t mismatch the headline or lede frame with the source material; if the underlying source points elsewhere, that’s a source-side failure (source-side, not fixable in prose).
-- [analyst] Don’t invent a need, evaluation, or comparison when the digest has no validated support for it.
-- [analyst] Don’t force a ranking, answer, or verdict frame without source support.
-- Don’t mix two different source stories in one headline or lede.
-- Don’t overstate the significance of a single reported update when the source only confirms the update itself.
-- Don’t add source-meta phrasing or commentary about what the digest includes or omits; keep the story on the verified news peg.
-- Don’t use filler like “according to a report” in the intro when the digest already establishes the fact.
+- Don’t let the headline promise a team-specific payoff if the source is mainly explaining lineage or fit.
+- Don’t overbuild the intro with broad scheme exposition when the real hook is a single source-supported decision point.
+- Don’t frame an article around a “strictly West Coast” concept unless the digest supports that exact tension.
+- Don’t widen a narrow source-backed angle into a generic system explainer.
+- Don’t let a flat opening bury the concrete hinge that actually advances the story.
+- Don’t imply a bigger outcome than the source confirms; keep the payoff proportional.
+- Don’t stack textbook background on top of the main point unless it directly sharpens the news peg.
+- Don’t mismatch the lede with the source’s true emphasis; if the angle points elsewhere, that’s a framing failure (source-side, not fixable in prose).
+- [analyst] Don’t foreground the scheme’s theory when the key report is about how the roster fit changes the system.
+- [analyst] Don’t bury the vertical-versus-horizontal trade-off; make the fit tension explicit early.
+- Don’t substitute generic context for the concrete source-supported hinge.
+- Don’t lean on an unsafely supported adjacent name or reference when the digests contain firmer story facts.
