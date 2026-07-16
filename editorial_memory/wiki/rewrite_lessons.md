@@ -10,7 +10,8 @@
 - Maintain a crisp, immediate lede when the article is basically a single-update item.
 - Consistent framing across the story helps even low-scope content feel credible and readable.
 - When the digest gives only one solid fact, staying inside that fact can be the strongest choice.
-- [insider] If the source digest is thin, avoid adding timeline or game-context filler; keep the piece tightly inside the confirmed update.
+- [insider] Keep the piece tightly grounded in the confirmed deal terms, age, and injury/production context when those are the facts the digest actually supports.
+- [insider] Use concrete contract figures to sharpen a rewrite-saved story without drifting into unsupported roster or offense framing.
 
 ## What to avoid
 - Don’t widen a narrow update into a broader team, contract, or roster explainer unless the source truly supports it.
@@ -22,4 +23,6 @@
 - Don’t pad a usable angle with extra specifics the digest doesn’t provide.
 - Don’t substitute generic analysis for the exact confirmed detail that makes the story newsworthy.
 - Don’t overbuild a simple report; sparse updates should stay literal and limited.
+- Don’t introduce unsupported narrative framing about the offense or quarterback plan when the source digest doesn’t support it.
+- Don’t repeat the same contract fact verbatim in headline, subhead, and intro; vary the framing and use the why-now context to add lift.
 - Don’t claim the source supports a story when the digest has no factual substrate or is missing key facts needed to support the angle (source-side, not fixable in prose).
