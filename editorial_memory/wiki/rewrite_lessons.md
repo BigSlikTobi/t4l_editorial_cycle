@@ -24,5 +24,5 @@
 - Don’t substitute generic analysis for the exact confirmed detail that makes the story newsworthy.
 - Don’t overbuild a simple report; sparse updates should stay literal and limited.
 - Don’t introduce unsupported narrative framing about the offense or quarterback plan when the source digest doesn’t support it.
-- Don’t repeat the same contract fact verbatim in headline, subhead, and intro; vary the framing and use the why-now context to add lift.
+- Don’t claim chemistry, development, or other relationship progress unless the source explicitly verifies it.
 - Don’t claim the source supports a story when the digest has no factual substrate or is missing key facts needed to support the angle (source-side, not fixable in prose).
