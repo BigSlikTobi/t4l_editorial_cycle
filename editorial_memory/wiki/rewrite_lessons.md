@@ -31,3 +31,4 @@
 - Don’t add source-meta commentary about what the digest includes or omits; keep the story on the verified news peg.
 - Don’t use source/meta phrasing like “according to a report” in the intro when the digest already establishes the fact.
 - Don’t add continuity or “key player” framing unless the digest actually supports that explanation.
+- Don’t treat an empty digest as if it contains broader context, player connections, or other grounded material; that’s source-side, not fixable in prose.
