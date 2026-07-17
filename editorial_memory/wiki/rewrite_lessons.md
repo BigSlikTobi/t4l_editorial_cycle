@@ -1,22 +1,25 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the one confirmed fact when that’s all the source supports; a sparse update can still read complete.
-- Keep headline, lede, and body tightly aligned around the same narrow claim.
-- Use specific numbers or concrete terms when available; they give a limited update enough weight.
-- Let grounded, literal reporting carry the piece instead of adding extra context or speculation.
+- Lead with the strongest confirmed hook the source actually supports; a narrow update can still read complete.
+- Keep headline and intro aligned on the same central claim.
+- Use specific names or numbers when they genuinely sharpen the angle.
+- Let grounded, literal reporting carry the piece instead of adding speculation.
 - Favor restraint over inflation when the news peg is small but clear.
 - Keep the execution clean and finished-report in tone; plain reporting reads better than source-meta scaffolding.
-- Maintain a crisp, immediate lede when the article is basically a single-update item.
-- Consistent framing across the story helps even low-scope content feel credible and readable.
-- When the digest gives only one solid fact, staying inside that fact can be the strongest choice.
+- Maintain a crisp, immediate lede when the article is a tight update item.
+- Use one clear framing choice in the opening rather than repeating the same setup twice.
+- Build the first sentence to add something beyond the headline, not just echo it.
+- Stay tightly inside the source digests when the story’s value is the confirmed hook and the concrete context that supports it.
+- [analyst] Center the strongest supported team-level angle when the digest clearly backs it.
+- [analyst] Use concrete player context to strengthen an analysis piece without drifting into unsupported claims.
 - [insider] Keep the piece tightly grounded in the confirmed deal terms, age, and injury/production context when those are the facts the digest actually supports.
 - [insider] Use concrete contract figures to sharpen a rewrite-saved story without drifting into unsupported roster or offense framing.
-- [analyst] Center the cap trade-off and timing question when the source supports an extension/contract decision.
 
 ## What to avoid
 - Don’t widen a narrow update into a broader team, contract, or roster explainer unless the source truly supports it.
-- Don’t add unsupported timetable, status, or side-detail chatter to make a small update feel bigger.
+- Don’t lock onto a narrower subplot when the source’s stronger hook is the wider team-level angle.
+- Don’t repeat the headline’s framing in the intro without advancing the story.
 - Don’t bury the one concrete fact under background or generic context.
 - Don’t mismatch the headline and lede against the source’s main emphasis.
 - Don’t inflate the payoff beyond what the confirmed fact actually says.
