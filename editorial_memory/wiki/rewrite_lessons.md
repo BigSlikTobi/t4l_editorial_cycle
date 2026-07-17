@@ -6,11 +6,13 @@
 - Use grounded, literal reporting when the source is thin; restraint beats inflation.
 - Let a small update stay small instead of forcing broader implications or analysis.
 - Build the first sentence to carry the actual news, especially when the headline is simple.
-- Use specific names or figures only when they sharpen the angle, not as filler.
+- Use specific names, dates, venue details, or figures only when they sharpen the angle, not as filler.
 - Favor clean, finished-report tone over source-meta scaffolding or narration.
 - Keep the opening crisp and immediate on tight update items.
 - Stay inside the source digest when the story’s value is just one confirmed takeaway.
 - [insider] Keep return-target or other narrow updates anchored to the confirmed fact and direct source language.
+- When the source gives a real news hook, pair it with the most relevant emotional detail without losing grounding.
+- [columnist] Specific career markers or milestones can add authority when they are directly supported and clearly tied to the update.
 
 ## What to avoid
 - Don’t widen a narrow update into broader team, contract, or roster context unless the source truly supports it.
