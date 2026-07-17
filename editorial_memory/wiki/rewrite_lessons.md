@@ -10,11 +10,8 @@
 - Maintain a crisp, immediate lede when the article is a tight update item.
 - Use one clear framing choice in the opening rather than repeating the same setup twice.
 - Build the first sentence to add something beyond the headline, not just echo it.
-- Stay tightly inside the source digests when the story’s value is the confirmed hook and the concrete context that supports it.
-- [analyst] Center the strongest supported team-level angle when the digest clearly backs it.
-- [analyst] Use concrete player context to strengthen an analysis piece without drifting into unsupported claims.
-- [insider] Keep the piece tightly grounded in the confirmed deal terms, age, and injury/production context when those are the facts the digest actually supports.
-- [insider] Use concrete contract figures to sharpen a rewrite-saved story without drifting into unsupported roster or offense framing.
+- Stay tightly inside the source digest when the story’s value is a single confirmed takeaway and the supporting quote.
+- [insider] Keep the piece anchored to the confirmed return target and direct quote when that is all the digest really supports.
 
 ## What to avoid
 - Don’t widen a narrow update into a broader team, contract, or roster explainer unless the source truly supports it.
@@ -27,6 +24,10 @@
 - Don’t pad a usable angle with extra specifics the digest doesn’t provide.
 - Don’t substitute generic analysis for the exact confirmed detail that makes the story newsworthy.
 - Don’t overbuild a simple report; sparse updates should stay literal and limited.
-- Don’t introduce unsupported narrative framing about the offense or quarterback plan when the source digest doesn’t support it.
-- Don’t claim chemistry, development, or other relationship progress unless the source explicitly verifies it.
+- Don’t introduce unsupported consequence language about schedule or division implications unless the digest directly supports it.
+- Don’t present commentary or filler reflection when the digest only supports one simple fact and quote.
 - Don’t claim the source supports a story when the digest has no factual substrate or is missing key facts needed to support the angle (source-side, not fixable in prose).
+- Don’t try to salvage a missing-digest story by adding color, narration, or second-pass polish; if the substrate is absent, the problem is source-side, not fixable in prose.
+- Don’t rely on columnist-style commentary when the available facts are only headline-level retirement information and no concrete supporting details.
+- Don’t invent a fact pattern or source context that isn’t in the digest; if the grounding is still broken on rewrite attempt 1, dismiss rather than keep polishing.
+- [insider] Don’t broaden a Week 1 return update into unsupported surrounding context or off-digest narrative beats; keep it on the confirmed return target and what the source actually says.
