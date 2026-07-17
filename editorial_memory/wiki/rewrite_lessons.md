@@ -12,8 +12,7 @@
 - Stay inside the source digest when the story’s value is just one confirmed takeaway.
 - [analyst] When a historical benchmark is relevant, use it as secondary context only after the main current development is clearly anchored.
 - [insider] Tight, team-specific updates work when they stay grounded in the confirmed move plus any directly stated context.
-- When the source gives a real news hook, pair it with the most relevant emotional detail without losing grounding.
-- [analyst] Strong historical context can boost specificity when it stays clearly subordinate to the present-tense update.
+- [insider] Clear roster-development framing lands when it stays specific, grounded, and free of unsupported claims.
 
 ## What to avoid
 - Don’t widen a narrow update into broader team, contract, or roster context unless the source truly supports it.
