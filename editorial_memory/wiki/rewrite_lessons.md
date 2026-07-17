@@ -28,6 +28,9 @@
 - Don’t present commentary or filler reflection when the digest only supports one simple fact and quote.
 - Don’t claim the source supports a story when the digest has no factual substrate or is missing key facts needed to support the angle (source-side, not fixable in prose).
 - Don’t try to salvage a missing-digest story by adding color, narration, or second-pass polish; if the substrate is absent, the problem is source-side, not fixable in prose.
-- Don’t rely on columnist-style commentary when the available facts are only headline-level retirement information and no concrete supporting details.
+- Don’t rely on columnist-style commentary when the available facts are only headline-level information and no concrete supporting details.
 - Don’t invent a fact pattern or source context that isn’t in the digest; if the grounding is still broken on rewrite attempt 1, dismiss rather than keep polishing.
-- [insider] Don’t broaden a Week 1 return update into unsupported surrounding context or off-digest narrative beats; keep it on the confirmed return target and what the source actually says.
+- [insider] Don’t broaden a return update into unsupported surrounding context or off-digest narrative beats; keep it on the confirmed target and what the source actually says.
+- Don’t state relationship chemistry or a player quote as established fact unless the digest directly supports it.
+- Don’t add extra names or connective filler when the rewrite brief says the safe angle is the one concrete, source-safe connection already in hand.
+- Don’t force a chemistry/spark narrative onto an empty digest; if the source facts aren’t there, the angle is unrecoverable after a rewrite attempt.
