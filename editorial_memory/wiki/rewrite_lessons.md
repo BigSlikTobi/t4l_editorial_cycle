@@ -12,6 +12,7 @@
 - When the digest gives only one solid fact, staying inside that fact can be the strongest choice.
 - [insider] Keep the piece tightly grounded in the confirmed deal terms, age, and injury/production context when those are the facts the digest actually supports.
 - [insider] Use concrete contract figures to sharpen a rewrite-saved story without drifting into unsupported roster or offense framing.
+- [analyst] Center the cap trade-off and timing question when the source supports an extension/contract decision.
 
 ## What to avoid
 - Don’t widen a narrow update into a broader team, contract, or roster explainer unless the source truly supports it.
