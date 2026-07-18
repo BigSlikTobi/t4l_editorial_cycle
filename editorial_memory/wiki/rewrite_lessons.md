@@ -28,5 +28,7 @@
 - Don’t introduce unsupported spin about implications, especially when the source offers no concrete follow-through.
 - Don’t publish or rewrite from a missing digest; if there are no source facts to validate against, the piece is source-incomplete and not safely fixable in prose (source-side, not fixable in prose).
 - Don’t assign teams or other entities that aren’t in the source material; unsupported framing makes the piece ungrounded.
+- Don’t add unsupported named entities from outside the digest; even a well-known player mention can break grounding when the source doesn’t supply it.
 - [analyst] Don’t let a historical pairing or milestone eclipse the present-tense update; keep the current claim centered first.
 - [insider] Don’t broaden a narrow confirmation into off-digest narrative beats; keep it on the verified point and any directly stated additional detail.
+- [insider] Don’t rely on source-meta language when the digest has no usable facts; that kind of piece is source-incomplete rather than prose-fixable (source-side, not fixable in prose).
