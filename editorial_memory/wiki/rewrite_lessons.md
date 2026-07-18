@@ -24,4 +24,5 @@
 - Don’t invent follow-through or causal details just to make the item feel fuller.
 - Don’t invent a story when the digest is missing or empty; unsupported claims are source-incomplete and not safely salvageable in prose (source-side, not fixable in prose).
 - Don’t rely on a single unsupported quote or injury-update claim when the source digest is empty; if the factual base is thin, the piece is not salvageable in prose (source-side, not fixable in prose).
-- [insider] Don’t broaden a narrow confirmation into off-digest narrative beats; keep it on the verified point and any directly stated additional detail.
+- [analyst] Don’t build a timeline or planning angle from an empty digest; if the source gives no concrete facts, the item fails grounding outright.
+- Don’t introduce multiple unsupported specifics or framing when the digest is effectively empty; with no grounded facts, the piece is unpublishable under the closed-world rule (source-side, not fixable in prose).
