@@ -10,7 +10,7 @@
 - Use extra context only as a secondary layer after the main fact is clearly centered.
 - Ground the piece in the exact newsworthy detail rather than broad commentary.
 - When an item is thin, a restrained, tightly sourced angle is better than trying to inflate it.
-- [insider] Clean transaction or update framing lands when it stays inside the verified move plus any directly stated context.
+- [insider] Clean transaction or status-update framing lands when it stays inside the verified move plus any directly stated context.
 - [analyst] Historical or comparative context works best as a secondary layer after the present-day fact is clearly centered.
 - [columnist] Build the lede around the exact direct quote when that quote is the usable core; keep the headline and intro anchored to the same verified line.
 
