@@ -13,6 +13,7 @@
 - [insider] Clean transaction or status-update framing lands when it stays inside the verified move plus any directly stated context.
 - [analyst] Historical or comparative context works best as a secondary layer after the present-day fact is clearly centered.
 - [columnist] Build the lede around the exact direct quote when that quote is the usable core; keep the headline and intro anchored to the same verified line.
+- [columnist] Keep the named-side or team connection front and center only when the source explicitly supports it; tight source fidelity can still be publishable even if the piece is not especially deep.
 
 ## What to avoid
 - Don’t treat an implied backstory as established fact; keep the copy on the verified quote or event.
@@ -31,3 +32,4 @@
 - [columnist] Don’t publish a source-empty opinion shell: when the digest is effectively empty, unsupported framing and generic commentary make the piece non-publishable.
 - [columnist] If the source has no factual base, treat it as a source-side failure, not something prose can rescue. (source-side, not fixable in prose)
 - [columnist] Don’t add locker-room, January-expectation, or “everything we need” interpretive layers when the digest is just a headline-level summary; that grounding failure is unrecoverable.
+- [columnist] Don’t overstate depth: a publishable columnist piece can be straightforward and source-tight when the verified fact is narrow.
