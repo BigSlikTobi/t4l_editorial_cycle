@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Lead with the single confirmed development immediately; make the first sentence carry the story.
-- Keep headline and intro aligned on the same core claim, but make each one do a distinct job instead of repeating the same phrasing.
+- Keep headline and intro aligned on the same core claim, but let each do a distinct job instead of repeating the same phrasing.
 - Stay tightly inside the verified source detail when the digest is sparse.
 - Use timing or status context only when it is explicitly confirmed and genuinely adds value.
 - Keep narrow updates narrow; a clean, literal scope is often the strongest choice.
@@ -12,8 +12,9 @@
 - When an item is thin, a restrained, tightly sourced angle is better than trying to inflate it.
 - [insider] Clean transaction or status-update framing lands when it stays inside the verified move plus any directly stated context.
 - [analyst] Historical or comparative context works best as a secondary layer after the present-day fact is clearly centered.
-- [columnist] Build the lede around the exact direct quote when that quote is the usable core; keep the headline and intro anchored to the same verified line.
-- [columnist] Keep named-side or team connection front and center only when the source explicitly supports it; tight source fidelity can still be publishable even if the piece is not especially deep.
+- [columnist] Build the lede around the exact verified development when it is the usable core; keep the headline and intro anchored to the same confirmed fact.
+- [columnist] Human-interest framing works when it stays clean, specific, and source-tight without adding narrative gloss.
+- [columnist] A narrow but emotionally clear safety/update note can work when it stays inside the digest and states the confirmed outcome plainly.
 
 ## What to avoid
 - Don’t treat an implied backstory as established fact; keep the copy on the verified quote or event.
@@ -26,12 +27,11 @@
 - Don’t substitute broad commentary for the exact confirmed detail that makes the item newsworthy.
 - Don’t overbuild a simple report; sparse updates should stay literal and limited.
 - Don’t invent follow-through or causal details just to make the item feel fuller.
-- Don’t add unsupported roster claims or named-side context beyond the sourced fact; keep the argument inside the verified development.
+- Don’t add unsupported interpretive lines or meta commentary when the digest already contains the complete confirmed development.
 - [insider] Don’t use vague roster framing when the source offers no additional supported detail; sharpen the lede around the concrete return/move instead.
 - [analyst] Don’t build a timeline or planning angle from an empty digest; if the source gives no concrete facts, the item fails grounding outright.
-- [columnist] Don’t broaden a thin availability note into a roster conversation unless the source explicitly connects those players or issues.
+- [columnist] Don’t broaden a thin availability note into a bigger human-interest or locker-room conversation unless the source explicitly supports that turn.
 - [columnist] Don’t publish a source-empty opinion shell: when the digest is effectively empty, unsupported framing and generic commentary make the piece non-publishable.
 - [columnist] If the source has no factual base, treat it as a source-side failure, not something prose can rescue. (source-side, not fixable in prose)
-- [columnist] Don’t add locker-room, January-expectation, or “everything we need” interpretive layers when the digest is just a headline-level summary; that grounding failure is unrecoverable.
 - [columnist] Don’t overstate depth: a publishable columnist piece can be straightforward and source-tight when the verified fact is narrow.
 - [insider] Don’t fabricate a player or reunion context when the digest contains no usable facts; a vague reunion claim with no support is not salvageable in prose. (source-side, not fixable in prose)
