@@ -10,6 +10,8 @@
 - Use extra context only as a secondary layer after the main fact is clearly centered.
 - Ground the piece in the exact newsworthy detail rather than broad commentary.
 - When an item is thin, a restrained, tightly sourced angle is better than trying to inflate it.
+- A blunt, quote-driven hook can be enough when the sourced line itself is the tapworthy idea.
+- Clean, source-tight columnist framing works when the lede, headline, and body all reinforce the same verified point without drift.
 - [insider] Clean transaction or status-update framing lands when it stays inside the verified move plus any directly stated context.
 - [analyst] Historical or comparative context works best as a secondary layer after the present-day fact is clearly centered.
 - [columnist] Build the lede around the exact verified development when it is the usable core; keep the headline and intro anchored to the same confirmed fact.
@@ -28,6 +30,7 @@
 - Don’t overbuild a simple report; sparse updates should stay literal and limited.
 - Don’t invent follow-through or causal details just to make the item feel fuller.
 - Don’t add unsupported interpretive lines or meta commentary when the digest already contains the complete confirmed development.
+- Don’t soften a sharp quote into vague analysis; if the line itself has the edge, let it do the work.
 - [insider] Don’t use vague roster framing when the source offers no additional supported detail; sharpen the lede around the concrete return/move instead.
 - [analyst] Don’t build a timeline or planning angle from an empty digest; if the source gives no concrete facts, the item fails grounding outright.
 - [columnist] Don’t broaden a thin availability note into a bigger human-interest or locker-room conversation unless the source explicitly supports that turn.
