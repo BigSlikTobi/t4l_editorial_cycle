@@ -1,15 +1,14 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the concrete, source-backed development immediately; make the first sentence carry the story.
-- Keep headline and intro aligned on the same core claim, but let each do a distinct job instead of repeating the same phrasing.
-- Stay tightly inside the verified source detail when the digest is sparse.
-- Use timing or status context only when it is explicitly confirmed and genuinely adds value.
-- Keep narrow updates narrow; a clean, literal scope is often the strongest choice.
+- Lead with the one verified quote or development immediately; make the first sentence carry the story.
+- Keep the angle centered on the exact sourced idea when the digest is thin; a narrow, literal scope is often strongest.
+- Use a blunt, quote-driven hook when the sourced line itself is the tapworthy idea.
+- Stay tightly inside verified source detail; restraint is a strength when there isn’t much to build on.
+- Keep headline and intro aligned on the same core claim, but let each add something distinct.
 - Finished-report framing beats source-meta scaffolding or prompt-like narration.
 - Use extra context only as a secondary layer after the main fact is clearly centered.
 - Ground the piece in the exact newsworthy detail rather than broad commentary.
-- A blunt, quote-driven or post-driven hook can be enough when the sourced line itself is the tapworthy idea.
 - Clean, source-tight columnist framing works when the lede, headline, and body all reinforce the same verified point without drift.
 - [insider] Keep the arrest/status/dispute facts centered and move fast to the specific confirmed detail that explains the hold.
 
@@ -23,6 +22,7 @@
 - Don’t pad a usable angle with extra specifics the digest doesn’t provide.
 - Don’t substitute broad commentary or meta phrasing for the exact confirmed detail that makes the item newsworthy.
 - Don’t invent follow-through or causal details just to make the item feel fuller.
+- Don’t stretch a very thin source into multiple paragraphs of general commentary; tighten to the single supported takeaway instead.
 - Don’t force publication when the digest is missing or empty; unsupported specifics can’t be salvaged without source facts (source-side, not fixable in prose).
 - [analyst] Don’t claim workload or special-role detail when the digest has zero key facts; closed-world review will flag unsupported specifics and team-level mismatch risk.
 - [insider] Don’t let unsupported surrounding context creep in around a solid arrest story; keep the legal status and dispute details anchored to the source.
