@@ -27,3 +27,4 @@
 - Don’t invent follow-through or causal details just to make the item feel fuller.
 - Don’t force publication when the digest is missing or empty; unsupported specifics can’t be salvaged without source facts (source-side, not fixable in prose).
 - [analyst] Don’t claim workload or special-role detail when the digest has zero key facts; closed-world review will flag unsupported specifics and team-level mismatch risk.
+- Don’t lean on mindset/comparison framing when the closed-world record has no usable facts to support it; that kind of source-thin item should be treated as unsalvageable (source-side, not fixable in prose).
