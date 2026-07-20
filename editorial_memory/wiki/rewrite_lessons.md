@@ -16,7 +16,7 @@
 
 ## What to avoid
 - Don’t treat an implied backstory as established fact; keep the copy on the verified quote or event.
-- Don’t add progress, timing, or broader implications unless the source actually supports them.
+- Don’t add progress, timing, workload, or broader implications unless the source actually supports them.
 - Don’t widen a narrow update into team, contract, roster, or consequence context without source backing.
 - Don’t repeat the headline’s wording in the lede without adding a new fact or angle.
 - Don’t let the headline, sub-headline, and opening all say the same thing; make each one advance the tap reason.
@@ -25,9 +25,5 @@
 - Don’t substitute broad commentary or meta phrasing for the exact confirmed detail that makes the item newsworthy.
 - Don’t overbuild a simple report; sparse updates should stay literal and limited.
 - Don’t invent follow-through or causal details just to make the item feel fuller.
-- Don’t soften a sharp quote or post into vague analysis; if the line itself has the edge, let it do the work.
-- [columnist] Don’t use source-style or meta scaffolding; cut the generic tension language and keep the article on the concrete verified development.
-- [columnist] Don’t restate the setup in headline, subhead, and intro; if the source is thin, repetition makes the piece feel flatter, not clearer.
-- [columnist] Don’t broaden a thin public-shot item into a bigger feud or narrative unless the digest explicitly supports that turn.
-- [columnist] If the source gives no extra details beyond the latest public jab, don’t try to manufacture depth with commentary or added context.
-- [source-side, not fixable in prose] Don’t force publication when the digest is missing; unsupported specifics like an Instagram jab or targeted coach can’t be salvaged without source facts.
+- Don’t force publication when the digest is missing or empty; unsupported specifics can’t be salvaged without source facts (source-side, not fixable in prose).
+- [analyst] Don’t claim workload or special-role detail when the digest has zero key facts; closed-world review will flag unsupported specifics and team-level mismatch risk.
