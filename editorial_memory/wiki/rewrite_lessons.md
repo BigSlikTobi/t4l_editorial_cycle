@@ -24,5 +24,5 @@
 - Don’t invent follow-through or causal details just to make the item feel fuller.
 - Don’t stretch a very thin source into multiple paragraphs of general commentary; tighten to the single supported takeaway instead.
 - Don’t force publication when the digest is missing or empty; unsupported specifics can’t be salvaged without source facts (source-side, not fixable in prose).
-- [analyst] Don’t claim workload or special-role detail when the digest has zero key facts; closed-world review will flag unsupported specifics and team-level mismatch risk.
 - [insider] Don’t let unsupported surrounding context creep in around a solid arrest story; keep the legal status and dispute details anchored to the source.
+- Don’t build an article around arrest/warrant claims when the source digest has no usable facts to verify them under the closed-world rule (source-side, not fixable in prose).
