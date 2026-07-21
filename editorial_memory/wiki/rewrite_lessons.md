@@ -25,7 +25,7 @@
 - Do not substitute broad commentary, source-meta framing, or trust language for the exact confirmed detail that makes the item newsworthy.
 - Do not turn a clarification into broad roster or passer-rotation context unless it directly advances the reported point.
 - Do not invent follow-through or causal details just to make the item feel fuller.
-- Do not add extra status framing that implies more than the digest confirms; keep to the medically cleared / working toward return facts.
+- Do not add extra status framing that implies more than the digest confirms.
 - Do not let article metadata or team attribution drift away from the source context; keep the team label consistent throughout.
 - [analyst] Do not build around repetitive ledes, vague body copy, or insinuation beyond the one concrete decision in the digest.
 - [insider] Do not force extra context onto a tightly grounded status story when the verified fact pattern already gives the reader the news value.
@@ -35,4 +35,5 @@
 - [insider] Do not build the story around a missing source digest or a vague holding pattern; if there is no recoverable fact, there is no fix in prose (source-side, not fixable in prose).
 - [insider] Do not carry forward an incorrect team field or other metadata from the source summary; verify attribution before drafting.
 - [insider] Do not rely on source-narration/meta phrases like “the source does not add more than that”; cut them and write to the confirmed fact instead.
-- [insider] If grounding is too weak and only the headline-level summary remains, treat it as unrecoverable on rewrite rather than padding around it.
+- Do not pad a one-fact item with generic identity or visual commentary when the source only supports the unveiled item itself.
+- Do not try to salvage a story when the digest contains no verifiable facts; missing grounding is a source-side problem, not a prose fix (source-side, not fixable in prose).
