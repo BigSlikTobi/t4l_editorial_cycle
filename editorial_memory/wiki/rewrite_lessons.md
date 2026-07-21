@@ -12,6 +12,7 @@
 - Clean, source-tight insider framing works when the lede, headline, and body all reinforce the same verified point without drift.
 - [insider] Keep the roster-status or dispute facts centered and move fast to the specific confirmed detail that explains the hold.
 - [insider] When the status change is the news, a simple camp-availability angle can be stronger than trying to over-explain the injury background.
+- [columnist] When source digests are thin, keep the hook tightly source-backed and avoid leaning on vague setup language.
 
 ## What to avoid
 - Don’t treat an implied backstory as established fact; keep the copy on the verified quote or event.
@@ -29,3 +30,6 @@
 - [insider] Don’t add OTA/injury contrast language unless the digests cleanly support that distinction.
 - Don’t add a player to a placement list unless the source digests explicitly support that exact inclusion.
 - [insider] Don’t let a rewrite “fix” one status detail while introducing a new unsupported roster claim; verify every name in the list before publication.
+- [columnist] Don’t build a piece around unsupported specifics or “on record”/“vouching” claims when the source digest lacks concrete facts; that’s source-side, not fixable in prose.
+- [columnist] Don’t lean on source-meta framing when the digest has no grounded facts to support the angle; use only verifiable source detail.
+- [columnist] Don’t let the headline and copy promise a reunion narrative unless the source actually substantiates it; otherwise the story collapses into speculation.
