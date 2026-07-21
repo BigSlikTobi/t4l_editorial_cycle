@@ -15,9 +15,9 @@
 - [columnist] When source digests are thin, keep the hook tightly source-backed and avoid leaning on vague setup language.
 
 ## What to avoid
-- Don’t state a reported move as fact when the digest only supports that it was reported; match certainty to sourcing.
-- Don’t treat an implied backstory as established fact; keep the copy on the verified quote or event.
-- Don’t add progress, timing, workload, or broader implications unless the source actually supports them.
+- Don’t state a reported move or update as fuller fact than the digest supports; match certainty to sourcing.
+- Don’t add resolution, timing, timetable, or follow-through unless the source actually supports them.
+- Don’t let confident framing outrun the digest when the source contains only a single confirmed status point.
 - Don’t widen a narrow update into team, contract, roster, or consequence context without source backing.
 - Don’t repeat the headline’s wording in the lede without adding a new fact or angle.
 - Don’t let the headline and copy promise more than the digest provides; if the story is thin, avoid repetitive framing and meta language.
@@ -30,3 +30,6 @@
 - [columnist] Don’t build a piece around unsupported specifics or “on record”/“vouching” claims when the source digest lacks concrete facts; that’s source-side, not fixable in prose.
 - [columnist] Don’t lean on source-meta framing when the digest has no grounded facts to support the angle; use only verifiable source detail.
 - [insider] Don’t state a reported personnel action as settled fact when the available digest only supports the report itself; this is source-side, not fixable in prose.
+- [insider] Don’t claim the source supplied added detail when the digest only confirms the status update; rebuild around the single verified point.
+- [insider] Don’t build the story around a missing source digest or a vague holding pattern; if there’s no recoverable fact, there’s no fix in prose (source-side, not fixable in prose).
+- Don’t use banned meta phrasing or unsupported repetition when the source has no usable detail to repeat.
