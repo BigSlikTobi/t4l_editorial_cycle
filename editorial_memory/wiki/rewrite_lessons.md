@@ -12,7 +12,7 @@
 - Clean, source-tight insider framing works when the lede, headline, and body all reinforce the same verified point without drift.
 - A clear team-specific stake can add value when it stays inside the source summary and does not outrun the facts.
 - [analyst] When the digest is thin, keep the hook on the concrete decision or development itself and let that one verified fact do the work.
-- [columnist] A concise, non-duplicative lede/headline pair can carry a precautionary-update story when it stays faithful to the exact limitation the source described.
+- [insider] Strong name-and-number specificity, with no unsupported claims, makes a clean extension/update feel complete without overexplaining.
 
 ## What to avoid
 - Do not state a reported move or update as fuller fact than the digest supports; match certainty to sourcing.
@@ -27,6 +27,7 @@
 - Do not invent follow-through or causal details just to make the item feel fuller.
 - [analyst] Do not build around repetitive ledes, vague body copy, or insinuation beyond the one concrete decision in the digest.
 - [insider] Do not force extra context onto a tightly grounded status story when the verified fact pattern already gives the reader the news value.
-- [insider] Do not claim the source supplied added detail when the digest only confirms the status update; rebuild around the single verified point.
+- [insider] Do not claim extra sourcing or confirmation when the digest only supports the headline-level fact; stay with the confirmed deal.
+- [insider] Do not introduce unrelated named detail to add substance when the digest does not support it.
 - [insider] Do not state a reported personnel or legal action as settled fact when the available digest only supports the report itself; this is source-side, not fixable in prose.
 - [insider] Do not build the story around a missing source digest or a vague holding pattern; if there is no recoverable fact, there is no fix in prose (source-side, not fixable in prose).
