@@ -12,7 +12,7 @@
 - Specificity helps when it stays inside the verified facts; precise wording is a strength only if the source actually supports it.
 - Tightening around the one concrete hook can rescue thin source material when each element adds a distinct detail.
 - [insider] A clean breaking-news structure works when it stays tightly inside the verified status update and the core fact is already source-supported.
-- [insider] Clean team-specific relevance can lift an insider update when it stays inside the digest and avoids unsupported detail.
+- [analyst] A focused duo/two-piece angle can work when the lede stays with the exact pairing the source supports and doesn’t expand into a broader roster narrative.
 
 ## What to avoid
 - Do not widen a narrow update into extra context, implication, or consequence unless the source clearly supports it.
@@ -25,6 +25,5 @@
 - Do not invent extra detail just to make the story feel fuller.
 - Do not add unsupported named-entity references or superlatives just to create color or momentum.
 - [insider] Do not claim more confirmation than the digest supports; stay inside the verified status update.
-- [insider] Do not infer a vacancy, protection plan, roster role, or short-term availability unless the source directly supports it.
-- [insider] Do not use source-style narration or attribution language that implies extra certainty beyond the digest.
-- Do not build a story around a missing or unusable source summary; if the digest has no verifiable facts, the piece is not salvageable in prose (source-side, not fixable in prose).
+- [analyst] Do not turn a source-supported pairing into a definite roster/backfield narrative or mention extra players unless the digest explicitly supports them.
+- [analyst] Do not build a story around a missing or unusable source summary; if the digest has no verifiable facts, the piece is not salvageable in prose (source-side, not fixable in prose).
