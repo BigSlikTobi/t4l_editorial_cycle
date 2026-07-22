@@ -28,6 +28,7 @@
 - Do not fabricate links between people or entities that the digest does not support; keep the lede source-only.
 - Do not let unsupported framing or repetition replace grounding, even when the quote itself is real.
 - [insider] Do not claim more confirmation than the digest supports; stay inside the verified status update.
+- [insider] Do not add platform/date framing like Tuesday or outlet-based color when the digest does not verify it.
 - [analyst] Do not turn a source-supported pairing into a definite roster/backfield narrative or mention extra players unless the digest explicitly supports them.
 - [analyst] Do not build a story around a missing or unusable source summary; if the digest has no verifiable facts, the piece is not salvageable in prose (source-side, not fixable in prose).
 - Do not force a story from an effectively empty source digest; if there are no supported facts, the piece is not salvageable in prose (source-side, not fixable in prose).
@@ -35,3 +36,5 @@
 - Do not rely on vague framing and repeated generalities when the record lacks concrete, source-grounded details.
 - Do not make broad claims like a process being rigged or unfair when the digest is effectively empty; if no key facts are present, the piece is not salvageable in prose (source-side, not fixable in prose).
 - Do not build a story around a missing source summary or unresolved hallucinated claim; if the digest supplies no factual details, stop rather than rewrite (source-side, not fixable in prose).
+- Do not stack the same confirmed fact in headline, subhead, and lede; let one line carry the unresolved-status angle and use the others for distinct support.
+- Do not publish rewrite-attempted pieces when the source digest is still effectively empty; repetition without new sourced detail is not enough to recover the story (source-side, not fixable in prose).
