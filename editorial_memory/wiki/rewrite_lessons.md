@@ -8,7 +8,7 @@
 - Keep headline and intro aligned on the same core claim without repeating them verbatim.
 - Finished-report framing works when the digest already provides the essential news value.
 - Strong grounding can carry a simple breaking-news item; clarity beats embellishment.
-- For reveal-style stories, a clean asset-first angle can work if the headline and lede stay on the reveal itself.
+- For reveal-style or quote-led stories, a clean source-first angle can work if the lede stays on the exact quoted claim.
 - Specificity helps when it stays inside the verified facts; precise wording is a strength only if the source actually supports it.
 - Tightening around the one concrete hook can rescue thin source material when each element adds a distinct detail.
 - [insider] A clean breaking-news structure works when it stays tightly inside the verified status update and the core fact is already source-supported.
@@ -23,7 +23,15 @@
 - Do not let the headline, subhead, and body all say the same thing; avoid near-duplicate tap lines.
 - Do not pad a simple item with generic filler when the verified development already supplies the news value.
 - Do not invent extra detail just to make the story feel fuller.
-- Do not add unsupported named-entity references or superlatives just to create color or momentum.
+- Do not add unsupported named-entity references or connective devices just to create color or momentum.
+- Do not lean on vague, explanatory, or meta-style lines when the source only supports one concrete disputed claim.
+- Do not fabricate links between people or entities that the digest does not support; keep the lede source-only.
+- Do not let unsupported framing or repetition replace grounding, even when the quote itself is real.
 - [insider] Do not claim more confirmation than the digest supports; stay inside the verified status update.
 - [analyst] Do not turn a source-supported pairing into a definite roster/backfield narrative or mention extra players unless the digest explicitly supports them.
 - [analyst] Do not build a story around a missing or unusable source summary; if the digest has no verifiable facts, the piece is not salvageable in prose (source-side, not fixable in prose).
+- Do not force a story from an effectively empty source digest; if there are no supported facts, the piece is not salvageable in prose (source-side, not fixable in prose).
+- Do not invent unsupported names or references from outside the digest, even as throwaway color.
+- Do not rely on vague framing and repeated generalities when the record lacks concrete, source-grounded details.
+- Do not make broad claims like a process being rigged or unfair when the digest is effectively empty; if no key facts are present, the piece is not salvageable in prose (source-side, not fixable in prose).
+- Do not build a story around a missing source summary or unresolved hallucinated claim; if the digest supplies no factual details, stop rather than rewrite (source-side, not fixable in prose).
