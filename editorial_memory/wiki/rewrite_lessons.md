@@ -1,8 +1,8 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the verified core development immediately; make the first sentence do the main reporting work.
-- Keep the story tightly grounded in supplied digests, especially for straightforward team-specific updates.
+- Lead with the single confirmed development immediately; make the first sentence do the main reporting work.
+- Keep the story tightly grounded in supplied digests, especially for straightforward update items.
 - Use concrete supporting details only when they are clearly supported and help explain why the update matters.
 - Let one clear development remain the center of the piece, with only the context needed to support it.
 - Keep headline and intro aligned on the same core claim without repeating them verbatim.
@@ -10,7 +10,7 @@
 - Strong grounding can carry a simple breaking-news item; clarity beats embellishment.
 - [insider] Build around the confirmed status update and use supporting details to deepen it, not replace it.
 - [insider] A clear current-status update can feel complete without extra speculation or overbuilt context.
-- For visual-reveal stories, a clean asset-first angle can work if the headline and lede stay on the reveal itself.
+- For reveal-style stories, a clean asset-first angle can work if the headline and lede stay on the reveal itself.
 - Specificity helps when it stays inside the verified facts; precise wording is a strength only if the source actually supports it.
 
 ## What to avoid
@@ -25,5 +25,4 @@
 - Do not add unsupported named-player references just to create color or momentum.
 - [insider] Do not claim more confirmation than the digest supports; stay inside the verified status update.
 - [insider] Do not carry the story beyond the supported extension/update framing into unsupported roster or outcome implications.
-- When the source is just a reveal or announcement, avoid tonal filler that does not come from the digest.
-- Do not add “starter-level investment,” “clear answer,” or similar evaluative framing unless the digest explicitly supports that judgment.
+- Do not build a story around a missing or unusable source summary; if the digest has no verifiable facts, the piece is not salvageable in prose (source-side, not fixable in prose).
