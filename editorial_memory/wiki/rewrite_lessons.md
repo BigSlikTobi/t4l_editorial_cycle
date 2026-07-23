@@ -30,6 +30,10 @@
 - Do not make broad claims or cleanup around an empty digest; if the source has no concrete facts beyond a headline-level summary, stop rather than rewrite (source-side, not fixable in prose).
 - [insider] Do not claim more confirmation than the digest supports; stay inside the verified status update.
 - [insider] Do not add platform/date framing like Tuesday or outlet-based color when the digest does not verify it.
+- [insider] Do not include planning implications or source-narration/meta lines like “no other team details were included”; keep to the confirmed update only.
+- [insider] Do not infer track background or roster implications from a bare signing notice when the digest is effectively empty; that is source-side, not fixable in prose.
+- [insider] Do not publish a story when the source digest is missing or mismatched enough that the player/topic cannot be verified; that is source-side, not fixable in prose.
 - [analyst] Do not turn a source-supported pairing into a definite roster/backfield narrative or mention extra players unless the digest explicitly supports them.
 - [analyst] If the digest is empty of facts, treat the story as source-side, not fixable in prose; no amount of framing can rescue it.
 - Do not make hot-seat or other judgment framing when the digest provides no facts to support the claim.
+- Do not let unrelated player names leak into a draft when the article topic is about someone else; that points to a broken generation pipeline, not a prose fix.
