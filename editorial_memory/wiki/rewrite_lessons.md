@@ -31,6 +31,7 @@
 - [insider] Do not repeat the same claim across headline, subhead, and intro without adding sourced substance.
 - [insider] Do not add unsupported recovery specifics when the only confirmed update is a quote/post and a workout video.
 - [insider] Do not publish injury/roster fallout as if the source confirms it when the digest is empty; that is unsupported reporting, not a prose fix.
+- [insider] Do not use a player-retirement or injury-fallout headline unless the digest actually supports that career-ending development; fabricated-fact failures are not salvageable in rewrite.
 - [analyst] Do not let roster-competition pieces drift into generic restatement; if the source only supports a minimal take, avoid extra roster spillover language that is not explicitly backed.
 - [analyst] Do not stack unsupported names or side topics into the lede/body just to make the story feel broader; cut them unless the source explicitly supports them.
 - [analyst] Do not present a competition as resolved when the provided material does not actually support that conclusion.
