@@ -28,3 +28,4 @@
 - [insider] Do not bolt on a team-building or positional framing angle unless it is directly tied to the contract or roster update in the source material.
 - [insider] Do not introduce comparison points or ancillary roster references unless they are clearly part of the same sourced development.
 - [insider] Do not treat a name/digest mismatch as a minor wording issue; keep every player detail inside the exact provided source set, or the piece can fail on grounding (source-side, not fixable in prose).
+- [source-side] Do not force a story when the source only offers a thin camp roundup with no concrete developments; that leaves the piece short on impact and readworthiness (source-side, not fixable in prose).
