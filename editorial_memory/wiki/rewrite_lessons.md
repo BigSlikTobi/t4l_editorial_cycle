@@ -1,31 +1,30 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the one concrete development the source cleanly supports; a direct news hit can carry a short update.
-- Keep headline, subhead, and lede aligned on the same core claim, then add new information only if the source supports it.
-- When reporting is thin, make the piece shorter and cleaner rather than padding it with generic commentary.
-- A restrained, source-faithful lede works well for simple announcement stories.
-- Strong grounding can still make a fan-facing update useful even without heavy narrative.
-- Preserve factual precision and stay inside the sourced claim when the story is essentially a status or announcement update.
-- Use concrete, reportable specifics when available; exact timing or labels strengthen a sparse package.
-- Clean structure matters: clarity beats embellishment in narrow, on-team news.
-- Tight, source-limited framing can still work for a small news item if the lede stays specific and avoids extra claims.
-- [insider] A straightforward lede works when the source supports only one clear development.
-- [insider] Center the most concrete sourced update first; don’t force extra context when the source is limited.
+- Lead with the core sourced setup when the story is built around an unresolved question rather than a single quote.
+- Keep the intro tight and factual when the digest only supports a high-level situation.
+- Use the named entities from the source clearly and early so readers know the scope immediately.
+- Stay closely grounded in the digest when the article is list-based or thin on fresh detail.
+- Preserve a clean, direct frame instead of overexplaining what the source material already says.
+- Keep headline and lede aligned on the same central claim.
+- Cut meta phrasing and let the sourced situation carry the piece.
+- For analyst rewrites, a sharp setup can be enough even without added color, if the digest is narrow.
+- For columnist pieces, a restrained, source-faithful frame can still work if it centers one concrete development.
+- High grounding plus aligned headline/lede can carry an approve even when impact stays modest.
+- A clear, concrete hook from the source can be enough for approval when the quote and linkage are accurate.
+- Strong grounding can outweigh middling impact if the piece stays clean and direct.
+- [columnist] A single source-supported quote can still publish well if the lede stays centered on the concrete development it supports.
 
 ## What to avoid
-- Do not repeat the same announcement in the headline, subhead, and lede without adding new value.
-- Do not pad a thin update with generic commentary or filler when the source is already simple.
-- Do not make a clean news hit read like a press release by stretching the same claim across multiple lines.
-- Do not let the headline and lede mirror each other so closely that the opening feels redundant.
-- Do not widen a narrow announcement into extra context or implication unless the source clearly supports it.
-- Do not use soft, vague phrasing in place of the strongest sourced detail.
-- Do not fill space with repeated source narration when the piece can be tighter.
-- Do not add unsupported texture just to create depth in a thin story.
-- Do not overcomplicate a one-fact update; keep the package lean if no additional sourcing exists.
-- [source-side, not fixable in prose] If the source itself is too thin to support more detail, the right fix may be a shorter piece rather than a rewrite with invented context.
-- [source-side, not fixable in prose] If no additional sourced specifics exist, repetition and generic framing are signs the material itself is limited, not that the writer failed to find them.
-- [source-side, not fixable in prose] Thin source packages can still be publishable, but only as very compact updates.
-- Avoid building a column on unsupported generalities or offseason framing when the source contains no verifiable facts.
-- Avoid namedropping players or other entities as atmosphere if there is no source-backed action or consequence.
-- [source-side, not fixable in prose] If the digests contain no key facts, quotes, or concrete developments, the issue is the source package itself rather than the prose execution.
+- Do not open with source-narration or meta-style framing when the sourced fact pattern can be stated directly.
+- Do not overexplain a situation that the digest only supports at a broad level.
+- Do not add claims that imply confirmed connections between listed players and a battle unless the digest explicitly supports them.
+- Do not pile on player names or team names without adding a concrete sourced detail.
+- Do not widen a narrow digest into deeper analysis just to create movement.
+- Do not present unresolved questions as if the source has already settled the answer.
+- Do not let the article read like a list of names with no clear sourced throughline.
+- [analyst] Do not rely on broad camp-battle framing alone; include at least one concrete sourced detail that advances the point.
+- [source-side, not fixable in prose] If the digest only supports a high-level unresolved-QB setup, keep the article compact rather than forcing extra specificity.
+- [source-side, not fixable in prose] When no starter is identified in the source material, do not imply certainty beyond what the digest provides.
+- [source-side, not fixable in prose] Do not build a dismissal-prone injury report story around a claim the digest itself does not confirm or substantiate.
+- [source-side, not fixable in prose] Do not introduce player-to-team or battle-to-player linkages unless the digest explicitly provides them; unsupported mapping is a dismissal risk.
