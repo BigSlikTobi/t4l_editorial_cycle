@@ -1,31 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single confirmed update immediately; make the first sentence carry the main reporting load.
-- Keep contract-status and camp-deadline stories tightly anchored to the verified news peg.
-- Use a report-first, wire-style frame when the source supports one clean unresolved fact.
-- Keep the lede focused on the exact confirmed claim instead of widening into adjacent team-building angles.
-- Let one development remain the center of the piece, with only the context needed to support it.
-- Keep headline and intro aligned on the same core claim without repeating them verbatim.
-- Strong grounding can carry a simple breaking-news item; clarity beats embellishment.
-- Specificity helps when it stays inside the verified facts; precise wording is a strength only if the source actually supports it.
-- For insider updates, a clean status-report structure works when it stays inside the contract or roster development the source actually confirms.
-- [insider] Keep the named player at the center when the story’s value comes from one verified status update and the immediate timeline attached to it.
-- [insider] Include the roster-context that explains why the move matters, as long as it stays directly tied to the sourced development.
-- [insider] Slow-ramp or availability updates work best when the headline and lede state the status plainly and the body adds only the confirmed context.
+- Lead with the confirmed update immediately; a clean first sentence can carry the whole news value.
+- Keep headline and lede tightly aligned on the same core claim, then add any extra value in the body.
+- Stay tightly inside the sourced claim when the update is narrow; clean execution matters more than overreach.
+- Use concrete, reportable specifics when the source supports them, especially exact names, dates, or labels.
+- A report-first frame works when the source supports one clean update and the piece delivers clear fan value.
+- Strong grounding can carry a simple announcement; clarity beats embellishment.
+- Preserve factual precision and avoid hallucination-prone flourishes when the story is essentially a status update.
+- [insider] A restrained, source-faithful lede works well for expected-status news when it does not invent context.
+- Clean structure matters: when the lede, headline, and body stay focused, the piece feels complete without extra narrative.
 
 ## What to avoid
+- Do not make the headline and lede so straightforward that they read like a press release; add the most useful specifics up front.
+- Do not leave obvious tap-worthy details buried when the digest already gives exact dates, names, or a development timeline.
+- Do not lean on vague, press-release phrasing when the reporting contains concrete facts that can sharpen the package.
+- Do not use generic filler or soft description in place of the strongest sourced detail.
 - Do not widen a narrow update into extra context, implication, or side-story framing unless the source clearly supports it.
 - Do not let a second storyline hijack the opening if it is not directly tied to the main reported development.
-- Do not turn a clean status update into source-meta narration or commentary about what the material did not include.
-- Do not let confidence outrun the digest; hedge contract terms or specifics when they are not actually confirmed.
-- Do not add resolution, timing, or follow-through unless the source explicitly supplies it.
 - Do not repeat the headline’s claim in the lede without adding new information.
 - Do not let the headline, subhead, and body all say the same thing; avoid near-duplicate tap lines.
-- Do not pad a simple item with generic filler when the verified development already supplies the news value.
-- Do not invent extra detail just to make the story feel fuller.
-- Do not add unsupported connective devices or side angles just to create momentum.
-- [insider] Do not bolt on a team-building or positional framing angle unless it is directly tied to the contract or roster update in the source material.
-- [insider] Do not introduce comparison points or ancillary roster references unless they are clearly part of the same sourced development.
-- [insider] Do not treat a name/digest mismatch as a minor wording issue; keep every player detail inside the exact provided source set, or the piece can fail on grounding (source-side, not fixable in prose).
-- [source-side] Do not force a story when the source only offers a thin camp roundup with no concrete developments; that leaves the piece short on impact and readworthiness (source-side, not fixable in prose).
+- Do not add unsupported details just to create texture in a thin, status-based update.
+- Do not build the story around narrative speculation when the source has no recoverable key facts; if the grounding is missing, keep the piece minimal rather than inventing connective tissue.
+- Do not use wrong-team or wrong-entity metadata fields; that is a basic accuracy failure, not a style choice.
+- Do not rely on repeated source-narration or meta phrasing to pad weak reporting.
+- [source-side, not fixable in prose] If the source itself is too thin or non-recoverable to support key facts, the piece may still need dismissal even with clean writing.
