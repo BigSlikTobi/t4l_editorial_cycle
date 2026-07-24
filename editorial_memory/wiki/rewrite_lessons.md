@@ -26,3 +26,6 @@
 - [source-side, not fixable in prose] If the source itself is too thin to support more detail, the right fix may be a shorter piece rather than a rewrite with invented context.
 - [source-side, not fixable in prose] If no additional sourced specifics exist, repetition and generic framing are signs the material itself is limited, not that the writer failed to find them.
 - [source-side, not fixable in prose] Thin source packages can still be publishable, but only as very compact updates.
+- Avoid building a column on unsupported generalities or offseason framing when the source contains no verifiable facts.
+- Avoid namedropping players or other entities as atmosphere if there is no source-backed action or consequence.
+- [source-side, not fixable in prose] If the digests contain no key facts, quotes, or concrete developments, the issue is the source package itself rather than the prose execution.
