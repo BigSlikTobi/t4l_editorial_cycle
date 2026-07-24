@@ -11,6 +11,8 @@
 - Specificity helps when it stays inside the verified facts; precise wording is a strength only if the source actually supports it.
 - For insider updates, a clean status-report structure works when it stays inside the contract or roster development the source actually confirms.
 - [insider] Keep the named player at the center when the story’s value comes from one verified status update and the immediate timeline attached to it.
+- [insider] Include the roster-context that explains why the move matters, as long as it stays directly tied to the sourced development.
+- [insider] Slow-ramp or availability updates work best when the headline and lede state the status plainly and the body adds only the confirmed context.
 
 ## What to avoid
 - Do not widen a narrow update into extra context, implication, or side-story framing unless the source clearly supports it.
@@ -24,6 +26,5 @@
 - Do not invent extra detail just to make the story feel fuller.
 - Do not add unsupported connective devices or side angles just to create momentum.
 - [insider] Do not bolt on a team-building or positional framing angle unless it is directly tied to the contract or roster update in the source material.
-- [insider] Do not salvage a story by talking around the source; if the report is supported, stay direct and report the update cleanly.
 - [insider] Do not introduce comparison points or ancillary roster references unless they are clearly part of the same sourced development.
 - [insider] Do not treat a name/digest mismatch as a minor wording issue; keep every player detail inside the exact provided source set, or the piece can fail on grounding (source-side, not fixable in prose).
