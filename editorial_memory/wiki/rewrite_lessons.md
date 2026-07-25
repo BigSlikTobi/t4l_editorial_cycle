@@ -1,28 +1,30 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed headline fact immediately when the story is a straightforward obituary or status update.
-- Keep the piece tightly centered on the named subject; a narrow, single-subject frame reads cleaner than a mixed package.
-- Use a clear timeline when the source supports it, especially for career summaries.
-- Anchor the lede to the main life/career fact before adding sequence details.
-- Clean, direct wording works well when the payload is specific and the angle is simple.
-- Preserve strong specificity: dates, age, career path, and totals can carry the story without extra color.
-- Keep headline and intro aligned on the same core claim.
-- When the source is complete enough, a compact obituary-style package is more effective than expanding into context.
-- [insider] Rebuild around the confirmed person/career story rather than mixing in unrelated team or camp material.
-- [insider] Tight, single-focus obituary framing is stronger than a source-dump feel.
-- Well-grounded, specific writing can still succeed even when the package is narrow, as long as the story-fit is correct.
+- Lead with the concrete, confirmed development right away; readers should know the core update in the first line.
+- Keep the headline and lede aligned on the same core claim so the piece feels grounded and easy to trust.
+- Use tight, digest-faithful framing when the available facts support a narrow update better than broader context.
+- Preserve specific verified details and watch-list items when they are supported by the file.
+- Stay centered on the named subject or event instead of drifting into unrelated package material.
+- Clean, direct wording works well when the angle is simple and the payload is specific.
+- Anchor the opening to the main fact before adding secondary details or sequence notes.
+- [insider] Build around the Patriots-specific camp development rather than stitching in unrelated team or camp material.
+- [insider] A compact, single-story camp update can work well when it clearly bundles a few concrete developments.
+- [insider] Readers respond to digest-grounded updates that give a clear team-specific reason to click without overstating stakes.
 
 ## What to avoid
-- Do not mix unrelated source material into the story when it does not serve the core angle.
-- Do not let package or cluster issues create a self-contradictory setup in the article.
-- Do not bury the death or main update under side material; the core fact should come first.
-- Do not broaden a narrow obituary into unrelated team-context coverage.
+- Do not overstate or invent details beyond what the digest supports.
+- Do not use source-meta or report-style phrasing that pulls the copy outside the digest.
+- Do not let the lede merely restate the headline; it should add a new layer of information.
+- Do not broaden a narrow update into unrelated context coverage.
 - Do not let the headline promise one clean angle while the body drifts into another.
-- Do not introduce source-style or meta framing that pulls the piece away from the reporting.
-- Do not add interpretation beyond the confirmed timeline and career facts.
-- Do not overcomplicate a clean obituary with extra narrative baggage.
+- Do not mix unrelated source material into the story when it does not serve the core angle.
+- Do not add interpretation beyond the confirmed facts and timeline.
+- Do not overcomplicate a clean update with extra narrative baggage.
 - Do not miss the story-fit test: if the metadata points to a different cluster than the written article, the piece is misaligned.
-- [insider] Avoid leaving Patriots/camp material in a league-wide obituary package unless it is directly relevant.
-- [insider] Avoid a mixed-fingerprint writeup that reads like multiple stories stitched together.
-- [source-side, not fixable in prose] If the file arrives with unrelated payload material or a mismatched package, the fix may require source cleanup, not just rewriting.
+- [insider] Avoid mixed-fingerprint writeups that read like multiple stories stitched together.
+- [source-side, not fixable in prose] If the file arrives with unsupported claims or mismatched package material, the fix may require source cleanup, not just rewriting.
+- [source-side, not fixable in prose] If the source leans on unsupported narration, tighten the prose, but recognize the underlying claim set may still need cleanup.
+- [source-side, not fixable in prose] If the digest is effectively empty or missing its summary facts, there may be nothing solid to salvage in prose.
+- Do not add emotional or commemorative framing unless the source explicitly supports it; unsupported “remembered” language reads as overreach.
+- Do not force a story when the available material cannot sustain one; empty-source dismissals should trigger source cleanup, not a speculative rewrite.
