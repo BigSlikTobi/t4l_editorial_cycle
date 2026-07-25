@@ -8,9 +8,11 @@
 - Stay centered on the named subject or event instead of drifting into unrelated package material.
 - Clean, direct wording works well when the angle is simple and the payload is specific.
 - Anchor the opening to the main fact before adding secondary details or sequence notes.
+- Give readers the practical consequence of the update when it is explicitly supported, such as who is handling responsibilities or how availability changes camp.
 - [insider] Build around the Patriots-specific camp development rather than stitching in unrelated team or camp material.
 - [insider] A compact, single-story camp update can work well when it clearly bundles a few concrete developments.
 - [insider] Readers respond to digest-grounded updates that give a clear team-specific reason to click without overstating stakes.
+- [insider] Keep injury/status updates concrete and functional; a limited-participation note lands when it stays focused on camp impact and confirmed medical status.
 
 ## What to avoid
 - Do not overstate or invent details beyond what the digest supports.
@@ -28,3 +30,4 @@
 - [source-side, not fixable in prose] If the digest is effectively empty or missing its summary facts, there may be nothing solid to salvage in prose.
 - Do not add emotional or commemorative framing unless the source explicitly supports it; unsupported “remembered” language reads as overreach.
 - Do not force a story when the available material cannot sustain one; empty-source dismissals should trigger source cleanup, not a speculative rewrite.
+- Do not blur a status update into drama; if the source supports a limited/partial availability note, keep the language factual and operational rather than sensational.
