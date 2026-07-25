@@ -9,7 +9,7 @@
 - Use a restrained, source-faithful frame when there is only one central development to report.
 - Strong grounding can outweigh moderate impact when every claim stays inside the digest.
 - Clean headline/lede alignment is still a reliable approve signal across personas.
-- [insider] When the digest supports it, state the clearance/status, rehab timeline, and immediate game implication plainly without adding extra color.
+- [insider] When the digest supports it, state clearance/status, rehab timeline, and the next decision point plainly without adding extra color.
 
 ## What to avoid
 - Do not add role, status, or background specifics unless the digest explicitly supports them.
