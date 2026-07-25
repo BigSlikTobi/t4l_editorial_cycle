@@ -11,8 +11,6 @@
 - When the source is tight, a compact read is better than an expanded one.
 - [insider] Rebuild around the confirmed team/player update rather than adding interpretation or extra context.
 - [insider] Tight alignment across headline and intro works when the story has only one supported claim.
-- [columnist] Keep the treatment minimal and factual when the story is a straightforward death notice or roster-memory note.
-- [columnist] A concise nod to the person’s team connection works if it stays grounded and doesn’t broaden into reflection.
 
 ## What to avoid
 - Do not add unsupported certainty about status, restriction, recovery, or clearance unless the source explicitly supports it.
@@ -24,6 +22,6 @@
 - Do not assume background details beyond the confirmed fact pattern and the supported team/title connection.
 - Do not add unsupported embellishment when the source is already complete and specific.
 - [insider] Avoid turning a thin digest into a firm-sounding health or availability report.
-- [columnist] Avoid source-narration and unsupported meta in obit-style pieces; keep the article on the verified event and its direct, sourced connection.
-- [columnist] Do not convert a minimal factual update into a reflective essay when the source offers no extra substance.
+- [insider] Avoid adding extra player references from metadata or source URLs unless they are in the confirmed fact pattern.
+- [insider] Keep extra player mentions out unless they are tied to the provided fact pattern.
 - [source-side, not fixable in prose] If the available facts are too thin for a fuller piece, the limit is the source package, not just the writing.
