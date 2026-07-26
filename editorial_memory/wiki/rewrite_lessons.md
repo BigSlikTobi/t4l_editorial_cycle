@@ -28,3 +28,8 @@
 - [source-side, not fixable in prose] If the source provides only a bare mention, the rewrite can only stay tightly factual.
 - [source-side, not fixable in prose] A mention without detail is not enough to publish a richer analytical take.
 - [source-side, not fixable in prose] If the supplied digest has no key facts, do not force a verified-sounding update from it.
+- [source-side, not fixable in prose] Unsupported timing markers like a day or timeline should be removed unless the source explicitly provides them.
+- [source-side, not fixable in prose] An empty source digest leaves no grounded material to repair; reject rather than invent coverage.
+- Do not add side characters, extra context, or player-specific color unless the source digest explicitly supports it.
+- Do not let a camp update drift beyond the confirmed injured-list move into unsupported explanatory detail.
+- Do not preserve an extra sentence if it introduces claims not present in the digest, even when the core item is salvageable.
