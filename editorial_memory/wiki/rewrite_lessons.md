@@ -35,3 +35,6 @@
 - Do not anchor the piece on a player if the supplied story data only surfaces someone else; verify the focus before drafting.
 - Do not repeat the same idea in the lede with meta phrasing; use one concrete, sourced statement instead.
 - Do not try to salvage a groundedness gap with stronger prose if the source itself does not support the named subject.
+- Do not state clearance, surgery details, or similar health specifics unless they are explicitly supported by the digest.
+- Do not use source-quality or meta framing to justify unsupported roster or health claims.
+- [source-side, not fixable in prose] If the digest has no facts verifying the roster moves, the piece cannot be repaired by rewrites alone.
