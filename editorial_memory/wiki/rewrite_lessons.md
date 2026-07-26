@@ -30,6 +30,8 @@
 - [source-side, not fixable in prose] If the supplied digest has no key facts, do not force a verified-sounding update from it.
 - [source-side, not fixable in prose] Unsupported timing markers like a day or timeline should be removed unless the source explicitly provides them.
 - [source-side, not fixable in prose] An empty source digest leaves no grounded material to repair; reject rather than invent coverage.
-- Do not add side characters, extra context, or player-specific color unless the source digest explicitly supports it.
-- Do not let a camp update drift beyond the confirmed injured-list move into unsupported explanatory detail.
-- Do not preserve an extra sentence if it introduces claims not present in the digest, even when the core item is salvageable.
+- [source-side, not fixable in prose] If the roundup’s underlying facts are missing, keep the article to the one confirmed status update and nothing more.
+- [source-side, not fixable in prose] Other roundup items can be mentioned only if they are directly part of the same supplied digest.
+- Do not anchor the piece on a player if the supplied story data only surfaces someone else; verify the focus before drafting.
+- Do not repeat the same idea in the lede with meta phrasing; use one concrete, sourced statement instead.
+- Do not try to salvage a groundedness gap with stronger prose if the source itself does not support the named subject.
