@@ -1,27 +1,25 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed status update immediately; put the core camp/transaction designation up front.
-- Keep headline and lede aligned on the same verified core claim.
-- Let the headline and intro do different jobs: one hooks, one confirms, without repeating the same sentence.
-- Keep the opening tightly anchored to the team-specific update when the source is narrow.
-- Use clean, direct wording for simple insider updates; precision matters more than flourish.
-- When the source is sparse, a narrow factual lede is stronger than an inflated angle.
-- Preserve the verified status note even when the broader camp picture is thin.
-- Keep the story centered on the confirmed update instead of drifting into extra narrative.
-- In thin-source items, stay tightly factual and resist forced breadth.
-- If a note is only a headline-level mention list, treat it as a limit on scope, not a prompt to expand.
+- Lead with the one confirmed fact immediately when the source is thin; don’t bury the only hard detail.
+- Keep headline and lede aligned on the same verified claim.
+- Use clean, direct wording for simple camp-note items; precision beats flourish.
+- When the source is sparse, a tight factual lede is stronger than an inflated angle.
+- Preserve the verified inclusion/status note even if there’s no deeper context.
+- Keep the story centered on the confirmed mention instead of drifting into meta commentary.
+- In thin-source items, stay narrowly factual and resist forcing breadth.
+- Treat headline-level roundup mentions as scope limits, not prompts to invent consequence.
+- Keep the copy compact when the source only supports a single publishable point.
 
 ## What to avoid
 - Do not add extra certainty or implied detail that the digest does not support.
-- Do not use unsupported framing words like “full go” or “full throttle” unless the source clearly confirms them.
-- Do not widen a narrow update into a bigger camp narrative without source support.
-- Do not treat headline-level summary as proof of deeper player-condition detail.
-- Do not overstate the conditions of the players mentioned when only their names/status are confirmed.
-- Do not let the lede wander beyond the specific update and named players.
+- Do not widen a narrow mention into a bigger camp narrative without source support.
+- Do not treat a roundup inclusion as proof of role change, breakout status, or roster outcome.
+- Do not let the lede explain the lack of information instead of delivering the concrete fact.
 - Do not pad sparse source material with invented context or analysis.
 - Do not mix verified names with unverified surrounding claims.
-- Do not let a thin digest drive speculation about the broader team situation.
-- [source-side, not fixable in prose] If the source is effectively empty beyond a headline-level summary, the rewrite can only stay tightly factual.
-- [source-side, not fixable in prose] A missing source digest means there are no recoverable facts to publish, even if the headline sounds specific.
-- [source-side, not fixable in prose] Title-only mention lists are not enough to assert camp updates or status language.
+- Do not let a thin digest drive speculation about broader team implications.
+- Do not use unsupported framing that implies significance beyond the source.
+- [source-side, not fixable in prose] If the source provides only a bare mention, the rewrite can only stay tightly factual.
+- [source-side, not fixable in prose] A mention without detail is not enough to publish a richer analytical take.
+- [source-side, not fixable in prose] If the supplied digest has no key facts, do not force a verified-sounding update from it.
