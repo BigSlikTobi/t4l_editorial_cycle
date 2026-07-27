@@ -1,37 +1,32 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single confirmed fact immediately when the source is thin; don’t bury the only hard detail.
+- Lead with the single confirmed development immediately when the digest is thin.
 - Keep headline and lede aligned on the same verified claim.
-- Use clean, direct wording for simple camp-note items; precision beats flourish.
-- When the source is sparse, a tight factual lede is stronger than an inflated angle.
-- Preserve the verified status/update note even if there’s no deeper context.
-- Keep the story centered on the confirmed mention instead of drifting into meta commentary or interpretation.
-- In thin-source items, stay narrowly factual and resist forcing breadth.
-- Treat headline-level roundup mentions as scope limits, not prompts to invent consequence.
-- Keep the copy compact when the source only supports a single publishable point.
-- In insider pieces, use a direct lede and strong grounding rather than source narration or scene-setting.
-- When the digest supports it, include useful timeline/injury context, but keep it firmly tied to the sourced takeaway.
-- [insider] Add source-supported roster or availability context when it helps explain the move, but keep the focus on the verified transaction.
+- Use direct, news-first structure for simple status updates; clarity beats flourish.
+- Keep the copy tightly inside the digest when only one publishable fact is confirmed.
+- Treat cluster mentions as context only; keep the story centered on the main verified item.
+- Preserve the confirmed status/update note even when there is little extra context.
+- When the source is sparse, a compact factual lede is stronger than an inflated angle.
+- Resist meta commentary and let the grounded fact carry the piece.
+- Keep the story narrow and precise instead of widening a mention into a bigger narrative.
+- Use clean, restrained wording for straightforward roster or camp-status items.
 
 ## What to avoid
-- Do not add extra certainty or implied detail that the digest does not support.
+- Do not add extra certainty or implied detail that the source does not support.
 - Do not widen a narrow mention into a bigger narrative without source support.
-- Do not treat a roundup inclusion as proof of role change, breakout status, or roster outcome.
+- Do not treat a roundup or cluster inclusion as proof of role change, breakout status, or roster outcome.
 - Do not let the lede explain the lack of information instead of delivering the concrete fact.
-- Do not pad sparse source material with invented context or analysis.
-- Do not mix verified names with unverified surrounding claims.
-- Do not let a thin digest drive speculation about broader team implications.
+- Do not pad sparse source material with invented context, history, or analysis.
+- Do not repeat the same vague idea in the lede and body instead of advancing the single supported fact.
 - Do not use unsupported framing that implies significance beyond the source.
 - Do not add source-narration or meta phrasing when a direct, grounded lede will do.
 - Do not publish from an effectively empty digest; if no verified facts are present, the issue is source-side, not a prose fix.
 - [source-side, not fixable in prose] If the digest has no facts verifying the claim, reject rather than invent coverage.
-- [source-side, not fixable in prose] An empty source digest leaves no grounded material to repair; keep the piece to verified basics only if any exist.
-- [source-side, not fixable in prose] Do not force a verified-sounding update from a source that does not actually support the headline claim.
-- Do not anchor the piece on an entity or event if the supplied story data does not clearly verify it; confirm the focus before drafting.
-- Do not state clearance, surgery details, injury attribution, or similar health specifics unless they are explicitly supported by the digest.
 - [source-side, not fixable in prose] Unsupported health or roster claims cannot be rescued by rewrites when the source facts are missing.
-- Do not use crash or injury context as decoration; only include it when it directly supports the sourced camp-role update.
-- [insider] Don’t force broader implications when the source only supports the specific roster move and immediate camp-availability context.
-- [columnist] Don’t read extra meaning into a disputed clip; keep the piece on the one supported fact and avoid interpretive claims about what it signals for the team.
-- [columnist] Don’t build a dispute story from an empty or factless digest; if the source has no usable facts, the issue is source-side, not a prose rewrite.
+- [source-side, not fixable in prose] When an attempt is built on an empty digest, unsupported contextual language about past/current status leaves no fixable path short of dismissal.
+- [columnist] Don’t build a comeback or dispute story from filler; keep the piece anchored to the one supported fact and avoid implying a broader takeaway.
+- [columnist] Don’t introduce destination, deal, or market-detail speculation when the digest only verifies that interest exists.
+- [columnist] Cut named player pools or other side lists unless the source explicitly supports them.
+- [columnist] Avoid repetitive headline/lede phrasing that restates the same thin claim without adding new verified detail.
+- [columnist] Do not pick a team or other specific landing spot without source-backed team connection; wrong-team framing is a dismissal-level error.
