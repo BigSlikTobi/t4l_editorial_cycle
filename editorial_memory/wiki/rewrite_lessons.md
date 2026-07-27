@@ -1,25 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the confirmed breaking fact immediately when the source gives a clear, usable event.
-- Keep the lede straight and specific; a clean fact statement works better than layered source narration.
-- Make the headline and intro distinct, so each adds something new instead of repeating the same sentence twice.
-- Anchor the story to the named figure or team tie plainly when that connection is part of the confirmed news.
-- Preserve a direct, restrained tone on sensitive incidents; avoid drama-padding when the facts already carry the weight.
-- Use the headline to sharpen the core event, then let the intro expand with one additional verified detail.
-- Stay tightly inside the digest on thin breaking-news items; precision beats embellishment.
-- When the source is strong, write the incident as a clear news peg rather than a generic report recap.
-- [insider] State the immediate takeaway plainly, without meta framing or unnecessary scene-setting.
+- Lead with the single verifiable update immediately when the source digest is thin.
+- Keep the headline and first sentence tightly aligned so the lede confirms, rather than stretches, the news.
+- State the core event in plain news language; a direct fact statement is stronger than recycled setup.
+- Preserve a restrained, insider tone on sensitive personnel updates; no drama-padding.
+- Stay tightly inside what the digest actually substantiates on narrow breaking-news items.
+- Make the immediate takeaway explicit without burying it under source-reporting language. [insider]
+- When the source is limited, a clean one-fact lede can still work if it is precise and grounded.
+- Keep a clear team-specific stake visible when the digest supports it, without stretching into extra consequence.
+- For columnist-style pieces, a concise, grounded framing can still read well if the facts are tight and the angle is obvious.
+- In rewrite-saved-it cases, a stripped-down denial or clarification can be the right finish if the headline/lede stay anchored to the exact claim being denied.
 
 ## What to avoid
-- Do not stack headline, sub-head, and intro so tightly that they all say the same thing.
-- Do not lean on report-style filler like “according to a report” when the story can be stated directly.
-- Do not add context-like narration that implies extra sourcing or certainty beyond the digest.
-- Do not over-explain a breaking incident; the confirmed facts should carry the lede.
-- Do not make the piece feel generic when the source already provides a sharp, specific hook.
-- Do not repeat the same confirmed point in multiple forms; each sentence should earn its place.
+- Do not let the headline and lede drift apart; unsupported consequence language creates mismatch risk.
+- Do not add implied fallout or “what this means” detail unless the digest explicitly supports it.
+- Do not recycle the same basic event in different wording across headline, intro, and body.
+- Do not use a flat, repetitive intro/body that adds no new verified detail.
+- Do not lean on report-style filler when the story can be stated directly.
 - Do not broaden a narrow incident into unsupported background, implication, or aftermath.
-- Do not let a sensitive story drift into editorially thin summary language.
-- [insider] Do not bury the actionable or immediate takeaway under source-reporting language.
-- [source-side, not fixable in prose] Do not force in extra details that the digest does not establish.
-- [source-side, not fixable in prose] Do not treat an unusable or missing source summary as if it supplied grounding for names, roles, or incident details.
+- Do not make the piece feel complete by inference alone when the digest only gives headline-level grounding.
+- Do not bury the actionable takeaway under source narration. [insider]
+- Do not overstate certainty by naming a specific diagnosis or outcome unless the digest actually confirms it.
+- Do not assert an unverified injury, diagnosis, or other medical detail from a thin digest.
+- [source-side, not fixable in prose] Do not treat a digest with no extra facts as if it supports added context, consequences, or role-based implications.
+- [source-side, not fixable in prose] Do not infer a firing, arrest details, or other core claim from a headline-only digest when the source text does not substantiate it.
+- [source-side, not fixable in prose] Do not try to force a coherent rewrite when the digest has no key facts beyond a missing summary; unresolved grounding failures are fatal on rewrite attempts.
