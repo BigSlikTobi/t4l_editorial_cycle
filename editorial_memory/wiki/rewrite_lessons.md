@@ -3,7 +3,7 @@
 ## What works (keep doing)
 - Lead with the one verified fact immediately when the source supports a clean news hook.
 - Keep headline and lede aligned on the same confirmed fact, but have each one add something distinct.
-- Use the headline/intro to sharpen the actual conflict, denial, injury, or evaluation rather than a vague setup.
+- Use the headline/intro to sharpen the actual conflict, denial, injury, evaluation, or stakes rather than a vague setup.
 - Keep insider/analyst pieces pointed at the team-specific takeaway instead of a generic status recap.
 - Trim repetitive phrasing so the lede advances beyond the headline instead of echoing it.
 - Turn a sourced claim into a concrete takeaway when the evidence is solid enough to support it.
@@ -11,6 +11,7 @@
 - When the source is thin, stay tightly inside the single confirmed fact rather than reaching for broader implications.
 - Make the implication explicit when it is clearly supported, but do not overexplain.
 - Keep the story grounded in the verified source claim while still tightening the editorial angle around it.
+- [analyst] Make contract-year or evaluation stakes do real work only when the source gives concrete support, not as a generic label.
 
 ## What to avoid
 - Do not restate the same denial or news point in multiple forms; the lede must add new value.
@@ -28,4 +29,5 @@
 - Do not use source-meta phrasing like “Yahoo report” or “the report ties” unless the source itself supplies publishable facts.
 - Do not suggest what a clip implied unless the source clearly supports that reading.
 - [source-side, not fixable in prose] Do not try to manufacture a story from a source that only offers a bare denial or empty factual support.
-- [analyst] Do not present a first-shot or first-opportunity note as a settled role or certainty when the source digest lacks concrete support.
+- [analyst] Do not present first-shot or first-opportunity notes as settled roles or certainties when the source digest lacks concrete support.
+- [analyst] Do not project future tape outcomes or decision-making beyond the concrete contract-year stakes the source actually gives you.
