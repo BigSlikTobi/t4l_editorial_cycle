@@ -11,6 +11,7 @@
 - Resist meta commentary and let the grounded fact carry the piece.
 - Keep the story narrow and precise instead of widening a mention into a bigger narrative.
 - Use clean, restrained wording for straightforward roster or camp-status items.
+- For injury-status updates, keep the verified condition and the immediate action in focus.
 
 ## What to avoid
 - Do not add extra certainty or implied detail that the source does not support.
@@ -25,8 +26,12 @@
 - [source-side, not fixable in prose] If the digest has no facts verifying the claim, reject rather than invent coverage.
 - [source-side, not fixable in prose] Unsupported health or roster claims cannot be rescued by rewrites when the source facts are missing.
 - [source-side, not fixable in prose] When an attempt is built on an empty digest, unsupported contextual language about past/current status leaves no fixable path short of dismissal.
+- [source-side, not fixable in prose] Wrong-team or unrelated-subject tagging against an empty/incorrect digest cannot be fixed in prose; dismiss instead of retargeting the story.
 - [columnist] Don’t build a comeback or dispute story from filler; keep the piece anchored to the one supported fact and avoid implying a broader takeaway.
 - [columnist] Don’t introduce destination, deal, or market-detail speculation when the digest only verifies that interest exists.
 - [columnist] Cut named player pools or other side lists unless the source explicitly supports them.
 - [columnist] Avoid repetitive headline/lede phrasing that restates the same thin claim without adding new verified detail.
 - [columnist] Do not pick a team or other specific landing spot without source-backed team connection; wrong-team framing is a dismissal-level error.
+- Do not carry unrelated player or team metadata into the story; keep all names aligned to the actual subject.
+- Do not add timeline or next-step details unless the digest explicitly gives them.
+- Do not use banned meta-style phrasing when a clean factual rewrite is available.
