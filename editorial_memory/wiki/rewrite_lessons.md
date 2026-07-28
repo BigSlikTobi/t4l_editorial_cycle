@@ -11,6 +11,11 @@
 - For short update items, concrete inclusion beats explanation-heavy framing. [analyst]
 - Clean approves often come from preserving the core fact and trimming unsupported side material.
 - When the report contains one clear development, avoid forcing a second interpretive frame.
+- [insider] Tight injury/news items work best when the lede names the event plainly and the body adds only the confirmed status details that matter.
+- [insider] Camp-start injury updates can work well when they include the immediate roster/status implication without drifting beyond the digest.
+- [insider] Breaking-news practice injuries can work when they name the player, team, timing, and immediate status caveat without overreaching.
+- [insider] Multi-thread camp updates can work when each development is source-supported, distinct, and kept within a single concise wire-style report.
+- [insider] Strong name density plus concrete role/competition details can make a camp update feel useful without adding unsupported context.
 
 ## What to avoid
 - Do not build a story around the headline or item title when the source digest does not actually supply usable facts.
@@ -24,6 +29,7 @@
 - Do not bury the main verified fact in filler, background, or commentary about the article itself.
 - Do not add unsupported context about implications, timelines, or mechanics.
 - Do not introduce extra names, side characters, or adjacent angles just to make the item feel broader.
+- [insider] Do not mix in unrelated team material when the source-backed update is a single camp/story thread; keep the piece team-specific to the supported scope.
 - Do not make team-specific claims unless the source explicitly supports them; name-only inputs are not enough for that inference.
 - For rewrite-saved stories, cut unsupported commentary first and keep the report anchored to the one confirmed development.
 - [analyst] Do not overstate movement in contract-talk updates when the verified takeaway is simply that there is no real progress.
