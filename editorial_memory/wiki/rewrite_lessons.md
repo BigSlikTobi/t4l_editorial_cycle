@@ -1,16 +1,18 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the subject’s own verified quote or stated goal when that is the cleanest hook.
-- Use the headline and intro to sharpen the same grounded takeaway, not to introduce new angles.
-- Keep the lede concise and factual; a simple quote-driven setup can carry the piece.
-- Build from the exact source language when the digest is thin, especially on columnist-style stories.
-- Make the story’s relevance clear without drifting beyond what the source directly supports.
-- Preserve a restrained, clean tone when the package is mostly one strong idea.
+- Lead with the most specific source-backed hook available, especially a stated goal or direct quote.
+- Use the headline and intro to sharpen the same takeaway, not drift into a broader angle.
+- Keep the lede concise and factual; a tight quote-driven setup can carry the piece.
+- Build from exact source language when the digest is thin, especially for columnist-style stories.
+- Make relevance clear with concrete stakes from the digest, not broad extrapolation.
+- Preserve a restrained, clean tone when the package is centered on one strong idea.
 - A usable hook is enough if the execution stays tightly grounded.
 - Keep the article focused on the verified development instead of trying to broaden it artificially.
-- [columnist] Tight alignment between headline, subhead, and lede is a strength when the source offers only one clear fact.
-- Strong grounding can outweigh modest scores on impact or execution when the story is source-light but accurate.
+- [columnist] Tight alignment between headline, subhead, and lede is a strength when the source offers one clear fact.
+- [columnist] Strong source-anchored specifics can outweigh modest execution scores when the story stays accurate and disciplined.
+- Use a few sharp, source-backed details to add lift rather than vague summary lines.
+- When a rewrite succeeds, keep the fix: narrow the frame to the clearest source-supported angle and remove generic wording.
 
 ## What to avoid
 - Do not add unsupported framing or broader context that the source digest does not contain.
@@ -23,3 +25,9 @@
 - Do not make the piece feel like it is promising more than the source actually delivers.
 - Do not claim context such as award races or team-wide effects unless the digest explicitly supports it.
 - [columnist] Avoid overbuilding a one-fact story; keep the frame disciplined and let the verified quote do the work.
+- [columnist] Cut loose cross-team or cross-market framing that is not directly supported by the digest.
+- Avoid vague summary-style lines when the source offers sharper, concrete specifics to use instead.
+- Do not make the lede/headline generic when the source supports a more precise, reader-useful hook.
+- Do not blur a specific goal into a softer phrase that loses the story’s center.
+- Do not bury fast-start or consistency stakes when those are the actual source-supported tension.
+- [columnist] Avoid a broad umbrella headline when the rewrite brief shows the stronger angle is a narrower performance goal.
