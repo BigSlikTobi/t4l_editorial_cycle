@@ -1,32 +1,25 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single verified development immediately when the package is thin.
-- Keep headline, subheadline, and lede tightly aligned so they reinforce the same grounded fact.
-- Use plain news language for the core event; direct factual phrasing beats setup or flourish.
-- Stay tightly inside the source package on narrow breaking items.
-- Make the immediate takeaway explicit without burying it under report-style filler. [insider]
-- A clean one-fact lede can work if it is precise and fully grounded.
-- Keep only the context the source actually supports; named context can help when it is truly source-backed.
-- Preserve a restrained, insider tone on sensitive personnel updates; avoid drama-padding.
-- Strong grounding can carry a thin story if the execution stays concise and factual.
-- For camp/beat updates, state the confirmed development directly and move on.
-- When the source supports it, compare the immediate implications for multiple teams/angles in a compact, useful way. [insider]
+- Lead with the subject’s own verified quote or stated goal when that is the cleanest hook.
+- Use the headline and intro to sharpen the same grounded takeaway, not to introduce new angles.
+- Keep the lede concise and factual; a simple quote-driven setup can carry the piece.
+- Build from the exact source language when the digest is thin, especially on columnist-style stories.
+- Make the story’s relevance clear without drifting beyond what the source directly supports.
+- Preserve a restrained, clean tone when the package is mostly one strong idea.
+- A usable hook is enough if the execution stays tightly grounded.
+- Keep the article focused on the verified development instead of trying to broaden it artificially.
+- [columnist] Tight alignment between headline, subhead, and lede is a strength when the source offers only one clear fact.
+- Strong grounding can outweigh modest scores on impact or execution when the story is source-light but accurate.
 
 ## What to avoid
-- Do not let the headline, subheadline, and intro drift onto a different player or transaction than the body is actually about.
-- Do not pad a thin source package with filler that adds no verified detail.
-- Do not widen a narrow update into unsupported consequence, aftermath, or implied meaning.
-- Do not repeat the core event across the top of the piece instead of advancing it.
-- Do not add extra names or context unless they belong to the source package and clarify the story.
-- Do not make the piece feel developed by inference alone when the source only gives one grounded fact.
-- Do not overbuild around a single visit or similar small update with recycled wording.
-- Do not introduce source-package meta language or "no additional details" framing when the digest only supports one verified fact.
-- Do not claim more than the source confirms; keep the lede to the specific reported development and nothing extra.
-- Do not use unsupported attribution or quote language unless it appears in the digest.
-- Do not clutter a beat update with unnecessary player-name stacking when the story only needs the confirmed subject.
-- [source-side, not fixable in prose] Do not force extra substance from a digest that only supports one verified development.
-- [source-side, not fixable in prose] If the digest is effectively empty, do not add unsupported names or relationships to create a fuller package.
-- [source-side, not fixable in prose] Avoid meta commentary about the package/source; if the digest cannot support a story, the issue is the source, not the prose.
-- [source-side, not fixable in prose] Do not invent supporting details from an empty digest; if no usable facts are present, the piece should not pretend otherwise.
-- [source-side, not fixable in prose] Do not treat an empty digest as salvageable with stylistic polish; without source facts, the article should not be forced into shape.
+- Do not add unsupported framing or broader context that the source digest does not contain.
+- Do not import implications about teammates, the passing game, or other downstream effects unless they are directly sourced.
+- Do not repeat the same sentence or idea in the lede, subhead, and intro.
+- Do not rely on meta-style filler when the source already provides a clear quote or hook.
+- Do not widen a narrow quote into a bigger narrative without factual support.
+- Do not use headline, subheadline, and opening paragraph to restate the same point without progression.
+- Do not pad a thin story with invented significance or inference-heavy commentary.
+- Do not make the piece feel like it is promising more than the source actually delivers.
+- Do not claim context such as award races or team-wide effects unless the digest explicitly supports it.
+- [columnist] Avoid overbuilding a one-fact story; keep the frame disciplined and let the verified quote do the work.
