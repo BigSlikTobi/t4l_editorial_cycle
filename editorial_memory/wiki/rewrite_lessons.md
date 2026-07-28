@@ -1,46 +1,29 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the most specific source-backed hook available, especially a stated goal, direct quote, or the actual event itself.
-- Use the headline and intro to sharpen the same takeaway, not drift into a broader angle.
-- Keep the lede concise and factual; a tight source-driven setup can carry the piece.
-- Build from exact source language when the digest is thin, especially for columnist-style stories.
-- Make relevance clear with concrete stakes from the digest, not broad extrapolation.
-- Preserve a restrained, clean tone when the package is centered on one strong idea.
-- A usable hook is enough if the execution stays tightly grounded.
-- Keep the article focused on the verified development instead of trying to broaden it artificially.
-- Stack multiple clearly sourced developments when they belong in the same frame, rather than overexplaining any one of them. [analyst]
-- Keep numbers, statuses, and roster paths explicit in the body when they are part of the source-backed stakes. [analyst]
-- Tight alignment between headline, lede, and the core takeaway is a strength when the source offers several concrete facts. [analyst]
-- Strong grounding can support a wider story as long as every added angle is directly sourced. [analyst]
-- Use a few sharp, source-backed details to add lift rather than vague summary lines.
-- When a rewrite succeeds, keep the fix: narrow the frame to the clearest source-supported angle and remove generic wording.
+- Lead with the one verified development and stay tightly inside the source digest.
+- Keep headline and lede aligned on the same confirmed takeaway; one sharp angle is enough.
+- A concise, factual opening can carry a thin update when grounding is strong.
+- Keep the story centered on the exact status the source supports instead of widening it.
+- Let the confirmed fact do the work; strip away extra narrative layers when the item is straightforward.
+- Strong grounding can sustain readability even when the article is modest in scope.
+- Keep source-backed specificity in the body so the piece does not rely on generic or meta commentary. [analyst]
+- For short update items, concrete inclusion beats explanation-heavy framing. [analyst]
+- Clean approves often come from preserving the core fact and trimming unsupported side material.
+- When the report contains one clear development, avoid forcing a second interpretive frame.
 
 ## What to avoid
-- Do not add unsupported framing or broader context that the source digest does not contain.
-- Do not import implications about teammates, the passing game, or other downstream effects unless they are directly sourced.
-- Do not repeat the same sentence or idea in the lede, subhead, and intro.
-- Do not rely on meta-style filler when the source already provides a clear quote or hook.
-- Do not widen a narrow quote into a bigger narrative without factual support.
-- Do not use headline, subheadline, and opening paragraph to restate the same point without progression.
-- Do not pad a thin story with invented significance or inference-heavy commentary.
-- Do not make the piece feel like it is promising more than the source actually delivers.
-- Do not claim context such as award races or team-wide effects unless the digest explicitly supports it.
-- Avoid overbuilding a one-fact story; keep the frame disciplined and let the verified quote do the work. [columnist]
-- Cut loose cross-team or cross-market framing that is not directly supported by the digest. [columnist]
-- Avoid vague summary-style lines when the source offers sharper, concrete specifics to use instead.
-- Do not make the lede/headline generic when the source supports a more precise, reader-useful hook.
-- Do not blur a specific goal into a softer phrase that loses the story’s center.
-- Do not bury fast-start or consistency stakes when those are the actual source-supported tension.
-- Avoid a broad umbrella headline when the stronger angle is a narrower performance goal. [columnist]
-- Cut repeated hedging or meta language in the body; if the source is clear, state the fact cleanly.
-- Lead with the actual event when that is the clearest hook, rather than a generic pre-camp frame.
-- Keep roster context tight to the names already in the source; do not add follow-up speculation.
-- For dismisses built on a missing or empty source digest, do not proceed as if the fact set exists; that is source-side, not fixable in prose.
-- Do not invent roster, injury, or team-context details to make a story feel complete; if the digest does not support them, they must be left out.
-- When the source material is absent, treat the piece as ungroundable rather than trying to rescue it with generic football context.
-- Do not name extra personnel or transaction details unless they are explicitly present in the digest; unsupported additions undercut grounding.
-- Do not state a rumor or holdout posture as fact when the source only supports ongoing negotiations or an offer.
-- For rewrite-saved stories, treat the brief as a precision filter: keep the supported three-part frame and remove any unsupported side characters.
-- For dismisses with an empty digest, treat the failure as source-side, not a prose problem (source-side, not fixable in prose).
-- Do not write through an empty or effectively empty digest by inventing claims, context, or significance.
+- Do not build a story around the headline or item title when the source digest does not actually supply usable facts.
+- Do not treat an unsupported digest as if it were confirmed reporting; if the facts are missing, the piece is not salvageable in prose (source-side, not fixable in prose).
+- Do not expand beyond the digest into fully confirmed-sounding details without support.
+- Do not add process language, structural explanations, or behind-the-scenes commentary unless the digest explicitly supports it.
+- Do not write a self-aware lede that comments on why the entry “needs no substance” or similar; that reads meta-heavy and low-value.
+- Do not widen a narrow update into a broader narrative without factual support.
+- Do not let the headline promise more context, significance, or movement than the source provides.
+- Do not dilute a simple status update with speculative steps, stages, or implied movement.
+- Do not bury the main verified fact in filler, background, or commentary about the article itself.
+- Do not add unsupported context about implications, timelines, or mechanics.
+- Do not introduce extra names, side characters, or adjacent angles just to make the item feel broader.
+- Do not make team-specific claims unless the source explicitly supports them; name-only inputs are not enough for that inference.
+- For rewrite-saved stories, cut unsupported commentary first and keep the report anchored to the one confirmed development.
+- [analyst] Do not overstate movement in contract-talk updates when the verified takeaway is simply that there is no real progress.
