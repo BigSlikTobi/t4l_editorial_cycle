@@ -16,6 +16,7 @@
 - [insider] Breaking-news practice injuries can work when they name the player, team, timing, and immediate status caveat without overreaching.
 - [insider] Multi-thread camp updates can work when each development is source-supported, distinct, and kept within a single concise wire-style report.
 - [insider] Strong name density plus concrete role/competition details can make a camp update feel useful without adding unsupported context.
+- [insider] Long-term extension pieces can land when they clearly state the stability payoff and the offseason decision it removes, while staying inside supported deal details.
 
 ## What to avoid
 - Do not build a story around the headline or item title when the source digest does not actually supply usable facts.
