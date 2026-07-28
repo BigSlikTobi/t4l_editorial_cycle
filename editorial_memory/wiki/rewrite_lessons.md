@@ -10,6 +10,8 @@
 - Keep only the context the source actually supports; named context can help when it is truly source-backed.
 - Preserve a restrained, insider tone on sensitive personnel updates; avoid drama-padding.
 - Strong grounding can carry a thin story if the execution stays concise and factual.
+- When the package is sparse, a rewrite can save the piece by stripping meta-commentary and re-centering the confirmed fact only.
+- On injury updates, keep the copy on the verified on-field development and avoid overexplaining the implications.
 
 ## What to avoid
 - Do not let the headline, subheadline, and intro restate the same point in different words.
@@ -20,7 +22,12 @@
 - Do not add extra names or context unless they belong to the source package and clarify the story.
 - Do not make the piece feel developed by inference alone when the source only gives one grounded fact.
 - Do not overbuild around a single visit or similar small update with recycled wording.
+- Do not introduce source-package meta language or "no additional details" framing when the digest only supports one verified fact.
+- Do not claim more than the source confirms; keep the lede to the specific reported development and nothing extra.
+- Do not use unsupported status language like "under watch" or "another health concern" unless the source actually says so.
 - [source-side, not fixable in prose] Do not force extra substance from a digest that only supports one verified development.
-- [source-side, not fixable in prose] Do not treat sparse context as permission to invent a fuller narrative.
 - [source-side, not fixable in prose] If the digest is effectively empty, do not add unsupported names or relationships to create a fuller package.
-- [source-side, not fixable in prose] A bare headline-level visit mention is not enough to support a column that implies additional verified detail.
+- [source-side, not fixable in prose] A bare headline-level mention is not enough to support a column that implies additional verified detail.
+- [source-side, not fixable in prose] Do not add unsupported framing like a specific team field or other invented context when the source is effectively empty.
+- [source-side, not fixable in prose] Avoid meta commentary about the package/source; if the digest cannot support a story, the issue is the source, not the prose.
+- [source-side, not fixable in prose] Do not invent supporting details from an empty digest; if no usable facts are present, the piece should not pretend otherwise.
