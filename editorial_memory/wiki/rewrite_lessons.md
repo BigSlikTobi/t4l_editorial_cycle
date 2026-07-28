@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the one verified development immediately when the package is thin.
+- Lead with the single verified development immediately when the package is thin.
 - Keep headline, subheadline, and lede tightly aligned so they reinforce the same grounded fact.
 - Use plain news language for the core event; direct factual phrasing beats setup or flourish.
 - Stay tightly inside the source package on narrow breaking items.
@@ -10,7 +10,8 @@
 - Keep only the context the source actually supports; named context can help when it is truly source-backed.
 - Preserve a restrained, insider tone on sensitive personnel updates; avoid drama-padding.
 - Strong grounding can carry a thin story if the execution stays concise and factual.
-- For camp/beat updates, it’s enough to state the confirmed buzz directly; keep the intro on the sourced development and move on.
+- For camp/beat updates, state the confirmed development directly and move on.
+- When the source supports it, compare the immediate implications for multiple teams/angles in a compact, useful way. [insider]
 
 ## What to avoid
 - Do not let the headline, subheadline, and intro drift onto a different player or transaction than the body is actually about.
