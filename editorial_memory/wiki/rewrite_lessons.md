@@ -8,9 +8,12 @@
 - Use concise, source-anchored phrasing when the material only supports a narrow statement.
 - Preserve a clear stake only when the source actually supports it; restraint reads stronger than overreach.
 - A rewrite can save a thin item if it removes speculation and stays glued to the confirmed facts.
+- [analyst] Tightly grounded analysis works when it leans on concrete, source-supported comparisons and rankings rather than broader speculation.
+- [analyst] Use camp notes appropriately as supporting color, but keep them secondary to the verified analytic spine.
 - [insider] Clean, specific injury updates work when every detail is source-backed and the structure stays tight.
 - [columnist] Exact quote-led or fact-led framing works when the item is built around one supported core and nothing more.
 - [columnist] Direct death-notice or status-notice writing is strongest when it stays factual and avoids texture that does not add evidence.
+- [columnist] A quiet, tightly grounded status update can still be clickable when it offers a clear fan reason without inventing stakes.
 
 ## What to avoid
 - Do not let a narrow fact get expanded into broader scenario framing without concrete source support.
@@ -20,9 +23,9 @@
 - Do not add unsupported interpretive context when the source only confirms the core fact.
 - Do not mismatch the headline and lede by implying more than the source actually says.
 - Avoid forcing commentary into a piece that is only supported as a brief status, quote, or death notice.
-- [columnist] Do not build a fuller pairing or relationship narrative unless the source explicitly supports it; keep quote-based items at the exact claim level.
-- [insider] Do not state timelines, diagnoses, or setting details unless the digest explicitly supports them.
-- [insider] If the source material is thin, keep the headline and intro at the confirmed team/player/injury level rather than adding missing specifics.
+- [analyst] Do not overreach beyond the supplied digests; keep rankings, ADP, and efficiency comparisons grounded in the material at hand.
+- [insider] Do not state timelines, diagnoses, role changes, or setting details unless the digest explicitly supports them.
+- [insider] If the source material is thin, keep the headline and intro at the confirmed injury/condition level rather than adding missing specifics.
 - [source-side, not fixable in prose] If the source digest is missing or only offers a small core fact, do not invent extra context or connective tissue to thicken the story.
 - [source-side, not fixable in prose] Ignore noisy metadata or unrelated IDs; keep the story itself anchored to the verified core facts.
-- [source-side, not fixable in prose] If the digest is missing usable facts, the piece cannot be salvaged by rewriting alone; avoid trying to rescue it with unsupported prose.
+- [source-side, not fixable in prose] Empty or effectively empty source digests are not publishable; no amount of headline polish or attribution can create a factual base.
