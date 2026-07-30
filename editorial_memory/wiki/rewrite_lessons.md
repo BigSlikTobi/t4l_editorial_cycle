@@ -11,6 +11,7 @@
 - Concise insider updates can work even when the source material is thin, as long as they stay factual and direct.
 - Strong grounding can offset modest execution when the central development is clear and relevant.
 - When the source provides only one usable checkpoint, keep the story streamlined rather than padded.
+- [insider] Concrete farewell, departure, or status-change language can be enough on its own when the source gives a clear closing development.
 
 ## What to avoid
 - Do not add source-narration or commentary like “the report did not add much” when the article can state the fact directly.
