@@ -1,31 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single verified development when the source is narrow; one supported fact can carry the piece.
-- Keep the lede centered on the exact source-backed claim instead of broadening into extra framing.
-- Match the headline tightly to the confirmed development and put full identification up front when it clarifies the notice.
-- Strip unfinished, broken, or reflective filler; clean, direct openings improve thin items fast.
-- Use concise, source-anchored phrasing when the material only supports a narrow statement.
+- Lead with the most concrete source-backed development when the item is narrow; one clear update can carry the piece.
+- Keep the lede centered on the exact reported fact instead of broadening into a bigger conclusion.
+- Make the headline and intro reflect the immediate consequence or timing when those details are explicitly supported.
+- Use concise, source-anchored phrasing when the material only supports a tight statement.
 - Preserve a clear stake only when the source actually supports it; restraint reads stronger than overreach.
-- A rewrite can save a thin item if it removes speculation and stays glued to the confirmed facts.
-- [analyst] Tightly grounded analysis works when it leans on concrete, source-supported comparisons and rankings rather than broader speculation.
-- [analyst] Use camp notes appropriately as supporting color, but keep them secondary to the verified analytic spine.
-- [insider] Clean, specific injury updates work when every detail is source-backed and the structure stays tight.
-- [columnist] Exact quote-led or fact-led framing works when the item is built around one supported core and nothing more.
-- [columnist] Direct death-notice or status-notice writing is strongest when it stays factual and avoids texture that does not add evidence.
-- [columnist] A quiet, tightly grounded status update can still be clickable when it offers a clear fan reason without inventing stakes.
+- Strong insider items can include two concrete developments if both are directly sourced and the headline-intro package stays coherent.
+- Strong names plus timeline details improve utility when they remain inside the reported facts.
+- Tight grounding can still feel complete when it includes status, context, and the reported explanation without speculation.
+- Strip unfinished, broken, or reflective filler; clean openings improve thin items fast.
+- [insider] Clean, specific updates work when every detail is source-backed and the structure stays tight.
+- [insider] Activation items can succeed when the headline, lede, and body all stay aligned on the confirmed move and the reported ramp-up/timeline detail.
 
 ## What to avoid
-- Do not let a narrow fact get expanded into broader scenario framing without concrete source support.
+- Do not let a narrow fact get expanded into a bigger role, motive, or job conclusion without concrete source support.
 - Do not repeat the same source-backed point in multiple sentences; each line must add something new.
 - Do not leave the intro cut off or structurally incomplete.
 - Do not pad a small item with reflective or speculative language just to make it feel larger.
 - Do not add unsupported interpretive context when the source only confirms the core fact.
 - Do not mismatch the headline and lede by implying more than the source actually says.
-- Avoid forcing commentary into a piece that is only supported as a brief status, quote, or death notice.
-- [analyst] Do not overreach beyond the supplied digests; keep rankings, ADP, and efficiency comparisons grounded in the material at hand.
-- [insider] Do not state timelines, diagnoses, role changes, or setting details unless the digest explicitly supports them.
-- [insider] If the source material is thin, keep the headline and intro at the confirmed injury/condition level rather than adding missing specifics.
+- Avoid forcing commentary into a piece that is only supported as a brief status or roster update.
+- [insider] Do not state timelines, ramp plans, or role changes unless the source explicitly supports them.
+- [insider] If the source material is thin, keep the headline and intro at the confirmed activation/condition level rather than adding missing specifics.
 - [source-side, not fixable in prose] If the source digest is missing or only offers a small core fact, do not invent extra context or connective tissue to thicken the story.
-- [source-side, not fixable in prose] Ignore noisy metadata or unrelated IDs; keep the story itself anchored to the verified core facts.
 - [source-side, not fixable in prose] Empty or effectively empty source digests are not publishable; no amount of headline polish or attribution can create a factual base.
