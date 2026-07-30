@@ -29,3 +29,4 @@
 - [columnist] Do not build a story on a missing or empty digest; if the source cannot support the named claims, the draft is ungrounded. (source-side, not fixable in prose)
 - [columnist] Avoid repetitive restatement when the source is thin; without verified detail, looping the premise only makes the piece feel weaker.
 - [columnist] Do not treat an ungrounded rewrite as salvageable when the source itself does not verify the core premise. (source-side, not fixable in prose)
+- [columnist] Do not elevate a missing-digest item into a player-significance story; if the digest is empty, claims about importance or lineup level are not supportable. (source-side, not fixable in prose)
