@@ -1,27 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead on the one confirmed development when the source is narrow; a single verified update can carry the item.
-- Keep the lede tightly centered on the supported status change instead of adding scene-setting or report framing.
-- Use a concise headline that matches the verified update and avoids extra claims.
-- Keep the body short and source-anchored when the material is sparse; compression beats padded analysis.
-- Preserve a clear stake when it is plainly supported by the source.
-- Stay inside the verified facts and avoid broadening a small update into larger significance.
-- A restrained rewrite can rescue a thin item if it strips filler and stays within the facts.
-- [insider] Keep the report brief and disciplined when the digest is thin; clarity improves with compression.
-- [insider] Stay inside the verified source snapshot and use broader context only when it is explicitly supported.
-- [columnist] When the source is nearly detail-free, clean grounding and a crisp headline may still be the only viable path, but only if the rest of the item adds no unsupported texture.
+- Lead with the single verified development when the source is narrow; one supported fact can carry the piece.
+- Keep the lede centered on the exact source-backed claim instead of broadening into extra framing.
+- Match the headline tightly to the confirmed development and put full identification up front when it clarifies the notice.
+- Strip unfinished, broken, or reflective filler; clean, direct openings improve thin items fast.
+- Use concise, source-anchored phrasing when the material only supports a narrow statement.
+- Preserve a clear stake only when the source actually supports it; restraint reads stronger than overreach.
+- A rewrite can save a thin item if it removes speculation and stays glued to the confirmed facts.
+- [insider] Clean, specific injury updates work when every detail is source-backed and the structure stays tight.
+- [columnist] Exact quote-led or fact-led framing works when the item is built around one supported core and nothing more.
+- [columnist] Direct death-notice or status-notice writing is strongest when it stays factual and avoids texture that does not add evidence.
 
 ## What to avoid
-- Do not let a thin-source story drift into source-meta phrasing like “the report” or references to an external digest.
-- Do not repeat the lede in the body; each sentence should add a new sourced detail.
-- Do not pad a small update with extra explanation, context, or commentary that is not in the source.
-- Do not bury the verified update under setup or soft framing.
-- Do not widen a single confirmed note into broader significance claims without sourcing.
-- Avoid making the article feel heavier by forcing analysis when the source only supports a brief status report.
-- Do not use report-tied or source-narration framing when the provided material only supports the headline-level fact.
-- Do not lean on unsupported source details to bridge gaps in verification.
-- [insider] Avoid a body that rephrases the same update instead of adding sourced substance.
-- [insider] Avoid extending the item beyond the confirmed details in the source.
-- [insider] Avoid treating source-thin items as opportunities for interpretation; keep the uncertainty and limits intact.
-- [source-side, not fixable in prose] If the source is missing or too thin to verify against, do not invent connective tissue, player/team context, or extra fact pattern to make the item publishable.
+- Do not let a narrow fact get expanded into broader scenario framing without concrete source support.
+- Do not repeat the same source-backed point in multiple sentences; each line must add something new.
+- Do not leave the intro cut off or structurally incomplete.
+- Do not pad a small item with reflective or speculative language just to make it feel larger.
+- Do not add unsupported interpretive context when the source only confirms the core fact.
+- Do not mismatch the headline and lede by implying more than the source actually says.
+- Avoid forcing commentary into a piece that is only supported as a brief status, quote, or death notice.
+- [columnist] Do not build a fuller pairing or relationship narrative unless the source explicitly supports it; keep quote-based items at the exact claim level.
+- [insider] Do not state timelines, diagnoses, or setting details unless the digest explicitly supports them.
+- [insider] If the source material is thin, keep the headline and intro at the confirmed team/player/injury level rather than adding missing specifics.
+- [source-side, not fixable in prose] If the source digest is missing or only offers a small core fact, do not invent extra context or connective tissue to thicken the story.
+- [source-side, not fixable in prose] Ignore noisy metadata or unrelated IDs; keep the story itself anchored to the verified core facts.
+- [source-side, not fixable in prose] If the digest is missing usable facts, the piece cannot be salvaged by rewriting alone; avoid trying to rescue it with unsupported prose.
