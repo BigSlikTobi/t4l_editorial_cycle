@@ -24,7 +24,9 @@
 - Do not infer what a clearance, status note, or return means unless the source digest explicitly says it.
 - Do not mismatch the headline and lede by implying more than the source actually says.
 - Do not pad a small item with reflective or speculative language just to make it feel larger.
-- [insider] Do not add status framing that goes beyond the digest, even if the underlying update is real.
+- [insider] Do not add roster-inference language or extra player-name framing unless it is directly supported by source facts.
+- [insider] Do not let the headline, intro, and body drift outside the closed-world facts; keep all three strictly inside what the digests confirm.
 - [source-side, not fixable in prose] If the source digest is missing or only offers a small core fact, do not invent extra context or connective tissue to thicken the story.
 - [source-side, not fixable in prose] Empty or effectively empty source digests are not publishable; no amount of headline polish or attribution can create a factual base.
 - [source-side, not fixable in prose] A readable multi-item roundup still fails if the allowed record cannot verify the facts behind it.
+- [source-side, not fixable in prose] Dismissed items built on an empty digest cannot be rescued by rewriting; the problem is the missing source record, not execution.
