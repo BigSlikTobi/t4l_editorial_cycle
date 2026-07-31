@@ -1,15 +1,14 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the concrete change immediately when the source supplies a clear, verifiable move.
-- Keep the headline and lede on the same specific fact; narrow insider items work best when both layers say exactly what changed.
-- Use the source’s strongest confirmed detail as the opening hook instead of circling a broad premise.
-- Trim repetitive paraphrase; a concise lead feels sharper than re-saying the same idea in multiple ways.
-- When the source is limited, stay tightly inside the verified wrinkle rather than stretching for extra analysis.
-- Source-anchored specificity can carry a small update even without a big news event, as long as the writing stays precise.
-- Clean, direct framing helps update-style pieces read as news rather than vague commentary.
-- Tight openings work best when they identify the real movement in the story, not just the general topic.
-- If no extra facts are available, a plain statement of the confirmed move can still work as long as every layer matches.
+- Lead with the core roster move or status change immediately when the source gives a clear, verified update.
+- Keep the headline, lede, and body aligned on the same specific fact; the strongest update pieces stay consistent end to end.
+- Use the source’s best confirmed wrinkle as the hook instead of opening with a broad team-theme premise.
+- Tight, grounded framing makes short update stories read as real news rather than commentary.
+- A concise explanation of why the move matters is enough when it stays inside the verified facts.
+- Strong execution can come from simple reporting: no extra flourish is needed if every layer is specific and clean.
+- [insider] Stay anchored in the confirmed transaction or roster move first, then add only the consequence language the digest supports.
+- [insider] A clean receiver-room update can carry well when the article names the concrete personnel change and keeps the causal chain modest.
 
 ## What to avoid
 - Do not leave the reader with only a broad premise when the source supports a concrete development.
@@ -19,8 +18,7 @@
 - Do not overexplain a small role-change item with extra analytical weight that the source does not support.
 - Do not mismatch the headline and lede by making the headline more specific than the body.
 - Do not widen a narrow source fact into larger implications unless the digest actually supplies them.
-- [insider] Do not treat a contract move as a springboard for roster-security or central-piece claims when the digest only confirms the transaction.
-- [insider] Do not frame the item as “according to” or otherwise narrate the sourcing in the lede when the digest offers no usable supporting detail.
-- Do not let a thin source package feel confident about consequences that were never confirmed.
-- Do not build around broad paraphrase when the source digest is missing or unusable; without verifiable facts, the item is too undergrounded to publish (source-side, not fixable in prose).
+- [insider] Do not treat a transaction or reunion as proof of deeper roster-security or central-piece claims unless the source explicitly supports that read.
+- [insider] Do not narrate sourcing or hedge around the digest when the story already has enough verified detail to state the move cleanly.
+- Do not publish when the source digests are effectively empty or missing; a plausible story cannot be verified without facts (source-side, not fixable in prose).
 - Do not rely on unsupported meta-hedging about the digest itself; if the source is effectively empty, the item is an always-dismiss situation (source-side, not fixable in prose).
