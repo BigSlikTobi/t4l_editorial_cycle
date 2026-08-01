@@ -9,10 +9,10 @@
 - Preserve trust by avoiding unsupported elaboration; clean grounding is a strength in insider-style updates.
 - A simple reported-action story works when it is direct, specific, and unembellished.
 - [insider] Report the single sourced development plainly; concise, factual delivery is the right tone.
-- [insider] A clear team-specific news hook can land well when every sentence stays anchored to the confirmed update.
 - [insider] Keep a checked checkpoint or timetable detail in the story when it is explicitly sourced; it adds useful momentum without breaking grounding.
 - [analyst] When the source includes concrete details like cap or contract facts, weave them into the lede/body to make the payoff feel tangible.
 - [analyst] Tight grounding plus concrete supporting details can justify a strong, tap-worthy angle without drifting beyond the digest.
+- For columnist-style pieces, a direct pushback or clear stance can work if the headline and intro stay tightly on that one verified objection.
 
 ## What to avoid
 - Do not widen a one-move update into broader implications or career-significance commentary unless the source supports it.
@@ -24,8 +24,15 @@
 - Do not bury the core news under extra setup; the main development should remain front and center.
 - [insider] Do not overplay the angle with embellishment; keep the reporting crisp and source-bound.
 - Do not infer additional personnel, role, or decision-making details beyond what is explicitly reported.
-- If the digest mixes in unrelated material, strip it out and rebuild around the actually supported story; do not try to force a clean narrative from mismatched source bits.
-- Do not use timeline or return-to-action details unless they are clearly tied to the reported decision/status.
-- Avoid source-meta phrasing like “the digest identifies” or “no additional terms were included”; just state the reported facts.
-- [columnist] Avoid prestige framing or career résumé inflation when the source only confirms a near-term assignment; keep the lede anchored to the assignment itself.
-- [columnist] If the digest is effectively empty, don’t try to rescue the article with added color or unsupported broadcast-role specifics (source-side, not fixable in prose).
+- Do not build team-wide implications from a thin source digest; if the update only supports one player status note, keep the framing there.
+- Avoid source-meta phrasing like “the digest identifies” or “according to the report”; just state the reported facts.
+- [analyst] Do not build a bridge-year or organizing-principle frame from a fact-free digest; if the source is thin, the angle is not supportable.
+- Don’t add offseason-tone or broader team-framing language when the only sourced point is a direct rebuttal to one label.
+- Don’t imply season-long or organizational consequences from a single pushback unless the source explicitly goes there.
+- Dismissals built on missing or fact-free source digests are source-side, not fixable in prose.
+- Avoid headlines that promise a development or linkage when the digest itself is empty or non-supportive; that mismatch is not salvageable in rewrite.
+- [columnist] If the digest is empty, a pushback/rebuttal headline is not enough on its own; avoid building a stance piece without verifiable supporting facts.
+- [columnist] Repetitive lede/body restating the same unsupported premise is a failure mode when the source offers no facts to extend the argument.
+- [columnist] Do not name extra people or details that are absent from the source; an empty digest cannot support added attribution or injury specifics.
+- [columnist] When the source is fact-free, the fix is not a sharper opinion but a better source.
+- Dismissals based on empty digests are source-side, not fixable in prose.
