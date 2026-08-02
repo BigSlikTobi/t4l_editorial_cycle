@@ -1,32 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the clearest concrete hook first; one strong, sourced fact can anchor the whole piece.
-- Keep analyst copy specific and data-led, using the most tangible details the source provides instead of generic framing.
-- Let a tight headline and intro mirror the same verified angle so the article feels grounded.
-- Use fan-vote, count, or status details when they are explicitly sourced; they make the payoff feel real.
-- Stay concise and source-bound in breaking or digest-driven items rather than stretching for broader significance.
-- Preserve a narrow focus when the story is really about one roster battle, transaction, return, or role update.
-- When the source offers a development path or background detail, tie it directly to the present role projection.
-- [analyst] Weave concrete roster math and role context into the lede/body when they are available; that keeps the story from reading generic.
-- [insider] Report the single sourced development plainly; crisp, factual delivery is the right tone.
-- [columnist] A direct stance can work if it stays tightly tied to one verified objection and does not outrun the facts.
-- Keep the frame as narrow as the digest supports; a simple “early camp standout” angle can be enough when that is all the source truly backs.
+- Open on the clearest concrete update first; a single sourced fact can anchor the whole piece.
+- Keep insider copy clean and factual, especially when the story is just an injury or status update.
+- Lead with the most immediate game or availability consequence when it is supported.
+- Use the most concrete detail available in the source, not meta explanation, to drive the lede.
+- Keep the headline and first sentence aligned with the same verified event.
+- Stay narrow when the story only supports one development; concise injury notes should not be inflated.
+- Let a public, plainly supported fact do the work rather than dressing it in source-report language.
+- Preserve source-bound writing when the article’s value is in a single diagnosis, designation, or availability question.
+- [insider] Report the diagnosis directly and cleanly; crisp factual delivery is the right tone.
+- When a piece is fully source-bound, keep the entire treatment tightly within that closed set of facts.
+- For columnist-style pieces, a clean, validated claim can still carry the story if it is fully supported by the source record.
 
 ## What to avoid
-- Do not start with a vague or generic lede when the source includes stronger concrete hooks.
-- Do not lean on broad pressure-point or consequence framing if the strongest facts are more specific.
-- Do not stretch beyond the most solid cited details just to create bigger implications.
-- Do not let the headline overpromise a broader takeaway when the body is really about a narrower roster note.
-- Do not bury the best sourced details, such as counts or status updates, under abstract setup.
-- Do not use analyst framing that feels generic; the angle should be driven by specifics, not atmosphere.
-- Do not widen a one-story roster battle into unsupported team-wide significance.
-- Do not add unsupported elaboration to make the story feel fuller or more dramatic.
-- Do not treat thin source material as permission to speculate about future outcomes or organizational meaning.
-- [analyst] Avoid vague "pressure point" openings when the source supports a more exact, number-based hook.
-- [insider] Do not rely on source-meta phrasing like "reported Tuesday" when the story can lead with the concrete development.
-- [columnist] Do not build a stance piece that repeats a premise without fresh support; the argument has to stay tethered to verified facts.
-- Do not publish or rewrite from an effectively empty digest; if the source has no usable facts, the piece is not supportable.
-- Do not add named-player specifics or other details that are not actually present in the digest (source-side, not fixable in prose).
-- Do not invent receiver-room context or other roster details to prop up a thin camp note; if the digest is empty, keep the story minimal or abandon it.
-- Do not force a clean lede to carry an article when the digest has no factual substance; a polished opening cannot compensate for missing source support (source-side, not fixable in prose).
+- Do not start with source/meta phrasing like “according to a source report” when the concrete update is available.
+- Do not add notes about missing team context or other editorial scaffolding inside the story.
+- Do not bury the most concrete fact, such as being carted off or the injury designation, under setup.
+- Do not use a vague lede when the source supports a tighter, cleaner injury-first opening.
+- Do not widen a simple injury note into broader speculation about team implications.
+- Do not overstate significance beyond the diagnosis and immediate status question.
+- Do not let insider copy feel padded with unsupported framing; keep it strictly to the injury, diagnosis, and status.
+- Do not rely on meta narration to explain why the piece is brief; just write the brief supported story.
+- [insider] Avoid source-report language that weakens grounding when the injury fact itself is enough.
+- [insider] Do not mention absent context as if it were part of the story; if it is not sourced, leave it out.
+- Do not force commentary or analysis onto a straightforward update without textual support.
+- Do not proceed when the diagnosis claim cannot be verified from the source record; if the source digests are empty, the story is not supportable (source-side, not fixable in prose).
