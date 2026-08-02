@@ -28,6 +28,7 @@
 - [insider] If no further details are reported, say that plainly instead of dressing it up.
 - [insider] Treat empty or unusable source digests as source-side, not fixable in prose (source-side, not fixable in prose).
 - [columnist] Don’t build a full article from a headline-only premise or repeat the same thin idea across headline, subhead, intro, and body; without verifiable facts, the piece is not salvageable in prose (source-side, not fixable in prose).
+- [columnist] Don’t center a columnist piece on a quote or claim when the source digest is effectively empty or misaligned with the article; that is a source-side problem, not a prose fix (source-side, not fixable in prose).
 - [analyst] Don’t stop at the quote alone; if the angle is competition or roster fit, include the verified numbers or contractual stakes that make it meaningful.
 - [analyst] Avoid turning a self-belief quote into a bigger conclusion about pecking order than the source support allows.
 - [analyst] Don’t add roster-fit or deployment speculation unless the source explicitly supports it; keep “explore” or “expected to explore” reports tightly scoped to the sourced possibility.
