@@ -11,7 +11,8 @@
 - Keep insider copy clean and direct when the only support is a confirmed move, contract, availability update, or injury note.
 - [insider] A precise headline-level update can publish cleanly if the intro stays tightly on the confirmed fact.
 - [columnist] A sharp quote can be the story’s center if the rest of the framing stays grounded in that exact line.
-- [columnist] A quote-led story can work when the lede adds the source’s actual context instead of repeating the same wording.
+- [insider] A focused transaction story can earn strong specificity when it uses the available concrete details without overreaching.
+- [insider] Tightening the intro to add one relevant production/detail angle can improve a clean, single-team update without losing focus.
 
 ## What to avoid
 - Do not repeat the headline almost verbatim in the lede; add new information or a cleaner angle.
@@ -25,4 +26,5 @@
 - [insider] Avoid vague editorial scaffolding when the source only gives one concrete update.
 - [insider] If no further details are reported, say that plainly instead of dressing it up.
 - [insider] Do not rely on headline/summary alone when the source file does not supply the underlying facts; unsupported grounding is a hard failure.
-- [columnist] Avoid repetitive, self-referential phrasing about “the line” or “the only concrete thing”; cut meta language and use the source facts directly.
+- [insider] Keep the body on the headline team/story; don’t pivot to an unrelated second move when the brief is single-story.
+- [insider] If the source cluster contains multiple supported moves, either give each a clean sentence or stay fully focused on one; don’t imply full coverage while omitting a second available development.
