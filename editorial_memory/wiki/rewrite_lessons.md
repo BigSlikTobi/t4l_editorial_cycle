@@ -2,7 +2,7 @@
 
 ## What works (keep doing)
 - Open on the clearest verified development first; a single grounded fact can carry a thin update.
-- Keep the headline and lede aligned with the same confirmed event or quote.
+- Keep the headline and lede aligned with the same confirmed event or quote, but make them do different jobs.
 - Lead with the concrete action, quote, or outcome, not editorial framing.
 - Use the most specific source detail available to anchor a short update.
 - Stay tight when the story only supports one development; brevity is a strength if it is focused.
@@ -11,8 +11,8 @@
 - Keep insider copy clean and direct when the only support is a confirmed move, contract, availability update, or injury note.
 - [insider] A season-ending injury/surgery update works when it stays on the confirmed medical fact and the resulting roster move, with no extra stretch-run framing.
 - [columnist] A sharp quote can be the story’s center if the rest of the framing stays grounded in that exact line.
-- [analyst] Ground the piece in roster math, usage history, or contract stakes when the source gives a practical team decision behind the quote.
-- [analyst] When the source only confirms an exploration or possibility, keep the angle to that one sourced development and any directly named reunion/context.
+- [columnist] A direct self-assessment or declarative quote can carry the story if the prose stays anchored to that exact claim and avoids drifting into commentary about the quote itself.
+- [columnist] A concrete, unusual gesture with a crisp figure can support a high-grounding story when the headline and lede stay fully tethered to the verified details.
 
 ## What to avoid
 - Do not repeat the headline almost verbatim in the lede; add new information or a cleaner angle.
@@ -23,19 +23,10 @@
 - Do not use source-report language that weakens the directness of a clean, grounded update.
 - Do not over-explain why the piece is short; keep the prose focused on the confirmed fact.
 - Do not force analysis onto a report that only supports a factual transaction, quote, status item, or injury note.
+- [columnist] Avoid layering in implications, team-wide meaning, or commentary about the quote being “the story”; keep the exact line as the center.
 - [insider] Avoid asserting broader roster-stretch-run framing or team-wide impact unless the digest directly supports those facts.
 - [insider] Avoid vague editorial scaffolding like “according to the report” when the source already gives the concrete update.
 - [insider] If no further details are reported, say that plainly instead of dressing it up.
-- [insider] Treat empty or unusable source digests as source-side, not fixable in prose (source-side, not fixable in prose).
-- [columnist] Don’t build a story around a fabricated or unsupported premise; if the digest doesn’t verify the claim, the problem is source-side, not a prose fix (source-side, not fixable in prose).
-- [columnist] Don’t add arrest, injury, or other fallout framing unless the digest directly supports it; keep the piece to the verified public remark or note.
-- [columnist] Don’t repeat unsupported narrative beats in the lede and body when the source only supports a simple confidence statement.
-- [columnist] Don’t center a columnist piece on a quote when the source digest is effectively empty or misaligned with the article; that is a source-side problem, not a prose fix (source-side, not fixable in prose).
-- [columnist] Don’t let generic scene-setting or market-moving narration carry a quote-driven note when the body lacks supporting facts.
-- [columnist] Don’t proceed on quote-driven premises when the provided digest/source metadata is mismatched; that’s a source-context failure, not something prose can repair (source-side, not fixable in prose).
-- [analyst] Don’t stop at the quote alone; if the angle is competition or roster fit, include the verified numbers or contractual stakes that make it meaningful.
-- [analyst] Avoid turning a self-belief quote into a bigger conclusion about pecking order than the source support allows.
-- [analyst] Don’t add roster-fit or deployment speculation unless the source explicitly supports it; keep “explore” or “expected to explore” reports tightly scoped to the sourced possibility.
-- [analyst] Keep reunion-style exploration stories bounded to the sourced possibility and the named context; do not imply a completed addition.
+- [columnist] Avoid meta phrasing that explains the quote instead of advancing it; every paragraph should stay tied to the quote’s concrete claim.
 - Don’t build a full narrative from a headline-level source digest alone; if the source has no usable facts, the story is not salvageable in prose (source-side, not fixable in prose).
 - Don’t rely on unsupported team-tag, arrest, or bounce-back framing when the source digest is empty or misaligned; that is source-side, not a prose fix (source-side, not fixable in prose).
