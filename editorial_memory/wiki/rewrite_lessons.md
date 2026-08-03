@@ -8,7 +8,7 @@
 - Stay tight when the story only supports one development; brevity is a strength if it is focused.
 - Preserve a factual, source-bound tone when no extra context is available.
 - Let the confirmed status change or transaction do the work rather than inflating it with commentary.
-- Keep insider copy clean and direct when the only support is a confirmed move, contract, availability update, or injury note.
+- Keep insider copy clean and direct when the only support is a confirmed move, contract, availability update, injury note, or name change.
 - [insider] A season-ending injury/surgery update works when it stays on the confirmed medical fact and the resulting roster move, with no extra stretch-run framing.
 - [columnist] A sharp quote can be the story’s center if the rest of the framing stays grounded in that exact line.
 - [columnist] A direct self-assessment or declarative quote can carry the story if the prose stays anchored to that exact claim and avoids drifting into commentary about the quote itself.
@@ -22,11 +22,15 @@
 - Do not add unsupported context just to make the story feel fuller.
 - Do not use source-report language that weakens the directness of a clean, grounded update.
 - Do not over-explain why the piece is short; keep the prose focused on the confirmed fact.
-- Do not force analysis onto a report that only supports a factual transaction, quote, status item, or injury note.
+- Do not force analysis onto a report that only supports a factual transaction, quote, status item, injury note, or name change.
 - [columnist] Avoid layering in implications, team-wide meaning, or commentary about the quote being “the story”; keep the exact line as the center.
 - [insider] Avoid asserting broader roster-stretch-run framing or team-wide impact unless the digest directly supports those facts.
 - [insider] Avoid vague editorial scaffolding like “according to the report” when the source already gives the concrete update.
 - [insider] If no further details are reported, say that plainly instead of dressing it up.
-- [columnist] Avoid meta phrasing that explains the quote instead of advancing it; every paragraph should stay tied to the quote’s concrete claim.
+- [insider] Fix any team-reference mismatch or internally inconsistent source labeling before publication; never carry a roundup item with the wrong team attached.
+- [insider] In roundup posts, keep multiple confirmed items distinct and hedged exactly as sourced instead of repeating one hook across headline, subhead, and lede.
+- [insider] When a roundup includes more than one concrete item, give each item its own sentence or beat; do not make the second note feel like an afterthought.
+- [insider] If one item is the only fresh angle in the digest, lead with it rather than the more generic or repetitive note.
 - Don’t build a full narrative from a headline-level source digest alone; if the source has no usable facts, the story is not salvageable in prose (source-side, not fixable in prose).
 - Don’t rely on unsupported team-tag, arrest, or bounce-back framing when the source digest is empty or misaligned; that is source-side, not a prose fix (source-side, not fixable in prose).
+- Don’t publish specific injury-timeline or player/team-context claims when the digest is missing; that is source-side, not fixable in prose (source-side, not fixable in prose).
