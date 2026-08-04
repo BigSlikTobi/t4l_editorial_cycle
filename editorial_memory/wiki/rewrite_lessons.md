@@ -8,11 +8,11 @@
 - Stay tight when the story only supports one development; brevity is a strength if it is focused.
 - Preserve a factual, source-bound tone when no extra context is available.
 - Let the confirmed status change or transaction do the work rather than inflating it with commentary.
-- [insider] When the digest supports only a reported link or reunion, a clean hedge can still be readable if it stays centered on the team, player, and exact report.
+- [insider] When the digests support a real team-specific stake plus a clear status update, a concise grounded lead can still read well even without extra flourish.
+- [insider] Keep the piece centered on the verified absence/status, the relevant team context, and any explicit contract-talk update when those are all supported.
 - [analyst] When multiple verified facts point to a real on-field or roster stake, it can support a stronger-angle lead if the copy stays grounded.
 - [analyst] Concrete numbers and trade-offs can support a tougher-path angle when the source digests clearly establish them.
 - [columnist] A sharp, specific wrinkle can work as the story’s center when the rest of the copy stays tightly source-bound.
-- [columnist] If the source supports one concrete development only, a concise headline/intro/body that all stay inside that fact can still merit a tap.
 
 ## What to avoid
 - Do not repeat the headline almost verbatim in the lede; add new information or a cleaner angle.
