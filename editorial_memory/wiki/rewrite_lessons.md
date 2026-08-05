@@ -11,11 +11,14 @@
 - Let the confirmed development do the work instead of adding explanatory filler or meta framing.
 - Strong grounding matters most: if the headline and intro stay inside the verified facts, a short update can still read well.
 - [analyst] A tight team-specific hook can work when it is the cleanest verified angle and the intro stays on that angle.
+- [analyst] A roster-competition frame can work if it is anchored in specific team names already in the article and the lede stays concrete rather than generic.
+- [analyst] Ground the piece in the clearest camp winners and verified rep/play details; a focused practice takeaway beats a name-heavy list.
 - [insider] A concise, news-first lede can work when it cleanly threads the key quote, the contract terms, and the player status update without flourish.
 - [insider] A confirmed injury/carted-off scene can carry the story on its own when the digest has no added facts; keep the lede on the scene and emotion, not on unsupported context.
 - [analyst] A contract-stakes lead works when it stays anchored to verified terms and record-based context, then uses a healthy-return detail as the secondary hook.
 - [analyst] Concrete team-specific stakes and named quotes can strengthen the piece when they remain fully supported and the headline-to-lede sequence stays non-redundant.
 - [insider] When the source only confirms a signing, a bare-bones headline and intro centered on that single fact is stronger than trying to add role or impact color.
+- [analyst] A practice-winners roundup works when the lead centers only the strongest source-backed reps or plays and drops unsupported player framing.
 
 ## What to avoid
 - Do not make the headline, subhead, and intro all restate the same opening beat; the lede should move forward.
@@ -27,6 +30,7 @@
 - Do not bring in unrelated broader context just to make a short report feel fuller.
 - Do not let headline and intro drift into repetitive restatement without adding a new source-backed detail.
 - Do not bury the main verified point under setup or meta language.
+- Do not use generic placeholder phrases like "worth reading now" or "the roster picture" when they add nothing concrete.
 - Do not add injury-status, consequence, or roster-impact language when the digest only confirms the visible event.
 - Do not state a contract or role claim as fact unless the digest explicitly supports it.
 - Do not publish a story when the digest contains no usable facts and the draft invents specifics; that is a source-side, not fixable in prose, failure.
@@ -47,3 +51,8 @@
 - [columnist] Do not treat a headline-level camp note as enough to build a meaningful column when the source provides no concrete details.
 - [insider] Do not publish or rewrite around a signing claim when the digest is empty or internally inconsistent with the article; that is a source-side, not fixable in prose, failure.
 - [insider] Do not try to salvage unsupported reporting with a rewrite when the source metadata and article claims do not line up; stop and wait for a grounded digest.
+- [analyst] Do not center unsupported player names or practice details when the digest supports a cleaner, stronger set of reps and plays; refocus on the verified standout sequence instead.
+- [analyst] Do not omit the clearest source-backed practice sequence from the lede if it is stronger than the names already in the draft.
+- [analyst] Do not build a generic roster-projection piece from an effectively empty digest; if the source gives no usable facts beyond names, the story is ungrounded and not publishable (source-side, not fixable in prose).
+- [analyst] Do not name players that are not in the provided mentions; keep the body and bullets inside the grounded camp winners and verified cornerback plays.
+- [analyst] Do not let the lede and packaging become repetitive or source-summary-like; keep the analyst take tight and forward-moving.
