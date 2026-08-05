@@ -26,3 +26,4 @@
 - Do not invent quotes, player attributions, or camp details when the source digest provides no facts beyond the story title; rebuild from only the verified subject (source-side, not fixable in prose).
 - Do not publish when the digest is effectively empty; unsupported comparison-driven rewrites are ungrounded under the closed-world rule (source-side, not fixable in prose).
 - Do not introduce unsupported camp-setting specifics or “instant impact” claims when the digest has no usable facts to anchor them (source-side, not fixable in prose).
+- Do not force publication from an empty digest; if there is no factual base, the issue is source-side and not salvageable in prose (source-side, not fixable in prose).
