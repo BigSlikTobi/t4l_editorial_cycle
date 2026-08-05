@@ -15,6 +15,7 @@
 - [insider] A confirmed injury/carted-off scene can carry the story on its own when the digest has no added facts; keep the lede on the scene and emotion, not on unsupported context.
 - [analyst] A contract-stakes lead works when it stays anchored to verified terms and record-based context, then uses a healthy-return detail as the secondary hook.
 - [analyst] Concrete team-specific stakes and named quotes can strengthen the piece when they remain fully supported and the headline-to-lede sequence stays non-redundant.
+- [insider] When the source only confirms a signing, a bare-bones headline and intro centered on that single fact is stronger than trying to add role or impact color.
 
 ## What to avoid
 - Do not make the headline, subhead, and intro all restate the same opening beat; the lede should move forward.
@@ -38,5 +39,11 @@
 - Do not write a retirement or transaction story from an empty digest unless the source actually supplies a verifiable fact to anchor it; otherwise it is source-side, not fixable in prose.
 - Do not layer in plans, implications, or team reaction when the source only offers a bare headline-level event.
 - [insider] Do not turn an unverified retirement note into a fuller roster story; if the digest is empty, there is no safe way to add context in prose.
+- [insider] Do not add claims about a player's proven quality or how a move changes the passing group unless the source directly supports those specifics; keep the story to the confirmed signing fact.
 - [analyst] Do not let a contract-security story drift into unsupported field-return wording or source-meta phrases; keep the lead on the verified extension/record facts and tighten any injury update to supported camp details only.
 - [analyst] Do not overstate job-security or roster implications beyond what the digest supports; keep pressure framing tied to verified record/extension facts.
+- [columnist] Do not turn an empty digest into a generalized injury-ravaged narrative; if there are no usable facts, the piece is ungrounded and not publishable.
+- [columnist] Do not acknowledge the lack of specifics and then proceed with vague, generalized claims; that weakens the article instead of salvaging it.
+- [columnist] Do not treat a headline-level camp note as enough to build a meaningful column when the source provides no concrete details.
+- [insider] Do not publish or rewrite around a signing claim when the digest is empty or internally inconsistent with the article; that is a source-side, not fixable in prose, failure.
+- [insider] Do not try to salvage unsupported reporting with a rewrite when the source metadata and article claims do not line up; stop and wait for a grounded digest.
