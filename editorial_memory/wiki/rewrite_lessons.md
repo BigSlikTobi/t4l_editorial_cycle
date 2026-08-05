@@ -30,3 +30,5 @@
 - Do not keep unsupported contract framing from the title when the digest gives no backing for it.
 - Do not add speculation or extra status claims when the only safe angle is the confirmed scene itself.
 - Do not use meta sentences about what the digest includes or lacks; if there are no more facts, stay disciplined and stop at the verified event.
+- Do not frame an empty digest as a real matchup or battle just to create a story; unsupported matchup framing is a source-side, not fixable in prose, failure.
+- Do not invent player or team specifics to supply a missing premise when the source provides none.
