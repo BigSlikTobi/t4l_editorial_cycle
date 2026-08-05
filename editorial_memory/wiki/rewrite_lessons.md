@@ -4,14 +4,17 @@
 - Open with one clean verified angle and let the intro advance it instead of repeating the same setup.
 - Keep headline, subhead, and lede aligned to the same core fact, then add one new source-backed detail.
 - Separate two strong story threads when both are present, so each gets room instead of crowding the opening.
-- Lead with the strongest practice-level detail when the source supports it; concrete on-field specifics add credibility.
+- Lead with the strongest practice-level detail when the source supports it; concrete specifics add credibility.
 - Use a narrow, well-supported hook rather than broadening into extra interpretation.
 - Keep the copy tightly source-bound when the digest is thin; brevity works if every line is factual.
 - Preserve a direct, factual tone when the source only supports a limited update.
 - Let the confirmed development do the work instead of adding explanatory filler or meta framing.
 - Strong grounding matters most: if the headline and intro stay inside the verified facts, a short update can still read well.
 - [analyst] A tight team-specific hook can work when it is the cleanest verified angle and the intro stays on that angle.
+- [insider] A concise, news-first lede can work when it cleanly threads the key quote, the contract terms, and the player status update without flourish.
 - [insider] A confirmed injury/carted-off scene can carry the story on its own when the digest has no added facts; keep the lede on the scene and emotion, not on unsupported context.
+- [analyst] A contract-stakes lead works when it stays anchored to verified terms and record-based context, then uses a healthy-return detail as the secondary hook.
+- [analyst] Concrete team-specific stakes and named quotes can strengthen the piece when they remain fully supported and the headline-to-lede sequence stays non-redundant.
 
 ## What to avoid
 - Do not make the headline, subhead, and intro all restate the same opening beat; the lede should move forward.
@@ -35,3 +38,5 @@
 - Do not write a retirement or transaction story from an empty digest unless the source actually supplies a verifiable fact to anchor it; otherwise it is source-side, not fixable in prose.
 - Do not layer in plans, implications, or team reaction when the source only offers a bare headline-level event.
 - [insider] Do not turn an unverified retirement note into a fuller roster story; if the digest is empty, there is no safe way to add context in prose.
+- [analyst] Do not let a contract-security story drift into unsupported field-return wording or source-meta phrases; keep the lead on the verified extension/record facts and tighten any injury update to supported camp details only.
+- [analyst] Do not overstate job-security or roster implications beyond what the digest supports; keep pressure framing tied to verified record/extension facts.
