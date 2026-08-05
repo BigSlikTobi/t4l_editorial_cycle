@@ -32,3 +32,6 @@
 - Do not use meta sentences about what the digest includes or lacks; if there are no more facts, stay disciplined and stop at the verified event.
 - Do not frame an empty digest as a real matchup or battle just to create a story; unsupported matchup framing is a source-side, not fixable in prose, failure.
 - Do not invent player or team specifics to supply a missing premise when the source provides none.
+- Do not write a retirement or transaction story from an empty digest unless the source actually supplies a verifiable fact to anchor it; otherwise it is source-side, not fixable in prose.
+- Do not layer in plans, implications, or team reaction when the source only offers a bare headline-level event.
+- [insider] Do not turn an unverified retirement note into a fuller roster story; if the digest is empty, there is no safe way to add context in prose.
