@@ -3,7 +3,7 @@
 ## What works (keep doing)
 - Open on the single verified news hook and keep the lede centered on that one development.
 - Use a narrow, source-backed angle; a specific injury, start, signing, suspension, return, or status update is stronger than a broadened take.
-- Keep headline and lede tightly aligned so the same confirmed fact carries both.
+- Keep headline and lede tightly aligned, but not identical, so the same confirmed fact carries both without repetition.
 - Thread in a small amount of source-backed context when it directly clarifies the issue, especially enforcement or precedent context.
 - Preserve a direct, factual tone when the source supports a clean news brief.
 - Keep the body focused on the confirmed update and the immediate unanswered question, not broader roster or organizational interpretation.
@@ -12,15 +12,14 @@
 - Stay tightly inside the digest on correction-style stories; a clear, fan-relevant clarification can work well without extra scene-setting.
 - [analyst] A quarterback-start or competition update works when it stays on the named decision and verified resume facts.
 - [insider] Injury, suspension, discipline, practice-ejection, or return coverage works when it stays anchored to the confirmed event and named people, with only source-backed immediate context.
-- [insider] A return or status story can work well when it stays on the comeback, the role assigned, usage details, and specific source-backed praise.
-- [insider] Tighten the prose around the confirmed action first; direct, factual phrasing is stronger than meta framing about the source.
 - [columnist] A corrective take works when it remains a grounded correction of the viral claim, not a bigger argument built around it.
+- [columnist] Clear, digest-bound clarification pieces can still publish cleanly when they keep the correction specific and team-linked.
 
 ## What to avoid
-- Do not add unsupported player, contract, roster, or reaction details just to make the update feel fuller.
+- Do not add unsupported player, contract, roster, reaction, or “crucial/simple goal” details just to make the update feel fuller.
 - Do not treat a headline-level summary as if it confirms extra context or side claims.
 - Do not widen a simple announcement into broader competition, fallout, or roster-meaning language unless the digest supports it.
-- Do not let the headline and lede drift beyond the specific verified event.
+- Do not let the headline and lede drift beyond the specific verified event, or mirror each other sentence-for-sentence.
 - Do not stack extra contextual claims that are not explicitly in the source set.
 - Do not imply sequencing or implications more strongly than the digest supports it.
 - Do not introduce side names or examples unless the source digest directly supports them.
@@ -32,3 +31,6 @@
 - [insider] Always-dismiss cases with empty source digests are source-side, not fixable in prose; do not attempt to invent a rewrite path when there is no closed-world basis to verify the article.
 - [columnist] When the digest is thin, do not add interpretive setup or social-media framing; stay with the single supported correction and avoid depth-chart implications.
 - [columnist] Don’t turn a misleading-clip correction into a larger speculative narrative; keep the rewrite anchored to the verified correction itself.
+- [columnist] If the source digest contains no usable facts, avoid generic chemistry/turnover framing and any implied narrative about the relationship or quarterback change; that is source-side, not fixable in prose.
+- [columnist] When the digest is thin, cut filler like repeated “prove it”/“fans remember” framing and keep the lede on the one supported fact plus the simple goal.
+- [columnist] Avoid source-meta phrasing and soft paraphrase; if the only support is a headline-level idea, the rewrite must stay concrete and direct or it won’t publish cleanly.
