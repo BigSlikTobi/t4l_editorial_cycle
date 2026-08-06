@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with one verified angle and let the lede move forward instead of rephrasing the same setup.
+- Open with one verified angle and keep the lede moving forward instead of rephrasing the same setup.
 - Keep headline, subhead, and intro aligned to the same core fact, then add one source-backed detail if available.
 - Use a narrow, well-supported hook rather than broadening into extra interpretation.
 - Keep the copy tightly source-bound when the digest is thin; brevity works if every line is factual.
@@ -13,6 +13,7 @@
 - [insider] A concise, news-first lede can work when it cleanly threads the key quote, contract terms, and status update without flourish.
 - [insider] A confirmed injury/carted-off scene can carry the story on its own when the digest has no added facts; keep the lede on the scene and emotion, not unsupported context.
 - [insider] When the source only confirms a signing or hire, a bare-bones headline and intro centered on that single fact is stronger than trying to add role or impact color.
+- [insider] A simple ejection or discipline update can work on its own when the source only gives the confirmed action; keep the lede lean and factual.
 
 ## What to avoid
 - Do not make the headline, subhead, and intro all restate the same opening beat; the lede should move forward.
@@ -25,6 +26,7 @@
 - Do not bury the main verified point under setup or meta language.
 - Do not use generic placeholder phrases like "worth reading now" or "the roster picture" when they add nothing concrete.
 - Do not state contract, role, or roster-importance claims as fact unless the digest explicitly supports them.
+- Do not turn a source mention into a real trade case or trade narrative unless the digest adds support; keep "possible fit" language narrow.
 - Do not publish a story when the digest contains no usable facts and the draft invents specifics; that is a source-side, not fixable in prose, failure.
 - Do not frame an empty digest as a real matchup or battle just to create a story; unsupported matchup framing is a source-side, not fixable in prose, failure.
 - [analyst] Do not let a contract-security story drift into unsupported field-return wording or source-meta phrases; keep the lead on the verified extension facts and tighten any injury update to supported camp details only.
@@ -34,3 +36,7 @@
 - [insider] Do not add claims about a player's proven quality or how a move changes the passing group unless the source directly supports those specifics; keep the story to the confirmed signing or hire fact.
 - Do not salvage an empty digest by inventing a narrative around viral clips, stances, or debunks; if the source has no usable facts, the piece is not groundable in prose.
 - Do not repeat named-party specifics from a dismissed draft when the digest itself does not support them; unsupported names and claims remain a source-side failure, not an editing fix.
+- Do not rely on source-reporting phrases like "the report" or "according to the report" when the digest already gives the fact directly; cut meta narration and state the verified development plainly.
+- Do not mention missing details as filler when the source is thin; trim to the one confirmed action instead of explaining what is absent.
+- [analyst] Do not imply a potential fit is a substantive trade rumor when the digest only supports a mention; source-backed possibility is the ceiling.
+- [analyst] Do not build trade-fit or roster-fit stories from an empty digest that only says a name was floated; if the source adds no facts, the angle is not salvageable in prose (source-side, not fixable in prose).
