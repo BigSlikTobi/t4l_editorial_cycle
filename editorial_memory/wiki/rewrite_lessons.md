@@ -23,15 +23,19 @@
 - Do not imply sequencing, urgency, or market pressure more strongly than the digest supports.
 - Do not introduce side names or examples unless the source digest directly supports them.
 - Do not overstate what the announcement says about job security, future implications, or organizational response.
+- Do not over-translate a hedged quote into a flat declarative claim; preserve the source’s uncertainty when it matters.
 - Do not rely on banned-source narration, meta language, or source-context filler; keep the rewrite in article voice.
 - [insider] Strip out source-narration and meta references like “according to the headline report” when the brief asks for a straight contract lead.
 - [insider] Remove unsupported “major commitment” or “one of the biggest decisions” framing unless the source material explicitly supports that significance; keep significance claims strictly source-backed.
 - [insider] If the digest is missing or unusable, do not try to rescue the piece with a wrong-player/wrong-team narrative; that is source-side, not fixable in prose.
 - [insider] Do not invent team/player status details when the digest has no usable facts; that is source-side, not fixable in prose.
 - [insider] If the source digest is effectively empty, stop rather than trying to force a publishable injury story; unsupported claims cannot be rescued in prose.
+- [insider] Do not build a trade-threat or contract-standoff story from an effectively empty digest, even if a quote is available; a grounded quote needs corroborating source facts, not inference.
+- [insider] Do not lean on a quote that is not actually supported by the provided source facts; that is source-side, not fixable in prose.
 - [analyst] Avoid implying an immediate decision clock unless the digest clearly supports that urgency.
 - [analyst] Cut repetitive lede/early-paragraph restatement; use the first graph to establish the key facts, then move to the best concrete comparison, production marker, or salary anchor.
 - [analyst] Do not pivot to named free-agent options or roster-help lists unless the digest actually supports specific options; that is source-side, not fixable in prose.
+- [analyst] If the source material is effectively empty, do not force a depth-chart or camp-note story from it; that is source-side, not fixable in prose.
 - [columnist] Do not build a publishable column on an empty digest or headline-only premise; without source facts, the piece cannot be salvaged in prose.
 - [columnist] Do not add unsupported involvement from other named figures or extra interpretive claims about timing or impact when the source set is empty or unusable; that is source-side, not fixable in prose.
 - [columnist] Do not turn camp-note aggregation into a column when the digest has no verifiable substance; generic notebook filler is a closed-world failure, not a fixable style issue.
