@@ -13,7 +13,6 @@
 - [analyst] A quarterback-start or competition update works when it stays on the named decision and verified resume facts.
 - [insider] Injury, suspension, discipline, practice-ejection, or return coverage works when it stays anchored to the confirmed event and named people, with only source-backed immediate context.
 - [columnist] A corrective take works when it remains a grounded correction of the viral claim, not a bigger argument built around it.
-- [columnist] Clear, digest-bound clarification pieces can still publish cleanly when they keep the correction specific and team-linked.
 
 ## What to avoid
 - Do not add unsupported player, contract, roster, reaction, or “crucial/simple goal” details just to make the update feel fuller.
@@ -25,12 +24,10 @@
 - Do not introduce side names or examples unless the source digest directly supports them.
 - Do not overstate what the announcement says about job security, future implications, or organizational response.
 - Do not rely on banned-source narration, meta language, or source-context filler; keep the rewrite in article voice.
-- Do not repeat the same takeaway in multiple sentences; tighten the middle and move on.
+- [analyst] Do not center an article on a team angle or camp-buzz framing unless the digest actually grounds that context; rebuild around the verified premise instead.
 - [insider] Cut unsupported roster-crossovers or unrelated player references from the setup; they break grounding even when the core update is solid.
-- [insider] Remove headline/lede redundancy and keep the intro focused on the verified role change, usage note, or quoted praise.
-- [insider] Always-dismiss cases with empty source digests are source-side, not fixable in prose; do not attempt to invent a rewrite path when there is no closed-world basis to verify the article.
 - [columnist] When the digest is thin, do not add interpretive setup or social-media framing; stay with the single supported correction and avoid depth-chart implications.
-- [columnist] Don’t turn a misleading-clip correction into a larger speculative narrative; keep the rewrite anchored to the verified correction itself.
 - [columnist] If the source digest contains no usable facts, avoid generic chemistry/turnover framing and any implied narrative about the relationship or quarterback change; that is source-side, not fixable in prose.
 - [columnist] When the digest is thin, cut filler like repeated “prove it”/“fans remember” framing and keep the lede on the one supported fact plus the simple goal.
 - [columnist] Avoid source-meta phrasing and soft paraphrase; if the only support is a headline-level idea, the rewrite must stay concrete and direct or it won’t publish cleanly.
+- [analyst] Do not build around camp standout or roster-race framing when the source digest has no usable facts beyond the headline; that is source-side, not fixable in prose.
