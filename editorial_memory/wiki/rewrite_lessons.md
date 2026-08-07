@@ -26,6 +26,7 @@
 - Do not rely on banned-source narration, meta language, or source-context filler; keep the rewrite in article voice.
 - [analyst] Do not center an article on a team angle or camp-buzz framing unless the digest actually grounds that context; rebuild around the verified premise instead.
 - [insider] Cut unsupported roster-crossovers or unrelated player references from the setup; they break grounding even when the core update is solid.
+- [insider] If the digest is missing or unusable, do not try to rescue the piece with a wrong-player/wrong-team narrative; that is source-side, not fixable in prose.
 - [columnist] When the digest is thin, do not add interpretive setup or social-media framing; stay with the single supported correction and avoid depth-chart implications.
 - [columnist] If the source digest contains no usable facts, avoid generic chemistry/turnover framing and any implied narrative about the relationship or quarterback change; that is source-side, not fixable in prose.
 - [columnist] When the digest is thin, cut filler like repeated “prove it”/“fans remember” framing and keep the lede on the one supported fact plus the simple goal.
