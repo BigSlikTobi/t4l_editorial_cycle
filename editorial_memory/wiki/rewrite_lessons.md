@@ -2,8 +2,9 @@
 
 ## What works (keep doing)
 - Open on the single verified news hook and keep the lede centered on that one development.
-- Use a narrow, source-backed angle; a specific injury, start, signing, suspension, return, or status update is stronger than a broadened take.
+- When a roundup contains two concrete facts, use both if they are equally supported rather than treating one as a throwaway.
 - Keep headline and lede tightly aligned, but not identical, so the same confirmed fact carries both without repetition.
+- Use a narrow, source-backed angle; a specific injury, start, signing, suspension, return, or status update is stronger than a broadened take.
 - Thread in a small amount of source-backed context when it directly clarifies the issue, especially enforcement, precedent, deal terms, or how a situation resolved.
 - Preserve a direct, factual tone when the source supports a clean news brief.
 - Keep the body focused on the confirmed update and the immediate unanswered question, not broader roster or organizational interpretation.
@@ -16,6 +17,7 @@
 - [columnist] A corrective take works when it remains a grounded correction of the viral claim, not a bigger argument built around it.
 
 ## What to avoid
+- Do not repeat the same update across the headline, subhead, and intro when one clean lede can carry it.
 - Do not add unsupported player, contract, roster, reaction, or “crucial/simple goal” details just to make the update feel fuller.
 - Do not treat a headline-level summary as if it confirms extra context or side claims.
 - Do not widen a simple announcement into broader competition, fallout, or roster-meaning language unless the digest supports it.
@@ -28,6 +30,7 @@
 - [insider] Remove unsupported attribution to another source or coach when the digest does not back that quote or comment; keep the context strictly source-backed.
 - [insider] Cut secondary stat dumps and contract-history digressions when the clean story is the deal terms and the resolution of the hold-in.
 - [insider] If the digest is missing or unusable, do not try to rescue the piece with a wrong-player/wrong-team narrative; that is source-side, not fixable in prose.
+- [insider] Do not invent team/player status details when the digest has no usable facts; that is source-side, not fixable in prose.
 - [columnist] When the digest is thin, do not add interpretive setup or social-media framing; stay with the single supported correction and avoid depth-chart implications.
 - [columnist] If the source digest contains no usable facts, avoid generic chemistry/turnover framing and any implied narrative about the relationship or quarterback change; that is source-side, not fixable in prose.
 - [columnist] When the digest is thin, cut filler like repeated “prove it”/“fans remember” framing and keep the lede on the one supported fact plus the simple goal.
