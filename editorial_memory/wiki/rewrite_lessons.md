@@ -1,41 +1,30 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the single verified news hook and keep the lede centered on that one development.
-- Keep headline and lede tightly aligned, but not identical, so the same confirmed fact carries both without repetition.
-- Use a narrow, source-backed angle; a specific injury, start, signing, suspension, return, or status update is stronger than a broadened take.
-- Thread in only the source-backed context that directly clarifies the issue, especially enforcement, precedent, deal terms, or a clear market reference point.
-- Preserve a direct, factual tone when the source supports a clean news brief.
-- Keep the body focused on the confirmed update and the immediate unanswered question, not broader roster or organizational interpretation.
-- A strong direct quote can carry the piece when it is the most concrete source-backed detail.
-- Lean on the source’s clearest standard, rule, or rationale instead of paraphrasing around it.
-- Stay tightly inside the digest on correction-style stories; a clear, fan-relevant clarification can work well without extra scene-setting.
-- [insider] Lead with the confirmed deal terms and keep the piece anchored to the contract value and the named team/player only.
-- [analyst] A contract-watch piece works when it stays grounded in concrete production markers and a specific market or salary reference point.
+- Open on the actual finish and let the key outcome carry the lede.
+- Use one sharp, concrete stat line or game result to anchor the piece instead of broad summary language.
+- Keep headline, subhead, and intro aligned on the same verified event, but vary the phrasing so the lede does not feel redundant.
+- Keep the story centered on the decisive moment and the strongest event detail rather than padding with box-score recap.
+- Preserve high-specificity event coverage when the reporting is strong and the facts are clean.
+- Let a comeback or late swing in the result serve as the natural news hook when that is the actual story.
+- Keep any secondary details only if they add a new, useful layer to the main update.
+- Strong event-value packages can support a more vivid, columnist-style lead as long as the core facts stay tight.
+- [columnist] Lead with the finish and the exact stat line, then build around the outcome instead of repeating the same premise in multiple slots.
+- [columnist] Ground the piece tightly in source digests while still allowing a vivid lead when the win sequence is the news.
+- [columnist] Concrete source-supported details can broaden the story as long as they stay inside the closed world and do not blur the main finish.
 
 ## What to avoid
-- Do not repeat the same update across the headline, subhead, and intro when one clean lede can carry it.
-- Do not add unsupported player, contract, roster, reaction, or consequence details just to make the update feel fuller.
-- Do not treat a headline-level summary as if it confirms extra context or side claims.
-- Do not widen a simple announcement into broader competition, fallout, or roster-meaning language unless the digest supports it.
-- Do not let the headline and lede drift beyond the specific verified event, or mirror each other sentence-for-sentence.
-- Do not stack extra contextual claims that are not explicitly in the source set.
-- Do not imply sequencing, urgency, or market pressure more strongly than the digest supports.
-- Do not introduce side names or examples unless the source digest directly supports them.
-- Do not overstate what the announcement says about job security, future implications, or organizational response.
-- Do not over-translate a hedged quote into a flat declarative claim; preserve the source’s uncertainty when it matters.
-- Do not rely on banned-source narration, meta language, or source-context filler; keep the rewrite in article voice.
-- [insider] Strip out source-narration and meta references like “according to the headline report” when the brief asks for a straight contract lead.
-- [insider] Remove unsupported “major commitment” or “one of the biggest decisions” framing unless the source material explicitly supports that significance; keep significance claims strictly source-backed.
-- [insider] If the digest is missing or unusable, do not try to rescue the piece with a wrong-player/wrong-team narrative; that is source-side, not fixable in prose.
-- [insider] Do not invent team/player status details when the digest has no usable facts; that is source-side, not fixable in prose.
-- [insider] If the source digest is effectively empty, stop rather than trying to force a publishable injury story; unsupported claims cannot be rescued in prose.
-- [insider] Do not build a trade-threat or contract-standoff story from an effectively empty digest, even if a quote is available; a grounded quote needs corroborating source facts, not inference.
-- [insider] Do not lean on a quote that is not actually supported by the provided source facts; that is source-side, not fixable in prose.
-- [analyst] Avoid implying an immediate decision clock unless the digest clearly supports that urgency.
-- [analyst] Cut repetitive lede/early-paragraph restatement; use the first graph to establish the key facts, then move to the best concrete comparison, production marker, or salary anchor.
-- [analyst] Do not pivot to named free-agent options or roster-help lists unless the digest actually supports specific options; that is source-side, not fixable in prose.
-- [analyst] If the source material is effectively empty, do not force a depth-chart or camp-note story from it; that is source-side, not fixable in prose.
-- [columnist] Do not build a publishable column on an empty digest or headline-only premise; without source facts, the piece cannot be salvaged in prose.
-- [columnist] Do not add unsupported involvement from other named figures or extra interpretive claims about timing or impact when the source set is empty or unusable; that is source-side, not fixable in prose.
-- [columnist] Do not turn camp-note aggregation into a column when the digest has no verifiable substance; generic notebook filler is a closed-world failure, not a fixable style issue.
+- Do not repeat the same core claim across the headline, subhead, and intro; one clean lede should do the work.
+- Do not make the opening feel redundant by restating the same outcome in nearly identical sentences.
+- Do not overextend the lead with role labels or framing that are not cleanly supported by the source facts.
+- Do not stack box-score recap when the finish already supplies the strongest news value.
+- Do not let the package feel padded with extra restatement before reaching the actual decisive play.
+- Do not present a player-status description as if it were confirmed unless the source facts clearly support it.
+- Do not call out secondary game details unless they add something new, not just more volume.
+- Do not sharpen the headline so much that it simply duplicates the intro’s claim.
+- Do not try to build a story from an empty digest or headline-level note alone; if the source has no usable facts, the piece is not writable.
+- Do not rely on unsupported metadata framing or team assignment claims; those are source-side, not fixable in prose.
+- [columnist] Do not turn a strong game story into a repetitive three-part echo; trim the intro and let the finish breathe.
+- [columnist] Do not force a box-score-first structure when the best entry point is the final sequence and stat line.
+- [columnist] Do not bury the decisive play under extra recap or duplicated setup.
+- [columnist] Do not make unsupported identity or status claims feel central to the lead.
