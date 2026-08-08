@@ -1,25 +1,25 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the clearest verified development when it has immediate consequence, especially for a suspension, status change, or timeline impact.
-- Build the lede around one primary angle; keep secondary roster or team notes out of the opening unless they are equally central.
-- Keep the article anchored to the named subject and the specific consequence rather than drifting into adjacent team news.
-- Use a tight, fact-first framing when the story is mainly a transaction, suspension, or update note.
-- Preserve specificity when the core fact is strong: a clean one-game consequence or similar discrete outcome can carry the piece.
-- Keep headline and lede aligned on the same main development without competing side frames.
-- Strong insider pieces can work when they stay close to the confirmed consequence and avoid overbuilding around extra team context.
-- A short secondary paragraph can handle a separate roster note if it does not compete with the main story.
-- [insider] Center the lede on the actual status change and its immediate game impact; that is often the highest-value hook.
-- [insider] Keep the main subject and filed team consistent in the opening so the reader never has to untangle whose news this is.
+- Open on the narrow, verified update when the story is a brief transaction or practice item.
+- Keep the headline and lede tightly aligned around the same confirmed fact so the package feels clean and consistent.
+- Preserve a fact-first tone; direct reporting beats broader interpretation when source support is limited.
+- Use only digest-backed details in the body, especially for short insider updates.
+- Let the core event do the work: one clear update can carry the piece without extra buildup.
+- Keep surrounding context minimal unless it is directly supported and essential to understanding the update.
+- Trim connective tissue that does not advance the verified news.
+- When the source is solid, a clean transactional lead can work without extra scene-setting or narrative buildup.
+- Include the key support details that are already verified in the digest, but only as far as they reinforce the central update.
+- Keep the correct team/context cues in place so the piece stays grounded and specific.
 
 ## What to avoid
-- Do not let a secondary roster move compete with the main suspension or status update in the lede.
-- Do not open with or overemphasize a team-mismatch frame when the article’s core value is the subject’s own consequence.
-- Do not split the opening between the headline subject and unrelated adjacent team news; pick the sourced center of gravity and stay there.
-- Do not create execution problems by identifying the subject under the wrong team or filing context in the opening.
-- Do not bury the main consequence beneath a parallel roster item that belongs later or can be cut.
-- Do not imply broader team implications when the cleanest story is just the specific one-game or one-event result.
-- Do not overbuild a suspension or availability note with extra context that dilutes the primary fact.
-- Do not build a piece around a source when the digest lacks usable, verifiable content; unsupported homecoming or context framing is ungrounded (source-side, not fixable in prose).
-- [insider] Do not let a separate front-office or roster update pull focus from the athlete’s direct news.
-- [insider] Do not frame the lede so that the reader has to reconcile two different teams before understanding the main development.
+- Do not add unsupported injury detail, rehab timing, or roster mechanics when the digest does not anchor them.
+- Do not broaden a narrow update into wider camp, cap, or scheme implications unless the source explicitly supports that move.
+- Do not add extra connective tissue that makes the article feel more expansive than the evidence allows.
+- Do not introduce context that is not cleanly anchored in the digests, even if it seems plausible.
+- Do not let the body stack multiple side details unless each one is directly sourced and necessary.
+- Do not weaken consistency by letting the lede stay narrow while the body reaches for larger claims.
+- Do not overstate what can be inferred from a brief update; stay with the confirmed facts.
+- Do not pad a short update with generic interpretation or background that does not add verifiable value.
+- If the source digest is empty or unusable, do not force a story; that is a source-side failure, not a prose fix (source-side, not fixable in prose).
+- Do not introduce “reported Tuesday” or similar temporal framing unless the record clearly supports it.
