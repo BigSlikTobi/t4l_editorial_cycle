@@ -1,30 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the verified core update when the piece is a brief availability or status item.
-- Keep the headline and intro tightly aligned on the same confirmed fact so the package feels clean and source-faithful.
-- Use a fact-first, source-faithful tone when the article has limited digested support.
-- Trim away extra framing and let the core update carry the piece.
-- Keep surrounding context minimal unless it is directly supported and essential.
-- Preserve only the safe identifiers that help ground the update.
-- Make small updates read cleanly by avoiding unnecessary buildup.
-- When source support is thin, tighter execution is better than broader interpretation.
-- Keep the lede narrow if the verified news is narrow.
-- Maintain consistency between the headline, intro, and body around the same confirmed fact.
-- High grounding alone is not enough; only clean, usable verified facts should drive publishable copy.
+- Open with the verified roster move when the source gives a clean transaction update.
+- Keep the headline and lede locked to the exact source-supported names and action.
+- Use a precise, source-faithful tone when the story is specific but narrow.
+- Keep the body focused on the concrete transaction details first, then add only directly supported background.
+- Ground a roster update with the relevant player bios when those details are explicitly provided.
+- Preserve the team context without over-expanding into broader implications.
+- Trim away extra framing so the core move stays clear and publishable.
+- When the facts are tight, exact matching between headline, intro, and body is a strength.
+- Strong specificity can carry an insider item if the sourcing is matched carefully.
+- [insider] A direct lede with no meta narration reads cleanly when the move set is fully grounded.
+- [insider] You can include relevant injury context if it is explicitly supported and kept brief.
 
 ## What to avoid
-- Do not add unsupported team-shape, impact, or implication framing when the source only verifies a simple update.
-- Do not widen a narrow availability note into a larger take on what it means for the team unless the source directly supports that move.
-- Do not introduce named comparisons or references unless they are explicitly supported by the source.
-- Do not let the piece drift beyond the verified core by layering on extra context.
-- Do not pad a short update with generic interpretation or background that does not add verifiable value.
-- Do not repeat safe identifiers if the source digest is otherwise empty; repetition does not fix weak grounding.
-- Do not build around unsupported specifics when the digested source has no usable facts.
-- Do not make the lede broader than the evidence can support.
-- Do not rely on source-narration filler when the real issue is lack of verification.
-- If the source digest is empty or unusable, do not force a story; that is a source-side failure, not a prose fix (source-side, not fixable in prose).
-- Do not introduce hard factual mismatches or unsupported entity details; treat those as unusable source-side material (source-side, not fixable in prose).
-- Do not recycle the headline as body copy when there are no verified details to add; that leaves the item too thin for publication.
-- Do not assert timing, counts, or transaction specifics unless they are actually present in the source digest; missing facts cannot be rescued in rewrite (source-side, not fixable in prose).
-- Do not name extra players or other entities just to create context when the digest does not support them; that is unsupported sourcing, not stronger writing.
+- Do not let the headline or intro drift from the exact source-supported roster move.
+- Do not name players in a way that implies a different context than the source provides.
+- Do not treat partial name recognition as enough; the full transaction must be anchored precisely.
+- Do not widen a simple signing/waive note into broader roster interpretation unless the source supports it.
+- Do not add unsupported implication or impact framing around a transaction.
+- Do not mismatch the player set in the headline with the move described in the source.
+- Do not bury the core roster action under extra context before the transaction is clearly established.
+- Do not rely on generally relevant team context to cover for a grounding error.
+- Do not make the body wander away from the exact move set described in the source.
+- Do not assume a clean insider tone can compensate for a factual anchor mismatch.
+- Do not introduce alternate player-context framing when the rewrite brief says to keep the exact source framing.
+- Do not add injury or background detail beyond what the digest explicitly supports.
