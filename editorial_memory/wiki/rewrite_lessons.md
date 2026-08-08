@@ -22,4 +22,4 @@
 - Do not overstate what can be inferred from a brief update; stay with the confirmed facts.
 - Do not pad a short update with generic interpretation or background that does not add verifiable value.
 - If the source digest is empty or unusable, do not force a story; that is a source-side failure, not a prose fix (source-side, not fixable in prose).
-- Do not introduce “reported Tuesday” or similar temporal framing unless the record clearly supports it.
+- Do not introduce team/player specifics when the source evidence does not actually support them; treat hard factual mismatches as unusable source-side material (source-side, not fixable in prose).
