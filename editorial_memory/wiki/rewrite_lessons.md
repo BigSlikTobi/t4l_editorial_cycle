@@ -26,3 +26,6 @@
 - Do not assume a clean insider tone can compensate for a factual anchor mismatch.
 - Do not introduce alternate player-context framing when the rewrite brief says to keep the exact source framing.
 - Do not add injury or background detail beyond what the digest explicitly supports.
+- Do not publish when the digest is effectively empty and leaves no grounded facts beyond a headline restatement.
+- Do not repeat the same claim across headline, subhead, intro, and body; that produces a thin, dry piece instead of a readable update.
+- [columnist] Avoid ledes that merely rephrase the headline without adding sourced detail or angle.
