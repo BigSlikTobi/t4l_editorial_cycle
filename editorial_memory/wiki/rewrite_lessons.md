@@ -1,31 +1,30 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the verified roster move when the source gives a clean transaction update.
-- Keep the headline and lede locked to the exact source-supported names and action.
-- Use a precise, source-faithful tone when the story is specific but narrow.
-- Keep the body focused on the concrete transaction details first, then add only directly supported background.
-- Ground a roster update with the relevant player bios when those details are explicitly provided.
-- Preserve the team context without over-expanding into broader implications.
-- Trim away extra framing so the core move stays clear and publishable.
-- When the facts are tight, exact matching between headline, intro, and body is a strength.
-- Strong specificity can carry an insider item if the sourcing is matched carefully.
-- [insider] A direct lede with no meta narration reads cleanly when the move set is fully grounded.
-- [insider] You can include relevant injury context if it is explicitly supported and kept brief.
+- Open with the confirmed move or immediate camp development when the source cleanly supports it.
+- Keep the headline and lede tightly matched to the exact source-confirmed claim.
+- Use a precise, source-faithful tone when the story is narrow and well grounded.
+- Lead with the concrete fact first, then add only directly supported context.
+- Preserve the article’s core news hook without overreaching into broader interpretation.
+- Strong specificity can carry a brief insider item when the sourcing is matched carefully.
+- A direct lede reads cleanly when it stays inside the digest’s verified facts.
+- Exact matching between headline and intro is a strength when the source is complete.
+- [insider] Keep the lede centered on the timeout/rep shift and other confirmed camp facts.
+- [insider] Discipline, first-team reps, and two-minute-drill context can add value when they are explicitly sourced.
 
 ## What to avoid
-- Do not let the headline or intro drift from the exact source-supported roster move.
-- Do not name players in a way that implies a different context than the source provides.
-- Do not treat partial name recognition as enough; the full transaction must be anchored precisely.
-- Do not widen a simple signing/waive note into broader roster interpretation unless the source supports it.
-- Do not add unsupported implication or impact framing around a transaction.
-- Do not mismatch the player set in the headline with the move described in the source.
-- Do not bury the core roster action under extra context before the transaction is clearly established.
-- Do not rely on generally relevant team context to cover for a grounding error.
-- Do not make the body wander away from the exact move set described in the source.
-- Do not assume a clean insider tone can compensate for a factual anchor mismatch.
-- Do not introduce alternate player-context framing when the rewrite brief says to keep the exact source framing.
-- Do not add injury or background detail beyond what the digest explicitly supports.
-- Do not publish when the digest is effectively empty and leaves no grounded facts beyond a headline restatement.
-- Do not repeat the same claim across headline, subhead, intro, and body; that produces a thin, dry piece instead of a readable update.
-- [columnist] Avoid ledes that merely rephrase the headline without adding sourced detail or angle.
+- Do not treat a missing or effectively empty digest as enough basis for a publishable rewrite.
+- Do not repeat a sourced headline claim without adding verifiable support in the body.
+- Do not add timeline, injury-status, or room-implication framing unless the source explicitly supplies it.
+- Do not use a strong news hook to justify unsupported assertions about a player’s future or availability.
+- Do not widen a narrow source item into broader implications when the source is silent.
+- Do not lean on speculative context to make up for weak grounding.
+- Do not mismatch headline promise and verifiable body facts.
+- Do not bury the verified claim under extra interpretive framing before establishing the source-supported point.
+- Do not assume a polished insider voice can compensate for missing source facts.
+- Do not add season-opener or other forward-looking stakes unless the digest directly supports them.
+- Do not center a piece on named players or team dynamics that the source digest does not actually support.
+- [insider] Keep the story on the timeout and rep shift; strip added implications beyond confirmed camp facts.
+- [insider] If the source supports only discipline and practice details, do not frame the piece as a larger season narrative.
+- [insider] When grounding is weak, do not force a polished insider framing around unsupported roster or practice-clash specifics.
+- [insider] Use only the entities and relationships explicitly present in the digest; do not import a fuller locker-room narrative.
