@@ -1,30 +1,28 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the confirmed move or immediate camp development when the source cleanly supports it.
-- Keep the headline and lede tightly matched to the exact source-confirmed claim.
-- Use a precise, source-faithful tone when the story is narrow and well grounded.
-- Lead with the concrete fact first, then add only directly supported context.
-- Preserve the article’s core news hook without overreaching into broader interpretation.
-- Strong specificity can carry a brief insider item when the sourcing is matched carefully.
-- A direct lede reads cleanly when it stays inside the digest’s verified facts.
+- Open with the single supported update and stay close to the digest when the item is thin.
+- Keep the headline and lede tightly aligned to the exact source claim.
+- Use a restrained, source-faithful tone when the story is limited to one narrow injury-management note.
+- Lead with the concrete fact first; add no more context than the digest directly supports.
+- Preserve the core news hook without inflating it into a broader availability or outlook story.
+- When the source is sparse, a clean, simple lede can still work if it stays inside verified facts.
 - Exact matching between headline and intro is a strength when the source is complete.
-- [insider] Keep the lede centered on the timeout/rep shift and other confirmed camp facts.
-- [insider] Discipline, first-team reps, and two-minute-drill context can add value when they are explicitly sourced.
+- Strong specificity helps only when it is clearly grounded in the source.
+- [insider] Keep the lede centered on the confirmed health-management update, not on extra roster implications.
 
 ## What to avoid
-- Do not treat a missing or effectively empty digest as enough basis for a publishable rewrite.
-- Do not repeat a sourced headline claim without adding verifiable support in the body.
-- Do not add timeline, injury-status, or room-implication framing unless the source explicitly supplies it.
-- Do not use a strong news hook to justify unsupported assertions about a player’s future or availability.
-- Do not widen a narrow source item into broader implications when the source is silent.
-- Do not lean on speculative context to make up for weak grounding.
-- Do not mismatch headline promise and verifiable body facts.
-- Do not bury the verified claim under extra interpretive framing before establishing the source-supported point.
-- Do not assume a polished insider voice can compensate for missing source facts.
-- Do not add season-opener or other forward-looking stakes unless the digest directly supports them.
-- Do not center a piece on named players or team dynamics that the source digest does not actually support.
-- [insider] Keep the story on the timeout and rep shift; strip added implications beyond confirmed camp facts.
-- [insider] If the source supports only discipline and practice details, do not frame the piece as a larger season narrative.
-- [insider] When grounding is weak, do not force a polished insider framing around unsupported roster or practice-clash specifics.
-- [insider] Use only the entities and relationships explicitly present in the digest; do not import a fuller locker-room narrative.
+- Do not turn a thin injury-management digest into fuller certainty about availability.
+- Do not add “no setback” or similar finality unless the source explicitly says it.
+- Do not infer conservative-treatment conclusions beyond the digest’s wording.
+- Do not widen a narrow health note into team-outlook or roster-framing claims.
+- Do not pile on interpretive claims when the source only supports a sparse update.
+- Do not treat “expected to be ready” as permission to assert more than readiness expectation.
+- Do not mismatch headline promise and the limited body support available.
+- Do not bury the verified point under extra certainty or speculative context.
+- Do not force polished insider framing when grounding is weak.
+- [insider] Strip unsupported availability and roster implications; keep the piece on the confirmed health-management note.
+- [insider] Avoid broader team-orientation or season-angle language when the digest only supports a narrow injury update.
+- [insider] Use only the limited facts present in the digest; do not import a fuller narrative around the player’s outlook.
+- Do not publish when the digest is effectively empty or fact-free; that is a source-side problem, not a prose fixable issue. (source-side, not fixable in prose)
+- Do not reconcile internally inconsistent source framing by inventing a cleaner team/player context. (source-side, not fixable in prose)
