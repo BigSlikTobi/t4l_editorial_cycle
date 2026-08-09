@@ -23,29 +23,21 @@
 - Do not force context when the strongest story is simply the confirmed update.
 - Do not let thin-source material be propped up by inference.
 - Do not let the lede and body simply restate the same fact; if the source is sparse, make every sentence add a new grounded detail.
-- Do not add consequence language like missed-time or monitoring claims unless the source confirms it.
+- Do not add consequence language unless the source confirms it; keep injury effects and team impact to what is explicitly sourced.
 - Do not add reflective filler or article-narration language that makes the piece sound self-conscious.
 - Do not treat a narrow sourced note as a place to elaborate beyond the one concrete fact the source supports.
 - [insider] Don’t meta-narrate the digest or source limits; if the source has no accessible facts, the piece should not assert a diagnosis or team linkage it cannot verify.
-- Do not center unsupported named-player or camp-buzz claims when the digest does not supply facts for them.
-- Do not drift into speculative depth-chart or camp-attention language unless it is tied directly to a fact already in the source.
-- Do not let roundup headlines promise more certainty than the source actually provides.
-- [columnist] Treat “buzz” framing as unsupported if the source offers no actual evidence behind it.
-- [columnist] Avoid building a headline around roster chatter or landing notes when the source is effectively empty; that is a source-side limitation, not a prose fix.
-- [analyst] Keep the lede tightly on the actual decision point; do not add unsupported player-specific replacement claims or analysis when the source is thin.
-- [analyst] Don’t use a generic “decision looms” headline/lede pair that adds no concrete reason to care beyond the announcement itself.
-- [analyst] Treat supporting names as context only when the source mentions them; do not present them as confirmed candidates or implied conclusions.
-- [insider] When the source is effectively empty, avoid adding team-room context or positional framing that the source doesn’t directly support.
+- [insider] If the source is effectively empty or only repeats the headline, avoid adding team-room context or positional framing that the source doesn’t directly support.
 - [insider] Make the intro add a sharper sourced update instead of simply rephrasing the headline.
 - [insider] Cut repetitive sentence-level restatement; one clean pass at the confirmed development is stronger than three near-duplicates.
 - [insider] If patience or status is the angle, keep it explicitly tied to the one verified update rather than broad camp context.
 - [insider] Do not assert unconfirmed status labels unless the source explicitly says so.
 - [insider] When the source supports only one fact, avoid building the story around identity details that are not in the source.
-- [analyst] Avoid asserting a looming decision, camp battle sharpening, or a player emerging as a leader when the source contains no verifiable facts; that is source-side, not fixable in prose.
-- [analyst] Do not invent a concrete storyline from a missing or inaccessible source item; if the source is empty, the article needs a real factual basis before it can be salvaged.
-- [analyst] Do not frame a replacement decision or positional swap as settled when the source is empty; that is a source-side issue, not fixable in prose.
-- [analyst] Avoid turning an inaccessible injury digest into a confirmed roster choice or positional outcome without closed-world facts.
-- [insider] If the source is empty, do not build the article around status drift or patience narration; that is unsupported and source-side, not fixable in prose.
-- [insider] If the source digest is empty or mirrored only, do not publish a restated update; there is no verifiable basis to repair in prose (source-side, not fixable in prose).
-- [columnist] Do not claim injury clearance steps, camp timing, or similar specifics when the digest is effectively empty; that is a source-side issue, not fixable in prose (source-side, not fixable in prose).
-- [analyst] Do not present a contract milestone or “new deal” as fact when the source package is missing or unusable; that is source-side, not fixable in prose (source-side, not fixable in prose).
+- [insider] Avoid turning a confirmed injury note into broader camp or roster consequences unless the digest actually supplies those details.
+- [insider] Treat source-empty digests as source-side, not fixable in prose: if there are no facts to support publication, don’t try to rescue the piece with names, vibes, or implied relationships.
+- [insider] Don’t assume a player relationship or team context unless the digest explicitly backs it up; unsupported identity framing is a hard stop.
+- [insider] On a rewrite_attempt=1, a wrong-player mismatch is not salvageable; if the source metadata and story subject don’t match, withhold rather than rewrite around it.
+- [columnist] Don’t build a chemistry or camp-angle story on an effectively empty digest; unsupported player linkage and training-camp framing are not salvageable in prose.
+- [columnist] Treat source-empty digests as source-side, not fixable in prose: if there are no facts to support publication, don’t try to rescue the piece with names, vibes, or implied relationships.
+- [columnist] Don’t assume a player relationship or team context unless the digest explicitly backs it up; unsupported identity framing is a hard stop.
+- [columnist] When the digest has no usable facts, the correct move is to withhold, not to widen the headline into a speculative camp note.
