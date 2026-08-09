@@ -1,30 +1,31 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the confirmed update and stay tightly inside the source.
-- Lead with the concrete verified fact first; let the source carry the piece.
-- Keep headline and lede aligned when the item is a clean announcement or status update.
-- Use a restrained, source-faithful tone when the source supports only the headline-level item.
+- Open with the single confirmed fact and stay tightly inside the source.
+- Lead with the concrete news point first; let sparse source material carry the piece.
+- Keep headline and lede aligned on simple, verified updates.
+- Use restrained, source-faithful tone when the source supports only one narrow fact.
 - Strong grounding is a major asset, even when the story is straightforward.
-- Tight, simple framing works when the source is the main story and extra context would be speculative.
-- If the source is thin, repeating the core fact cleanly is better than reaching for extra context.
-- Enough named figures and clear news value can justify publication without added interpretation.
-- When the source supports it, add a concrete team-specific payoff instead of stopping at the injury label. 
-- [insider] Keep injury/status coverage centered on the confirmed availability or timing fact, not wider team implications.
-- [insider] Hedge timelines carefully when the source only supports likely absence or expected duration, not certainty.
-- [insider] Straight breaking-news ledes work best when they state the injury, expected surgery, and likely availability impact without source narration.
+- Tight, simple framing works when extra context would be speculative.
+- If the source is thin, repeating the core fact once cleanly is better than reaching for unsupported context.
+- Enough clear news value can justify publication without added interpretation.
+- When the source supports it, add a concrete next-step or timing detail instead of stopping at the basic label.
+- [insider] Keep coverage centered on the confirmed availability/timing fact, not broader implications.
+- [insider] Straight breaking-news ledes work best when they state the event and short-term impact without source narration.
+- [columnist] A modest but concrete player/team hook can be enough when it is fully grounded and the headline, intro, and body stay aligned.
 
 ## What to avoid
-- Do not repeat the headline almost verbatim in the lede without adding any verified detail.
+- Do not repeat the same status or fact in multiple forms without adding source-backed detail.
 - Do not pad a straightforward update with broad color or generalized commentary.
-- Do not add implications for the offense or other downstream effects unless the source directly supports them.
-- Do not import external reporting labels or source-narration/meta language into the copy.
-- Do not widen a single update into a bigger strategy or season story.
-- Do not bury the verified news under unsupported framing.
+- Do not add implications or evaluation claims unless the source directly supports them.
+- Do not widen a single update into a bigger strategy, evaluation, or season story.
+- Do not bury the verified news under unsupported framing or analysis language.
 - Do not force context when the strongest story is simply the confirmed update.
 - Do not let thin-source material be propped up by inference.
-- Do not stop at the injury itself if the digest supports clear, relevant next-step fallout; use the sourced replacement plan instead of hand-waving.
-- [insider] Avoid adding team-level consequences or quarterback-specific implications that are not in the source digest.
+- Do not keep recovery-window language if it adds no new factual content.
+- Do not treat a lone verified fact as a launchpad for bigger-stage significance or speculative next-rep analysis.
+- [insider] Avoid adding team-level consequences that are not in the source digest.
 - [insider] Do not mirror the same claim across headline, subhead, and intro without adding new verified substance.
 - [insider] Avoid phrases like 'according to the reports' that turn clean breaking news into source narration.
-- [insider] Do not keep unsupported or over-hedged claims in the injury timeline; stay inside the confirmed surgery/absence window.
+- [insider] Do not keep unsupported or over-hedged claims in the timeline; stay inside the confirmed window.
+- [insider] If the source digest is effectively empty, do not try to salvage the piece with invention or generic injury phrasing; this is source-side, not fixable in prose.
