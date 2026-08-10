@@ -10,6 +10,7 @@
 - Strong grounding remains the key asset; a simple, direct execution can be enough when the source is limited.
 - [analyst] Anchor the hook in the supplied quote or stated position, not in inferred roster calculus.
 - [insider] Cleanly naming the confirmed claim and nothing beyond the digest can make a narrow item read well.
+- Plain, minimal presentation works when the report only gives one verified development.
 
 ## What to avoid
 - Do not add roster-room, locker-room, or other behind-the-scenes implications unless the source explicitly supports them.
@@ -20,8 +21,13 @@
 - Do not bury the verified development under contextual claims that read as if they were confirmed facts.
 - Do not imply relationships, motives, or internal dynamics that the digest leaves unstated.
 - Do not pad a usable story with unsupported surrounding details just to add texture.
+- Do not use repeated source-meta phrasing like "according to the source report" when the digest itself provides no substance.
 - Do not try to rescue an article when the source digest is effectively empty; that is source-side, not fixable in prose.
 - Do not use repeated meta-style phrasing when the draft has no factual base; it signals the piece cannot be salvaged.
 - [analyst] Don’t turn a quote-led hook into broader roster or future-impact speculation unless the source clearly backs it.
 - [insider] If the digest supports only the central ask, keep it there; cut any extra context that goes beyond the supplied facts.
-- [columnist] Avoid building long-term or quote-driven framing when the digest contains no verifiable substance; if the source is bare, the problem is source-side, not fixable in prose."
+- [columnist] Avoid building long-term or quote-driven framing when the digest contains no verifiable substance; if the source is bare, the problem is source-side, not fixable in prose.
+- [analyst] If the source digest is empty, contract/cap-decision framing is unsupported; treat it as source-side, not fixable in prose.
+- [insider] When the digest is empty, strip any implied timeline, context, or role detail and keep the lede bluntly factual.
+- [insider] Don’t state unsupported specifics from a bare digest, even if the headline seems to imply them; if the source has no confirmable facts, the item is unrecoverable on rewrite.
+- [insider] With an empty digest, avoid inventing movement, destination, or team-specific detail in the headline or lede; that is source-side, not fixable in prose.
