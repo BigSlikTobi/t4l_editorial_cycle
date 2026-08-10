@@ -10,10 +10,10 @@
 - Strong grounding remains the key asset; a simple, direct execution can be enough when the source is limited.
 - Plain, minimal presentation works when the report only gives one verified development.
 - When the source is sparse, a blunt factual lede beats decorative context.
-- [analyst] Anchor the hook in the supplied quote or stated position, not in inferred roster calculus.
-- [insider] Cleanly naming the confirmed claim and nothing beyond the digest can make a narrow item read well.
-- [insider] A clean wire-style lead works when it states the concrete roster move and corresponding status change without unsupported embellishment.
-- [insider] Correct team, names, and status language can carry an approve when the source digests clearly support both updates.
+- [insider] A clean wire-style lead works best when it states the concrete team consequence and the status change without unsupported embellishment.
+- [insider] Correct team, names, and status language can carry an approve when the source digest clearly supports both the event and the fallout.
+- [insider] Put the team-specific consequence in the first sentence when the story’s value is the roster move, not the announcement itself.
+- [insider] A tightly grounded Detroit angle can succeed when it names the official move, the reserve/retired-list consequence, and the backup-QB fallout without meta framing.
 
 ## What to avoid
 - Do not add roster-room, locker-room, or other behind-the-scenes implications unless the source explicitly supports them.
@@ -25,16 +25,12 @@
 - Do not imply relationships, motives, or internal dynamics that the digest leaves unstated.
 - Do not pad a usable story with unsupported surrounding details just to add texture.
 - Do not use repeated source-meta phrasing like "according to the source report" when the digest itself provides no substance.
-- Do not try to rescue an article when the source digest is effectively empty; that is source-side, not fixable in prose.
-- Do not lean on meta language about the digest or reporting process when there are no confirmed facts to publish.
+- Do not repeat the same core fact multiple times in the lede/introduction; move the story forward with the consequence.
+- Do not make the headline and opening linger on the announcement when the useful news is the roster effect.
 - [analyst] Don’t turn a quote-led hook into broader roster or future-impact speculation unless the source clearly backs it.
-- [insider] If the digest is empty, strip any implied timeline, context, or role detail and keep the lede bluntly factual.
+- [insider] If the story has a clear team consequence, state it cleanly and early instead of circling the source event three times.
+- [insider] Trim repetitive retirement/announcement phrasing so the article gets to the reserve-list or backup-QB fallout faster.
 - [insider] Don’t state unsupported specifics from a bare digest, even if the headline seems to imply them; if the source has no confirmable facts, the item is unrecoverable on rewrite.
-- [insider] With an empty digest, avoid inventing movement, destination, or team-specific detail in the headline or lede; that is source-side, not fixable in prose.
-- [insider] Missing or empty digests cannot support injury-hit language, roster fallout, or other consequence framing; treat those gaps as source-side, not fixable in prose.
 - [insider] When the source base is thin, avoid meta language and unsupported reporting verbs; rebuild from only what is explicitly confirmed.
-- [insider] Don’t promote an injury update, game result, or signing into a confirmed package when the digest does not actually support those facts; rebuild from the limited source instead.
-- [insider] If the headline points to a transaction but the digest has no confirmable facts, treat the piece as unrecoverable rather than inventing a matching story.
-- [insider] Correct factual attribution errors immediately; don’t introduce unsupported coach/staff names, and keep the lede centered on the article’s actual team focus.
-- [insider] If the story’s primary team is ATL, keep the intro/headline centered there and make the opposing-team injury only a secondary note.
-- [insider] Don’t overexplain an injury beyond the confirmed status; keep the language at the level the source actually supports (for example, out indefinitely after a torn triceps).
+- [analyst] Avoid explanatory framing when grounding is zero; if the digest is empty, the piece is not salvageable without new source material.
+- [insider] Avoid decorative or generic lead-ins when the article can earn approval by naming the official move and the immediate roster consequence up front.
