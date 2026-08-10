@@ -1,41 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the verified transaction or takeaway and stay tight to the source.
-- Lead with the concrete roster move first; let the confirmed fact carry the piece.
-- Keep headline and lede aligned on the same sourced development without near-verbatim repetition.
-- Use restrained, source-faithful tone when the source only supports a narrow fact.
-- Strong grounding is a major asset, especially when the story has a clear team-specific stake.
-- Tight, simple framing works when extra context would be speculative.
-- If the source is thin, repeating the core fact once cleanly is better than reaching for unsupported context.
-- A concise note can work if it centers the confirmed update and avoids overbuilding around it.
-- [analyst] A usable hook is stronger when it stays anchored to the quoted direction from the source, not expanded into broader role or scheme claims.
-- [analyst] Health or availability concerns can legitimately be framed as future-impact stories when the source supports that inference without adding timelines or quotes.
-- [analyst] Concrete team decision updates can read well when the piece stays on the confirmed plan and names the central player only as the source allows.
-- [insider] Clean wire-style execution works when it references the relevant teammates or context only to the extent the source supports it.
+- Open with the verified development and let the sourced hook carry the piece.
+- Keep headline and lede aligned on the same confirmed angle without drifting into extra framing.
+- Use quote-driven hooks when the source clearly supports the central claim.
+- Stay tight to the digest when the core story is already timely and usable.
+- Keep the body focused on the confirmed update instead of widening into a bigger team narrative.
+- Source-faithful restraint is a strength when the article only needs one clean, narrow takeaway.
+- Strong grounding remains the key asset; a simple, direct execution can be enough when the source is limited.
+- [analyst] Anchor the hook in the supplied quote or stated position, not in inferred roster calculus.
+- [insider] Cleanly naming the confirmed claim and nothing beyond the digest can make a narrow item read well.
 
 ## What to avoid
-- Do not repeat the same status or fact in multiple forms without adding source-backed detail.
-- Do not let the headline, lede, and first paragraph restate the same update in near-identical wording.
-- Do not pad a straightforward update with broad color or generalized commentary.
-- Do not add implications or evaluation claims unless the source directly supports them.
-- Do not widen a single update into a bigger strategy, evaluation, or season story.
-- Do not bury the verified news under unsupported framing or analysis language.
-- Do not force context when the strongest story is simply the confirmed update.
-- Do not let thin-source material be propped up by inference.
-- Do not build around what the team is planning next unless the source explicitly says so.
-- Do not add consequence language unless the source confirms it; keep impact to what is explicitly sourced.
-- [analyst] Don’t treat a short-yardage setup or player role note as fuller established fact than the digest supports; cut implied structure and stay with the single sourced development.
-- [analyst] If the lede and body are just rephrasing the same claim, trim the connective tissue and make each sentence add new sourced detail.
-- [analyst] Don’t turn a usable hook into roster-calculus or future-outcome speculation unless the source clearly supports those claims.
-- [insider] Don’t meta-narrate missing details or source limits; if the digest is effectively empty, the piece should withhold rather than explain away the gap.
-- [insider] If the source offers no usable facts, avoid attempting to rescue the brief with unsupported names, transaction specifics, or consequences.
-- [insider] When the source is effectively empty or only repeats the headline, don’t widen the item into speculative team linkage or positional framing.
-- [insider] Cut repetitive sentence-level restatement; one clean pass at the confirmed development is stronger than three near-duplicates.
-- [insider] On a rewrite_attempt=1, a wrong-player mismatch is not salvageable; if the source metadata and story subject don’t match, withhold rather than rewrite around it.
-- [insider] If the source digests are effectively empty, there is no usable closed-world factual base to support publication; withhold rather than inventing specifics or leaning on a vague repeated lede.
-- [insider] Hard source/story mismatches are not rewriteable; if the digest supports a different team or player, withhold rather than layering on unsupported team-specific impact.
-- [insider] Do not add offseason-addition or lineup-impact claims unless they are explicitly present in the source; those are easy overextensions when the grounding is off.
-- [insider] When the source and story subject diverge, treat it as a publish-blocking grounding failure, not a prose problem.
-- [insider] Do not add waiver-cleared, timing, or “no other details were included” meta language unless the source explicitly states it; keep the intro on the verified transaction.
-- [insider] Cleanly naming the confirmed claim and only the source-supported surrounding names is enough; avoid making the item feel broader than the wire supports.
+- Do not add roster-room, locker-room, or other behind-the-scenes implications unless the source explicitly supports them.
+- Do not treat a narrow quote as license to confirm broader team context.
+- Do not overbuild a timely update with extra roster specifics that the digest does not establish.
+- Do not let the body drift past the central sourced angle into unsupported interpretation.
+- Do not widen a straightforward item into a larger team-story frame without explicit source support.
+- Do not bury the verified development under contextual claims that read as if they were confirmed facts.
+- Do not imply relationships, motives, or internal dynamics that the digest leaves unstated.
+- Do not pad a usable story with unsupported surrounding details just to add texture.
+- Do not try to rescue an article when the source digest is effectively empty; that is source-side, not fixable in prose.
+- Do not use repeated meta-style phrasing when the draft has no factual base; it signals the piece cannot be salvaged.
+- [analyst] Don’t turn a quote-led hook into broader roster or future-impact speculation unless the source clearly backs it.
+- [insider] If the digest supports only the central ask, keep it there; cut any extra context that goes beyond the supplied facts.
+- [columnist] Avoid building long-term or quote-driven framing when the digest contains no verifiable substance; if the source is bare, the problem is source-side, not fixable in prose."
