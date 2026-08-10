@@ -35,8 +35,7 @@
 - [insider] When the source is effectively empty or only repeats the headline, don’t widen the item into speculative team linkage or positional framing.
 - [insider] Cut repetitive sentence-level restatement; one clean pass at the confirmed development is stronger than three near-duplicates.
 - [insider] On a rewrite_attempt=1, a wrong-player mismatch is not salvageable; if the source metadata and story subject don’t match, withhold rather than rewrite around it.
-- [columnist] Don’t build a chemistry or camp-angle story on an effectively empty digest; unsupported player linkage and training-camp framing are not salvageable in prose.
-- [columnist] Treat source-empty digests as source-side, not fixable in prose: if there are no facts to support publication, don’t try to rescue the piece with names, vibes, or implied relationships.
-- [columnist] Don’t assume a player relationship or team context unless the digest explicitly backs it up; unsupported identity framing is a hard stop.
-- [columnist] When the digest has no usable facts, withhold rather than widening the headline into a speculative note.
-- [columnist] Major grounding errors are dismiss-level failures: if the story centers the wrong person or the supplied player data conflicts with the headline, the piece is unusable under the closed-world rule (source-side, not fixable in prose).
+- [insider] If the source digests are effectively empty, there is no usable closed-world factual base to support publication; withhold rather than inventing specifics or leaning on a vague repeated lede.
+- [insider] Hard source/story mismatches are not rewriteable; if the digest supports a different team or player, withhold rather than layering on unsupported team-specific impact.
+- [insider] Do not add offseason-addition or lineup-impact claims unless they are explicitly present in the source; those are easy overextensions when the grounding is off.
+- [insider] When the source and story subject diverge, treat it as a publish-blocking grounding failure, not a prose problem.
