@@ -10,9 +10,11 @@
 - Strong grounding remains the key asset; a simple, direct execution can be enough when the source is limited.
 - [analyst] Anchor the hook in the supplied quote or stated position, not in inferred roster calculus.
 - [insider] Cleanly naming the confirmed claim and nothing beyond the digest can make a narrow item read well.
+- [insider] A clean wire-style lead works when it states the concrete roster move and corresponding cuts without unsupported embellishment.
 - Plain, minimal presentation works when the report only gives one verified development.
 - [insider] Rebuilding the lede around only the confirmed facts can salvage a thin item when the headline is tightened to match.
 - When the source is sparse, a blunt factual lede beats decorative context.
+- [insider] A team-specific transaction story can work well when it names the correct move and the relevant injury/depth context without overreaching.
 
 ## What to avoid
 - Do not add roster-room, locker-room, or other behind-the-scenes implications unless the source explicitly supports them.
