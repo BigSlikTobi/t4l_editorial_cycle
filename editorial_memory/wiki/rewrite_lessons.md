@@ -29,3 +29,6 @@
 - [insider] When the package supports only one fact, rebuild around that fact rather than layering in extra names or context.
 - [analyst] Avoid fantasy-impact framing when the source provides no facts to support the claim.
 - [analyst] Do not frame systemic consequences when the source package contains no factual basis for them (source-side, not fixable in prose).
+- [insider] Do not force a quarterback-rotation or alternate-starts story unless a source_digest actually supports it.
+- [insider] If the digest has no usable facts, rebuild the headline and intro from verified material or skip the story entirely.
+- [insider] When the digest is effectively empty, treat it as a source-substance failure, not a prose problem (source-side, not fixable in prose).
