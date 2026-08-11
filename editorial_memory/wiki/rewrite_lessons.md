@@ -1,9 +1,9 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the single verified update and make the status/result relationship unmistakable in the first sentence.
-- Keep headline and lede tightly aligned around the same confirmed angle.
-- A plain availability/status statement can carry the piece when the source package only supports one clear update.
+- Open on the verified camp checkpoint or status change and make the timing/result relationship unmistakable in the first sentence.
+- Keep headline and lede tightly aligned around the same confirmed angle without repeating them verbatim.
+- A plain status or availability statement can carry the piece when the source package only supports one clear update.
 - Tight, source-grounded openings work even when the digest is thin.
 - Use minimal presentation when the story has only one usable takeaway.
 - Strong grounding matters more than style flourishes when the report is narrow.
@@ -11,7 +11,8 @@
 - A wire-style lede can succeed when it states the outcome plainly without embellishment.
 - Correct entity framing and immediate event setup can carry a piece when there is only one confirmed fact.
 - [insider] Center the lead on the single verified availability/status outcome rather than adding recovery or lineup speculation.
-- [insider] Keep the article short and direct when the package is thin; a tightly grounded note can still clear if it stays specific.
+- [insider] When the digest includes multiple confirmed facts, braid them into one concrete takeaway rather than flattening them into a generic status note.
+- [columnist] A camp-update column can work when it stays inside the digest and gives readers one concrete checkpoint plus the specific changes to watch.
 
 ## What to avoid
 - Do not publish as though multiple concrete details are confirmed when the source digest is effectively unusable or empty.
