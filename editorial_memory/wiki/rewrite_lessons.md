@@ -13,6 +13,7 @@
 - When grounding is strong, it can support a clear, team-specific football angle without straying beyond the source facts.
 - For analyst pieces, concrete supporting details in the body can strengthen the story without overreaching.
 - For thin reports, a tight news-brief voice is stronger than meta commentary about the source or report.
+- When a story is quote-driven, build around the exact quoted line and let that do the work.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, or background framing that the digest does not confirm.
@@ -27,3 +28,5 @@
 - If the source digest is empty or internally unreliable, stop rather than infer facts; treat that as a source-side problem, not a prose fix (source-side, not fixable in prose).
 - Avoid banned meta phrasing like "the source material" or "the report" when the facts are already clear; write the clean news brief directly.
 - When the source is thin, close on the last confirmed detail rather than introducing process language or editorial commentary.
+- For quote-led items, do not add unsupported explanation about what the quote means for the team unless the source directly supports that step.
+- If source support is thin, strip out precise jail/probation-style details rather than trying to infer them from context (source-side, not fixable in prose).
