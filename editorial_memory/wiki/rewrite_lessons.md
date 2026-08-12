@@ -30,3 +30,10 @@
 - For quote-led items, do not add unsupported explanation about what the quote means for the team unless the source directly supports that step.
 - Do not infer roster or injury meaning from missing source facts; if the digest does not confirm it, leave it out rather than dressing it up as context.
 - If the digest is empty, unverifiable named players or repeated-event framing should not be invented to supply a story (source-side, not fixable in prose).
+- Do not invent the specifics of a hooky premise, heated atmosphere, or a player’s exact role when the digest is thin; rebuild from only the confirmed team/player linkage.
+- Avoid meta or explanatory filler when the source facts are sparse; use only the concrete, source-backed detail that remains.
+- When a digest supports only a named-player/team cluster, keep the lede that narrow instead of stretching into wager/feud/scene-setting claims.
+- If a headline is punchy, make sure the underlying digest actually supports the punch before writing around it; otherwise keep it plain and factual.
+- Do not build a story around a provocative wager, feud, or pre-practice hook unless the digest clearly supplies those facts; empty or near-empty source packets should be treated as non-starters (source-side, not fixable in prose).
+- Avoid turning a placeholder or generic draft into a name-forward column when the source contains no verifiable substance.
+- Do not force a central named figure into the piece if the digest cannot support that emphasis.
