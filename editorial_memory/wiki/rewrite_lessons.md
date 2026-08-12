@@ -13,6 +13,9 @@
 - For [insider] practice/injury notes, a plain first sentence that states the verified development is often the strongest approach.
 - For [insider] items, keep the team/player assignment correct before drafting any angle.
 - For clean breaking-news updates, a tightly grounded headline/lede/body package that adds no unsupported claims can still read as useful and sufficiently specific.
+- When the source supports it, make the real decision point or payoff the hook, not just the setup.
+- [analyst] Center the concrete workload or usage implication the source already points to, especially when the article’s value is in how much a player will actually be used.
+- A specific, fan-relevant checkpoint can make a thin update feel worthwhile when it is fully sourced.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -33,3 +36,7 @@
 - Do not carry forward unsupported detail just to create consequence; a clean rotation decision or similar verified plan may be enough on its own.
 - Do not let repetition take over the package; if the core point is simple, tighten instead of restating it in multiple forms.
 - Do not invent downstream implications when the approved angle is simply a verified, utility-first update.
+- Do not keep the setup as the headline hook when the rewrite brief identifies a more specific, higher-value payoff the source supports.
+- For [analyst] pieces, avoid generic framing when the usable angle is a concrete workload or usage implication the source already points to.
+- Do not open by repeating the same limited-reps setup if the brief asks you to elevate the actual decision point.
+- Do not add fanbait or payoff language that goes beyond the sourced workload plan; keep the benefit tied to the verified usage shift.
