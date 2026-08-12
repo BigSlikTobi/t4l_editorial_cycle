@@ -37,3 +37,8 @@
 - Do not build a story around a provocative wager, feud, or pre-practice hook unless the digest clearly supplies those facts; empty or near-empty source packets should be treated as non-starters (source-side, not fixable in prose).
 - Avoid turning a placeholder or generic draft into a name-forward column when the source contains no verifiable substance.
 - Do not force a central named figure into the piece if the digest cannot support that emphasis.
+- Do not let headline, subhead, and intro all repeat a thin premise; each element should add or narrow verified detail.
+- Cut source-narration/meta language about what the digest lacks; if the packet is thin, write only the confirmed update.
+- For [insider] injury-roundup items, keep the headline and intro plain and source-safe: name the player and the roundup, but do not invent an injury label, timeline, or practice status.
+- If the digest has no usable facts, treat the story as non-derivable rather than filling gaps with player/team assumptions or a wrong-team assignment (source-side, not fixable in prose).
+- Do not salvage a blank or hallucinated packet by adding confident injury-roundup specifics, because the rewrite cannot fix missing evidence once the source is empty.
