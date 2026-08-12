@@ -10,10 +10,9 @@
 - Align headline and lede on the same verified angle without simply repeating identical wording.
 - Keep body copy grounded in the digest and advance with new source-backed detail instead of restating the lead.
 - Let a stable, well-sourced item read as a usable update, not a notebook dump.
-- When grounding is strong, it can support a clear, team-specific football angle without straying beyond the source facts.
-- For analyst pieces, concrete supporting details in the body can strengthen the story without overreaching.
-- When a story is quote-driven, build around the exact quoted line and let that do the work.
 - For [insider] practice/injury notes, a plain first sentence that states the verified development is often the strongest approach.
+- For [insider] items, keep the team/player assignment correct before drafting any angle.
+- For clean breaking-news updates, a tightly grounded headline/lede/body package that adds no unsupported claims can still read as useful and sufficiently specific.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -26,25 +25,11 @@
 - Do not make headline, subhead, and lede repeat the same update without adding new information.
 - Keep the team/entity field matched to the story's real subject; a wrong-team mismatch can sink the piece even if the body is grounded.
 - If the source digest is empty or internally unreliable, stop rather than infer facts; treat that as a source-side problem, not a prose fix (source-side, not fixable in prose).
-- Avoid banned meta phrasing like "the source material" or "the report" when the facts are already clear; write the clean news brief directly.
-- When the source is thin, close on the last confirmed detail rather than introducing process language or editorial commentary.
-- For quote-led items, do not add unsupported explanation about what the quote means for the team unless the source directly supports that step.
-- Do not infer roster or injury meaning from missing source facts; if the digest does not confirm it, leave it out rather than dressing it up as context.
-- If the digest is empty, unverifiable named players or repeated-event framing should not be invented to supply a story (source-side, not fixable in prose).
-- Do not invent the specifics of a hooky premise, heated atmosphere, or a player’s exact role when the digest is thin; rebuild from only the confirmed team/player linkage.
-- Avoid meta or explanatory filler when the source facts are sparse; use only the concrete, source-backed detail that remains.
-- When a digest supports only a named-player/team cluster, keep the lede that narrow instead of stretching into wager/feud/scene-setting claims.
-- If a headline is punchy, make sure the underlying digest actually supports the punch before writing around it; otherwise keep it plain and factual.
-- Do not build a story around a provocative wager, feud, or pre-practice hook unless the digest clearly supplies those facts; empty or near-empty source packets should be treated as non-starters (source-side, not fixable in prose).
-- Avoid turning a placeholder or generic draft into a name-forward column when the source contains no verifiable substance.
+- For thin source packets, avoid meta or explanatory filler; write only the confirmed update and nothing more.
 - Do not force a central named figure into the piece if the digest cannot support that emphasis.
-- Do not let headline, subhead, and intro all repeat a thin premise; each element should add or narrow verified detail.
-- Cut source-narration/meta language about what the digest lacks; if the packet is thin, write only the confirmed update.
-- For [insider] injury-roundup items, keep the headline and intro plain and source-safe: name the player and the roundup, but do not invent an injury label, timeline, or practice status.
-- If the digest has no usable facts, treat the story as non-derivable rather than filling gaps with player/team assumptions or a wrong-team assignment (source-side, not fixable in prose).
-- Do not salvage a blank or hallucinated packet by adding confident injury-roundup specifics, because the rewrite cannot fix missing evidence once the source is empty.
-- Do not leave in meta sentences about what the digest contains or omits; even a short rewrite should read like news, not source commentary.
-- For thin injury updates, keep any second sentence limited to a confirmed non-update such as lack of further information; do not speculate beyond that.
-- If a rewrite brief strips unsupported details, treat that as a signal that the original draft overreached on a basically simple practice/injury update.
-- Do not carry forward a player name that is not supported by the payload/digest, even if the headline or draft already mentioned it; verify the subject before drafting.
-- If the source packet is effectively empty, a second-pass rewrite cannot rescue it with added detail; treat it as a no-story rather than forcing prose.
+- Do not build around unsupported specifics like exact role, injury label, timeline, or practice status when the digest is effectively empty (source-side, not fixable in prose).
+- Do not let a punchy headline outrun the digest; if the source is thin, keep the angle plain and factual.
+- Avoid carrying repeated premise language across headline and intro when the rewrite brief asks for a simple confirmed plan.
+- Do not carry forward unsupported detail just to create consequence; a clean rotation decision or similar verified plan may be enough on its own.
+- Do not let repetition take over the package; if the core point is simple, tighten instead of restating it in multiple forms.
+- Do not invent downstream implications when the approved angle is simply a verified, utility-first update.
