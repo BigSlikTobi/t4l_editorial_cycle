@@ -13,6 +13,7 @@
 - When grounding is strong, it can support a clear, team-specific football angle without straying beyond the source facts.
 - For analyst pieces, concrete supporting details in the body can strengthen the story without overreaching.
 - When a story is quote-driven, build around the exact quoted line and let that do the work.
+- For [insider] practice/injury notes, a plain first sentence that states the verified development is often the strongest approach.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -42,3 +43,8 @@
 - For [insider] injury-roundup items, keep the headline and intro plain and source-safe: name the player and the roundup, but do not invent an injury label, timeline, or practice status.
 - If the digest has no usable facts, treat the story as non-derivable rather than filling gaps with player/team assumptions or a wrong-team assignment (source-side, not fixable in prose).
 - Do not salvage a blank or hallucinated packet by adding confident injury-roundup specifics, because the rewrite cannot fix missing evidence once the source is empty.
+- Do not leave in meta sentences about what the digest contains or omits; even a short rewrite should read like news, not source commentary.
+- For thin injury updates, keep any second sentence limited to a confirmed non-update such as lack of further information; do not speculate beyond that.
+- If a rewrite brief strips unsupported details, treat that as a signal that the original draft overreached on a basically simple practice/injury update.
+- Do not carry forward a player name that is not supported by the payload/digest, even if the headline or draft already mentioned it; verify the subject before drafting.
+- If the source packet is effectively empty, a second-pass rewrite cannot rescue it with added detail; treat it as a no-story rather than forcing prose.
