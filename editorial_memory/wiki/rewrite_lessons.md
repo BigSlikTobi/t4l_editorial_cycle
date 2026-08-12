@@ -1,21 +1,18 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the verified core event immediately, with the main update clear in sentence one.
-- Keep the lede tightly anchored to what the source explicitly confirms, especially for timely personnel, practice, ceremony, or discipline updates.
+- Open on the verified core update immediately, with the main news clear in sentence one.
+- Keep the lede tightly anchored to what the source explicitly confirms, especially for personnel, practice, ceremony, or discipline updates.
 - Preserve uncertainty when the source is tentative; do not upgrade conditional language into certainty.
 - Lead with the practical team or roster implication when the source actually supports one. [insider]
 - Keep the story tied to the specific game, role, practice setting, or event the source addresses.
 - Use a clean, direct frame for straightforward updates rather than inflating them into broader narratives.
 - Align headline and lede on the same verified angle without simply repeating identical wording.
 - Keep body copy grounded in the digest and advance with new source-backed detail instead of restating the lead.
-- Let a stable, well-sourced item read as a usable update, not a notebook dump.
 - For [insider] practice/injury notes, a plain first sentence that states the verified development is often the strongest approach.
-- For [insider] items, keep the team/player assignment correct before drafting any angle.
-- For clean breaking-news updates, a tightly grounded headline/lede/body package that adds no unsupported claims can still read as useful and sufficiently specific.
-- When the source supports it, make the real decision point or payoff the hook, not just the setup.
-- [analyst] Center the concrete workload or usage implication the source already points to, especially when the article’s value is in how much a player will actually be used.
-- A specific, fan-relevant checkpoint can make a thin update feel worthwhile when it is fully sourced.
+- For [analyst] pieces, center the concrete workload or usage implication the source already points to, especially when the article’s value is in how much a player will actually be used.
+- In breaking-news items, keep the headline and intro on the confirmed event itself; plain and factual can be strong when details are limited.
+- For [insider], stay specific about the verified opportunity or usage change when the source supports it, as in preseason snaps/reps notes.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -29,14 +26,12 @@
 - Keep the team/entity field matched to the story's real subject; a wrong-team mismatch can sink the piece even if the body is grounded.
 - If the source digest is empty or internally unreliable, stop rather than infer facts; treat that as a source-side problem, not a prose fix (source-side, not fixable in prose).
 - For thin source packets, avoid meta or explanatory filler; write only the confirmed update and nothing more.
-- Do not force a central named figure into the piece if the digest cannot support that emphasis.
 - Do not build around unsupported specifics like exact role, injury label, timeline, or practice status when the digest is effectively empty (source-side, not fixable in prose).
 - Do not let a punchy headline outrun the digest; if the source is thin, keep the angle plain and factual.
-- Avoid carrying repeated premise language across headline and intro when the rewrite brief asks for a simple confirmed plan.
-- Do not carry forward unsupported detail just to create consequence; a clean rotation decision or similar verified plan may be enough on its own.
-- Do not let repetition take over the package; if the core point is simple, tighten instead of restating it in multiple forms.
-- Do not invent downstream implications when the approved angle is simply a verified, utility-first update.
-- Do not keep the setup as the headline hook when the rewrite brief identifies a more specific, higher-value payoff the source supports.
 - For [analyst] pieces, avoid generic framing when the usable angle is a concrete workload or usage implication the source already points to.
-- Do not open by repeating the same limited-reps setup if the brief asks you to elevate the actual decision point.
-- Do not add fanbait or payoff language that goes beyond the sourced workload plan; keep the benefit tied to the verified usage shift.
+- Do not use meta phrasing like "according to the report" when the draft can simply state the confirmed event.
+- Do not tack on unsupported closing-paragraph framing after the main confirmed development has already landed.
+- For [insider], if the source packet is effectively empty, do not try to rescue the piece with procedural detail or stylistic polish; it is a source-side failure, not a prose one (source-side, not fixable in prose).
+- For [insider], keep hedge language precise and intact when the source only confirms part of the status; the approved pattern is a plain verified update plus the unresolved part, not a certainty leap.
+- For [insider], don’t weaken a useful availability note by defaulting to generic “what happens next” language when the digest already supports concrete preseason usage.
+- Do not try to salvage a story whose source packet belongs to a different team or topic; that mismatch is source-side, not fixable in prose (source-side, not fixable in prose).
