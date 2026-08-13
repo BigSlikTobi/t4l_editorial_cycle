@@ -25,9 +25,8 @@
 - Do not make headline, subhead, and lede repeat the same update without adding new information.
 - Avoid source-meta filler or “how the piece came together” language when the facts already support a clean angle.
 - If the source digest is empty or internally unreliable, stop rather than infer facts; treat that as a source-side problem, not a prose fix (source-side, not fixable in prose).
-- For thin source packets, avoid meta or explanatory filler; write only the confirmed update and nothing more.
 - Do not build around unsupported specifics like exact role, injury label, timeline, or practice status when the digest is effectively empty (source-side, not fixable in prose).
-- Do not pad a thin but usable digest with list-heavy recap framing or extra attendee roll call; keep the copy centered on the one supported takeaway.
+- For thin source packets, avoid meta or explanatory filler; write only the confirmed update and nothing more.
 - Do not let a punchy headline outrun the digest; if the source is thin, keep the angle plain and factual.
 - For [insider], if the source packet is effectively empty, do not try to rescue the piece with procedural detail or stylistic polish; it is a source-side failure, not a prose one (source-side, not fixable in prose).
 - For [insider], keep hedge language precise and intact when the source only confirms part of the status; the approved pattern is a plain verified update plus the unresolved part, not a certainty leap.
@@ -37,3 +36,5 @@
 - For [analyst], do not mix a usable cap or usage angle with unrelated source material; keep the analysis centered on the supported calculation or implication.
 - For [analyst], do not introduce roster details or cross-story framing that the supplied facts do not cleanly support, even when the angle is otherwise workable.
 - For [analyst], do not over-weight one named decision point when the broader cap structure is the strongest verified frame.
+- For [insider], do not frame a story as a concrete update when the digest has no facts to validate it; empty digests are unrecoverable without new source material (source-side, not fixable in prose).
+- For [columnist], avoid headline claims built on unsupported player names or scene-setting when the digest is effectively empty; the angle itself is not recoverable without facts (source-side, not fixable in prose).
