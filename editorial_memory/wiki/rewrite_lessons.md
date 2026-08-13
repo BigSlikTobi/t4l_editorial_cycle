@@ -12,6 +12,7 @@
 - For [insider], when the digest is thin but usable, keep only the verified update and the unresolved part; precise hedge language is better than forcing certainty.
 - For [columnist], a narrow, source-backed takeaway can work if the draft stays centered on the single supported angle and avoids recap filler.
 - For [columnist], concrete quoted language and a clear verified angle can carry a modest-scope story when the lede, headline, and subhead stay tightly aligned.
+- For [columnist], a quote-led short works best when it quickly translates the exact line into one concrete takeaway instead of adding generic reflection.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -27,4 +28,12 @@
 - For [insider], if the digest is thin, tighten to the verified additions and avoid explanatory flourish; keep the article factual rather than inferential.
 - For [insider], if the source appears to belong to the wrong team or wrong player, stop rather than trying to rewrite around the mismatch (source-side, not fixable in prose).
 - For [columnist], avoid vague vibe framing or unsupported scene-setting when the draft already has a clear personal or matchup hook; use concrete source-backed details instead.
-- For [columnist], don’t force a bigger narrative when the supported story is simply a modest, tightly verified preference or quote-driven update.
+- For [columnist], don't force a bigger narrative when the supported story is simply a modest, tightly verified preference or quote-driven update.
+- For [columnist], if the digest is effectively empty, do not recycle a premise with polished language; there is nothing to salvage without new source material (source-side, not fixable in prose).
+- For [columnist], don't repeat the same idea across headline, intro, and body when the only sourceable core is one short quote or takeaway; trim filler and let the verified line do the work.
+- For [columnist], when the digest is missing, don't try to rescue the draft with preseason-preview or generic spotlight framing; that's a source-side failure, not a prose fix (source-side, not fixable in prose).
+- For [columnist], never turn an empty digest into a personality-driven comparison piece or rivalry hook; without source facts, the comparison is unsupported (source-side, not fixable in prose).
+- For [columnist], don't pad a quote-led item with generic commentary or scene-setting when the source only supports one clear takeaway.
+- For [columnist], avoid headline-and-lede duplication; use one to state the quote and the other to give the distilled takeaway.
+- For [columnist], if the digest is effectively empty, stop rather than polishing around unsupported specifics like an event, year, or team framing (source-side, not fixable in prose).
+- For [columnist], when the source digest has no recoverable facts beyond a quote, do not add unsupported framing or interpretive expansion; a quote alone is not enough to verify the rest of the piece (source-side, not fixable in prose).
