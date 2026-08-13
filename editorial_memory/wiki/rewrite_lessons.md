@@ -8,11 +8,11 @@
 - Keep body copy grounded in the digest and advance with new source-backed detail instead of restating the lead.
 - Use a clean, direct frame for straightforward updates rather than inflating them into broader narratives.
 - In breaking-news items, keep the headline and intro on the confirmed event itself; plain and factual can be strong when details are limited.
-- For [analyst], lead with the core math or structural constraint when it is the real story; make the value proposition explicit early.
+- For [insider], tightly grounded status updates can carry when they clearly confirm the key assignment, the quoted reaction, and the practical next-step context.
 - For [insider], when the digest is thin but usable, keep only the verified update and the unresolved part; precise hedge language is better than forcing certainty.
+- For [insider], include only the source-backed practical takeaway that matters to readers; concise context can justify publication when it stays specific.
+- For [analyst], lead with the core math or structural constraint when it is the real story; make the value proposition explicit early.
 - For [columnist], a narrow, source-backed takeaway can work if the draft stays centered on the single supported angle and avoids recap filler.
-- For [columnist], concrete quoted language and a clear verified angle can carry a modest-scope story when the lede, headline, and subhead stay tightly aligned.
-- For [columnist], a quote-led short works best when it quickly translates the exact line into one concrete takeaway instead of adding generic reflection.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -23,10 +23,11 @@
 - Do not bury the main event under calendar weight or generalized scene-setting when the source already gives a clear angle.
 - Do not treat fallback reps or contingency plans as interchangeable with confirmed decisions.
 - Do not overstate status when the source language is still conditional or incomplete.
-- Do not make headline, subhead, and lede repeat the same update without adding new information.
 - For [insider], do not frame a story as a concrete update when the digest has no facts to validate it; empty digests are unrecoverable without new source material (source-side, not fixable in prose).
 - For [insider], if the digest is thin, tighten to the verified additions and avoid explanatory flourish; keep the article factual rather than inferential.
 - For [insider], if the source appears to belong to the wrong team or wrong player, stop rather than trying to rewrite around the mismatch (source-side, not fixable in prose).
+- For [insider], do not state the wrong starter, role, or team assignment as fact; fix the central source fact before drafting around it.
+- For [insider], avoid source-mixing across digests when one item is the actual core and the other only distracts from it.
 - For [columnist], avoid vague vibe framing or unsupported scene-setting when the draft already has a clear personal or matchup hook; use concrete source-backed details instead.
 - For [columnist], don't force a bigger narrative when the supported story is simply a modest, tightly verified preference or quote-driven update.
 - For [columnist], if the digest is effectively empty, do not recycle a premise with polished language; there is nothing to salvage without new source material (source-side, not fixable in prose).
