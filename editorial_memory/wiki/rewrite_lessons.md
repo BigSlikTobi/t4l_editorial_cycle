@@ -12,6 +12,7 @@
 - For [analyst], keep named players or decision points in support role when the broader cap or usage picture is stronger.
 - For [insider], when the digest is thin but usable, keep only the verified update and the unresolved part; precise hedge language is better than forcing certainty.
 - For [columnist], a narrow, source-backed takeaway can work if the draft stays centered on the single supported angle and avoids recap filler.
+- For [columnist], when the hook is a rare reunion or matchup novelty, pair it with concrete watchability details instead of relying on atmosphere or vibe.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -26,4 +27,5 @@
 - Avoid source-meta filler or “how the piece came together” language when the facts already support a clean angle.
 - For [analyst], do not mix a usable cap or usage angle with unrelated source material; keep the analysis centered on the supported calculation or implication.
 - For [insider], do not frame a story as a concrete update when the digest has no facts to validate it; empty digests are unrecoverable without new source material (source-side, not fixable in prose).
-- For [columnist], avoid headline claims built on unsupported specifics or vague timing cues when the draft never actually names a concrete development; the angle itself is not recoverable without facts (source-side, not fixable in prose).
+- For [columnist], avoid vague vibe framing or unsupported scene-setting when the draft already has a rare reunion or matchup hook; use concrete game details instead.
+- For [columnist], avoid headline/lede repetition that only rephrases the same angle without adding the specific facts readers can watch for.
