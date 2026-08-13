@@ -11,8 +11,8 @@
 - Keep body copy grounded in the digest and advance with new source-backed detail instead of restating the lead.
 - Use a clean, direct frame for straightforward updates rather than inflating them into broader narratives.
 - In breaking-news items, keep the headline and intro on the confirmed event itself; plain and factual can be strong when details are limited.
-- When the digest is thin but usable, stop at the confirmed plan or verified calculation and avoid padding with explanation.
-- For [columnist], a narrow, source-backed takeaway can work if the draft resists generic recap filler and stays centered on the single supported angle.
+- For [insider], when the digest is thin but usable, keep only the verified update and the unresolved part; precise hedge language is better than forcing certainty.
+- For [columnist], a narrow, source-backed takeaway can work if the draft stays centered on the single supported angle and avoids recap filler.
 
 ## What to avoid
 - Do not add unsupported medical, roster, camp, background, quote-attribution, timing, or named-player context that the digest does not confirm.
@@ -26,15 +26,9 @@
 - Avoid source-meta filler or “how the piece came together” language when the facts already support a clean angle.
 - If the source digest is empty or internally unreliable, stop rather than infer facts; treat that as a source-side problem, not a prose fix (source-side, not fixable in prose).
 - Do not build around unsupported specifics like exact role, injury label, timeline, or practice status when the digest is effectively empty (source-side, not fixable in prose).
-- For thin source packets, avoid meta or explanatory filler; write only the confirmed update and nothing more.
-- Do not let a punchy headline outrun the digest; if the source is thin, keep the angle plain and factual.
-- For [insider], if the source packet is effectively empty, do not try to rescue the piece with procedural detail or stylistic polish; it is a source-side failure, not a prose one (source-side, not fixable in prose).
-- For [insider], keep hedge language precise and intact when the source only confirms part of the status; the approved pattern is a plain verified update plus the unresolved part, not a certainty leap.
-- For [insider], don’t weaken a useful availability note by defaulting to generic “what happens next” language when the digest already supports concrete preseason usage.
 - Do not try to salvage a story whose source packet belongs to a different team or topic; that mismatch is source-side, not fixable in prose (source-side, not fixable in prose).
 - Do not make multiple precise claims from a digest that offers no usable facts beyond a headline/summary; that is a grounding failure, not a rewriting opportunity.
 - For [analyst], do not mix a usable cap or usage angle with unrelated source material; keep the analysis centered on the supported calculation or implication.
-- For [analyst], do not introduce roster details or cross-story framing that the supplied facts do not cleanly support, even when the angle is otherwise workable.
-- For [analyst], do not over-weight one named decision point when the broader cap structure is the strongest verified frame.
 - For [insider], do not frame a story as a concrete update when the digest has no facts to validate it; empty digests are unrecoverable without new source material (source-side, not fixable in prose).
+- For [insider], don’t rescue an empty digest with procedural detail or polished phrasing; if the source has no usable facts, the problem is source-side, not fixable in prose.
 - For [columnist], avoid headline claims built on unsupported player names or scene-setting when the digest is effectively empty; the angle itself is not recoverable without facts (source-side, not fixable in prose).
