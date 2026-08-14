@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the one supported takeaway immediately; if the source clearly signals a readiness, performance, or role note, make that the first sentence.
+- Open on the concrete game-day wrinkle immediately; for preseason openers, the matchup, expected snap count, or a starter decision can be the lead.
 - Keep the lede anchored to what the digest actually confirms, especially for preseason, practice, rehab, ceremony, discipline, cap, or game-status updates.
 - Use a clean, direct frame for straightforward updates rather than inflating them into broader narratives.
 - Let the headline and lede share the same verified angle, but have each add something new instead of repeating the same setup.
@@ -11,6 +11,7 @@
 - For [analyst], concrete preseason-performance updates can work when they stay inside the source digest and include the key usage or competition context.
 - For [columnist], a narrow, source-backed takeaway can work if the draft stays centered on the single supported angle and avoids recap filler.
 - For [columnist], a tightly framed location-specific reference can work when it stays on the verified comparison itself and does not need extra explanation to feel relevant.
+- When the source gives a clear decision point, put that first and keep support details like kickoff time or TV info in service of the main update.
 
 ## What to avoid
 - Do not build around an empty or fact-free source digest; if there is no usable factual material, the piece is unrecoverable without new source material (source-side, not fixable in prose).
@@ -34,3 +35,6 @@
 - Do not imply stat-line specifics or deeper performance details unless they are explicitly in the digest.
 - Do not let named supporting players become a distraction unless they genuinely reinforce the opener angle.
 - Do not introduce named players or cross-article references that are not present in the digest; when the source is empty, the whole claim is source-side, not fixable in prose (source-side, not fixable in prose).
+- Do not fold in ranking or comparison material unless it earns a clear second-paragraph job and stays subordinate to the core update.
+- Do not let the headline, intro, and body all orbit the same note without a sharper structural turn.
+- Do not stack adjacent paragraphs with the same preseason status update when one clean pass plus one supporting detail will do.
