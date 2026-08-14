@@ -1,37 +1,36 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open on the confirmed development immediately; name the concrete update in the first sentence when the source supports it.
-- Keep the lede tightly anchored to what the source explicitly confirms, especially for personnel, practice, rehab, ceremony, discipline, cap, preseason-performance, or game-status updates.
-- Align headline and lede on the same verified angle, but let each add something distinct rather than repeating the same setup.
-- Keep the story tied to the specific game, role, practice setting, event, rehab step, cap structure, or competition the source addresses.
-- Keep body copy grounded in the digest and advance with new source-backed detail instead of restating the lead.
+- Open on the one supported takeaway immediately; if the source clearly signals a readiness, performance, or role note, make that the first sentence.
+- Keep the lede anchored to what the digest actually confirms, especially for preseason, practice, rehab, ceremony, discipline, cap, or game-status updates.
 - Use a clean, direct frame for straightforward updates rather than inflating them into broader narratives.
-- In breaking-news items, keep the headline and intro on the confirmed event itself; plain and factual can be strong when details are limited.
-- For [insider], tightly grounded status updates can work when they clearly name the source-backed player pool or assignment and avoid adding team-specific certainty the digest does not confirm.
-- For [analyst], lead with the core math or structural constraint when it is the real story; make the value proposition explicit early.
-- For [analyst], concrete preseason-performance updates can land well when they stay inside the source digests and add the key line plus the relevant rotation or usage context.
+- Let the headline and lede share the same verified angle, but have each add something new instead of repeating the same setup.
+- Keep body copy grounded in the digest and advance with new source-backed detail instead of rephrasing the lead.
+- In breaking-news items, plain and factual can be strong when details are limited.
+- For [analyst], lead with the core math, usage, or structural constraint when that is the real story; make the decision or rotation angle explicit early.
+- For [analyst], concrete preseason-performance updates can work when they stay inside the source digest and include the key usage or competition context.
 - For [columnist], a narrow, source-backed takeaway can work if the draft stays centered on the single supported angle and avoids recap filler.
-- For [columnist], a tightly framed Dallas-specific reference can work when it stays on the verified comparison itself and does not need extra explanation to feel relevant.
+- For [columnist], a tightly framed location-specific reference can work when it stays on the verified comparison itself and does not need extra explanation to feel relevant.
 
 ## What to avoid
-- Do not add unsupported medical, roster, camp, background, quote-attribution, timing, team-specific, named-player, market, or trade context that the digest does not confirm.
 - Do not build around an empty or fact-free source digest; if there is no usable factual material, the piece is unrecoverable without new source material (source-side, not fixable in prose).
-- Do not broaden a narrow update into a larger narrative about implications, atmosphere, workload, market value, or next steps unless the source supports it.
+- Do not add unsupported medical, roster, camp, background, quote-attribution, timing, team-specific, named-player, market, or trade context that the digest does not confirm.
+- Do not use unsupported team/person details or narrative certainty when the digest cannot verify them.
+- Do not broaden a narrow update into a larger narrative about implications, atmosphere, workload, market value, evaluation paths, or next steps unless the source supports it.
 - Do not let speculative phrasing or a softer side angle outrun the actual facts; keep the core setup dominant.
+- Do not overstate certainty or status when the source language is still conditional or incomplete.
 - Do not restate the same core fact in the lede and follow-up paragraphs without adding fresh source-grounded detail.
 - Do not make the headline, subhead, and intro echo one another; each should advance the story rather than duplicate the same tie-up or status note.
-- Do not bury the main event under calendar weight or generalized scene-setting when the source already gives a clear angle.
+- Do not bury the main event under generic setup or scene-setting when the source already gives a clear decision point.
 - Do not treat fallback reps or contingency plans as interchangeable with confirmed decisions.
-- Do not overstate status when the source language is still conditional or incomplete.
-- For [insider], do not frame a story as a concrete update when the digest has no facts to validate it; empty digests are unrecoverable without new source material (source-side, not fixable in prose).
-- For [insider], if the digest is thin, strip out location- or team-specific framing and tighten to the verified player pool; keep the article factual rather than inferential.
-- For [insider], cut quarterback clutter or other side threads unless they sharpen the main takeaway; extra named-player context can make the framing feel unfocused.
-- For [insider], if the source appears to belong to the wrong team or wrong player, stop rather than trying to rewrite around the mismatch (source-side, not fixable in prose).
-- For [insider], when the digest only confirms the event itself, keep the piece at that level and avoid implying injury details or significance that are not named.
-- For [insider], do not dress a confirmed injury/update in “fragile start” style filler unless the source explicitly supports the broader interpretation.
+- For [analyst], avoid generic framing when the story’s value is in the specific workload, competition, or sequencing detail.
 - For [analyst], avoid market/trade implications and other extrapolation that go beyond a source-backed performance or structural update.
+- For [analyst], do not introduce an evaluation path or quarterback-mix language unless the digest explicitly supports that competition framing.
 - For [columnist], do not lean on meta/report framing or vague paraphrase when the digest has no usable facts; cut the piece or rebuild only around verifiable source material (source-side, not fixable in prose).
 - For [columnist], avoid forcing an opinionated angle onto an empty digest; if the core claim cannot be tied to a source-backed name, role, or consequence, the mismatch is source-side, not fixable in prose (source-side, not fixable in prose).
 - For [columnist], do not pad a narrow comparison with invented implications, fan reaction, or trade consequences unless the source actually gives them.
 - For [columnist], if the digest only offers a headline-level topic and no supporting facts, do not repeat the claim in a more elaborate voice; the piece is not salvageable from the provided source material (source-side, not fixable in prose).
+- Do not lean on source-narration or meta-style filler when the digest already provides the usable fact; cut those sentences in favor of direct source-backed reporting.
+- Do not imply stat-line specifics or deeper performance details unless they are explicitly in the digest.
+- Do not let named supporting players become a distraction unless they genuinely reinforce the opener angle.
+- Do not introduce named players or cross-article references that are not present in the digest; when the source is empty, the whole claim is source-side, not fixable in prose (source-side, not fixable in prose).
