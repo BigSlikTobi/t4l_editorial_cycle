@@ -38,3 +38,4 @@
 - [analyst] When the digest is thin but there is one clean, confirmed hook, center the lede on that hook and strip away role-evaluation or broader scouting claims.
 - [analyst] Do not turn a surprise start plus praise into a backup-role verdict unless the source explicitly supports that evaluation.
 - [analyst] Do not build a depth-chart or backup-role story from an empty digest; if the source cannot verify the start, praise, or role framing, dismiss the angle rather than writing around it.
+- Do not force a story when the digest has no usable facts; that is a source-side, not fixable in prose issue.
