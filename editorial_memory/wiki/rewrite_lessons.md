@@ -13,7 +13,10 @@
 - [insider] A concise, source-tight sequence of verified developments can justify a tap when it stays inside the digest and avoids extra context.
 - [insider] Clean ledes and headlines can carry a player-update story if they stay precise and non-hallucinatory.
 - [insider] When the source gives a concrete next step or outcome, include it briefly to sharpen the news value.
+- [insider] For narrow injury-settlement updates, keep the framing to the confirmed settlement and immediate effect.
 - [analyst] When the source gives a definitive player-value update, keep the framing anchored to the confirmed deal or usage fact rather than widening into speculation.
+- [analyst] A strong pressure/impact angle works when it is built from only the documented game facts and keeps the takeaway narrow.
+- [analyst] Concrete team-level numbers can strengthen an impact story when they support the central takeaway without expanding the thesis.
 
 ## What to avoid
 - Do not bury a clear source-backed development under generic setup, scene-setting, or broader narrative padding.
@@ -29,7 +32,11 @@
 - [insider] Do not turn a narrow player-update into a broader market verdict unless the digest explicitly supports that leap.
 - [insider] Avoid speculative ranking or comparison framing unless the source actually supplies the benchmark and consequences.
 - [insider] Do not add extra named players or dominoes unless they are tied to a fact already present in the digest.
+- [insider] Do not imply roster or backfield consequences from an injury settlement unless the digest supports them; keep it to the confirmed settlement and its immediate effect.
+- [insider] Do not invent the underlying facts of a suspension or explanation when the digest is too thin to support them; if the source is unusable, the issue is source-side, not fixable in prose.
+- [insider] Do not add roster or injury-detail consequences when the source set has no usable facts; treat that as source-side, not a writing fix.
 - [analyst] Do not turn a confirmed player-value update into a workload, role, or fantasy thesis unless the digest backs that jump.
 - [analyst] Do not paraphrase a headline into a bigger evaluation when the source only supports the specific deal or event.
 - [analyst] Do not build role, workload, or team-questions framing from an empty source digest or a loose headline echo.
-- [insider] Do not invent the underlying facts of a suspension or explanation when the digest is too thin to support them; if the source is unusable, the issue is source-side, not fixable in prose.
+- [analyst] Do not name roster or line personnel unless the digests explicitly support those identifiers; keep pressure/impact framing grounded in the documented game takeaways.
+- [analyst] Do not stretch an early-pressure game story into a broader quarterback verdict when the evidence only supports a narrower offense/pressure takeaway.
