@@ -12,6 +12,7 @@
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
 - [insider] A team-specific contract or transaction update can be strong when it stays anchored to exact terms and verified context.
 - [insider] Usable details like a stat line, number of series, or a coach quote strengthen a tightly grounded camp/race update when they support the central takeaway.
+- [analyst] When the source only gives one real fact, keep the lede and headline pinned to that fact and resist widening into role or workload conclusions.
 
 ## What to avoid
 - Do not bury a clear source-backed development under generic setup, scene-setting, or broader narrative padding.
@@ -22,20 +23,14 @@
 - Do not attribute a quote, comment, or judgment unless the digest explicitly supports that speaker role.
 - Do not use report-meta phrasing when a direct status update will do.
 - Do not add unsupported medical, roster, depth-chart, or matchup detail beyond what the digests confirm.
-- Do not introduce player, team, or suspension specifics when the digest is effectively empty; that is a source-side, not fixable in prose issue.
-- Do not treat an empty digest as license to infer team, role, or injury context from the headline alone; unsupported context is a hard stop, not a writing problem.
-- Do not use a roster-watch headline if the underlying source cannot support any specific roster, injury, lineup, reps, suspension, or transaction claim.
 - Do not lean on source narration like “according to Yahoo Sports” or “the report says”; write the verified development directly.
+- Do not force a story when the digest has no usable facts; that is a source-side, not fixable in prose issue.
 - [insider] Do not turn “in the driver’s seat” or “to lose” into a done deal; keep the lede and headline aligned with the source’s hedge until the job is actually decided.
 - [insider] Avoid speculative preseason lineup-watch framing unless the digest actually supplies confirmed availability or lineup movement.
 - [insider] Do not add extra named quarterbacks or other cluster-player mentions unless they are tied to a fact already present in the digest.
-- [insider] Do not lean on uncertainty or source-narration language when the core update is already hard and usable; state the verified outcome directly.
-- [insider] Avoid meta commentary about what the source material does or does not add; trim to the hard fact the digest supports.
-- [insider] Keep sparse injury updates from drifting beyond the single confirmed fact, especially when the update is simply discharge/status after an injury.
-- [insider] When grounding is thin, prefer one verified injury/status fact over adding extra names that only clutter the read.
-- [insider] Do not build around a hospital-discharge claim unless the digest explicitly supports that specific status; if the source only confirms a narrower injury update, keep it that narrow.
-- [insider] Do not repeat the absence of digest detail as a hedge inside the piece; if the source is thin, either stay on the one confirmed fact or dismiss the angle.
-- [analyst] When the digest is thin but there is one clean, confirmed hook, center the lede on that hook and strip away role-evaluation or broader scouting claims.
+- [insider] Keep sparse injury updates from drifting beyond the single confirmed fact; if the source only confirms a narrow status note, stay narrow.
+- [insider] Do not build around a hospital-discharge claim unless the digest explicitly supports that specific status.
 - [analyst] Do not turn a surprise start plus praise into a backup-role verdict unless the source explicitly supports that evaluation.
-- [analyst] Do not build a depth-chart or backup-role story from an empty digest; if the source cannot verify the start, praise, or role framing, dismiss the angle rather than writing around it.
-- Do not force a story when the digest has no usable facts; that is a source-side, not fixable in prose issue.
+- [analyst] Do not widen one confirmed usage note into a “major workload” or “showing its hand” conclusion unless the digest actually backs that leap.
+- [analyst] Do not paraphrase a headline into a fantasy workload thesis when the digest is effectively empty; if grounding is absent, the claim is source-side, not fixable in prose.
+- [analyst] Do not build role, workload, or team-questions framing from an empty source digest or a loose headline echo.
