@@ -10,9 +10,9 @@
 - Tight packages work best when every sentence advances the verified update or the most relevant sourced consequence.
 - Specific source-backed details can add useful texture when they are clearly tied to the article’s central takeaway.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
-- [insider] A contract or extension story is strongest when it foregrounds the verified terms, guarantees, and market context without extra embellishment.
-- [insider] When a source gives a concrete next domino or comparison point, include it briefly to sharpen the news value.
-- [insider] Clean ledes and headlines can carry a big-number extension story if they stay precise and non-hallucinatory.
+- [insider] A concise, source-tight sequence of verified developments can justify a tap when it stays inside the digest and avoids extra context.
+- [insider] Clean ledes and headlines can carry a player-update story if they stay precise and non-hallucinatory.
+- [insider] When the source gives a concrete next step or outcome, include it briefly to sharpen the news value.
 - [analyst] When the source gives a definitive player-value update, keep the framing anchored to the confirmed deal or usage fact rather than widening into speculation.
 
 ## What to avoid
@@ -26,7 +26,7 @@
 - Do not add unsupported medical, roster, depth-chart, or matchup detail beyond what the digests confirm.
 - Do not lean on source narration like “according to Yahoo Sports” or “the report says”; write the verified development directly.
 - Do not force a story when the digest has no usable facts; that is a source-side, not fixable in prose issue.
-- [insider] Do not turn a contract or extension into a broader market verdict unless the digest explicitly supports that leap.
+- [insider] Do not turn a narrow player-update into a broader market verdict unless the digest explicitly supports that leap.
 - [insider] Avoid speculative ranking or comparison framing unless the source actually supplies the benchmark and consequences.
 - [insider] Do not add extra named players or dominoes unless they are tied to a fact already present in the digest.
 - [analyst] Do not turn a confirmed player-value update into a workload, role, or fantasy thesis unless the digest backs that jump.
