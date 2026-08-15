@@ -7,12 +7,12 @@
 - Use short, direct status phrasing when the facts are specific and limited.
 - Keep the story grounded in digest-confirmed details; a tight package can work even without big narrative framing.
 - When the source supplies a clean sequence of events, present that sequence plainly instead of overexplaining it.
-- For [insider], neutral watch-list reporting works best when it stays close to verified roster, injury, game-state, or practice-rotation updates.
+- For [insider], neutral watch-list reporting works best when it stays close to verified roster, injury, game-state, practice-rotation, or transaction updates.
 - If the piece has one strong factual hook, let that hook do the work rather than adding extra color.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
 - Tight packages are strongest when every sentence advances the verified status change or the most relevant sourced watch-list items.
-- Specific game context and a concise stat line can add useful grounding when they remain fully source-backed.
-- For [insider], team-specific stakes are welcome when they stay anchored to verified depth-chart, readiness, or transaction consequences.
+- Specific contract or production details can add useful grounding when they remain fully source-backed.
+- For [insider], team interest or trade-call stakes are welcome when they stay anchored to verified transaction or availability consequences.
 
 ## What to avoid
 - Do not attribute a quote, comment, or judgment to a person unless the digest explicitly supports that speaker role.
@@ -35,3 +35,5 @@
 - Do not turn a no-facts digest into a named-player status roundup; unsupported lists are a hard stop, not a writing problem.
 - Avoid implying there is meaningful breaking news when the source content does not verify any update at all.
 - Do not use a roster-watch headline if the underlying source cannot support any specific roster, injury, lineup, reps, or transaction claim.
+- For [insider], if multiple teams are calling on a player, keep the focus on the verified interest and the team’s stated plan rather than expanding into unconfirmed trade drama.
+- For [insider], practice-status notes like "not practicing" work well when paired with the sourced team stance or transaction context, not as free-floating speculation.
