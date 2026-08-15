@@ -3,11 +3,10 @@
 ## What works (keep doing)
 - Open with the clearest verified development and make the headline, lede, and intro all point to the same concrete takeaway.
 - Lead with the most immediate source-backed action rather than building toward it with extra scene-setting.
-- Keep the story tightly inside the digests; strong grounding can carry an article even without bigger narrative framing.
+- Keep the story tightly inside the digest; strong grounding can carry an article even without bigger narrative framing.
 - Let one concrete hook do the heavy lifting when the source gives only a brief, narrow update.
 - Use short, direct status or outcome phrasing when the facts are specific and limited.
 - When the source supplies a clean sequence of events, present that sequence plainly instead of overexplaining it.
-- Keep watch-list reporting close to verified game-state, practice, roster, injury, suspension, or transaction details.
 - Tight packages work best when every sentence advances the verified update or the most relevant sourced consequence.
 - Specific source-backed details can add useful texture when they are clearly tied to the article’s central takeaway.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
@@ -26,5 +25,13 @@
 - Do not introduce player, team, or suspension specifics when the digest is effectively empty; that is a source-side, not fixable in prose issue.
 - Do not treat an empty digest as license to infer team, role, or injury context from the headline alone; unsupported context is a hard stop, not a writing problem.
 - Do not use a roster-watch headline if the underlying source cannot support any specific roster, injury, lineup, reps, suspension, or transaction claim.
+- Do not lean on source narration like “according to Yahoo Sports” or “the report says”; write the verified development directly.
 - [insider] Do not turn “in the driver’s seat” or “to lose” into a done deal; keep the lede and headline aligned with the source’s hedge until the job is actually decided.
-- For [insider], avoid speculative preseason lineup-watch framing unless the digest actually supplies confirmed availability or lineup movement.
+- [insider] Avoid speculative preseason lineup-watch framing unless the digest actually supplies confirmed availability or lineup movement.
+- [insider] Do not add extra named quarterbacks or other cluster-player mentions unless they are tied to a fact already present in the digest.
+- [insider] Do not lean on uncertainty or source-narration language when the core update is already hard and usable; state the verified outcome directly.
+- [insider] Avoid meta commentary about what the source material does or does not add; trim to the hard fact the digest supports.
+- [insider] Keep sparse injury updates from drifting beyond the single confirmed fact, especially when the update is simply discharge/status after an injury.
+- [insider] When grounding is thin, prefer one verified injury/status fact over adding extra names that only clutter the read.
+- [insider] Do not build around a hospital-discharge claim unless the digest explicitly supports that specific status; if the source only confirms a narrower injury update, keep it that narrow.
+- [insider] Do not repeat the absence of digest detail as a hedge inside the piece; if the source is thin, either stay on the one confirmed fact or dismiss the angle.
