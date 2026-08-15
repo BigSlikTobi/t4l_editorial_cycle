@@ -11,6 +11,7 @@
 - Tight packages work best when every sentence advances the verified update or the most relevant sourced consequence.
 - Specific source-backed details can add useful texture when they are clearly tied to the article’s central takeaway.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
+- [insider] A team-specific contract or transaction update can be strong when it stays anchored to exact terms and verified context.
 
 ## What to avoid
 - Do not bury a clear source-backed development under generic setup, scene-setting, or broader narrative padding.
