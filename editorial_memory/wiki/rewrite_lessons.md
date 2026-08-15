@@ -1,7 +1,7 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the clearest verified development and make the headline, lede, and intro all point to the same concrete takeaway.
+- Open with the clearest verified development and keep the headline, lede, and intro aligned on the same concrete takeaway.
 - Lead with the most immediate source-backed action rather than building toward it with extra scene-setting.
 - Keep the story tightly inside the digest; strong grounding can carry an article even without bigger narrative framing.
 - Let one concrete hook do the heavy lifting when the source gives only a brief, narrow update.
@@ -35,3 +35,6 @@
 - [insider] When grounding is thin, prefer one verified injury/status fact over adding extra names that only clutter the read.
 - [insider] Do not build around a hospital-discharge claim unless the digest explicitly supports that specific status; if the source only confirms a narrower injury update, keep it that narrow.
 - [insider] Do not repeat the absence of digest detail as a hedge inside the piece; if the source is thin, either stay on the one confirmed fact or dismiss the angle.
+- [analyst] When the digest is thin but there is one clean, confirmed hook, center the lede on that hook and strip away role-evaluation or broader scouting claims.
+- [analyst] Do not turn a surprise start plus praise into a backup-role verdict unless the source explicitly supports that evaluation.
+- [analyst] Do not build a depth-chart or backup-role story from an empty digest; if the source cannot verify the start, praise, or role framing, dismiss the angle rather than writing around it.
