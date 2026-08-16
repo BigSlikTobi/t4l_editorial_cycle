@@ -12,9 +12,6 @@
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
 - A clear, unusual, source-backed hook can justify a tap when the article stays tightly grounded.
 - [insider] A concise, source-tight sequence of verified developments can justify a tap when it stays inside the digest and avoids extra context.
-- [insider] Clean ledes and headlines can carry a player-update story if they stay precise and non-hallucinatory.
-- [insider] When the source gives a concrete next step or outcome, include it briefly to sharpen the news value.
-- [analyst] When the source gives a definitive player-value update, keep the framing anchored to the confirmed deal or usage fact rather than widening into speculation.
 - [analyst] A strong pressure/impact angle works when it is built from only the documented game facts and keeps the takeaway narrow.
 
 ## What to avoid
@@ -31,6 +28,8 @@
 - Do not imply medical meaning, certainty, or added context from a thin digest that only supports the headline-level update.
 - Do not force a story when the digest has no usable facts; that is a source-side, not fixable in prose issue.
 - Do not build a claim on missing or empty source material, even if the headline sounds plausible; that is source-side, not fixable in prose.
+- Do not add source-meta phrasing or commentary about how the package “ties” a player to a play; keep the prose inside the verified event.
+- Do not add sideline-temperature or emotional texture unless the digest clearly supports it.
 - [insider] Do not turn a narrow player-update into a broader market verdict unless the digest explicitly supports that leap.
 - [insider] Avoid speculative ranking or comparison framing unless the source actually supplies the benchmark and consequences.
 - [insider] Do not add extra named players or dominoes unless they are tied to a fact already present in the digest.
