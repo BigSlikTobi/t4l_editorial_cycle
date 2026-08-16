@@ -10,9 +10,10 @@
 - Tight packages work best when every sentence advances the verified update or the most relevant sourced consequence.
 - Specific source-backed details can add useful texture when they are clearly tied to the article’s central takeaway.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
-- [insider] Cleanly reporting a rotation or status update can work when the lede states the confirmed availability/usage change and the body stays series-by-series or fact-by-fact.
+- [insider] Cleanly reporting a roster/status move can work when the lede states the confirmed transaction and the body stays series-by-series or fact-by-fact.
 - [analyst] Contract-specific detail can elevate a thin update when the lede stays on the financial or timeline stake instead of generic recap.
 - [columnist] A direct quote or concrete source-backed angle can carry the piece when the framing stays modest and does not reach beyond what is actually supported.
+- [analyst] When a digest is thin, a valid article can still work if it stays anchored to the one confirmed source-level fact and does not invent extra ranking or player-context details.
 
 ## What to avoid
 - Do not publish or rewrite around an effectively empty digest; unsupported game/player/usage claims are source-side, not fixable in prose.
@@ -34,5 +35,9 @@
 - [insider] Do not imply a status change from a cluster mention alone; if the digest only names related players, keep the article at the level the source actually supports.
 - [insider] Do not use forward-looking stretch/return language unless the digest explicitly gives that timeline.
 - [analyst] Do not bury the real stake; when contract terms or money are the strongest verified angle, keep them front and center instead of making the piece read like a generic status note.
+- [analyst] Do not center a rewrite on an unsupported player or team angle when the only solid fact is the source publication or ranking itself.
+- [analyst] Do not add unsupported ranking conclusions or extra player-list details when the digest only confirms that a ranking exists.
+- [analyst] Do not build a ranking story on an empty digest; if the source lacks concrete support for the named players and performance framing, the piece is unsalvageable.
 - [columnist] Do not build a reaction piece on an empty digest; if the source lacks concrete support for the quote or premise, the story is unsalvageable.
 - [columnist] Do not repeat a headline-level claim across headline, subhead, and intro when no source-backed substance follows; repetition cannot substitute for evidence.
+- [insider] Do not overbuild a clean roster move into extra context; a direct, concrete transaction update is enough when the digest fully supports it.
