@@ -46,3 +46,5 @@
 - Do not publish or rewrite around an effectively empty digest; unsupported game/player/usage claims are source-side, not fixable in prose.
 - Do not infer offensive usage, player involvement, or other closed-world facts from a thin or empty digest.
 - Do not treat a plausible headline as evidence when the source text does not verify it.
+- Do not introduce preseason-debut praise or roster implications when the digest is effectively empty; that is source-side, not fixable in prose.
+- Do not claim a rookie flashed, impressed, or changed his standing unless the digest actually provides factual support for that evaluation.
