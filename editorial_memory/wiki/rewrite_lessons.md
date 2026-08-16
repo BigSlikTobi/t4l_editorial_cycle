@@ -38,6 +38,8 @@
 - [insider] Do not invent the underlying facts of a suspension or explanation when the digest is too thin to support them; if the source is unusable, the issue is source-side, not fixable in prose.
 - [insider] Do not add roster or injury-detail consequences when the source set has no usable facts; treat that as source-side, not a writing fix.
 - [insider] Do not add quoted emotion, medical framing, or other specifics unless the digest explicitly supports them; thin source material is unrecoverable for publish.
+- [insider] Do not swap in an unsupported player or wrong-team reference when the digest gives a different named rookie or event.
+- [insider] Do not center the story on an unsupported standout if the real angle is an injury exit plus the verified performances of the players actually named in the digest.
 - [analyst] Do not turn a confirmed player-value update into a workload, role, or fantasy thesis unless the digest backs that jump.
 - [analyst] Do not paraphrase a headline into a bigger evaluation when the source only supports the specific deal or event.
 - [analyst] Do not build role, workload, or team-questions framing from an empty source digest or a loose headline echo.
