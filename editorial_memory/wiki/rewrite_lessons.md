@@ -12,8 +12,7 @@
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
 - A clear, unusual, source-backed hook can justify a tap when the article stays tightly grounded.
 - [analyst] A narrow, source-verified takeaway can still work when it is framed modestly and stays inside the documented event.
-- [analyst] Keep analyst payoff explicit by centering the most source-backed operational concern, not just the surface fact.
-- [analyst] A tightly grounded notebook can earn clicks through concrete operational details, even without bigger narrative framing.
+- [insider] When the digest is thin, a short confirmation-style article can still work if it sticks to the confirmed move only.
 
 ## What to avoid
 - Do not publish or rewrite around an effectively empty digest; unsupported game/player/usage claims are source-side, not fixable in prose.
@@ -28,3 +27,11 @@
 - [analyst] Do not build role, workload, or team-questions framing from an empty source digest or a loose headline echo.
 - [analyst] Do not assign roster, depth-chart, or role specifics when the source digest is effectively empty; unsupported closed-world claims are source-side, not a prose execution fix.
 - [analyst] Do not force a matchup/picks frame or synthetic analysis onto an empty digest; that is source-side, not fixable in prose.
+- Do not invent a transaction or other concrete event when the digest is effectively empty; a generic or repetitive headline is not enough to support it.
+- Do not rely on repetitive headline/lede phrasing when the source lacks facts; the piece should be skipped or held rather than padded.
+- [insider] Do not add long-term stability or role-lock framing when the digest only confirms the extension itself; keep the rest of the piece clean and factual.
+- [analyst] Do not build a first-round-talent claim or Pittsburgh quarterback-evaluation angle from a source digest with no usable facts; that is source-side, not fixable in prose.
+- Do not add unrelated names or side references that are not supported by the source digest; they erode trust fast.
+- Do not build a story on an unsupported star-specific decision timeline when the digest has no usable facts; if the source is missing, skip it.
+- [columnist] Do not let interpretive framing outrun the source; opinionated packaging still needs a verifiable factual base.
+- [insider] Do not repeat the extension as settled fact in multiple beats when the digest offers no supporting detail; if the digest is bare, keep the item minimal or skip it (source-side, not fixable in prose).
