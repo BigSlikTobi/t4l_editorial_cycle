@@ -39,3 +39,5 @@
 - [columnist] Do not present a quoted “being punished” style claim as verified unless the source digest explicitly supports it; keep the framing inside the sourced facts.
 - [columnist] Do not rebuild the intro around the player’s status or competition angle with extra certainty than the digest supports; keep the named battle, but stay fact-bound.
 - Do not introduce specific player names or roster interpretations when the source digest is effectively empty; that is source-side, not fixable in prose. (source-side, not fixable in prose)
+- Do not build a column off a source digest with no verifiable facts; unsupported frustration or concussion-check framing belongs in the source, not the prose. (source-side, not fixable in prose)
+- [columnist] Do not center a reaction piece on an objected-to hit or a concussion-check angle unless the digest explicitly substantiates those facts; otherwise cut the angle entirely. (source-side, not fixable in prose)
