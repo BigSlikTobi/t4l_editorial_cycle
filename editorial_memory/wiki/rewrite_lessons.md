@@ -11,7 +11,7 @@
 - Specific source-backed details can add useful texture when they are clearly tied to the article’s central takeaway.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
 - [insider] Injury or return-step updates work best when the strongest verified detail is surfaced early instead of buried under generic status language.
-- [insider] A restrained, fact-first setup works best when the source is thin: stick to the confirmed live-game event and keep consequence language minimal.
+- [insider] A restrained, fact-first setup works best when the source is thin: stick to the confirmed event and keep consequence language minimal.
 - A specific, source-grounded headline and intro can create a tap reason even on a narrow update, as long as they stay within the confirmed facts.
 - A breaking-news package can work when two real developments are clearly source-supported and separated cleanly, without forcing them into one false takeaway.
 
@@ -32,4 +32,5 @@
 - [insider] Do not sound more definite than the digest supports; remove unsupported diagnosis or season-ending language when the source only confirms the injury event.
 - [insider] Do not hang the piece on a secondary angle if the main verified injury/return-step update is the only well-supported takeaway.
 - [insider] If the digest is missing or empty, treat any injury/out-for-season claim as source-side, not recoverable by rewriting.
-- Do not force two source-supported developments into one false headline takeaway; if both belong, separate them cleanly in the package.
+- [insider] Cut source narration and attribution language when the digest does not support it; rebuild the lede from the confirmed fact alone.
+- [insider] Treat empty digests as a hard stop: there is no factual base to salvage, and unsupported status claims should be deleted rather than softened.
