@@ -27,3 +27,4 @@
 - [insider] Do not broaden a basic roster note into a more complete team story than the source supports; keep the language factual and bounded.
 - [insider] Avoid unsupported color; specificity should come from verified contract terms, role usage, or production, not inference.
 - [insider] If the source digest is missing supporting content, do not force a rewrite into a fuller story; treat it as a grounding failure (source-side, not fixable in prose).
+- [insider] Remove roster-context paragraphs and named player pools when the source digest is effectively empty; keep the piece on the single verified move.
