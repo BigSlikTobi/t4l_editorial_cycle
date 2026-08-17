@@ -9,21 +9,21 @@
 - A specific, source-grounded headline and intro can still create a tap reason on a limited update if they stay inside the facts.
 - High-specificity sourcing can carry a narrow piece when the article avoids overreaching beyond the digest.
 - Use concise status/outcome phrasing when the source only confirms a basic transaction.
-- [insider] Keep roster transaction coverage tightly centered on the confirmed sign/waive move and avoid widening the angle beyond what the digest proves.
-- [insider] Injury-driven or role-driven context can strengthen relevance when it is directly tied to the verified roster move and stays bounded by the source.
+- Cautious, source-true injury language can sharpen relevance when it stays limited to what the report actually says.
+- [insider] Keep roster transaction coverage tightly centered on the confirmed move and use surrounding context only when it is directly supported.
 - [insider] Fast, factual, and specific execution fits the persona well when it adds only grounded contract/usage/production details.
+- [insider] Clean summary structures and concrete names/statuses can deliver a strong, non-repetitive backfield or roster update when the digests support it.
 
 ## What to avoid
 - Do not package a confirmed transaction with extra claims about what else did or did not happen unless the source explicitly says so.
-- Do not add “straight swap” or similar cleanup framing when the digest only verifies the two roster moves.
-- Do not say no additional moves were attached unless that absence is actually supported by the source facts.
+- Do not add “straight swap” or similar cleanup framing when the digest only verifies the roster moves.
+- Do not say a player’s return is building, imminent, or more definite than the source supports; keep practice/availability language cautious.
 - Do not let headline, lede, and body drift into different levels of certainty; the opening stack should reinforce one verified development.
 - Do not repeat the same core transaction in multiple forms when the fact set is thin; tighten instead of paraphrasing.
 - Do not infer roster-chain, depth-chart, or broader team-impact implications from a limited digest.
-- Do not treat a clean lede as permission to add unsupported context or conclusions.
+- Do not turn a “may return to practice” note into a fuller backfield storyline than the source supports.
 - Do not pad a narrow transaction story with source-meta filler or commentary about the digest itself.
 - Do not introduce unsupported timing, secondary moves, or narrative consequences beyond the confirmed update.
-- [insider] Do not broaden a basic sign/waive note into a more complete roster story than the source supports; keep the language factual and bounded.
-- [insider] Do not add injury context unless it is explicitly part of the sourced update and clearly tied to the roster move.
+- [insider] Do not broaden a basic roster note into a more complete team story than the source supports; keep the language factual and bounded.
 - [insider] Avoid unsupported color; specificity should come from verified contract terms, role usage, or production, not inference.
 - [insider] If the source digest is missing supporting content, do not force a rewrite into a fuller story; treat it as a grounding failure (source-side, not fixable in prose).
