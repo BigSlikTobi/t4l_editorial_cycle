@@ -10,10 +10,9 @@
 - Tight packages work best when every sentence advances the verified update or the most relevant sourced consequence.
 - Specific source-backed details can add useful texture when they are clearly tied to the article’s central takeaway.
 - Clean execution often comes from stripping away meta language and keeping only the supported update.
-- [insider] Injury or return-step updates work best when the strongest verified detail is surfaced early instead of buried under generic status language.
-- [insider] A restrained, fact-first setup works best when the source is thin: stick to the confirmed event and keep consequence language minimal.
 - A specific, source-grounded headline and intro can create a tap reason even on a narrow update, as long as they stay within the confirmed facts.
 - A breaking-news package can work when two real developments are clearly source-supported and separated cleanly, without forcing them into one false takeaway.
+- [columnist] A team-specific angle can still work if the source truly supports it, but the central claim has to be built from actual facts rather than inferred context.
 
 ## What to avoid
 - Do not package two unrelated stories as one lead; split them cleanly so the opening has a single sharp focus.
@@ -34,3 +33,5 @@
 - [insider] If the digest is missing or empty, treat any injury/out-for-season claim as source-side, not recoverable by rewriting.
 - [insider] Cut source narration and attribution language when the digest does not support it; rebuild the lede from the confirmed fact alone.
 - [insider] Treat empty digests as a hard stop: there is no factual base to salvage, and unsupported status claims should be deleted rather than softened.
+- [insider] Do not add roster-planning, contract-detail, or veteran-role framing unless the digest explicitly supports it; keep the lede limited to the confirmed agreement/fact.
+- [insider] Do not build praise or improvement claims from an empty digest; if the source is blank, the story is not salvageable without new facts (source-side, not fixable in prose).
