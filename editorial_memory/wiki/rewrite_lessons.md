@@ -1,34 +1,27 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Open with the single clearest verified fact and keep the headline, lede, and body aligned on that same news peg.
-- Lead with the main person or event immediately; avoid burying the central update under extra framing.
-- Keep the piece tightly bounded to what the source digest actually confirms, especially on thin medical or status updates.
-- When the digest is narrow, a concise, source-true update can still work if every sentence stays inside the verified facts.
-- Use specific, grounded language for the confirmed development rather than broad narrative setup.
-- Strip out meta commentary and let the supported update carry the story on its own.
-- A clean, factual headline and intro can create a tap reason when they stay inside the facts.
-- [insider] Fast, factual, and specific execution fits the persona when it adds only grounded details.
-- [insider] Clean summary structure and a direct consequence framed from the digest can strengthen the piece when it is explicitly supported.
-- [analyst] Sharpen the lead around one confirmed development and avoid abstract repetition when the evidence is thin.
-- [columnist] A strong quoted standard can carry the article when you keep the framing tightly anchored to that quote.
+- Open with the full, verified transaction set when a roster move involves multiple ins and outs; a complete, clean summary helps the reader trust the update.
+- Keep the headline, subhead, and intro aligned on the same transaction so the article feels internally consistent from the first line.
+- Lead with the clearest roster utility for the team and keep the body tightly on that practical angle.
+- When a story is mostly transactional, concise newsroom copy can work well if every named move is accurately placed.
+- Specific roster details and exact personnel changes are stronger than broad framing or abstract “shakeup” language.
+- A direct, factual opening can carry a piece even without added color when the source is solid.
+- [insider] Fast, roster-specific execution fits the persona when the transaction set is fully and cleanly stated.
+- [insider] Cleanly threading all confirmed moves through the lede improves readability more than spotlighting a single name out of context.
+- [analyst] Precision matters more than breadth: keep every move matched to the correct team/action before sharpening the angle.
+- [analyst] A tight, fact-true opening beats a generalized roster summary when the digest supports a specific set of moves.
 
 ## What to avoid
-- Do not repeat the same core reported fact in the lede and body when the story is thin; tighten instead of restating.
-- Do not let the article become source-narration or meta-aware copy about what the digest adds or lacks.
-- Do not add unsupported timing, return, or medical detail beyond what the digest actually says.
-- Do not broaden a narrow update into a fuller story than the source supports; keep the language factual and bounded.
-- Do not infer broader impact, legacy, or storyline consequences from a limited digest unless the source explicitly supports them.
-- Do not pad a thin report with filler paragraphs or commentary about the source itself.
-- Do not let headline, lede, and body drift into different levels of certainty; they should reinforce one verified development.
-- [insider] Avoid narration that reads like a report about the report; write clean newsroom copy and cut sourced-report filler.
-- [insider] If the source digest lacks more substance, do not force a fuller rewrite in prose; treat that as a grounding limit (source-side, not fixable in prose).
-- [analyst] Do not stay too abstract or repetitive; replace repeated restatements with one sharper, source-supported angle.
-- [analyst] Do not add extra player mentions or broader framing when the source digest gives no factual support; keep the angle inside the verified claim (source-side, not fixable in prose).
-- [columnist] Do not build camp-watch or broader takeaway framing when the digest has no actual update; keep headline and intro to the named cluster only.
-- [columnist] Do not add implied updates, on-field meaning, or extra player-list framing when the source is empty or fact-light.
-- [columnist] Do not introduce unsupported role or team specifics when they are not present in the source digest (source-side, not fixable in prose).
-- [insider] If the source digest does not verify the named signing, remove it and stick to the concrete roster move the source can support (source-side, not fixable in prose).
-- [insider] Keep the intro tight and factual; do not add pass-rush context or other extra claims unless the source explicitly backs them.
-- [columnist] Do not lean on unsupported quotation framing or expectation-setting when the source digest is effectively empty; that is non-recoverable in prose (source-side, not fixable in prose).
-- [columnist] Do not turn a names-only camp cluster into a meaningful update; if the digest is empty, the problem is source-side, not fixable in prose (source-side, not fixable in prose).
+- Do not let the intro and body mix up which player was signed, released, or otherwise moved; transaction-story accuracy must stay exact.
+- Do not make the headline, subhead, and intro point to different slices of the roster update; they should all reinforce the same verified set of moves.
+- Do not center the story on one player if the source data shows a fuller transaction set that needs to be acknowledged up front.
+- Do not leave a factual conflict in place when the article is otherwise fixable; clean it at the lede and body level before polishing style.
+- Do not compress a multi-move roster shuffle into a vague summary that obscures key releases, signings, or IR moves.
+- Do not use a partial or mismatched name cluster as shorthand if it creates uncertainty about who did what.
+- [insider] Avoid framing that implies a signing or release belongs to the wrong team or move cluster; keep the transaction mapping exact.
+- [insider] If the roster set is incomplete or tangled, do not over-embellish the lede; fix the transaction list first.
+- [analyst] Do not sharpen the angle before confirming the full move list; accuracy outranks punch in transaction copy.
+- [analyst] Avoid mixing names from different parts of the transaction into one unsupported sentence; keep each move anchored to the source digest.
+- Keep any team-level summary strictly within the sourced moves; don’t broaden the opening into unsupported roster shorthand.
+- If the digest is specific, don’t substitute a looser headline that names the wrong additions or omits the key releases.
