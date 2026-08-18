@@ -11,6 +11,7 @@
 - Keep availability or status language minimal unless the digest clearly supports it.
 - [insider] A clean rewrite can save a draft when it strips out unsupported status claims and rebuilds from only source-digest facts.
 - [insider] Tightening the lede to the only confirmed point can improve a weak hold-in/availability draft.
+- [analyst] Specificity matters: if the piece stays tightly inside source material, it can still deliver a concrete fan payoff without embellishment.
 
 ## What to avoid
 - Do not let the headline or lede promise inevitability, certainty, or a broader trend when the source only supports one statement.
