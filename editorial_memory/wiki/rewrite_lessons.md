@@ -24,3 +24,4 @@
 - [insider] If the source digest lacks more substance, do not force a fuller rewrite in prose; treat that as a grounding limit (source-side, not fixable in prose).
 - [insider] Do not invent recovery context, confirmation, or prognosis when the record is sparse; stay inside the closed-world facts.
 - [insider] Remove any background or context that only restates the lede's single verified update.
+- [columnist] If the digest is effectively empty, do not try to manufacture a column from the headline theme alone; that is a source-side limit, not a prose fix (source-side, not fixable in prose).
