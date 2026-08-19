@@ -6,10 +6,11 @@
 - A concise opening that stays faithful to the source is often stronger than trying to manufacture added context.
 - Lead with the clearest supported takeaway rather than widening into background the source does not fully establish.
 - Trim speculation and keep only lines directly anchored in the reported remark or item.
-- Even a single-source item can support a readable piece if the framing stays narrow and precise.
 - Preserve a concrete, source-based hook when it exists; let practice/joint-work logistics or another real checklist drive the angle instead of filler.
 - When the report is genuinely strong, keep the headline, intro, and body all pulling toward the same verified consequence.
 - For transaction/news updates, put the move itself in sentence one and make every following line add a new confirmed fact.
+- [insider] Tight, source-grounded injury updates work when they center the concrete development and add only immediate team context that the digest supports.
+- [insider] Name the most important consequence early when it is verified, then use the next line to explain the practical implications without stretching them.
 - [columnist] A sharp, source-level camp or practice hook can support a readable opinion-style note if the prose stays disciplined and factual.
 - [analyst] Anchor every evaluative claim in a real digest signal; when the evidence is thin, a restrained note is better than overexplaining.
 
