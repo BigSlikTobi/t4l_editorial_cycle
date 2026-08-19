@@ -7,12 +7,14 @@
 - Lead with the clearest supported takeaway rather than widening into background the source does not fully establish.
 - Trim speculation and keep only lines directly anchored in the reported remark or item.
 - Preserve a concrete, source-based hook when it exists; let practice/joint-work logistics or another real checklist drive the angle instead of filler.
-- When the report is genuinely strong, keep the headline, intro, and body all pulling toward the same verified consequence.
 - For transaction/news updates, put the move itself in sentence one and make every following line add a new confirmed fact.
-- [insider] Tight, source-grounded injury updates work when they center the concrete development and add only immediate team context that the digest supports.
-- [insider] Name the most important consequence early when it is verified, then use the next line to explain the practical implications without stretching them.
-- [columnist] A sharp, source-level camp or practice hook can support a readable opinion-style note if the prose stays disciplined and factual.
+- [insider] Tight, source-grounded injury or practice updates work when they center the concrete development and add only immediate team context that the digest supports.
+- [insider] Strong rewrites keep the concrete news first and use the next line for a distinct consequence, not a restatement.
+- [insider] Keep closed-world updates useful by staying inside the sourced facts while still giving readers a clear reason to tap.
+- [insider] Direct, quick injury-status updates can be especially effective when they report the timeline plainly and connect it to an immediate camp or season implication.
 - [analyst] Anchor every evaluative claim in a real digest signal; when the evidence is thin, a restrained note is better than overexplaining.
+- [analyst] Make the first paragraph do more than restate the headline by focusing on the decision point or evaluation lens the source actually supports.
+- [analyst] A tight, grounded depth-chart update can be enough when it gives readers a clear roster development without adding unsupported color.
 
 ## What to avoid
 - Do not let the headline or lede promise inevitability, certainty, or a broader trend when the source only supports one statement.
@@ -27,15 +29,9 @@
 - Do not pad a clean transaction note with generic restatement or filler; the utility should come from precise confirmed facts.
 - [insider] Do not assert a date, status certainty, or roster implication when the source digest does not support those facts.
 - [insider] If the digest is incomplete, cut the headline and intro back rather than filling gaps with assumed facts (source-side, not fixable in prose).
-- [insider] Strip out unrelated player names that slip in through feed metadata or auto-linked context when they are not supported by the source.
-- [insider] If the source is missing or empty, do not convert it into a fully factual injury update; there is nothing to verify against (source-side, not fixable in prose).
+- [insider] Don’t leave the lede carrying hedgy source-narration while the body already has a usable concrete move; rewrite directly into the fact.
+- [insider] Cut near-duplicate first sentences and body restatements; lead with the exact injury/timeline and let later lines add only one new source-backed detail.
 - [analyst] Do not use loaded evaluation labels unless the digest actually anchors that level of certainty.
 - [analyst] Avoid implying confirmed consequences from a thin report; keep the language to the grounded fact and the questions it legitimately raises.
 - [analyst] Don’t widen a simple note into broader concern or a team-specific angle when the digest cannot support it.
-- [analyst] Do not invent trade speculation, quarterback-room implications, or other storyline framing when the source digest contains no usable facts at all (source-side, not fixable in prose).
-- [columnist] Avoid turning a thin camp note into a broader argument about discipline or identity unless the source explicitly supports that expansion.
-- [columnist] Don’t let a practice-intensity note drift into moralizing or identity claims unless the source clearly frames that interpretation.
-- [columnist] For practice-dustup or joint-practice notes, keep the story on the sourced explanation and logistics and avoid invented scene-setting, tension, or broader takeaway language.
-- [columnist] Don’t add sideline-flash color or a moralizing conclusion when the digest only supports a concrete explanation of what happened.
-- [columnist] Do not assert player-team placement or other status claims that the digest does not support; remove or reframe them instead of forcing the storyline.
-- [columnist] Tighten headlines and intros around the actual checklist when that is the real news peg; generic framing loses the value of the sourced details.
+- [analyst] Do not repeat the same quarterback-update idea in headline, subhead, and intro; each layer should add a new source-backed detail or angle.
