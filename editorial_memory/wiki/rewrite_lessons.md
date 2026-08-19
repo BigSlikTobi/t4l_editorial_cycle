@@ -10,7 +10,7 @@
 - Preserve a concrete, source-based hook when it exists, even in short camp notes; let that hook do the work instead of adding filler.
 - When the report is genuinely strong, keep the headline, subhead, intro, and body all pulling toward the same verified consequence.
 - [insider] Keep the confirmed status or timeline front and center when the source supports a clear season-long or checkpoint-based update.
-- [insider] Clean execution means avoiding embellishment while still making the consequence unmistakable.
+- [analyst] Anchor every evaluative claim in a real digest signal; when the evidence is thin, a restrained note is better than overexplaining.
 - [columnist] A sharp, source-level camp hook can support a readable opinion-style note if the prose stays disciplined and factual.
 - [columnist] A clear practice or culture takeaway can be publishable when it is tightly grounded in what actually happened on the field.
 
@@ -26,7 +26,6 @@
 - [insider] Do not assert a date, status certainty, or roster implication when the source digest does not support those facts.
 - [insider] Cut back follow-on lines that turn a bare contact report into a confirmed-team-need or transaction story.
 - [insider] If the digest is incomplete, cut the headline and intro back rather than filling gaps with assumed facts (source-side, not fixable in prose).
-- [insider] Do not make a possible return feel more certain than the source supports.
 - [analyst] Do not use loaded evaluation labels unless the digest actually anchors that level of certainty.
 - [analyst] Avoid implying confirmed consequences from a thin report; keep the language to the grounded fact and the questions it legitimately raises.
 - [analyst] Don’t widen a simple note into broader concern or a team-specific angle when the digest cannot support it.
@@ -34,3 +33,4 @@
 - [analyst] If the digest is empty or near-empty, do not infer broader injury meaning, timeline, or transaction implications from a headline-level mention alone (source-side, not fixable in prose).
 - [columnist] Avoid turning a thin camp note into a broader argument about discipline or identity unless the source explicitly supports that expansion.
 - [columnist] Don’t let a practice-intensity note drift into moralizing or identity claims unless the source clearly frames that interpretation.
+- [columnist] If the source digest is effectively empty, do not name players, fights, or event specifics that are not grounded in the provided material (source-side, not fixable in prose).
