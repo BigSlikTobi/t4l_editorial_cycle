@@ -23,9 +23,12 @@
 - Keep the story from implying a more developed report than the evidence provides; clarity matters more than breadth.
 - If the source is only a single remark or item, do not force multiple consequential takeaways from it.
 - Do not repeat the same core claim across headline, subhead, and lede; each line needs a distinct, source-backed job.
+- Avoid meta language about the publication, story cluster, or what the piece is doing; report the verified fact instead.
+- Do not let metadata or related-story fields introduce names that the digest does not support; scrub the piece for unsupported player mentions before publish.
 - [insider] Do not assert a date, status certainty, or roster implication when the source digest does not support those facts.
 - [insider] Cut back follow-on lines that turn a bare contact report into a confirmed-team-need or transaction story.
 - [insider] If the digest is incomplete, cut the headline and intro back rather than filling gaps with assumed facts (source-side, not fixable in prose).
+- [insider] Cut source-meta phrasing like “per the digest/report” or lines that narrate what the report did or did not provide; state the confirmed incident directly.
 - [analyst] Do not use loaded evaluation labels unless the digest actually anchors that level of certainty.
 - [analyst] Avoid implying confirmed consequences from a thin report; keep the language to the grounded fact and the questions it legitimately raises.
 - [analyst] Don’t widen a simple note into broader concern or a team-specific angle when the digest cannot support it.
@@ -34,3 +37,5 @@
 - [columnist] Avoid turning a thin camp note into a broader argument about discipline or identity unless the source explicitly supports that expansion.
 - [columnist] Don’t let a practice-intensity note drift into moralizing or identity claims unless the source clearly frames that interpretation.
 - [columnist] If the source digest is effectively empty, do not name players, fights, or event specifics that are not grounded in the provided material (source-side, not fixable in prose).
+- [columnist] Strip out exclusive- or cluster-level meta framing; keep the piece centered on the one concrete angle the digest actually supports.
+- [columnist] When the digest has no usable facts, do not invent a QB-battle angle, player-development narrative, or supporting names to make the piece feel specific (source-side, not fixable in prose).
