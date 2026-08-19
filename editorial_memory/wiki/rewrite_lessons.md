@@ -11,8 +11,7 @@
 - Tight injury updates work best when they stay on the confirmed event and avoid turning into a team-plan story.
 - Clean, tightly grounded injury notes can clear publish even with modest breadth when grounding is perfect.
 - [insider] A clean rewrite can save a draft when it strips out unsupported status claims and rebuilds from only source-digest facts.
-- [insider] Tightening the lede to the only confirmed point can improve a weak hold-in/availability draft.
-- [insider] Specificity matters: if the piece stays tightly inside source material, it can still deliver a concrete fan payoff without embellishment.
+- [analyst] When the digest is thin, a restrained evaluation of a player’s standing can work if it stays inside the single grounded fact.
 
 ## What to avoid
 - Do not let the headline or lede promise inevitability, certainty, or a broader trend when the source only supports one statement.
@@ -26,10 +25,10 @@
 - Avoid vague filler that pads the lede without adding source-backed substance.
 - Do not tie injury updates to teammate or protection-plan framing unless the digest explicitly supports that context.
 - [insider] Do not assert injury status, team context, or availability language when the source digest is missing or does not support those facts.
-- [insider] Do not tie a player to a team or location as confirmed if that linkage is not actually in the source-supported material.
-- [insider] Cut contract-chatter framing unless the digest supports it; otherwise it reads as unsupported paraphrase.
-- [insider] Avoid repeating unsupported detail as confirmed just to preserve the original angle.
+- [analyst] Do not use loaded evaluation labels like “disastrous” or “standing in doubt” unless the digest actually anchors that level of certainty.
+- [analyst] Avoid implying confirmed roster consequences from a thin camp report; keep the language to the grounded fact and the questions it legitimately raises.
 - [insider] If the digest is incomplete, cut the headline and intro back rather than filling gaps with assumed facts (source-side, not fixable in prose).
 - [insider] Do not build an article around named-player/team/status claims when the source digest is effectively empty or only repeats the headline summary (source-side, not fixable in prose).
 - [insider] Do not use unsupported report framing or status narrative when the digest contains no usable facts; that is a hard-fail if the source cannot ground it (source-side, not fixable in prose).
 - [insider] If the source digest is empty, do not invent specific player or teammate details to make the angle feel complete (source-side, not fixable in prose).
+- [analyst] An empty digest cannot support a roster-evaluation angle; dismiss the piece rather than reverse-engineering a conclusion from the headline alone (source-side, not fixable in prose).
