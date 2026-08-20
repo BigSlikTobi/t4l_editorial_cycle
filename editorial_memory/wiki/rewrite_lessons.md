@@ -1,34 +1,31 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the lede centered on the strongest verified takeaway, especially when a direct status note or quote can carry the story.
-- Use the exact sourced assessment or quote early when it clarifies why the item matters.
-- Add only the supporting context that explains the takeaway; keep it secondary when it does not change the core news.
-- Let a single sourced development anchor the piece; concise, source-faithful openings are often stronger than expanded context.
-- Keep headline, subhead, and intro aligned on the same verified angle when a rewrite or clean draft sharpens the story.
-- Preserve a real, source-based hook when it exists, but keep it secondary if it distracts from the main takeaway.
-- Build the body around one clear consequence that the sourced facts legitimately support.
-- Strong grounding and specificity can carry a piece even without extra narrative flourish.
-- [analyst] Concrete practice evidence can support a sharp evaluation when the language stays tied to the digests.
-- [analyst] A direct public critique or load-management note can be the story when it is clearly sourced and team-specific.
-- [analyst] Center the piece on the clearest source-backed role battle or usage trend, not a broad roster grab bag.
-- [analyst] Tighten around the two most concrete developments first, then add secondary notes only if they stay subordinate.
+- Keep the lede centered on the clearest confirmed development when it is the most newsworthy takeaway.
+- Use specific sourced actions or status updates early when they clarify the story quickly.
+- Keep headline, intro, and body aligned on the same verified angle; tight alignment makes a piece feel definitive.
+- Preserve strong reporting value when the digest supports a vivid, concrete event rather than a broad trend.
+- Let the most concrete source-backed detail anchor the piece, and keep any secondary context subordinate.
+- When a correction is needed, the underlying story can still work if the factual framing is cleaned up.
+- Specificity and directness can carry an insider or analyst piece even without extra narrative flourish.
+- A tightly grounded angle with no unsupported claims can still read well even if it is more cautious than explosive.
+- [analyst] Put the clearest source-backed incident or availability concern in the lede instead of hiding it behind generic framing.
+- [analyst] When the digest supports a precise team/role fact, name it cleanly and early to strengthen grounding.
+- [analyst] Keep the strongest sourced pressure point at the center; secondary context should stay brief.
+- [analyst] Stay inside the digest facts and avoid meta language; tight grounding can be enough on its own.
+- For insider pieces, a fast factual lede with named participants and the concrete outcome can carry the story cleanly.
+- When the digest supports them, include the specific sequence of events and immediate context without padding.
 
 ## What to avoid
-- Do not let a secondary frame outrun the real story if the sourced point is a direct quote, player consistency, role, or job security.
-- Avoid repeating the same core claim in headline and lede; each line should do a different job.
-- Do not muddy the angle with extra context or unrelated attribution if it weakens the takeaway.
-- Avoid source-narration phrasing when the piece can state the verified fact directly.
-- Do not widen a thin note into a broader trend or major implication unless the source actually supports it.
-- Avoid burying the strongest sourced detail under a generic intro; lead with the most specific verified point.
-- Do not add unsupported game-detail framing, scrutiny context, or roster/quarterback-picture speculation when the digest only supports the quoted remark.
-- Do not stretch a simple injury update into extra timeline or report-style framing unless the source set actually provides it.
-- [analyst] Do not overstate certainty about what a practice note means; keep the language tied to the grounded signal.
-- [analyst] Do not chase extra meaning from a narrow team note if the evidence only supports a limited evaluation.
-- [analyst] Keep supporting details clearly subordinate when the main value is a direct quote or reaction angle.
-- [analyst] Avoid a broad roster-name dump or generic “climb” framing when the rewrite brief points to two specific source-backed developments.
-- Do not invent or misstate names, facts, or player references; verify entity details before publication.
-- [source-side, not fixable in prose] If the digest contains no real facts beyond the headline summary, the article may be unwriteable without a source update.
-- [source-side, not fixable in prose] A source-digest vacuum makes the draft unrecoverable on rewrite; do not try to pad the story with invented specifics or team context.
-- [source-side, not fixable in prose] If the digest is effectively empty, avoid generic camp framing or headline-level speculation; there is no factual basis to build on.
-- [source-side, not fixable in prose] Do not add unsupported team-picture or role-context framing when the only usable material is the headline-level injury note.
+- Do not put a player or role into the wrong team frame; verify team affiliation before publication.
+- Avoid name mismatches or near-miss references when the digest gives the correct spelling/identity.
+- Do not let the article’s framing drift away from the confirmed facts in the digest.
+- Avoid broadening a specific incident into a different angle than the source actually supports.
+- Do not keep a lede vague when the digest gives a sharper, more specific confirmed event.
+- Avoid mixing corrected facts with uncorrected references; one wrong entity can undermine otherwise solid reporting.
+- Do not rely on generic heat or practice atmosphere when the story’s real value is a precise sourced development.
+- Avoid introducing team-side confusion in an insider piece; grounding errors hurt more than style issues.
+- Do not build the article around the wrong source cluster or story entirely; if the headline and digest point to different games/teams, the draft needs a full reframe.
+- Avoid unsupported meta commentary about the digest when usable source facts are available.
+- Do not flatten a vivid practice incident into generic conflict language when the digest gives the exact sequence and outcome.
+- [source-side, not fixable in prose] If the digest is internally inconsistent on a name or identity, the draft may need source correction before it can be fully trusted.
