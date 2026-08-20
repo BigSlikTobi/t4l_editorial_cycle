@@ -6,12 +6,13 @@
 - A concise opening that stays faithful to the source is often stronger than trying to manufacture added context.
 - Lead with the clearest supported takeaway rather than widening into background the source does not fully establish.
 - Trim speculation and keep only lines directly anchored in the reported remark or item.
-- Preserve a concrete, source-based hook when it exists; let practice/joint-work logistics or another real checklist drive the angle instead of filler.
+- Preserve a concrete, source-based hook when it exists; let a real event, quote, or logistics detail drive the angle instead of filler.
 - For transaction/news updates, put the move itself in sentence one and make every following line add a new confirmed fact.
-- Clean contract updates work best when they state the agreed move plainly, then add only confirmed money or player-history details.
+- Clean updates work best when they state the core development plainly, then add only confirmed money, history, or consequence details.
 - [insider] Tight, source-grounded injury or practice updates work when they center the concrete development and add only immediate team context that the digest supports.
-- [insider] Strong rewrites keep the concrete news first and use the next line for a distinct consequence, not a restatement.
 - [analyst] Anchor every evaluative claim in a real digest signal; when the evidence is thin, a restrained note is better than overexplaining.
+- When a quote or reaction is the usable hook, keep the intro built around that exact sentiment instead of layering in extra history.
+- A strong rewrite often comes from a sharp headline-to-lede match that stays in one lane and does not chase extra meaning.
 
 ## What to avoid
 - Do not let the headline or lede promise inevitability, certainty, or a broader trend when the source only supports one statement.
@@ -30,3 +31,4 @@
 - [analyst] Do not use loaded evaluation labels unless the digest actually anchors that level of certainty.
 - [analyst] Avoid implying confirmed consequences from a thin report; keep the language to the grounded fact and the questions it legitimately raises.
 - [analyst] Don’t widen a simple note into broader concern or a team-specific angle when the digest cannot support it.
+- Don’t import unrelated background details like trade cost, contract, games played, or suspension history unless the digest actually supports them; stay inside the one relevant source.
