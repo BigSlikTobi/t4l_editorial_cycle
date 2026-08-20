@@ -1,34 +1,26 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Keep the headline and lede aligned on one verified fact so the piece feels controlled from the first line.
-- Build around the exact confirmed point when that is the strongest available source fact; let that single fact carry the piece.
-- A concise opening that stays faithful to the source is often stronger than trying to manufacture added context.
-- Lead with the clearest supported takeaway rather than widening into background the source does not fully establish.
-- Trim speculation and keep only lines directly anchored in the reported remark or item.
-- Preserve a concrete, source-based hook when it exists; let a real event, quote, or logistics detail drive the angle instead of filler.
-- For transaction/news updates, put the move itself in sentence one and make every following line add a new confirmed fact.
-- Clean updates work best when they state the core development plainly, then add only confirmed money, history, or consequence details.
-- [insider] Tight, source-grounded injury or practice updates work when they center the concrete development and add only immediate team context that the digest supports.
-- [analyst] Anchor every evaluative claim in a real digest signal; when the evidence is thin, a restrained note is better than overexplaining.
-- When a quote or reaction is the usable hook, keep the intro built around that exact sentiment instead of layering in extra history.
-- A strong rewrite often comes from a sharp headline-to-lede match that stays in one lane and does not chase extra meaning.
+- Keep the lede centered on the strongest verified takeaway, especially when a direct status note can carry the story.
+- Use the exact sourced assessment or injury note early when it clarifies why the item matters.
+- Add only the supporting context that explains the takeaway; keep it secondary when it does not change the core news.
+- Let a single sourced development anchor the piece; concise, source-faithful openings are often stronger than expanded context.
+- Keep headline, subhead, and intro aligned on the same verified angle when a rewrite or clean draft sharpens the story.
+- Preserve a real, source-based hook when it exists, but keep it secondary if it distracts from the main takeaway.
+- Build the body around one clear consequence that the sourced facts legitimately support.
+- Strong grounding and specificity can carry an insider piece even without extra narrative flourish.
+- [analyst] Concrete practice evidence can support a sharp evaluation when the language stays tied to the digests.
+- [analyst] A direct public critique or load-management note can be the story when it is clearly sourced and team-specific.
 
 ## What to avoid
-- Do not let the headline or lede promise inevitability, certainty, or a broader trend when the source only supports one statement.
-- Do not stretch a quote or item into unsupported extrapolation about direction, ownership, or reader reaction unless the source explicitly supplies it.
-- Do not widen a narrow source fact into a full-report treatment; if the material is thin, keep the article equally thin and focused.
-- Avoid speculative connective tissue that is not directly tied to the confirmed statement.
-- Do not add background color just to make the story feel bigger if that context is not actually sourced.
-- Keep the story from implying a more developed report than the evidence provides; clarity matters more than breadth.
-- If the source is only a single remark or item, do not force multiple consequential takeaways from it.
-- Do not repeat the same core claim across headline, subhead, and lede; each line needs a distinct, source-backed job.
-- Avoid source-narration phrasing like “according to X” or “the report says” when the piece can simply state the verified move.
-- [insider] Do not assert a roster status, date, or outcome certainty when the source digest does not support it.
-- [insider] If the digest is incomplete, cut the headline and intro back rather than filling gaps with assumed facts (source-side, not fixable in prose).
-- [insider] Don’t leave the lede carrying hedgy source-narration while the body already has a usable concrete move; rewrite directly into the fact.
-- [insider] Do not build an article around an unsupported team/player setup; if the source does not establish the roster context, the claim is not salvageable in prose (source-side, not fixable in prose).
-- [analyst] Do not use loaded evaluation labels unless the digest actually anchors that level of certainty.
-- [analyst] Avoid implying confirmed consequences from a thin report; keep the language to the grounded fact and the questions it legitimately raises.
-- [analyst] Don’t widen a simple note into broader concern or a team-specific angle when the digest cannot support it.
-- Don’t import unrelated background details like trade cost, contract, games played, or suspension history unless the digest actually supports them; stay inside the one relevant source.
+- Do not let a secondary practice or brawl frame outrun the real story if the sourced point is player consistency, role, or job security.
+- Avoid repeating the same core claim in headline and lede; each line should do a different job.
+- Do not muddy the angle with team-context confusion or unrelated attribution if it weakens the takeaway.
+- Avoid source-narration phrasing when the piece can state the verified fact directly.
+- Do not widen a thin practice note into a broader trend or major implication unless the source actually supports it.
+- Avoid burying the strongest sourced detail under a generic intro; lead with the most specific verified point.
+- [analyst] Do not overstate certainty about what a practice note means; keep the language tied to the grounded signal.
+- [analyst] Do not chase extra meaning from a joint-practice note if the evidence only supports a narrow evaluation.
+- [analyst] Keep supporting details clearly subordinate when the main value is a direct critique or job-security angle.
+- Do not add unsupported embellishment around a clear, tightly grounded update; let the verified fact stand on its own.
+- [analyst] When a practice report is tightly sourced, it can still warrant a strong scrutiny angle if the evidence directly supports it.
