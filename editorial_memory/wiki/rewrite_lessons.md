@@ -11,10 +11,8 @@
 - A tightly grounded angle with no unsupported claims can still read well even if it is more cautious than explosive.
 - [analyst] Put the clearest source-backed incident or availability concern in the lede instead of hiding it behind generic framing.
 - [analyst] When the digest supports a precise team/role fact, name it cleanly and early to strengthen grounding.
-- [analyst] Keep the strongest sourced pressure point at the center; secondary context should stay brief.
-- [analyst] Stay inside the digest facts and avoid meta language; tight grounding can be enough on its own.
 - For insider pieces, a fast factual lede with named participants and the concrete outcome can carry the story cleanly.
-- When the digest supports them, include the specific sequence of events and immediate context without padding.
+- Clean breaking-news structure works when it stays entirely inside the verified development.
 
 ## What to avoid
 - Do not put a player or role into the wrong team frame; verify team affiliation before publication.
@@ -27,5 +25,7 @@
 - Avoid introducing team-side confusion in an insider piece; grounding errors hurt more than style issues.
 - Do not build the article around the wrong source cluster or story entirely; if the headline and digest point to different games/teams, the draft needs a full reframe.
 - Avoid unsupported meta commentary about the digest when usable source facts are available.
-- Do not flatten a vivid practice incident into generic conflict language when the digest gives the exact sequence and outcome.
 - [source-side, not fixable in prose] If the digest is internally inconsistent on a name or identity, the draft may need source correction before it can be fully trusted.
+- [source-side, not fixable in prose] If the source digest is empty or missing, do not fabricate a publishable angle; the piece cannot be grounded without source content.
+- [source-side, not fixable in prose] Do not state injury updates, availability status, or other factual claims when the digest provides no supporting facts.
+- [source-side, not fixable in prose] Do not repeat named players or headline claims when the digest is missing; unsupported specifics make the draft non-publishable.
