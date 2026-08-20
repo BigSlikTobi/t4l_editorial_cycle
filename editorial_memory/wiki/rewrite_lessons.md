@@ -8,10 +8,12 @@
 - Trim speculation and keep only lines directly anchored in the reported remark or item.
 - Preserve a concrete, source-based hook when it exists; let practice/joint-work logistics or another real checklist drive the angle instead of filler.
 - For transaction/news updates, put the move itself in sentence one and make every following line add a new confirmed fact.
+- Clean contract updates work best when they state the agreed move plainly, then add only confirmed money or player-history details.
 - [insider] Tight, source-grounded injury or practice updates work when they center the concrete development and add only immediate team context that the digest supports.
 - [insider] Strong rewrites keep the concrete news first and use the next line for a distinct consequence, not a restatement.
 - [insider] Keep closed-world updates useful by staying inside the sourced facts while still giving readers a clear reason to tap.
 - [insider] Direct, quick injury-status updates can be especially effective when they report the timeline plainly and connect it to an immediate camp or season implication.
+- [insider] Clean contract updates work best when they state the agreed move plainly, then add only confirmed money or player-history details.
 - [analyst] Anchor every evaluative claim in a real digest signal; when the evidence is thin, a restrained note is better than overexplaining.
 - [analyst] Make the first paragraph do more than restate the headline by focusing on the decision point or evaluation lens the source actually supports.
 - [analyst] A tight, grounded depth-chart update can be enough when it gives readers a clear roster development without adding unsupported color.
@@ -31,6 +33,7 @@
 - [insider] If the digest is incomplete, cut the headline and intro back rather than filling gaps with assumed facts (source-side, not fixable in prose).
 - [insider] Don’t leave the lede carrying hedgy source-narration while the body already has a usable concrete move; rewrite directly into the fact.
 - [insider] Cut near-duplicate first sentences and body restatements; lead with the exact injury/timeline and let later lines add only one new source-backed detail.
+- [insider] Don’t mix settled contract language with “reported” phrasing or overstate guarantees/term length beyond what the source set clearly supports.
 - [analyst] Do not use loaded evaluation labels unless the digest actually anchors that level of certainty.
 - [analyst] Avoid implying confirmed consequences from a thin report; keep the language to the grounded fact and the questions it legitimately raises.
 - [analyst] Don’t widen a simple note into broader concern or a team-specific angle when the digest cannot support it.
