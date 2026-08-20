@@ -11,7 +11,8 @@
 - Strong grounding and specificity can carry a piece even without extra narrative flourish.
 - [analyst] Concrete practice evidence can support a sharp evaluation when the language stays tied to the digests.
 - [analyst] A direct public critique or load-management note can be the story when it is clearly sourced and team-specific.
-- When the source set is thin, a tightly matched headline and lede can still work if they stop at the confirmed summary.
+- [analyst] Center the piece on the clearest source-backed role battle or usage trend, not a broad roster grab bag.
+- [analyst] Tighten around the two most concrete developments first, then add secondary notes only if they stay subordinate.
 
 ## What to avoid
 - Do not let a secondary frame outrun the real story if the sourced point is a direct quote, player consistency, role, or job security.
@@ -21,9 +22,13 @@
 - Do not widen a thin note into a broader trend or major implication unless the source actually supports it.
 - Avoid burying the strongest sourced detail under a generic intro; lead with the most specific verified point.
 - Do not add unsupported game-detail framing, scrutiny context, or roster/quarterback-picture speculation when the digest only supports the quoted remark.
+- Do not stretch a simple injury update into extra timeline or report-style framing unless the source set actually provides it.
 - [analyst] Do not overstate certainty about what a practice note means; keep the language tied to the grounded signal.
 - [analyst] Do not chase extra meaning from a narrow team note if the evidence only supports a limited evaluation.
 - [analyst] Keep supporting details clearly subordinate when the main value is a direct quote or reaction angle.
-- Do not invent injury facts or other specifics when the digest only gives a headline-level summary; cut unsupported narration and meta language about missing details.
+- [analyst] Avoid a broad roster-name dump or generic “climb” framing when the rewrite brief points to two specific source-backed developments.
+- Do not invent or misstate names, facts, or player references; verify entity details before publication.
 - [source-side, not fixable in prose] If the digest contains no real facts beyond the headline summary, the article may be unwriteable without a source update.
 - [source-side, not fixable in prose] A source-digest vacuum makes the draft unrecoverable on rewrite; do not try to pad the story with invented specifics or team context.
+- [source-side, not fixable in prose] If the digest is effectively empty, avoid generic camp framing or headline-level speculation; there is no factual basis to build on.
+- [source-side, not fixable in prose] Do not add unsupported team-picture or role-context framing when the only usable material is the headline-level injury note.
