@@ -6,14 +6,16 @@
 - Use concrete source details early: snap counts, catch totals, pressure rate, specific plays, and other anchored facts.
 - Let a source-backed development carry the piece without extra flourish or narrative padding.
 - Preserve strong grounding by staying inside the verified core facts and context.
-- Keep headline, subhead, and lede aligned on the same confirmed angle and game result.
-- A fast, factual lede can work well for insider updates when the digest is narrow.
+- Keep headline, subhead, and lede aligned on the same confirmed angle and result.
+- A fast, factual lede can work well when the digest is narrow.
 - In closed-world practice/takeaway pieces, staying inside the verified practice facts can still pass if the angle is clean and the sections stay aligned.
 - [analyst] Put the clearest confirmed availability, usage, or performance fact in the lede, not buried behind generic framing.
 - [analyst] Use a compact stat line to support the evaluation when the numbers are the story.
 - [analyst] Center the piece on the most fan-relevant verified development, such as a bad throw, pressure, or hit-driven struggle, and explain it with clean numbers.
 - [insider] Keep the note centered on the one player-specific development the digest actually supports.
 - [insider] A team-specific tapworthy angle can come from one sharp sequence of verified plays, even if the broader context is busy.
+- [columnist] A vivid opener works if it is still fully supported by the digest and does not outrun the verified facts.
+- [columnist] Strong grounding can carry a preseason or highlight-driven story when the lede uses the best verified hooks cleanly.
 
 ## What to avoid
 - Do not repeat the same fact pattern in the headline, sub-headline, and opening sentence.
@@ -39,3 +41,4 @@
 - [source-side, not fixable in prose] When the digest contains no usable facts, treat the whole item as ungroundable rather than filling with inferred context or scene-setting.
 - [columnist] Avoid event-closure framing like “closing era” unless the source explicitly supports the transition and its significance.
 - [insider] Do not force broader swirl or surrounding-story framing when the cleanest value is a single verified player flash.
+- [columnist] Avoid overreaching on the angle: a strong preseason flash can justify a vivid lede, but keep the headline anchored to what the digest actually proves (for example, a score or verified standout play).
