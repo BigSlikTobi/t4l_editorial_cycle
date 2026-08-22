@@ -28,6 +28,7 @@
 - [insider] Don’t stack background or production context into the opening when the legal/status update already carries the story.
 - [analyst] Don’t try to make two separate stories do one headline; split the angle or drop the secondary thread from the lede and body.
 - [analyst] Don’t underuse a strong stat line by burying it under generic recap language.
+- [analyst] Don’t infer roster-impact, preseason significance, or other narrative weight when the source digest is empty or effectively empty; that’s source-side, not fixable in prose.
 - [columnist] Avoid abstract camp-commentary language when the digest already gives you a usable quote and event.
 - [columnist] Don’t stack broad scene-setting passages on top of a clear incident; tighten around the specific moment and quote.
 - [columnist] Don’t name players, context, or attribution unless the source facts actually support them; rebuild from the verified title-level peg if needed.
@@ -35,4 +36,3 @@
 - [insider] Don’t overcomplicate a straightforward injury or legal-status update; keep the confirmed event and immediate implication front and center.
 - [insider] Cut unsupported report/digest narration and any “no additional facts” meta; keep only the confirmed arrest, charge, and identification.
 - [columnist] Hard fail: if the digest is empty or doesn’t support the named people/event, do not invent a story around it (source-side, not fixable in prose).
-- [analyst] If the source record is empty or fact-free, do not build quarterback-battle or winners/losers framing from inference alone (source-side, not fixable in prose).
