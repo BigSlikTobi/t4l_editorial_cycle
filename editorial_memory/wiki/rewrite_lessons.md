@@ -35,3 +35,4 @@
 - [insider] Don’t overcomplicate a straightforward injury or legal-status update; keep the confirmed event and immediate implication front and center.
 - [insider] Cut unsupported report/digest narration and any “no additional facts” meta; keep only the confirmed arrest, charge, and identification.
 - [columnist] Hard fail: if the digest is empty or doesn’t support the named people/event, do not invent a story around it (source-side, not fixable in prose).
+- [analyst] If the source record is empty or fact-free, do not build quarterback-battle or winners/losers framing from inference alone (source-side, not fixable in prose).
