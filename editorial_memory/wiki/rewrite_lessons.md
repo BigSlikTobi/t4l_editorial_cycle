@@ -11,6 +11,7 @@
 - [insider] Center the piece on the immediate legal or status development first, then add the team/league response as quick context.
 - [insider] Use the strongest supported angle and move secondary background out of the lede.
 - [analyst] Use available numbers, coach quotes, and game details to support the angle without drifting into filler.
+- [analyst] Lean on the strongest supported stat line or game detail when it clearly carries the story.
 - [columnist] When the source has a real quote or clear peg, build the piece around that instead of abstract camp-commentary.
 - [columnist] If the source only supports a thin angle, keep the framing restrained and let the confirmed development do the work.
 
@@ -26,6 +27,7 @@
 - [insider] Avoid source-meta or extension-style framing in the lede; state the update plainly and move on.
 - [insider] Don’t stack background or production context into the opening when the legal/status update already carries the story.
 - [analyst] Don’t try to make two separate stories do one headline; split the angle or drop the secondary thread from the lede and body.
+- [analyst] Don’t underuse a strong stat line by burying it under generic recap language.
 - [columnist] Avoid abstract camp-commentary language when the digest already gives you a usable quote and event.
 - [columnist] Don’t stack broad scene-setting passages on top of a clear incident; tighten around the specific moment and quote.
 - [columnist] Don’t name players, context, or attribution unless the source facts actually support them; rebuild from the verified title-level peg if needed.
