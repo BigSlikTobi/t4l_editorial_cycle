@@ -1,38 +1,35 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the clearest confirmed development when the story has one obvious news peg.
-- Keep breaking-news ledes tight, direct, and centered on verified facts.
-- Use a clean opening for simple insider or practice items instead of source-meta framing.
-- Let one real development carry the item without filler or report-about-the-report language.
-- Preserve strong grounding by staying inside the verified core fact and nothing more.
+- Lead with the strongest verified development the source actually supports, especially a return/status update that clearly carries the item.
+- Keep breaking-news and injury/status ledes tight, direct, and centered on confirmed facts.
+- Use a clean opening for straightforward insider updates instead of source-meta or report-about-the-report framing.
+- Let one real development carry the story without filler or speculative extension.
+- Preserve grounding by staying inside the verified core fact and nothing more.
 - Keep headline and lede aligned on the same confirmed angle.
-- When the news is narrow, a compact opening can be enough if it is fully supported.
-- [insider] Center the piece on the immediate legal or status development first, then add the team/league response as quick context.
+- When the news is narrow, a compact opening is enough if it is fully supported.
+- [insider] Center the piece on the immediate injury/legal/status development first, then add quick context only if the source supports it.
 - [insider] Use the strongest supported angle and move secondary background out of the lede.
 - [analyst] Use available numbers, coach quotes, and game details to support the angle without drifting into filler.
-- [analyst] Lean on the strongest supported stat line or game detail when it clearly carries the story.
+- [analyst] Keep preseason availability notes tightly source-anchored and team-specific when the digest supports a concrete personnel update.
 - [columnist] When the source has a real quote or clear peg, build the piece around that instead of abstract camp-commentary.
-- [columnist] If the source only supports a thin angle, keep the framing restrained and let the confirmed development do the work.
 
 ## What to avoid
-- Do not lead with abstract setup or broad commentary when a specific incident is already the story.
-- Avoid repeating the same fact in multiple lede sentences; cut restatement and keep the intro moving.
+- Do not name players or details that the source digest does not support; unsupported entities must be cut.
+- Avoid abstract setup or broad commentary when a specific confirmed development is already the story.
 - Do not pad a grounded item with filler-heavy passages that add no new verified information.
 - Avoid soft, indirect framing when the digest supports a sharper, immediate opening.
 - Do not bury the key development behind generic camp or practice language.
-- Avoid turning the piece into commentary on the situation instead of the fact itself.
 - Do not widen one confirmed update into broader implications the digest does not support.
 - Do not let the headline and opening drift away from the single verified angle.
 - [insider] Avoid source-meta or extension-style framing in the lede; state the update plainly and move on.
-- [insider] Don’t stack background or production context into the opening when the legal/status update already carries the story.
-- [analyst] Don’t try to make two separate stories do one headline; split the angle or drop the secondary thread from the lede and body.
-- [analyst] Don’t underuse a strong stat line by burying it under generic recap language.
-- [analyst] Don’t infer roster-impact, preseason significance, or other narrative weight when the source digest is empty or effectively empty; that’s source-side, not fixable in prose.
-- [columnist] Avoid abstract camp-commentary language when the digest already gives you a usable quote and event.
-- [columnist] Don’t stack broad scene-setting passages on top of a clear incident; tighten around the specific moment and quote.
-- [columnist] Don’t name players, context, or attribution unless the source facts actually support them; rebuild from the verified title-level peg if needed.
-- [columnist] Avoid player-by-player framing when the source only supports a single, limited angle.
 - [insider] Don’t overcomplicate a straightforward injury or legal-status update; keep the confirmed event and immediate implication front and center.
-- [insider] Cut unsupported report/digest narration and any “no additional facts” meta; keep only the confirmed arrest, charge, and identification.
+- [insider] If the source digest has no usable facts, do not force a story with asserted touchdowns, returns, or quotes that aren’t supported (source-side, not fixable in prose).
+- [analyst] Don’t let the headline/lede repeat a generic theme when the cluster has a more concrete stat-backed angle.
+- [analyst] Don’t assign team/context details inconsistently or import unsupported framing into the story; keep the analyst setup tightly source-anchored.
+- [analyst] Don’t make a lede read like a restatement of the headline; open on the specific reason the item matters.
+- [analyst] Don’t infer roster-impact, preseason significance, or other narrative weight when the source digest is empty or effectively empty; that’s source-side, not fixable in prose.
+- [analyst] When the digest does support a concrete personnel update, don’t bury it under generic slate-setting language.
 - [columnist] Hard fail: if the digest is empty or doesn’t support the named people/event, do not invent a story around it (source-side, not fixable in prose).
+- [analyst] Never fabricate or misassign team membership/context for a named player; that is a hard grounding failure (source-side, not fixable in prose).
+- [analyst] If the source cluster contains multiple distinct angles, choose the one the digests actually support rather than forcing a single wrong umbrella frame.
