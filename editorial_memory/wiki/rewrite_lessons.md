@@ -11,7 +11,6 @@
 - [insider] Center the piece on the immediate injury/legal/status development first, then add quick context only if the source supports it.
 - [analyst] Use concrete numbers, coach quotes, and game details to sharpen the angle instead of generic recap language.
 - [analyst] Keep fallout or availability notes tightly source-anchored and team-specific when the digest supports a concrete personnel or performance update.
-- [analyst] Choose the single most supportable angle and build around it rather than splitting attention across multiple stories.
 - [columnist] When the source has a real quote or clear peg, build the piece around that instead of abstract camp-commentary.
 
 ## What to avoid
@@ -25,13 +24,15 @@
 - [insider] Avoid source-meta or extension-style framing in the lede; state the update plainly and move on.
 - [insider] Don’t overcomplicate a straightforward injury or legal-status update; keep the confirmed event and immediate implication front and center.
 - [insider] If the source digest has no usable facts, do not force a story with asserted touchdowns, returns, or quotes that aren’t supported (source-side, not fixable in prose).
+- [insider] Do not turn a limited camp roundup into a confident position-group update when the digest only supports that several names were listed.
+- [insider] Avoid adding atmosphere or importance claims like a group drawing attention or being widely watched unless the source explicitly supports that framing.
 - [analyst] Don’t package multiple preseason stories into one article when only one set of facts is actually developed.
 - [analyst] Don’t let the headline/lede repeat a generic theme when the cluster has a more concrete stat-backed angle.
 - [analyst] Don’t assign team/context details inconsistently or import unsupported framing into the story; keep the analyst setup tightly source-anchored.
 - [analyst] Don’t make a lede read like a restatement of the headline; open on the specific reason the item matters.
 - [analyst] Don’t infer roster-impact, preseason significance, or other narrative weight when the source digest is empty or effectively empty; that’s source-side, not fixable in prose.
 - [analyst] When the digest does support concrete fallout, don’t bury it under generic cleanup language.
-- [analyst] Use the concrete consequence the source gives you—penalties, yardage gaps, coach critique, or similar—rather than broad “struggles” framing.
+- [analyst] Use the concrete consequence the source gives you—penalties, yardage gaps, coach critique, or similar—instead of broad “struggles” framing.
 - [columnist] Hard fail: if the digest is empty or doesn’t support the named people/event, do not invent a story around it (source-side, not fixable in prose).
 - [analyst] Never fabricate or misassign team membership/context for a named player; that is a hard grounding failure (source-side, not fixable in prose).
 - [analyst] If the source cluster contains multiple distinct angles, choose the one the digests actually support rather than forcing a single wrong umbrella frame.
