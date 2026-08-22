@@ -31,4 +31,5 @@
 - [columnist] Don’t name players, context, or attribution unless the source facts actually support them; rebuild from the verified title-level peg if needed.
 - [columnist] Avoid player-by-player framing when the source only supports a single, limited angle.
 - [insider] Don’t overcomplicate a straightforward injury or legal-status update; keep the confirmed event and immediate implication front and center.
+- [insider] Cut unsupported report/digest narration and any “no additional facts” meta; keep only the confirmed arrest, charge, and identification.
 - [columnist] Hard fail: if the digest is empty or doesn’t support the named people/event, do not invent a story around it (source-side, not fixable in prose).
