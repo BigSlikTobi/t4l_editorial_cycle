@@ -12,6 +12,7 @@
 - [analyst] Use concrete numbers, coach quotes, and game details to sharpen the angle instead of generic recap language.
 - [analyst] Keep fallout or availability notes tightly source-anchored and team-specific when the digest supports a concrete personnel or performance update.
 - [columnist] When the source has a real quote or clear peg, build the piece around that instead of abstract camp-commentary.
+- Rephrase the same development only once; when a return or status change is the hook, let the lede carry it and use the body for sourced specifics, not repeated recovery language.
 
 ## What to avoid
 - Do not name players or details that the source digest does not support; unsupported entities must be cut.
@@ -38,3 +39,4 @@
 - [analyst] If the source cluster contains multiple distinct angles, choose the one the digests actually support rather than forcing a single wrong umbrella frame.
 - [analyst] Do not build a preseason evaluation or “how he fared” story when the digest is effectively empty; that is a source-side failure, not a prose fix.
 - [analyst] Avoid unsupported evaluation language when there are no reported details to evaluate from.
+- Avoid repeating the same claim across headline, subhead, intro, and body unless each pass adds a new sourced fact or scene.
