@@ -1,10 +1,10 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the single clearest verified development and keep the opening anchored to one concrete status or contract change.
-- Keep the angle tightly grounded in the digest; a simple result, practice-status update, or contract mechanism can carry the piece without added narrative.
+- Lead with the clearest verified roster or injury development and keep the opening anchored to one concrete status change.
+- Keep the angle tightly grounded in the digest; a simple injury, practice-status, or contract move can carry the piece without extra narrative.
 - Match the headline to the exact sourced fact the lede is built on.
-- Keep the lead short and centered on one supported takeaway instead of layering in extra interpretation.
+- Keep the lead short and centered on one supported takeaway instead of layering in interpretation.
 - Preserve simple, direct updates when the underlying fact is clear and confirmed.
 - Use attribution sparingly and only as attribution; let the verified fact do the work.
 - Keep the story readable by staying inside the confirmed update rather than stacking multiple implications.
