@@ -10,6 +10,7 @@
 - Preserve simple, direct status updates when the underlying fact is clear and confirmed.
 - [analyst] Tie fallout language to an explicit, sourced roster or role shift, not to invented quotes or generalized meaning.
 - [columnist] If only one concrete update is verified, build around that update and avoid narrative embellishment.
+- Tighten the lede to the one sourced development and let the headline/sub-head handle the framing.
 
 ## What to avoid
 - Do not pad a thin source package with unsupported quote-style wording or faux color.
@@ -23,4 +24,5 @@
 - [columnist] Avoid leaning on generic praise or character labels when the digest does not verify them.
 - Source gaps are not a writing problem: if the digest lacks support for a detail, leave it out rather than paraphrasing confidence into evidence.
 - Avoid self-referential framing about what the piece can or cannot do; if the digest has no usable substance, the draft should not invent a story around that absence. (source-side, not fixable in prose)
-- Avoid asserting an ungrounded status change or leaderboard shift in a battle story; if the digest has no usable facts, do not turn the headline or lede into a claim of movement.
+- Avoid unsupported narration about missing contract, role, or depth-chart details; if the source doesn’t provide them, don’t imply them.
+- Avoid meta explanation and repeated restatement of the same sourced fact across headline, sub-headline, and intro.
