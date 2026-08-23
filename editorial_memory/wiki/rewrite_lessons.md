@@ -1,28 +1,34 @@
 # Editorial Style Wiki
 
 ## What works (keep doing)
-- Lead with the specific roster move or status update when that is the cleanest verified news peg.
-- Keep the lede tightly inside the source package, using only the confirmed facts the digest supports.
-- Use a recent game or outcome only as narrow fallout when it is directly tied to the sourced update.
-- Preserve sharp, plain openings for straightforward insider items; don’t over-embellish a clear personnel move.
-- Let a concrete transaction or injury/status change carry the piece instead of broad narrative framing.
+- Lead with the clearest verified reaction or news peg, especially when it’s a direct quote tied to one concrete event.
+- Keep the lede tightly inside the source package; use only facts the digest explicitly supports.
 - Match headline and lede to the same verified angle so the story feels grounded and coherent.
-- When a source gives both the move and its timing, include that timing if it is directly relevant and supported.
-- [insider] Put the immediate personnel or availability change first, then add only the confirmed surrounding context.
-- [insider] Keep local fallout or game-context details tightly bounded to what the digests explicitly support.
+- Preserve sharp, plain openings for straightforward columnist items; don’t over-embellish a simple reaction.
+- Let one clear quote or factual update carry the piece instead of broad narrative framing.
+- Use matchup, opponent, or crowd context only when it is explicitly part of the confirmed update.
+- Keep local fallout or atmosphere details tightly bounded to what the digest explicitly supports.
+- [insider] Put the immediate injury or availability change first, then add only the confirmed surrounding context.
 - [analyst] Keep fallout language tied to specific sourced details rather than general team-wide implications.
-- [columnist] If the source contains a real, usable news peg, build around that peg rather than abstract commentary.
+- [columnist] Build around a real, usable news peg, but keep the framing strictly anchored to the verified facts.
+- Clean, useful status updates can work when the headline stays modest and the claim is fully supported by the digest.
+- [columnist] Direct, source-grounded player reaction can carry a small item cleanly when the headline mirrors the same verified angle.
 
 ## What to avoid
-- Do not widen a roster move into a broader game story unless the game details are explicitly part of the same source package.
-- Avoid blending unrelated source clusters into one narrative arc when the item only supports a tighter personnel update.
-- Do not assert injuries, losses, or other game fallout as if they belong to the same source unless the digest clearly confirms them.
-- Avoid broad “depth issues mounting” framing unless the sourced facts directly support that conclusion.
+- Do not add unsupported process detail, scene-setting, or extra color when the digest only supports the core update.
+- Avoid stretching a supported item into a broader tension, temperature, or atmosphere frame unless the source package clearly supports it.
+- Do not widen a direct reaction into a bigger fan-base or team story unless the source package explicitly supports that shift.
+- Avoid blending unrelated source clusters into one narrative arc when the item only supports a tighter factual update.
+- Do not assert broader response, fallout, or implications unless the digest clearly confirms them.
+- Avoid broad “ongoing tension” or “constant talking point” framing unless the sourced facts directly support that conclusion.
 - Do not let headline language outrun the confirmed facts in the lede.
-- Avoid using a big game result as the main frame when the article’s real news is a claim, release, or activation.
-- [insider] Don’t overbuild context around a straightforward claim/release update; keep the move and immediate timing front and center.
-- [insider] Don’t import broader game narrative into the story unless the digest specifically supports that fallout.
-- [insider] If the supporting digests do not clearly connect the roster move to the game context, keep them separate instead of forcing one umbrella frame.
+- Avoid using a big result or sweeping team narrative as the main frame when the article’s real news is a direct personal reaction or personnel update.
+- [insider] Don’t overbuild context around a straightforward injury/status update; keep the condition and immediate timing front and center.
 - [analyst] Don’t use a lopsided result or stat line as a catchall wrapper when the actual update is roster-related.
-- [analyst] Avoid speculative roster-impact or depth-chart significance unless the source explicitly supports it.
-- [columnist] Don’t turn a concrete personnel update into abstract team-story framing when the verified facts are already sufficient.
+- [columnist] Don’t turn a concrete human reaction into abstract team-story framing when the verified facts are already sufficient.
+- [columnist] Don’t imply extra reporting detail from a thin or missing source package; keep the piece simple and fact-only.
+- [columnist] Avoid banned meta/source-narration tone; present the verified reaction directly without talking around the sourcing.
+- Do not state a medical status or physical finding unless the source digest explicitly provides it; closed-world unsupported health claims should be treated as source-side, not fixable in prose.
+- Source gaps are not a writing problem: if the digest is missing key facts, don’t invent supporting detail or paraphrase confidence into evidence.
+- [columnist] Avoid memorial or support framing unless the source package actually supplies the event details and the specific response language; otherwise treat it as unsupported, source-side (not fixable in prose).
+- [columnist] Don’t add Washington-centered framing or other scene-setting when the digest only supports a simple preseason availability note about who is expected to play (source-side, not fixable in prose).
